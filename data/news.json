@@ -2,7 +2,7 @@
   "meta": {
     "date": "2026-08-12",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:21 PM",
+    "lastUpdated": "08:34 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 시장/판매 관련 뉴스 증가",
@@ -12,8 +12,15 @@
   "marketIntelligence": {
     "market": [
       {
+        "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식] - Naver Blog",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+      },
+      {
         "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움 - 한국이륜차신문",
-        "description": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움&nbsp;&nbsp;한국이륜차신문",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
@@ -22,44 +29,44 @@
     "competitor": [
       {
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개 - 한국이륜차신문",
-        "description": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개&nbsp;&nbsp;한국이륜차신문",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "High",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다. - Vietnam.vn",
-        "description": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다.&nbsp;&nbsp;Vietnam.vn",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."
       },
       {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL' - 한국이륜차신문",
-        "description": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'&nbsp;&nbsp;한국이륜차신문",
+        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료 - 카가이",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "2026년 8월 기준 야마하 YZF-R15 오토바이 최신 가격표입니다. - Vietnam.vn",
-        "description": "2026년 8월 기준 야마하 YZF-R15 오토바이 최신 가격표입니다.&nbsp;&nbsp;Vietnam.vn",
+        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL' - 한국이륜차신문",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
       {
         "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개 - 한국이륜차신문",
-        "description": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개&nbsp;&nbsp;한국이륜차신문",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시 - 한국이륜차신문",
-        "description": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시&nbsp;&nbsp;한국이륜차신문",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
@@ -69,6 +76,52 @@
   },
   "news": [
     {
+      "id": "50b97dd45ae68450",
+      "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료 - 카가이",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5MeHlJNnA5Y0ZIUWFiMFJsSXpTeWhfT21lNVVBVFF0X21VcjZiNFF0T2liUDBjTVJHenRKb0prYkdGaG1QWVJ6UFlMTDk3OXFsZm9IdXRKc21GSHhxR19VZGVJRGhCUQ",
+      "source": "Google",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "publishedAt": "2026-08-12T09:04:43+09:00",
+      "category": "COMPETITOR",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+      "importance": 2.5,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "rank": 4
+    },
+    {
+      "id": "9bc89165d5376e4d",
+      "title": "두카티, 오프로드와 캠핑의 매력을 함께 즐긴다 - 한국이륜차신문",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NSl9vYzdiUmNZMVpLd0lCZ01vNHZkS0dNSzRQdU9vWnVNdnI2eEdHay05eVZQSVVLYi1YSThGRVh4cXk3Z0Y3aWtTX29nMGkzMXJhUHBsZk5vZ1lIX0daa3Eyaw",
+      "source": "Google",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "publishedAt": "2026-08-11T16:14:36+09:00",
+      "category": "COMPETITOR",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false
+    },
+    {
+      "id": "a7a8c25d30dce0e5",
+      "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식] - Naver Blog",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE8xRkI3U3BRaTBhQmQ5cGphQmNnQXgtNzcyZHBNY09VLUgxX0prTkhPWnpUUmFKMzdMZkhWX0xNczhIbVdoalVRQVo4MmtFXzdFNll5d0N4UzYtTF9vZlNpRDA1TEZodWd3ekRpOGhva0piUnE0cHNpcDBB",
+      "source": "Naver",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-08-12T14:15:16+09:00",
+      "category": "MARKET",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+      "importance": 2.0,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": false
+    },
+    {
       "id": "8160980eb361eaf2",
       "title": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다. - Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMm90alRzLXNSdVczMVlqYUdOd29kN1RYR2xRWUFsa0d4QzJyem1BVWZTSTRuY2M0WWFia2V2R3JUcm1rSFhoZTJFTGdmb3VWZVpUc3VaRGFmaVB2WENnY2hQQzk3NEVwcUdVUVM2NzFsd2F1WUF0SjdiZjhoYzNQd200SWJTWEx3NFVuSVppVy1CYlI3Z0Ita1hJN2FkSndCcnln",
@@ -77,7 +130,7 @@
       "sourceGroup": "honda",
       "publishedAt": "2026-08-11T19:34:49+09:00",
       "category": "COMPETITOR",
-      "summary": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다.&nbsp;&nbsp;Vietnam.vn",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 3.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
@@ -93,12 +146,12 @@
       "sourceGroup": "yamaha",
       "publishedAt": "2026-08-12T18:20:28+09:00",
       "category": "COMPETITOR",
-      "summary": "2026년 8월 기준 야마하 YZF-R15 오토바이 최신 가격표입니다.&nbsp;&nbsp;Vietnam.vn",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
-      "rank": 4
+      "rank": 5
     },
     {
       "id": "853ac3ff20aa361e",
@@ -109,7 +162,7 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T20:11:14+09:00",
       "category": "COMPETITOR",
-      "summary": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개&nbsp;&nbsp;한국이륜차신문",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 4.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
@@ -125,7 +178,7 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:27:45+09:00",
       "category": "COMPETITOR",
-      "summary": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'&nbsp;&nbsp;한국이륜차신문",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 2.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -140,7 +193,7 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:24:10+09:00",
       "category": "MARKET",
-      "summary": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움&nbsp;&nbsp;한국이륜차신문",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -155,7 +208,7 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:17:17+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시&nbsp;&nbsp;한국이륜차신문",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 2.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
@@ -170,7 +223,7 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:14:02+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개&nbsp;&nbsp;한국이륜차신문",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 3.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
