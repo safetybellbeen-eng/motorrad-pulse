@@ -1,0 +1,883 @@
+/* ==========================================================
+   MOTORRAD PULSE — Design tokens
+   BMW Motorrad 공식 사이트 톤: 딥 블랙 배경 + 화이트 타이포 + BMW 로고의
+   블루/라이트블루 쿼드런트를 극도로 절제하여 포인트로만 사용.
+   장식 대신 여백과 hairline(1px 선)으로 구조를 만든다.
+
+   Palette:
+     --black   #0A0A0B   메인 배경
+     --panel   #111214   카드/패널 배경 (배경보다 한 톤 밝게)
+     --panel-2 #16171A   패널 위에 얹는 보조 패널
+     --white   #F5F6F7   본문 화이트
+     --grey    #8B8E93   보조 텍스트
+     --grey-dim#5A5D62   3차 텍스트 / 캡션
+     --line    rgba(255,255,255,0.09)  hairline 구분선
+     --bmw-blue      #1C69D4   BMW 로고 진한 블루
+     --bmw-blue-light#4C9BE8   BMW 로고 라이트 블루
+     --signal-amber  #D98B2A   중요도/경고 포인트 (극소량)
+   Display: "Big Shoulders Display" (BMW의 넓고 각진 대문자 헤드라인과 유사한 인더스트리얼 견출체)
+   Body: Inter / Data: Roboto Mono
+   ========================================================== */
+
+:root{
+  --black: #1A1B1E;
+  --panel: #212226;
+  --panel-2: #26272C;
+  --white: #E9E9EA;
+  --grey: #9A9CA1;
+  --grey-dim: #7D7F84;
+  --line: rgba(255,255,255,0.08);
+  --line-strong: rgba(255,255,255,0.15);
+
+  --bmw-blue: #1C69D4;
+  --bmw-blue-light: #4C9BE8;
+  --bmw-blue-dim: rgba(28,105,212,0.14);
+  --signal-amber: #D98B2A;
+  --signal-amber-dim: rgba(217,139,42,0.12);
+
+  --font-display: "Big Shoulders Display", "Inter", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  --sidebar-w: 248px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: inherit; text-decoration: none; }
+button{ font-family: inherit; cursor: pointer; }
+
+:focus-visible{
+  outline: 2px solid var(--bmw-blue-light);
+  outline-offset: 2px;
+}
+
+/* ============ LAYOUT ============ */
+.app{
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar{
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--black);
+  border-right: 1px solid var(--line);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 32px 24px;
+}
+
+.brand-block{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* BMW Motorrad 공식 로고 구조 재현:
+   원형 BMW 로엠블럼 + 오른쪽에 "BMW" / "MOTORRAD" 두 줄 워드마크가 나란히 붙는 lockup.
+   실제 로고 파일(assets/bmw-logo.png)이 있으면 엠블럼 자리에 그 이미지가 표시되고,
+   없으면 검정 링 + 블루/화이트 대각선 쿼드런트의 SVG가 대신 표시된다. */
+.brand-lockup{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bmw-emblem{
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+}
+.bmw-emblem img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+.bmw-emblem__fallback{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bmw-wordmark{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.bmw-wordmark__line{
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+.bmw-wordmark__line:first-child{
+  color: var(--grey);
+  font-weight: 600;
+}
+
+.brand-title{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.brand-eyebrow{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--grey);
+}
+.brand-name{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.side-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 28px 0;
+  flex: 1;
+}
+.side-nav__item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--grey);
+  border-left: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.side-nav__index{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--grey-dim);
+  width: 16px;
+}
+.side-nav__item:hover{
+  color: var(--white);
+  background: rgba(255,255,255,0.03);
+}
+.side-nav__item.is-active{
+  color: var(--white);
+  border-left-color: var(--bmw-blue-light);
+  background: rgba(255,255,255,0.04);
+}
+.side-nav__item.is-active .side-nav__index{
+  color: var(--bmw-blue-light);
+}
+
+.sidebar-bike{
+  width: 56px;
+  height: 56px;
+  color: var(--grey-dim);
+  opacity: 0.6;
+  margin-top: 20px;
+  margin-left: 6px;
+}
+
+.sidebar-status{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.status-row{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 1px;
+  color: var(--grey);
+}
+.status-dot{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--bmw-blue-light);
+  box-shadow: 0 0 0 3px rgba(76,155,232,0.15);
+}
+
+/* ============ MAIN ============ */
+.main{
+  flex: 1;
+  min-width: 0;
+  padding: 40px 48px 60px;
+  position: relative;
+}
+
+/* 배경에 아주 은은한 모터사이클 실루엣 느낌의 원형 그래픽 (Hero 없이도 브랜드 무드 부여) */
+.main::before{
+  content: "";
+  position: fixed;
+  top: -10%;
+  right: -8%;
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(255,255,255,0.035);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.main::after{
+  content: "";
+  position: fixed;
+  top: 4%;
+  right: 4%;
+  width: 340px;
+  height: 340px;
+  border: 1px solid rgba(255,255,255,0.035);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.main > *{ position: relative; z-index: 1; }
+
+/* ---- Topbar ---- */
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-strong);
+  margin-bottom: 36px;
+  gap: 24px;
+}
+.topbar__bike{
+  width: 64px;
+  height: 64px;
+  color: var(--grey);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.topbar__title h1{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 1.5px;
+  margin: 0;
+  line-height: 1;
+  color: var(--white);
+}
+.topbar__title p{
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: var(--grey);
+  letter-spacing: 0.6px;
+}
+.topbar__meta{
+  text-align: right;
+}
+.topbar__date{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--white);
+}
+.topbar__updated{
+  margin-top: 6px;
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+  color: var(--grey-dim);
+}
+.topbar__updated strong{
+  color: var(--grey);
+  font-weight: 600;
+}
+
+/* ---- Section shared ---- */
+.section{
+  margin-bottom: 60px;
+  scroll-margin-top: 24px;
+}
+.section-head{
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.section-head h3{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 1.5px;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.section-index{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--bmw-blue-light);
+}
+.section-sub{
+  font-size: 11.5px;
+  color: var(--grey-dim);
+}
+
+/* ---- Today's Signal ---- */
+.signal-section{ margin-bottom: 48px; }
+.signal-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--bmw-blue-light);
+  color: var(--white);
+  padding: 34px 38px;
+  position: relative;
+  overflow: hidden;
+}
+.signal-card__speedlines{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 240px;
+  color: var(--grey-dim);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.signal-label{
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 3px;
+  color: var(--bmw-blue-light);
+}
+.signal-headline{
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.35;
+  margin: 14px 0 12px;
+  max-width: 820px;
+  letter-spacing: 0.2px;
+}
+.signal-description{
+  position: relative;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--grey);
+  max-width: 720px;
+  margin: 0;
+}
+
+/* ---- Top News ---- */
+.top-news-list{
+  display: flex;
+  flex-direction: column;
+}
+.news-card{
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+  padding: 26px 4px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 22px;
+  transition: background 0.15s ease;
+}
+.news-card:first-child{ padding-top: 4px; }
+.news-card:hover{
+  background: rgba(255,255,255,0.015);
+}
+.news-card__rank{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--grey-dim);
+  line-height: 1;
+}
+.news-card__body{ min-width: 0; }
+.news-card__meta{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.tag{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 1px;
+  padding: 4px 9px;
+  background: var(--bmw-blue-dim);
+  color: var(--bmw-blue-light);
+  font-weight: 600;
+}
+.tag--competitor{ background: var(--signal-amber-dim); color: var(--signal-amber); }
+.news-card__source{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--grey);
+}
+.news-card__date{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--grey-dim);
+}
+.news-card__title{
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 0 9px;
+  line-height: 1.45;
+  color: var(--white);
+}
+.news-card__summary{
+  font-size: 12.5px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+.news-card__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.news-card__block-label{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 1.2px;
+  color: var(--bmw-blue-light);
+  margin-bottom: 5px;
+  display: block;
+}
+.news-card__block p{
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--white);
+}
+.news-card__footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.importance-stars{
+  font-size: 12px;
+  color: var(--signal-amber);
+  letter-spacing: 1.5px;
+}
+.importance-stars .dim{ color: var(--line-strong); }
+.read-btn{
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.read-btn:hover{
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+/* ---- Market Intelligence ---- */
+.intel-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.intel-column{
+  background: var(--black);
+  padding: 20px;
+}
+.intel-column__head{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 1.8px;
+  color: var(--bmw-blue-light);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.intel-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.intel-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 15px 17px;
+}
+.intel-card__title{
+  font-size: 12.5px;
+  font-weight: 600;
+  margin: 0 0 7px;
+  line-height: 1.45;
+  color: var(--white);
+}
+.intel-card__desc{
+  font-size: 11.5px;
+  color: var(--grey);
+  line-height: 1.65;
+  margin: 0 0 11px;
+}
+.intel-card__meta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+  margin-bottom: 10px;
+}
+.impact-badge{
+  padding: 2px 7px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.impact-High{ background: var(--signal-amber-dim); color: var(--signal-amber); }
+.impact-Medium{ background: var(--bmw-blue-dim); color: var(--bmw-blue-light); }
+.impact-Low{ background: rgba(255,255,255,0.05); color: var(--grey); }
+.intel-card__bmw{
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--grey);
+  border-top: 1px solid var(--line);
+  padding-top: 9px;
+  margin: 0;
+}
+.intel-card__bmw strong{
+  color: var(--bmw-blue-light);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* ---- Source Monitor ---- */
+.filter-bar{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.filter-chip{
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--grey);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  padding: 8px 14px;
+  transition: all 0.15s ease;
+}
+.filter-chip:hover{
+  border-color: var(--white);
+  color: var(--white);
+}
+.filter-chip.is-active{
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+  font-weight: 600;
+}
+.filter-chip--sort.is-active{
+  background: var(--bmw-blue);
+  border-color: var(--bmw-blue);
+  color: var(--white);
+}
+.filter-divider{
+  width: 1px;
+  height: 18px;
+  background: var(--line-strong);
+  margin: 0 6px;
+}
+
+.source-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.source-card{
+  background: var(--black);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.source-card__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+}
+.source-card__source{ color: var(--bmw-blue-light); font-weight: 600; }
+.source-card__title{
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 3px 0 0;
+  color: var(--white);
+}
+.source-card__summary{
+  font-size: 11.5px;
+  color: var(--grey);
+  line-height: 1.6;
+  margin: 0;
+}
+.source-card__bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.source-card__category{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.3px;
+  color: var(--grey);
+}
+.source-card__importance{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--signal-amber);
+}
+.source-card__link{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--white);
+  font-weight: 600;
+}
+.source-card__link:hover{ color: var(--bmw-blue-light); }
+
+.empty-state{
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px 0;
+  color: var(--grey-dim);
+  font-size: 13px;
+  background: var(--black);
+}
+
+/* ---- Team Brief ---- */
+.brief-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 32px 36px;
+  max-width: 760px;
+}
+.brief-card__header{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  color: var(--grey-dim);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+.brief-body{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.brief-item__label{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--bmw-blue-light);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  display: block;
+}
+.brief-item p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--white);
+}
+.brief-insight{
+  background: var(--black);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--signal-amber);
+  padding: 16px 20px;
+  margin-bottom: 26px;
+}
+.brief-insight__label{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--signal-amber);
+  display: block;
+  margin-bottom: 8px;
+}
+.brief-insight p{
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--white);
+}
+.brief-actions{
+  display: flex;
+  gap: 10px;
+}
+.btn{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 1px;
+  padding: 12px 20px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--grey);
+}
+.btn--primary{
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+  font-weight: 700;
+}
+.btn--primary:hover{ background: var(--bmw-blue-light); border-color: var(--bmw-blue-light); color: var(--black); }
+.btn--disabled{
+  color: var(--grey-dim);
+  cursor: not-allowed;
+}
+
+/* ---- Footer ---- */
+.app-footer{
+  margin-top: 48px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--grey-dim);
+  letter-spacing: 0.6px;
+}
+
+/* ---- Toast ---- */
+.toast{
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--white);
+  color: var(--black);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 13px 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  font-family: var(--font-body);
+  z-index: 100;
+}
+.toast.is-visible{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 1200px){
+  .intel-grid{ grid-template-columns: repeat(2, 1fr); }
+  .source-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px){
+  .app{ flex-direction: column; }
+  .sidebar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+  }
+  .brand-block{ border-bottom: none; padding-bottom: 0; flex-direction: row; align-items: center; }
+  .side-nav{ display: none; }
+  .sidebar-status{ display: none; }
+  .main{ padding: 24px 20px 40px; }
+  .topbar{ flex-direction: column; align-items: flex-start; gap: 10px; }
+  .topbar__meta{ text-align: left; }
+  .topbar__title h1{ font-size: 30px; }
+  .news-card{ grid-template-columns: 1fr; }
+  .news-card__grid{ grid-template-columns: 1fr; }
+  .intel-grid{ grid-template-columns: 1fr; }
+  .source-grid{ grid-template-columns: 1fr; }
+  .brief-actions{ flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ transition: none !important; }
+}
+
+/* ==========================================================
+   STEP 2 추가분 — 뉴스 제목 원문 링크 스타일
+   기존 news-card__title / source-card__title 은 색상·크기를 그대로 상속받고,
+   밑줄/파란색 등 브라우저 기본 링크 스타일만 제거하여 기존 디자인을 그대로 유지한다.
+   ========================================================== */
+.news-title-link{
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.news-title-link:hover{
+  color: var(--bmw-blue-light);
+  text-decoration: underline;
+}
+.news-title-link:focus-visible{
+  outline: 2px solid var(--bmw-blue-light);
+  outline-offset: 2px;
+}

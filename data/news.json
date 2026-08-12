@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "date": null,
+    "dayLabel": null,
+    "lastUpdated": null,
+    "isSampleData": true
+  },
+  "marketIntelligence": {
+    "market": [],
+    "competitor": [],
+    "productTech": [],
+    "customerTrend": []
+  },
+  "news": []
+}
