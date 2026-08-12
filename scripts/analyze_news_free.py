@@ -253,21 +253,47 @@ def determine_category(category_scores: dict[str, int]) -> str:
 # ==========================================================
 
 def strip_html(text: str) -> str:
-    return re.sub(r"<[^>]+>", "", text or "").strip()
+    """HTML 태그와 흔한 HTML 엔티티를 제거한다.
+    Google News RSS의 description은 실제 요약이 아니라
+    "<a>제목</a>&nbsp;&nbsp;<font>출처</font>" 형태로 제목을 재포장한 값이라,
+    태그만 지우면 &nbsp; 같은 엔티티가 그대로 남는다."""
+    text = re.sub(r"<[^>]+>", "", text or "")
+    entities = {
+        "&nbsp;": " ", "&amp;": "&", "&lt;": "<", "&gt;": ">",
+        "&quot;": '"', "&#39;": "'", "&apos;": "'",
+    }
+    for entity, replacement in entities.items():
+        text = text.replace(entity, replacement)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def _titles_are_essentially_same(a: str, b: str) -> bool:
+    """정규화 후 비교해서 두 문자열이 사실상 같은 내용인지 판단.
+    Google News description이 제목을 그대로 재포장한 경우를 걸러내기 위함."""
+    norm_a = re.sub(r"[^\w가-힣]", "", a.lower())
+    norm_b = re.sub(r"[^\w가-힣]", "", b.lower())
+    if not norm_a or not norm_b:
+        return False
+    shorter, longer = sorted([norm_a, norm_b], key=len)
+    return shorter in longer
 
 
 def build_summary(article: dict) -> str:
+    title = article.get("title", "")
     description = strip_html(article.get("description", ""))
 
-    if description:
-        # 너무 길면 적당히 자르되 문장 중간에서 끊기지 않도록 마지막 마침표 기준으로 정리
+    # Google News RSS의 description은 대부분 "제목 + 출처명" 재포장이라
+    # 실제 요약으로 볼 수 없다. 제목과 사실상 같은 내용이면 가짜 요약으로 판단해
+    # 정직한 고정 문구로 대체한다 (요청서 27번: 사실을 지어내지 않는다).
+    if description and not _titles_are_essentially_same(title, description):
         if len(description) > 200:
             truncated = description[:200]
             last_period = truncated.rfind(".")
             description = truncated[:last_period + 1] if last_period > 50 else truncated + "..."
         return description
 
-    return "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다."
+    return "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요."
 
 
 # ==========================================================

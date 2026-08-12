@@ -81,56 +81,54 @@ def google_news_rss_kr(query: str) -> str:
 
 def naver_news_search_url(query: str) -> str:
     """네이버는 검색결과에 대한 공식 RSS를 제공하지 않는다.
-    대신 Google 검색을 site:news.naver.com 으로 좁혀서 네이버에 노출된 기사만 걸러낸다.
-    (네이버 자체 오픈API는 Client ID/Secret 등록이 필요해 완전 무료·무등록 원칙에 맞지 않아 사용하지 않는다.)"""
-    encoded_query = quote(f"{query} site:news.naver.com")
+    (네이버 자체 오픈API는 Client ID/Secret 등록이 필요해 완전 무료·무등록 원칙에 맞지 않아 사용하지 않는다.)
+    대신 Google 검색에 "네이버뉴스"라는 표기가 붙는 기사를 우선 노출시키기 위해
+    검색어 뒤에 "네이버뉴스"를 붙인다. site: 연산자는 결과를 사실상 무작위로 만들고
+    개수를 크게 줄이므로 사용하지 않는다."""
+    encoded_query = quote(f"{query} 네이버뉴스")
     return f"https://news.google.com/rss/search?q={encoded_query}&hl=ko&gl=KR&ceid=KR:ko"
 
 
 SOURCES = [
     # ---- 한국이륜차신문(KMNEWS) — 자체 RSS가 없어 Google 검색으로 그 매체 기사만 노출 ----
-    {
-        "sourceGroup": "kmnews",
-        "source": "한국이륜차신문",
-        "sourceType": "media",
-        "url": google_news_rss_kr("이륜차신문"),
-        "keyword_filter": None,
-    },
-    {
-        "sourceGroup": "kmnews",
-        "source": "한국이륜차신문",
-        "sourceType": "media",
-        "url": google_news_rss_kr("KMNEWS 모터사이클"),
-        "keyword_filter": None,
-    },
+    {"sourceGroup": "kmnews", "source": "한국이륜차신문", "sourceType": "media", "url": google_news_rss_kr("이륜차신문"), "keyword_filter": None},
+    {"sourceGroup": "kmnews", "source": "한국이륜차신문", "sourceType": "media", "url": google_news_rss_kr("KMNEWS 모터사이클"), "keyword_filter": None},
 
-    # ---- 브랜드별 국내 뉴스: 네이버 노출 기사 + 구글 전체 검색 병행 ----
+    # ---- 브랜드별 국내 뉴스: 검색어를 다양화(브랜드명 + 대표 모델명)해서 결과량을 늘린다 ----
     {"sourceGroup": "bmw", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("BMW 모토라드"), "keyword_filter": None},
     {"sourceGroup": "bmw", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("BMW 모토라드"), "keyword_filter": None},
+    {"sourceGroup": "bmw", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("BMW GS 오토바이"), "keyword_filter": None},
 
     {"sourceGroup": "ducati", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("두카티 오토바이"), "keyword_filter": None},
     {"sourceGroup": "ducati", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("두카티 오토바이"), "keyword_filter": None},
+    {"sourceGroup": "ducati", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("두카티 코리아"), "keyword_filter": None},
 
     {"sourceGroup": "triumph", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("트라이엄프 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "triumph", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("트라이엄프 모터사이클"), "keyword_filter": None},
+    {"sourceGroup": "triumph", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("트라이엄프 코리아"), "keyword_filter": None},
 
     {"sourceGroup": "harley", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("할리데이비슨 오토바이"), "keyword_filter": None},
     {"sourceGroup": "harley", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("할리데이비슨 오토바이"), "keyword_filter": None},
+    {"sourceGroup": "harley", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("할리데이비슨 코리아"), "keyword_filter": None},
 
     {"sourceGroup": "honda", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("혼다 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "honda", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("혼다 모터사이클"), "keyword_filter": None},
+    {"sourceGroup": "honda", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("혼다코리아 오토바이"), "keyword_filter": None},
 
     {"sourceGroup": "yamaha", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("야마하 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "yamaha", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("야마하 모터사이클"), "keyword_filter": None},
+    {"sourceGroup": "yamaha", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("야마하코리아 오토바이"), "keyword_filter": None},
 
-    # ---- NAVER 그룹: 이륜차 업계 일반 뉴스 중 네이버에 노출된 것 ----
+    # ---- NAVER 그룹: 이륜차 업계 일반 뉴스 중 네이버 노출 우선 ----
     {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("이륜차 신제품"), "keyword_filter": None},
-    {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("이륜차 행사 축제"), "keyword_filter": None},
+    {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("오토바이 신모델"), "keyword_filter": None},
+    {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("모터사이클 행사"), "keyword_filter": None},
     {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("이륜차 시장 판매"), "keyword_filter": None},
 
     # ---- GOOGLE 그룹: 이륜차 업계 일반 뉴스 (구글 전체 검색) ----
     {"sourceGroup": "google", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("이륜차 업계"), "keyword_filter": None},
-    {"sourceGroup": "google", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("이륜차 마케팅 프로모션"), "keyword_filter": None},
+    {"sourceGroup": "google", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("오토바이 신제품"), "keyword_filter": None},
+    {"sourceGroup": "google", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("모터사이클 마케팅 프로모션"), "keyword_filter": None},
     {"sourceGroup": "google", "source": "Google", "sourceType": "market_report", "url": google_news_rss_kr("이륜차 시장 전망"), "keyword_filter": None},
 
     # ---- 한국경제 전체뉴스 RSS — 이륜차 키워드로 필터링해서 보조 소스로 활용, GOOGLE 그룹에 포함 ----
