@@ -239,6 +239,11 @@ button{ font-family: inherit; cursor: pointer; }
   position: relative;
 }
 
+/* 콘텐츠 최대 폭 제한 — 큰 모니터에서 본문이 화면 끝까지 늘어나 가독성이 떨어지는 것을 방지 */
+.topbar, .section{
+  max-width: 1360px;
+}
+
 /* 배경에 아주 은은한 모터사이클 실루엣 느낌의 원형 그래픽 (Hero 없이도 브랜드 무드 부여) */
 .main::before{
   content: "";
@@ -633,6 +638,13 @@ button{ font-family: inherit; cursor: pointer; }
   background: var(--line-strong);
   margin: 0 6px;
 }
+.filter-group-label{
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--grey-dim);
+  margin: 0 2px 0 4px;
+}
 
 .source-grid{
   display: grid;
@@ -847,7 +859,7 @@ button{ font-family: inherit; cursor: pointer; }
   .brand-block{ border-bottom: none; padding-bottom: 0; flex-direction: row; align-items: center; }
   .side-nav{ display: none; }
   .sidebar-status{ display: none; }
-  .main{ padding: 24px 20px 40px; }
+  .main{ padding: 24px 20px 88px; } /* 하단 탭바 높이만큼 여백 확보 */
   .topbar{ flex-direction: column; align-items: flex-start; gap: 10px; }
   .topbar__meta{ text-align: left; }
   .topbar__title h1{ font-size: 30px; }
@@ -856,6 +868,45 @@ button{ font-family: inherit; cursor: pointer; }
   .intel-grid{ grid-template-columns: 1fr; }
   .source-grid{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }
+
+  /* ---- 모바일 탭 기반 네비게이션 (요청서: 축소판이 아닌 탭 방식) ----
+     TODAY'S SIGNAL(#overview)은 항상 노출, 나머지 4개 섹션은
+     하단 탭에서 선택된 것만 보이도록 script.js가 is-tab-active 클래스를 토글한다. */
+  .section:not(.signal-section){ display: none; }
+  .section.is-tab-active{ display: block; }
+
+  .mobile-tabbar{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    border-top: 1px solid var(--line-strong);
+    z-index: 50;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .mobile-tab{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.6px;
+    color: var(--grey);
+    border-top: 2px solid transparent;
+    min-height: 48px; /* 터치 타겟 확보 */
+  }
+  .mobile-tab.is-active{
+    color: var(--white);
+    border-top-color: var(--bmw-blue-light);
+  }
+}
+
+@media (min-width: 901px){
+  .mobile-tabbar{ display: none; }
 }
 
 @media (prefers-reduced-motion: reduce){

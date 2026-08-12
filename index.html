@@ -46,11 +46,11 @@
       <a href="#top-news" class="side-nav__item" data-nav="top-news">
         <span class="side-nav__index">02</span> TOP NEWS
       </a>
-      <a href="#market-intelligence" class="side-nav__item" data-nav="market-intelligence">
-        <span class="side-nav__index">03</span> MARKET INTELLIGENCE
-      </a>
       <a href="#source-monitor" class="side-nav__item" data-nav="source-monitor">
-        <span class="side-nav__index">04</span> SOURCE MONITOR
+        <span class="side-nav__index">03</span> SOURCE MONITOR
+      </a>
+      <a href="#market-intelligence" class="side-nav__item" data-nav="market-intelligence">
+        <span class="side-nav__index">04</span> MARKET INTELLIGENCE
       </a>
       <a href="#team-brief" class="side-nav__item" data-nav="team-brief">
         <span class="side-nav__index">05</span> TEAM BRIEF
@@ -66,7 +66,7 @@
 
     <div class="sidebar-status">
       <div class="status-row"><span class="status-dot"></span> NEWS UPDATED</div>
-      <div class="status-row"><span class="status-dot"></span> AI ANALYSIS COMPLETE</div>
+      <div class="status-row"><span class="status-dot"></span> RULE-BASED ANALYSIS</div>
     </div>
   </aside>
 
@@ -121,11 +121,39 @@
       <div id="top-news-list" class="top-news-list"></div>
     </section>
 
+    <!-- SOURCE MONITOR -->
+    <section id="source-monitor" class="section">
+      <div class="section-head">
+        <h3><span class="section-index">03</span> SOURCE MONITOR</h3>
+        <span class="section-sub">브랜드·매체별 원문 뉴스 흐름 직접 확인</span>
+      </div>
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-chip is-active" data-filter="all">ALL</button>
+        <span class="filter-group-label">BRANDS</span>
+        <button class="filter-chip" data-filter="bmw">BMW</button>
+        <button class="filter-chip" data-filter="ducati">DUCATI</button>
+        <button class="filter-chip" data-filter="triumph">TRIUMPH</button>
+        <button class="filter-chip" data-filter="harley">HARLEY-DAVIDSON</button>
+        <button class="filter-chip" data-filter="honda">HONDA</button>
+        <button class="filter-chip" data-filter="yamaha">YAMAHA</button>
+        <span class="filter-group-label">MEDIA</span>
+        <button class="filter-chip" data-filter="kmnews">MOTORCYCLE</button>
+        <button class="filter-chip" data-filter="naver">GENERAL</button>
+        <button class="filter-chip" data-filter="google">MARKET</button>
+        <span class="filter-divider"></span>
+        <button class="filter-chip filter-chip--sort is-active" data-sort="latest">LATEST</button>
+        <button class="filter-chip filter-chip--sort" data-sort="importance">HIGH IMPORTANCE</button>
+      </div>
+
+      <div id="source-monitor-grid" class="source-grid"></div>
+    </section>
+
     <!-- MARKET INTELLIGENCE -->
     <section id="market-intelligence" class="section">
       <div class="section-head">
-        <h3><span class="section-index">03</span> MARKET INTELLIGENCE</h3>
-        <span class="section-sub">AI가 분석한 4개 영역별 핵심 Insight</span>
+        <h3><span class="section-index">04</span> MARKET INTELLIGENCE</h3>
+        <span class="section-sub">규칙 기반으로 분석한 4개 영역별 핵심 Insight</span>
       </div>
 
       <div class="intel-grid">
@@ -146,32 +174,6 @@
           <div id="intel-customerTrend" class="intel-cards"></div>
         </div>
       </div>
-    </section>
-
-    <!-- SOURCE MONITOR -->
-    <section id="source-monitor" class="section">
-      <div class="section-head">
-        <h3><span class="section-index">04</span> SOURCE MONITOR</h3>
-        <span class="section-sub">브랜드·매체별 원문 뉴스 흐름 직접 확인</span>
-      </div>
-
-      <div class="filter-bar" id="filter-bar">
-        <button class="filter-chip is-active" data-filter="all">ALL</button>
-        <button class="filter-chip" data-filter="bmw">BMW</button>
-        <button class="filter-chip" data-filter="ducati">DUCATI</button>
-        <button class="filter-chip" data-filter="triumph">TRIUMPH</button>
-        <button class="filter-chip" data-filter="harley">HARLEY-DAVIDSON</button>
-        <button class="filter-chip" data-filter="honda">HONDA</button>
-        <button class="filter-chip" data-filter="yamaha">YAMAHA</button>
-        <button class="filter-chip" data-filter="naver">NAVER</button>
-        <button class="filter-chip" data-filter="google">GOOGLE</button>
-        <button class="filter-chip" data-filter="kmnews">KMNEWS</button>
-        <span class="filter-divider"></span>
-        <button class="filter-chip filter-chip--sort is-active" data-sort="latest">LATEST</button>
-        <button class="filter-chip filter-chip--sort" data-sort="importance">HIGH IMPORTANCE</button>
-      </div>
-
-      <div id="source-monitor-grid" class="source-grid"></div>
     </section>
 
     <!-- TEAM BRIEF -->
@@ -203,11 +205,27 @@
     </section>
 
     <footer class="app-footer">
-      MOTORRAD PULSE — Internal Use Only · Prototype Build (Sample Data)
+      MOTORRAD PULSE — Internal Use Only · Automated Collection + Rule-Based Analysis
     </footer>
 
   </main>
 </div>
+
+<!-- ============ MOBILE BOTTOM TAB BAR ============ -->
+<nav class="mobile-tabbar" id="mobile-tabbar">
+  <a href="#top-news" class="mobile-tab is-active" data-tab="top-news">
+    <span class="mobile-tab__label">TOP 5</span>
+  </a>
+  <a href="#source-monitor" class="mobile-tab" data-tab="source-monitor">
+    <span class="mobile-tab__label">SOURCES</span>
+  </a>
+  <a href="#market-intelligence" class="mobile-tab" data-tab="market-intelligence">
+    <span class="mobile-tab__label">INSIGHT</span>
+  </a>
+  <a href="#team-brief" class="mobile-tab" data-tab="team-brief">
+    <span class="mobile-tab__label">BRIEF</span>
+  </a>
+</nav>
 
 <!-- 원문 보기 alert 대체용 알림 -->
 <div id="toast" class="toast"></div>

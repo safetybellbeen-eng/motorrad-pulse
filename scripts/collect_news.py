@@ -63,6 +63,45 @@ def is_foreign_source_title(title: str) -> bool:
     return any(marker in title_lower for marker in FOREIGN_SOURCE_MARKERS)
 
 
+# ==========================================================
+# Source Quality Policy — 신뢰도 낮은 출처 차단 (Allowlist/Blocklist)
+# 한 곳에서 관리하여 향후 쉽게 추가/삭제할 수 있도록 한다.
+# ==========================================================
+
+# 개인 블로그/카페/커뮤니티/재게시 사이트 — Market Intelligence 자료로 부적합하여 전면 차단
+BLOCKED_DOMAINS = [
+    "blog.naver.com", "m.blog.naver.com", "post.naver.com", "m.post.naver.com",
+    "cafe.naver.com", "m.cafe.naver.com",
+    "tistory.com", "brunch.co.kr",
+    "reddit.com", "dcinside.com",
+    "instagram.com", "facebook.com",  # 게시물 링크가 RSS에 섞여 들어오는 경우 방지
+]
+
+
+def is_blocked_domain(url: str) -> bool:
+    """최종 기사 URL의 도메인이 차단 목록에 있으면 True.
+    Aggregator(Google 검색 등) 자체가 아니라 실제 기사가 걸린 최종 도메인 기준으로 판단한다."""
+    url_lower = url.lower()
+    return any(domain in url_lower for domain in BLOCKED_DOMAINS)
+
+
+# Honda/Yamaha처럼 자동차·산업기계 등 다른 사업부도 함께 있는 브랜드는
+# "혼다"라는 단어만으로는 자동차 뉴스까지 섞여 들어올 수 있다.
+# 해당 그룹에서는 모터사이클 관련 문맥 키워드가 최소 1개는 있어야 채택한다.
+MOTORCYCLE_CONTEXT_REQUIRED_GROUPS = {"honda", "yamaha"}
+
+MOTORCYCLE_CONTEXT_KEYWORDS = [
+    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike",
+    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "nc750", "rebel",
+    "mt-", "tenere", "r1", "r7", "tracer", "야마하코리아", "혼다코리아",
+]
+
+
+def has_motorcycle_context(title: str, summary: str) -> bool:
+    text = f"{title} {summary}".lower()
+    return any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
+
+
 def extract_source_name_from_title(title: str, fallback: str) -> tuple[str, str]:
     """Google News RSS의 title은 보통 '기사 제목 - 언론사명' 형태다.
     실제 언론사명을 분리해서 화면에 정확히 표시하고, 제목에서는 제거한다.
@@ -319,7 +358,17 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
                 continue
 
             clean_url = normalize_url(link)
+
+            # 저품질 도메인(블로그/카페 등) 최종 URL 기준 차단
+            if is_blocked_domain(clean_url):
+                continue
+
             resolved_group = classify_source_group(clean_title, summary, source_group)
+
+            # Honda/Yamaha 등은 다른 사업부 뉴스와 섞이기 쉬우므로 모터사이클 문맥이 있는지 재검증
+            if resolved_group in MOTORCYCLE_CONTEXT_REQUIRED_GROUPS:
+                if not has_motorcycle_context(clean_title, summary):
+                    continue
 
             articles.append({
                 "title": clean_title,

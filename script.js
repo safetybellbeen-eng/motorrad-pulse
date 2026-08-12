@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   setupNavHighlight();
+  setupMobileTabbar();
   setupFilterBar();
   setupCopyBriefButton();
 });
@@ -350,6 +351,33 @@ function formatDisplayDate(isoString) {
 }
 
 /* ---------- Sidebar Nav 하이라이트 ---------- */
+/* ---------- Mobile Bottom Tab Bar ----------
+   900px 이하에서만 의미가 있다. 탭 클릭 시 해당 섹션에 is-tab-active를 부여하고
+   나머지는 CSS(.section:not(.signal-section){display:none})로 숨긴다.
+   TODAY'S SIGNAL(#overview)은 signal-section 클래스로 항상 노출된다. */
+function setupMobileTabbar() {
+  const tabs = document.querySelectorAll(".mobile-tab");
+  if (!tabs.length) return;
+
+  function activateTab(targetId) {
+    tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.tab === targetId));
+    document.querySelectorAll(".section:not(.signal-section)").forEach((sec) => {
+      sec.classList.toggle("is-tab-active", sec.id === targetId);
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+      activateTab(tab.dataset.tab);
+      document.getElementById(tab.dataset.tab)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  // 초기 상태: 첫 번째 탭(TOP NEWS)을 기본으로 노출
+  activateTab(tabs[0].dataset.tab);
+}
+
 function setupNavHighlight() {
   const navItems = document.querySelectorAll(".side-nav__item");
   const sections = Array.from(navItems).map((item) =>
