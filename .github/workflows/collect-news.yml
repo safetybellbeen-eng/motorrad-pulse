@@ -1,0 +1,52 @@
+name: Collect Motorcycle News
+
+# 수동 실행 (요청서 22번): Actions 탭에서 "Run workflow" 버튼으로 직접 실행 가능
+# 자동 실행 (요청서 23번): 매일 한국시간(KST, UTC+9) 오전 06:30 전후 실행
+#   GitHub Actions cron은 UTC 기준이므로 KST 06:30 = UTC 전날 21:30
+#   정확한 정각 실행이 보장되지 않을 수 있어 업무 시작 전 여유를 두고 설정
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "30 21 * * *"
+
+# 수집 결과 JSON을 Repository에 다시 Commit해야 하므로 쓰기 권한 필요 (요청서 24번)
+permissions:
+  contents: write
+
+jobs:
+  collect-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run news collector
+        run: python3 scripts/collect_news.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if git diff --quiet -- data/raw_news.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No news changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "motorrad-pulse-bot"
+          git config user.email "actions@github.com"
+          git add data/raw_news.json
+          git commit -m "auto: update MOTORRAD PULSE news"
+          git push
