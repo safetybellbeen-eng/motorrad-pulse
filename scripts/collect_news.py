@@ -43,6 +43,38 @@ USER_AGENT = "MotorradPulseNewsCollector/1.0 (+https://github.com/)"
 # 추적 파라미터 (요청서 14번)
 TRACKING_PARAMS = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "gclid", "oc"}
 
+# Google News 한국어(hl=ko&gl=KR) 검색은 언어/지역이 "한국"일 뿐,
+# 실제 기사를 쓴 언론사가 한국이라는 보장은 없다. 검색어와 관련성이 높다고
+# 판단되면 베트남/태국 등 동남아 매체 기사도 한국어 UI에 섞여 들어온다.
+# Google News RSS의 title은 "기사 제목 - 언론사명" 형태로 끝나므로,
+# 그 언론사명이 명백히 외국 매체로 알려진 경우 걸러낸다.
+FOREIGN_SOURCE_MARKERS = [
+    "vietnam.vn", "vietnamnet", "vnexpress", "tuoitre", "thanhnien",
+    "bangkokpost", "thairath", "manager.co.th",
+    ".vn", ".th", ".ph", ".id", ".my",
+    "yahoo.co.jp", "response.jp", "webike",
+]
+
+
+def is_foreign_source_title(title: str) -> bool:
+    """제목 끝의 '- 언론사명' 부분에 외국 매체 표식이 있으면 True.
+    Google News RSS title 형식(예: '...기사 제목... - Vietnam.vn')을 이용한다."""
+    title_lower = title.lower()
+    return any(marker in title_lower for marker in FOREIGN_SOURCE_MARKERS)
+
+
+def extract_source_name_from_title(title: str, fallback: str) -> tuple[str, str]:
+    """Google News RSS의 title은 보통 '기사 제목 - 언론사명' 형태다.
+    실제 언론사명을 분리해서 화면에 정확히 표시하고, 제목에서는 제거한다.
+    분리에 실패하면 원본 title과 fallback 소스명을 그대로 반환한다."""
+    if " - " in title:
+        possible_title, possible_source = title.rsplit(" - ", 1)
+        # 언론사명은 보통 짧다 (30자 이내). 너무 길면 실제로는 제목의 일부일 수 있으므로 분리하지 않는다.
+        if possible_title and 0 < len(possible_source) <= 30:
+            return possible_title.strip(), possible_source.strip()
+    return title, fallback
+
+
 # sourceGroup 표시명 (요청서 4번 — 기존 UI와 동일하게 유지)
 SOURCE_GROUP_LABELS = {
     "bmw": "BMW",
@@ -94,30 +126,35 @@ SOURCES = [
     {"sourceGroup": "kmnews", "source": "한국이륜차신문", "sourceType": "media", "url": google_news_rss_kr("이륜차신문"), "keyword_filter": None},
     {"sourceGroup": "kmnews", "source": "한국이륜차신문", "sourceType": "media", "url": google_news_rss_kr("KMNEWS 모터사이클"), "keyword_filter": None},
 
-    # ---- 브랜드별 국내 뉴스: 검색어를 다양화(브랜드명 + 대표 모델명)해서 결과량을 늘린다 ----
+    # ---- 월간모터바이크(mbzine.com) — 실제 접근 가능한 국내 모터사이클 전문지, 검증 완료 ----
+    {"sourceGroup": "kmnews", "source": "월간모터바이크", "sourceType": "media", "url": google_news_rss_kr("월간모터바이크"), "keyword_filter": None},
+    {"sourceGroup": "kmnews", "source": "월간모터바이크", "sourceType": "media", "url": google_news_rss_kr("mbzine 모터사이클"), "keyword_filter": None},
+
+    # ---- 브랜드별 국내 뉴스: 브랜드명 + 이벤트성 키워드(국내 출시/신차/코리아)로 검색어를 다양화 ----
     {"sourceGroup": "bmw", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("BMW 모토라드"), "keyword_filter": None},
     {"sourceGroup": "bmw", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("BMW 모토라드"), "keyword_filter": None},
+    {"sourceGroup": "bmw", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("BMW 모토라드 국내 출시"), "keyword_filter": None},
     {"sourceGroup": "bmw", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("BMW GS 오토바이"), "keyword_filter": None},
 
     {"sourceGroup": "ducati", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("두카티 오토바이"), "keyword_filter": None},
     {"sourceGroup": "ducati", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("두카티 오토바이"), "keyword_filter": None},
-    {"sourceGroup": "ducati", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("두카티 코리아"), "keyword_filter": None},
+    {"sourceGroup": "ducati", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("두카티 코리아 신차"), "keyword_filter": None},
 
     {"sourceGroup": "triumph", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("트라이엄프 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "triumph", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("트라이엄프 모터사이클"), "keyword_filter": None},
-    {"sourceGroup": "triumph", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("트라이엄프 코리아"), "keyword_filter": None},
+    {"sourceGroup": "triumph", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("트라이엄프 코리아 신차"), "keyword_filter": None},
 
     {"sourceGroup": "harley", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("할리데이비슨 오토바이"), "keyword_filter": None},
     {"sourceGroup": "harley", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("할리데이비슨 오토바이"), "keyword_filter": None},
-    {"sourceGroup": "harley", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("할리데이비슨 코리아"), "keyword_filter": None},
+    {"sourceGroup": "harley", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("할리데이비슨 코리아 신차"), "keyword_filter": None},
 
     {"sourceGroup": "honda", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("혼다 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "honda", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("혼다 모터사이클"), "keyword_filter": None},
-    {"sourceGroup": "honda", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("혼다코리아 오토바이"), "keyword_filter": None},
+    {"sourceGroup": "honda", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("혼다코리아 오토바이 출시"), "keyword_filter": None},
 
     {"sourceGroup": "yamaha", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("야마하 모터사이클"), "keyword_filter": None},
     {"sourceGroup": "yamaha", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("야마하 모터사이클"), "keyword_filter": None},
-    {"sourceGroup": "yamaha", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("야마하코리아 오토바이"), "keyword_filter": None},
+    {"sourceGroup": "yamaha", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("야마하코리아 오토바이 출시"), "keyword_filter": None},
 
     # ---- NAVER 그룹: 이륜차 업계 일반 뉴스 중 네이버 노출 우선 ----
     {"sourceGroup": "naver", "source": "Naver", "sourceType": "media", "url": naver_news_search_url("이륜차 신제품"), "keyword_filter": None},
@@ -261,9 +298,17 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
             if not title or not link:
                 continue
 
+            # 외국 매체 기사 걸러내기 (요청서: 국내 언론사만 원함, 베트남 등 동남아 매체 제외)
+            if is_foreign_source_title(title):
+                continue
+
+            # Google News RSS의 "제목 - 언론사명" 형태에서 실제 언론사명을 분리해
+            # source에 정확히 반영한다 (기존에는 무조건 검색 쿼리 함수를 만든 소스명("Google" 등)만 썼음)
+            clean_title, resolved_source_name = extract_source_name_from_title(title, source_name)
+
             # keyword_filter가 있으면 제목/요약에 키워드가 포함된 것만 채택 (요청서 6, 8번)
             if keyword_filter:
-                text = f"{title} {summary}".lower()
+                text = f"{clean_title} {summary}".lower()
                 if not any(kw.lower() in text for kw in keyword_filter):
                     continue
 
@@ -274,12 +319,12 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
                 continue
 
             clean_url = normalize_url(link)
-            resolved_group = classify_source_group(title, summary, source_group)
+            resolved_group = classify_source_group(clean_title, summary, source_group)
 
             articles.append({
-                "title": title,
+                "title": clean_title,
                 "url": clean_url,
-                "source": source_name,
+                "source": resolved_source_name,
                 "sourceType": source_type,
                 "sourceGroup": resolved_group,
                 "publishedAt": published_at,
