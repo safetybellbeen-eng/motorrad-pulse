@@ -1,10 +1,85 @@
 {
-  "date": null,
-  "lastAnalyzedAt": null,
-  "dailySignal": null,
-  "market": [],
-  "competitor": [],
-  "productTech": [],
+  "date": "2026-08-12",
+  "lastAnalyzedAt": "2026-08-12T20:21:24.375317+09:00",
+  "dailySignal": {
+    "title": "신규 모델 및 시장/판매 관련 뉴스 증가",
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+  },
+  "market": [
+    {
+      "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움 - 한국이륜차신문",
+      "summary": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움&nbsp;&nbsp;한국이륜차신문",
+      "relatedNewsIds": [
+        "0697a3537c364be0"
+      ],
+      "impact": 1.5,
+      "bmwView": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+    }
+  ],
+  "competitor": [
+    {
+      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개 - 한국이륜차신문",
+      "summary": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개&nbsp;&nbsp;한국이륜차신문",
+      "relatedNewsIds": [
+        "853ac3ff20aa361e"
+      ],
+      "impact": 4.5,
+      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+    },
+    {
+      "title": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다. - Vietnam.vn",
+      "summary": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다.&nbsp;&nbsp;Vietnam.vn",
+      "relatedNewsIds": [
+        "8160980eb361eaf2"
+      ],
+      "impact": 3.0,
+      "bmwView": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."
+    },
+    {
+      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL' - 한국이륜차신문",
+      "summary": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'&nbsp;&nbsp;한국이륜차신문",
+      "relatedNewsIds": [
+        "884db89aa968ed6c"
+      ],
+      "impact": 2.5,
+      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+    },
+    {
+      "title": "2026년 8월 기준 야마하 YZF-R15 오토바이 최신 가격표입니다. - Vietnam.vn",
+      "summary": "2026년 8월 기준 야마하 YZF-R15 오토바이 최신 가격표입니다.&nbsp;&nbsp;Vietnam.vn",
+      "relatedNewsIds": [
+        "d58b3801faa0b041"
+      ],
+      "impact": 2.0,
+      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+    }
+  ],
+  "productTech": [
+    {
+      "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개 - 한국이륜차신문",
+      "summary": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개&nbsp;&nbsp;한국이륜차신문",
+      "relatedNewsIds": [
+        "41074fac848d7f10"
+      ],
+      "impact": 3.0,
+      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+    },
+    {
+      "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시 - 한국이륜차신문",
+      "summary": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시&nbsp;&nbsp;한국이륜차신문",
+      "relatedNewsIds": [
+        "95322fdf9619cb8c"
+      ],
+      "impact": 2.5,
+      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+    }
+  ],
   "customerTrend": [],
-  "teamBrief": null
+  "teamBrief": {
+    "market": "오늘 수집된 시장 관련 뉴스 중 주요 기사 1건이 확인되었습니다. 주요 Motorcycle 시장의 판매 및 수요 흐름을 확인할 필요가 있습니다.",
+    "competitor": "가와사키, 야마하, 혼다 등 경쟁 브랜드 관련 뉴스가 4건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 2건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
+    "todayInsight": "오늘은 신규 모델, 시장/판매, 리콜/품질 이슈 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+  }
 }
