@@ -1,25 +1,32 @@
 {
   "meta": {
-    "date": "2026-08-12",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:34 PM",
+    "date": "2026-08-13",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:26 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 시장/판매 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     }
   },
   "marketIntelligence": {
     "market": [
       {
-        "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식] - Naver Blog",
+        "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식]",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
       },
       {
-        "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움 - 한국이륜차신문",
+        "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+      },
+      {
+        "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -28,7 +35,7 @@
     ],
     "competitor": [
       {
-        "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개 - 한국이륜차신문",
+        "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "High",
@@ -49,27 +56,34 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL' - 한국이륜차신문",
+        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
       {
-        "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개 - 한국이륜차신문",
+        "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시 - 한국이륜차신문",
+        "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "모딜카, 전기차·특가·SUV 등 테마별 탐색 강화… 홈페이지·앱 개편",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -92,6 +106,21 @@
       "rank": 4
     },
     {
+      "id": "393590348311d9ff",
+      "title": "모딜카, 전기차·특가·SUV 등 테마별 탐색 강화… 홈페이지·앱 개편",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1aNmVPQ3F4RUUtQW9sckh1bENtOFcwdHJvbzVlbTdvWExZTjFmeVBpc0QxajJMeDZsWUZPU2xxWE0zNGpRQVdtUTE5UzhXX2E2WENVcWJuZm5Na1lDdHpLNElSQjR1Zw",
+      "source": "카가이",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "publishedAt": "2026-08-12T09:02:18+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": false
+    },
+    {
       "id": "9bc89165d5376e4d",
       "title": "두카티, 오프로드와 캠핑의 매력을 함께 즐긴다 - 한국이륜차신문",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5NSl9vYzdiUmNZMVpLd0lCZ01vNHZkS0dNSzRQdU9vWnVNdnI2eEdHay05eVZQSVVLYi1YSThGRVh4cXk3Z0Y3aWtTX29nMGkzMXJhUHBsZk5vZ1lIX0daa3Eyaw",
@@ -101,22 +130,22 @@
       "publishedAt": "2026-08-11T16:14:36+09:00",
       "category": "COMPETITOR",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false
     },
     {
       "id": "a7a8c25d30dce0e5",
-      "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식] - Naver Blog",
+      "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식]",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE8xRkI3U3BRaTBhQmQ5cGphQmNnQXgtNzcyZHBNY09VLUgxX0prTkhPWnpUUmFKMzdMZkhWX0xNczhIbVdoalVRQVo4MmtFXzdFNll5d0N4UzYtTF9vZlNpRDA1TEZodWd3ekRpOGhva0piUnE0cHNpcDBB",
-      "source": "Naver",
+      "source": "Naver Blog",
       "sourceType": "media",
       "sourceGroup": "honda",
       "publishedAt": "2026-08-12T14:15:16+09:00",
       "category": "MARKET",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": false
@@ -131,7 +160,7 @@
       "publishedAt": "2026-08-11T19:34:49+09:00",
       "category": "COMPETITOR",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
@@ -154,13 +183,28 @@
       "rank": 5
     },
     {
+      "id": "24611a906706ed69",
+      "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
+      "url": "https://www.hankyung.com/article/2026081278797",
+      "source": "한국경제",
+      "sourceType": "media",
+      "sourceGroup": "google",
+      "publishedAt": "2026-08-12T23:52:48+09:00",
+      "category": "MARKET",
+      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": false
+    },
+    {
       "id": "853ac3ff20aa361e",
-      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개 - 한국이륜차신문",
+      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBCaXFQd2c3QXdaWDVJbTFJWnllVWNDTWpGeWd3UjktMTlHYUxyaWt1RE11WU1xbmIyM29ybEVNVGxWUUV2TUJOb1ljNEY3OHl0MUdLTHpfV1NhcUp4aFA4a2lOMA",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
-      "publishedAt": "2026-08-12T20:11:14+09:00",
+      "publishedAt": "2026-08-13T02:18:58+09:00",
       "category": "COMPETITOR",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
       "importance": 4.5,
@@ -171,24 +215,24 @@
     },
     {
       "id": "884db89aa968ed6c",
-      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL' - 한국이륜차신문",
+      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ILXFMa0lnVFRZX1dBb0d1VUtmQzNOQTNFOVF3akVGTkx6N2VKejIycjhMMGlYTVNnRVI5cjBJTFdfUzBSTjJKSzlIamtiYl8ybWVZazhZenExMmc1b1BvbFRKYw",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:27:45+09:00",
       "category": "COMPETITOR",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false
     },
     {
       "id": "0697a3537c364be0",
-      "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움 - 한국이륜차신문",
+      "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1YQVZVNVFtaDN5NXk3SlNqTmsxMlh1S0VNLUduc1V2UzBFRDBtcUNMRUJnN2hmRndLdmJjN2hKZS1hQkx3YUJwRWJrUUdtLUwzLWZETlJvbHQ0RXZnbU44Z2Z2VQ",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:24:10+09:00",
@@ -201,24 +245,24 @@
     },
     {
       "id": "95322fdf9619cb8c",
-      "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시 - 한국이륜차신문",
+      "title": "쇼에이, 신형 풀 페이스 헬멧 ‘와이번 제로’ 출시",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBfRFZrZWVZRFBxeDhZYUI2bzFrVUtpd2xYNE5JUEhWNU01VVpOQzFQc3NKTHdDSzAwWXBQMzNOZ01tRGtRN2Jma1dKdUxTbFI2eGwtMUlyQzh1dmJQSWxYbHlPQQ",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:17:17+09:00",
       "category": "PRODUCT_TECH",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": false
     },
     {
       "id": "41074fac848d7f10",
-      "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개 - 한국이륜차신문",
+      "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9fcmNXZXhKcER2WnQyNlV2U29rMzZEOEh2VVViTU9lX0szN3JURGlIMXdMVjMxckJkNHFzbHF2M3M2cFBvVVkzckZyTGx4b1ZrTjJ6SGU5NndnVGhIaFpxZmR4UQ",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:14:02+09:00",
