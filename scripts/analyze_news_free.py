@@ -112,13 +112,22 @@ _AUTOMOTIVE_ONLY_KEYWORDS = [
     "폴스타", "polestar", "테슬라", "tesla", "현대차", "기아", "제네시스",
     "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
 ]
+_INCIDENT_ONLY_KEYWORDS = [
+    "사고", "사망", "숨져", "숨진", "부상", "중상", "치사", "치상",
+    "음주운전", "무면허", "뺑소니", "도주", "체포", "검거", "구속", "입건",
+    "단속", "적발", "위반", "범칙금", "과태료", "절도", "훔쳐", "절취",
+    "폭행", "사기", "고소", "고발", "재판", "실형", "징역", "벌금형",
+]
 
 
 def has_motorcycle_context(title: str) -> bool:
     text = (title or "").lower()
     has_bike = any(kw.lower() in text for kw in _MOTORCYCLE_CONTEXT_KEYWORDS)
     has_auto_only = any(kw.lower() in text for kw in _AUTOMOTIVE_ONLY_KEYWORDS)
+    has_incident = any(kw.lower() in text for kw in _INCIDENT_ONLY_KEYWORDS)
     if has_auto_only and not has_bike:
+        return False
+    if has_incident:
         return False
     return has_bike
 

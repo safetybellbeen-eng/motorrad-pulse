@@ -137,18 +137,32 @@ AUTOMOTIVE_ONLY_KEYWORDS = [
     "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
 ]
 
+# MOTORRAD PULSE는 BMW Motorrad 브랜드 마케터를 위한 업무용 Market Intelligence
+# Dashboard다. 이륜차 키워드가 있어도 교통사고/범죄/단속처럼 마케팅 업무와
+# 무관한 사회면 사건사고 기사는 제외한다 (예: "헬멧 없이 오토바이 몰던 10대... 사고 사망").
+INCIDENT_ONLY_KEYWORDS = [
+    "사고", "사망", "숨져", "숨진", "부상", "중상", "치사", "치상",
+    "음주운전", "무면허", "뺑소니", "도주", "체포", "검거", "구속", "입건",
+    "단속", "적발", "위반", "범칙금", "과태료", "절도", "훔쳐", "절취",
+    "폭행", "사기", "고소", "고발", "재판", "실형", "징역", "벌금형",
+]
+
 
 def has_motorcycle_context(title: str, summary: str) -> bool:
     """이륜차 관련 키워드가 있으면 True.
-    단, 자동차 전용 키워드가 있고 이륜차 키워드가 전혀 없으면 명확히 False로 판단한다
-    (예: '폴스타, 보증 연장 프로그램 출시' 처럼 이륜차 매체 검색에 섞여 들어온
-    순수 자동차 기사를 걸러내기 위함)."""
+    단, 아래 두 경우는 예외적으로 False로 판단한다.
+    1) 자동차 전용 키워드만 있고 이륜차 키워드가 없는 경우 (순수 자동차 기사)
+    2) 사건사고/범죄/단속 키워드가 있는 경우 (마케팅 인텔리전스와 무관한 사회면 뉴스)."""
     text = f"{title} {summary}".lower()
 
     has_bike_keyword = any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
     has_auto_only_keyword = any(kw.lower() in text for kw in AUTOMOTIVE_ONLY_KEYWORDS)
+    has_incident_keyword = any(kw.lower() in text for kw in INCIDENT_ONLY_KEYWORDS)
 
     if has_auto_only_keyword and not has_bike_keyword:
+        return False
+
+    if has_incident_keyword:
         return False
 
     return has_bike_keyword
