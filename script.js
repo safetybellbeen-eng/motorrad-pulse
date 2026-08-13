@@ -223,9 +223,9 @@ function renderSourceMonitor(newsList) {
       <h6 class="source-card__title">${createNewsTitleLink(item)}</h6>
       <p class="source-card__summary">${escapeHtml(summaryText)}</p>
       <div class="source-card__bottom">
-        <span class="source-card__category">${CATEGORY_LABELS[item.category] || (item.category ? escapeHtml(item.category) : "미분류")}</span>
-        <span class="source-card__importance">Importance ${importanceText}</span>
-        <button class="source-card__link" type="button" data-url="${escapeHtml(item.url)}">→ Read</button>
+        ${item.category ? `<span class="source-card__category">${CATEGORY_LABELS[item.category] || escapeHtml(item.category)}</span>` : "<span></span>"}
+        ${typeof item.importance === "number" ? `<span class="source-card__importance">Importance ${importanceText}</span>` : ""}
+        <button class="source-card__link" type="button" data-url="${escapeHtml(item.url)}">READ →</button>
       </div>
     `;
     container.appendChild(card);
@@ -267,24 +267,23 @@ function renderTeamBrief(data) {
     ? data.meta.date.replaceAll("-", ".")
     : "-";
 
-  const intel = data.marketIntelligence || {};
+  const topNews = (data.news || [])
+    .filter((n) => n.isTopNews)
+    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
 
-  const sections = [
-    { label: "① MARKET", text: intel.market?.[0]?.description || "" },
-    { label: "② COMPETITOR", text: intel.competitor?.[0]?.description || "" },
-    { label: "③ PRODUCT & TECH", text: intel.productTech?.[0]?.description || "" },
-    { label: "④ CUSTOMER", text: intel.customerTrend?.[0]?.description || "" }
-  ];
-
-  briefBody.innerHTML = sections.map((s) => `
-    <div class="brief-item">
-      <span class="brief-item__label">${s.label}</span>
-      <p>${escapeHtml(s.text || "아직 분석된 내용이 없습니다.")}</p>
-    </div>
-  `).join("");
-
-  document.getElementById("brief-insight-text").textContent =
-    data.meta.todaySignal?.headline || "아직 분석된 시그널이 없습니다.";
+  if (topNews.length === 0) {
+    briefBody.innerHTML = `<div class="brief-item"><p>아직 분석된 뉴스가 없습니다.</p></div>`;
+  } else {
+    briefBody.innerHTML = topNews.map((n, idx) => `
+      <div class="brief-item">
+        <span class="brief-item__label">(${idx + 1})</span>
+        <p>
+          ${escapeHtml(n.title)}<br>
+          <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(n.url)}</a>
+        </p>
+      </div>
+    `).join("");
+  }
 }
 
 function setupCopyBriefButton() {
@@ -292,28 +291,34 @@ function setupCopyBriefButton() {
   btn.addEventListener("click", () => {
     if (!NEWS_DATA) return;
 
-    const intel = NEWS_DATA.marketIntelligence || {};
     const meta = NEWS_DATA.meta;
+    const topNews = (NEWS_DATA.news || [])
+      .filter((n) => n.isTopNews)
+      .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
 
-    const text = [
-      `MOTORRAD DAILY BRIEF`,
-      `${meta.date ? meta.date.replaceAll("-", ".") : "-"}`,
+    const dateObj = meta.date ? new Date(meta.date) : null;
+    const dayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    const dateLine = dateObj
+      ? `${dateObj.getFullYear()}년 ${dateObj.getMonth() + 1}월 ${dateObj.getDate()}일 ${dayNames[dateObj.getDay()]}`
+      : "-";
+
+    const lines = [
+      `[${dateLine} 데일리뉴스]`,
+      `좋은 아침입니다!`,
       ``,
-      `① MARKET`,
-      intel.market?.[0]?.description || "아직 분석된 내용이 없습니다.",
-      ``,
-      `② COMPETITOR`,
-      intel.competitor?.[0]?.description || "아직 분석된 내용이 없습니다.",
-      ``,
-      `③ PRODUCT & TECH`,
-      intel.productTech?.[0]?.description || "아직 분석된 내용이 없습니다.",
-      ``,
-      `④ CUSTOMER`,
-      intel.customerTrend?.[0]?.description || "아직 분석된 내용이 없습니다.",
-      ``,
-      `TODAY'S INSIGHT`,
-      meta.todaySignal?.headline || "아직 분석된 시그널이 없습니다."
-    ].join("\n");
+      `📍뉴스`,
+    ];
+
+    if (topNews.length === 0) {
+      lines.push(`아직 분석된 뉴스가 없습니다.`);
+    } else {
+      topNews.forEach((n, idx) => {
+        lines.push(`(${idx + 1}) ${n.title}`);
+        lines.push(n.url);
+      });
+    }
+
+    const text = lines.join("\n");
 
     navigator.clipboard.writeText(text)
       .then(() => showToast("Team Brief가 클립보드에 복사되었습니다."))

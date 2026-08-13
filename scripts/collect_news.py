@@ -270,20 +270,24 @@ def parse_date(raw_date) -> str | None:
 
 def classify_source_group(title: str, summary: str, default_group: str | None) -> str | None:
     """제목/요약 텍스트에서 브랜드 키워드를 찾아 sourceGroup을 분류.
-    default_group이 이미 지정되어 있으면 그대로 사용.
-    브랜드가 매칭되지 않으면 google 그룹으로 폴백한다 (naver/kmnews는 출처 자체가
-    이미 sourceGroup으로 명시되어 있으므로 이 함수에서 다시 추정하지 않는다)."""
-    if default_group:
-        return default_group
 
+    중요: default_group이 브랜드 전용 소스(bmw/ducati/triumph/harley/honda/yamaha)이면
+    그대로 신뢰한다. 하지만 default_group이 매체 소스(kmnews/naver/google)이면,
+    실제 기사 내용에 브랜드 키워드가 있는지 먼저 확인해서 그 브랜드로 재분류한다.
+    (이전 버전은 default_group을 무조건 그대로 썼기 때문에, 한국이륜차신문을 거쳐
+    들어온 BMW 기사가 전부 kmnews 그룹에만 쌓이고 BMW 필터에는 하나도 안 뜨는
+    문제가 있었다.)"""
     text = f"{title} {summary}".lower()
+
+    if default_group and default_group not in ("kmnews", "naver", "google"):
+        return default_group
 
     for group, keywords in BRAND_KEYWORDS.items():
         for kw in keywords:
             if kw in text:
                 return group
 
-    return "google"
+    return default_group or "google"
 
 
 def generate_id(url: str) -> str:

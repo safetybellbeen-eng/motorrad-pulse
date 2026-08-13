@@ -704,10 +704,20 @@ button{ font-family: inherit; cursor: pointer; }
 .source-card__link{
   font-family: var(--font-mono);
   font-size: 10.5px;
-  color: var(--white);
-  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--bmw-blue-light);
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid var(--bmw-blue-light);
+  padding: 5px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
 }
-.source-card__link:hover{ color: var(--bmw-blue-light); }
+.source-card__link:hover{
+  background: var(--bmw-blue-light);
+  color: var(--black);
+}
 
 .empty-state{
   grid-column: 1 / -1;
@@ -757,6 +767,14 @@ button{ font-family: inherit; cursor: pointer; }
   line-height: 1.7;
   color: var(--white);
 }
+.brief-item__link{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--bmw-blue-light);
+  text-decoration: none;
+  word-break: break-all;
+}
+.brief-item__link:hover{ text-decoration: underline; }
 .brief-insight{
   background: var(--black);
   border: 1px solid var(--line);
