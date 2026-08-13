@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-13",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "11:31 PM",
+    "date": "2026-08-14",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "12:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-13T23:31:21.763711+09:00"
+    "lastUpdatedISO": "2026-08-14T00:01:30.657881+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -68,7 +68,7 @@
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "bmw",
-      "publishedAt": "2026-08-13T20:46:38+09:00",
+      "publishedAt": "2026-08-13T23:49:48+09:00",
       "category": "COMPETITOR",
       "summary": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
       "importance": 4.5,
