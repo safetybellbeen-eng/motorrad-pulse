@@ -26,7 +26,6 @@ const CATEGORY_LABELS = {
 let NEWS_DATA = null;
 let RAW_NEWS_DATA = null;
 let currentFilter = "all";
-let currentSort = "latest";
 
 /* ---------- 초기 로드 ----------
    news.json: AI 분석이 완료된 데이터 (TOP NEWS, MARKET INTELLIGENCE, TEAM BRIEF)
@@ -247,12 +246,9 @@ function renderSourceMonitor(newsList) {
     ? [...newsList]
     : newsList.filter((item) => item.sourceGroup === currentFilter);
 
-  if (currentSort === "importance") {
-    filtered.sort((a, b) => (b.importance ?? 0) - (a.importance ?? 0));
-  } else {
-    // LATEST: ISO 8601 문자열은 사전식 정렬이 곧 시간순 정렬과 동일 -> 내림차순으로 최신순
-    filtered.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-  }
+  // SOURCE MONITOR는 raw_news.json(분석 전 원본)을 사용하므로 importance 값이
+  // 항상 비어있어 중요도순 정렬이 무의미했다. 항상 최신순으로 고정한다.
+  filtered.sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
 
   // 요청서 12번: 그룹별 최대 5개. "ALL" 필터일 때는 그룹별로 5개씩 골라 합친다.
   if (currentFilter === "all") {
@@ -307,12 +303,6 @@ function setupFilterBar() {
       bar.querySelectorAll("[data-filter]").forEach((el) => el.classList.remove("is-active"));
       target.classList.add("is-active");
       currentFilter = target.dataset.filter;
-    }
-
-    if (target.dataset.sort) {
-      bar.querySelectorAll("[data-sort]").forEach((el) => el.classList.remove("is-active"));
-      target.classList.add("is-active");
-      currentSort = target.dataset.sort;
     }
 
     if (RAW_NEWS_DATA) renderSourceMonitor(RAW_NEWS_DATA.news || []);
