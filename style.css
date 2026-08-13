@@ -940,6 +940,7 @@ button{ font-family: inherit; cursor: pointer; }
 .news-title-link{
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
   transition: color 0.15s ease;
 }
 .news-title-link:hover{

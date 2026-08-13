@@ -131,18 +131,11 @@ function renderTopNews(newsList) {
           <span class="news-card__date">${formatDisplayDate(news.publishedAt)}</span>
         </div>
         <h4 class="news-card__title">${createNewsTitleLink(news)}</h4>
-        <p class="news-card__summary">${escapeHtml(news.summary)}</p>
-        <div class="news-card__footer">
-          <button class="read-btn" type="button" data-url="${escapeHtml(news.url)}">READ ORIGINAL</button>
-        </div>
+        ${news.summary ? `<p class="news-card__summary">${escapeHtml(news.summary)}</p>` : ""}
       </div>
     `;
 
     container.appendChild(card);
-  });
-
-  container.querySelectorAll(".read-btn").forEach((btn) => {
-    btn.addEventListener("click", () => handleReadOriginal(btn.dataset.url));
   });
 }
 
@@ -213,26 +206,24 @@ function renderSourceMonitor(newsList) {
   filtered.forEach((item) => {
     const card = document.createElement("article");
     card.className = "source-card";
-    const importanceText = typeof item.importance === "number" ? item.importance.toFixed(1) : "-";
-    const summaryText = item.summary || "원문 확인이 필요한 뉴스입니다.";
+    const importanceText = typeof item.importance === "number" ? item.importance.toFixed(1) : null;
+    const bottomParts = [];
+    if (item.category) {
+      bottomParts.push(`<span class="source-card__category">${CATEGORY_LABELS[item.category] || escapeHtml(item.category)}</span>`);
+    }
+    if (importanceText) {
+      bottomParts.push(`<span class="source-card__importance">Importance ${importanceText}</span>`);
+    }
     card.innerHTML = `
       <div class="source-card__top">
         <span class="source-card__source">${escapeHtml(item.source)}</span>
         <span>${formatDisplayDate(item.publishedAt)}</span>
       </div>
       <h6 class="source-card__title">${createNewsTitleLink(item)}</h6>
-      <p class="source-card__summary">${escapeHtml(summaryText)}</p>
-      <div class="source-card__bottom">
-        ${item.category ? `<span class="source-card__category">${CATEGORY_LABELS[item.category] || escapeHtml(item.category)}</span>` : "<span></span>"}
-        ${typeof item.importance === "number" ? `<span class="source-card__importance">Importance ${importanceText}</span>` : ""}
-        <button class="source-card__link" type="button" data-url="${escapeHtml(item.url)}">READ →</button>
-      </div>
+      ${item.summary ? `<p class="source-card__summary">${escapeHtml(item.summary)}</p>` : ""}
+      ${bottomParts.length ? `<div class="source-card__bottom">${bottomParts.join("")}</div>` : ""}
     `;
     container.appendChild(card);
-  });
-
-  container.querySelectorAll(".source-card__link").forEach((btn) => {
-    btn.addEventListener("click", () => handleReadOriginal(btn.dataset.url));
   });
 }
 
@@ -279,7 +270,7 @@ function renderTeamBrief(data) {
         <span class="brief-item__label">(${idx + 1})</span>
         <p>
           ${escapeHtml(n.title)}<br>
-          <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(n.url)}</a>
+          <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(shortenUrlForShare(n.url))}</a>
         </p>
       </div>
     `).join("");
@@ -314,7 +305,7 @@ function setupCopyBriefButton() {
     } else {
       topNews.forEach((n, idx) => {
         lines.push(`(${idx + 1}) ${n.title}`);
-        lines.push(n.url);
+        lines.push(shortenUrlForShare(n.url));
       });
     }
 
@@ -327,14 +318,6 @@ function setupCopyBriefButton() {
 }
 
 /* ---------- 원문 보기 (샘플 데이터: example.com URL) ---------- */
-function handleReadOriginal(url) {
-  if (!url || url === "#") {
-    showToast("원문 URL이 없는 기사입니다.");
-    return;
-  }
-  window.open(url, "_blank", "noopener,noreferrer");
-}
-
 /* ---------- 뉴스 제목 -> 원문 링크 생성 (요청서 14번: URL 없으면 안전하게 일반 텍스트) ---------- */
 function createNewsTitleLink(item) {
   const safeTitle = escapeHtml(item.title);
@@ -429,6 +412,18 @@ function showToast(message) {
 }
 
 /* ---------- HTML escape (XSS 방지) ---------- */
+/* ---------- 공유용 URL 표시 축약 (링크 자체는 그대로, 보이는 글자만 축약) ---------- */
+function shortenUrlForShare(url, maxLength = 70) {
+  if (!url || url.length <= maxLength) return url;
+  try {
+    const u = new URL(url);
+    const short = `${u.origin}${u.pathname}`;
+    return short.length <= maxLength ? short : short.slice(0, maxLength - 1) + "…";
+  } catch {
+    return url.slice(0, maxLength - 1) + "…";
+  }
+}
+
 function escapeHtml(str) {
   if (str === null || str === undefined) return "";
   return String(str)

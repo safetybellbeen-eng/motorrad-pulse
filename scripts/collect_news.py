@@ -102,6 +102,45 @@ def has_motorcycle_context(title: str, summary: str) -> bool:
     return any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
 
 
+def resolve_real_article_url(link: str, source_href: str | None) -> str:
+    """Google News RSS의 <link>는 항상 news.google.com/rss/articles/... 형태의
+    리다이렉트 URL이라, 팀 공유 시 매우 길고 원문이 아닌 링크를 공유하게 되는 문제가 있었다.
+
+    1순위: RSS의 <source url="..."> 속성 — feedparser가 entry.source.href로 파싱해준다.
+           단, 이 값이 매체 홈페이지(도메인 루트)만 가리키는 경우가 있어 경로 길이로 걸러낸다.
+    2순위: link 자체가 이미 news.google.com이 아니면(=RSS/Feed가 원문 링크를 직접 주는 경우) 그대로 사용.
+    3순위: 위 두 가지로 원문을 특정할 수 없으면, HTTP 요청으로 실제 리다이렉트를 짧은 타임아웃으로
+           한 번만 추적한다. 실패하면 원래 링크를 그대로 반환한다 (요청서 17번: 실패해도 중단되지 않음).
+    """
+    if "news.google.com" not in link:
+        return link
+
+    if source_href and len(urlsplit(source_href).path.strip("/")) > 0:
+        return source_href
+
+    try:
+        resp = requests.head(link, headers={"User-Agent": USER_AGENT}, timeout=6, allow_redirects=True)
+        final_url = resp.url
+        if final_url and "news.google.com" not in final_url:
+            return final_url
+    except requests.exceptions.RequestException:
+        pass
+
+    return link
+
+
+def shorten_display_url(url: str, max_length: int = 60) -> str:
+    """팀 공유용 텍스트에서 너무 긴 링크가 그대로 노출되지 않도록 표시용으로만 축약한다.
+    실제 하이퍼링크(href)는 원본 그대로 유지하고, 화면에 보이는 글자만 짧게 만든다."""
+    if len(url) <= max_length:
+        return url
+    parts = urlsplit(url)
+    short = f"{parts.scheme}://{parts.netloc}{parts.path}"
+    if len(short) <= max_length:
+        return short
+    return short[:max_length - 1] + "…"
+
+
 def extract_source_name_from_title(title: str, fallback: str) -> tuple[str, str]:
     """Google News RSS의 title은 보통 '기사 제목 - 언론사명' 형태다.
     실제 언론사명을 분리해서 화면에 정확히 표시하고, 제목에서는 제거한다.
@@ -361,9 +400,16 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
             if not is_within_lookback(published_at):
                 continue
 
-            clean_url = normalize_url(link)
+            # Google News 리다이렉트 링크를 실제 원문 기사 URL로 변환
+            # (팀 공유 시 news.google.com/rss/articles/... 같은 매우 긴 비원문 링크가 나가던 문제 해결)
+            source_href = None
+            if hasattr(entry, "source") and isinstance(entry.source, dict):
+                source_href = entry.source.get("href")
+            real_link = resolve_real_article_url(link, source_href)
 
-            # 저품질 도메인(블로그/카페 등) 최종 URL 기준 차단
+            clean_url = normalize_url(real_link)
+
+            # 저품질 도메인(블로그/카페 등) 최종(원문) URL 기준 차단
             if is_blocked_domain(clean_url):
                 continue
 
