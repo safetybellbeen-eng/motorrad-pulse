@@ -43,57 +43,55 @@ USER_AGENT = "MotorradPulseNewsCollector/1.0 (+https://github.com/)"
 # 추적 파라미터 (요청서 14번)
 TRACKING_PARAMS = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "gclid", "oc"}
 
-# Google News 한국어(hl=ko&gl=KR) 검색은 언어/지역이 "한국"일 뿐,
-# 실제 기사를 쓴 언론사가 한국이라는 보장은 없다. 검색어와 관련성이 높다고
-# 판단되면 베트남/태국 등 동남아 매체 기사도 한국어 UI에 섞여 들어온다.
-# Google News RSS의 title은 "기사 제목 - 언론사명" 형태로 끝나므로,
-# 그 언론사명이 명백히 외국 매체로 알려진 경우 걸러낸다.
-FOREIGN_SOURCE_MARKERS = [
-    "vietnam.vn", "vietnamnet", "vnexpress", "tuoitre", "thanhnien",
-    "bangkokpost", "thairath", "manager.co.th",
-    ".vn", ".th", ".ph", ".id", ".my",
-    "yahoo.co.jp", "response.jp", "webike",
-]
+# ==========================================================
+# 신뢰 국내 매체 화이트리스트 (Allowlist)
+# ==========================================================
+# 이전 버전은 "알려진 외국 도메인을 차단"하는 블랙리스트 방식이었는데,
+# .com/.net 도메인은 무조건 통과시키는 구멍이 있어 실제로
+# fortunebusinessinsights.com(미국 시장조사 업체), vietnam.vn 등이 계속 새어 들어왔다.
+# 새로운 외국 사이트가 나올 때마다 목록을 추가해야 하는 블랙리스트는 구조적으로
+# 뚫릴 수밖에 없으므로, 반대로 "이 목록에 있는 도메인만 허용한다"는
+# 화이트리스트 방식으로 바꾼다. 목록에 없는 도메인은 국내든 해외든 기본적으로 차단된다.
+TRUSTED_DOMAINS = {
+    # 이번 STEP4-FREE에서 실제 사용 중인 소스
+    "kmnews.net", "www.kmnews.net",
+    "mbzine.com", "www.mbzine.com",
+    "hankyung.com", "www.hankyung.com",
+    # 국내 자동차/이륜차 전문지 (실제 검색으로 접근 가능 확인된 매체)
+    "carguy.kr", "www.carguy.kr",
+    "dailycar.co.kr", "www.dailycar.co.kr",
+    # 국내 주요 경제/종합지 (Google 검색 결과에 자주 노출되는 매체)
+    "ebn.co.kr", "www.ebn.co.kr",
+    "edaily.co.kr", "www.edaily.co.kr",
+    "news1.kr", "www.news1.kr",
+    "yna.co.kr", "www.yna.co.kr",
+    "newsis.com", "www.newsis.com",
+    "mk.co.kr", "www.mk.co.kr",
+    "asiae.co.kr", "www.asiae.co.kr",
+    "fnnews.com", "www.fnnews.com",
+    "etnews.com", "www.etnews.com",
+    "sedaily.com", "www.sedaily.com",
+    "heraldcorp.com", "www.heraldcorp.com",
+    "khan.co.kr", "www.khan.co.kr",
+    "hani.co.kr", "www.hani.co.kr",
+    "donga.com", "www.donga.com",
+    "chosun.com", "www.chosun.com",
+    "joongang.co.kr", "www.joongang.co.kr",
+    "seoul.co.kr", "www.seoul.co.kr",
+    "kmib.co.kr", "www.kmib.co.kr",
+}
 
 
-def is_foreign_source_title(title: str) -> bool:
-    """제목 끝의 '- 언론사명' 부분에 외국 매체 표식이 있으면 True.
-    Google News RSS title 형식(예: '...기사 제목... - Vietnam.vn')을 이용한다.
-    이건 보조 필터다. title에 출처 표식이 없는 경우도 있어서, 주 판정은
-    is_foreign_domain(실제 원문 URL 기준)이 담당한다."""
-    title_lower = title.lower()
-    return any(marker in title_lower for marker in FOREIGN_SOURCE_MARKERS)
-
-
-# 국가 코드 최상위 도메인(ccTLD) 및 특정 외국 매체 도메인 — 최종 원문 URL의 도메인을 검사한다.
-# title 텍스트 검사(is_foreign_source_title)와 달리 실제 링크가 어디로 가는지를 직접 보므로 훨씬 정확하다.
-FOREIGN_DOMAIN_SUFFIXES = [".vn", ".th", ".ph", ".id", ".my", ".jp", ".cn", ".in"]
-FOREIGN_DOMAIN_NAMES = [
-    "vietnam.vn", "vietnamnet.vn", "vnexpress.net", "tuoitre.vn", "thanhnien.vn",
-    "bangkokpost.com", "thairath.co.th", "manager.co.th",
-    "webike.net", "response.jp",
-]
-
-
-def is_foreign_domain(url: str) -> bool:
-    """최종 원문 URL의 도메인이 외국(비한국) 매체로 알려져 있으면 True.
-    .kr, .com, .net 등 판별이 애매한 도메인은 이름 목록으로 보조 확인한다."""
+def is_trusted_domain(url: str) -> bool:
+    """최종 원문 URL의 도메인이 신뢰 화이트리스트에 있는지 확인한다.
+    목록에 없으면 국내 사이트로 보이더라도 기본적으로 차단한다
+    (요청서 원칙: 신뢰할 수 있는 뉴스가 부족하면 빈 자리를 허용한다,
+    낮은 품질/미확인 Source로 억지로 채우지 않는다)."""
     try:
         netloc = urlsplit(url).netloc.lower()
     except Exception:
         return False
-
-    if not netloc:
-        return False
-
-    if any(name in netloc for name in FOREIGN_DOMAIN_NAMES):
-        return True
-
-    # .kr 이거나 .com/.net처럼 국가 무관 도메인이면 외국으로 단정하지 않는다 (국내 매체 대부분이 .com/.net 사용)
-    if netloc.endswith(".kr") or netloc.endswith(".com") or netloc.endswith(".net") or netloc.endswith(".co.kr"):
-        return False
-
-    return any(netloc.endswith(suffix) for suffix in FOREIGN_DOMAIN_SUFFIXES)
+    return netloc in TRUSTED_DOMAINS
 
 
 # ==========================================================
@@ -503,11 +501,13 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
             real_link = resolve_real_article_url(link, source_href)
             clean_url = normalize_url(real_link)
 
-            # 외국 매체 기사 걸러내기 — 최종(원문) URL의 도메인 기준으로 판단 (요청서: 국내 언론사만)
-            if is_foreign_domain(clean_url) or is_foreign_source_title(title):
+            # 신뢰 화이트리스트에 있는 도메인만 채택한다 (요청서: 신뢰할 수 있는 국내 언론사만).
+            # 목록에 없으면 국내처럼 보여도 확인이 안 된 것이므로 기본적으로 제외한다.
+            if not is_trusted_domain(clean_url):
                 continue
 
-            # 저품질 도메인(블로그/카페 등) 최종(원문) URL 기준 차단
+            # 저품질 도메인(블로그/카페 등) 최종(원문) URL 기준 차단 — 화이트리스트에 실수로
+            # 등록될 가능성에 대비한 이중 안전장치
             if is_blocked_domain(clean_url):
                 continue
 
@@ -581,7 +581,7 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
 
     def passes_current_policy(item: dict) -> bool:
         url = item.get("url", "")
-        if is_foreign_domain(url):
+        if not is_trusted_domain(url):
             return False
         if is_blocked_domain(url):
             return False

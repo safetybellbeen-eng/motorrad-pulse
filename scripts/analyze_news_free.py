@@ -56,30 +56,45 @@ SOURCE_GROUP_LABELS = {
     "kmnews": "KMNEWS",
 }
 
-# 이중 안전장치: collect_news.py가 수집 단계에서 외국 매체를 걸러내지만,
-# 혹시 raw_news.json에 어떤 이유로든 위반 데이터가 남아있을 경우를 대비해
-# 분석 단계에서도 한 번 더 도메인을 검증한다.
-FOREIGN_DOMAIN_SUFFIXES = (".vn", ".th", ".ph", ".id", ".my", ".jp", ".cn", ".in")
-FOREIGN_DOMAIN_NAMES = (
-    "vietnam.vn", "vietnamnet.vn", "vnexpress.net", "tuoitre.vn", "thanhnien.vn",
-    "bangkokpost.com", "thairath.co.th", "manager.co.th",
-    "webike.net", "response.jp",
-)
+# 이중 안전장치: collect_news.py가 수집 단계에서 신뢰 화이트리스트로 이미 걸러내지만,
+# 혹시 raw_news.json에 어떤 이유로든 미확인 도메인 데이터가 남아있을 경우를 대비해
+# 분석 단계에서도 한 번 더 화이트리스트로 검증한다. (블랙리스트 방식은 .com/.net을
+# 무조건 통과시켜 fortunebusinessinsights.com 같은 해외 사이트가 새어 들어왔던 전례가 있어
+# 화이트리스트로 완전히 전환했다 — collect_news.py의 TRUSTED_DOMAINS와 반드시 동일하게 유지)
+TRUSTED_DOMAINS = {
+    "kmnews.net", "www.kmnews.net",
+    "mbzine.com", "www.mbzine.com",
+    "hankyung.com", "www.hankyung.com",
+    "carguy.kr", "www.carguy.kr",
+    "dailycar.co.kr", "www.dailycar.co.kr",
+    "ebn.co.kr", "www.ebn.co.kr",
+    "edaily.co.kr", "www.edaily.co.kr",
+    "news1.kr", "www.news1.kr",
+    "yna.co.kr", "www.yna.co.kr",
+    "newsis.com", "www.newsis.com",
+    "mk.co.kr", "www.mk.co.kr",
+    "asiae.co.kr", "www.asiae.co.kr",
+    "fnnews.com", "www.fnnews.com",
+    "etnews.com", "www.etnews.com",
+    "sedaily.com", "www.sedaily.com",
+    "heraldcorp.com", "www.heraldcorp.com",
+    "khan.co.kr", "www.khan.co.kr",
+    "hani.co.kr", "www.hani.co.kr",
+    "donga.com", "www.donga.com",
+    "chosun.com", "www.chosun.com",
+    "joongang.co.kr", "www.joongang.co.kr",
+    "seoul.co.kr", "www.seoul.co.kr",
+    "kmib.co.kr", "www.kmib.co.kr",
+}
 
 
-def is_foreign_domain(url: str) -> bool:
+def is_trusted_domain(url: str) -> bool:
     try:
         from urllib.parse import urlsplit
         netloc = urlsplit(url).netloc.lower()
     except Exception:
         return False
-    if not netloc:
-        return False
-    if any(name in netloc for name in FOREIGN_DOMAIN_NAMES):
-        return True
-    if netloc.endswith(".kr") or netloc.endswith(".com") or netloc.endswith(".net") or netloc.endswith(".co.kr"):
-        return False
-    return any(netloc.endswith(suffix) for suffix in FOREIGN_DOMAIN_SUFFIXES)
+    return netloc in TRUSTED_DOMAINS
 
 
 def log(msg: str):
@@ -879,9 +894,9 @@ def main():
 
     # 이중 안전장치: collect_news.py에서 걸러진 것으로 예상되지만, 혹시 남아있으면 여기서 한 번 더 제거
     before_filter = len(raw_articles)
-    raw_articles = [a for a in raw_articles if not is_foreign_domain(a.get("url", ""))]
+    raw_articles = [a for a in raw_articles if is_trusted_domain(a.get("url", ""))]
     if len(raw_articles) < before_filter:
-        log(f"[안전장치] 외국 도메인 기사 {before_filter - len(raw_articles)}건 추가 제거")
+        log(f"[안전장치] 신뢰 화이트리스트에 없는 기사 {before_filter - len(raw_articles)}건 추가 제거")
 
     if not raw_articles:
         log("\n[안내] 분석할 뉴스가 없습니다. 기존 news.json / insights.json은 변경하지 않습니다.")
