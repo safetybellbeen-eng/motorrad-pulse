@@ -137,16 +137,20 @@ def has_motorcycle_context(title: str, summary: str) -> bool:
 
 def resolve_real_article_url(link: str, source_href: str | None) -> str:
     """Google News RSS의 <link>는 항상 news.google.com/rss/articles/... 형태의
-    리다이렉트 URL이라, 팀 공유 시 매우 길고 원문이 아닌 링크를 공유하게 되는 문제가 있었다.
+    암호화된 리다이렉트 URL이다. 2024년 이전에는 이 URL을 base64로 디코딩하면
+    바로 원문 주소가 나왔지만, Google이 인코딩 방식을 바꾸면서 그 방법은 더 이상
+    통하지 않는다. 지금 확실하게 작동하는 방법은 다음과 같다:
 
-    1순위: RSS의 <source url="..."> 속성 — feedparser가 entry.source.href로 파싱해준다.
-           단, 이 값이 매체 홈페이지(도메인 루트)만 가리키거나 news.google.com 자체를
-           가리키는 경우가 있어 그런 경우는 신뢰하지 않는다.
-    2순위: link 자체가 이미 news.google.com이 아니면(=RSS/Feed가 원문 링크를 직접 주는 경우) 그대로 사용.
-    3순위: 위 두 가지로 원문을 특정할 수 없으면, 실제로 링크에 접속해 최종 리다이렉트 목적지를 확인한다.
-           일부 서버가 HEAD 요청을 다르게 처리하는 경우가 있어 GET으로 접속하되,
-           본문은 받지 않고 스트리밍 연결만 확인한 뒤 즉시 닫는다 (속도/부하 최소화).
-           실패하면 원래 링크를 그대로 반환한다 (요청서 17번: 실패해도 중단되지 않음).
+    1) Google News 기사 페이지(news.google.com/rss/articles/{id})에 접속해서
+       페이지 안에 있는 서명값(data-n-a-sg)과 타임스탬프(data-n-a-ts)를 읽는다.
+    2) 이 두 값을 가지고 Google의 내부 API(batchexecute)에 정해진 형식으로
+       재요청을 보내면, 응답 안에 실제 원문 URL이 들어있다.
+
+    1순위: RSS의 <source url="..."> 속성이 실제 기사 경로를 담고 있으면 그것을 우선 사용
+           (추가 요청 없이 빠르고 확실함).
+    2순위: 위 방법이 안 통하면 batchexecute 디코딩을 시도한다.
+    3순위: 그래도 실패하면 원래 링크를 그대로 반환한다
+           (요청서 17번: 실패해도 전체 수집이 중단되지 않아야 한다).
     """
     if "news.google.com" not in link:
         return link
@@ -155,18 +159,70 @@ def resolve_real_article_url(link: str, source_href: str | None) -> str:
         if len(urlsplit(source_href).path.strip("/")) > 0:
             return source_href
 
-    try:
-        with requests.get(
-            link, headers={"User-Agent": USER_AGENT}, timeout=8,
-            allow_redirects=True, stream=True,
-        ) as resp:
-            final_url = resp.url
-        if final_url and "news.google.com" not in final_url:
-            return final_url
-    except requests.exceptions.RequestException:
-        pass
+    decoded = _decode_google_news_url(link)
+    if decoded:
+        return decoded
 
     return link
+
+
+def _decode_google_news_url(link: str) -> str | None:
+    """Google News 링크에서 실제 원문 URL을 추출한다 (batchexecute 방식).
+    어느 단계든 실패하면 None을 반환해서 호출부가 안전하게 원본 링크로 폴백하게 한다."""
+    try:
+        article_id_match = re.search(r"/articles/([^?/]+)", link)
+        if not article_id_match:
+            return None
+        article_id = article_id_match.group(1)
+
+        page_resp = requests.get(
+            f"https://news.google.com/rss/articles/{article_id}",
+            headers={"User-Agent": USER_AGENT},
+            timeout=8,
+        )
+        page_resp.raise_for_status()
+
+        sig_match = re.search(r'data-n-a-sg="([^"]+)"', page_resp.text)
+        ts_match = re.search(r'data-n-a-ts="([^"]+)"', page_resp.text)
+        if not sig_match or not ts_match:
+            return None
+        signature = sig_match.group(1)
+        timestamp = ts_match.group(1)
+
+        payload = [
+            "Fbv4je",
+            (
+                '["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,'
+                'null,null,null,null,0,1],"X","X",1,[1,1,1],1,1,null,0,0,null,0],'
+                f'"{article_id}",{timestamp},"{signature}"]'
+            ),
+        ]
+
+        batch_resp = requests.post(
+            "https://news.google.com/_/DotsSplashUi/data/batchexecute",
+            headers={
+                "User-Agent": USER_AGENT,
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            data={"f.req": json.dumps([[payload]])},
+            timeout=8,
+        )
+        batch_resp.raise_for_status()
+
+        # 응답은 앞에 안전을 위한 접두 문자열()]}')이 붙은 특수 형식이다.
+        raw_text = batch_resp.text
+        json_start = raw_text.find("[[")
+        if json_start == -1:
+            return None
+        parsed = json.loads(raw_text[json_start:].splitlines()[0])
+        # 중첩 구조 안에서 실제 URL 문자열을 찾는다 (Google 응답 구조가 자주 바뀔 수 있어 유연하게 탐색)
+        inner = json.loads(parsed[0][2])
+        real_url = inner[1]
+        if isinstance(real_url, str) and real_url.startswith("http"):
+            return real_url
+        return None
+    except Exception:
+        return None
 
 
 def shorten_display_url(url: str, max_length: int = 60) -> str:

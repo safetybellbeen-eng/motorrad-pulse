@@ -26,6 +26,8 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 
+import requests
+
 # ==========================================================
 # 설정
 # ==========================================================
@@ -277,6 +279,39 @@ def _titles_are_essentially_same(a: str, b: str) -> bool:
         return False
     shorter, longer = sorted([norm_a, norm_b], key=len)
     return shorter in longer
+
+
+def enrich_summary_from_article_page(url: str) -> str | None:
+    """TOP NEWS로 선정된 소수(최대 5개) 기사에 한해, 원문 페이지에 직접 접속해서
+    og:description 메타 태그(대부분의 국내 언론사가 제공하는 실제 기사 요약)를 가져온다.
+    RSS의 description은 비어있거나 제목 재포장인 경우가 많아 요약이 자주 빈 화면으로
+    나오던 문제를 개선하기 위함이다.
+
+    소수 기사에만 적용하는 이유는 성능/시간 때문이다 — 전체 기사(수십 건)에 이 작업을
+    하면 GitHub Actions 실행 시간이 크게 늘어난다. 실패해도 None을 반환해 안전하게
+    기존 방식(build_summary)으로 폴백한다 (요청서 17번 원칙과 동일)."""
+    try:
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=8)
+        resp.raise_for_status()
+        match = re.search(
+            r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']',
+            resp.text, re.IGNORECASE,
+        )
+        if not match:
+            match = re.search(
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:description["\']',
+                resp.text, re.IGNORECASE,
+            )
+        if match:
+            description = match.group(1).strip()
+            if len(description) > 200:
+                truncated = description[:200]
+                last_period = truncated.rfind(".")
+                description = truncated[:last_period + 1] if last_period > 50 else truncated + "..."
+            return description or None
+        return None
+    except Exception:
+        return None
 
 
 def build_summary(article: dict) -> str | None:
@@ -802,6 +837,19 @@ def main():
     top_ids = select_top_news(analyzed_articles)
     for a in analyzed_articles:
         a["isTopNews"] = a["id"] in top_ids
+
+    # TOP NEWS로 선정된 기사 중 요약이 비어있는 것만 원문 페이지에서 보강 시도.
+    # 최대 5개뿐이라 전체 실행 시간에 미치는 영향이 적고, 실패해도 그냥 요약 없이 진행된다.
+    top_news_without_summary = [a for a in analyzed_articles if a["id"] in top_ids and not a["summary"]]
+    if top_news_without_summary:
+        log(f"\nEnriching {len(top_news_without_summary)} TOP NEWS summaries from article pages...")
+        for a in top_news_without_summary:
+            enriched = enrich_summary_from_article_page(a["url"])
+            if enriched:
+                a["summary"] = enriched
+                log(f"  [보강 성공] {a['title'][:40]}")
+            else:
+                log(f"  [보강 실패, 요약 없이 진행] {a['title'][:40]}")
 
     raw_by_id = {a["id"]: a for a in raw_articles}
     if not validate_analyzed_articles(analyzed_articles, raw_by_id):
