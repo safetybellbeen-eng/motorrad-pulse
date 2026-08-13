@@ -97,6 +97,32 @@ def is_trusted_domain(url: str) -> bool:
     return netloc in TRUSTED_DOMAINS
 
 
+# 이중 안전장치: collect_news.py가 이미 모터사이클 문맥을 검증하지만,
+# 혹시 raw_news.json에 자동차/전기차 등 무관한 기사가 남아있을 경우를 대비해
+# 분석 단계에서도 한 번 더 검증한다 (collect_news.py의 목록과 반드시 동일하게 유지).
+_MOTORCYCLE_CONTEXT_KEYWORDS = [
+    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike", "라이더", "라이딩",
+    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "cb400", "nc750", "rebel",
+    "mt-", "tenere", "r1", "r7", "tracer", "야마하코리아", "혼다코리아",
+    "두카티", "ducati", "트라이엄프", "triumph", "할리데이비슨", "harley",
+    "bmw 모토라드", "모토라드", "motorrad", "카와사키", "kawasaki", "ninja",
+    "스쿠터", "scooter", "헬멧", "바이커", "투어링", "어드벤처 바이크",
+]
+_AUTOMOTIVE_ONLY_KEYWORDS = [
+    "폴스타", "polestar", "테슬라", "tesla", "현대차", "기아", "제네시스",
+    "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
+]
+
+
+def has_motorcycle_context(title: str) -> bool:
+    text = (title or "").lower()
+    has_bike = any(kw.lower() in text for kw in _MOTORCYCLE_CONTEXT_KEYWORDS)
+    has_auto_only = any(kw.lower() in text for kw in _AUTOMOTIVE_ONLY_KEYWORDS)
+    if has_auto_only and not has_bike:
+        return False
+    return has_bike
+
+
 def log(msg: str):
     print(msg, flush=True)
 
@@ -897,6 +923,11 @@ def main():
     raw_articles = [a for a in raw_articles if is_trusted_domain(a.get("url", ""))]
     if len(raw_articles) < before_filter:
         log(f"[안전장치] 신뢰 화이트리스트에 없는 기사 {before_filter - len(raw_articles)}건 추가 제거")
+
+    before_context_filter = len(raw_articles)
+    raw_articles = [a for a in raw_articles if has_motorcycle_context(a.get("title", ""))]
+    if len(raw_articles) < before_context_filter:
+        log(f"[안전장치] 이륜차와 무관한(자동차 등) 기사 {before_context_filter - len(raw_articles)}건 추가 제거")
 
     if not raw_articles:
         log("\n[안내] 분석할 뉴스가 없습니다. 기존 news.json / insights.json은 변경하지 않습니다.")

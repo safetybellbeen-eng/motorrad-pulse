@@ -116,21 +116,42 @@ def is_blocked_domain(url: str) -> bool:
     return any(domain in url_lower for domain in BLOCKED_DOMAINS)
 
 
-# Honda/Yamaha처럼 자동차·산업기계 등 다른 사업부도 함께 있는 브랜드는
-# "혼다"라는 단어만으로는 자동차 뉴스까지 섞여 들어올 수 있다.
-# 해당 그룹에서는 모터사이클 관련 문맥 키워드가 최소 1개는 있어야 채택한다.
-MOTORCYCLE_CONTEXT_REQUIRED_GROUPS = {"honda", "yamaha"}
+# kmnews(한국이륜차신문 등), naver, google 검색 결과에는 이륜차 전문지라도
+# 자동차/전기차 기사가 섞여 나오는 경우가 있다 (예: 카가이는 자동차 종합 매체).
+# 그래서 sourceGroup과 무관하게 모든 수집 기사에 대해 실제로 이륜차/오토바이
+# 관련 기사인지 검증한다 (아래 collect_rss에서 has_motorcycle_context를 전수 적용).
 
 MOTORCYCLE_CONTEXT_KEYWORDS = [
-    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike",
-    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "nc750", "rebel",
+    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike", "라이더", "라이딩",
+    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "cb400", "nc750", "rebel",
     "mt-", "tenere", "r1", "r7", "tracer", "야마하코리아", "혼다코리아",
+    "두카티", "ducati", "트라이엄프", "triumph", "할리데이비슨", "harley",
+    "bmw 모토라드", "모토라드", "motorrad", "카와사키", "kawasaki", "ninja",
+    "스쿠터", "scooter", "헬멧", "바이커", "투어링", "어드벤처 바이크",
+]
+
+# 자동차/전기차 전용으로 명백히 판단되는 키워드 — 이 키워드가 있으면서
+# 위의 이륜차 키워드가 함께 없으면 자동차 뉴스로 간주해 제외한다.
+AUTOMOTIVE_ONLY_KEYWORDS = [
+    "폴스타", "polestar", "테슬라", "tesla", "현대차", "기아", "제네시스",
+    "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
 ]
 
 
 def has_motorcycle_context(title: str, summary: str) -> bool:
+    """이륜차 관련 키워드가 있으면 True.
+    단, 자동차 전용 키워드가 있고 이륜차 키워드가 전혀 없으면 명확히 False로 판단한다
+    (예: '폴스타, 보증 연장 프로그램 출시' 처럼 이륜차 매체 검색에 섞여 들어온
+    순수 자동차 기사를 걸러내기 위함)."""
     text = f"{title} {summary}".lower()
-    return any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
+
+    has_bike_keyword = any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
+    has_auto_only_keyword = any(kw.lower() in text for kw in AUTOMOTIVE_ONLY_KEYWORDS)
+
+    if has_auto_only_keyword and not has_bike_keyword:
+        return False
+
+    return has_bike_keyword
 
 
 def resolve_real_article_url(link: str, source_href: str | None) -> str:
@@ -513,10 +534,11 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
 
             resolved_group = classify_source_group(clean_title, summary, source_group)
 
-            # Honda/Yamaha 등은 다른 사업부 뉴스와 섞이기 쉬우므로 모터사이클 문맥이 있는지 재검증
-            if resolved_group in MOTORCYCLE_CONTEXT_REQUIRED_GROUPS:
-                if not has_motorcycle_context(clean_title, summary):
-                    continue
+            # 모든 기사에 대해 실제 이륜차/오토바이 관련 기사인지 검증한다.
+            # (특정 그룹에만 적용하면, 분류 로직이 실수로 다른 그룹에 넣었을 때
+            # 이 검증을 피해갈 수 있어 전체 기사에 항상 적용하는 것이 더 안전하다)
+            if not has_motorcycle_context(clean_title, summary):
+                continue
 
             articles.append({
                 "title": clean_title,
@@ -581,9 +603,12 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
 
     def passes_current_policy(item: dict) -> bool:
         url = item.get("url", "")
+        title = item.get("title", "")
         if not is_trusted_domain(url):
             return False
         if is_blocked_domain(url):
+            return False
+        if not has_motorcycle_context(title, ""):
             return False
         return True
 
