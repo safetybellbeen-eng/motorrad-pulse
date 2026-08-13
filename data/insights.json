@@ -1,43 +1,25 @@
 {
   "date": "2026-08-13",
-  "lastAnalyzedAt": "2026-08-13T12:38:15.820714+09:00",
+  "lastAnalyzedAt": "2026-08-13T21:01:27.239034+09:00",
   "dailySignal": {
-    "title": "신규 모델 및 시장/판매 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 6건, 시장/판매 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "title": "신규 모델 및 전동화 관련 뉴스 증가",
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
   "market": [
     {
-      "title": "이륜차 이모빌라이저 시장 규모, 점유율 | 성장 [2034]",
-      "summary": "세계 이륜차 이모빌라이저 시장 규모는 2026년 2억 6,790만 달러에서 2034년까지 5억 7,640만 달러로 성장할 것으로 예상되며, 2026~2034년 CAGR은 10.1%입니다.",
-      "relatedNewsIds": [
-        "74cd7b4c984f55f9"
-      ],
-      "impact": 3.0,
-      "bmwView": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."
-    },
-    {
-      "title": "이륜차 이모빌라이저 시장 규모, 점유율 | 성장 [2034]",
+      "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
       "summary": null,
       "relatedNewsIds": [
-        "19b4ce290c63d758"
-      ],
-      "impact": 3.0,
-      "bmwView": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."
-    },
-    {
-      "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식]",
-      "summary": null,
-      "relatedNewsIds": [
-        "a7a8c25d30dce0e5"
+        "24611a906706ed69"
       ],
       "impact": 1.5,
       "bmwView": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
     },
     {
-      "title": "미쉐린 모터바이크 타이어 사면 스쿠터 당첨 기회…특별 경품 이벤트 진행[재율 아빠 타이어 업계 소식]",
+      "title": "[모터스포츠] M4 엑스타 스즈키, 모토아메리카서 잇단 포디움",
       "summary": null,
       "relatedNewsIds": [
-        "a7a8c25d30dce0e5"
+        "82d92f936ea06a30"
       ],
       "impact": 1.5,
       "bmwView": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
@@ -46,7 +28,7 @@
   "competitor": [
     {
       "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-      "summary": "M 프레임&middot;M 트랙 패키지 도입, F&middot;S&middot;M&middot;R&middot;K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다.",
+      "summary": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
       "relatedNewsIds": [
         "52afb8722bcdb33b"
       ],
@@ -54,50 +36,50 @@
       "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
     },
     {
-      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
+      "summary": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
       "relatedNewsIds": [
-        "853ac3ff20aa361e"
-      ],
-      "impact": 4.5,
-      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
-    },
-    {
-      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "relatedNewsIds": [
-        "853ac3ff20aa361e"
-      ],
-      "impact": 4.5,
-      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
-    },
-    {
-      "title": "베트남에서 판매된 혼다 오토바이 약 5,700대가 결함 발견으로 인해 점검을 위해 리콜될 예정입니다. - Vietnam.vn",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
-      "relatedNewsIds": [
-        "8160980eb361eaf2"
+        "6dd7b47942adca13"
       ],
       "impact": 2.5,
-      "bmwView": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."
+      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+    },
+    {
+      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
+      "summary": null,
+      "relatedNewsIds": [
+        "30301797db74c737"
+      ],
+      "impact": 2.0,
+      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
     }
   ],
   "productTech": [
     {
       "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
-      "summary": "순정 부품&middot;액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 &lsquo;RIDE CUSTOM&rsquo;을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
+      "summary": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
       "relatedNewsIds": [
         "765ca87cf0aa3123"
+      ],
+      "impact": 3.0,
+      "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+    },
+    {
+      "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
+      "summary": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
+      "relatedNewsIds": [
+        "90a22df9362c5119"
       ],
       "impact": 2.5,
       "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
     },
     {
-      "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
-      "summary": null,
+      "title": "폴스타, '보증 연장 프로그램' 출시... 차량 가치와 오너십 강화",
+      "summary": "스웨덴 프리미엄 전기차 브랜드 폴스타(Polestar)가 12일 ‘폴스타 보증 연장 프로그램(Polestar Extended Warranty)’을 출시하고, 한",
       "relatedNewsIds": [
-        "41074fac848d7f10"
+        "d621713ecee378b8"
       ],
-      "impact": 2.5,
+      "impact": 2.0,
       "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
     },
     {
@@ -108,23 +90,14 @@
       ],
       "impact": 2.0,
       "bmwView": "제품 및 기술 트렌드를 지속적으로 확인할 필요가 있습니다."
-    },
-    {
-      "title": "모딜카, 전기차·특가·SUV 등 테마별 탐색 강화… 홈페이지·앱 개편",
-      "summary": null,
-      "relatedNewsIds": [
-        "f8e4713349f2976e"
-      ],
-      "impact": 1.5,
-      "bmwView": "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."
     }
   ],
   "customerTrend": [],
   "teamBrief": {
-    "market": "오늘 수집된 시장 관련 뉴스 중 주요 기사 5건이 확인되었습니다. 주요 Motorcycle 시장의 판매 및 수요 흐름을 확인할 필요가 있습니다.",
-    "competitor": "가와사키, 두카티, 야마하 등 경쟁 브랜드 관련 뉴스가 10건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
+    "market": "오늘 수집된 시장 관련 뉴스 중 주요 기사 2건이 확인되었습니다. 주요 Motorcycle 시장의 판매 및 수요 흐름을 확인할 필요가 있습니다.",
+    "competitor": "가와사키, 혼다 등 경쟁 브랜드 관련 뉴스가 3건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
     "productTech": "제품 및 기술 관련 뉴스 5건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
-    "todayInsight": "오늘은 신규 모델, 시장/판매, 전동화 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+    "todayInsight": "오늘은 신규 모델, 전동화 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
 }
