@@ -58,9 +58,42 @@ FOREIGN_SOURCE_MARKERS = [
 
 def is_foreign_source_title(title: str) -> bool:
     """제목 끝의 '- 언론사명' 부분에 외국 매체 표식이 있으면 True.
-    Google News RSS title 형식(예: '...기사 제목... - Vietnam.vn')을 이용한다."""
+    Google News RSS title 형식(예: '...기사 제목... - Vietnam.vn')을 이용한다.
+    이건 보조 필터다. title에 출처 표식이 없는 경우도 있어서, 주 판정은
+    is_foreign_domain(실제 원문 URL 기준)이 담당한다."""
     title_lower = title.lower()
     return any(marker in title_lower for marker in FOREIGN_SOURCE_MARKERS)
+
+
+# 국가 코드 최상위 도메인(ccTLD) 및 특정 외국 매체 도메인 — 최종 원문 URL의 도메인을 검사한다.
+# title 텍스트 검사(is_foreign_source_title)와 달리 실제 링크가 어디로 가는지를 직접 보므로 훨씬 정확하다.
+FOREIGN_DOMAIN_SUFFIXES = [".vn", ".th", ".ph", ".id", ".my", ".jp", ".cn", ".in"]
+FOREIGN_DOMAIN_NAMES = [
+    "vietnam.vn", "vietnamnet.vn", "vnexpress.net", "tuoitre.vn", "thanhnien.vn",
+    "bangkokpost.com", "thairath.co.th", "manager.co.th",
+    "webike.net", "response.jp",
+]
+
+
+def is_foreign_domain(url: str) -> bool:
+    """최종 원문 URL의 도메인이 외국(비한국) 매체로 알려져 있으면 True.
+    .kr, .com, .net 등 판별이 애매한 도메인은 이름 목록으로 보조 확인한다."""
+    try:
+        netloc = urlsplit(url).netloc.lower()
+    except Exception:
+        return False
+
+    if not netloc:
+        return False
+
+    if any(name in netloc for name in FOREIGN_DOMAIN_NAMES):
+        return True
+
+    # .kr 이거나 .com/.net처럼 국가 무관 도메인이면 외국으로 단정하지 않는다 (국내 매체 대부분이 .com/.net 사용)
+    if netloc.endswith(".kr") or netloc.endswith(".com") or netloc.endswith(".net") or netloc.endswith(".co.kr"):
+        return False
+
+    return any(netloc.endswith(suffix) for suffix in FOREIGN_DOMAIN_SUFFIXES)
 
 
 # ==========================================================
@@ -107,20 +140,27 @@ def resolve_real_article_url(link: str, source_href: str | None) -> str:
     리다이렉트 URL이라, 팀 공유 시 매우 길고 원문이 아닌 링크를 공유하게 되는 문제가 있었다.
 
     1순위: RSS의 <source url="..."> 속성 — feedparser가 entry.source.href로 파싱해준다.
-           단, 이 값이 매체 홈페이지(도메인 루트)만 가리키는 경우가 있어 경로 길이로 걸러낸다.
+           단, 이 값이 매체 홈페이지(도메인 루트)만 가리키거나 news.google.com 자체를
+           가리키는 경우가 있어 그런 경우는 신뢰하지 않는다.
     2순위: link 자체가 이미 news.google.com이 아니면(=RSS/Feed가 원문 링크를 직접 주는 경우) 그대로 사용.
-    3순위: 위 두 가지로 원문을 특정할 수 없으면, HTTP 요청으로 실제 리다이렉트를 짧은 타임아웃으로
-           한 번만 추적한다. 실패하면 원래 링크를 그대로 반환한다 (요청서 17번: 실패해도 중단되지 않음).
+    3순위: 위 두 가지로 원문을 특정할 수 없으면, 실제로 링크에 접속해 최종 리다이렉트 목적지를 확인한다.
+           일부 서버가 HEAD 요청을 다르게 처리하는 경우가 있어 GET으로 접속하되,
+           본문은 받지 않고 스트리밍 연결만 확인한 뒤 즉시 닫는다 (속도/부하 최소화).
+           실패하면 원래 링크를 그대로 반환한다 (요청서 17번: 실패해도 중단되지 않음).
     """
     if "news.google.com" not in link:
         return link
 
-    if source_href and len(urlsplit(source_href).path.strip("/")) > 0:
-        return source_href
+    if source_href and "news.google.com" not in source_href:
+        if len(urlsplit(source_href).path.strip("/")) > 0:
+            return source_href
 
     try:
-        resp = requests.head(link, headers={"User-Agent": USER_AGENT}, timeout=6, allow_redirects=True)
-        final_url = resp.url
+        with requests.get(
+            link, headers={"User-Agent": USER_AGENT}, timeout=8,
+            allow_redirects=True, stream=True,
+        ) as resp:
+            final_url = resp.url
         if final_url and "news.google.com" not in final_url:
             return final_url
     except requests.exceptions.RequestException:
@@ -380,10 +420,6 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
             if not title or not link:
                 continue
 
-            # 외국 매체 기사 걸러내기 (요청서: 국내 언론사만 원함, 베트남 등 동남아 매체 제외)
-            if is_foreign_source_title(title):
-                continue
-
             # Google News RSS의 "제목 - 언론사명" 형태에서 실제 언론사명을 분리해
             # source에 정확히 반영한다 (기존에는 무조건 검색 쿼리 함수를 만든 소스명("Google" 등)만 썼음)
             clean_title, resolved_source_name = extract_source_name_from_title(title, source_name)
@@ -400,14 +436,20 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None]:
             if not is_within_lookback(published_at):
                 continue
 
-            # Google News 리다이렉트 링크를 실제 원문 기사 URL로 변환
+            # ---- Google News 리다이렉트 링크를 실제 원문 기사 URL로 먼저 변환한다 ----
             # (팀 공유 시 news.google.com/rss/articles/... 같은 매우 긴 비원문 링크가 나가던 문제 해결)
+            # 이 최종 URL을 확정한 다음에야 도메인 기준의 외국매체/차단 판단이 정확해진다.
+            # 순서가 바뀌면(제목 텍스트만 보고 먼저 판단하면) 제목에 출처 표식이 없는 외국 기사가
+            # 그대로 통과해버리는 문제가 있었다.
             source_href = None
             if hasattr(entry, "source") and isinstance(entry.source, dict):
                 source_href = entry.source.get("href")
             real_link = resolve_real_article_url(link, source_href)
-
             clean_url = normalize_url(real_link)
+
+            # 외국 매체 기사 걸러내기 — 최종(원문) URL의 도메인 기준으로 판단 (요청서: 국내 언론사만)
+            if is_foreign_domain(clean_url) or is_foreign_source_title(title):
+                continue
 
             # 저품질 도메인(블로그/카페 등) 최종(원문) URL 기준 차단
             if is_blocked_domain(clean_url):

@@ -156,7 +156,7 @@ function renderIntelColumn(containerId, items) {
     card.className = "intel-card";
     card.innerHTML = `
       <h5 class="intel-card__title">${escapeHtml(item.title)}</h5>
-      <p class="intel-card__desc">${escapeHtml(item.description)}</p>
+      ${item.description ? `<p class="intel-card__desc">${escapeHtml(item.description)}</p>` : ""}
       <div class="intel-card__meta">
         <span>관련 뉴스 ${item.relatedNewsCount}건</span>
         <span class="impact-badge impact-${item.impact}">${item.impact}</span>

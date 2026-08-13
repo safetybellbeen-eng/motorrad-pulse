@@ -279,13 +279,16 @@ def _titles_are_essentially_same(a: str, b: str) -> bool:
     return shorter in longer
 
 
-def build_summary(article: dict) -> str:
+def build_summary(article: dict) -> str | None:
     title = article.get("title", "")
     description = strip_html(article.get("description", ""))
 
     # Google News RSS의 description은 대부분 "제목 + 출처명" 재포장이라
-    # 실제 요약으로 볼 수 없다. 제목과 사실상 같은 내용이면 가짜 요약으로 판단해
-    # 정직한 고정 문구로 대체한다 (요청서 27번: 사실을 지어내지 않는다).
+    # 실제 요약으로 볼 수 없다. 제목과 사실상 같은 내용이면 가짜 요약으로 판단한다.
+    # 예전에는 이 경우 "원문 확인이 필요한 뉴스입니다" 같은 고정 문구를 넣었지만,
+    # 실제 사용해보니 거의 모든 카드에 똑같은 문구가 반복되어 오히려 지저분해 보였다.
+    # 그래서 요약이 없으면 None을 반환해 화면에서 그 줄 자체를 아예 그리지 않는다
+    # (요청서 27번: 사실을 지어내지 않는다 — 없으면 없는 대로 보여주는 게 가장 정직하다).
     if description and not _titles_are_essentially_same(title, description):
         if len(description) > 200:
             truncated = description[:200]
@@ -293,7 +296,7 @@ def build_summary(article: dict) -> str:
             description = truncated[:last_period + 1] if last_period > 50 else truncated + "..."
         return description
 
-    return "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요."
+    return None
 
 
 # ==========================================================
@@ -754,7 +757,7 @@ def _to_intel_cards(items: list[dict]) -> list[dict]:
     for it in items:
         cards.append({
             "title": it.get("title", ""),
-            "description": it.get("summary", ""),
+            "description": it.get("summary") or "",
             "relatedNewsCount": len(it.get("relatedNewsIds", [])),
             "impact": _impact_label(it.get("impact", 3.0)),
             "bmwNote": it.get("bmwView", ""),
