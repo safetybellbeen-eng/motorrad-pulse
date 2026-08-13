@@ -2,7 +2,7 @@
   "meta": {
     "date": "2026-08-13",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:26 AM",
+    "lastUpdated": "09:14 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
@@ -49,14 +49,14 @@
         "bmwNote": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."
       },
       {
-        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료 - 카가이",
+        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
+        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료 - 카가이",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -99,7 +99,7 @@
       "publishedAt": "2026-08-12T09:04:43+09:00",
       "category": "COMPETITOR",
       "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다. 자세한 내용은 원문에서 확인하세요.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
