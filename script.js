@@ -31,9 +31,13 @@ let currentSort = "latest";
 /* ---------- 초기 로드 ----------
    news.json: AI 분석이 완료된 데이터 (TOP NEWS, MARKET INTELLIGENCE, TEAM BRIEF)
    raw_news.json: 자동수집된 원본 전체 (SOURCE MONITOR 전용, 요청서 42/43/44번)
-   두 파일은 서로 독립적으로 로드한다 — 한쪽이 없거나 실패해도 다른 한쪽은 정상 표시되어야 한다. */
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("./data/news.json")
+   두 파일은 서로 독립적으로 로드한다 — 한쪽이 없거나 실패해도 다른 한쪽은 정상 표시되어야 한다.
+
+   cache: "no-store"와 타임스탬프 쿼리를 붙이는 이유: GitHub Pages는 정적 파일이라
+   브라우저/중간 캐시가 예전 JSON을 계속 보여줄 수 있다. 새로고침 버튼을 눌렀을 때
+   진짜 최신 데이터를 받아오려면 캐시를 우회해야 한다. */
+function loadNewsData() {
+  return fetch(`./data/news.json?t=${Date.now()}`, { cache: "no-store" })
     .then((res) => {
       if (!res.ok) throw new Error("데이터를 불러오지 못했습니다.");
       return res.json();
@@ -49,9 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => {
       console.error(err);
       showToast("news.json을 불러오지 못했습니다. 파일 위치를 확인해 주세요.");
+      throw err;
     });
+}
 
-  fetch("./data/raw_news.json")
+function loadRawNewsData() {
+  return fetch(`./data/raw_news.json?t=${Date.now()}`, { cache: "no-store" })
     .then((res) => {
       if (!res.ok) throw new Error("원본 뉴스 데이터를 불러오지 못했습니다.");
       return res.json();
@@ -63,15 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => {
       console.error(err);
       showToast("raw_news.json을 불러오지 못했습니다. 파일 위치를 확인해 주세요.");
+      throw err;
     });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadNewsData();
+  loadRawNewsData();
 
   setupNavHighlight();
   setupMobileTabbar();
   setupFilterBar();
   setupCopyBriefButton();
+  setupRefreshButton();
+
+  // "N분/N시간 전 업데이트" 표시를 1분마다 갱신 (페이지를 오래 열어둬도 흘러가도록)
+  setInterval(updateRelativeTimeDisplay, 60 * 1000);
 });
 
 /* ---------- HEADER ---------- */
+let LAST_UPDATED_ISO = null;
+
 function renderHeader(meta) {
   const dateEl = document.getElementById("topbar-date");
   const timeEl = document.getElementById("topbar-time");
@@ -80,7 +99,46 @@ function renderHeader(meta) {
       ? `${meta.date.replaceAll("-", ".")}  ${meta.dayLabel || ""}`
       : "날짜 정보 없음";
   }
-  if (timeEl) timeEl.textContent = meta.lastUpdated || "-";
+  LAST_UPDATED_ISO = meta.lastUpdatedISO || null;
+  updateRelativeTimeDisplay();
+}
+
+/* 1분마다 "N분 전 / N시간 전" 표시를 최신으로 갱신 (페이지를 오래 열어둬도 시간이 흘러가도록) */
+function updateRelativeTimeDisplay() {
+  const timeEl = document.getElementById("topbar-time");
+  if (!timeEl) return;
+
+  if (!LAST_UPDATED_ISO) {
+    timeEl.textContent = "업데이트 정보 없음";
+    return;
+  }
+
+  const updated = new Date(LAST_UPDATED_ISO);
+  const now = new Date();
+  const diffMinutes = Math.floor((now - updated) / 60000);
+
+  if (diffMinutes < 1) {
+    timeEl.textContent = "방금 업데이트됨";
+  } else if (diffMinutes < 60) {
+    timeEl.textContent = `${diffMinutes}분 전 업데이트`;
+  } else {
+    const diffHours = Math.floor(diffMinutes / 60);
+    timeEl.textContent = `${diffHours}시간 전 업데이트`;
+  }
+}
+
+/* ---------- 새로고침 버튼: 브라우저 전체 새로고침 없이 news.json/raw_news.json만 다시 불러온다 ---------- */
+function setupRefreshButton() {
+  const btn = document.getElementById("refresh-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    btn.classList.add("is-loading");
+    Promise.all([loadNewsData(), loadRawNewsData()])
+      .then(() => showToast("최신 데이터로 업데이트되었습니다."))
+      .catch(() => showToast("업데이트에 실패했습니다. 잠시 후 다시 시도해 주세요."))
+      .finally(() => btn.classList.remove("is-loading"));
+  });
 }
 
 /* ---------- TODAY'S SIGNAL ---------- */
@@ -100,21 +158,31 @@ function renderSignal(signal) {
 
 /* ---------- TOP NEWS ---------- */
 function renderTopNews(newsList) {
-  const container = document.getElementById("top-news-list");
+  const bmwColumn = document.getElementById("top-news-own");
+  const othersColumn = document.getElementById("top-news-others");
+  if (!bmwColumn || !othersColumn) return;
+
+  const bmwNews = newsList
+    .filter((item) => item.topNewsGroup === "own")
+    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+
+  const othersNews = newsList
+    .filter((item) => item.topNewsGroup === "others")
+    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+
+  renderTopNewsColumn(bmwColumn, bmwNews, "아직 BMW Motorrad 관련 분석 뉴스가 없습니다.");
+  renderTopNewsColumn(othersColumn, othersNews, "아직 분석된 타사/업계 뉴스가 없습니다.");
+}
+
+function renderTopNewsColumn(container, newsArray, emptyMessage) {
   container.innerHTML = "";
 
-  // isTopNews === true 인 기사만, rank 오름차순으로 정렬 (요청서 22번 로직: rank가 없다면 importance 내림차순 폴백)
-  const topOnly = newsList
-    .filter((item) => item.isTopNews)
-    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999) || b.importance - a.importance)
-    .slice(0, 5);
-
-  if (topOnly.length === 0) {
-    container.innerHTML = `<div class="empty-state">아직 AI 분석이 완료된 뉴스가 없습니다.</div>`;
+  if (newsArray.length === 0) {
+    container.innerHTML = `<div class="empty-state">${emptyMessage}</div>`;
     return;
   }
 
-  topOnly.forEach((news, idx) => {
+  newsArray.forEach((news, idx) => {
     const rank = news.rank ?? idx + 1;
     const card = document.createElement("article");
     card.className = "news-card";
@@ -258,8 +326,9 @@ function renderTeamBrief(data) {
     ? data.meta.date.replaceAll("-", ".")
     : "-";
 
+  // 팀 공유용 요약에는 BMW 자사 뉴스는 포함하지 않는다 (자사 모니터링은 하되 외부 공유는 X)
   const topNews = (data.news || [])
-    .filter((n) => n.isTopNews)
+    .filter((n) => n.topNewsGroup === "others")
     .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
 
   if (topNews.length === 0) {
@@ -283,8 +352,9 @@ function setupCopyBriefButton() {
     if (!NEWS_DATA) return;
 
     const meta = NEWS_DATA.meta;
+    // 팀 공유용 요약에는 BMW 자사 뉴스는 포함하지 않는다 (자사 모니터링은 하되 외부 공유는 X)
     const topNews = (NEWS_DATA.news || [])
-      .filter((n) => n.isTopNews)
+      .filter((n) => n.topNewsGroup === "others")
       .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
 
     const dateObj = meta.date ? new Date(meta.date) : null;

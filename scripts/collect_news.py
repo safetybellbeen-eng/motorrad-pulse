@@ -573,10 +573,24 @@ def load_existing_news() -> dict:
 
 def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]], failed_groups: set[str]) -> list[dict]:
     """그룹별 신규 수집 결과를 기존 데이터와 병합.
-    실패한 그룹은 기존 데이터를 그대로 보존한다 (요청서 18번 핵심 안전장치)."""
+    실패한 그룹은 기존 데이터를 그대로 보존한다 (요청서 18번 핵심 안전장치).
+
+    단, 기존 데이터도 현재 필터 정책(외국 매체 차단, 저품질 도메인 차단)으로 다시 검증한다.
+    필터 정책이 나중에 추가/강화된 경우, 예전에 필터 적용 전에 저장된 위반 데이터가
+    "기존 데이터 보존" 로직 때문에 계속 화면에 남아있는 문제가 있었기 때문이다."""
+
+    def passes_current_policy(item: dict) -> bool:
+        url = item.get("url", "")
+        if is_foreign_domain(url):
+            return False
+        if is_blocked_domain(url):
+            return False
+        return True
 
     existing_by_group: dict[str, list[dict]] = {}
     for item in existing_news:
+        if not passes_current_policy(item):
+            continue
         g = item.get("sourceGroup", "unknown")
         existing_by_group.setdefault(g, []).append(item)
 
@@ -584,7 +598,7 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
 
     for group in SOURCE_GROUP_LABELS.keys():
         if group in failed_groups:
-            # 수집 실패 -> 기존 데이터 유지
+            # 수집 실패 -> 기존 데이터 유지 (단, 위에서 이미 현재 정책으로 걸러진 상태)
             merged.extend(existing_by_group.get(group, []))
             continue
 

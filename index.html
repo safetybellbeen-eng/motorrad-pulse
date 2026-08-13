@@ -89,7 +89,16 @@
 
       <div class="topbar__meta">
         <div class="topbar__date" id="topbar-date">2026.08.12 &nbsp;WEDNESDAY</div>
-        <div class="topbar__updated">Last Updated <strong id="topbar-time">07:30 AM</strong></div>
+        <div class="topbar__updated">
+          <span id="topbar-time">07:30 AM</span>
+          <button id="refresh-btn" class="refresh-btn" type="button" title="최신 데이터 다시 불러오기">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12a9 9 0 1 1-2.64-6.36"/>
+              <path d="M21 3v6h-6"/>
+            </svg>
+            REFRESH
+          </button>
+        </div>
       </div>
     </header>
 
@@ -116,9 +125,19 @@
     <section id="top-news" class="section">
       <div class="section-head">
         <h3><span class="section-index">02</span> TOP NEWS</h3>
-        <span class="section-sub">오늘 수집된 뉴스 중 업무적으로 가장 중요한 5건</span>
+        <span class="section-sub">좌: BMW Motorrad 자사 TOP 5 · 우: 업계 전체 TOP 5</span>
       </div>
-      <div id="top-news-list" class="top-news-list"></div>
+      <div class="top-news-split">
+        <div class="top-news-split__col">
+          <div class="top-news-split__label">BMW MOTORRAD</div>
+          <div id="top-news-own" class="top-news-list"></div>
+        </div>
+        <div class="top-news-split__divider"></div>
+        <div class="top-news-split__col">
+          <div class="top-news-split__label">업계 전체 (자사 제외)</div>
+          <div id="top-news-others" class="top-news-list"></div>
+        </div>
+      </div>
     </section>
 
     <!-- SOURCE MONITOR -->

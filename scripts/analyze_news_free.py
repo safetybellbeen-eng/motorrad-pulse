@@ -56,6 +56,31 @@ SOURCE_GROUP_LABELS = {
     "kmnews": "KMNEWS",
 }
 
+# 이중 안전장치: collect_news.py가 수집 단계에서 외국 매체를 걸러내지만,
+# 혹시 raw_news.json에 어떤 이유로든 위반 데이터가 남아있을 경우를 대비해
+# 분석 단계에서도 한 번 더 도메인을 검증한다.
+FOREIGN_DOMAIN_SUFFIXES = (".vn", ".th", ".ph", ".id", ".my", ".jp", ".cn", ".in")
+FOREIGN_DOMAIN_NAMES = (
+    "vietnam.vn", "vietnamnet.vn", "vnexpress.net", "tuoitre.vn", "thanhnien.vn",
+    "bangkokpost.com", "thairath.co.th", "manager.co.th",
+    "webike.net", "response.jp",
+)
+
+
+def is_foreign_domain(url: str) -> bool:
+    try:
+        from urllib.parse import urlsplit
+        netloc = urlsplit(url).netloc.lower()
+    except Exception:
+        return False
+    if not netloc:
+        return False
+    if any(name in netloc for name in FOREIGN_DOMAIN_NAMES):
+        return True
+    if netloc.endswith(".kr") or netloc.endswith(".com") or netloc.endswith(".net") or netloc.endswith(".co.kr"):
+        return False
+    return any(netloc.endswith(suffix) for suffix in FOREIGN_DOMAIN_SUFFIXES)
+
 
 def log(msg: str):
     print(msg, flush=True)
@@ -500,6 +525,24 @@ def select_top_news(analyzed_articles: list[dict], max_count: int = TOP_NEWS_MAX
     return [a["id"] for a in selected]
 
 
+def select_top_news_split(analyzed_articles: list[dict]) -> tuple[list[str], list[str]]:
+    """BMW Motorrad 소속 사용자를 위한 대시보드이므로 TOP NEWS를 둘로 나눈다.
+
+    - 자사(BMW): sourceGroup이 bmw인 기사 중 점수 상위 5개
+    - 타사: BMW를 제외한 전체 기사 중 점수 상위 5개 (그룹당 최대 2개, 유사 제목 중복 제거는
+      select_top_news의 로직을 그대로 재사용)
+
+    자사 뉴스가 5개보다 적으면 있는 만큼만 반환한다 (요청서 원칙: 억지로 채우지 않음)."""
+    bmw_articles = [a for a in analyzed_articles if a["sourceGroup"] == "bmw"]
+    bmw_sorted = sorted(bmw_articles, key=lambda x: x["score"], reverse=True)[:TOP_NEWS_MAX]
+    bmw_ids = [a["id"] for a in bmw_sorted]
+
+    non_bmw_articles = [a for a in analyzed_articles if a["sourceGroup"] != "bmw"]
+    others_ids = select_top_news(non_bmw_articles, max_count=TOP_NEWS_MAX)
+
+    return bmw_ids, others_ids
+
+
 # ==========================================================
 # 8. Today's Signal (요청서 28, 29번: 빈도 기반, 과장 금지)
 # ==========================================================
@@ -701,9 +744,13 @@ def validate_analyzed_articles(analyzed_articles: list[dict], raw_by_id: dict[st
             log(f"[검증 실패] URL이 원본과 다름: {a['id']}")
             return False
 
-    top_news_count = sum(1 for a in analyzed_articles if a.get("isTopNews"))
-    if top_news_count > TOP_NEWS_MAX:
-        log(f"[검증 실패] TOP NEWS가 {TOP_NEWS_MAX}개를 초과합니다: {top_news_count}개")
+    bmw_top_count = sum(1 for a in analyzed_articles if a.get("topNewsGroup") == "own")
+    others_top_count = sum(1 for a in analyzed_articles if a.get("topNewsGroup") == "others")
+    if bmw_top_count > TOP_NEWS_MAX:
+        log(f"[검증 실패] BMW 자사 TOP NEWS가 {TOP_NEWS_MAX}개를 초과합니다: {bmw_top_count}개")
+        return False
+    if others_top_count > TOP_NEWS_MAX:
+        log(f"[검증 실패] 타사 TOP NEWS가 {TOP_NEWS_MAX}개를 초과합니다: {others_top_count}개")
         return False
 
     return True
@@ -713,11 +760,13 @@ def validate_analyzed_articles(analyzed_articles: list[dict], raw_by_id: dict[st
 # 12. news.json / insights.json 생성
 # ==========================================================
 
-def build_news_json(analyzed_articles: list[dict], top_ids: set[str], existing_news: dict | None) -> dict:
+def build_news_json(analyzed_articles: list[dict], bmw_top_ids: list[str], others_top_ids: list[str], existing_news: dict | None) -> dict:
     now_kst = datetime.now(timezone(timedelta(hours=9)))
 
     final_news = []
-    top_rank = {tid: i + 1 for i, tid in enumerate(top_ids)}
+    bmw_rank = {tid: i + 1 for i, tid in enumerate(bmw_top_ids)}
+    others_rank = {tid: i + 1 for i, tid in enumerate(others_top_ids)}
+    top_ids = set(bmw_top_ids) | set(others_top_ids)
 
     for a in analyzed_articles:
         item = {
@@ -734,9 +783,12 @@ def build_news_json(analyzed_articles: list[dict], top_ids: set[str], existing_n
             "whyItMatters": a["whyItMatters"],
             "bmwInsight": a["bmwInsight"],
             "isTopNews": a["id"] in top_ids,
+            "topNewsGroup": a.get("topNewsGroup"),
         }
-        if a["id"] in top_rank:
-            item["rank"] = top_rank[a["id"]]
+        if a["id"] in bmw_rank:
+            item["rank"] = bmw_rank[a["id"]]
+        elif a["id"] in others_rank:
+            item["rank"] = others_rank[a["id"]]
         final_news.append(item)
 
     meta = {}
@@ -746,6 +798,7 @@ def build_news_json(analyzed_articles: list[dict], top_ids: set[str], existing_n
     meta["date"] = now_kst.strftime("%Y-%m-%d")
     meta["dayLabel"] = now_kst.strftime("%A").upper()
     meta["lastUpdated"] = now_kst.strftime("%I:%M %p")
+    meta["lastUpdatedISO"] = now_kst.isoformat()
     meta["isSampleData"] = False
 
     return {
@@ -827,6 +880,12 @@ def main():
     raw_articles = load_raw_news()
     log(f"\nRaw News: {len(raw_articles)}")
 
+    # 이중 안전장치: collect_news.py에서 걸러진 것으로 예상되지만, 혹시 남아있으면 여기서 한 번 더 제거
+    before_filter = len(raw_articles)
+    raw_articles = [a for a in raw_articles if not is_foreign_domain(a.get("url", ""))]
+    if len(raw_articles) < before_filter:
+        log(f"[안전장치] 외국 도메인 기사 {before_filter - len(raw_articles)}건 추가 제거")
+
     if not raw_articles:
         log("\n[안내] 분석할 뉴스가 없습니다. 기존 news.json / insights.json은 변경하지 않습니다.")
         return
@@ -834,12 +893,19 @@ def main():
     analyzed_articles = analyze_all_articles(raw_articles)
     log(f"Analyzed: {len(analyzed_articles)}")
 
-    top_ids = select_top_news(analyzed_articles)
+    bmw_top_ids, others_top_ids = select_top_news_split(analyzed_articles)
+    top_ids = set(bmw_top_ids) | set(others_top_ids)
     for a in analyzed_articles:
         a["isTopNews"] = a["id"] in top_ids
+        if a["id"] in bmw_top_ids:
+            a["topNewsGroup"] = "own"
+        elif a["id"] in others_top_ids:
+            a["topNewsGroup"] = "others"
+        else:
+            a["topNewsGroup"] = None
 
     # TOP NEWS로 선정된 기사 중 요약이 비어있는 것만 원문 페이지에서 보강 시도.
-    # 최대 5개뿐이라 전체 실행 시간에 미치는 영향이 적고, 실패해도 그냥 요약 없이 진행된다.
+    # 최대 10개(자사5+타사5)뿐이라 전체 실행 시간에 미치는 영향이 적고, 실패해도 그냥 요약 없이 진행된다.
     top_news_without_summary = [a for a in analyzed_articles if a["id"] in top_ids and not a["summary"]]
     if top_news_without_summary:
         log(f"\nEnriching {len(top_news_without_summary)} TOP NEWS summaries from article pages...")
@@ -865,10 +931,16 @@ def main():
     log(f"CUSTOMER & TREND: {cat_counts.get('CUSTOMER_TREND', 0)}")
 
     # ---- TOP NEWS 로그 ----
-    log("\nTOP NEWS")
-    top_articles_sorted = [a for a in analyzed_articles if a["id"] in top_ids]
-    top_articles_sorted.sort(key=lambda x: x["score"], reverse=True)
-    for i, a in enumerate(top_articles_sorted, 1):
+    log("\nTOP NEWS (BMW 자사)")
+    bmw_top_sorted = [a for a in analyzed_articles if a["id"] in bmw_top_ids]
+    bmw_top_sorted.sort(key=lambda x: x["score"], reverse=True)
+    for i, a in enumerate(bmw_top_sorted, 1):
+        log(f"{i}. {a['title'][:60]}")
+
+    log("\nTOP NEWS (타사/업계)")
+    others_top_sorted = [a for a in analyzed_articles if a["id"] in others_top_ids]
+    others_top_sorted.sort(key=lambda x: x["score"], reverse=True)
+    for i, a in enumerate(others_top_sorted, 1):
         log(f"{i}. [{a['sourceGroup']}] {a['title'][:60]}")
 
     # ---- 키워드 빈도 로그 ----
@@ -896,7 +968,7 @@ def main():
     # ---- 저장 ----
     existing_news = load_existing_json(NEWS_PATH)
 
-    news_json = build_news_json(analyzed_articles, top_ids, existing_news)
+    news_json = build_news_json(analyzed_articles, bmw_top_ids, others_top_ids, existing_news)
     insights_json = build_insights_json(daily_signal, market_intel, team_brief)
     news_json = apply_insights_to_news_meta(news_json, insights_json)
 

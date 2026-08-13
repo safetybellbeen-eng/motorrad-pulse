@@ -314,14 +314,36 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .topbar__updated{
   margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-family: var(--font-mono);
   font-size: 10.5px;
   letter-spacing: 0.3px;
   color: var(--grey-dim);
 }
-.topbar__updated strong{
+.refresh-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
   color: var(--grey);
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.8px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
+.refresh-btn:hover{
+  border-color: var(--bmw-blue-light);
+  color: var(--bmw-blue-light);
+}
+.refresh-btn svg{ transition: transform 0.6s ease; }
+.refresh-btn.is-loading svg{ transform: rotate(360deg); }
+.refresh-btn.is-loading{ opacity: 0.6; pointer-events: none; }
 
 /* ---- Section shared ---- */
 .section{
@@ -406,6 +428,28 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 /* ---- Top News ---- */
+.top-news-split{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 28px;
+}
+.top-news-split__col{
+  min-width: 0;
+}
+.top-news-split__label{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--bmw-blue-light);
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--bmw-blue-light);
+}
+.top-news-split__divider{
+  width: 1px;
+  background: var(--line-strong);
+}
 .top-news-list{
   display: flex;
   flex-direction: column;
@@ -640,10 +684,15 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .filter-group-label{
   font-family: var(--font-mono);
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: var(--grey-dim);
-  margin: 0 2px 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--bmw-blue-light);
+  margin: 0 4px 0 6px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--bmw-blue-light);
+  user-select: none;
+  cursor: default;
 }
 
 .source-grid{
@@ -886,6 +935,16 @@ button{ font-family: inherit; cursor: pointer; }
   .intel-grid{ grid-template-columns: 1fr; }
   .source-grid{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }
+
+  /* TOP NEWS 좌우 2분할 -> 모바일에서는 세로로 쌓기 (BMW 자사 먼저, 그 다음 업계 전체) */
+  .top-news-split{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .top-news-split__divider{
+    width: 100%;
+    height: 1px;
+  }
 
   /* ---- 모바일 탭 기반 네비게이션 (요청서: 축소판이 아닌 탭 방식) ----
      TODAY'S SIGNAL(#overview)은 항상 노출, 나머지 4개 섹션은
