@@ -85,7 +85,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // "N분/N시간 전 업데이트" 표시를 1분마다 갱신 (페이지를 오래 열어둬도 흘러가도록)
   setInterval(updateRelativeTimeDisplay, 60 * 1000);
+
+  // 최상단 실시간 시계 — 뉴스 정보의 신뢰도를 위해 "지금 이 순간"을 항상 보여준다.
+  updateLiveClock();
+  setInterval(updateLiveClock, 1000);
 });
+
+/* ---------- 최상단 실시간 시계 ---------- */
+function updateLiveClock() {
+  const el = document.getElementById("topbar-live-clock");
+  if (!el) return;
+
+  const now = new Date();
+  const dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  const pad = (n) => String(n).padStart(2, "0");
+
+  const dateStr = `${now.getFullYear()}.${pad(now.getMonth() + 1)}.${pad(now.getDate())} (${dayNames[now.getDay()]})`;
+  const timeStr = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+
+  el.textContent = `${dateStr} ${timeStr}`;
+}
 
 /* ---------- HEADER ---------- */
 let LAST_UPDATED_ISO = null;
