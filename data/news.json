@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-13",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "11:01 PM",
+    "lastUpdated": "11:31 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-13T23:01:25.509133+09:00"
+    "lastUpdatedISO": "2026-08-13T23:31:21.763711+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -28,15 +28,15 @@
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
-        "description": "",
+        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
+        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
-        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
+        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
+        "description": "",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
@@ -54,7 +54,7 @@
         "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
         "description": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       }
     ],
@@ -122,7 +122,7 @@
       "publishedAt": "2026-08-13T11:22:46+09:00",
       "category": "PRODUCT_TECH",
       "summary": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,

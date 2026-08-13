@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "lastAnalyzedAt": "2026-08-13T23:01:25.509201+09:00",
+  "lastAnalyzedAt": "2026-08-13T23:31:21.763795+09:00",
   "dailySignal": {
     "title": "신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -26,19 +26,19 @@
       "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
     },
     {
-      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
-      "summary": null,
+      "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
+      "summary": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
       "relatedNewsIds": [
-        "30301797db74c737"
+        "1f98505b78b536a4"
       ],
       "impact": 2.0,
       "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
     },
     {
-      "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
-      "summary": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
+      "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
+      "summary": null,
       "relatedNewsIds": [
-        "1f98505b78b536a4"
+        "30301797db74c737"
       ],
       "impact": 2.0,
       "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
@@ -60,7 +60,7 @@
       "relatedNewsIds": [
         "90a22df9362c5119"
       ],
-      "impact": 2.5,
+      "impact": 2.0,
       "bmwView": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
     }
   ],
