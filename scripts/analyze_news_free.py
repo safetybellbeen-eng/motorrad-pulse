@@ -280,17 +280,14 @@ def determine_category(category_scores: dict[str, int]) -> str:
 # ==========================================================
 
 def strip_html(text: str) -> str:
-    """HTML 태그와 흔한 HTML 엔티티를 제거한다.
+    """HTML 태그와 모든 HTML 엔티티(&nbsp; &middot; &amp; 등)를 제거한다.
     Google News RSS의 description은 실제 요약이 아니라
-    "<a>제목</a>&nbsp;&nbsp;<font>출처</font>" 형태로 제목을 재포장한 값이라,
-    태그만 지우면 &nbsp; 같은 엔티티가 그대로 남는다."""
+    "<a>제목</a>&nbsp;&nbsp;<font>출처</font>" 형태로 제목을 재포장한 값이고,
+    원문 페이지에서 가져온 요약에도 &middot; 같은 엔티티가 섞여 나오는 경우가 있어
+    표준 라이브러리(html.unescape)로 빠짐없이 처리한다."""
+    import html as html_module
     text = re.sub(r"<[^>]+>", "", text or "")
-    entities = {
-        "&nbsp;": " ", "&amp;": "&", "&lt;": "<", "&gt;": ">",
-        "&quot;": '"', "&#39;": "'", "&apos;": "'",
-    }
-    for entity, replacement in entities.items():
-        text = text.replace(entity, replacement)
+    text = html_module.unescape(text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
@@ -328,7 +325,7 @@ def enrich_summary_from_article_page(url: str) -> str | None:
                 resp.text, re.IGNORECASE,
             )
         if match:
-            description = match.group(1).strip()
+            description = strip_html(match.group(1)).strip()
             if len(description) > 200:
                 truncated = description[:200]
                 last_period = truncated.rfind(".")

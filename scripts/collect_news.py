@@ -605,11 +605,19 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
         new_items = newly_collected.get(group, [])
         old_items = existing_by_group.get(group, [])
 
-        # 신규 수집 URL 집합
+        # 신규 수집 URL 및 정규화된 제목 집합.
+        # URL만 비교하면 안 되는 이유: Google 리다이렉트 해제 성공 여부에 따라
+        # 같은 기사가 오늘은 실제 원문 URL로, 어제는 news.google.com 리다이렉트
+        # URL로 저장됐을 수 있다. 이 경우 URL은 다르지만 제목은 동일하므로,
+        # 제목 기준으로도 겹치는지 확인해야 진짜 중복을 걸러낼 수 있다.
         new_urls = {item["url"] for item in new_items}
+        new_titles = {normalize_title(item["title"]) for item in new_items}
 
         # 기존 항목 중 신규로 대체되지 않은 것만 남기고, 신규 항목을 앞에 배치
-        remaining_old = [item for item in old_items if item["url"] not in new_urls]
+        remaining_old = [
+            item for item in old_items
+            if item["url"] not in new_urls and normalize_title(item["title"]) not in new_titles
+        ]
 
         combined = new_items + remaining_old
         # 최신순 정렬 후 그룹당 최대 5개 (요청서 11번: 억지로 채우지 않음, 있는 만큼만)
@@ -686,9 +694,11 @@ def main():
         if group in collected_by_group:
             collected_by_group[group].append(a)
         else:
-            # 알 수 없는 그룹으로 분류된 경우 motorcycle_media로 폴백
-            a["sourceGroup"] = "motorcycle_media"
-            collected_by_group["motorcycle_media"].append(a)
+            # 알 수 없는 그룹으로 분류된 경우 google로 폴백 (현재 그룹 체계: bmw/ducati/triumph/
+            # harley/honda/yamaha/naver/google/kmnews — 예전 체계인 motorcycle_media를 쓰면
+            # 어느 필터에도 걸리지 않는 유령 데이터가 되므로 반드시 현재 체계의 값이어야 한다)
+            a["sourceGroup"] = "google"
+            collected_by_group["google"].append(a)
 
     for group, items in collected_by_group.items():
         counts[group] = len(items)
