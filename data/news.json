@@ -2,18 +2,26 @@
   "meta": {
     "date": "2026-08-13",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "12:12 PM",
+    "lastUpdated": "12:38 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 6건, 전동화 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
-    }
+      "headline": "신규 모델 및 시장/판매 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 6건, 시장/판매 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    },
+    "lastUpdatedISO": "2026-08-13T12:38:15.820631+09:00"
   },
   "marketIntelligence": {
     "market": [
       {
         "title": "이륜차 이모빌라이저 시장 규모, 점유율 | 성장 [2034]",
-        "description": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+        "description": "세계 이륜차 이모빌라이저 시장 규모는 2026년 2억 6,790만 달러에서 2034년까지 5억 7,640만 달러로 성장할 것으로 예상되며, 2026~2034년 CAGR은 10.1%입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."
+      },
+      {
+        "title": "이륜차 이모빌라이저 시장 규모, 점유율 | 성장 [2034]",
+        "description": "",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."
@@ -31,13 +39,6 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
-      },
-      {
-        "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
-        "description": "",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
       }
     ],
     "competitor": [
@@ -50,14 +51,14 @@
       },
       {
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-        "description": "",
+        "description": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
         "relatedNewsCount": 1,
         "impact": "High",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-        "description": "",
+        "description": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
         "relatedNewsCount": 1,
         "impact": "High",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
@@ -117,6 +118,7 @@
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
+      "topNewsGroup": "own",
       "rank": 1
     },
     {
@@ -128,11 +130,13 @@
       "sourceGroup": "bmw",
       "publishedAt": "2026-08-13T08:27:49+09:00",
       "category": "COMPETITOR",
-      "summary": null,
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
       "importance": 4.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 2
     },
     {
       "id": "50b97dd45ae68450",
@@ -147,7 +151,8 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "f8e4713349f2976e",
@@ -162,7 +167,8 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "393590348311d9ff",
@@ -177,7 +183,8 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "9bc89165d5376e4d",
@@ -192,7 +199,8 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "765ca87cf0aa3123",
@@ -208,6 +216,7 @@
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 4
     },
     {
@@ -223,7 +232,8 @@
       "importance": 2.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "a7a8c25d30dce0e5",
@@ -238,7 +248,8 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "8160980eb361eaf2",
@@ -254,6 +265,7 @@
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 3
     },
     {
@@ -269,7 +281,8 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "a7a8c25d30dce0e5",
@@ -284,7 +297,8 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "24611a906706ed69",
@@ -299,7 +313,25 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "74cd7b4c984f55f9",
+      "title": "이륜차 이모빌라이저 시장 규모, 점유율 | 성장 [2034]",
+      "url": "https://www.fortunebusinessinsights.com/index.php/ko/two-wheeler-immobilizer-market-118172",
+      "source": "Fortune Business Insights",
+      "sourceType": "market_report",
+      "sourceGroup": "google",
+      "publishedAt": "2026-08-12T22:07:42+09:00",
+      "category": "MARKET",
+      "summary": "세계 이륜차 이모빌라이저 시장 규모는 2026년 2억 6,790만 달러에서 2034년까지 5억 7,640만 달러로 성장할 것으로 예상되며, 2026~2034년 CAGR은 10.1%입니다.",
+      "importance": 3.0,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
     },
     {
       "id": "19b4ce290c63d758",
@@ -310,12 +342,12 @@
       "sourceGroup": "google",
       "publishedAt": "2026-08-12T22:07:42+09:00",
       "category": "MARKET",
-      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
+      "summary": null,
       "importance": 3.0,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "rank": 2
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "b158e83ef44975cc",
@@ -330,7 +362,8 @@
       "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "제품 및 기술 트렌드를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "6dd7b47942adca13",
@@ -346,6 +379,7 @@
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 5
     },
     {
@@ -357,11 +391,13 @@
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-13T02:18:58+09:00",
       "category": "COMPETITOR",
-      "summary": null,
+      "summary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
       "importance": 4.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 2
     },
     {
       "id": "30301797db74c737",
@@ -376,7 +412,8 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "884db89aa968ed6c",
@@ -391,7 +428,8 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false
+      "isTopNews": false,
+      "topNewsGroup": null
     }
   ]
 }
