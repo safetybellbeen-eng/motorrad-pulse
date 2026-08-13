@@ -2,24 +2,16 @@
   "meta": {
     "date": "2026-08-13",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "09:12 PM",
+    "lastUpdated": "09:22 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-13T21:12:44.042816+09:00"
+    "lastUpdatedISO": "2026-08-13T21:22:56.706371+09:00"
   },
   "marketIntelligence": {
-    "market": [
-      {
-        "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
-        "description": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망, 이보배 기자, 사회",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
-      }
-    ],
+    "market": [],
     "competitor": [
       {
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
@@ -102,23 +94,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "24611a906706ed69",
-      "title": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망",
-      "url": "https://www.hankyung.com/article/2026081278797",
-      "source": "한국경제",
-      "sourceType": "media",
-      "sourceGroup": "google",
-      "publishedAt": "2026-08-12T23:52:48+09:00",
-      "category": "MARKET",
-      "summary": "헬멧 없이 오토바이 몰던 10대…'정차 불응' 도주 중 사고로 사망, 이보배 기자, 사회",
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
     },
     {
       "id": "90a22df9362c5119",
