@@ -163,34 +163,34 @@ MARKET_KEYWORD_SCORES = {
 }
 
 PRODUCT_KEYWORD_SCORES = {
-    "launch": 10, "unveil": 10, "new model": 10, "gs": 10,
-    "new motorcycle": 9, "model year": 7, "update": 6, "facelift": 6,
+    "launch": 12, "unveil": 12, "new model": 12, "gs": 10,
+    "new motorcycle": 11, "model year": 8, "update": 6, "facelift": 6,
     "concept": 7, "prototype": 7, "adventure": 8, "touring": 6,
     "roadster": 5, "sport": 5, "scooter": 5,
-    "출시": 10, "공개": 10, "신모델": 10, "신형": 9,
+    "출시": 12, "공개": 12, "신모델": 12, "신형": 10,
     "새로운": 6, "부분변경": 6, "컨셉": 7, "프로토타입": 7,
-    "어드벤처": 8, "투어링": 6, "스쿠터": 5, "신차": 9,
+    "어드벤처": 8, "투어링": 6, "스쿠터": 5, "신차": 10,
 }
 
 TECH_KEYWORD_SCORES = {
-    "electric": 10, "ev": 9, "adas": 10, "battery": 8, "radar": 8,
-    "connectivity": 8, "abs": 6, "software": 6, "navigation": 5,
+    "electric": 12, "ev": 11, "adas": 12, "battery": 9, "radar": 9,
+    "connectivity": 9, "abs": 6, "software": 6, "navigation": 5,
     "charging": 6, "hybrid": 6, "safety": 6, "ai": 5, "sensor": 5,
     "engine": 5,
-    "전기": 10, "전동": 10, "배터리": 8, "레이더": 8,
-    "커넥티비티": 8, "소프트웨어": 6, "내비게이션": 5,
+    "전기": 12, "전동": 12, "배터리": 9, "레이더": 9,
+    "커넥티비티": 9, "소프트웨어": 6, "내비게이션": 5,
     "충전": 6, "하이브리드": 6, "안전": 6, "센서": 5,
-    "엔진": 5, "자율주행": 8,
+    "엔진": 5, "자율주행": 9,
 }
 
 CUSTOMER_KEYWORD_SCORES = {
-    "rider": 6, "community": 6, "lifestyle": 6, "experience": 6,
+    "rider": 6, "community": 8, "lifestyle": 6, "experience": 6,
     "customer": 6, "generation": 5, "adventure travel": 7,
     "social media": 5, "women riders": 6, "young riders": 6,
-    "urban mobility": 6,
-    "라이더": 6, "커뮤니티": 6, "라이프스타일": 6, "경험": 5,
+    "urban mobility": 6, "event": 8, "festival": 8, "customization": 6,
+    "라이더": 6, "커뮤니티": 8, "라이프스타일": 6, "경험": 5,
     "고객": 6, "세대": 5, "여성 라이더": 6, "젊은 라이더": 6,
-    "도심형 모빌리티": 6, "동호회": 6, "투어": 5,
+    "도심형 모빌리티": 6, "동호회": 8, "투어": 5, "행사": 8, "축제": 8, "커스터마이징": 6,
 }
 
 EVENT_KEYWORD_SCORES = {
@@ -210,6 +210,21 @@ SOURCE_TYPE_SCORES = {
     "market_report": 8,
     "media": 6,
     "automotive_media": 6,
+}
+
+# COMPETITOR Category 재정의 (STEP 7): 브랜드명이 있다는 이유만으로 COMPETITOR가
+# 되지 않도록, 실제 "경쟁 전략" 성격의 키워드에만 점수를 준다.
+# 신제품/기술 자체는 PRODUCT_TECH가 담당하고, COMPETITOR는 가격/딜러/파트너십/
+# 조직변화 등 전략적 움직임에 집중한다.
+COMPETITOR_STRATEGY_KEYWORD_SCORES = {
+    "pricing": 10, "price cut": 10, "price increase": 10, "dealer": 10,
+    "dealership": 10, "partnership": 9, "campaign": 8, "positioning": 8,
+    "promotion": 8, "market entry": 9, "expansion": 7, "ceo": 7,
+    "management": 6, "reorganization": 8, "acquisition": 12, "merger": 12,
+    "가격": 10, "가격 인하": 10, "가격 인상": 10, "딜러": 10, "대리점": 9,
+    "제휴": 9, "협업": 7, "캠페인": 8, "포지셔닝": 8, "프로모션": 8,
+    "시장 진출": 9, "확장": 7, "대표이사": 7, "경영": 6, "조직개편": 8,
+    "인수": 12, "합병": 12,
 }
 
 
@@ -236,21 +251,38 @@ def freshness_score(published_at: str | None) -> int:
 
 
 def match_keywords(text: str, keyword_scores: dict[str, int]) -> tuple[int, list[str]]:
-    """요청서 13번: 같은 키워드가 여러 번 나와도 한 번만 가산. 존재 여부 기준."""
+    """요청서 13번: 같은 키워드가 여러 번 나와도 한 번만 가산. 존재 여부 기준.
+
+    짧은 영문 키워드(예: ev, ai, us)는 단어 경계를 검사해서 오탐을 막는다.
+    (예: "ev"가 "event"의 부분 문자열로 잘못 매칭되어 PRODUCT_TECH 점수가
+    부풀려지는 문제가 실제 테스트에서 발견되어 추가함. 3글자 이하 영문
+    키워드에만 적용하고, 한글/긴 키워드는 기존 방식을 그대로 유지한다 —
+    한글은 조사가 붙어도 어차피 부분 문자열 매칭이 필요하기 때문.)"""
     text_lower = text.lower()
     total = 0
     matched = []
     for kw, score in keyword_scores.items():
-        if kw in text_lower:
+        kw_lower = kw.lower()
+        if len(kw_lower) <= 3 and kw_lower.isascii() and kw_lower.isalpha():
+            if re.search(r"\b" + re.escape(kw_lower) + r"\b", text_lower):
+                total += score
+                matched.append(kw)
+        elif kw_lower in text_lower:
             total += score
             matched.append(kw)
     return total, matched
 
 
-def compute_score(article: dict) -> tuple[int, list[str], dict[str, int]]:
+def compute_score(article: dict) -> tuple[int, list[str], dict[str, int], dict[str, int]]:
     """
-    기사 하나에 대한 총점, 매칭된 키워드 전체 목록, 카테고리별 점수를 계산한다.
-    반환: (총점 0~100, matchedKeywords, category별 점수 dict)
+    기사 하나에 대한 총점, 매칭된 키워드 전체 목록, 카테고리별 점수, 카테고리별 매칭 키워드 개수를 계산한다.
+    반환: (총점 0~100, matchedKeywords, category별 점수 dict, category별 키워드 개수 dict)
+
+    STEP 7 개선: COMPETITOR는 더 이상 브랜드명 언급 자체(brand_score)로 판정하지 않는다.
+    "Ducati unveils new electric motorcycle"처럼 브랜드명이 있어도 실제로는 신제품/기술
+    소식인 기사가 전부 COMPETITOR로 분류되던 문제를 해결하기 위해, COMPETITOR 판정은
+    전략 키워드(가격/딜러/파트너십/조직변화 등, COMPETITOR_STRATEGY_KEYWORD_SCORES)를
+    중심으로 하고 브랜드 언급은 아주 약한 보조 신호로만 반영한다.
     """
     text = f"{article.get('title', '')} {article.get('description', '')}"
 
@@ -260,6 +292,7 @@ def compute_score(article: dict) -> tuple[int, list[str], dict[str, int]]:
     tech_score, tech_kw = match_keywords(text, TECH_KEYWORD_SCORES)
     customer_score, customer_kw = match_keywords(text, CUSTOMER_KEYWORD_SCORES)
     event_score, event_kw = match_keywords(text, EVENT_KEYWORD_SCORES)
+    competitor_strategy_score, competitor_strategy_kw = match_keywords(text, COMPETITOR_STRATEGY_KEYWORD_SCORES)
 
     fresh_score = freshness_score(article.get("publishedAt"))
     source_score = SOURCE_TYPE_SCORES.get(article.get("sourceType", ""), 5)
@@ -267,16 +300,31 @@ def compute_score(article: dict) -> tuple[int, list[str], dict[str, int]]:
     total = brand_score + market_score + product_score + tech_score + customer_score + event_score + fresh_score + source_score
     total = max(0, min(100, total))  # 요청서 14번: 0~100 clamp
 
-    all_matched = list(dict.fromkeys(brand_kw + market_kw + product_kw + tech_kw + customer_kw + event_kw))
+    all_matched = list(dict.fromkeys(
+        brand_kw + market_kw + product_kw + tech_kw + customer_kw + event_kw + competitor_strategy_kw
+    ))
+
+    # COMPETITOR 판정 점수: 전략 신호(강한 가중치) + 리콜/인수합병 등 이벤트 신호 + 브랜드 언급(약한 보조 신호, 0.3배)
+    # -> 브랜드명만 있고 전략/이벤트 신호가 전혀 없으면 COMPETITOR 점수가 낮아져
+    #    PRODUCT_TECH/MARKET 등 실제 주제 카테고리가 더 쉽게 이긴다.
+    competitor_score = competitor_strategy_score + event_score + int(brand_score * 0.15)
 
     category_scores = {
         "MARKET": market_score,
-        "COMPETITOR": brand_score,  # 브랜드(경쟁사) 키워드가 곧 COMPETITOR 신호
+        "COMPETITOR": competitor_score,
         "PRODUCT_TECH": product_score + tech_score,
         "CUSTOMER_TREND": customer_score,
     }
 
-    return total, all_matched, category_scores
+    # tie-breaker에서 "더 구체적인 주제"를 판단하기 위한 카테고리별 매칭 키워드 개수
+    category_keyword_counts = {
+        "MARKET": len(market_kw),
+        "COMPETITOR": len(competitor_strategy_kw) + len(event_kw),
+        "PRODUCT_TECH": len(product_kw) + len(tech_kw),
+        "CUSTOMER_TREND": len(customer_kw),
+    }
+
+    return total, all_matched, category_scores, category_keyword_counts
 
 
 def score_to_importance(score: int) -> float:
@@ -305,7 +353,14 @@ def score_to_importance(score: int) -> float:
 CATEGORY_TIE_BREAK_ORDER = ["PRODUCT_TECH", "COMPETITOR", "MARKET", "CUSTOMER_TREND"]
 
 
-def determine_category(category_scores: dict[str, int]) -> str:
+def determine_category(category_scores: dict[str, int], category_keyword_counts: dict[str, int] | None = None) -> str:
+    """카테고리를 결정한다.
+
+    STEP 7 개선: 동점일 때 무조건 고정된 우선순위로 정하지 않고,
+    1) 더 구체적인 주제 키워드가 많이 매칭된 카테고리 우선
+    2) 그래도 같으면 가중치 합(원래 점수) 우선 -- 사실 여기 오면 이미 max_score로 동점이므로 사실상 생략됨
+    3) 그래도 같으면 고정 우선순위(CATEGORY_TIE_BREAK_ORDER)
+    순서로 판단한다."""
     max_score = max(category_scores.values())
 
     if max_score == 0:
@@ -317,7 +372,15 @@ def determine_category(category_scores: dict[str, int]) -> str:
     if len(top_categories) == 1:
         return top_categories[0]
 
-    # 동점일 경우 우선순위 tie-breaker (요청서 21번)
+    # 1단계: 더 구체적인(매칭 키워드 개수가 많은) 카테고리 우선
+    if category_keyword_counts:
+        max_kw_count = max(category_keyword_counts.get(cat, 0) for cat in top_categories)
+        most_specific = [cat for cat in top_categories if category_keyword_counts.get(cat, 0) == max_kw_count]
+        if len(most_specific) == 1:
+            return most_specific[0]
+        top_categories = most_specific
+
+    # 2, 3단계: 고정 우선순위 tie-breaker (요청서 21번)
     for cat in CATEGORY_TIE_BREAK_ORDER:
         if cat in top_categories:
             return cat
@@ -407,6 +470,77 @@ def build_summary(article: dict) -> str | None:
 
 
 # ==========================================================
+# 3-1. Topic Tags / Segment / Technology Theme (STEP 7 신규 — 내부 계산용)
+# ==========================================================
+# Intelligence Group 묶기에 사용할 주제 신호를 세 종류로 나눠서 계산한다.
+# - TOPIC_TAGS: 넓은 범주(NEW_MODEL, MARKET, CUSTOMER 등) — 이것만으로는 그룹핑하지 않는다.
+# - SEGMENT_TAGS: 제품 세그먼트(ADVENTURE/TOURING/SPORT/ROADSTER/SCOOTER/CRUISER) — 좁고 구체적.
+# - TECH_THEME_TAGS: 기술 테마(ELECTRIFICATION/ADAS/CONNECTIVITY/SAFETY) — 좁고 구체적.
+# 최종 JSON(news.json/insights.json)에는 노출하지 않고 분석 파이프라인 내부에서만 사용한다.
+
+TOPIC_TAG_KEYWORDS = {
+    "NEW_MODEL": ["launch", "unveil", "new model", "new motorcycle", "model year", "출시", "공개", "신모델", "신형", "신차"],
+    "ELECTRIFICATION": ["electric", "ev", "battery", "charging", "hybrid", "전기", "전동", "배터리", "충전", "하이브리드"],
+    "TECH": ["adas", "radar", "connectivity", "abs", "software", "navigation", "ai", "sensor",
+             "레이더", "커넥티비티", "소프트웨어", "내비게이션", "센서", "자율주행"],
+    "MARKET": ["market", "sales", "registration", "growth", "decline", "forecast", "revenue", "demand",
+               "시장", "판매", "점유율", "성장", "감소", "등록대수", "전망", "수요", "매출"],
+    "CUSTOMER": ["rider", "community", "lifestyle", "experience", "customer", "event", "festival",
+                 "라이더", "커뮤니티", "라이프스타일", "경험", "고객", "동호회"],
+}
+
+SEGMENT_TAG_KEYWORDS = {
+    "ADVENTURE": ["adventure", "gs", "africa twin", "multistrada", "tiger", "tenere", "어드벤처"],
+    "TOURING": ["touring", "gold wing", "투어링"],
+    "SPORT": ["sport", "cbr", "ninja", "r1", "r7"],
+    "ROADSTER": ["roadster", "mt-", "streetfighter"],
+    "SCOOTER": ["scooter", "스쿠터"],
+    "CRUISER": ["cruiser", "rebel", "크루저"],
+}
+
+TECH_THEME_TAG_KEYWORDS = {
+    "ELECTRIFICATION": ["electric", "ev", "battery", "charging", "hybrid", "전기", "전동", "배터리", "충전", "하이브리드"],
+    "ADAS": ["adas", "radar", "레이더", "자율주행"],
+    "CONNECTIVITY": ["connectivity", "software", "navigation", "커넥티비티", "소프트웨어", "내비게이션"],
+    "SAFETY": ["safety", "abs", "안전"],
+}
+
+
+def _extract_tags(text: str, tag_keyword_map: dict[str, list[str]]) -> list[str]:
+    """짧은 영문 키워드(예: ev)는 단어 경계를 검사해서 오탐을 막는다
+    (예: "ev"가 "event"의 부분 문자열로 잘못 매칭되어 이벤트 기사가
+    ELECTRIFICATION으로 잘못 태깅되는 문제가 실제 테스트에서 발견되어 추가함.
+    match_keywords()와 동일한 원리)."""
+    text_lower = text.lower()
+    tags = []
+    for tag, keywords in tag_keyword_map.items():
+        matched = False
+        for kw in keywords:
+            kw_lower = kw.lower()
+            if len(kw_lower) <= 3 and kw_lower.isascii() and kw_lower.isalpha():
+                if re.search(r"\b" + re.escape(kw_lower) + r"\b", text_lower):
+                    matched = True
+                    break
+            elif kw_lower in text_lower:
+                matched = True
+                break
+        if matched:
+            tags.append(tag)
+    return tags
+
+
+def compute_topic_signals(title: str, description: str) -> dict[str, list[str]]:
+    """기사 하나에 대해 topicTags(넓은 주제), segmentTags(제품 세그먼트),
+    techThemeTags(기술 테마) 세 종류의 내부 태그를 계산한다."""
+    text = f"{title} {description or ''}"
+    return {
+        "topicTags": _extract_tags(text, TOPIC_TAG_KEYWORDS),
+        "segmentTags": _extract_tags(text, SEGMENT_TAG_KEYWORDS),
+        "techThemeTags": _extract_tags(text, TECH_THEME_TAG_KEYWORDS),
+    }
+
+
+# ==========================================================
 # 4. Why It Matters / BMW Watch Point 템플릿 (요청서 24~26번)
 # ==========================================================
 
@@ -417,33 +551,86 @@ WHY_IT_MATTERS_TEMPLATES = {
     "CUSTOMER_TREND": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
 }
 
-# 요청서 26번: 키워드 우선순위 (구체적인 것부터). 리스트 순서 = 우선순위.
-WATCH_POINT_PRIORITY = [
-    ("recall", "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."),
-    ("리콜", "리콜 등 품질/안전 이슈와 관련된 사안입니다. 해당 브랜드의 품질 관리 이슈가 시장 신뢰도에 미치는 영향을 확인할 필요가 있습니다."),
-    ("acquisition", "인수·합병 등 산업 구조 변화와 관련된 뉴스입니다. Motorcycle 산업 내 경쟁 구도 변화 가능성을 확인할 필요가 있습니다."),
-    ("merger", "인수·합병 등 산업 구조 변화와 관련된 뉴스입니다. Motorcycle 산업 내 경쟁 구도 변화 가능성을 확인할 필요가 있습니다."),
-    ("인수", "인수·합병 등 산업 구조 변화와 관련된 뉴스입니다. Motorcycle 산업 내 경쟁 구도 변화 가능성을 확인할 필요가 있습니다."),
-    ("합병", "인수·합병 등 산업 구조 변화와 관련된 뉴스입니다. Motorcycle 산업 내 경쟁 구도 변화 가능성을 확인할 필요가 있습니다."),
-    ("electric", "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."),
-    ("ev", "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."),
-    ("전기", "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."),
-    ("전동", "Motorcycle 전동화 기술의 적용 범위와 시장 반응, 경쟁 브랜드의 출시 속도를 지속적으로 확인할 필요가 있습니다."),
-    ("adventure", "Premium Adventure Segment의 신제품 구성과 경쟁 브랜드의 Line-up 확대 움직임을 확인할 필요가 있습니다."),
-    ("어드벤처", "Premium Adventure Segment의 신제품 구성과 경쟁 브랜드의 Line-up 확대 움직임을 확인할 필요가 있습니다."),
-    ("connectivity", "Connectivity 및 Digital Feature가 Premium Motorcycle 고객의 제품 기대수준에 미치는 영향을 확인할 필요가 있습니다."),
-    ("커넥티비티", "Connectivity 및 Digital Feature가 Premium Motorcycle 고객의 제품 기대수준에 미치는 영향을 확인할 필요가 있습니다."),
-    ("new model", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("launch", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("unveil", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("신모델", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("출시", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("공개", "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."),
-    ("market", "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."),
-    ("sales", "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."),
-    ("시장", "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."),
-    ("판매", "주요 Motorcycle 시장의 수요 변화와 Premium Segment 판매 흐름을 함께 확인할 필요가 있습니다."),
+# ==========================================================
+# STEP 7: Watch Point / Why It Matters 13개 주제 세분화
+# ==========================================================
+# 카테고리(4종)만으로는 같은 카테고리 기사가 전부 동일 문구를 받는 문제가 있었다.
+# 실제 기사 주제(리콜/전동화/어드벤처 등)에 맞는 13개 세부 템플릿을 우선 적용하고,
+# 어디에도 안 걸리면 기존 카테고리 기본 문구로 폴백한다.
+
+# 요청서 13번: 우선순위(구체적인 것부터). 이 순서대로 첫 매칭되는 주제를 채택한다.
+WATCH_POINT_TOPIC_PRIORITY = [
+    "RECALL_SAFETY", "ELECTRIFICATION", "ADAS_TECH", "CONNECTIVITY",
+    "ADVENTURE", "TOURING", "NEW_MODEL", "CUSTOMIZATION", "COMMUNITY_EVENT",
+    "CUSTOMER_EXPERIENCE", "PRICING", "REGULATION", "PREMIUM_POSITIONING",
+    "MARKET_SALES",
 ]
+
+# 각 주제를 판별하는 키워드 (한/영 병기)
+WATCH_POINT_TOPIC_KEYWORDS = {
+    "RECALL_SAFETY": ["recall", "리콜", "safety", "안전"],
+    "ELECTRIFICATION": ["electric", "ev", "battery", "charging", "hybrid", "전기", "전동", "배터리", "충전", "하이브리드"],
+    "ADAS_TECH": ["adas", "radar", "레이더", "자율주행"],
+    "CONNECTIVITY": ["connectivity", "software", "navigation", "커넥티비티", "소프트웨어", "내비게이션"],
+    "ADVENTURE": ["adventure", "gs", "africa twin", "multistrada", "tiger", "tenere", "어드벤처"],
+    "TOURING": ["touring", "gold wing", "투어링"],
+    "NEW_MODEL": ["launch", "unveil", "new model", "new motorcycle", "model year", "출시", "공개", "신모델", "신형", "신차"],
+    "CUSTOMIZATION": ["customization", "accessory", "커스터마이징", "액세서리", "개인화"],
+    "COMMUNITY_EVENT": ["community", "event", "festival", "커뮤니티", "동호회", "행사", "축제"],
+    "CUSTOMER_EXPERIENCE": ["experience", "lifestyle", "경험", "라이프스타일"],
+    "PRICING": ["pricing", "price cut", "price increase", "가격", "가격 인하", "가격 인상"],
+    "REGULATION": ["regulation", "tariff", "ban", "규제", "관세", "판매금지"],
+    "PREMIUM_POSITIONING": ["positioning", "premium", "포지셔닝", "프리미엄"],
+    "MARKET_SALES": ["market", "sales", "registration", "market share", "시장", "판매", "점유율", "등록대수"],
+}
+
+WATCH_POINT_TOPIC_TEMPLATES = {
+    "NEW_MODEL": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+    "ADVENTURE": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+    "TOURING": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+    "ELECTRIFICATION": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
+    "ADAS_TECH": "ADAS·Radar·Safety 기술이 Premium Motorcycle의 제품 기대수준을 어떻게 변화시키는지 비교할 필요가 있습니다.",
+    "CONNECTIVITY": "Connectivity와 Digital Feature가 제품 차별화 및 고객 Experience에 미치는 영향을 확인할 필요가 있습니다.",
+    "MARKET_SALES": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다.",
+    "PREMIUM_POSITIONING": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
+    "CUSTOMER_EXPERIENCE": "제품 외 Experience 요소가 고객 유입과 브랜드 충성도에 미치는 영향을 지속적으로 확인할 필요가 있습니다.",
+    "COMMUNITY_EVENT": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
+    "CUSTOMIZATION": "Customization 수요와 액세서리·개인화 전략이 Premium Motorcycle 고객 경험에 미치는 영향을 비교할 필요가 있습니다.",
+    "PRICING": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
+    "REGULATION": "규제 변화가 제품 구성, 판매 환경 및 고객 접근성에 미치는 영향을 지속적으로 확인할 필요가 있습니다.",
+    "RECALL_SAFETY": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
+}
+
+# Why It Matters도 같은 주제 체계로 세분화한다. 단 요청서 15번 원칙(과도하게 늘려
+# 관리하기 어렵게 만들지 않는다)에 따라, Watch Point만큼 세밀하지 않고 대표성 있는
+# 주제 몇 개만 별도 문구를 두고 나머지는 카테고리 기본 문구로 자연스럽게 폴백한다.
+WHY_IT_MATTERS_TOPIC_TEMPLATES = {
+    "NEW_MODEL": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+    "MARKET_SALES": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+    "ELECTRIFICATION": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
+    "RECALL_SAFETY": "안전 또는 품질 관리 이슈와 관련된 기사입니다. 브랜드 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
+    "COMMUNITY_EVENT": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
+}
+
+
+def _detect_watch_point_topic(matched_keywords: list[str], title: str) -> str | None:
+    """제목/매칭 키워드에서 13개 Watch Point 주제 중 우선순위가 가장 높은 것 하나를 찾는다."""
+    text = title.lower()
+    matched_set = set(kw.lower() for kw in matched_keywords)
+    for topic in WATCH_POINT_TOPIC_PRIORITY:
+        keywords = WATCH_POINT_TOPIC_KEYWORDS[topic]
+        if any(kw.lower() in matched_set or kw.lower() in text for kw in keywords):
+            return topic
+    return None
+
+
+def build_why_it_matters(category: str, matched_keywords: list[str] | None = None, title: str = "") -> str:
+    if matched_keywords is not None:
+        topic = _detect_watch_point_topic(matched_keywords, title)
+        if topic and topic in WHY_IT_MATTERS_TOPIC_TEMPLATES:
+            return WHY_IT_MATTERS_TOPIC_TEMPLATES[topic]
+    return WHY_IT_MATTERS_TEMPLATES.get(category, WHY_IT_MATTERS_TEMPLATES["MARKET"])
+
 
 CATEGORY_DEFAULT_WATCH_POINT = {
     "MARKET": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -453,16 +640,12 @@ CATEGORY_DEFAULT_WATCH_POINT = {
 }
 
 
-def build_why_it_matters(category: str) -> str:
-    return WHY_IT_MATTERS_TEMPLATES.get(category, WHY_IT_MATTERS_TEMPLATES["MARKET"])
-
-
-def build_watch_point(matched_keywords: list[str], category: str) -> str:
-    """요청서 26번: 우선순위 리스트를 순서대로 확인해서 가장 구체적인 템플릿을 선택"""
-    matched_set = set(matched_keywords)
-    for keyword, template in WATCH_POINT_PRIORITY:
-        if keyword in matched_set:
-            return template
+def build_watch_point(matched_keywords: list[str], category: str, title: str = "") -> str:
+    """13개 세부 주제 우선순위 리스트를 순서대로 확인해서 가장 구체적인 템플릿을 선택.
+    어디에도 안 걸리면 카테고리 기본 문구로 폴백한다."""
+    topic = _detect_watch_point_topic(matched_keywords, title)
+    if topic and topic in WATCH_POINT_TOPIC_TEMPLATES:
+        return WATCH_POINT_TOPIC_TEMPLATES[topic]
     return CATEGORY_DEFAULT_WATCH_POINT.get(category, CATEGORY_DEFAULT_WATCH_POINT["MARKET"])
 
 
@@ -498,12 +681,16 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
     analyzed = []
 
     for article in raw_articles:
-        score, matched_keywords, category_scores = compute_score(article)
-        category = determine_category(category_scores)
+        title = article.get("title", "")
+        description = article.get("description", "")
+
+        score, matched_keywords, category_scores, category_keyword_counts = compute_score(article)
+        category = determine_category(category_scores, category_keyword_counts)
         importance = score_to_importance(score)
         summary = build_summary(article)
-        why_it_matters = build_why_it_matters(category)
-        bmw_insight = build_watch_point(matched_keywords, category)
+        why_it_matters = build_why_it_matters(category, matched_keywords, title)
+        bmw_insight = build_watch_point(matched_keywords, category, title)
+        topic_signals = compute_topic_signals(title, description)
 
         analyzed.append({
             # ---- 원본 필드 그대로 (요청서 1번) ----
@@ -524,6 +711,10 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
             "isTopNews": False,
             "score": score,
             "matchedKeywords": matched_keywords,
+            # ---- STEP 7 신규: Intelligence Group 묶기용 내부 계산 필드 (최종 JSON에는 노출 안 함) ----
+            "topicTags": topic_signals["topicTags"],
+            "segmentTags": topic_signals["segmentTags"],
+            "techThemeTags": topic_signals["techThemeTags"],
         })
 
     return analyzed
@@ -651,7 +842,189 @@ def build_daily_signal(analyzed_articles: list[dict]) -> dict | None:
 # 9. Market Intelligence 카드 생성 (요청서 31, 32번)
 # ==========================================================
 
+# ==========================================================
+# STEP 7: Intelligence Group 묶기
+# ==========================================================
+# "기사 1건 = Insight 1개"였던 기존 구조를, 같은 시장 흐름으로 볼 수 있는
+# 기사들을 하나의 그룹으로 묶어 보여주는 구조로 개선한다.
+#
+# 그룹핑 조건 (사용자 결정사항 — 요청서 초안보다 엄격화):
+#   필수: 같은 Category + 핵심 Topic(topicTags) 1개 이상 일치
+#   추가(하나 이상 충족): 같은 Segment / 같은 Technology Theme / 제목 유사도 기준 이상
+#   -> NEW_MODEL, MARKET, CUSTOMER처럼 아주 넓은 태그 하나만 겹친다고
+#      자동으로 묶이지 않는다 (예: "두카티 스포츠 신모델"과 "혼다 스쿠터 신모델"은
+#      둘 다 NEW_MODEL이지만 Segment가 SPORT vs SCOOTER로 다르므로 묶이지 않음).
+
+GROUP_TITLE_SIMILARITY_THRESHOLD = 0.55  # 제목 유사도만으로 묶을 때 기준 (그룹핑용이라 TOP NEWS 중복판정보다 완화)
+
+# Topic 조합 -> Group 제목 템플릿 (요청서 7번 예시 그대로)
+GROUP_TITLE_TEMPLATES = [
+    (("ADVENTURE", "NEW_MODEL"), "Adventure 신모델 경쟁 확대"),
+    (("ELECTRIFICATION", "TECH"), "전동화·기술 적용 확대"),
+    (("MARKET", "NEW_MODEL"), "Motorcycle 시장 판매 흐름 변화"),
+    (("CUSTOMER", "NEW_MODEL"), "브랜드 Experience·Community 활동 확대"),
+]
+# 단일 세그먼트/테마 기반 폴백 제목
+SEGMENT_GROUP_TITLES = {
+    "ADVENTURE": "Adventure Segment 신제품 움직임",
+    "TOURING": "Touring·Adventure Experience 관련 움직임",
+    "SPORT": "Sport Segment 신제품 움직임",
+    "ROADSTER": "Roadster Segment 신제품 움직임",
+    "SCOOTER": "Scooter Segment 신제품 움직임",
+    "CRUISER": "Cruiser Segment 신제품 움직임",
+}
+TECH_THEME_GROUP_TITLES = {
+    "ELECTRIFICATION": "전동화 기술 적용 확대",
+    "ADAS": "ADAS·Safety 기술 적용 확대",
+    "CONNECTIVITY": "Connectivity 기술 적용 확대",
+    "SAFETY": "Safety 기술 적용 확대",
+}
+
+
+# Intelligence Group 제목 유사도 계산 시 제외할 흔한 단어.
+# "new", "launches", "unveils" 같은 범용 동사/형용사가 겹치는 것만으로
+# 서로 무관한 기사(예: Sport 신모델 vs Scooter 신모델)가 묶이는 것을 방지한다.
+GROUP_SIMILARITY_STOPWORDS = {
+    "new", "launches", "launch", "unveils", "unveil", "model", "models",
+    "motorcycle", "motorcycles", "reveals", "reveal", "announces", "announce",
+    "출시", "공개", "신형", "모델", "새로운", "발표",
+}
+
+
+def _normalize_for_group_similarity(title: str) -> str:
+    """그룹핑 전용 정규화: 소문자화 + 특수문자 제거 + 흔한 단어 제외."""
+    t = title.lower().strip()
+    t = re.sub(r"[^\w\s]", "", t)
+    words = [w for w in t.split() if w not in GROUP_SIMILARITY_STOPWORDS]
+    return " ".join(words)
+
+
+def _title_similarity(a: str, b: str) -> float:
+    return SequenceMatcher(None, _normalize_for_group_similarity(a), _normalize_for_group_similarity(b)).ratio()
+
+
+def _can_group(article_a: dict, article_b: dict) -> bool:
+    """두 기사가 하나의 Intelligence Group으로 묶일 수 있는지 판단.
+
+    필수: 같은 category + topicTags 1개 이상 겹침
+    추가(하나 이상): 같은 segmentTags 존재 / 같은 techThemeTags 존재 / 제목 유사도 기준 이상
+    """
+    if article_a["category"] != article_b["category"]:
+        return False
+
+    shared_topics = set(article_a["topicTags"]) & set(article_b["topicTags"])
+    if not shared_topics:
+        return False
+
+    shared_segments = set(article_a["segmentTags"]) & set(article_b["segmentTags"])
+    shared_tech_themes = set(article_a["techThemeTags"]) & set(article_b["techThemeTags"])
+    title_sim = _title_similarity(article_a["title"], article_b["title"])
+
+    return bool(shared_segments) or bool(shared_tech_themes) or title_sim >= GROUP_TITLE_SIMILARITY_THRESHOLD
+
+
+def _group_articles(articles: list[dict]) -> list[list[dict]]:
+    """같은 카테고리 기사 리스트를 조건에 맞는 그룹들로 묶는다 (union-find 방식).
+    2건 이상 묶인 것만 그룹으로 취급하고, 나머지는 1건짜리 그룹(개별 Insight)으로 유지."""
+    n = len(articles)
+    parent = list(range(n))
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(x, y):
+        rx, ry = find(x), find(y)
+        if rx != ry:
+            parent[rx] = ry
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if _can_group(articles[i], articles[j]):
+                union(i, j)
+
+    groups_by_root: dict[int, list[dict]] = defaultdict(list)
+    for i in range(n):
+        groups_by_root[find(i)].append(articles[i])
+
+    return list(groups_by_root.values())
+
+
+def _build_group_title(articles: list[dict]) -> str:
+    """그룹 내 기사들의 공통 topicTags/segmentTags/techThemeTags 조합으로 템플릿 제목을 만든다."""
+    if len(articles) == 1:
+        return articles[0]["title"]
+
+    common_topics = set(articles[0]["topicTags"])
+    common_segments = set(articles[0]["segmentTags"])
+    common_tech = set(articles[0]["techThemeTags"])
+    for a in articles[1:]:
+        common_topics &= set(a["topicTags"])
+        common_segments &= set(a["segmentTags"])
+        common_tech &= set(a["techThemeTags"])
+
+    for topic_combo, title in GROUP_TITLE_TEMPLATES:
+        if all(t in common_topics for t in topic_combo):
+            return title
+
+    if common_segments:
+        seg = sorted(common_segments)[0]
+        if seg in SEGMENT_GROUP_TITLES:
+            return SEGMENT_GROUP_TITLES[seg]
+
+    if common_tech:
+        tech = sorted(common_tech)[0]
+        if tech in TECH_THEME_GROUP_TITLES:
+            return TECH_THEME_GROUP_TITLES[tech]
+
+    # 폴백: 카테고리 이름 기반 일반 제목
+    category_fallback = {
+        "MARKET": "Motorcycle 시장 관련 뉴스 확대",
+        "COMPETITOR": "경쟁 브랜드 전략 관련 뉴스 확대",
+        "PRODUCT_TECH": "신제품·기술 관련 뉴스 확대",
+        "CUSTOMER_TREND": "고객·Trend 관련 뉴스 확대",
+    }
+    return category_fallback.get(articles[0]["category"], articles[0]["title"])
+
+
+def _build_group_summary(articles: list[dict]) -> str:
+    """실제 기사 수와 브랜드명을 데이터에서 계산해서 간결한 템플릿 문장을 만든다 (AI 생성 금지)."""
+    if len(articles) == 1:
+        return articles[0]["summary"] or "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다."
+
+    brand_names = []
+    seen = set()
+    for a in articles:
+        group = a.get("sourceGroup", "")
+        if group in SOURCE_GROUP_LABELS and group not in seen and group not in ("naver", "google", "kmnews"):
+            seen.add(group)
+            brand_names.append(SOURCE_GROUP_LABELS[group])
+
+    count = len(articles)
+    if brand_names:
+        brand_str = ", ".join(brand_names[:3])
+        return f"{brand_str} 등 주요 브랜드에서 관련 뉴스 {count}건이 확인되었습니다."
+    return f"오늘 수집된 주요 뉴스에서 관련 보도가 {count}건 확인되었습니다."
+
+
+def _compute_group_impact(articles: list[dict]) -> float:
+    """Group의 impact = 최고 importance + 기사 수 보정 (5.0 상한)."""
+    max_importance = max(a["importance"] for a in articles)
+    count_bonus = min((len(articles) - 1) * 0.1, 0.4)
+    return round(min(max_importance + count_bonus, 5.0), 1)
+
+
+def _build_group_bmw_view(articles: list[dict]) -> str:
+    """그룹의 BMW Watch Point는 그룹 내에서 importance가 가장 높은 기사의 Watch Point를 대표로 사용한다."""
+    top_article = max(articles, key=lambda a: a["importance"])
+    return top_article["bmwInsight"]
+
+
 def build_market_intelligence(analyzed_articles: list[dict]) -> dict[str, list[dict]]:
+    """카테고리별로 관련 기사를 그룹으로 묶어 Intelligence Card를 만든다.
+    카테고리당 최대 4개 그룹, importance(그룹 impact) 높은 순으로 정렬한다."""
     by_category: dict[str, list[dict]] = defaultdict(list)
     for a in analyzed_articles:
         by_category[a["category"]].append(a)
@@ -660,17 +1033,22 @@ def build_market_intelligence(analyzed_articles: list[dict]) -> dict[str, list[d
     key_map = {"MARKET": "market", "COMPETITOR": "competitor", "PRODUCT_TECH": "productTech", "CUSTOMER_TREND": "customerTrend"}
 
     for category, key in key_map.items():
-        articles = sorted(by_category.get(category, []), key=lambda x: x["score"], reverse=True)[:4]
+        category_articles = by_category.get(category, [])
+        groups = _group_articles(category_articles)
+
         cards = []
-        for a in articles:
+        for group in groups:
             cards.append({
-                "title": a["title"],
-                "summary": a["summary"],
-                "relatedNewsIds": [a["id"]],
-                "impact": a["importance"],
-                "bmwView": a["bmwInsight"],
+                "title": _build_group_title(group),
+                "summary": _build_group_summary(group),
+                "relatedNewsIds": [a["id"] for a in group],
+                "impact": _compute_group_impact(group),
+                "bmwView": _build_group_bmw_view(group),
             })
-        result[key] = cards
+
+        # impact(그룹 대표 중요도) 높은 순으로 정렬 후 카테고리당 최대 4개 (요청서 11번)
+        cards.sort(key=lambda c: c["impact"], reverse=True)
+        result[key] = cards[:4]
 
     return result
 
