@@ -268,7 +268,12 @@ function renderIntelColumn(containerId, items) {
   const container = document.getElementById(containerId);
   container.innerHTML = "";
 
-  (items || []).forEach((item) => {
+  if (!items || items.length === 0) {
+    container.innerHTML = `<div class="empty-state empty-state--intel">오늘 수집된 Insight가 없습니다.</div>`;
+    return;
+  }
+
+  items.forEach((item) => {
     const card = document.createElement("div");
     card.className = "intel-card";
     card.innerHTML = `
