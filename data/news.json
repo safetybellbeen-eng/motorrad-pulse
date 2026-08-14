@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-14",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "06:07 PM",
+    "lastUpdated": "06:31 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-14T18:07:18.008971+09:00"
+    "lastUpdatedISO": "2026-08-14T18:31:21.330285+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -102,10 +102,10 @@
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "harley",
-      "publishedAt": "2026-08-13T17:13:16+09:00",
+      "publishedAt": "2026-08-14T18:21:21+09:00",
       "category": "PRODUCT_TECH",
       "summary": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
-      "importance": 2.5,
+      "importance": 3.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
