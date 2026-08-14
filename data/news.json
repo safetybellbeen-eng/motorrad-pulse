@@ -2,13 +2,75 @@
   "meta": {
     "date": "2026-08-15",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:55 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-15T08:01:16.197032+09:00"
+    "lastUpdatedISO": "2026-08-15T08:55:17.141671+09:00",
+    "brandSummary": {
+      "bmw": {
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
+        "secondaryTheme": null,
+        "signal": "BASELINE",
+        "activity": "MEDIUM",
+        "topArticleTitle": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=173014014",
+        "signalDetails": {}
+      },
+      "ducati": {
+        "newsCount": 1,
+        "primaryTheme": "CUSTOMER",
+        "secondaryTheme": null,
+        "signal": "BASELINE",
+        "activity": "MEDIUM",
+        "topArticleTitle": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
+        "topArticleUrl": "https://www.carguy.kr/news/articleView.html?idxno=61927",
+        "signalDetails": {}
+      },
+      "triumph": {
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
+        "signalDetails": {}
+      },
+      "harley": {
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
+        "secondaryTheme": null,
+        "signal": "BASELINE",
+        "activity": "MEDIUM",
+        "topArticleTitle": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173039076&bmode=view",
+        "signalDetails": {}
+      },
+      "honda": {
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
+        "signalDetails": {}
+      },
+      "yamaha": {
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
+        "signalDetails": {}
+      }
+    }
   },
   "marketIntelligence": {
     "market": [],
