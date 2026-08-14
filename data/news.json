@@ -2,63 +2,56 @@
   "meta": {
     "date": "2026-08-14",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "09:01 PM",
+    "lastUpdated": "10:47 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-14T21:01:23.948585+09:00"
+    "lastUpdatedISO": "2026-08-14T22:47:28.454400+09:00"
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [
+    "competitor": [],
+    "productTech": [
       {
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
         "description": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
         "relatedNewsCount": 1,
         "impact": "High",
-        "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
-      {
-        "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
-        "description": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
-        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
-        "description": "",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
-    "productTech": [
       {
         "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
         "description": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
         "description": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
+        "description": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
+        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
     {
@@ -69,11 +62,11 @@
       "sourceType": "media",
       "sourceGroup": "bmw",
       "publishedAt": "2026-08-14T09:16:54+09:00",
-      "category": "COMPETITOR",
+      "category": "PRODUCT_TECH",
       "summary": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
       "importance": 4.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
       "rank": 1
@@ -86,11 +79,11 @@
       "sourceType": "media",
       "sourceGroup": "ducati",
       "publishedAt": "2026-08-12T09:04:43+09:00",
-      "category": "COMPETITOR",
+      "category": "CUSTOMER_TREND",
       "summary": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
       "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 4
@@ -99,15 +92,15 @@
       "id": "765ca87cf0aa3123",
       "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=173039076&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "harley",
       "publishedAt": "2026-08-14T18:21:21+09:00",
       "category": "PRODUCT_TECH",
       "summary": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
       "importance": 3.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
@@ -123,8 +116,8 @@
       "category": "PRODUCT_TECH",
       "summary": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
       "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
@@ -133,15 +126,15 @@
       "id": "6dd7b47942adca13",
       "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=173066798&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-13T11:12:17+09:00",
-      "category": "COMPETITOR",
+      "category": "PRODUCT_TECH",
       "summary": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
       "importance": 2.0,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
@@ -154,11 +147,11 @@
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-12T11:27:45+09:00",
-      "category": "COMPETITOR",
+      "category": "PRODUCT_TECH",
       "summary": null,
       "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     }
