@@ -66,7 +66,7 @@
 
     <div class="sidebar-status">
       <div class="status-row"><span class="status-dot"></span> NEWS UPDATED</div>
-      <div class="status-row"><span class="status-dot"></span> RULE-BASED ANALYSIS</div>
+      <div class="status-row"><span class="status-dot"></span> INTELLIGENCE UPDATED</div>
     </div>
   </aside>
 
@@ -91,6 +91,7 @@
         <div class="topbar__live-clock" id="topbar-live-clock">2026.08.13 (THU) 00:00:00</div>
         <div class="topbar__date" id="topbar-date">2026.08.12 &nbsp;WEDNESDAY</div>
         <div class="topbar__updated">
+          <span class="topbar__updated-label">LAST UPDATED</span>
           <span id="topbar-time">07:30 AM</span>
           <button id="refresh-btn" class="refresh-btn" type="button" title="최신 데이터 다시 불러오기">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -163,20 +164,27 @@
         <span class="section-sub">규칙 기반으로 분석한 4개 영역별 핵심 Insight</span>
       </div>
 
+      <div class="intel-tabbar" id="intel-tabbar">
+        <button class="intel-tab is-active" data-intel-tab="market">MARKET</button>
+        <button class="intel-tab" data-intel-tab="competitor">COMPETITOR</button>
+        <button class="intel-tab" data-intel-tab="productTech">PRODUCT</button>
+        <button class="intel-tab" data-intel-tab="customerTrend">CUSTOMER</button>
+      </div>
+
       <div class="intel-grid">
-        <div class="intel-column">
+        <div class="intel-column" data-intel-panel="market">
           <div class="intel-column__head">MARKET</div>
           <div id="intel-market" class="intel-cards"></div>
         </div>
-        <div class="intel-column">
+        <div class="intel-column" data-intel-panel="competitor">
           <div class="intel-column__head">COMPETITOR</div>
           <div id="intel-competitor" class="intel-cards"></div>
         </div>
-        <div class="intel-column">
+        <div class="intel-column" data-intel-panel="productTech">
           <div class="intel-column__head">PRODUCT &amp; TECH</div>
           <div id="intel-productTech" class="intel-cards"></div>
         </div>
-        <div class="intel-column">
+        <div class="intel-column" data-intel-panel="customerTrend">
           <div class="intel-column__head">CUSTOMER &amp; TREND</div>
           <div id="intel-customerTrend" class="intel-cards"></div>
         </div>

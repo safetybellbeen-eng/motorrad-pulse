@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setupNavHighlight();
   setupMobileTabbar();
+  setupIntelTabbar();
   setupFilterBar();
   setupCopyBriefButton();
   setupRefreshButton();
@@ -207,21 +208,51 @@ function renderTopNewsColumn(container, newsArray, emptyMessage) {
 
     const tagClass = news.category === "COMPETITOR" ? "tag tag--competitor" : "tag";
     const categoryLabel = CATEGORY_LABELS[news.category] || escapeHtml(news.category);
+    const importanceText = typeof news.importance === "number" ? news.importance.toFixed(1) : null;
+    const hasInsight = news.whyItMatters || news.bmwInsight;
 
     card.innerHTML = `
       <div class="news-card__rank">${String(rank).padStart(2, "0")}</div>
       <div class="news-card__body">
         <div class="news-card__meta">
           <span class="${tagClass}">${categoryLabel}</span>
+          ${importanceText ? `<span class="news-card__importance">${importanceText} / 5</span>` : ""}
           <span class="news-card__source">${escapeHtml(news.source)}</span>
           <span class="news-card__date">${formatDisplayDate(news.publishedAt)}</span>
         </div>
         <h4 class="news-card__title">${createNewsTitleLink(news)}</h4>
         ${news.summary ? `<p class="news-card__summary">${escapeHtml(news.summary)}</p>` : ""}
+        ${hasInsight ? `
+          <button class="insight-toggle" type="button" aria-expanded="false">
+            VIEW INSIGHT <span class="insight-toggle__icon">▾</span>
+          </button>
+          <div class="news-card__insight" hidden>
+            ${news.whyItMatters ? `
+              <div class="news-card__insight-block">
+                <span class="news-card__insight-label">WHY IT MATTERS</span>
+                <p>${escapeHtml(news.whyItMatters)}</p>
+              </div>` : ""}
+            ${news.bmwInsight ? `
+              <div class="news-card__insight-block">
+                <span class="news-card__insight-label">BMW MOTORRAD WATCH POINT</span>
+                <p>${escapeHtml(news.bmwInsight)}</p>
+              </div>` : ""}
+          </div>
+        ` : ""}
       </div>
     `;
 
     container.appendChild(card);
+  });
+
+  container.querySelectorAll(".insight-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = btn.nextElementSibling;
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+      btn.classList.toggle("is-open", !isOpen);
+    });
   });
 }
 
@@ -287,26 +318,17 @@ function renderSourceMonitor(newsList) {
   }
 
   filtered.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "source-card";
-    const importanceText = typeof item.importance === "number" ? item.importance.toFixed(1) : null;
-    const bottomParts = [];
-    if (item.category) {
-      bottomParts.push(`<span class="source-card__category">${CATEGORY_LABELS[item.category] || escapeHtml(item.category)}</span>`);
-    }
-    if (importanceText) {
-      bottomParts.push(`<span class="source-card__importance">Importance ${importanceText}</span>`);
-    }
-    card.innerHTML = `
-      <div class="source-card__top">
-        <span class="source-card__source">${escapeHtml(item.source)}</span>
-        <span>${formatDisplayDate(item.publishedAt)}</span>
-      </div>
-      <h6 class="source-card__title">${createNewsTitleLink(item)}</h6>
-      ${item.summary ? `<p class="source-card__summary">${escapeHtml(item.summary)}</p>` : ""}
-      ${bottomParts.length ? `<div class="source-card__bottom">${bottomParts.join("")}</div>` : ""}
+    const row = document.createElement("article");
+    row.className = "source-row";
+
+    row.innerHTML = `
+      <span class="source-row__date">${formatDisplayDate(item.publishedAt)}</span>
+      <h6 class="source-row__title">${createNewsTitleLink(item)}</h6>
+      <span class="source-row__meta">
+        ${escapeHtml(item.source)}${item.sourceType ? ` · ${escapeHtml(item.sourceType.toUpperCase())}` : ""}
+      </span>
     `;
-    container.appendChild(card);
+    container.appendChild(row);
   });
 }
 
@@ -391,7 +413,16 @@ function setupCopyBriefButton() {
     const text = lines.join("\n");
 
     navigator.clipboard.writeText(text)
-      .then(() => showToast("Team Brief가 클립보드에 복사되었습니다."))
+      .then(() => {
+        showToast("Team Brief가 클립보드에 복사되었습니다.");
+        const originalLabel = btn.textContent;
+        btn.textContent = "COPIED";
+        btn.classList.add("is-copied");
+        setTimeout(() => {
+          btn.textContent = originalLabel;
+          btn.classList.remove("is-copied");
+        }, 1800);
+      })
       .catch(() => showToast("복사에 실패했습니다. 브라우저 권한을 확인해 주세요."));
   });
 }
@@ -443,6 +474,30 @@ function setupMobileTabbar() {
 
   // 초기 상태: 첫 번째 탭(TOP NEWS)을 기본으로 노출
   activateTab(tabs[0].dataset.tab);
+}
+
+/* ---------- MARKET INTELLIGENCE 모바일 Sub Tab ----------
+   Desktop에서는 CSS로 탭바 자체가 숨겨지고 4개 컬럼이 그대로 보인다.
+   Mobile에서는 탭을 눌러 선택된 카테고리 컬럼만 보이게 전환한다. */
+function setupIntelTabbar() {
+  const tabbar = document.getElementById("intel-tabbar");
+  if (!tabbar) return;
+
+  const tabs = tabbar.querySelectorAll(".intel-tab");
+  const panels = document.querySelectorAll("[data-intel-panel]");
+
+  function activate(key) {
+    tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.intelTab === key));
+    panels.forEach((p) => p.classList.toggle("is-intel-active", p.dataset.intelPanel === key));
+  }
+
+  tabbar.addEventListener("click", (e) => {
+    const target = e.target.closest(".intel-tab");
+    if (!target) return;
+    activate(target.dataset.intelTab);
+  });
+
+  activate(tabs[0].dataset.intelTab);
 }
 
 function setupNavHighlight() {

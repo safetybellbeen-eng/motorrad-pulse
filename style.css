@@ -331,6 +331,10 @@ button{ font-family: inherit; cursor: pointer; }
   letter-spacing: 0.3px;
   color: var(--grey-dim);
 }
+.topbar__updated-label{
+  letter-spacing: 1px;
+  color: var(--grey-dim);
+}
 .refresh-btn{
   display: inline-flex;
   align-items: center;
@@ -490,6 +494,13 @@ button{ font-family: inherit; cursor: pointer; }
   font-weight: 600;
 }
 .tag--competitor{ background: var(--signal-amber-dim); color: var(--signal-amber); }
+/* Importance는 제목보다 눈에 띄면 안 되는 보조 지표 (STEP C 결정사항 2번) */
+.news-card__importance{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+  letter-spacing: 0.3px;
+}
 .news-card__source{
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -502,7 +513,7 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .news-card__title{
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 9px;
   line-height: 1.45;
   color: var(--white);
@@ -511,18 +522,42 @@ button{ font-family: inherit; cursor: pointer; }
   font-size: 12.5px;
   color: var(--grey);
   line-height: 1.7;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
-.news-card__grid{
+
+/* VIEW INSIGHT 토글 (STEP C 결정사항 1번: 기본 접힘, Headline Scan 우선) */
+.insight-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: var(--bmw-blue-light);
+  margin-bottom: 4px;
+}
+.insight-toggle:hover{ color: var(--white); }
+.insight-toggle__icon{
+  display: inline-block;
+  transition: transform 0.15s ease;
+  font-size: 9px;
+}
+.insight-toggle.is-open .insight-toggle__icon{ transform: rotate(180deg); }
+
+.news-card__insight{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-bottom: 16px;
+  margin: 10px 0 4px;
   padding: 16px 18px;
   background: var(--panel);
   border: 1px solid var(--line);
 }
-.news-card__block-label{
+.news-card__insight-label{
   font-family: var(--font-mono);
   font-size: 9.5px;
   letter-spacing: 1.2px;
@@ -530,37 +565,11 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: 5px;
   display: block;
 }
-.news-card__block p{
+.news-card__insight-block p{
   margin: 0;
   font-size: 12.5px;
   line-height: 1.65;
   color: var(--white);
-}
-.news-card__footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.importance-stars{
-  font-size: 12px;
-  color: var(--signal-amber);
-  letter-spacing: 1.5px;
-}
-.importance-stars .dim{ color: var(--line-strong); }
-.read-btn{
-  border: 1px solid var(--line-strong);
-  background: transparent;
-  color: var(--white);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 1px;
-  padding: 8px 16px;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-.read-btn:hover{
-  background: var(--white);
-  border-color: var(--white);
-  color: var(--black);
 }
 
 /* ---- Market Intelligence ---- */
@@ -694,76 +703,41 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 .source-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.source-card{
-  background: var(--black);
-  padding: 16px 18px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
-}
-.source-card__top{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--grey-dim);
-}
-.source-card__source{ color: var(--bmw-blue-light); font-weight: 600; }
-.source-card__title{
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.45;
-  margin: 3px 0 0;
-  color: var(--white);
-}
-.source-card__summary{
-  font-size: 11.5px;
-  color: var(--grey);
-  line-height: 1.6;
-  margin: 0;
-}
-.source-card__bottom{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 8px;
-  padding-top: 10px;
   border-top: 1px solid var(--line);
 }
-.source-card__category{
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.3px;
-  color: var(--grey);
+.source-row{
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.15s ease;
 }
-.source-card__importance{
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--signal-amber);
+.source-row:hover{
+  background: rgba(255,255,255,0.02);
 }
-.source-card__link{
+.source-row__date{
   font-family: var(--font-mono);
   font-size: 10.5px;
-  letter-spacing: 0.5px;
-  color: var(--bmw-blue-light);
-  font-weight: 700;
-  background: transparent;
-  border: 1px solid var(--bmw-blue-light);
-  padding: 5px 10px;
-  border-radius: 3px;
-  white-space: nowrap;
-  transition: background 0.15s ease, color 0.15s ease;
+  color: var(--grey-dim);
 }
-.source-card__link:hover{
-  background: var(--bmw-blue-light);
-  color: var(--black);
+.source-row__title{
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--white);
+  min-width: 0;
+}
+.source-row__meta{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--bmw-blue-light);
+  white-space: nowrap;
+  text-align: right;
 }
 
 .empty-state{
@@ -853,9 +827,11 @@ button{ font-family: inherit; cursor: pointer; }
   font-size: 10.5px;
   letter-spacing: 1px;
   padding: 12px 20px;
+  min-height: 44px;
   border: 1px solid var(--line-strong);
   background: transparent;
   color: var(--grey);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .btn--primary{
   background: var(--white);
@@ -864,6 +840,11 @@ button{ font-family: inherit; cursor: pointer; }
   font-weight: 700;
 }
 .btn--primary:hover{ background: var(--bmw-blue-light); border-color: var(--bmw-blue-light); color: var(--black); }
+.btn--primary.is-copied{
+  background: var(--bmw-blue);
+  border-color: var(--bmw-blue);
+  color: var(--white);
+}
 .btn--disabled{
   color: var(--grey-dim);
   cursor: not-allowed;
@@ -905,10 +886,15 @@ button{ font-family: inherit; cursor: pointer; }
 /* ==========================================================
    RESPONSIVE
    ========================================================== */
-@media (max-width: 1200px){
-  .intel-grid{ grid-template-columns: repeat(2, 1fr); }
-  .source-grid{ grid-template-columns: repeat(2, 1fr); }
+
+/* MARKET INTELLIGENCE: 4열보다 2x2가 카드 폭을 넓혀 텍스트 가독성이 좋다
+   (STEP C 결정사항 7번: 한 화면에 많이 보이는 것보다 편하게 읽히는 것이 우선) */
+.intel-grid{
+  grid-template-columns: repeat(2, 1fr);
 }
+
+/* MARKET INTELLIGENCE 모바일 Sub Tab — Desktop에서는 숨기고 4개 컬럼을 그대로 보여준다 */
+.intel-tabbar{ display: none; }
 
 @media (max-width: 900px){
   .app{ flex-direction: column; }
@@ -929,9 +915,7 @@ button{ font-family: inherit; cursor: pointer; }
   .topbar__meta{ text-align: left; }
   .topbar__title h1{ font-size: 30px; }
   .news-card{ grid-template-columns: 1fr; }
-  .news-card__grid{ grid-template-columns: 1fr; }
-  .intel-grid{ grid-template-columns: 1fr; }
-  .source-grid{ grid-template-columns: 1fr; }
+  .news-card__insight{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }
 
   /* TOP NEWS 좌우 2분할 -> 모바일에서는 세로로 쌓기 (BMW 자사 먼저, 그 다음 업계 전체) */
@@ -978,6 +962,60 @@ button{ font-family: inherit; cursor: pointer; }
     color: var(--white);
     border-top-color: var(--bmw-blue-light);
   }
+
+  /* MARKET INTELLIGENCE — Mobile Sub Tab (STEP C 결정사항 8번) */
+  .intel-tabbar{
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 18px;
+    padding-bottom: 2px;
+  }
+  .intel-tabbar::-webkit-scrollbar{ display: none; }
+  .intel-tab{
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    color: var(--grey);
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.8px;
+    padding: 9px 14px;
+    min-height: 44px;
+  }
+  .intel-tab.is-active{
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--black);
+    font-weight: 600;
+  }
+  .intel-grid{ grid-template-columns: 1fr; }
+  .intel-column{ display: none; }
+  .intel-column.is-intel-active{ display: block; }
+
+  /* SOURCE FILTER — Mobile Horizontal Scroll (STEP C 결정사항 6번) */
+  .filter-bar{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+  .filter-bar::-webkit-scrollbar{ display: none; }
+  .filter-chip, .filter-group-label{ flex-shrink: 0; }
+  .filter-chip{ min-height: 40px; display: inline-flex; align-items: center; }
+
+  /* SOURCE MONITOR Compact List — 날짜 컬럼 폭 축소로 제목에 공간을 더 확보 */
+  .source-row{
+    grid-template-columns: 40px 1fr;
+    grid-template-areas: "date meta" "title title";
+    row-gap: 3px;
+  }
+  .source-row__date{ grid-area: date; }
+  .source-row__meta{ grid-area: meta; text-align: right; }
+  .source-row__title{ grid-area: title; }
 }
 
 @media (min-width: 901px){
