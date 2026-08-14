@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-15",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "07:02 AM",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-15T07:02:13.321423+09:00"
+    "lastUpdatedISO": "2026-08-15T08:01:16.197032+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -92,7 +92,7 @@
       "id": "765ca87cf0aa3123",
       "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=173039076&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "harley",
       "publishedAt": "2026-08-14T18:21:21+09:00",
@@ -126,7 +126,7 @@
       "id": "6dd7b47942adca13",
       "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=173066798&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-13T11:12:17+09:00",
