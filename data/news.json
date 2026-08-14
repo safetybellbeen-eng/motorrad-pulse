@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-14",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "11:01 AM",
+    "lastUpdated": "11:31 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-14T11:01:16.559872+09:00"
+    "lastUpdatedISO": "2026-08-14T11:31:18.857211+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -24,19 +24,19 @@
         "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
         "description": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
-        "description": "",
+        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
+        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
-        "description": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
+        "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
+        "description": "",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
@@ -139,7 +139,7 @@
       "publishedAt": "2026-08-13T11:12:17+09:00",
       "category": "COMPETITOR",
       "summary": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 신규 모델 출시와 제품 Positioning, 가격대 및 고객 반응을 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -156,7 +156,7 @@
       "publishedAt": "2026-08-12T11:27:45+09:00",
       "category": "COMPETITOR",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
