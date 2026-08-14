@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-14",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:06 PM",
+    "lastUpdated": "01:31 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-14T13:06:41.553017+09:00"
+    "lastUpdatedISO": "2026-08-14T13:31:14.954685+09:00"
   },
   "marketIntelligence": {
     "market": [],
@@ -99,7 +99,7 @@
       "id": "765ca87cf0aa3123",
       "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=173039076&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "harley",
       "publishedAt": "2026-08-13T17:13:16+09:00",
@@ -116,7 +116,7 @@
       "id": "90a22df9362c5119",
       "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=173067022&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-13T11:22:46+09:00",
@@ -133,7 +133,7 @@
       "id": "6dd7b47942adca13",
       "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=173066798&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "publishedAt": "2026-08-13T11:12:17+09:00",
