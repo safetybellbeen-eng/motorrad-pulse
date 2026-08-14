@@ -37,6 +37,12 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 RAW_NEWS_PATH = os.path.join(DATA_DIR, "raw_news.json")
 NEWS_PATH = os.path.join(DATA_DIR, "news.json")
 INSIGHTS_PATH = os.path.join(DATA_DIR, "insights.json")
+HISTORY_DIR = os.path.join(DATA_DIR, "history")
+
+# STEP 8: Yesterday/Today 변화 감지를 위한 History 설정
+HISTORY_RETENTION_DAYS = 30     # 요청서 STEP8-5번, 8-9번: 30일 초과분만 정리
+HISTORY_CURRENT_WINDOW_HOURS = 24   # Current = 최근 24시간 (STEP8-B 승인사항)
+HISTORY_PREVIOUS_WINDOW_HOURS = 48  # Previous = 그 이전 24시간 (24~48시간 전)
 
 TOP_NEWS_MAX = 5
 TOP_NEWS_MAX_PER_GROUP = 2          # 요청서 22번: 동일 sourceGroup 최대 2개
@@ -717,6 +723,12 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
             "techThemeTags": topic_signals["techThemeTags"],
         })
 
+    # STEP 8: signalThemes(topicTags+segmentTags+techThemeTags 통합, 중복 제거)를
+    # 별도로 부여한다. compute_signal_themes()는 딕셔너리가 이미 완성된 뒤
+    # 호출해야 하므로 analyzed 리스트가 다 만들어진 다음 한 번 더 순회한다.
+    for a in analyzed:
+        a["signalThemes"] = compute_signal_themes(a)
+
     return analyzed
 
 
@@ -1294,8 +1306,359 @@ def save_json_atomic(data: dict, path: str):
 
 
 # ==========================================================
-# 메인 실행
+# STEP 8: Yesterday/Today 변화 감지 + Brand Intelligence Summary
 # ==========================================================
+# 설계 승인사항(STEP8-8) 반영:
+# 1) History는 날짜 1개 파일이 아니라 "실행별 Snapshot"으로 저장한다
+#    (하루 여러 번 실행돼도 각 실행 시점의 기록이 덮어써지지 않도록).
+# 2) Snapshot을 합칠 때는 article id 기준으로 반드시 중복 제거한다.
+# 3) topicTags/segmentTags/techThemeTags를 변화 감지에서는 "signalThemes"라는
+#    하나의 통합 개념으로 합쳐서 다룬다 (중복 제거).
+# 4) Signal 비교는 태그 "조합 전체"가 아니라 "개별 Theme" 단위로 한다.
+#    (예: 어제 ADVENTURE만 있었고 오늘 ADVENTURE+NEW_MODEL이면
+#     ADVENTURE=CONTINUING, NEW_MODEL=NEW로 각각 판정)
+# 5) History가 전혀 없는 최초 실행은 NORMAL이 아니라 BASELINE으로 표시한다.
+# 6) Global(전체 시장) Signal과 Brand별 Signal은 서로 다른 지표를 쓴다.
+#    - Global: 기사 수 + 관련 브랜드 수 + 실제 Source 다양성
+#    - Brand:  기사 수 + 실제 Source 다양성 + Importance 변화
+#    ("관련 브랜드 수"는 브랜드 하나만 보는 단위에서는 의미가 없어 제외)
+# 7) Activity 계산도 실제 sourceGroup이 아니라 실제 source(언론사)/domain
+#    다양성을 사용한다 (sourceGroup은 브랜드 단위에서는 항상 1종류이므로 무의미).
+
+
+def _extract_domain(url: str) -> str:
+    """History 저장 및 실제 Source 다양성 계산용. 전체 URL은 저장하지 않고
+    도메인만 남긴다 (요청서 STEP8-8 8번: 필요하지 않은 값은 저장하지 않음)."""
+    try:
+        from urllib.parse import urlsplit
+        return urlsplit(url).netloc.lower()
+    except Exception:
+        return ""
+
+
+def compute_signal_themes(article: dict) -> list[str]:
+    """topicTags + segmentTags + techThemeTags를 하나로 합치고 중복을 제거한
+    signalThemes를 계산한다 (요청서 STEP8-8 3번). ELECTRIFICATION처럼 여러
+    태그 그룹에 동시에 존재하는 값은 한 번만 남는다."""
+    combined = (
+        article.get("topicTags", [])
+        + article.get("segmentTags", [])
+        + article.get("techThemeTags", [])
+    )
+    return list(dict.fromkeys(combined))  # 순서를 보존하며 중복 제거
+
+
+def build_history_snapshot(analyzed_articles: list[dict]) -> dict:
+    """History Snapshot에 저장할 최소 데이터를 구성한다 (요청서 STEP8-8 8번).
+    기사 본문/summary/whyItMatters/bmwInsight/전체 URL은 저장하지 않는다.
+    비교에 필요한 것만: id, sourceGroup, source(언론사명), domain, category,
+    signalThemes, importance, publishedAt."""
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    articles = []
+    for a in analyzed_articles:
+        articles.append({
+            "id": a["id"],
+            "sourceGroup": a["sourceGroup"],
+            "source": a.get("source", ""),
+            "domain": _extract_domain(a.get("url", "")),
+            "category": a["category"],
+            "signalThemes": compute_signal_themes(a),
+            "importance": a["importance"],
+            "publishedAt": a.get("publishedAt", ""),
+        })
+    return {
+        "savedAtISO": now_kst.isoformat(),
+        "articles": articles,
+    }
+
+
+def save_history_snapshot(snapshot: dict) -> str | None:
+    """실행별 Snapshot 파일로 저장한다 (요청서 STEP8-8 1번: 날짜 1개 파일이 아니라
+    실행별 파일, 예: 2026-08-14_0930.json). 저장 실패해도 전체 파이프라인은
+    계속 진행되어야 하므로 예외를 삼키고 None을 반환한다."""
+    try:
+        os.makedirs(HISTORY_DIR, exist_ok=True)
+        now_kst = datetime.now(timezone(timedelta(hours=9)))
+        filename = now_kst.strftime("%Y-%m-%d_%H%M") + ".json"
+        path = os.path.join(HISTORY_DIR, filename)
+        save_json_atomic(snapshot, path)
+        return path
+    except Exception as e:
+        log(f"[History 경고] Snapshot 저장 실패 (분석 결과에는 영향 없음): {e}")
+        return None
+
+
+def load_history_snapshots_in_window(hours_ago_start: float, hours_ago_end: float) -> list[dict]:
+    """HISTORY_DIR의 모든 Snapshot 파일 중, 저장 시각이
+    [now - hours_ago_end, now - hours_ago_start) 구간에 속하는 것만 골라 로드한다.
+    파일이 없거나 폴더 자체가 없으면 빈 리스트를 반환한다 (최초 실행 안전 처리)."""
+    if not os.path.isdir(HISTORY_DIR):
+        return []
+
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    window_start = now_kst - timedelta(hours=hours_ago_end)
+    window_end = now_kst - timedelta(hours=hours_ago_start)
+
+    snapshots = []
+    for filename in os.listdir(HISTORY_DIR):
+        if not filename.endswith(".json"):
+            continue
+        path = os.path.join(HISTORY_DIR, filename)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            saved_at = datetime.fromisoformat(data["savedAtISO"])
+            if window_start <= saved_at < window_end:
+                snapshots.append(data)
+        except Exception:
+            continue  # 손상된/형식이 다른 파일은 조용히 건너뜀
+
+    return snapshots
+
+
+def merge_snapshot_articles(snapshots: list[dict]) -> list[dict]:
+    """여러 Snapshot의 articles를 합치되, 같은 기사가 여러 Snapshot(08시/13시/18시 등)에
+    중복으로 들어있을 수 있으므로 반드시 article id 기준으로 중복 제거한다
+    (요청서 STEP8-8 1번 핵심 요구사항). 가장 최근 Snapshot에 있는 버전을 우선한다."""
+    by_id: dict[str, dict] = {}
+    # savedAtISO 오름차순으로 처리해서, 나중 것(최신)이 먼저 것을 덮어쓰게 한다
+    sorted_snapshots = sorted(snapshots, key=lambda s: s.get("savedAtISO", ""))
+    for snap in sorted_snapshots:
+        for article in snap.get("articles", []):
+            by_id[article["id"]] = article
+    return list(by_id.values())
+
+
+def cleanup_old_history(retention_days: int = HISTORY_RETENTION_DAYS) -> int:
+    """retention_days를 초과한 History Snapshot만 삭제한다 (요청서 STEP8-8 9번:
+    현재 생성 중인/오늘 필요한 Snapshot을 실수로 삭제하지 않도록 파일의 실제
+    savedAtISO 시각을 기준으로 판단한다. 파일명 파싱이 아니라 내용을 읽어서
+    판단하므로 더 안전하다). 삭제된 파일 개수를 반환한다."""
+    if not os.path.isdir(HISTORY_DIR):
+        return 0
+
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    cutoff = now_kst - timedelta(days=retention_days)
+    deleted = 0
+
+    for filename in os.listdir(HISTORY_DIR):
+        if not filename.endswith(".json"):
+            continue
+        path = os.path.join(HISTORY_DIR, filename)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            saved_at = datetime.fromisoformat(data["savedAtISO"])
+            if saved_at < cutoff:
+                os.remove(path)
+                deleted += 1
+        except Exception:
+            continue  # 읽을 수 없는 파일은 안전하게 건드리지 않고 넘어감
+
+    return deleted
+
+
+# ---- Theme 단위 상태 판정 (요청서 STEP8-8 4번) ----
+
+SIGNAL_STATE_PRIORITY = {"RISING": 3, "NEW": 2, "CONTINUING": 1, "NORMAL": 0}
+
+
+def _determine_theme_state(theme: str, current_themes_count: dict, previous_themes_count: dict,
+                            current_total_articles: int, previous_total_articles: int) -> str:
+    """개별 Theme 하나의 상태(NEW/CONTINUING/RISING/NORMAL)를 판정한다.
+    RISING 조건(요청서 STEP8-8 6번 Global 기준 응용, Theme 단위로 적용):
+      해당 Theme 기사 수가 Previous 대비 2배 이상 증가 + Current 최소 2건 이상
+      (기사 1건->2건 정도의 작은 변화만으로는 RISING 처리하지 않음, 원 요청서 3-3번)
+    """
+    cur_count = current_themes_count.get(theme, 0)
+    prev_count = previous_themes_count.get(theme, 0)
+
+    if prev_count == 0 and cur_count > 0:
+        return "NEW"
+
+    if prev_count > 0 and cur_count > 0:
+        if cur_count >= max(prev_count * 2, 1) and cur_count >= 2 and cur_count > prev_count:
+            return "RISING"
+        return "CONTINUING"
+
+    return "NORMAL"
+
+
+def compute_global_topic_signals(current_articles: list[dict], previous_articles: list[dict],
+                                  has_history: bool) -> dict[str, dict]:
+    """전체 시장 기준(Global) Theme별 상태를 계산한다. TODAY'S SIGNAL 고도화(요청서 14번)에
+    사용할 수 있도록 별도 함수로 분리한다."""
+    if not has_history:
+        return {}
+
+    current_theme_articles: dict[str, list[dict]] = defaultdict(list)
+    for a in current_articles:
+        for theme in a.get("signalThemes", []):
+            current_theme_articles[theme].append(a)
+
+    previous_theme_articles: dict[str, list[dict]] = defaultdict(list)
+    for a in previous_articles:
+        for theme in a.get("signalThemes", []):
+            previous_theme_articles[theme].append(a)
+
+    current_counts = {t: len(v) for t, v in current_theme_articles.items()}
+    previous_counts = {t: len(v) for t, v in previous_theme_articles.items()}
+
+    result = {}
+    all_themes = set(current_counts) | set(previous_counts)
+    for theme in all_themes:
+        state = _determine_theme_state(theme, current_counts, previous_counts, len(current_articles), len(previous_articles))
+        cur_arts = current_theme_articles.get(theme, [])
+        brands = set(a.get("sourceGroup") for a in cur_arts if a.get("sourceGroup") in BRAND_SOURCE_GROUPS)
+        result[theme] = {
+            "state": state,
+            "currentCount": current_counts.get(theme, 0),
+            "previousCount": previous_counts.get(theme, 0),
+            "brands": sorted(brands),
+        }
+    return result
+
+
+# ---- Brand Summary (요청서 6~10번 + STEP8-8 보완) ----
+
+BRAND_SOURCE_GROUPS = ["bmw", "ducati", "triumph", "harley", "honda", "yamaha"]
+
+
+def _brand_signal_from_themes(theme_states: dict[str, str]) -> str:
+    """개별 Theme 상태들 중 우선순위가 가장 높은 것을 Brand 대표 Signal로 채택한다
+    (요청서 STEP8-8 4번: RISING > NEW > CONTINUING > NORMAL)."""
+    if not theme_states:
+        return "NORMAL"
+    best = max(theme_states.values(), key=lambda s: SIGNAL_STATE_PRIORITY.get(s, 0))
+    return best
+
+
+def _compute_brand_activity(article_count: int, source_diversity: int, theme_diversity: int,
+                             has_new_theme: bool, has_rising_theme: bool) -> str:
+    """Brand Activity를 계산한다 (요청서 STEP8-8 7번: sourceGroup이 아니라 실제
+    source/domain 다양성, 기사 1건 차이로 등급이 자주 안 바뀌도록 계단식 설계)."""
+    if article_count == 0:
+        return "LOW"
+
+    score = article_count * 2 + theme_diversity * 3 + source_diversity * 2
+    if has_new_theme:
+        score += 5
+    if has_rising_theme:
+        score += 8
+
+    if score >= 15:
+        return "HIGH"
+    if score >= 6:
+        return "MEDIUM"
+    return "LOW"
+
+
+def build_brand_summary(analyzed_articles: list[dict]) -> dict:
+    """브랜드 6개(BMW/Ducati/Triumph/Harley/Honda/Yamaha)에 대해 오늘의 활동
+    요약을 계산한다. History가 없으면(최초 실행) 모든 브랜드가 BASELINE으로
+    표시된다 (요청서 STEP8-8 5번). 설명 문장은 절대 생성하지 않고, 실제
+    데이터에서 계산 가능한 값만 담는다 (요청서 8번)."""
+
+    current_history_snapshots = load_history_snapshots_in_window(0, HISTORY_CURRENT_WINDOW_HOURS)
+    previous_history_snapshots = load_history_snapshots_in_window(
+        HISTORY_CURRENT_WINDOW_HOURS, HISTORY_PREVIOUS_WINDOW_HOURS
+    )
+    has_history = bool(current_history_snapshots or previous_history_snapshots)
+
+    # Current는 "이번 실행 결과"를 그대로 쓴다 (History에 방금 저장한 것과 동일 데이터라
+    # 별도로 다시 로드할 필요가 없다). Previous는 History Snapshot에서만 가져온다.
+    current_by_id = {a["id"]: a for a in analyzed_articles}
+    # 혹시 같은 Current Window 안에 이전 실행(같은 날 이전 시각) Snapshot이 있으면
+    # 함께 합쳐서(중복 제거) 더 완전한 Current 집합을 만든다 (요청서 STEP8-8 1번).
+    if current_history_snapshots:
+        merged_current_history = merge_snapshot_articles(current_history_snapshots)
+        for a in merged_current_history:
+            current_by_id.setdefault(a["id"], a)
+    current_articles = list(current_by_id.values())
+
+    previous_articles = merge_snapshot_articles(previous_history_snapshots)
+
+    summary = {}
+    for brand in BRAND_SOURCE_GROUPS:
+        brand_current = [a for a in current_articles if a.get("sourceGroup") == brand]
+        brand_previous = [a for a in previous_articles if a.get("sourceGroup") == brand]
+
+        news_count = len(brand_current)
+
+        if news_count == 0:
+            summary[brand] = {
+                "newsCount": 0,
+                "primaryTheme": None,
+                "secondaryTheme": None,
+                "signal": "NO_SIGNIFICANT_UPDATE",
+                "activity": "LOW",
+                "topArticleTitle": None,
+                "topArticleUrl": None,
+                "signalDetails": {},
+            }
+            continue
+
+        # Primary/Secondary Theme: 가장 자주 등장한 signalThemes 상위 2개 (요청서 8번 예시)
+        theme_counter = Counter()
+        for a in brand_current:
+            for theme in a.get("signalThemes", []):
+                theme_counter[theme] += 1
+        top_themes = [t for t, _ in theme_counter.most_common(2)]
+        primary_theme = top_themes[0] if len(top_themes) >= 1 else None
+        secondary_theme = top_themes[1] if len(top_themes) >= 2 else None
+
+        # 대표 기사: importance가 가장 높은 것 (실제 analyzed_articles에만 title/url이 있음)
+        top_article = max(brand_current, key=lambda a: a.get("importance", 0)) if brand_current else None
+        top_title = top_article.get("title") if top_article else None
+        top_url = top_article.get("url") if top_article else None
+
+        # 실제 Source 다양성: sourceGroup이 아니라 실제 source(언론사)명 종류수 (요청서 STEP8-8 2번)
+        source_diversity = len(set(a.get("source", "") for a in brand_current if a.get("source")))
+
+        if not has_history:
+            # 최초 실행: 비교할 Previous가 전혀 없으므로 BASELINE (요청서 STEP8-8 5번)
+            signal = "BASELINE"
+            signal_details = {}
+        else:
+            cur_theme_counts = Counter()
+            for a in brand_current:
+                for t in a.get("signalThemes", []):
+                    cur_theme_counts[t] += 1
+            prev_theme_counts = Counter()
+            for a in brand_previous:
+                for t in a.get("signalThemes", []):
+                    prev_theme_counts[t] += 1
+
+            signal_details = {}
+            for theme in set(cur_theme_counts) | set(prev_theme_counts):
+                signal_details[theme] = _determine_theme_state(
+                    theme, cur_theme_counts, prev_theme_counts, len(brand_current), len(brand_previous)
+                )
+            signal = _brand_signal_from_themes(signal_details)
+
+        has_new = any(s == "NEW" for s in (signal_details or {}).values())
+        has_rising = any(s == "RISING" for s in (signal_details or {}).values())
+        activity = _compute_brand_activity(
+            article_count=news_count,
+            source_diversity=source_diversity,
+            theme_diversity=len(theme_counter),
+            has_new_theme=has_new,
+            has_rising_theme=has_rising,
+        )
+
+        summary[brand] = {
+            "newsCount": news_count,
+            "primaryTheme": primary_theme,
+            "secondaryTheme": secondary_theme,
+            "signal": signal,
+            "activity": activity,
+            "topArticleTitle": top_title,
+            "topArticleUrl": top_url,
+            "signalDetails": signal_details,
+        }
+
+    return summary
+
 
 def main():
     log("=" * 60)
@@ -1395,6 +1758,16 @@ def main():
     log(f"PRODUCT & TECH: {len(market_intel.get('productTech', []))}")
     log(f"CUSTOMER & TREND: {len(market_intel.get('customerTrend', []))}")
 
+    # ---- STEP 8: Brand Intelligence Summary ----
+    # 중요: 반드시 History Snapshot을 "저장하기 전"에 계산해야 한다.
+    # build_brand_summary()는 기존에 쌓여있던 History를 Previous/Current 비교에 사용하는데,
+    # 만약 이번 실행 결과를 먼저 저장해버리면 그 Snapshot이 Current Window 안에서
+    # 자기 자신과 또 겹쳐 집계될 위험이 있다. 저장은 항상 이 계산이 끝난 다음이다.
+    brand_summary = build_brand_summary(analyzed_articles)
+    log("\nBrand Summary")
+    for brand, info in brand_summary.items():
+        log(f"{brand.upper()}: {info['newsCount']} news, signal={info['signal']}, activity={info['activity']}")
+
     # ---- 저장 ----
     existing_news = load_existing_json(NEWS_PATH)
 
@@ -1402,11 +1775,28 @@ def main():
     insights_json = build_insights_json(daily_signal, market_intel, team_brief)
     news_json = apply_insights_to_news_meta(news_json, insights_json)
 
+    # brandSummary는 news.json의 meta 아래 새 필드로만 추가한다 (요청서 STEP8-A 확인사항 H:
+    # 기존 meta/marketIntelligence/news 키는 전혀 건드리지 않아 Backward Compatible).
+    news_json["meta"]["brandSummary"] = brand_summary
+
     save_json_atomic(news_json, NEWS_PATH)
     log("\nnews.json: UPDATED")
 
     save_json_atomic(insights_json, INSIGHTS_PATH)
     log("insights.json: UPDATED")
+
+    # ---- STEP 8: History Snapshot 저장 + 30일 정리 (요청서 STEP8-8 1, 9번) ----
+    # 이번 실행 결과를 실행별 Snapshot 파일로 저장한다 (날짜 1개 파일이 아니라
+    # 2026-08-14_0930.json 형태). 저장 실패해도 news.json/insights.json은 이미
+    # 저장이 끝난 뒤라 전체 파이프라인에 영향이 없다.
+    snapshot = build_history_snapshot(analyzed_articles)
+    snapshot_path = save_history_snapshot(snapshot)
+    if snapshot_path:
+        log(f"\nHistory snapshot saved: {os.path.basename(snapshot_path)}")
+
+    deleted_count = cleanup_old_history()
+    if deleted_count:
+        log(f"History cleanup: removed {deleted_count} snapshot(s) older than {HISTORY_RETENTION_DAYS} days")
 
     log("\nAI API COST: $0")
     log("External AI API: NOT USED")

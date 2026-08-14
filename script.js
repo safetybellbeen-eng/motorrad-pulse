@@ -46,6 +46,7 @@ function loadNewsData() {
       renderHeader(data.meta);
       renderSignal(data.meta.todaySignal);
       renderTopNews(data.news || []);
+      renderBrandSummary(data.meta.brandSummary || {});
       renderMarketIntelligence(data.marketIntelligence || {});
       renderTeamBrief(data);
     })
@@ -287,6 +288,63 @@ function renderIntelColumn(containerId, items) {
         <strong>BMW MOTORRAD</strong>
         ${escapeHtml(item.bmwNote)}
       </p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+/* ---------- BRAND PULSE (STEP 8: 브랜드별 Intelligence Summary) ---------- */
+const BRAND_DISPLAY_NAMES = {
+  bmw: "BMW MOTORRAD",
+  ducati: "DUCATI",
+  triumph: "TRIUMPH",
+  harley: "HARLEY-DAVIDSON",
+  honda: "HONDA",
+  yamaha: "YAMAHA",
+};
+
+const SIGNAL_INDICATOR = {
+  RISING: { icon: "↑", label: "RISING", cls: "is-rising" },
+  NEW: { icon: "●", label: "NEW", cls: "is-new" },
+  CONTINUING: { icon: "→", label: "CONTINUING", cls: "is-continuing" },
+  NORMAL: { icon: "—", label: "NORMAL", cls: "" },
+  BASELINE: { icon: "—", label: "BASELINE", cls: "" },
+  NO_SIGNIFICANT_UPDATE: { icon: "—", label: "NO UPDATE", cls: "" },
+};
+
+function renderBrandSummary(brandSummary) {
+  const container = document.getElementById("brand-pulse-grid");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const brandOrder = ["bmw", "ducati", "triumph", "harley", "honda", "yamaha"];
+  const hasData = brandOrder.some((b) => brandSummary[b]);
+
+  if (!hasData) {
+    container.innerHTML = `<div class="empty-state">브랜드 요약 데이터가 없습니다.</div>`;
+    return;
+  }
+
+  brandOrder.forEach((brand) => {
+    const info = brandSummary[brand];
+    if (!info) return;
+
+    const card = document.createElement("div");
+    card.className = `brand-pulse-card${brand === "bmw" ? " is-own-brand" : ""}`;
+
+    const signal = SIGNAL_INDICATOR[info.signal] || SIGNAL_INDICATOR.NORMAL;
+    const isEmpty = info.newsCount === 0;
+    const themeText = [info.primaryTheme, info.secondaryTheme].filter(Boolean).join(" · ");
+
+    card.innerHTML = `
+      <div class="brand-pulse-card__name">${BRAND_DISPLAY_NAMES[brand] || brand.toUpperCase()}</div>
+      <div class="brand-pulse-card__count">${info.newsCount} NEWS</div>
+      ${isEmpty
+        ? `<div class="brand-pulse-card__empty">NO SIGNIFICANT UPDATE</div>`
+        : `
+          <div class="brand-pulse-card__topic" title="${escapeHtml(themeText)}">${escapeHtml(themeText || "-")}</div>
+          <div class="brand-pulse-card__signal ${signal.cls}">${signal.icon} ${signal.label}</div>
+        `}
     `;
     container.appendChild(card);
   });

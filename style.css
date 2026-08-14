@@ -652,6 +652,86 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 /* ---- Source Monitor ---- */
+/* ---- STEP 8: BRAND PULSE (Brand Intelligence Summary) ----
+   Black/Dark Gray/White/BMW Blue 중심 디자인 유지, RISING만 약간의 Accent (요청서 13번) */
+.brand-pulse{
+  margin-bottom: 24px;
+}
+.brand-pulse__label{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--bmw-blue-light);
+  margin-bottom: 12px;
+}
+.brand-pulse__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.brand-pulse-card{
+  background: var(--black);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.brand-pulse-card__name{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--white);
+}
+.brand-pulse-card__name.is-own::after{
+  content: " · OWN";
+  color: var(--grey-dim);
+  font-weight: 500;
+}
+.brand-pulse-card.is-own-brand .brand-pulse-card__name::after{
+  content: " · OWN";
+  color: var(--grey-dim);
+  font-weight: 500;
+}
+.brand-pulse-card__count{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--grey);
+}
+.brand-pulse-card__topic{
+  font-size: 11.5px;
+  color: var(--grey);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.brand-pulse-card__signal{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.5px;
+  color: var(--grey-dim);
+  margin-top: 2px;
+}
+.brand-pulse-card__signal.is-rising{
+  color: var(--bmw-blue-light);
+  font-weight: 700;
+}
+.brand-pulse-card__signal.is-new{
+  color: var(--white);
+  font-weight: 600;
+}
+.brand-pulse-card__empty{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.3px;
+  color: var(--grey-dim);
+  margin-top: 2px;
+}
+
 .filter-bar{
   display: flex;
   flex-wrap: wrap;
@@ -1013,6 +1093,20 @@ button{ font-family: inherit; cursor: pointer; }
   .intel-grid{ grid-template-columns: 1fr; }
   .intel-column{ display: none; }
   .intel-column.is-intel-active{ display: block; }
+
+  /* BRAND PULSE — Mobile Horizontal Scroll (요청서 12번: 세로로 쌓지 않음) */
+  .brand-pulse__grid{
+    display: flex;
+    grid-template-columns: unset;
+    gap: 1px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .brand-pulse__grid::-webkit-scrollbar{ display: none; }
+  .brand-pulse-card{
+    flex: 0 0 148px;
+  }
 
   /* SOURCE FILTER — Mobile Horizontal Scroll (STEP C 결정사항 6번) */
   .filter-bar{
