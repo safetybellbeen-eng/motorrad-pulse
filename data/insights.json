@@ -1,6 +1,6 @@
 {
   "date": "2026-08-15",
-  "lastAnalyzedAt": "2026-08-15T08:55:17.141746+09:00",
+  "lastAnalyzedAt": "2026-08-15T13:01:52.419109+09:00",
   "dailySignal": {
     "title": "신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -14,7 +14,7 @@
       "relatedNewsIds": [
         "52afb8722bcdb33b"
       ],
-      "impact": 4.5,
+      "impact": 4.0,
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     },
     {
@@ -27,21 +27,21 @@
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     },
     {
-      "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
-      "summary": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
-      "relatedNewsIds": [
-        "90a22df9362c5119"
-      ],
-      "impact": 2.0,
-      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-    },
-    {
       "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
       "summary": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
       "relatedNewsIds": [
         "6dd7b47942adca13"
       ],
       "impact": 2.0,
+      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+    },
+    {
+      "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
+      "summary": "가와사키가 2026년 8월 1일 슈퍼스포츠 모델 ‘Ninja ZX-4R’ 시리즈의 2027년형 모델을 일본에서 출시했다.이번 모델은 Ninja ZX-4R SE와 고성능 사양인 Ninja ZX-4RR로 구성되며, 신규 외장 색상과 기존 인기 색상을 조합해 선택의 폭을 넓혔다.",
+      "relatedNewsIds": [
+        "90a22df9362c5119"
+      ],
+      "impact": 1.5,
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     }
   ],
