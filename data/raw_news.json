@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-08-15T13:01:00.416212+09:00",
+  "lastCollectedAt": "2026-08-15T13:19:08.490421+09:00",
   "news": [
     {
       "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
@@ -17,7 +17,8 @@
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     },
     {
       "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
@@ -35,7 +36,8 @@
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     },
     {
       "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
@@ -44,16 +46,20 @@
       "sourceType": "media",
       "sourceGroup": "harley",
       "publishedAt": "2026-08-14T18:21:21+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
       "description": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개&nbsp;&nbsp;한국이륜차신문",
       "id": "765ca87cf0aa3123",
-      "collectedAt": "2026-08-15T13:01:00.416212+09:00",
+      "collectedAt": "2026-08-15T13:19:08.490421+09:00",
       "category": null,
       "summary": null,
       "importance": null,
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     },
     {
       "title": "KAWASAKI, 가볍고 민첩하고 빠르다! 2027년형 'Ninja ZX-4R' 일본 출시",
@@ -71,7 +77,8 @@
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     },
     {
       "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
@@ -89,7 +96,8 @@
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     },
     {
       "title": "KAWASAKI, 장거리 투어링 편의성 강화 'KLX150 XPL'",
@@ -107,7 +115,8 @@
       "whyItMatters": null,
       "bmwInsight": null,
       "isTopNews": false,
-      "aiProcessed": false
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
     }
   ]
 }
