@@ -52,7 +52,10 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          if git diff --quiet -- data/news.json data/insights.json; then
+          if git diff --quiet -- data/news.json data/insights.json && \
+             git status --porcelain -- data/history/ | grep -q .; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          elif git diff --quiet -- data/news.json data/insights.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No intelligence changes detected."
           else
@@ -64,6 +67,6 @@ jobs:
         run: |
           git config user.name "motorrad-pulse-bot"
           git config user.email "actions@github.com"
-          git add data/news.json data/insights.json
+          git add data/news.json data/insights.json data/history/
           git commit -m "auto: update MOTORRAD PULSE free intelligence"
           git push
