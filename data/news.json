@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-15",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "06:02 PM",
+    "date": "2026-08-16",
+    "dayLabel": "SUNDAY",
+    "lastUpdated": "06:58 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-15T18:02:59.992421+09:00",
+    "lastUpdatedISO": "2026-08-16T06:58:42.235904+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -166,7 +166,7 @@
       "publishedAt": "2026-08-14T18:21:21+09:00",
       "category": "PRODUCT_TECH",
       "summary": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
