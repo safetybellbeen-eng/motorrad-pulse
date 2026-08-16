@@ -1,0 +1,78 @@
+{
+  "savedAtISO": "2026-08-16T13:01:22.456610+09:00",
+  "articles": [
+    {
+      "id": "52afb8722bcdb33b",
+      "sourceGroup": "bmw",
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-08-14T09:16:54+09:00"
+    },
+    {
+      "id": "1f98505b78b536a4",
+      "sourceGroup": "ducati",
+      "source": "카가이",
+      "domain": "www.carguy.kr",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [
+        "CUSTOMER"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-12T09:04:43+09:00"
+    },
+    {
+      "id": "765ca87cf0aa3123",
+      "sourceGroup": "harley",
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-14T18:21:21+09:00"
+    },
+    {
+      "id": "90a22df9362c5119",
+      "sourceGroup": "kmnews",
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SPORT"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-13T11:22:46+09:00"
+    },
+    {
+      "id": "6dd7b47942adca13",
+      "sourceGroup": "kmnews",
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-08-13T11:12:17+09:00"
+    },
+    {
+      "id": "30301797db74c737",
+      "sourceGroup": "kmnews",
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "TOURING"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-12T11:27:45+09:00"
+    }
+  ]
+}

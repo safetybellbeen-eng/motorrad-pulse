@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-16",
     "dayLabel": "SUNDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-16T08:01:14.540948+09:00",
+    "lastUpdatedISO": "2026-08-16T13:01:22.455974+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -86,7 +86,7 @@
         "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
         "description": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
         "relatedNewsCount": 1,
-        "impact": "High",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
@@ -132,7 +132,7 @@
       "publishedAt": "2026-08-14T09:16:54+09:00",
       "category": "PRODUCT_TECH",
       "summary": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
-      "importance": 4.0,
+      "importance": 3.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
