@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-18",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "05:58 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-18T17:58:58.709478+09:00",
+    "lastUpdatedISO": "2026-08-18T18:01:28.077201+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
         "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460153KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EC%82%AC%EC%A0%84-%EC%98%88%EC%95%BD-%EC%8B%A4%EC%8B%9C",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "ADVENTURE": "NEW"
+          "ADVENTURE": "NEW",
+          "NEW_MODEL": "NEW"
         }
       },
       "ducati": {
@@ -63,9 +63,9 @@
         "topArticleUrl": "https://www.advpulse.com/adv-news/new-midsize-gs-spied-is-bmw-resurrecting-the-f650gs-dakar/",
         "signalDetails": {
           "CUSTOMER": "NEW",
-          "NEW_MODEL": "NEW",
+          "ELECTRIFICATION": "NEW",
           "ADVENTURE": "NEW",
-          "ELECTRIFICATION": "NEW"
+          "NEW_MODEL": "NEW"
         }
       },
       "yamaha": {
