@@ -86,6 +86,43 @@ def is_blocked_domain(url: str) -> bool:
     return any(domain in url_lower for domain in BLOCKED_DOMAINS)
 
 
+# STEP 10-KR: 해외 Direct Source(BMW Global/Yamaha Global/Visordown/ADV Pulse)는
+# enabled=False로 껐지만, 국내 검색 쿼리(kmnews/naver/google)가 "우연히" 이 해외
+# 공식/전문매체 도메인의 기사를 링크로 물어올 이론적 가능성이 남아있다(요청 사항 5번).
+# 자동 DROP은 하지 않고, 저장 직전 로그로만 관찰한다.
+#
+# www.press.bmwgroup.com은 주의가 필요하다 — BMW Korea(/korea/...)도 같은 도메인을
+# 쓰기 때문에, 도메인만으로 판단하면 정상적으로 활성화된 BMW Korea 기사까지 "해외"로
+# 잘못 표시된다. 그래서 이 도메인만 경로(path)까지 함께 확인해서 "/korea/"가 아닌
+# 경우에만(Global 등 다른 국가 섹션) 해외로 판정한다.
+_FOREIGN_ONLY_DOMAINS = {
+    "global.yamaha-motor.com",
+    "visordown.com", "www.visordown.com",
+    "advpulse.com", "www.advpulse.com",
+}
+_BMW_PRESSCLUB_DOMAINS = {"www.press.bmwgroup.com", "press.bmwgroup.com"}
+
+
+def is_foreign_direct_domain(url: str) -> bool:
+    """이 기사가 (국내 정책상 비활성화된) 해외 Direct Source와 같은 도메인에서 왔는지 판정.
+    KR-Only Monitor 로그 전용 — 수집 게이트에는 관여하지 않는다(요청 사항: 자동 DROP 금지)."""
+    try:
+        parts = urlsplit(url)
+        netloc = parts.netloc.lower()
+    except Exception:
+        return False
+
+    if netloc in _FOREIGN_ONLY_DOMAINS:
+        return True
+
+    if netloc in _BMW_PRESSCLUB_DOMAINS:
+        # BMW Korea Press(/korea/...)는 활성화된 정상 국내 소스이므로 제외하고,
+        # 그 외 경로(/global/... 등 다른 국가 섹션)만 해외로 판정한다.
+        return "/korea/" not in parts.path.lower()
+
+    return False
+
+
 # ==========================================================
 # Business Relevance Score — STEP 9 핵심: 이륜차 관련 기사라도
 # BMW Motorrad 마케팅/사업 관점에서 가치가 낮으면 우선순위를 낮추거나 제외한다.
@@ -404,6 +441,10 @@ SOURCES = [
         "url": "https://www.press.bmwgroup.com/global/rss/topic/6629",
         "keyword_filter": None,
         "method": "rss",
+        # STEP 10-KR: MOTORRAD PULSE는 "국내 시장 뉴스 대시보드"가 메인 목적이므로
+        # 메인 자동수집에서 비활성화한다. 코드는 삭제하지 않는다 — 향후 GLOBAL WATCH
+        # 기능에서 재사용할 수 있도록 SOURCES에 그대로 남겨두고 enabled만 끈다.
+        "enabled": False,
     },
 
     # ---- BMW Motorrad Korea Official Press RSS — STEP 10.2 ----
@@ -433,6 +474,8 @@ SOURCES = [
         "url": "https://global.yamaha-motor.com/rss/update.xml",
         "keyword_filter": None,
         "method": "rss",
+        # STEP 10-KR: 국내 전용 정책으로 메인 자동수집에서 비활성화 (GLOBAL WATCH용으로 코드 보존)
+        "enabled": False,
     },
 
     # ---- Visordown (영국 이륜차 전문매체) — Tier 2, sourceGroup은 신규 "global_media" ----
@@ -445,6 +488,9 @@ SOURCES = [
         "url": "https://www.visordown.com/rss",
         "keyword_filter": None,
         "method": "rss",
+        # STEP 10-KR: 국내 전용 정책으로 메인 자동수집에서 비활성화 (GLOBAL WATCH용으로 코드 보존).
+        # global_media sourceGroup 정의 자체(news_policy.py)는 그대로 유지한다.
+        "enabled": False,
     },
 
     # ---- ADV Pulse (북미 어드벤처 이륜차 전문매체) — Tier 2, sourceGroup "global_media" ----
@@ -455,6 +501,8 @@ SOURCES = [
         "url": "https://www.advpulse.com/feed/",
         "keyword_filter": None,
         "method": "rss",
+        # STEP 10-KR: 국내 전용 정책으로 메인 자동수집에서 비활성화 (GLOBAL WATCH용으로 코드 보존)
+        "enabled": False,
     },
 ]
 
@@ -1003,10 +1051,25 @@ def main():
     # 다른 숫자이므로 혼동하지 않도록 로그 라벨을 명확히 구분한다.
     direct_source_health: dict[str, dict] = {}
 
+    # STEP 10-KR: enabled=False로 꺼진 소스 목록(수집 실패와 절대 혼동되지 않도록
+    # 별도 리스트로 관리 — "시도했으나 실패"가 아니라 "애초에 시도하지 않음"이다).
+    disabled_sources: list[str] = []
+
     all_new_articles: list[dict] = []
 
     for src in SOURCES:
         label = src["sourceGroup"] or "(키워드 자동분류)"
+
+        # STEP 10-KR: MOTORRAD PULSE 메인 대시보드는 국내 시장 뉴스 전용 정책으로
+        # 전환한다. enabled=False인 소스는 collect_rss() 자체를 호출하지 않는다 —
+        # "수집 시도 후 실패"가 아니라 "애초에 수집 대상이 아님"이므로 failed_groups/
+        # warnings에도 넣지 않고, 별도의 [Disabled Direct Sources] 로그로만 표시한다.
+        # 코드는 삭제하지 않으므로 enabled를 다시 True로 바꾸면 즉시 원복된다(GLOBAL WATCH 후보).
+        if not src.get("enabled", True):
+            disabled_sources.append(src["source"])
+            log(f"\n[비활성화됨] {src['source']} ({label}) — 국내 전용 정책으로 메인 수집에서 제외 (DISABLED, 실패 아님)")
+            continue
+
         log(f"\n[수집 중] {src['source']} ({label}) — {src['url'][:80]}")
 
         articles, error, stage_stats = collect_rss(src)
@@ -1079,6 +1142,10 @@ def main():
 
     merged_news = merge_news(existing_news, collected_by_group, failed_groups)
 
+    # STEP 10-KR: KR-Only Monitor — 저장 직전, 해외 Direct Source와 같은 도메인의 기사가
+    # (우연히 국내 검색 쿼리를 통해) 섞여 들어왔는지 관찰한다. 자동 DROP하지 않고 로그만 남긴다.
+    foreign_domain_articles = [item for item in merged_news if is_foreign_direct_domain(item.get("url", ""))]
+
     result = {
         "lastCollectedAt": now_kst,
         "news": merged_news,
@@ -1096,6 +1163,30 @@ def main():
 
     log(f"\nDuplicates removed: {duplicates_removed_total}")
     log(f"Total saved: {len(merged_news)}")
+
+    # STEP 10-KR: 비활성화된 소스 목록 — 수집 실패(WARNING)와 절대 혼동되지 않도록 별도 블록.
+    log("\n" + "-" * 60)
+    log("[Disabled Direct Sources]")
+    log("-" * 60)
+    if disabled_sources:
+        for name in disabled_sources:
+            log(f"{name}: DISABLED")
+    else:
+        log("(없음)")
+
+    # STEP 10-KR: KR-Only Monitor — 해외 Direct Source와 같은 도메인의 기사가 국내 검색
+    # 쿼리를 통해 우연히 섞여 들어왔는지 관찰한다(자동 DROP 없음, 요청 사항 5번).
+    log("\n" + "-" * 60)
+    log("[KR-Only Monitor]")
+    log("-" * 60)
+    log(f"Foreign direct-domain articles saved: {len(foreign_domain_articles)}")
+    if foreign_domain_articles:
+        for item in foreign_domain_articles:
+            domain = urlsplit(item.get("url", "")).netloc
+            log(
+                f"  - title=\"{item.get('title', '')[:60]}\" "
+                f"source=\"{item.get('source', '')}\" domain={domain} sourceGroup={item.get('sourceGroup', '')}"
+            )
 
     # STEP 9: 품질 필터 단계별 결과 (요청서 34번)
     log("\n" + "-" * 60)
