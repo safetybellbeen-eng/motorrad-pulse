@@ -1,0 +1,100 @@
+{
+  "savedAtISO": "2026-08-19T07:01:12.527155+09:00",
+  "articles": [
+    {
+      "id": "007d286b1365ec01",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "BMW Motorrad Korea Press",
+      "domain": "www.press.bmwgroup.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
+      "importance": 5.0,
+      "publishedAt": "2026-08-18T13:53:18+09:00"
+    },
+    {
+      "id": "1f752ce940d7570d",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "SCOOTER"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-18T11:29:16+09:00"
+    },
+    {
+      "id": "1cd1930f3309e044",
+      "sourceGroup": "global_media",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "ADV Pulse",
+      "domain": "www.advpulse.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 5.0,
+      "publishedAt": "2026-08-18T04:17:52+09:00"
+    },
+    {
+      "id": "df26be9b79e247d4",
+      "sourceGroup": "global_media",
+      "brandGroups": [],
+      "source": "Visordown",
+      "domain": "www.visordown.com",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-18T00:10:11+09:00"
+    },
+    {
+      "id": "4dca35476c3e7874",
+      "sourceGroup": "global_media",
+      "brandGroups": [],
+      "source": "Visordown",
+      "domain": "www.visordown.com",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-17T20:00:34+09:00"
+    },
+    {
+      "id": "c3df98a3c87b9d6c",
+      "sourceGroup": "global_media",
+      "brandGroups": [],
+      "source": "Visordown",
+      "domain": "www.visordown.com",
+      "category": "COMPETITOR",
+      "signalThemes": [
+        "SPORT"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-17T19:32:09+09:00"
+    },
+    {
+      "id": "f9c2c00d08c1cca6",
+      "sourceGroup": "global_media",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "Visordown",
+      "domain": "www.visordown.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ELECTRIFICATION",
+        "CUSTOMER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-17T18:30:07+09:00"
+    }
+  ]
+}

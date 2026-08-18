@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-18",
-  "lastAnalyzedAt": "2026-08-18T18:01:28.077283+09:00",
+  "date": "2026-08-19",
+  "lastAnalyzedAt": "2026-08-19T07:01:12.526119+09:00",
   "dailySignal": {
     "title": "Adventure 및 신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -18,15 +18,6 @@
   ],
   "competitor": [
     {
-      "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
-      "summary": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
-      "relatedNewsIds": [
-        "c3df98a3c87b9d6c"
-      ],
-      "impact": 2.0,
-      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-    },
-    {
       "title": "Bristol dealership to celebrate 100-year anniversary with Suzuki GSX-8S giveaway",
       "summary": "Bristol-based dealership Fowlers Motorcycles is set to host a 100-year anniversary celebration next month, which includes a prize draw offering a brand-new Suzuki GSX-8S.",
       "relatedNewsIds": [
@@ -34,6 +25,15 @@
       ],
       "impact": 1.5,
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+    },
+    {
+      "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
+      "summary": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
+      "relatedNewsIds": [
+        "c3df98a3c87b9d6c"
+      ],
+      "impact": 1.5,
+      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
     }
   ],
   "productTech": [
@@ -41,7 +41,7 @@
       "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
       "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 오는 8월 18일 오후 2시부터 9월 7일까지 BMW 모토라드 샵 온라인(https://shop.bmw-motorrad.co.kr)에서 새로운 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’의 사전 예약을 진행한다.",
       "relatedNewsIds": [
-        "f901338e148b2ac4"
+        "007d286b1365ec01"
       ],
       "impact": 5.0,
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
@@ -61,7 +61,7 @@
       "relatedNewsIds": [
         "f9c2c00d08c1cca6"
       ],
-      "impact": 3.0,
+      "impact": 2.5,
       "bmwView": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
     },
     {
@@ -70,7 +70,7 @@
       "relatedNewsIds": [
         "1f752ce940d7570d"
       ],
-      "impact": 2.0,
+      "impact": 1.5,
       "bmwView": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
     }
   ],

@@ -1,23 +1,23 @@
 {
   "meta": {
-    "date": "2026-08-18",
-    "dayLabel": "TUESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-08-19",
+    "dayLabel": "WEDNESDAY",
+    "lastUpdated": "07:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-18T18:01:28.077201+09:00",
+    "lastUpdatedISO": "2026-08-19T07:01:12.526037+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 3,
         "primaryTheme": "ADVENTURE",
         "secondaryTheme": "NEW_MODEL",
         "signal": "NEW",
         "activity": "HIGH",
         "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
-        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460153KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EC%82%AC%EC%A0%84-%EC%98%88%EC%95%BD-%EC%8B%A4%EC%8B%9C",
+        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460153KO?language=ko",
         "signalDetails": {
           "ADVENTURE": "NEW",
           "NEW_MODEL": "NEW"
@@ -54,18 +54,16 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
-        "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": "ADVENTURE",
+        "newsCount": 1,
+        "primaryTheme": "ELECTRIFICATION",
+        "secondaryTheme": "CUSTOMER",
         "signal": "NEW",
         "activity": "HIGH",
-        "topArticleTitle": "New Midsize GS Spied: Is BMW Resurrecting The F650GS Dakar?",
-        "topArticleUrl": "https://www.advpulse.com/adv-news/new-midsize-gs-spied-is-bmw-resurrecting-the-f650gs-dakar/",
+        "topArticleTitle": "Honda Australia’s new WN7 subscription could point to the future of motorcycle ownership",
+        "topArticleUrl": "https://www.visordown.com/news/honda-australias-new-wn7-subscription-could-point-future-motorcycle-ownership",
         "signalDetails": {
-          "CUSTOMER": "NEW",
           "ELECTRIFICATION": "NEW",
-          "ADVENTURE": "NEW",
-          "NEW_MODEL": "NEW"
+          "CUSTOMER": "NEW"
         }
       },
       "yamaha": {
@@ -92,18 +90,18 @@
     ],
     "competitor": [
       {
-        "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
-        "description": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
         "title": "Bristol dealership to celebrate 100-year anniversary with Suzuki GSX-8S giveaway",
         "description": "Bristol-based dealership Fowlers Motorcycles is set to host a 100-year anniversary celebration next month, which includes a prize draw offering a brand-new Suzuki GSX-8S.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
+        "description": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
@@ -140,10 +138,10 @@
   },
   "news": [
     {
-      "id": "f901338e148b2ac4",
+      "id": "007d286b1365ec01",
       "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
-      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460153KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EC%82%AC%EC%A0%84-%EC%98%88%EC%95%BD-%EC%8B%A4%EC%8B%9C",
-      "source": "BMW Group",
+      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460153KO?language=ko",
+      "source": "BMW Motorrad Korea Press",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
@@ -157,7 +155,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "1f752ce940d7570d",
@@ -170,7 +168,7 @@
       "publishedAt": "2026-08-18T11:29:16+09:00",
       "category": "PRODUCT_TECH",
       "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
       "isTopNews": true,
@@ -185,8 +183,7 @@
       "sourceType": "media",
       "sourceGroup": "global_media",
       "brandGroups": [
-        "bmw",
-        "honda"
+        "bmw"
       ],
       "publishedAt": "2026-08-18T04:17:52+09:00",
       "category": "PRODUCT_TECH",
@@ -195,7 +192,7 @@
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "others",
+      "topNewsGroup": "own",
       "rank": 1
     },
     {
@@ -243,11 +240,12 @@
       "publishedAt": "2026-08-17T19:32:09+09:00",
       "category": "COMPETITOR",
       "summary": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
     },
     {
       "id": "f9c2c00d08c1cca6",
@@ -262,12 +260,12 @@
       "publishedAt": "2026-08-17T18:30:07+09:00",
       "category": "PRODUCT_TECH",
       "summary": "Could subscribing to an electric motorcycle reduce the risk of depreciation? And could subscription ownership eventually replace buying bikes?",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 1
     }
   ]
 }
