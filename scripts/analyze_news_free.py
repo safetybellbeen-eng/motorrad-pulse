@@ -28,6 +28,17 @@ from difflib import SequenceMatcher
 
 import requests
 
+# STEP 9.3: Trusted Domain, Motorcycle Context, Brand Attribution 정책은
+# collect_news.py와 공통으로 쓰는 단일 모듈(news_policy.py)에서 가져온다.
+# news_policy.py는 이 파일이나 collect_news.py를 import하지 않는 단방향 구조다.
+from news_policy import (
+    TRUSTED_DOMAINS,
+    is_trusted_domain,
+    has_motorcycle_context,
+    SOURCE_GROUP_LABELS,
+    detect_brand_groups,
+)
+
 # ==========================================================
 # 설정
 # ==========================================================
@@ -50,163 +61,6 @@ TOP_NEWS_TITLE_SIMILARITY_THRESHOLD = 0.75  # 요청서 23번: 유사 제목 중
 
 VALID_CATEGORIES = {"MARKET", "COMPETITOR", "PRODUCT_TECH", "CUSTOMER_TREND"}
 
-SOURCE_GROUP_LABELS = {
-    "bmw": "BMW",
-    "ducati": "Ducati",
-    "triumph": "Triumph",
-    "harley": "Harley-Davidson",
-    "honda": "Honda",
-    "yamaha": "Yamaha",
-    "naver": "Naver",
-    "google": "Google",
-    "kmnews": "KMNEWS",
-}
-
-# 이중 안전장치: collect_news.py가 수집 단계에서 신뢰 화이트리스트로 이미 걸러내지만,
-# 혹시 raw_news.json에 어떤 이유로든 미확인 도메인 데이터가 남아있을 경우를 대비해
-# 분석 단계에서도 한 번 더 화이트리스트로 검증한다. (블랙리스트 방식은 .com/.net을
-# 무조건 통과시켜 fortunebusinessinsights.com 같은 해외 사이트가 새어 들어왔던 전례가 있어
-# 화이트리스트로 완전히 전환했다 — collect_news.py의 TRUSTED_DOMAINS와 반드시 동일하게 유지)
-TRUSTED_DOMAINS = {
-    "kmnews.net", "www.kmnews.net",
-    "mbzine.com", "www.mbzine.com",
-    "hankyung.com", "www.hankyung.com",
-    "carguy.kr", "www.carguy.kr",
-    "dailycar.co.kr", "www.dailycar.co.kr",
-    "ebn.co.kr", "www.ebn.co.kr",
-    "edaily.co.kr", "www.edaily.co.kr",
-    "news1.kr", "www.news1.kr",
-    "yna.co.kr", "www.yna.co.kr",
-    "newsis.com", "www.newsis.com",
-    "mk.co.kr", "www.mk.co.kr",
-    "asiae.co.kr", "www.asiae.co.kr",
-    "fnnews.com", "www.fnnews.com",
-    "etnews.com", "www.etnews.com",
-    "sedaily.com", "www.sedaily.com",
-    "heraldcorp.com", "www.heraldcorp.com",
-    "khan.co.kr", "www.khan.co.kr",
-    "hani.co.kr", "www.hani.co.kr",
-    "donga.com", "www.donga.com",
-    "chosun.com", "www.chosun.com",
-    "joongang.co.kr", "www.joongang.co.kr",
-    "seoul.co.kr", "www.seoul.co.kr",
-    "kmib.co.kr", "www.kmib.co.kr",
-}
-
-
-def is_trusted_domain(url: str) -> bool:
-    try:
-        from urllib.parse import urlsplit
-        netloc = urlsplit(url).netloc.lower()
-    except Exception:
-        return False
-    return netloc in TRUSTED_DOMAINS
-
-
-# 이중 안전장치: collect_news.py가 이미 모터사이클 문맥을 검증하지만,
-# 혹시 raw_news.json에 자동차/전기차 등 무관한 기사가 남아있을 경우를 대비해
-# 분석 단계에서도 한 번 더 검증한다 (collect_news.py의 목록과 반드시 동일하게 유지).
-_MOTORCYCLE_CONTEXT_KEYWORDS = [
-    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike", "라이더", "라이딩",
-    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "cb400", "nc750", "rebel",
-    "mt-", "tenere", "r1", "r7", "tracer", "야마하코리아", "혼다코리아",
-    "두카티", "ducati", "트라이엄프", "triumph", "할리데이비슨", "harley",
-    "bmw 모토라드", "모토라드", "motorrad", "카와사키", "kawasaki", "ninja",
-    "스쿠터", "scooter", "헬멧", "바이커", "투어링", "어드벤처 바이크",
-]
-_AUTOMOTIVE_ONLY_KEYWORDS = [
-    "폴스타", "polestar", "테슬라", "tesla", "현대차", "기아", "제네시스",
-    "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
-]
-_INCIDENT_ONLY_KEYWORDS = [
-    "사고", "사망", "숨져", "숨진", "부상", "중상", "치사", "치상",
-    "음주운전", "무면허", "뺑소니", "도주", "체포", "검거", "구속", "입건",
-    "단속", "적발", "위반", "범칙금", "과태료", "절도", "훔쳐", "절취",
-    "폭행", "사기", "고소", "고발", "재판", "실형", "징역", "벌금형",
-]
-
-
-# STEP 9.1 AUDIT: collect_news.py의 has_motorcycle_context()는 title+summary+brand_group
-# 3개 인자를 받는데, 이 파일의 버전은 title만 받아 정책이 어긋나 있었다(Policy Drift).
-# collect 단계에서 이미 걸러진 데이터를 다시 한번 검증하는 "이중 안전장치"이므로 완전히
-# 동일하게 동작하도록 시그니처와 로직을 맞춘다(요청서: analyze/collect 정책 Drift 확인).
-_BRAND_SPECIFIC_CONTEXT_KEYWORDS = {
-    "honda": [
-        "motorcycle", "motorbike", "bike", "cb", "cbr", "africa twin", "gold wing",
-        "rebel", "forza", "pcx", "adv", "super cub", "two-wheeler", "scooter",
-        "이륜차", "오토바이", "모터사이클", "스쿠터",
-    ],
-    "yamaha": [
-        "motorcycle", "motorbike", "bike", "mt", "yzf", "xsr", "tracer", "tenere",
-        "ténéré", "nmax", "xmax", "scooter", "two-wheeler",
-        "이륜차", "오토바이", "모터사이클", "스쿠터",
-    ],
-}
-
-
-def has_motorcycle_context(title: str, summary: str = "", brand_group: str | None = None) -> bool:
-    text = f"{title or ''} {summary or ''}".lower()
-    has_bike = any(kw.lower() in text for kw in _MOTORCYCLE_CONTEXT_KEYWORDS)
-    has_auto_only = any(kw.lower() in text for kw in _AUTOMOTIVE_ONLY_KEYWORDS)
-    has_incident = any(kw.lower() in text for kw in _INCIDENT_ONLY_KEYWORDS)
-    if has_auto_only and not has_bike:
-        return False
-    if has_incident:
-        return False
-    if not has_bike:
-        return False
-    brand_keywords = _BRAND_SPECIFIC_CONTEXT_KEYWORDS.get(brand_group)
-    if brand_keywords and not any(kw.lower() in text for kw in brand_keywords):
-        return False
-    return True
-
-
-# ==========================================================
-# STEP 9.2: brandGroups Fallback — collect_news.py의 detect_brand_groups()와
-# "완전히 동일한 로직"을 이 파일에도 둔다(요청 사항 1번).
-# ==========================================================
-# 정상 경로에서는 collect_news.py가 raw_news.json에 brandGroups를 이미 채워 넣으므로
-# 이 함수는 절대 호출되지 않는다. brandGroups가 없거나 빈 배열인 legacy 데이터(STEP 9.1
-# 이전 raw_news.json, 수동 테스트 데이터 등)를 만났을 때만 즉석으로 계산하는 안전장치다.
-#
-# 주의: 이 목록/로직은 collect_news.py의 BRAND_NAME_KEYWORDS/detect_brand_groups()와
-# "값이 반드시 동일해야" 한다 — 두 파일에 같은 로직이 복제되어 있어 Drift 위험이 있다는
-# 것을 알고 있고, 이번 STEP에서는 공통 모듈(policy.py 등)로 합치지 않기로 했다(요청 사항
-# 1번: "이번 STEP에서는 공통 모듈 리팩터링까지 하지 않되"). 대신 두 함수가 항상 동일한
-# 결과를 내는지 자동 테스트(test_step9_2.py의 Test 17)로 검증하고, 이 테스트가 앞으로
-# STEP 9.3 이후 공통 모듈 분리가 필요한지 판단하는 근거로 남는다.
-_BRAND_NAME_KEYWORDS = {
-    "bmw": ["bmw", "비엠더블유", "모토라드", "motorrad"],
-    "ducati": ["ducati", "두카티"],
-    "triumph": ["triumph", "트라이엄프"],
-    "harley": ["harley-davidson", "harley davidson", "harley", "할리데이비슨", "할리 데이비슨"],
-    "honda": ["honda", "혼다"],
-    "yamaha": ["yamaha", "야마하"],
-}
-
-
-def _fallback_detect_brand_groups(title: str, summary: str) -> list[str]:
-    """collect_news.py의 detect_brand_groups()와 동일한 로직(요청 사항 1번: 결과가 100%
-    동일해야 함). brandGroups가 없는 legacy 데이터에 한해서만 호출된다."""
-    text = f"{title} {summary}".lower()
-    general_context_ok = has_motorcycle_context(title, summary, None)
-
-    detected: list[str] = []
-    for brand, names in _BRAND_NAME_KEYWORDS.items():
-        if not any(name in text for name in names):
-            continue
-
-        brand_specific_kws = _BRAND_SPECIFIC_CONTEXT_KEYWORDS.get(brand)
-        if brand_specific_kws:
-            if not any(kw.lower() in text for kw in brand_specific_kws):
-                continue
-        else:
-            if not general_context_ok:
-                continue
-
-        detected.append(brand)
-
-    return detected
 
 
 def log(msg: str):
@@ -769,12 +623,14 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
         bmw_insight = build_watch_point(matched_keywords, category, title)
         topic_signals = compute_topic_signals(title, description)
 
-        # STEP 9.2: brandGroups는 정상적으로는 collect_news.py가 이미 채워서 넘겨준다.
+        # brandGroups는 정상적으로는 collect_news.py가 이미 채워서 넘겨준다.
         # 없거나 빈 배열인 경우(legacy 데이터)에 한해서만 즉석으로 계산한다 — collect가
         # 채운 값이 있으면 절대 덮어쓰지 않는다(Source of Truth는 collect_news.py).
+        # STEP 9.3: 이 fallback 계산도 news_policy.py의 공통 detect_brand_groups()를
+        # 그대로 쓴다 — 더 이상 이 파일에 복제된 별도 함수가 없다.
         brand_groups = article.get("brandGroups")
         if not brand_groups:
-            brand_groups = _fallback_detect_brand_groups(title, description)
+            brand_groups = detect_brand_groups(title, description)
 
         analyzed.append({
             # ---- 원본 필드 그대로 (요청서 1번) ----

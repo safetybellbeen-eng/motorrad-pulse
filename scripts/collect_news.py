@@ -27,6 +27,20 @@ import feedparser
 import requests
 from dateutil import parser as dateutil_parser
 
+# STEP 9.3: Trusted Domain/Source Tier, Motorcycle Context, Brand Attribution 정책은
+# analyze_news_free.py와 공통으로 쓰는 단일 모듈(news_policy.py)에서 가져온다.
+# news_policy.py는 collect_news.py/analyze_news_free.py 어느 쪽도 import하지 않는
+# 단방향 구조라 순환 import가 발생하지 않는다.
+from news_policy import (
+    TRUSTED_DOMAINS,
+    get_source_tier,
+    get_source_quality_score,
+    is_trusted_domain,
+    has_motorcycle_context,
+    SOURCE_GROUP_LABELS,
+    detect_brand_groups,
+)
+
 # ==========================================================
 # 설정
 # ==========================================================
@@ -37,100 +51,18 @@ RAW_NEWS_PATH = os.path.join(DATA_DIR, "raw_news.json")
 
 MAX_PER_GROUP = 5
 LOOKBACK_HOURS = 48
+
+# STEP 9.1: 수집 실패 그룹(해당 소스에 일시적으로 접근하지 못한 경우)에 대한 안전장치.
+# 정상 수집이 성공한 그룹은 신규/기존 관계없이 항상 LOOKBACK_HOURS(48h) 기준을 그대로 적용하고,
+# "수집 자체가 실패한" 그룹에 한해서만 최대 RETENTION_HOURS(72h)까지 기존 데이터를 살려둔다
+# (그사이 다음 정상 수집이 성공하면 다시 48h 기준으로 걸러진다). 72h를 넘긴 기사는 실패 그룹이라도
+# "현재 뉴스"로 유지하지 않는다 — 즉 정상 상태에서 48~72시간짜리 기사가 화면에 남는 일은 없다.
+RETENTION_HOURS = 72
 REQUEST_TIMEOUT = 15
 USER_AGENT = "MotorradPulseNewsCollector/1.0 (+https://github.com/)"
 
 # 추적 파라미터 (요청서 14번)
 TRACKING_PARAMS = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "gclid", "oc"}
-
-# ==========================================================
-# 신뢰 국내 매체 화이트리스트 (Allowlist) — STEP 9: Source Tier 구조 도입
-# ==========================================================
-# 이전 버전은 "알려진 외국 도메인을 차단"하는 블랙리스트 방식이었는데,
-# .com/.net 도메인은 무조건 통과시키는 구멍이 있어 실제로
-# fortunebusinessinsights.com(미국 시장조사 업체), vietnam.vn 등이 계속 새어 들어왔다.
-# 새로운 외국 사이트가 나올 때마다 목록을 추가해야 하는 블랙리스트는 구조적으로
-# 뚫릴 수밖에 없으므로, 반대로 "이 목록에 있는 도메인만 허용한다"는
-# 화이트리스트 방식으로 바꾼다. 목록에 없는 도메인은 국내든 해외든 기본적으로 차단된다.
-#
-# STEP 9: 도메인을 "허용/차단"만 하지 않고 내부적으로 신뢰도 Tier를 부여한다
-# (JSON Schema나 화면에는 영향 없음 — 내부 로깅/정렬용). AUDIT 결과 실제로 검증된
-# 공식 브랜드 프레스룸 도메인이 아직 없어 Tier 1은 비워둔다(없는 RSS를 지어내지 않음).
-SOURCE_TIERS = {
-    # Tier 1 — Official/Primary. 실제 접근 가능한 공식 소스가 확인되면 여기에만 추가한다.
-    "official": set(),
-
-    # Tier 2 — Trusted Motorcycle/Automotive Media (국내 이륜차·자동차 전문지)
-    "motorcycle_media": {
-        "kmnews.net", "www.kmnews.net",
-        "mbzine.com", "www.mbzine.com",
-        "carguy.kr", "www.carguy.kr",
-        "dailycar.co.kr", "www.dailycar.co.kr",
-    },
-
-    # Tier 3 — Trusted Business/General Media (국내 경제/종합지)
-    "business_media": {
-        "hankyung.com", "www.hankyung.com",
-        "ebn.co.kr", "www.ebn.co.kr",
-        "edaily.co.kr", "www.edaily.co.kr",
-        "news1.kr", "www.news1.kr",
-        "yna.co.kr", "www.yna.co.kr",
-        "newsis.com", "www.newsis.com",
-        "mk.co.kr", "www.mk.co.kr",
-        "asiae.co.kr", "www.asiae.co.kr",
-        "fnnews.com", "www.fnnews.com",
-        "etnews.com", "www.etnews.com",
-        "sedaily.com", "www.sedaily.com",
-        "heraldcorp.com", "www.heraldcorp.com",
-        "khan.co.kr", "www.khan.co.kr",
-        "hani.co.kr", "www.hani.co.kr",
-        "donga.com", "www.donga.com",
-        "chosun.com", "www.chosun.com",
-        "joongang.co.kr", "www.joongang.co.kr",
-        "seoul.co.kr", "www.seoul.co.kr",
-        "kmib.co.kr", "www.kmib.co.kr",
-    },
-}
-
-# Tier별 내부 점수 (정렬/대표기사 선택/로깅용)
-SOURCE_TIER_SCORES = {"official": 100, "motorcycle_media": 90, "business_media": 75}
-
-# 기존 코드 호환을 위해 TRUSTED_DOMAINS는 SOURCE_TIERS에서 자동 파생한다.
-# (이전에는 이 집합을 직접 나열했는데, analyze_news_free.py에도 동일한 목록을
-# 별도로 선언해야 해서 "반드시 동일하게 유지"라는 주석에만 의존해 두 파일이 수동으로
-# 어긋날 위험이 있었다. 실제 도메인 구성은 바꾸지 않았으므로 analyze_news_free.py의
-# 기존 TRUSTED_DOMAINS와는 여전히 동일한 집합이다.)
-TRUSTED_DOMAINS = set().union(*SOURCE_TIERS.values())
-
-
-def get_source_tier(url: str) -> str | None:
-    """최종 원문 URL의 도메인이 속한 Tier 이름을 반환. 화이트리스트 밖이면 None."""
-    try:
-        netloc = urlsplit(url).netloc.lower()
-    except Exception:
-        return None
-    for tier_name, domains in SOURCE_TIERS.items():
-        if netloc in domains:
-            return tier_name
-    return None
-
-
-def get_source_quality_score(url: str) -> int:
-    """Tier 기반 내부 점수(대표기사 선택/정렬용). 화이트리스트 밖이면 0."""
-    return SOURCE_TIER_SCORES.get(get_source_tier(url), 0)
-
-
-def is_trusted_domain(url: str) -> bool:
-    """최종 원문 URL의 도메인이 신뢰 화이트리스트에 있는지 확인한다.
-    목록에 없으면 국내 사이트로 보이더라도 기본적으로 차단한다
-    (요청서 원칙: 신뢰할 수 있는 뉴스가 부족하면 빈 자리를 허용한다,
-    낮은 품질/미확인 Source로 억지로 채우지 않는다)."""
-    try:
-        netloc = urlsplit(url).netloc.lower()
-    except Exception:
-        return False
-    return netloc in TRUSTED_DOMAINS
-
 
 # ==========================================================
 # Source Quality Policy — 신뢰도 낮은 출처 차단 (Allowlist/Blocklist)
@@ -152,87 +84,6 @@ def is_blocked_domain(url: str) -> bool:
     Aggregator(Google 검색 등) 자체가 아니라 실제 기사가 걸린 최종 도메인 기준으로 판단한다."""
     url_lower = url.lower()
     return any(domain in url_lower for domain in BLOCKED_DOMAINS)
-
-
-# kmnews(한국이륜차신문 등), naver, google 검색 결과에는 이륜차 전문지라도
-# 자동차/전기차 기사가 섞여 나오는 경우가 있다 (예: 카가이는 자동차 종합 매체).
-# 그래서 sourceGroup과 무관하게 모든 수집 기사에 대해 실제로 이륜차/오토바이
-# 관련 기사인지 검증한다 (아래 collect_rss에서 has_motorcycle_context를 전수 적용).
-
-MOTORCYCLE_CONTEXT_KEYWORDS = [
-    "모터사이클", "오토바이", "이륜차", "motorcycle", "motorbike", "bike", "라이더", "라이딩",
-    "cbr", "africa twin", "gold wing", "cb1000", "cb750", "cb400", "nc750", "rebel",
-    "mt-", "tenere", "r1", "r7", "tracer", "야마하코리아", "혼다코리아",
-    "두카티", "ducati", "트라이엄프", "triumph", "할리데이비슨", "harley",
-    "bmw 모토라드", "모토라드", "motorrad", "카와사키", "kawasaki", "ninja",
-    "스쿠터", "scooter", "헬멧", "바이커", "투어링", "어드벤처 바이크",
-]
-
-# 자동차/전기차 전용으로 명백히 판단되는 키워드 — 이 키워드가 있으면서
-# 위의 이륜차 키워드가 함께 없으면 자동차 뉴스로 간주해 제외한다.
-AUTOMOTIVE_ONLY_KEYWORDS = [
-    "폴스타", "polestar", "테슬라", "tesla", "현대차", "기아", "제네시스",
-    "sedan", "세단", "suv", "전기차 보조금", "자율주행", "자동차보험", "완성차",
-]
-
-# MOTORRAD PULSE는 BMW Motorrad 브랜드 마케터를 위한 업무용 Market Intelligence
-# Dashboard다. 이륜차 키워드가 있어도 교통사고/범죄/단속처럼 마케팅 업무와
-# 무관한 사회면 사건사고 기사는 제외한다 (예: "헬멧 없이 오토바이 몰던 10대... 사고 사망").
-INCIDENT_ONLY_KEYWORDS = [
-    "사고", "사망", "숨져", "숨진", "부상", "중상", "치사", "치상",
-    "음주운전", "무면허", "뺑소니", "도주", "체포", "검거", "구속", "입건",
-    "단속", "적발", "위반", "범칙금", "과태료", "절도", "훔쳐", "절취",
-    "폭행", "사기", "고소", "고발", "재판", "실형", "징역", "벌금형",
-]
-
-# STEP 9 AUDIT 결과: Honda/Yamaha는 이륜차 외 사업(자동차/로봇/항공/발전기,
-# 악기/음향기기/선박엔진 등)이 커서 브랜드명만으로는 오탐 위험이 구조적으로 높다.
-# (실제로 "베트남에서 판매된 혼다 오토바이... 리콜"처럼 이미 이륜차 키워드가
-# 있는 경우는 위 MOTORCYCLE_CONTEXT_KEYWORDS로 잡히지만, 브랜드명만 있고
-# 이륜차 서브키워드가 전혀 없는 자동차/악기 기사가 브랜드 검색 쿼리를 통해
-# 들어오는 경우를 대비해 브랜드 전용 서브키워드를 별도로 둔다.)
-BRAND_SPECIFIC_CONTEXT_KEYWORDS = {
-    "honda": [
-        "motorcycle", "motorbike", "bike", "cb", "cbr", "africa twin", "gold wing",
-        "rebel", "forza", "pcx", "adv", "super cub", "two-wheeler", "scooter",
-        "이륜차", "오토바이", "모터사이클", "스쿠터",
-    ],
-    "yamaha": [
-        "motorcycle", "motorbike", "bike", "mt", "yzf", "xsr", "tracer", "tenere",
-        "ténéré", "nmax", "xmax", "scooter", "two-wheeler",
-        "이륜차", "오토바이", "모터사이클", "스쿠터",
-    ],
-}
-
-
-def has_motorcycle_context(title: str, summary: str, brand_group: str | None = None) -> bool:
-    """이륜차 관련 키워드가 있으면 True.
-    단, 아래 경우는 예외적으로 False로 판단한다.
-    1) 자동차 전용 키워드만 있고 이륜차 키워드가 없는 경우 (순수 자동차 기사)
-    2) 사건사고/범죄/단속 키워드가 있는 경우 (마케팅 인텔리전스와 무관한 사회면 뉴스)
-    3) (STEP 9) brand_group이 honda/yamaha인데 브랜드 전용 이륜차 서브키워드가
-       전혀 없는 경우 — 두 브랜드는 자동차/로봇/항공/악기/선박 등 이륜차 외 사업이
-       커서, 전역 키워드만으로는 다른 사업 뉴스가 섞여 들어올 위험이 있기 때문이다."""
-    text = f"{title} {summary}".lower()
-
-    has_bike_keyword = any(kw.lower() in text for kw in MOTORCYCLE_CONTEXT_KEYWORDS)
-    has_auto_only_keyword = any(kw.lower() in text for kw in AUTOMOTIVE_ONLY_KEYWORDS)
-    has_incident_keyword = any(kw.lower() in text for kw in INCIDENT_ONLY_KEYWORDS)
-
-    if has_auto_only_keyword and not has_bike_keyword:
-        return False
-
-    if has_incident_keyword:
-        return False
-
-    if not has_bike_keyword:
-        return False
-
-    brand_keywords = BRAND_SPECIFIC_CONTEXT_KEYWORDS.get(brand_group)
-    if brand_keywords and not any(kw.lower() in text for kw in brand_keywords):
-        return False
-
-    return True
 
 
 # ==========================================================
@@ -424,18 +275,6 @@ def extract_source_name_from_title(title: str, fallback: str) -> tuple[str, str]
     return title, fallback
 
 
-# sourceGroup 표시명 (요청서 4번 — 기존 UI와 동일하게 유지)
-SOURCE_GROUP_LABELS = {
-    "bmw": "BMW",
-    "ducati": "Ducati",
-    "triumph": "Triumph",
-    "harley": "Harley-Davidson",
-    "honda": "Honda",
-    "yamaha": "Yamaha",
-    "naver": "Naver",
-    "google": "Google",
-    "kmnews": "KMNEWS",
-}
 
 # 브랜드 키워드 분류용 (naver/google 혼합 검색 결과에서 브랜드 그룹 판별용)
 BRAND_KEYWORDS = {
@@ -763,6 +602,7 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
                 "sourceTier": get_source_tier(clean_url),
                 "sourceQualityScore": get_source_quality_score(clean_url),
                 "businessRelevanceScore": relevance_score,
+                "brandGroups": detect_brand_groups(clean_title, summary),
                 "summary_raw": summary[:300],  # 중복판단 참고용, 최종 저장 시 제거
             })
 
@@ -927,7 +767,16 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
 
     단, 기존 데이터도 현재 필터 정책(외국 매체 차단, 저품질 도메인 차단)으로 다시 검증한다.
     필터 정책이 나중에 추가/강화된 경우, 예전에 필터 적용 전에 저장된 위반 데이터가
-    "기존 데이터 보존" 로직 때문에 계속 화면에 남아있는 문제가 있었기 때문이다."""
+    "기존 데이터 보존" 로직 때문에 계속 화면에 남아있는 문제가 있었기 때문이다.
+
+    STEP 9.1: 신선도(Freshness) 정책을 성공/실패 그룹에 다르게 적용한다.
+    - 정상 수집 성공 그룹: 기존 기사든 신규 기사든 예외 없이 LOOKBACK_HOURS(48h) 기준을 적용한다.
+      (신규 기사는 collect_rss 단계에서 이미 48h로 걸러져 있고, 여기서는 살아남는 기존 기사에
+      동일 기준을 다시 적용한다.)
+    - 수집 실패 그룹: "그 소스에 일시적으로 접근하지 못했다"는 이유만으로 화면이 비어버리는
+      것을 막기 위한 안전장치이므로, 최대 RETENTION_HOURS(72h)까지는 기존 데이터를 유지한다.
+      72h를 넘긴 기사는 실패 그룹이라도 더 이상 "현재 뉴스"로 유지하지 않는다.
+    즉 정상 상태(성공 그룹)에서는 48~72시간짜리 기사가 남는 경우가 없다."""
 
     def passes_current_policy(item: dict) -> bool:
         url = item.get("url", "")
@@ -949,6 +798,10 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
     for item in existing_news:
         if not passes_current_policy(item):
             continue
+        # STEP 9.1: brandGroups는 정책(브랜드 판정 로직)이 나중에 강화될 수 있으므로,
+        # 재검증 시점마다 항상 다시 계산해 최신 상태로 유지한다(기존 raw_news.json에
+        # 이 필드가 아예 없던 데이터도 이 과정에서 자연스럽게 채워진다 = migration).
+        item["brandGroups"] = detect_brand_groups(item.get("title", ""), item.get("description", "") or "")
         g = item.get("sourceGroup", "unknown")
         existing_by_group.setdefault(g, []).append(item)
 
@@ -956,8 +809,12 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
 
     for group in SOURCE_GROUP_LABELS.keys():
         if group in failed_groups:
-            # 수집 실패 -> 기존 데이터 유지 (단, 위에서 이미 현재 정책으로 걸러진 상태)
-            merged.extend(existing_by_group.get(group, []))
+            # STEP 9.1: 수집 실패 -> 기존 데이터 유지하되 RETENTION_HOURS(72h) Grace Period를
+            # 넘긴 기사는 제외한다(위에서 이미 현재 정책으로 한 번 더 걸러진 상태).
+            merged.extend([
+                item for item in existing_by_group.get(group, [])
+                if is_within_lookback(item.get("publishedAt"), hours=RETENTION_HOURS)
+            ])
             continue
 
         new_items = newly_collected.get(group, [])
@@ -971,10 +828,13 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
         new_urls = {item["url"] for item in new_items}
         new_titles = {normalize_title(item["title"]) for item in new_items}
 
-        # 기존 항목 중 신규로 대체되지 않은 것만 남기고, 신규 항목을 앞에 배치
+        # STEP 9.1: 정상 수집 성공 그룹은 신규로 대체되지 않고 남은 기존 항목이라도
+        # LOOKBACK_HOURS(48h)를 넘기면 제외한다 — 성공 그룹에서는 새/기존 관계없이 48h가 기준.
         remaining_old = [
             item for item in old_items
-            if item["url"] not in new_urls and normalize_title(item["title"]) not in new_titles
+            if item["url"] not in new_urls
+            and normalize_title(item["title"]) not in new_titles
+            and is_within_lookback(item.get("publishedAt"), hours=LOOKBACK_HOURS)
         ]
 
         combined = new_items + remaining_old
@@ -1128,6 +988,20 @@ def main():
         log("\n[WARNING 목록]")
         for w in warnings:
             log(f"- {w}")
+
+    # STEP 9.1: TOP NEWS는 이번 STEP에서 sourceGroup 기준 자사/타사 판정을 그대로 유지하지만,
+    # brandGroups(신규)와 sourceGroup(기존)이 실제로 얼마나 어긋나 있는지는 로그로 남겨서
+    # STEP 9.2에서 TOP NEWS 판정 기준 전환 필요 여부를 판단할 근거로 쓴다.
+    bmw_brand_but_not_source = [
+        item for item in merged_news
+        if "bmw" in (item.get("brandGroups") or []) and item.get("sourceGroup") != "bmw"
+    ]
+    log("\n[STEP 9.1 — brandGroups vs sourceGroup 불일치 로그]")
+    log(f"brandGroups에 'bmw'가 포함되지만 sourceGroup!='bmw'인 기사: {len(bmw_brand_but_not_source)}건")
+    if bmw_brand_but_not_source:
+        log("  (STEP 9.2 후보 — TOP NEWS 자사/타사 판정 기준을 sourceGroup에서 brandGroups로 전환할지 검토 필요)")
+        for item in bmw_brand_but_not_source:
+            log(f"  - [{item.get('sourceGroup')}] {item.get('title', '')[:60]}")
 
     log("\n완료: data/raw_news.json 저장됨")
 
