@@ -964,7 +964,11 @@ def _build_group_summary(articles: list[dict]) -> str:
     seen = set()
     for a in articles:
         group = a.get("sourceGroup", "")
-        if group in SOURCE_GROUP_LABELS and group not in seen and group not in ("naver", "google", "kmnews"):
+        # STEP 10.1: global_media(Visordown/ADV Pulse 등 해외 전문매체 수집 채널)도
+        # naver/google/kmnews와 동일하게 "매체 채널"이지 "브랜드"가 아니므로 제외한다.
+        # 넣지 않으면 "Global Motorcycle Media 등 주요 브랜드에서..." 처럼 매체명이
+        # 브랜드명인 것처럼 표시되는 오류가 생긴다.
+        if group in SOURCE_GROUP_LABELS and group not in seen and group not in ("naver", "google", "kmnews", "global_media"):
             seen.add(group)
             brand_names.append(SOURCE_GROUP_LABELS[group])
 

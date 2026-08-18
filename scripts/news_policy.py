@@ -57,14 +57,25 @@ from urllib.parse import urlsplit
 # 공식 브랜드 프레스룸 도메인이 아직 없어 Tier 1은 비워둔다(없는 RSS를 지어내지 않음).
 SOURCE_TIERS = {
     # Tier 1 — Official/Primary. 실제 접근 가능한 공식 소스가 확인되면 여기에만 추가한다.
-    "official": set(),
+    # STEP 10.1: "발견됨"과 "실제 자동수집에 활성화됨"을 구분한다 — STEP 10-A/B/C에서
+    # 조사한 6개 브랜드 중 실제로 이번 STEP에서 SOURCES에 등록해 자동수집을 켜는
+    # BMW/Yamaha 공식 RSS 도메인만 여기에 추가한다. Ducati/Triumph/Honda/Harley는
+    # STEP 10-A/B/C에서 (HTML 수집 후보 또는 자동화 보류)로 "발견"만 되었을 뿐
+    # 이번 STEP에서 활성화되는 collector가 없으므로 추가하지 않는다.
+    "official": {
+        "www.press.bmwgroup.com", "press.bmwgroup.com",  # BMW Motorrad Press (RSS 검증 완료)
+        "global.yamaha-motor.com",  # Yamaha Motor Global News (RSS 검증 완료, 전사 피드 — Context Gate 필수)
+    },
 
-    # Tier 2 — Trusted Motorcycle/Automotive Media (국내 이륜차·자동차 전문지)
+    # Tier 2 — Trusted Motorcycle/Automotive Media (국내 이륜차·자동차 전문지 + STEP 10.1 해외 전문매체)
     "motorcycle_media": {
         "kmnews.net", "www.kmnews.net",
         "mbzine.com", "www.mbzine.com",
         "carguy.kr", "www.carguy.kr",
         "dailycar.co.kr", "www.dailycar.co.kr",
+        # STEP 10.1: 해외 이륜차 전문매체 RSS (STEP 10-B에서 검증 완료된 것만 등록)
+        "visordown.com", "www.visordown.com",
+        "advpulse.com", "www.advpulse.com",
     },
 
     # Tier 3 — Trusted Business/General Media (국내 경제/종합지)
@@ -230,6 +241,10 @@ SOURCE_GROUP_LABELS = {
     "naver": "Naver",
     "google": "Google",
     "kmnews": "KMNEWS",
+    # STEP 10.1: Google 검색 폴백(google)과 통계적으로 섞이지 않도록 별도 sourceGroup으로 분리한다.
+    # (Direct RSS vs Google 검색 폴백 비율을 나중에 정확히 집계하기 위한 의도적 분리 — UI 필터
+    # 칩은 이번 STEP에서 추가하지 않으며, index.html/script.js/style.css는 수정하지 않는다.)
+    "global_media": "Global Motorcycle Media",
 }
 
 BRAND_NAME_KEYWORDS = {

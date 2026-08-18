@@ -376,14 +376,77 @@ SOURCES = [
     {"sourceGroup": "google", "source": "Google", "sourceType": "media", "url": google_news_rss_kr("이륜차 브랜드 캠페인"), "keyword_filter": None},
 
     # ---- 한국경제 전체뉴스 RSS — 이륜차 키워드로 필터링해서 보조 소스로 활용, GOOGLE 그룹에 포함 ----
+    # (진짜 direct RSS이므로 method를 명시적으로 "rss"로 표기한다 — 나머지 46개 항목은
+    # 전부 google_news_rss_kr()/naver_news_search_url() 경유이므로 아래에서 일괄 "google_news"로 채운다.)
     {
         "sourceGroup": "google",
         "source": "한국경제",
         "sourceType": "media",
         "url": "https://www.hankyung.com/feed/all-news",
         "keyword_filter": ["이륜차", "오토바이", "모터사이클", "bmw 모토라드", "할리데이비슨", "두카티", "야마하", "혼다 모터사이클"],
+        "method": "rss",
+    },
+
+    # ==========================================================
+    # STEP 10.1 — Direct Source Pipeline (Official + Global Professional Media)
+    # 요청서 원칙: RSS가 HTML보다 구조적으로 안정적이므로, 이번 STEP은 실제 접근/파싱을
+    # WebFetch로 재검증한 4개의 안정적 RSS만 활성화한다. Ducati/Triumph/Honda(HTML 수집)와
+    # Harley-Davidson(자동수집 이용약관 미확인)은 "발견됨"이지만 이번 STEP에서 자동수집을
+    # 켜지 않는다(STEP 10.2 후보). SOURCES에 없다는 사실 자체가 "미활성화"의 증거다.
+    # ==========================================================
+
+    # ---- BMW Motorrad Official Press RSS — Tier 1 Official, sourceGroup은 기존 "bmw" 유지 ----
+    # (news_policy.SOURCE_TIERS["official"]에 www.press.bmwgroup.com 등록됨 -> sourceQualityScore=100)
+    {
+        "sourceGroup": "bmw",
+        "source": "BMW Motorrad Press",
+        "sourceType": "media",
+        "url": "https://www.press.bmwgroup.com/global/rss/topic/6629",
+        "keyword_filter": None,
+        "method": "rss",
+    },
+
+    # ---- Yamaha Motor Global News RSS — Tier 1 Official이지만 전사(선박/로봇/재무 등) 피드다.
+    # sourceGroup="yamaha"로 들어오면 has_motorcycle_context()가 BRAND_SPECIFIC_CONTEXT_KEYWORDS
+    # ["yamaha"] 서브키워드까지 요구하는 기존 Hard Gate를 그대로 통과해야 한다 — Official이라고
+    # 예외를 두지 않는다(요청서 5번). 코드 변경 없이 sourceGroup만으로 기존 게이트가 자동 적용된다.
+    {
+        "sourceGroup": "yamaha",
+        "source": "Yamaha Motor Global News",
+        "sourceType": "media",
+        "url": "https://global.yamaha-motor.com/rss/update.xml",
+        "keyword_filter": None,
+        "method": "rss",
+    },
+
+    # ---- Visordown (영국 이륜차 전문매체) — Tier 2, sourceGroup은 신규 "global_media" ----
+    # "google" sourceGroup에 넣지 않는다 — Google 검색 폴백과 Direct RSS를 통계적으로
+    # 분리해서 집계하기 위함(요청서 2번, 데이터 의미 보존이 UI 편의보다 우선).
+    {
+        "sourceGroup": "global_media",
+        "source": "Visordown",
+        "sourceType": "media",
+        "url": "https://www.visordown.com/rss",
+        "keyword_filter": None,
+        "method": "rss",
+    },
+
+    # ---- ADV Pulse (북미 어드벤처 이륜차 전문매체) — Tier 2, sourceGroup "global_media" ----
+    {
+        "sourceGroup": "global_media",
+        "source": "ADV Pulse",
+        "sourceType": "media",
+        "url": "https://www.advpulse.com/feed/",
+        "keyword_filter": None,
+        "method": "rss",
     },
 ]
+
+# STEP 10.1: 나머지 항목(46개, 전부 Google News RSS 검색 경유)은 "method"가 없으므로
+# 일괄 "google_news"로 채운다. 위에서 명시적으로 "rss"를 지정한 4개 신규 항목과
+# 한국경제 항목만 "rss"로 남고 나머지는 전부 "google_news"가 된다.
+for _src in SOURCES:
+    _src.setdefault("method", "google_news")
 
 
 # ==========================================================
@@ -502,6 +565,9 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
     source_name = source_config["source"]
     source_type = source_config["sourceType"]
     keyword_filter = source_config.get("keyword_filter")
+    # STEP 10.1: 이 소스가 실제로 수집을 시도한 방법(rss=direct RSS, google_news=Google
+    # News RSS 검색 경유). 기존 프론트엔드는 이 필드를 읽지 않으므로 하위호환에 영향 없다.
+    acquisition_method = source_config.get("method", "google_news")
 
     stats = new_stage_counters()
 
@@ -603,6 +669,7 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
                 "sourceQualityScore": get_source_quality_score(clean_url),
                 "businessRelevanceScore": relevance_score,
                 "brandGroups": detect_brand_groups(clean_title, summary),
+                "acquisitionMethod": acquisition_method,
                 "summary_raw": summary[:300],  # 중복판단 참고용, 최종 저장 시 제거
             })
 
@@ -802,6 +869,9 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
         # 재검증 시점마다 항상 다시 계산해 최신 상태로 유지한다(기존 raw_news.json에
         # 이 필드가 아예 없던 데이터도 이 과정에서 자연스럽게 채워진다 = migration).
         item["brandGroups"] = detect_brand_groups(item.get("title", ""), item.get("description", "") or "")
+        # STEP 10.1: acquisitionMethod가 없는 과거 raw_news.json 데이터(이번 STEP 이전 수집분)는
+        # 전부 Google News RSS 검색 경유였으므로 "google_news"로 마이그레이션한다.
+        item.setdefault("acquisitionMethod", "google_news")
         g = item.get("sourceGroup", "unknown")
         existing_by_group.setdefault(g, []).append(item)
 
@@ -965,6 +1035,39 @@ def main():
     log(f"Blocked by domain: {total_stats['blocked_by_domain']}")
     log(f"Blocked as low/auto-only motorcycle context: {total_stats['blocked_as_context']}")
     log(f"Blocked as low business relevance: {total_stats['blocked_as_low_relevance']}")
+
+    # STEP 10.1: 수집 방법(Direct RSS vs Google News 검색 폴백)별 최종 저장 건수.
+    # Official RSS/Global Motorcycle RSS/Google News fallback/Domestic direct RSS를
+    # 구분해서 집계한다(요청서 9번 로그 형식).
+    official_rss_count = sum(
+        1 for item in merged_news
+        if item.get("acquisitionMethod") == "rss" and get_source_tier(item.get("url", "")) == "official"
+    )
+    global_motorcycle_rss_count = sum(
+        1 for item in merged_news
+        if item.get("sourceGroup") == "global_media" and item.get("acquisitionMethod") == "rss"
+    )
+    google_fallback_count = sum(
+        1 for item in merged_news if item.get("acquisitionMethod") == "google_news"
+    )
+    domestic_direct_rss_count = sum(
+        1 for item in merged_news
+        if item.get("acquisitionMethod") == "rss" and get_source_tier(item.get("url", "")) == "business_media"
+    )
+    log("\n" + "-" * 60)
+    log("[Acquisition Method]")
+    log("-" * 60)
+    log(f"Official RSS: {official_rss_count}")
+    log(f"Global Motorcycle RSS: {global_motorcycle_rss_count}")
+    log(f"Google News fallback: {google_fallback_count}")
+    log(f"Domestic direct RSS: {domestic_direct_rss_count}")
+
+    # STEP 10.1: 이번 STEP에서 활성화한 4개 Direct Source 각각의 최종 저장 건수
+    # (source 표시명 기준 — SOURCES에 등록한 이름과 정확히 일치해야 함).
+    log("\n[Direct Source]")
+    for direct_source_name in ("BMW Motorrad Press", "Yamaha Motor Global News", "Visordown", "ADV Pulse"):
+        cnt = sum(1 for item in merged_news if item.get("source") == direct_source_name)
+        log(f"{direct_source_name}: {cnt}")
 
     # STEP 9: 최종 저장 데이터 기준 Source Tier 통계 (요청서 35번)
     tier_counts: dict[str, int] = {"official": 0, "motorcycle_media": 0, "business_media": 0, "unknown": 0}
