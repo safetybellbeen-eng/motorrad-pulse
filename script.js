@@ -351,13 +351,25 @@ function renderBrandSummary(brandSummary) {
 }
 
 /* ---------- SOURCE MONITOR ---------- */
+/* STEP 9.2: 필터 칩은 의미가 다른 두 그룹이 섞여 있다.
+   - 브랜드 필터(BMW/Ducati/Triumph/Harley/Honda/Yamaha): "이 브랜드를 실제로 다룬 기사"
+     → brandGroups(STEP 9.1에서 raw_news.json에 추가된 필드) 기준으로 판정한다.
+   - 매체 필터(MOTORCYCLE=kmnews/GENERAL=naver/MARKET=google)와 ALL: "어느 채널로 들어왔는지"
+     → 기존 sourceGroup 기준을 그대로 유지한다(요청 사항: 두 필터의 의미를 분리, 매체 필터는 변경 금지). */
+const BRAND_FILTER_KEYS = ["bmw", "ducati", "triumph", "harley", "honda", "yamaha"];
+
 function renderSourceMonitor(newsList) {
   const container = document.getElementById("source-monitor-grid");
   container.innerHTML = "";
 
-  let filtered = currentFilter === "all"
-    ? [...newsList]
-    : newsList.filter((item) => item.sourceGroup === currentFilter);
+  let filtered;
+  if (currentFilter === "all") {
+    filtered = [...newsList];
+  } else if (BRAND_FILTER_KEYS.includes(currentFilter)) {
+    filtered = newsList.filter((item) => (item.brandGroups || []).includes(currentFilter));
+  } else {
+    filtered = newsList.filter((item) => item.sourceGroup === currentFilter);
+  }
 
   // SOURCE MONITOR는 raw_news.json(분석 전 원본)을 사용하므로 importance 값이
   // 항상 비어있어 중요도순 정렬이 무의미했다. 항상 최신순으로 고정한다.

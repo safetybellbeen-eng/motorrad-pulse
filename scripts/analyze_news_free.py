@@ -126,8 +126,26 @@ _INCIDENT_ONLY_KEYWORDS = [
 ]
 
 
-def has_motorcycle_context(title: str) -> bool:
-    text = (title or "").lower()
+# STEP 9.1 AUDIT: collect_news.py의 has_motorcycle_context()는 title+summary+brand_group
+# 3개 인자를 받는데, 이 파일의 버전은 title만 받아 정책이 어긋나 있었다(Policy Drift).
+# collect 단계에서 이미 걸러진 데이터를 다시 한번 검증하는 "이중 안전장치"이므로 완전히
+# 동일하게 동작하도록 시그니처와 로직을 맞춘다(요청서: analyze/collect 정책 Drift 확인).
+_BRAND_SPECIFIC_CONTEXT_KEYWORDS = {
+    "honda": [
+        "motorcycle", "motorbike", "bike", "cb", "cbr", "africa twin", "gold wing",
+        "rebel", "forza", "pcx", "adv", "super cub", "two-wheeler", "scooter",
+        "이륜차", "오토바이", "모터사이클", "스쿠터",
+    ],
+    "yamaha": [
+        "motorcycle", "motorbike", "bike", "mt", "yzf", "xsr", "tracer", "tenere",
+        "ténéré", "nmax", "xmax", "scooter", "two-wheeler",
+        "이륜차", "오토바이", "모터사이클", "스쿠터",
+    ],
+}
+
+
+def has_motorcycle_context(title: str, summary: str = "", brand_group: str | None = None) -> bool:
+    text = f"{title or ''} {summary or ''}".lower()
     has_bike = any(kw.lower() in text for kw in _MOTORCYCLE_CONTEXT_KEYWORDS)
     has_auto_only = any(kw.lower() in text for kw in _AUTOMOTIVE_ONLY_KEYWORDS)
     has_incident = any(kw.lower() in text for kw in _INCIDENT_ONLY_KEYWORDS)
@@ -135,7 +153,60 @@ def has_motorcycle_context(title: str) -> bool:
         return False
     if has_incident:
         return False
-    return has_bike
+    if not has_bike:
+        return False
+    brand_keywords = _BRAND_SPECIFIC_CONTEXT_KEYWORDS.get(brand_group)
+    if brand_keywords and not any(kw.lower() in text for kw in brand_keywords):
+        return False
+    return True
+
+
+# ==========================================================
+# STEP 9.2: brandGroups Fallback — collect_news.py의 detect_brand_groups()와
+# "완전히 동일한 로직"을 이 파일에도 둔다(요청 사항 1번).
+# ==========================================================
+# 정상 경로에서는 collect_news.py가 raw_news.json에 brandGroups를 이미 채워 넣으므로
+# 이 함수는 절대 호출되지 않는다. brandGroups가 없거나 빈 배열인 legacy 데이터(STEP 9.1
+# 이전 raw_news.json, 수동 테스트 데이터 등)를 만났을 때만 즉석으로 계산하는 안전장치다.
+#
+# 주의: 이 목록/로직은 collect_news.py의 BRAND_NAME_KEYWORDS/detect_brand_groups()와
+# "값이 반드시 동일해야" 한다 — 두 파일에 같은 로직이 복제되어 있어 Drift 위험이 있다는
+# 것을 알고 있고, 이번 STEP에서는 공통 모듈(policy.py 등)로 합치지 않기로 했다(요청 사항
+# 1번: "이번 STEP에서는 공통 모듈 리팩터링까지 하지 않되"). 대신 두 함수가 항상 동일한
+# 결과를 내는지 자동 테스트(test_step9_2.py의 Test 17)로 검증하고, 이 테스트가 앞으로
+# STEP 9.3 이후 공통 모듈 분리가 필요한지 판단하는 근거로 남는다.
+_BRAND_NAME_KEYWORDS = {
+    "bmw": ["bmw", "비엠더블유", "모토라드", "motorrad"],
+    "ducati": ["ducati", "두카티"],
+    "triumph": ["triumph", "트라이엄프"],
+    "harley": ["harley-davidson", "harley davidson", "harley", "할리데이비슨", "할리 데이비슨"],
+    "honda": ["honda", "혼다"],
+    "yamaha": ["yamaha", "야마하"],
+}
+
+
+def _fallback_detect_brand_groups(title: str, summary: str) -> list[str]:
+    """collect_news.py의 detect_brand_groups()와 동일한 로직(요청 사항 1번: 결과가 100%
+    동일해야 함). brandGroups가 없는 legacy 데이터에 한해서만 호출된다."""
+    text = f"{title} {summary}".lower()
+    general_context_ok = has_motorcycle_context(title, summary, None)
+
+    detected: list[str] = []
+    for brand, names in _BRAND_NAME_KEYWORDS.items():
+        if not any(name in text for name in names):
+            continue
+
+        brand_specific_kws = _BRAND_SPECIFIC_CONTEXT_KEYWORDS.get(brand)
+        if brand_specific_kws:
+            if not any(kw.lower() in text for kw in brand_specific_kws):
+                continue
+        else:
+            if not general_context_ok:
+                continue
+
+        detected.append(brand)
+
+    return detected
 
 
 def log(msg: str):
@@ -698,6 +769,13 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
         bmw_insight = build_watch_point(matched_keywords, category, title)
         topic_signals = compute_topic_signals(title, description)
 
+        # STEP 9.2: brandGroups는 정상적으로는 collect_news.py가 이미 채워서 넘겨준다.
+        # 없거나 빈 배열인 경우(legacy 데이터)에 한해서만 즉석으로 계산한다 — collect가
+        # 채운 값이 있으면 절대 덮어쓰지 않는다(Source of Truth는 collect_news.py).
+        brand_groups = article.get("brandGroups")
+        if not brand_groups:
+            brand_groups = _fallback_detect_brand_groups(title, description)
+
         analyzed.append({
             # ---- 원본 필드 그대로 (요청서 1번) ----
             "id": article["id"],
@@ -706,6 +784,10 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
             "source": article.get("source", ""),
             "sourceType": article.get("sourceType", ""),
             "sourceGroup": article.get("sourceGroup", ""),
+            # STEP 9.1: 브랜드 귀속(brandGroups)은 sourceGroup과 별개로 그대로 통과시킨다.
+            # collect_news.py가 채워 넣은 값을 여기서 새로 계산하지 않고 원본을 그대로 보존한다
+            # (요청서 원칙: title/url/source/publishedAt과 마찬가지로 collect 단계 데이터를 신뢰).
+            "brandGroups": brand_groups,
             "publishedAt": article.get("publishedAt", ""),
             "collectedAt": article.get("collectedAt", ""),
             # ---- 규칙 기반 생성 필드 (요청서 2번) ----
@@ -775,19 +857,35 @@ def select_top_news(analyzed_articles: list[dict], max_count: int = TOP_NEWS_MAX
     return [a["id"] for a in selected]
 
 
+def _is_bmw_own_article(article: dict) -> bool:
+    """STEP 9.2: BMW 자사(OWN) 판정. brandGroups가 Source of Truth다.
+
+    - brandGroups가 있으면(정상 경로): brandGroups == {"bmw"}(BMW 단독 언급)일 때만 OWN.
+      BMW + 다른 브랜드가 함께 언급된 비교/경쟁 기사는 OTHERS로 분류한다(요청 사항: BMW
+      단독 포함은 OWN, BMW+타 브랜드 동시 포함은 OTHERS).
+    - brandGroups가 아예 없거나 빈 배열인 legacy/비정상 데이터에서는 STEP 9.1 이전과 동일하게
+      sourceGroup == "bmw" 기준으로 폴백한다(요청 사항: 기존 동작을 완전히 잃지 않도록 하는
+      Legacy Safety Fallback). 즉 brandGroups가 채워져 있으면 항상 그 값을 우선한다."""
+    brand_groups = article.get("brandGroups") or []
+    if brand_groups:
+        return set(brand_groups) == {"bmw"}
+    return article.get("sourceGroup") == "bmw"
+
+
 def select_top_news_split(analyzed_articles: list[dict]) -> tuple[list[str], list[str]]:
     """BMW Motorrad 소속 사용자를 위한 대시보드이므로 TOP NEWS를 둘로 나눈다.
 
-    - 자사(BMW): sourceGroup이 bmw인 기사 중 점수 상위 5개
-    - 타사: BMW를 제외한 전체 기사 중 점수 상위 5개 (그룹당 최대 2개, 유사 제목 중복 제거는
-      select_top_news의 로직을 그대로 재사용)
+    - 자사(BMW): _is_bmw_own_article()이 OWN으로 판정한 기사 중 점수 상위 5개
+    - 타사: 그 외 전체 기사 중 점수 상위 5개 (그룹당 최대 2개, 유사 제목 중복 제거는
+      select_top_news의 로직을 그대로 재사용 — 이 다양성 규칙은 요청 사항대로 sourceGroup
+      기준을 그대로 유지한다)
 
     자사 뉴스가 5개보다 적으면 있는 만큼만 반환한다 (요청서 원칙: 억지로 채우지 않음)."""
-    bmw_articles = [a for a in analyzed_articles if a["sourceGroup"] == "bmw"]
+    bmw_articles = [a for a in analyzed_articles if _is_bmw_own_article(a)]
     bmw_sorted = sorted(bmw_articles, key=lambda x: x["score"], reverse=True)[:TOP_NEWS_MAX]
     bmw_ids = [a["id"] for a in bmw_sorted]
 
-    non_bmw_articles = [a for a in analyzed_articles if a["sourceGroup"] != "bmw"]
+    non_bmw_articles = [a for a in analyzed_articles if not _is_bmw_own_article(a)]
     others_ids = select_top_news(non_bmw_articles, max_count=TOP_NEWS_MAX)
 
     return bmw_ids, others_ids
@@ -1213,6 +1311,9 @@ def build_news_json(analyzed_articles: list[dict], bmw_top_ids: list[str], other
             "source": a["source"],
             "sourceType": a["sourceType"],
             "sourceGroup": a["sourceGroup"],
+            # STEP 9.1: news.json에도 brandGroups를 노출한다(신규 필드 추가만, 기존 키는 무변경).
+            # SOURCE MONITOR(script.js)는 여전히 sourceGroup만 읽으므로 화면 동작에는 영향 없다.
+            "brandGroups": a.get("brandGroups", []),
             "publishedAt": a["publishedAt"],
             "category": a["category"],
             "summary": a["summary"],
@@ -1352,13 +1453,18 @@ def build_history_snapshot(analyzed_articles: list[dict]) -> dict:
     """History Snapshot에 저장할 최소 데이터를 구성한다 (요청서 STEP8-8 8번).
     기사 본문/summary/whyItMatters/bmwInsight/전체 URL은 저장하지 않는다.
     비교에 필요한 것만: id, sourceGroup, source(언론사명), domain, category,
-    signalThemes, importance, publishedAt."""
+    signalThemes, importance, publishedAt.
+
+    STEP 9.1: brandGroups도 함께 저장한다. build_brand_summary()가 이제 Previous(직전
+    History Snapshot) 비교에도 sourceGroup이 아닌 brandGroups를 쓰므로, 이 필드가
+    Snapshot에 없으면 previous 집계가 항상 빈 값이 되어버린다."""
     now_kst = datetime.now(timezone(timedelta(hours=9)))
     articles = []
     for a in analyzed_articles:
         articles.append({
             "id": a["id"],
             "sourceGroup": a["sourceGroup"],
+            "brandGroups": a.get("brandGroups", []),
             "source": a.get("source", ""),
             "domain": _extract_domain(a.get("url", "")),
             "category": a["category"],
@@ -1580,8 +1686,13 @@ def build_brand_summary(analyzed_articles: list[dict]) -> dict:
 
     summary = {}
     for brand in BRAND_SOURCE_GROUPS:
-        brand_current = [a for a in current_articles if a.get("sourceGroup") == brand]
-        brand_previous = [a for a in previous_articles if a.get("sourceGroup") == brand]
+        # STEP 9.1: sourceGroup(수집 채널) 대신 brandGroups(실제 브랜드 귀속)로 판정한다.
+        # sourceGroup은 SOURCE MONITOR 등 기존 화면에서 계속 쓰이므로 절대 값 자체를 바꾸지
+        # 않고, 여기 Brand Pulse 집계 로직만 brandGroups 기준으로 전환한다. brandGroups가
+        # 없는(과거) 데이터는 collect_news.py의 merge_news()가 재실행 시 채워 넣지만(migration),
+        # 혹시 아직 채워지지 않은 값이 있어도 .get(...) or []로 안전하게 빈 배열 처리한다.
+        brand_current = [a for a in current_articles if brand in (a.get("brandGroups") or [])]
+        brand_previous = [a for a in previous_articles if brand in (a.get("brandGroups") or [])]
 
         news_count = len(brand_current)
 
@@ -1675,7 +1786,10 @@ def main():
         log(f"[안전장치] 신뢰 화이트리스트에 없는 기사 {before_filter - len(raw_articles)}건 추가 제거")
 
     before_context_filter = len(raw_articles)
-    raw_articles = [a for a in raw_articles if has_motorcycle_context(a.get("title", ""))]
+    raw_articles = [
+        a for a in raw_articles
+        if has_motorcycle_context(a.get("title", ""), a.get("description", ""), a.get("sourceGroup"))
+    ]
     if len(raw_articles) < before_context_filter:
         log(f"[안전장치] 이륜차와 무관한(자동차 등) 기사 {before_context_filter - len(raw_articles)}건 추가 제거")
 
