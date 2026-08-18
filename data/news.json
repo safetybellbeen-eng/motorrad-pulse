@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-19",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "07:01 AM",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-19T07:01:12.526037+09:00",
+    "lastUpdatedISO": "2026-08-19T08:01:28.833737+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 3,
@@ -173,7 +173,7 @@
       "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     },
     {
       "id": "1cd1930f3309e044",
@@ -245,7 +245,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "f9c2c00d08c1cca6",
