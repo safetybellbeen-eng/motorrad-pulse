@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-08-18T08:00:56.393241+09:00",
+  "lastCollectedAt": "2026-08-18T13:02:28.432959+09:00",
   "news": [
     {
       "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
@@ -52,6 +52,28 @@
       "description": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개&nbsp;&nbsp;한국이륜차신문",
       "id": "765ca87cf0aa3123",
       "collectedAt": "2026-08-15T18:02:29.565930+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-08-18T11:29:16+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 8,
+      "description": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’&nbsp;&nbsp;한국이륜차신문",
+      "id": "1f752ce940d7570d",
+      "collectedAt": "2026-08-18T13:02:28.432959+09:00",
       "category": null,
       "summary": null,
       "importance": null,
