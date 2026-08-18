@@ -406,6 +406,22 @@ SOURCES = [
         "method": "rss",
     },
 
+    # ---- BMW Motorrad Korea Official Press RSS — STEP 10.2 ----
+    # BMW Group PressClub은 국가별 섹션(/global/, /korea/ 등)이 있고, 기존에 확보한 Global
+    # Motorrad Topic ID(6629)가 Korea 섹션에도 동일하게 존재함을 실제 WebFetch로 검증했다
+    # (STEP 10.2-A AUDIT). 도메인이 www.press.bmwgroup.com으로 위 Global 항목과 완전히
+    # 동일하므로 news_policy.py의 SOURCE_TIERS["official"]에 이미 등록되어 있고, 별도
+    # 도메인 추가가 필요 없다(요청 사항: 불필요한 중복 도메인 추가 금지).
+    # 한국 시장 전용 콘텐츠(국내 한정판 수량, 딜러 행사 등)를 담고 있어 업무 관련성이 높다.
+    {
+        "sourceGroup": "bmw",
+        "source": "BMW Motorrad Korea Press",
+        "sourceType": "media",
+        "url": "https://www.press.bmwgroup.com/korea/rss/topic/6629",
+        "keyword_filter": None,
+        "method": "rss",
+    },
+
     # ---- Yamaha Motor Global News RSS — Tier 1 Official이지만 전사(선박/로봇/재무 등) 피드다.
     # sourceGroup="yamaha"로 들어오면 has_motorcycle_context()가 BRAND_SPECIFIC_CONTEXT_KEYWORDS
     # ["yamaha"] 서브키워드까지 요구하는 기존 Hard Gate를 그대로 통과해야 한다 — Official이라고
@@ -543,7 +559,10 @@ def is_within_lookback(published_at_iso: str | None, hours: int = LOOKBACK_HOURS
 # ==========================================================
 
 def new_stage_counters() -> dict[str, int]:
-    """STEP 9 수집 품질 로그용 단계별 카운터 (요청서 34번 형식)."""
+    """STEP 9 수집 품질 로그용 단계별 카운터 (요청서 34번 형식).
+    STEP 10.2: 기존 7개 키의 의미/계산법은 전혀 바꾸지 않는다(요청 사항 7번). "raw_entries"
+    1개만 순수 추가한다 — Direct Source Health 판정(NO_ENTRIES 구분)에만 쓰이고,
+    기존 [STEP 9 품질 필터 로그] 블록에는 노출하지 않는다."""
     return {
         "fetched": 0,
         "trusted_domain_pass": 0,
@@ -552,7 +571,32 @@ def new_stage_counters() -> dict[str, int]:
         "blocked_as_context": 0,
         "business_relevance_pass": 0,
         "blocked_as_low_relevance": 0,
+        "raw_entries": 0,  # STEP 10.2 신규: feed 자체의 원본 entry 개수 (Source Health용)
     }
+
+
+def determine_source_health_status(error: str | None, raw_entries: int, fresh: int, final_count: int) -> str:
+    """STEP 10.2: Direct Source(method="rss") 1건의 상태를 5단계로 판정한다.
+    "articles=0"이라는 사실 하나만으로 무조건 장애로 보지 않는다 — 어느 단계에서
+    0이 됐는지에 따라 원인을 구분한다(final article count와 독립적으로 판정, 요청 사항 4번).
+
+    - FAILED            : HTTP/feed parse 등 Source 자체 접근/파싱 실패
+    - NO_ENTRIES        : Source 접근/파싱은 정상이나 feed entry 자체가 0
+    - NO_FRESH_ARTICLES : entry는 존재하지만 LOOKBACK_HOURS(48h) 이내 기사가 0
+    - FILTERED_OUT      : Fresh article은 있었지만 Motorcycle Context/Business Relevance 등
+                          Quality Gate에서 전부 제외됨
+    - OK                : 최종 Quality Gate를 통과한 article이 1건 이상 존재
+
+    순수 함수로 분리해서(요청 사항과 별개로) 네트워크 없이 단위 테스트가 가능하게 한다."""
+    if error:
+        return "FAILED"
+    if raw_entries == 0:
+        return "NO_ENTRIES"
+    if fresh == 0:
+        return "NO_FRESH_ARTICLES"
+    if final_count == 0:
+        return "FILTERED_OUT"
+    return "OK"
 
 
 def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, int]]:
@@ -576,6 +620,11 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
         resp = requests.get(url, headers=headers, timeout=REQUEST_TIMEOUT)
         resp.raise_for_status()
         feed = feedparser.parse(resp.content)
+
+        # STEP 10.2: Source Health의 NO_ENTRIES 판정에 쓰기 위해 feed 자체의 원본 entry
+        # 개수를 기록한다(키워드 필터/신선도 필터 적용 전 숫자). bozo로 조기 반환되는 경우는
+        # 어차피 error가 채워져 FAILED로 판정되므로 이 값은 그 경우 참고용일 뿐이다.
+        stats["raw_entries"] = len(feed.entries)
 
         if feed.bozo and not feed.entries:
             return [], f"피드 파싱 실패 (bozo): {feed.bozo_exception}", stats
@@ -946,6 +995,14 @@ def main():
     # STEP 9: 수집 품질을 운영자가 로그에서 직접 확인할 수 있도록 단계별 합계를 누적한다 (요청서 34번).
     total_stats = new_stage_counters()
 
+    # STEP 10.2: Direct Source(method="rss")에 한해서만 개별 소스 단위 Health를 기록한다.
+    # 기존 total_stats(전체 파이프라인 합계, 47개 Google 검색 쿼리 포함)와는 완전히 분리된
+    # 별도 구조다 — 의미도 계산법도 섞지 않는다(요청 사항 7번). 여기서 "final"은 이 소스
+    # 하나의 collect_rss() 결과(중복 클러스터/그룹별 5건 제한 적용 전)이며, 뒤에서 나오는
+    # 기존 [Direct Source] 블록의 최종 저장(merged_news, 전체 파이프라인 통과 후) 건수와는
+    # 다른 숫자이므로 혼동하지 않도록 로그 라벨을 명확히 구분한다.
+    direct_source_health: dict[str, dict] = {}
+
     all_new_articles: list[dict] = []
 
     for src in SOURCES:
@@ -956,6 +1013,25 @@ def main():
 
         for key in total_stats:
             total_stats[key] += stage_stats.get(key, 0)
+
+        if src.get("method") == "rss":
+            raw_entries = stage_stats.get("raw_entries", 0)
+            fresh = stage_stats.get("fetched", 0)  # 기존 "fetched" 키 = 키워드필터+48h 신선도 통과 수
+            context_pass = stage_stats.get("motorcycle_context_pass", 0)
+            business_pass = stage_stats.get("business_relevance_pass", 0)
+            final_count = len(articles)
+
+            status = determine_source_health_status(error, raw_entries, fresh, final_count)
+
+            direct_source_health[src["source"]] = {
+                "status": status,
+                "fetched": raw_entries,
+                "fresh": fresh,
+                "context": context_pass,
+                "business": business_pass,
+                "final": final_count,
+                "error": error,
+            }
 
         if error:
             log(f"  [WARNING] {error}")
@@ -1062,12 +1138,34 @@ def main():
     log(f"Google News fallback: {google_fallback_count}")
     log(f"Domestic direct RSS: {domestic_direct_rss_count}")
 
-    # STEP 10.1: 이번 STEP에서 활성화한 4개 Direct Source 각각의 최종 저장 건수
-    # (source 표시명 기준 — SOURCES에 등록한 이름과 정확히 일치해야 함).
-    log("\n[Direct Source]")
-    for direct_source_name in ("BMW Motorrad Press", "Yamaha Motor Global News", "Visordown", "ADV Pulse"):
+    # STEP 10.1/10.2: 이번 STEP까지 활성화한 Direct Source 각각의 "최종 저장(merged_news,
+    # 전체 파이프라인/중복 클러스터/그룹당 5건 제한까지 통과한 후)" 건수. 아래
+    # [Direct Source Health] 블록의 "final"과는 다른 숫자다(이 블록은 병합 이후,
+    # Health 블록은 병합 이전의 소스 1건 단독 결과) — 혼동 방지를 위해 라벨을 분리해 둔다.
+    log("\n[Direct Source] (최종 저장 기준, 병합/중복제거 이후)")
+    for direct_source_name in (
+        "BMW Motorrad Press", "BMW Motorrad Korea Press",
+        "Yamaha Motor Global News", "Visordown", "ADV Pulse",
+    ):
         cnt = sum(1 for item in merged_news if item.get("source") == direct_source_name)
         log(f"{direct_source_name}: {cnt}")
+
+    # STEP 10.2: Direct Source Health — "0건"과 "Source 장애"를 구분한다(요청 사항 4~6번).
+    # 47개 Google 검색 쿼리에는 적용하지 않고, method="rss"인 실제 Direct Source에만 적용한다.
+    # 한국경제(기존 STEP 9 direct RSS)도 method="rss"라 자동으로 포함된다.
+    log("\n" + "-" * 60)
+    log("[Direct Source Health] (이 소스 1건의 collect_rss() 결과, 병합/중복제거 이전)")
+    log("-" * 60)
+    for source_name, health in direct_source_health.items():
+        log(f"{source_name}")
+        log(f"  status={health['status']}")
+        if health["status"] == "FAILED":
+            log(f"  error=\"{health['error']}\"")
+        else:
+            log(
+                f"  fetched={health['fetched']} fresh={health['fresh']} "
+                f"context={health['context']} business={health['business']} final={health['final']}"
+            )
 
     # STEP 9: 최종 저장 데이터 기준 Source Tier 통계 (요청서 35번)
     tier_counts: dict[str, int] = {"official": 0, "motorcycle_media": 0, "business_media": 0, "unknown": 0}
