@@ -1,30 +1,68 @@
 {
   "date": "2026-08-18",
-  "lastAnalyzedAt": "2026-08-18T13:02:52.825932+09:00",
+  "lastAnalyzedAt": "2026-08-18T17:58:58.709557+09:00",
   "dailySignal": {
-    "title": "신규 모델 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "title": "Adventure 및 신규 모델 관련 뉴스 증가",
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
-  "market": [],
-  "competitor": [],
-  "productTech": [
+  "market": [
     {
-      "title": "BMW Motorrad, 상품성을 강화한 2027년형 주요 모델 공개",
-      "summary": "M 프레임·M 트랙 패키지 도입, F·S·M·R·K 시리즈 전반 업그레이드BMW 모토라드가 주요 모델의 상품성을 강화해 2027년형 모델 라인업을 업데이트했다. 이번 업데이트는 M 퍼포먼스 모델의 차체 성능 향상과 패키지 구성 개편을 중심으로 F·S·M·R·K 시리즈 전반의 옵션과 편의사양, 색상 구성을 개선하는 데 초점을 맞췄다.",
+      "title": "Motorcycle MOT prices could rise as Independant Garage Association calls for £95 fee",
+      "summary": "Independent Garage Association says current MOT fee is no longer sustainable, with motorcycle tests also caught up in the proposed increase",
       "relatedNewsIds": [
-        "52afb8722bcdb33b"
+        "df26be9b79e247d4"
       ],
-      "impact": 3.5,
-      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      "impact": 1.5,
+      "bmwView": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+    }
+  ],
+  "competitor": [
+    {
+      "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
+      "summary": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
+      "relatedNewsIds": [
+        "c3df98a3c87b9d6c"
+      ],
+      "impact": 2.0,
+      "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
     },
     {
-      "title": "할리데이비슨, 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’ 공개",
-      "summary": "순정 부품·액세서리 활용한 할리데이비슨 글로벌 커스터마이징 프로젝트할리데이비슨 코리아가 새로운 커스터마이징 플랫폼 ‘RIDE CUSTOM’을 공개하고, 라이더들이 자신만의 개성과 라이딩 스타일을 반영한 모터사이클을 완성할 수 있는 새로운 커스터마이징 경험을 제안했다.",
+      "title": "Bristol dealership to celebrate 100-year anniversary with Suzuki GSX-8S giveaway",
+      "summary": "Bristol-based dealership Fowlers Motorcycles is set to host a 100-year anniversary celebration next month, which includes a prize draw offering a brand-new Suzuki GSX-8S.",
       "relatedNewsIds": [
-        "765ca87cf0aa3123"
+        "4dca35476c3e7874"
       ],
-      "impact": 2.5,
-      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      "impact": 1.5,
+      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+    }
+  ],
+  "productTech": [
+    {
+      "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
+      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 오는 8월 18일 오후 2시부터 9월 7일까지 BMW 모토라드 샵 온라인(https://shop.bmw-motorrad.co.kr)에서 새로운 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’의 사전 예약을 진행한다.",
+      "relatedNewsIds": [
+        "f901338e148b2ac4"
+      ],
+      "impact": 5.0,
+      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+    },
+    {
+      "title": "New Midsize GS Spied: Is BMW Resurrecting The F650GS Dakar?",
+      "summary": "BMW Motorrad is working on a new midsize GS, recently spotted in prototype form.",
+      "relatedNewsIds": [
+        "1cd1930f3309e044"
+      ],
+      "impact": 5.0,
+      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+    },
+    {
+      "title": "Honda Australia’s new WN7 subscription could point to the future of motorcycle ownership",
+      "summary": "Could subscribing to an electric motorcycle reduce the risk of depreciation? And could subscription ownership eventually replace buying bikes?",
+      "relatedNewsIds": [
+        "f9c2c00d08c1cca6"
+      ],
+      "impact": 3.0,
+      "bmwView": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
     },
     {
       "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
@@ -34,33 +72,14 @@
       ],
       "impact": 2.0,
       "bmwView": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
-    },
-    {
-      "title": "HONDA, 직렬 4기통 탑재 ‘CB400 SUPER FOUR·CBR400R FOUR’ E-Clutch 모델 일본 출시",
-      "summary": "CB 계보 잇는 네이키드·풀카울 스포츠 모델 동시 공개, 신설계 399cc 엔진과 혼다 E-클러치 적용혼다가 직렬 4기통 엔진을 탑재한 400cc급 로드 스포츠 라인업을 새롭게 선보인다.혼다는 수랭식 4스트로크 DOHC 직렬 4기통 399cc 엔진을 탑재한 ‘CB400 SUPER FOUR E-클러치’와 ‘CBR 400R FOUR E-클러치’를 공개했다.",
-      "relatedNewsIds": [
-        "6dd7b47942adca13"
-      ],
-      "impact": 2.0,
-      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     }
   ],
-  "customerTrend": [
-    {
-      "title": "두카티 코리아, '두카티 나이트 라이더' 시승 이벤트 성료",
-      "summary": "두카티 코리아가 고객들에게 특별한 야간 라이딩 경험을 제공하기 위해 마련한 ‘두카티 나이트 라이더(Ducati Night Rider)’ 시승 이벤트를 성황리에 마",
-      "relatedNewsIds": [
-        "1f98505b78b536a4"
-      ],
-      "impact": 1.5,
-      "bmwView": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
-    }
-  ],
+  "customerTrend": [],
   "teamBrief": {
-    "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
-    "competitor": "오늘 수집된 뉴스 중 경쟁 브랜드 관련 주요 기사는 확인되지 않았습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 6건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
-    "customerTrend": "고객 및 라이딩 트렌드 관련 뉴스 1건이 확인되었습니다. 고객 Experience와 Lifestyle 변화를 지속적으로 확인할 필요가 있습니다.",
-    "todayInsight": "오늘은 신규 모델 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+    "market": "오늘 수집된 시장 관련 뉴스 중 주요 기사 1건이 확인되었습니다. 주요 Motorcycle 시장의 판매 및 수요 흐름을 확인할 필요가 있습니다.",
+    "competitor": "경쟁 브랜드 관련 뉴스가 2건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 4건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
+    "todayInsight": "오늘은 Adventure, 신규 모델, 전동화 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
 }
