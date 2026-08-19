@@ -142,6 +142,16 @@ BUSINESS_RELEVANCE_KEYWORDS_POSITIVE = {
     # 고객/커뮤니티
     "고객 이벤트": 8, "customer event": 8, "이벤트": 8, "커뮤니티": 6, "community": 6,
     "투어링": 8, "touring": 8, "어드벤처": 6,
+    # STEP 10-KR.2 요청 4번: AUDIT에서 실제로 확인된 False Negative(할리데이비슨
+    # 코리아의 랠리/투어/오픈하우스 등 실제 브랜드 행사 기사가 DROP되는 문제)를
+    # 최소 보강한다. 기존 "이벤트"/"투어링"과 동일한 8점 구간으로 맞췄다
+    # (과도한 점수 부여 금지 요청 반영). "투어"는 일반 문맥에서도 쓰일 수 있는
+    # 단어이지만, 사건사고 표현(사고/충돌 등)이 있으면 has_motorcycle_context
+    # 단계(Incident Gate)에서 이미 Hard Exclude되므로 이 게이트까지 도달하는
+    # "투어" 포함 기사는 사건사고가 아닌 경우로 한정된다(요청 5번, fixture로 검증).
+    "랠리": 8, "rally": 8, "페스티벌": 8, "festival": 8, "축제": 8,
+    "오픈하우스": 8, "open house": 8, "투어": 8,
+    "시승": 8, "시승회": 8, "test ride": 8, "라이딩 이벤트": 8, "riding event": 8,
     # 기술/제품 트렌드
     "전동화": 10, "electric": 10, "배터리": 8, "battery": 8, "adas": 10,
     "커넥티비티": 8, "connectivity": 8, "안전기술": 8,
