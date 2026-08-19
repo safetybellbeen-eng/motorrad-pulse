@@ -71,15 +71,30 @@ def log(msg: str):
 # 1. 점수 체계 (요청서 5~14번)
 # ==========================================================
 
+# STEP 11-C1 (버그 수정): 브랜드별로 여러 동의어 키워드가 등록돼 있으면(예: BMW의
+# "bmw"와 "bmw 모토라드"), 기존에는 match_keywords()가 동의어마다 각각 점수를
+# 가산해서 같은 브랜드 언급인데도 2배 가까이 점수가 부풀려지는 문제가 있었다
+# (STEP 11-A AUDIT 2-2번에서 실측 확인: BMW 기사 brand_score가 25+25=50으로 계산됨).
+# BMW만 예외 처리하지 않고, "브랜드 하나 = 동의어가 몇 개 매칭되든 점수는 1회만"이라는
+# 원칙을 모든 브랜드에 동일하게 적용하기 위해 브랜드 단위 그룹 구조를 Source of Truth로
+# 둔다. BRAND_SCORES(동의어 -> 점수 flat dict)는 이 그룹에서 자동으로 파생시켜서,
+# 값이 두 군데서 따로 관리되다 어긋나는 일이 없게 한다(team_brief 등 기존 코드가
+# BRAND_SCORES의 키 목록을 그대로 참조하므로 flat dict 자체는 계속 유지해야 한다).
+BRAND_SYNONYM_GROUPS = [
+    {"canonical": "bmw", "score": 25, "keywords": ["bmw motorrad", "bmw", "비엠더블유 모토라드", "bmw 모토라드"]},
+    {"canonical": "ducati", "score": 16, "keywords": ["ducati", "두카티"]},
+    {"canonical": "triumph", "score": 16, "keywords": ["triumph", "트라이엄프"]},
+    {"canonical": "harley", "score": 14, "keywords": ["harley-davidson", "harley davidson", "할리데이비슨", "할리 데이비슨"]},
+    {"canonical": "honda", "score": 12, "keywords": ["honda", "혼다"]},
+    {"canonical": "yamaha", "score": 12, "keywords": ["yamaha", "야마하"]},
+    {"canonical": "ktm", "score": 12, "keywords": ["ktm"]},
+    {"canonical": "kawasaki", "score": 10, "keywords": ["kawasaki", "가와사키"]},
+]
+
 BRAND_SCORES = {
-    "bmw motorrad": 25, "bmw": 25, "비엠더블유 모토라드": 25, "bmw 모토라드": 25,
-    "ducati": 16, "두카티": 16,
-    "triumph": 16, "트라이엄프": 16,
-    "harley-davidson": 14, "harley davidson": 14, "할리데이비슨": 14, "할리 데이비슨": 14,
-    "honda": 12, "혼다": 12,
-    "yamaha": 12, "야마하": 12,
-    "ktm": 12,
-    "kawasaki": 10, "가와사키": 10,
+    kw: group["score"]
+    for group in BRAND_SYNONYM_GROUPS
+    for kw in group["keywords"]
 }
 
 MARKET_KEYWORD_SCORES = {
@@ -181,26 +196,74 @@ def freshness_score(published_at: str | None) -> int:
     return 0
 
 
+_HANGUL_RANGE = re.compile(r"[가-힣]")
+
+
+def _is_hangul_char(ch: str) -> bool:
+    return bool(ch) and bool(_HANGUL_RANGE.match(ch))
+
+
+def _keyword_matches(kw_lower: str, text_lower: str) -> bool:
+    """키워드 하나가 text_lower 안에 "유효하게" 존재하는지 판단하는 공통 규칙.
+
+    1) 3글자 이하 영문 키워드(ev/ai/us 등): 단어 경계(\\b) 검사 — "event" 안의
+       "ev"처럼 다른 단어의 일부로 잘못 걸리는 것을 막는다(기존 규칙, 변경 없음).
+    2) 한글이 포함된 키워드(예: "시장"): STEP 11-C1 버그 수정 — 매칭된 위치
+       바로 앞 글자가 한글 음절이면(예: "전시장"의 "전"+"시장") 그 앞 글자와
+       합쳐져 전혀 다른 단어(전시장=Exhibition Hall)를 이루는 것으로 보고
+       매칭에서 제외한다. 앞 글자가 없거나(문자열 시작) 공백/한글이 아닌
+       문자(문장부호 등)면 정상 매칭으로 인정한다.
+       뒤쪽 글자는 검사하지 않는다 — "판매량"(판매+량), "시장 점유율"/"시장
+       성장"(시장+공백+접미어)처럼 한글 조사/접미어가 뒤에 붙는 것은 기존과
+       동일하게 정상적으로 허용해야 하기 때문이다(요청 2, 6번 — "국내 시장",
+       "시장 점유율", "시장 성장" 매칭은 그대로 유지).
+    3) 그 외(영문 4글자 이상, 혼합 등): 기존과 동일하게 단순 부분 문자열 매칭.
+    """
+    if len(kw_lower) <= 3 and kw_lower.isascii() and kw_lower.isalpha():
+        return bool(re.search(r"\b" + re.escape(kw_lower) + r"\b", text_lower))
+
+    if _HANGUL_RANGE.search(kw_lower):
+        start = text_lower.find(kw_lower)
+        while start != -1:
+            prev_char = text_lower[start - 1] if start > 0 else ""
+            if not _is_hangul_char(prev_char):
+                return True
+            start = text_lower.find(kw_lower, start + 1)
+        return False
+
+    return kw_lower in text_lower
+
+
 def match_keywords(text: str, keyword_scores: dict[str, int]) -> tuple[int, list[str]]:
     """요청서 13번: 같은 키워드가 여러 번 나와도 한 번만 가산. 존재 여부 기준.
 
-    짧은 영문 키워드(예: ev, ai, us)는 단어 경계를 검사해서 오탐을 막는다.
-    (예: "ev"가 "event"의 부분 문자열로 잘못 매칭되어 PRODUCT_TECH 점수가
-    부풀려지는 문제가 실제 테스트에서 발견되어 추가함. 3글자 이하 영문
-    키워드에만 적용하고, 한글/긴 키워드는 기존 방식을 그대로 유지한다 —
-    한글은 조사가 붙어도 어차피 부분 문자열 매칭이 필요하기 때문.)"""
+    실제 매칭 판정은 _keyword_matches()가 담당한다(짧은 영문 단어 경계 규칙 +
+    STEP 11-C1의 한글 앞글자 경계 규칙)."""
     text_lower = text.lower()
     total = 0
     matched = []
     for kw, score in keyword_scores.items():
-        kw_lower = kw.lower()
-        if len(kw_lower) <= 3 and kw_lower.isascii() and kw_lower.isalpha():
-            if re.search(r"\b" + re.escape(kw_lower) + r"\b", text_lower):
-                total += score
-                matched.append(kw)
-        elif kw_lower in text_lower:
+        if _keyword_matches(kw.lower(), text_lower):
             total += score
             matched.append(kw)
+    return total, matched
+
+
+def match_brand_keywords(text: str) -> tuple[int, list[str]]:
+    """STEP 11-C1 버그 수정: 브랜드 점수는 match_keywords()처럼 동의어별로 각각
+    가산하지 않고, BRAND_SYNONYM_GROUPS 기준으로 "브랜드 하나당 점수 1회만"
+    가산한다. 같은 브랜드의 동의어가 여러 개 매칭돼도(예: BMW의 "bmw"와
+    "bmw 모토라드") 점수는 해당 브랜드의 score 값 1번만 더해진다. matchedKeywords
+    표시용으로는 실제로 매칭된 동의어를 전부 남긴다(team_brief 등 기존 코드가
+    matchedKeywords 안의 브랜드 키워드 문자열을 그대로 참조하기 때문)."""
+    text_lower = text.lower()
+    total = 0
+    matched: list[str] = []
+    for group in BRAND_SYNONYM_GROUPS:
+        group_matched = [kw for kw in group["keywords"] if _keyword_matches(kw.lower(), text_lower)]
+        if group_matched:
+            total += group["score"]
+            matched.extend(group_matched)
     return total, matched
 
 
@@ -217,7 +280,7 @@ def compute_score(article: dict) -> tuple[int, list[str], dict[str, int], dict[s
     """
     text = f"{article.get('title', '')} {article.get('description', '')}"
 
-    brand_score, brand_kw = match_keywords(text, BRAND_SCORES)
+    brand_score, brand_kw = match_brand_keywords(text)
     market_score, market_kw = match_keywords(text, MARKET_KEYWORD_SCORES)
     product_score, product_kw = match_keywords(text, PRODUCT_KEYWORD_SCORES)
     tech_score, tech_kw = match_keywords(text, TECH_KEYWORD_SCORES)
