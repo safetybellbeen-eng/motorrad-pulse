@@ -1694,6 +1694,339 @@ def build_brand_summary(analyzed_articles: list[dict]) -> dict:
     return summary
 
 
+# ==========================================================
+# 11. STEP 11-C2 — Editorial Ranking v2 (SHADOW MODE)
+# ==========================================================
+# 이 섹션 전체는 "병행 계산"용이다. 기존 score/importance/category, 기존
+# select_top_news()/select_top_news_split()는 단 한 줄도 수정하지 않았고,
+# main()도 이 섹션의 함수를 호출하지 않는다(운영 결과는 이번 STEP에서 그대로다).
+# STEP 11-C1에서 만든 _keyword_matches()(짧은 영문 단어 경계 + 한글 왼쪽 경계 규칙)를
+# 그대로 재사용해서 매칭 규칙이 두 군데서 따로 관리되며 어긋나는 일이 없게 했다.
+#
+# 설계 원칙(요청서 0/7/9번):
+# - 각 signal family(businessImpact/koreaRelevance/productSignificance/
+#   customerImpact)는 "그 family 안에서 가장 강한 신호 1개"만 대표값으로 쓴다
+#   (요청서 7번: 같은 의미의 키워드가 여러 개 매칭돼도 무제한 누적되지 않도록).
+# - editorialPriority(P1/P2/P3)는 editorialScore 합계가 아니라, 각 family가
+#   어떤 "tier"에 도달했는지(major/standard/minor/none)로 직접 판정한다.
+#   총점이 아니라 tier 조합으로 판정해야 "키워드가 많아서 우연히 점수가 높아진"
+#   기사가 tier 없이 상위 Priority로 올라가는 것을 막을 수 있다(요청서 9번).
+
+EDITORIAL_PRIORITY_RANK = {"P1": 0, "P2": 1, "P3": 2}
+
+# Korea 확정 여부를 무효화하는 부정 문맥 트리거. "국내 출시 일정은 미정" 같은
+# 문장에서 "국내"/"국내 출시"가 매칭되더라도 실제로는 확정된 사실이 아니므로
+# Korea Relevance/Business Impact(Korea-flavored) 양쪽에서 제외한다(요청서 13번).
+# 제한적 window 검사만 하며, 형태소 분석 등 NLP는 쓰지 않는다(요청서 13번 "과도한
+# NLP 구현은 하지 않는다").
+NEGATION_TRIGGERS = [
+    "미정", "미확정", "계획 없", "계획이 없", "불투명", "예정 없", "검토 중",
+    "확정되지 않", "영향은 없", "영향이 없", "관련 없", "해당 없", "없다", "없음",
+]
+NEGATION_WINDOW_CHARS = 20
+
+# Business Impact — Korea 관련 표현이 포함된 major 문구(부정 문맥 검사 대상)
+KOREA_FLAVORED_MAJOR_PHRASES = [
+    "국내 출시", "국내 신모델 출시", "국내 가격", "국내 사전예약", "국내 판매",
+    "한국 출시", "코리아 출시",
+]
+# Business Impact — Korea 표현이 없는 major 문구(단순 매칭, 부정 문맥 검사 없음 —
+# 요청서 13번 범위를 Korea-locality 표현으로 한정하기 위함, 과도한 확장 방지)
+BUSINESS_IMPACT_OTHER_MAJOR_PHRASES = [
+    "가격 인상", "가격 인하", "가격 발표", "사전예약", "딜러십", "딜러망 확대",
+    "딜러망 축소", "유통망 확장", "유통망 축소", "등록대수", "점유율", "리콜",
+    "규제 변화", "관세", "판매금지", "판매 정책", "판매 전략", "대형 프로모션",
+    "대규모 프로모션", "판매량",
+]
+BUSINESS_IMPACT_STANDARD_PHRASES = ["출시", "공개", "신제품", "프로모션", "캠페인", "발표"]
+
+KOREA_CONFIRMED_PHRASES = KOREA_FLAVORED_MAJOR_PHRASES + ["국내 딜러"]
+KOREA_WEAK_PHRASES = ["국내", "한국", "코리아"]
+
+PRODUCT_SIGNIFICANCE_MAJOR_PHRASES = ["신모델", "신차", "완전변경", "풀체인지", "new model", "세대변경", "신제품"]
+PRODUCT_SIGNIFICANCE_MINOR_PHRASES = ["연식 변경", "컬러 변경", "색상 변경", "옵션 변경", "트림 추가", "페이스리프트", "소폭 변경"]
+
+CUSTOMER_IMPACT_MAJOR_PHRASES = [
+    "랠리", "rally", "페스티벌", "festival", "축제", "오픈하우스", "open house",
+    "고객 프로그램", "customer program",
+]
+CUSTOMER_IMPACT_MINOR_PHRASES = [
+    "시승", "시승회", "test ride", "이벤트", "event", "행사", "라이딩 이벤트", "riding event",
+]
+
+EDITORIAL_TIER_SCORES = {
+    "business": {"major": 25, "standard": 15, "none": 0},
+    "korea": {"confirmed": 18, "weak": 8, "none": 0},
+    "product": {"major": 15, "minor": 3, "none": 0},
+    "customer": {"major": 14, "minor": 5, "none": 0},
+}
+
+KOREA_OFFICIAL_SOURCE_BONUS = 4
+KOREA_RELEVANCE_CAP = 22
+
+
+def _phrase_active_positions(phrase_lower: str, text_lower: str) -> list[int]:
+    """STEP 11-C1의 한글 왼쪽 경계 규칙을 재사용해서, 문구가 "유효하게"(다른 단어에
+    붙어 오매칭된 게 아니게) 등장하는 위치를 전부 찾는다."""
+    positions = []
+    start = text_lower.find(phrase_lower)
+    has_hangul = bool(_HANGUL_RANGE.search(phrase_lower))
+    while start != -1:
+        if has_hangul:
+            prev_char = text_lower[start - 1] if start > 0 else ""
+            if not _is_hangul_char(prev_char):
+                positions.append(start)
+        else:
+            positions.append(start)
+        start = text_lower.find(phrase_lower, start + 1)
+    return positions
+
+
+def _phrase_confirmed_without_negation(phrase_lower: str, text_lower: str, window: int = NEGATION_WINDOW_CHARS) -> bool:
+    """문구가 유효하게 매칭되고(_phrase_active_positions), 매칭 직후 window 글자
+    안에 부정 문맥 트리거가 없는 경우에만 "확정"으로 인정한다. 문구가 여러 번
+    나오면 그중 하나라도 부정되지 않은 매칭이 있으면 확정으로 본다."""
+    for pos in _phrase_active_positions(phrase_lower, text_lower):
+        tail = text_lower[pos + len(phrase_lower): pos + len(phrase_lower) + window]
+        if not any(neg in tail for neg in NEGATION_TRIGGERS):
+            return True
+    return False
+
+
+def _any_phrase_matches(phrases: list[str], text_lower: str) -> bool:
+    return any(_keyword_matches(p.lower(), text_lower) for p in phrases)
+
+
+def _any_phrase_confirmed(phrases: list[str], text_lower: str) -> bool:
+    return any(_phrase_confirmed_without_negation(p.lower(), text_lower) for p in phrases)
+
+
+def compute_editorial_signals(title: str, description: str) -> dict:
+    """4개 signal family 각각에 대해 "이 family 안에서 가장 강한 tier 1개"만
+    골라 점수와 tier 이름을 함께 반환한다(요청서 7번: 무제한 누적 방지).
+    Freshness/Coverage는 여기 포함하지 않는다(발행시각/relatedCoverageCount처럼
+    기사 본문 텍스트가 아니라 메타데이터 기반이라 별도로 계산한다)."""
+    text_lower = f"{title or ''} {description or ''}".lower()
+
+    # ---- Business Impact ----
+    if _any_phrase_confirmed(KOREA_FLAVORED_MAJOR_PHRASES, text_lower) or _any_phrase_matches(BUSINESS_IMPACT_OTHER_MAJOR_PHRASES, text_lower):
+        business_tier = "major"
+    elif _any_phrase_matches(BUSINESS_IMPACT_STANDARD_PHRASES, text_lower):
+        business_tier = "standard"
+    else:
+        business_tier = "none"
+
+    # ---- Korea Relevance (부정 문맥 가드 적용, 요청서 13번) ----
+    if _any_phrase_confirmed(KOREA_CONFIRMED_PHRASES, text_lower):
+        korea_tier = "confirmed"
+    elif _any_phrase_confirmed(KOREA_WEAK_PHRASES, text_lower):
+        korea_tier = "weak"
+    else:
+        korea_tier = "none"
+
+    # ---- Product Significance ----
+    if _any_phrase_matches(PRODUCT_SIGNIFICANCE_MAJOR_PHRASES, text_lower):
+        product_tier = "major"
+    elif _any_phrase_matches(PRODUCT_SIGNIFICANCE_MINOR_PHRASES, text_lower):
+        product_tier = "minor"
+    else:
+        product_tier = "none"
+
+    # ---- Customer / Marketing Impact ----
+    if _any_phrase_matches(CUSTOMER_IMPACT_MAJOR_PHRASES, text_lower):
+        customer_tier = "major"
+    elif _any_phrase_matches(CUSTOMER_IMPACT_MINOR_PHRASES, text_lower):
+        customer_tier = "minor"
+    else:
+        customer_tier = "none"
+
+    return {
+        "businessTier": business_tier,
+        "businessImpact": EDITORIAL_TIER_SCORES["business"][business_tier],
+        "koreaTier": korea_tier,
+        "koreaRelevance": EDITORIAL_TIER_SCORES["korea"][korea_tier],
+        "productTier": product_tier,
+        "productSignificance": EDITORIAL_TIER_SCORES["product"][product_tier],
+        "customerTier": customer_tier,
+        "customerImpact": EDITORIAL_TIER_SCORES["customer"][customer_tier],
+    }
+
+
+def _coverage_bonus(related_coverage_count: int) -> int:
+    """요청서 6-E, 14번: relatedCoverageCount는 같은 Tier 안에서 순서만 살짝
+    올려주는 Soft Bonus다. Priority 자체를 승격시키지 않는다(그런 로직 자체가
+    없다 — determine_editorial_priority()는 이 값을 아예 인자로 받지 않는다)."""
+    if related_coverage_count >= 5:
+        return 9
+    if related_coverage_count >= 3:
+        return 6
+    if related_coverage_count == 2:
+        return 3
+    return 0
+
+
+def determine_editorial_priority(business_tier: str, korea_tier: str, product_tier: str, customer_tier: str) -> str:
+    """P1/P2/P3는 editorialScore 합계가 아니라 tier 조합으로 직접 판정한다.
+
+    P1: Business Impact가 major이고(가격/사전예약/딜러/리콜 등 실제 사업 행위),
+        Korea Relevance가 확정(confirmed) 이거나 최소 약한 신호(weak, "코리아"
+        등)라도 있는 경우 — 완전히 국내와 무관한 것이 확실할 때만 제외한다.
+    P2: Business Impact가 major/standard이거나(국내 확정은 안 됐지만 실제 사업
+        행위·발표는 있음), Product Significance가 major(진짜 신모델급)이거나,
+        Customer Impact가 major(랠리/페스티벌/오픈하우스급 대형 행사)인 경우.
+    P3: 그 외 전부(단순 안내/사소한 변경/일반 시승기 등)."""
+    if business_tier == "major" and korea_tier != "none":
+        return "P1"
+    if business_tier in ("major", "standard") or product_tier == "major" or customer_tier == "major":
+        return "P2"
+    return "P3"
+
+
+def compute_editorial_score(article: dict) -> tuple[str, int, dict]:
+    """article: title/description(또는 summary)/publishedAt/relatedCoverageCount/
+    acquisitionMethod를 가진 dict. raw_news.json의 원본 기사 dict를 그대로
+    넣어도 되고, Fixture처럼 직접 만든 dict를 넣어도 된다.
+
+    반환: (editorialPriority, editorialScore, editorialScoreBreakdown)"""
+    title = article.get("title", "")
+    description = article.get("description") or article.get("summary") or ""
+    signals = compute_editorial_signals(title, description)
+
+    business_impact = signals["businessImpact"]
+    korea_relevance = signals["koreaRelevance"]
+    # 검증된 Korea Official Source Soft Bonus(요청서 6-B번): 브랜드를 하드코딩하지
+    # 않고, collect_news.py가 이미 채워 넣는 acquisitionMethod=="rss"(Direct
+    # 공식 RSS로 수집됐다는 뜻, 현재는 BMW Korea/한국경제) 여부만 본다. 어느
+    # 브랜드든 향후 공식 RSS가 추가되면 자동으로 동일하게 적용된다.
+    if article.get("acquisitionMethod") == "rss":
+        korea_relevance = min(korea_relevance + KOREA_OFFICIAL_SOURCE_BONUS, KOREA_RELEVANCE_CAP)
+
+    product_significance = signals["productSignificance"]
+    customer_impact = signals["customerImpact"]
+    market_attention = _coverage_bonus(article.get("relatedCoverageCount") or 1)
+    freshness = freshness_score(article.get("publishedAt"))
+
+    priority = determine_editorial_priority(
+        signals["businessTier"], signals["koreaTier"], signals["productTier"], signals["customerTier"]
+    )
+
+    total = business_impact + korea_relevance + product_significance + customer_impact + market_attention + freshness
+    total = max(0, min(100, total))
+
+    breakdown = {
+        "businessImpact": business_impact,
+        "koreaRelevance": korea_relevance,
+        "productSignificance": product_significance,
+        "customerImpact": customer_impact,
+        "marketAttention": market_attention,
+        "freshness": freshness,
+    }
+    return priority, total, breakdown
+
+
+# ---- Diversity v2 (SHADOW 전용, 요청서 10번) ----
+# 기존 TOP_NEWS_MAX_PER_GROUP(sourceGroup 기준)은 그대로 둔다. v2는 별도 상수/
+# 함수로 병행 구현하고, brandGroups -> topicTags -> sourceGroup 순으로 fallback한다.
+TOP_NEWS_MAX_PER_GROUP_V2 = 2
+
+
+def _diversity_group_key_v2(article: dict) -> str:
+    """1순위: brandGroups(실제 브랜드) 2순위: topicTags(주제/엔티티, STEP7의
+    compute_topic_signals가 이미 계산해 둔 값) 3순위(최후 fallback): sourceGroup.
+    브랜드도 주제도 전혀 안 잡히는 기사만 기존처럼 수집 채널 기준으로 묶인다."""
+    brand_groups = article.get("brandGroups") or []
+    if brand_groups:
+        return "brand:" + "+".join(sorted(brand_groups))
+    topic_tags = article.get("topicTags") or []
+    if topic_tags:
+        return "topic:" + "+".join(sorted(topic_tags))
+    return "source:" + (article.get("sourceGroup") or "unknown")
+
+
+def _editorial_sort_key(article: dict) -> tuple:
+    """P1 > P2 > P3 우선, 같은 Tier 안에서는 editorialScore -> freshness ->
+    relatedCoverageCount -> id(결정론적 tie-breaker) 순으로 정렬한다(요청서 5번)."""
+    return (
+        EDITORIAL_PRIORITY_RANK.get(article.get("editorialPriority"), 99),
+        -article.get("editorialScore", 0),
+        -article.get("editorialScoreBreakdown", {}).get("freshness", 0),
+        -(article.get("relatedCoverageCount") or 1),
+        article.get("id", ""),
+    )
+
+
+def select_top_news_v2(analyzed_articles: list[dict], max_count: int = TOP_NEWS_MAX) -> list[str]:
+    """select_top_news()의 v2. 정렬 기준만 score -> _editorial_sort_key로 바꾸고,
+    그룹당 상한(diversity)과 유사 제목 중복 제거 로직은 기존 select_top_news()와
+    동일한 구조를 유지하되 그룹 키만 _diversity_group_key_v2()를 쓴다."""
+    sorted_articles = sorted(analyzed_articles, key=_editorial_sort_key)
+
+    selected: list[dict] = []
+    group_counts: dict[str, int] = defaultdict(int)
+
+    for article in sorted_articles:
+        if len(selected) >= max_count:
+            break
+
+        group = _diversity_group_key_v2(article)
+        if group_counts[group] >= TOP_NEWS_MAX_PER_GROUP_V2:
+            continue
+
+        is_duplicate_topic = any(
+            is_similar_title(article["title"], s["title"]) for s in selected
+        )
+        if is_duplicate_topic:
+            continue
+
+        selected.append(article)
+        group_counts[group] += 1
+
+    return [a["id"] for a in selected]
+
+
+def select_top_news_split_v2(analyzed_articles: list[dict]) -> tuple[list[str], list[str]]:
+    """select_top_news_split()의 v2. OWN/OTHERS 분리 기준(_is_bmw_own_article)은
+    기존과 동일하게 재사용한다 — 이번 STEP은 OWN/OTHERS 판정 자체가 아니라
+    "각 그룹 내부 정렬 순서"만 바꾸는 것이 목적이기 때문이다. 기존 select_top_news_split()과
+    마찬가지로 OWN 목록에는 diversity/제목중복 로직을 적용하지 않는다(OWN은
+    이미 BMW 하나로 브랜드가 고정돼 있어 diversity 개념 자체가 성립하지 않는다)."""
+    bmw_articles = [a for a in analyzed_articles if _is_bmw_own_article(a)]
+    bmw_sorted = sorted(bmw_articles, key=_editorial_sort_key)[:TOP_NEWS_MAX]
+    bmw_ids = [a["id"] for a in bmw_sorted]
+
+    non_bmw_articles = [a for a in analyzed_articles if not _is_bmw_own_article(a)]
+    others_ids = select_top_news_v2(non_bmw_articles, max_count=TOP_NEWS_MAX)
+
+    return bmw_ids, others_ids
+
+
+def attach_editorial_fields(analyzed_articles: list[dict], raw_by_id: dict[str, dict]) -> list[dict]:
+    """analyzed_articles(기존 analyze_all_articles() 결과)의 "복사본"에 editorial
+    필드를 추가해서 반환한다. 원본 딕셔너리는 건드리지 않는다(요청서 5, 16번:
+    기존 운영 결과에 영향을 주지 않는 SHADOW 전용 파생 데이터)."""
+    result = []
+    for a in analyzed_articles:
+        raw = raw_by_id.get(a["id"], {})
+        # editorial 계산은 원문 title/description(raw_news.json 원본)을 쓴다.
+        # analyzed_articles의 summary는 STEP 9.3 등에서 이미 가공된 값이라
+        # 원문과 다를 수 있어, 점수 계산에는 raw 원문을 우선 사용한다.
+        editorial_input = {
+            "title": a.get("title", ""),
+            "description": raw.get("description") or a.get("summary") or "",
+            "publishedAt": a.get("publishedAt", ""),
+            "relatedCoverageCount": raw.get("relatedCoverageCount"),
+            "acquisitionMethod": raw.get("acquisitionMethod"),
+        }
+        priority, score, breakdown = compute_editorial_score(editorial_input)
+        merged = dict(a)
+        merged["editorialPriority"] = priority
+        merged["editorialScore"] = score
+        merged["editorialScoreBreakdown"] = breakdown
+        merged["relatedCoverageCount"] = raw.get("relatedCoverageCount") or 1
+        result.append(merged)
+    return result
+
+
 def main():
     log("=" * 60)
     log("[MOTORRAD PULSE FREE INTELLIGENCE]")
