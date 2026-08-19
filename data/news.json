@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-19",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:07 PM",
+    "date": "2026-08-20",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "07:46 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 2건, 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-19T18:07:15.613705+09:00",
+    "lastUpdatedISO": "2026-08-20T07:46:58.549077+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -16,11 +16,11 @@
         "secondaryTheme": "NEW_MODEL",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "New Midsize GS Spied: Is BMW Resurrecting The F650GS Dakar?",
-        "topArticleUrl": "https://www.advpulse.com/adv-news/new-midsize-gs-spied-is-bmw-resurrecting-the-f650gs-dakar/",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
-          "ADVENTURE": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "CONTINUING"
         }
       },
       "ducati": {
@@ -59,13 +59,11 @@
         "secondaryTheme": "CUSTOMER",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "Honda Australia’s new WN7 subscription could point to the future of motorcycle ownership",
-        "topArticleUrl": "https://www.visordown.com/news/honda-australias-new-wn7-subscription-could-point-future-motorcycle-ownership",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "NORMAL",
-          "ADVENTURE": "NORMAL",
-          "ELECTRIFICATION": "CONTINUING",
-          "CUSTOMER": "CONTINUING"
+          "CUSTOMER": "CONTINUING",
+          "ELECTRIFICATION": "CONTINUING"
         }
       },
       "yamaha": {
@@ -81,15 +79,7 @@
     }
   },
   "marketIntelligence": {
-    "market": [
-      {
-        "title": "Motorcycle MOT prices could rise as Independant Garage Association calls for £95 fee",
-        "description": "Independent Garage Association says current MOT fee is no longer sustainable, with motorcycle tests also caught up in the proposed increase",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
-      }
-    ],
+    "market": [],
     "competitor": [
       {
         "title": "[프로모션] 스피드 트윈·본네빌 시리즈, 취등록세 전액 지원+커스텀 파츠 증정",
@@ -97,30 +87,9 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "Bristol dealership to celebrate 100-year anniversary with Suzuki GSX-8S giveaway",
-        "description": "Bristol-based dealership Fowlers Motorcycles is set to host a 100-year anniversary celebration next month, which includes a prize draw offering a brand-new Suzuki GSX-8S.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
-        "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
-        "description": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
-      {
-        "title": "New Midsize GS Spied: Is BMW Resurrecting The F650GS Dakar?",
-        "description": "BMW Motorrad is working on a new midsize GS, recently spotted in prototype form.",
-        "relatedNewsCount": 1,
-        "impact": "High",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
       {
         "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 사전 예약 실시",
         "description": "BMW의 모터사이클 부문인 BMW 모토라드가 오는 8월 18일 오후 2시부터 9월 7일까지 BMW 모토라드 샵 온라인(https://shop.bmw-motorrad.co.kr)에서 새로운 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’의 사전 예약을 진행한다.",
@@ -129,18 +98,18 @@
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
       {
-        "title": "Honda Australia’s new WN7 subscription could point to the future of motorcycle ownership",
-        "description": "Could subscribing to an electric motorcycle reduce the risk of depreciation? And could subscription ownership eventually replace buying bikes?",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
-      },
-      {
         "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
         "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] 샤드 ‘TERRA TR46 알루미늄’ 프리미엄 탑케이스 출시",
+        "description": "투어링부터 모토캠핑까지 아우르는 올인원 탑케이스, 46ℓ 대용량·IPX5 방수·레드닷 디자인 어워드 수상글로벌 모터사이클 용품 및 파츠 유통 기업인 신원모터싸이클이 스페인 모터사이클 케이스 전문 브랜드 샤드(SHAD)의 프리미엄 알루미늄 탑케이스 ‘TERRA TR46 ALUMINIUM(모델명 D0TR 46200)’을 국내에 공식 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -164,7 +133,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 2
+      "rank": 1
     },
     {
       "id": "1f752ce940d7570d",
@@ -174,7 +143,7 @@
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-08-19T17:08:41+09:00",
+      "publishedAt": "2026-08-19T23:08:42+09:00",
       "category": "PRODUCT_TECH",
       "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
       "importance": 2.0,
@@ -182,7 +151,7 @@
       "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     },
     {
       "id": "040f1f6d35b7996a",
@@ -200,7 +169,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 1
     },
     {
       "id": "770568b0244f30a4",
@@ -218,98 +187,6 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
-    },
-    {
-      "id": "1cd1930f3309e044",
-      "title": "New Midsize GS Spied: Is BMW Resurrecting The F650GS Dakar?",
-      "url": "https://www.advpulse.com/adv-news/new-midsize-gs-spied-is-bmw-resurrecting-the-f650gs-dakar/",
-      "source": "ADV Pulse",
-      "sourceType": "media",
-      "sourceGroup": "global_media",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-08-18T04:17:52+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW Motorrad is working on a new midsize GS, recently spotted in prototype form.",
-      "importance": 4.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
-    },
-    {
-      "id": "df26be9b79e247d4",
-      "title": "Motorcycle MOT prices could rise as Independant Garage Association calls for £95 fee",
-      "url": "https://www.visordown.com/news/motorcycle-mot-prices-could-rise-independant-garage-association-calls-ps95-fee",
-      "source": "Visordown",
-      "sourceType": "media",
-      "sourceGroup": "global_media",
-      "brandGroups": [],
-      "publishedAt": "2026-08-18T00:10:11+09:00",
-      "category": "MARKET",
-      "summary": "Independent Garage Association says current MOT fee is no longer sustainable, with motorcycle tests also caught up in the proposed increase",
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "4dca35476c3e7874",
-      "title": "Bristol dealership to celebrate 100-year anniversary with Suzuki GSX-8S giveaway",
-      "url": "https://www.visordown.com/news/bristol-dealership-celebrate-100-year-anniversary-suzuki-gsx-8s-giveaway",
-      "source": "Visordown",
-      "sourceType": "media",
-      "sourceGroup": "global_media",
-      "brandGroups": [],
-      "publishedAt": "2026-08-17T20:00:34+09:00",
-      "category": "COMPETITOR",
-      "summary": "Bristol-based dealership Fowlers Motorcycles is set to host a 100-year anniversary celebration next month, which includes a prize draw offering a brand-new Suzuki GSX-8S.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "c3df98a3c87b9d6c",
-      "title": "Superbike Factory collapse: The small bike logistics firm left thousands out of pocket",
-      "url": "https://www.visordown.com/features/superbike-factory-collapse-small-bike-logistics-firm-left-thousands-out-pocket",
-      "source": "Visordown",
-      "sourceType": "media",
-      "sourceGroup": "global_media",
-      "brandGroups": [],
-      "publishedAt": "2026-08-17T19:32:09+09:00",
-      "category": "COMPETITOR",
-      "summary": "A motorcycle transport firm reveals how Superbike Factory's collapse left it with unpaid invoices, an extra driver's wages and a major hole in its summer workload.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "f9c2c00d08c1cca6",
-      "title": "Honda Australia’s new WN7 subscription could point to the future of motorcycle ownership",
-      "url": "https://www.visordown.com/news/honda-australias-new-wn7-subscription-could-point-future-motorcycle-ownership",
-      "source": "Visordown",
-      "sourceType": "media",
-      "sourceGroup": "global_media",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-17T18:30:07+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "Could subscribing to an electric motorcycle reduce the risk of depreciation? And could subscription ownership eventually replace buying bikes?",
-      "importance": 2.5,
-      "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
     }
   ]
 }
