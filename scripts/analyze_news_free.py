@@ -2360,6 +2360,20 @@ def main():
     log(f"PRODUCT & TECH: {len(market_intel.get('productTech', []))}")
     log(f"CUSTOMER & TREND: {len(market_intel.get('customerTrend', []))}")
 
+    # ---- STEP 12-F: Market Intelligence V2 Pipeline Activation ----
+    # STEP 12-C에서 만든 build_market_intelligence_v2()는 그동안 main()에서 호출되지 않아
+    # SHADOW MODE(계산만 되고 저장되지 않음) 상태였다. 이번 STEP은 그 로직을 수정하지 않고
+    # 그대로 호출해 news.json에 함께 저장하는 "배선" 작업만 한다. team_brief는 기존과 동일하게
+    # v1 market_intel을 그대로 사용한다(요청서 5번: V2 로직/판정 기준 변경 금지 범위).
+    market_intel_v2 = build_market_intelligence_v2(analyzed_articles)
+
+    log("\nInsights V2 (STEP 12-F)")
+    log(f"OWN WATCH: {len(market_intel_v2.get('ownWatch', []))}")
+    log(f"MARKET: {len(market_intel_v2.get('market', []))}")
+    log(f"COMPETITOR: {len(market_intel_v2.get('competitor', []))}")
+    log(f"PRODUCT & TECH: {len(market_intel_v2.get('productTech', []))}")
+    log(f"CUSTOMER & TREND: {len(market_intel_v2.get('customerTrend', []))}")
+
     # ---- STEP 8: Brand Intelligence Summary ----
     # 중요: 반드시 History Snapshot을 "저장하기 전"에 계산해야 한다.
     # build_brand_summary()는 기존에 쌓여있던 History를 Previous/Current 비교에 사용하는데,
@@ -2376,6 +2390,11 @@ def main():
     news_json = build_news_json(analyzed_articles, bmw_top_ids, others_top_ids, existing_news)
     insights_json = build_insights_json(daily_signal, market_intel, team_brief)
     news_json = apply_insights_to_news_meta(news_json, insights_json)
+
+    # STEP 12-F: 기존 news_json["marketIntelligence"](Legacy)는 위 apply_insights_to_news_meta()가
+    # 이미 채웠고, 이번 STEP에서 그 값/생성 방식을 전혀 건드리지 않았다. marketIntelligenceV2는
+    # 완전히 새로운 최상위 키로만 추가한다(기존 키 삭제/덮어쓰기 없음 — 요청서 4번 Legacy 유지).
+    news_json["marketIntelligenceV2"] = market_intel_v2
 
     # brandSummary는 news.json의 meta 아래 새 필드로만 추가한다 (요청서 STEP8-A 확인사항 H:
     # 기존 meta/marketIntelligence/news 키는 전혀 건드리지 않아 Backward Compatible).
