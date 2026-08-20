@@ -47,7 +47,11 @@ function loadNewsData() {
       renderSignal(data.meta.todaySignal);
       renderTopNews(data.news || []);
       renderBrandSummary(data.meta.brandSummary || {});
-      renderMarketIntelligence(data.marketIntelligence || {});
+      // STEP 12-D: marketIntelligenceV2(SHADOW MODE로 생성된 brandRole/insightType 포함 데이터)를
+      // 우선 사용하고, 없는 과거 데이터(marketIntelligenceV2 없이 marketIntelligence만 있는 경우)는
+      // 기존 marketIntelligence로 자연스럽게 fallback한다 — 데이터 계산 로직은 전혀 건드리지 않고,
+      // 어느 데이터를 화면에 연결할지만 여기서 결정한다.
+      renderMarketIntelligence(data.marketIntelligenceV2 || data.marketIntelligence || {});
       renderTeamBrief(data);
     })
     .catch((err) => {
@@ -257,12 +261,63 @@ function renderTopNewsColumn(container, newsArray, emptyMessage) {
   });
 }
 
-/* ---------- MARKET INTELLIGENCE ---------- */
+/* ---------- MARKET INTELLIGENCE (STEP 12-D: marketIntelligenceV2 UI Integration) ---------- */
+// brandRole 코드값 -> 화면에 보여줄 작은 배지 표현. STEP 12-C에서 계산된 값을 그대로 표시만
+// 한다(UI에서 재분류하지 않음). 알 수 없는/누락된 값은 배지 자체를 그리지 않는다(Legacy
+// fallback 데이터나 STEP 12-D 이전 카드에는 brandRole이 없을 수 있음 — 요청서 15번 Case D).
+const BRAND_ROLE_BADGE = {
+  OWN: { label: "OWN", cls: "role-badge--own" },
+  COMPETITOR: { label: "COMPETITOR", cls: "role-badge--competitor" },
+  INDUSTRY: { label: "INDUSTRY", cls: "role-badge--industry" },
+  MIXED: { label: "MIXED", cls: "role-badge--mixed" },
+};
+
+// insightType 코드값을 개발자 코드값 그대로 노출하지 않고, 사용자가 이해하기 쉬운 짧은
+// 한국어 표현으로 바꾼다(요청서 6번). NEEDS_CONFIRMATION만 시각적으로 살짝 구분하되(색상만),
+// 경고 아이콘/배경색 채우기 같은 과도한 경고 디자인은 쓰지 않는다.
+const INSIGHT_TYPE_LABEL = {
+  GROUPED: { label: "복수 기사", cls: "" },
+  SINGLE_SIGNAL: { label: "단일 신호", cls: "" },
+  NEEDS_CONFIRMATION: { label: "추가 확인 필요", cls: "is-needs-confirmation" },
+};
+
+function roleBadgeHtml(brandRole) {
+  const badge = BRAND_ROLE_BADGE[brandRole];
+  if (!badge) return ""; // brandRole 없음/알 수 없음 -> 조용히 생략 (요청서 15번 Case D)
+  return `<span class="role-badge ${badge.cls}">${badge.label}</span>`;
+}
+
+function insightTypeHtml(insightType) {
+  const info = INSIGHT_TYPE_LABEL[insightType];
+  if (!info) return ""; // insightType 없음/알 수 없음 -> 조용히 생략 (요청서 15번 Case E)
+  return `<span class="insight-type ${info.cls}">${info.label}</span>`;
+}
+
 function renderMarketIntelligence(intel) {
+  // OWN WATCH는 기존 4개 컬럼과 별개로, 상단 full-width 강조 영역에 렌더링한다(요청서 1번).
+  // marketIntelligence(v1, Legacy fallback)에는 ownWatch 키 자체가 없으므로 빈 배열로 처리된다
+  // (요청서 15번 Case B) — renderOwnWatch()가 빈 배열을 compact empty state로 자연스럽게 처리한다.
+  renderOwnWatch(intel.ownWatch || []);
   renderIntelColumn("intel-market", intel.market);
   renderIntelColumn("intel-competitor", intel.competitor);
   renderIntelColumn("intel-productTech", intel.productTech);
   renderIntelColumn("intel-customerTrend", intel.customerTrend);
+}
+
+function renderOwnWatch(items) {
+  const container = document.getElementById("own-watch-cards");
+  if (!container) return; // index.html에 own-watch 마크업이 없는 예외적 상황에서도 페이지가 죽지 않도록
+  container.innerHTML = "";
+
+  if (!items || items.length === 0) {
+    // 요청서 4번: 영역 자체는 유지하되, compact한 empty state로 표시한다(큰 여백을 만들지 않음).
+    container.innerHTML = `<div class="own-watch__empty">오늘 확인된 주요 BMW 전략 신호가 없습니다.</div>`;
+    return;
+  }
+
+  items.forEach((item) => {
+    container.appendChild(buildIntelCard(item));
+  });
 }
 
 function renderIntelColumn(containerId, items) {
@@ -275,22 +330,41 @@ function renderIntelColumn(containerId, items) {
   }
 
   items.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "intel-card";
-    card.innerHTML = `
-      <h5 class="intel-card__title">${escapeHtml(item.title)}</h5>
-      ${item.description ? `<p class="intel-card__desc">${escapeHtml(item.description)}</p>` : ""}
-      <div class="intel-card__meta">
-        <span>관련 뉴스 ${item.relatedNewsCount}건</span>
-        <span class="impact-badge impact-${item.impact}">${item.impact}</span>
-      </div>
-      <p class="intel-card__bmw">
-        <strong>BMW MOTORRAD</strong>
-        ${escapeHtml(item.bmwNote)}
-      </p>
-    `;
-    container.appendChild(card);
+    container.appendChild(buildIntelCard(item));
   });
+}
+
+// OWN WATCH 카드와 기존 4개 컬럼 카드가 동일한 마크업/스타일을 공유한다(요청서 9번: TOP NEWS와는
+// 시각적으로 다르지만, Market Intelligence 내부에서는 하나의 일관된 카드 디자인을 유지).
+function buildIntelCard(item) {
+  const card = document.createElement("div");
+  card.className = "intel-card";
+
+  // 요청서 8번: brandRole/insightType을 한 줄(compact meta row)로 묶어 정보 위계 1번 자리에 둔다.
+  // 둘 다 없는(Legacy) 카드는 이 줄 자체를 만들지 않는다(빈 줄 노출 방지).
+  const roleHtml = roleBadgeHtml(item.brandRole);
+  const insightHtml = insightTypeHtml(item.insightType);
+  const topMetaHtml = (roleHtml || insightHtml)
+    ? `<div class="intel-card__topmeta">${roleHtml}${insightHtml}</div>`
+    : "";
+
+  const relatedCount = typeof item.relatedNewsCount === "number" ? item.relatedNewsCount : 1;
+
+  card.innerHTML = `
+    ${topMetaHtml}
+    <h5 class="intel-card__title">${escapeHtml(item.title || "")}</h5>
+    ${item.description ? `<p class="intel-card__desc">${escapeHtml(item.description)}</p>` : ""}
+    ${item.bmwNote ? `
+    <p class="intel-card__bmw">
+      <strong>WATCH POINT</strong>
+      ${escapeHtml(item.bmwNote)}
+    </p>` : ""}
+    <div class="intel-card__meta">
+      <span>관련 뉴스 ${relatedCount}건</span>
+      <span class="impact-badge impact-${item.impact}">${item.impact}</span>
+    </div>
+  `;
+  return card;
 }
 
 /* ---------- BRAND PULSE (STEP 8: 브랜드별 Intelligence Summary) ---------- */

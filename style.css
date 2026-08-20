@@ -651,6 +651,84 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: 3px;
 }
 
+/* ---- STEP 12-D: OWN WATCH (Market Intelligence v2) ----
+   기존 4개 intel-column과 동일한 '좁은 컬럼'이 아니라, 그 위에 놓이는 full-width 강조
+   영역. 기존 intel-card/impact-badge 등 카드 내부 스타일은 그대로 재사용하고(디자인
+   시스템을 새로 만들지 않음, 요청서 9번), 바깥 프레임만 살짝 강조한다. */
+.own-watch{
+  background: var(--panel);
+  border: 1px solid var(--bmw-blue-dim);
+  padding: 20px 22px;
+  margin-bottom: 20px;
+}
+.own-watch__head{
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.own-watch__title{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: var(--bmw-blue-light);
+}
+.own-watch__sub{
+  font-size: 11.5px;
+  color: var(--grey);
+}
+.own-watch__cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+/* 요청서 4번: 오늘 ownWatch가 0건이어도 영역 자체는 유지하되, 큰 공간을 차지하지
+   않도록 compact하게 표시한다(intel-column의 empty-state보다 더 낮은 높이). */
+.own-watch__empty{
+  font-size: 11.5px;
+  color: var(--grey-dim);
+  padding: 4px 2px;
+}
+
+/* ---- STEP 12-D: brandRole 배지 / insightType 표시 ----
+   기존 impact-badge(impact-High/Medium/Low)와 동일한 "옅은 배경 + 진한 텍스트" 톤을
+   그대로 재사용해 새 시각 언어를 만들지 않는다. TOP NEWS의 .tag(카테고리 태그)보다
+   한 단계 더 작고 절제된 chip으로 만들어, Market Intelligence 카드가 TOP NEWS 카드처럼
+   보이지 않도록 한다(요청서 9번 — source/date보다 brandRole/insightType/Watch Point를
+   상대적으로 강조). */
+.intel-card__topmeta{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 9px;
+}
+.role-badge{
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 2px 6px;
+}
+.role-badge--own{ background: var(--bmw-blue-dim); color: var(--bmw-blue-light); }
+.role-badge--competitor{ background: var(--signal-amber-dim); color: var(--signal-amber); }
+.role-badge--industry{ background: rgba(255,255,255,0.05); color: var(--grey); }
+.role-badge--mixed{ background: transparent; color: var(--grey); border: 1px solid var(--line-strong); }
+
+.insight-type{
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.3px;
+  color: var(--grey-dim);
+}
+/* NEEDS_CONFIRMATION만 색으로만 살짝 구분한다 — 배경 채움/아이콘 등 경고성 장식은
+   쓰지 않는다(요청서 6번: 과도한 경고 디자인 금지). */
+.insight-type.is-needs-confirmation{ color: var(--signal-amber); }
+
 /* ---- Source Monitor ---- */
 /* ---- STEP 8: BRAND PULSE (Brand Intelligence Summary) ----
    Black/Dark Gray/White/BMW Blue 중심 디자인 유지, RISING만 약간의 Accent (요청서 13번) */

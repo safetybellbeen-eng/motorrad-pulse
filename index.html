@@ -169,6 +169,19 @@
         <span class="section-sub">규칙 기반으로 분석한 4개 영역별 핵심 Insight</span>
       </div>
 
+      <!-- STEP 12-D: OWN WATCH — BMW 자사 전략 신호(가격/딜러/리콜/조직/프로모션 등)만 모아
+           보여주는 상단 full-width 강조 영역. 기존 4개 컬럼(MARKET/COMPETITOR/PRODUCT & TECH/
+           CUSTOMER TREND)과 동일한 '좁은 컬럼'으로 만들지 않고, 그 위에 별도 블록으로 둔다.
+           marketIntelligenceV2가 없는 과거 데이터(Legacy fallback)에서는 항상 빈 배열로 렌더링되어
+           compact empty state만 표시된다 — 페이지가 깨지지 않는다. -->
+      <div class="own-watch" id="own-watch">
+        <div class="own-watch__head">
+          <span class="own-watch__title">OWN WATCH</span>
+          <span class="own-watch__sub">BMW에서 오늘 우선 확인할 자사 전략 신호</span>
+        </div>
+        <div id="own-watch-cards" class="own-watch__cards"></div>
+      </div>
+
       <div class="intel-tabbar" id="intel-tabbar">
         <button class="intel-tab is-active" data-intel-tab="market">MARKET</button>
         <button class="intel-tab" data-intel-tab="competitor">COMPETITOR</button>
