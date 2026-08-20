@@ -176,6 +176,9 @@ INCIDENT_ONLY_KEYWORDS = [
 
 # STEP 9 AUDIT 결과: Honda/Yamaha는 이륜차 외 사업(자동차/로봇/항공/발전기,
 # 악기/음향기기/선박엔진 등)이 커서 브랜드명만으로는 오탐 위험이 구조적으로 높다.
+# STEP 12-C.1: Kawasaki도 동일한 이유(Kawasaki Heavy Industries — 철도/조선/항공/로봇/
+# 발전설비 등 이륜차 외 사업이 매우 큼)로 Honda/Yamaha와 완전히 동일한 방식으로 등록한다
+# (Kawasaki만의 별도 예외 코드를 만들지 않고, 기존 딕셔너리 구조에 항목만 추가).
 BRAND_SPECIFIC_CONTEXT_KEYWORDS = {
     "honda": [
         "motorcycle", "motorbike", "bike", "cb", "cbr", "africa twin", "gold wing",
@@ -185,6 +188,11 @@ BRAND_SPECIFIC_CONTEXT_KEYWORDS = {
     "yamaha": [
         "motorcycle", "motorbike", "bike", "mt", "yzf", "xsr", "tracer", "tenere",
         "ténéré", "nmax", "xmax", "scooter", "two-wheeler",
+        "이륜차", "오토바이", "모터사이클", "스쿠터",
+    ],
+    "kawasaki": [
+        "motorcycle", "motorbike", "bike", "ninja", "klx", "versys", "vulcan",
+        "z900", "z650", "two-wheeler", "scooter",
         "이륜차", "오토바이", "모터사이클", "스쿠터",
     ],
 }
@@ -254,6 +262,10 @@ BRAND_NAME_KEYWORDS = {
     "harley": ["harley-davidson", "harley davidson", "harley", "할리데이비슨", "할리 데이비슨"],
     "honda": ["honda", "혼다"],
     "yamaha": ["yamaha", "야마하"],
+    # STEP 12-C.1: Kawasaki 누락 수정 — 기존 6개 브랜드와 동일한 방식(소문자/한글 표기)으로
+    # 최소 표현만 등록한다. 실제 텍스트 오탐 방지는 위 BRAND_SPECIFIC_CONTEXT_KEYWORDS의
+    # "kawasaki" 항목(Honda/Yamaha와 동일한 방식)이 담당한다.
+    "kawasaki": ["kawasaki", "카와사키"],
 }
 
 
@@ -263,9 +275,10 @@ def detect_brand_groups(title: str, summary: str) -> list[str]:
     브랜드명이 텍스트 어디에 있든(문장 부호/따옴표로 분리되어 있어도) 잡아내기 위해
     고정된 phrase를 요구하지 않고, 브랜드명 자체 + 문맥 조건을 분리해서 판단한다.
 
-    - Honda/Yamaha: 브랜드명이 있어도 이륜차 외 사업(자동차/로봇/항공/악기 등)이 커서
-      브랜드명만으로는 오탐 위험이 크다. 그래서 BRAND_SPECIFIC_CONTEXT_KEYWORDS(이미
-      has_motorcycle_context에서 쓰는 것과 동일한 기준)를 반드시 함께 만족해야 한다.
+    - Honda/Yamaha/Kawasaki(STEP 12-C.1 추가): 브랜드명이 있어도 이륜차 외 사업
+      (자동차/로봇/항공/철도/조선/악기 등)이 커서 브랜드명만으로는 오탐 위험이 크다.
+      그래서 BRAND_SPECIFIC_CONTEXT_KEYWORDS(이미 has_motorcycle_context에서 쓰는
+      것과 동일한 기준)를 반드시 함께 만족해야 한다.
     - BMW/Ducati/Triumph/Harley: 브랜드명 매칭에 더해 has_motorcycle_context() 게이트
       (자동차 전용/사건사고 배제)를 그대로 재사용해서 오탐을 막는다.
 
