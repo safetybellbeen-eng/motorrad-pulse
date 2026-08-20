@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-21",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "07:54 AM",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-21T07:54:35.579142+09:00",
+    "lastUpdatedISO": "2026-08-21T08:01:47.332075+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -95,9 +95,9 @@
     ],
     "productTech": [
       {
-        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
-        "relatedNewsCount": 1,
+        "title": "Adventure Segment 신제품 움직임",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
@@ -110,22 +110,40 @@
       },
       {
         "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] 샤드 ‘TERRA TR46 알루미늄’ 프리미엄 탑케이스 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
+        "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
+    {
+      "id": "42278e2aad6df188",
+      "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
+      "url": "https://www.kmnews.net/REVIEW/?idx=173249501&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [],
+      "publishedAt": "2026-08-20T11:37:30+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
     {
       "id": "770568b0244f30a4",
       "title": "[프로모션] 스피드 트윈·본네빌 시리즈, 취등록세 전액 지원+커스텀 파츠 증정",
@@ -140,6 +158,24 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
+    {
+      "id": "1f752ce940d7570d",
+      "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "yamaha",
+      "brandGroups": [],
+      "publishedAt": "2026-08-19T23:08:42+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
@@ -177,7 +213,7 @@
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "others",
+      "topNewsGroup": "own",
       "rank": 1
     },
     {
@@ -190,12 +226,13 @@
       "brandGroups": [],
       "publishedAt": "2026-08-19T23:08:42+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
+      "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 3
     },
     {
       "id": "040f1f6d35b7996a",
@@ -230,7 +267,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
@@ -260,14 +297,14 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
-        "relatedNewsCount": 1,
+        "title": "Adventure Segment 신제품 움직임",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
+        "insightType": "GROUPED"
       },
       {
         "title": "[뉴아이템] 코미네, 캐주얼한 디자인+안전성 ‘라이딩진’ 출시",
@@ -281,7 +318,7 @@
       },
       {
         "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
@@ -290,11 +327,11 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] 샤드 ‘TERRA TR46 알루미늄’ 프리미엄 탑케이스 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
+        "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"

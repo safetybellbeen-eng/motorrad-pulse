@@ -1,0 +1,108 @@
+{
+  "savedAtISO": "2026-08-21T08:01:47.333417+09:00",
+  "articles": [
+    {
+      "id": "42278e2aad6df188",
+      "sourceGroup": "bmw",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-20T11:37:30+09:00"
+    },
+    {
+      "id": "770568b0244f30a4",
+      "sourceGroup": "triumph",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-19T10:37:58+09:00"
+    },
+    {
+      "id": "1f752ce940d7570d",
+      "sourceGroup": "yamaha",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "SCOOTER"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-19T23:08:42+09:00"
+    },
+    {
+      "id": "a682db0fa135eddc",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SAFETY"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-08-20T12:00:48+09:00"
+    },
+    {
+      "id": "42278e2aad6df188",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-20T11:37:30+09:00"
+    },
+    {
+      "id": "1f752ce940d7570d",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "SCOOTER"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-19T23:08:42+09:00"
+    },
+    {
+      "id": "040f1f6d35b7996a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-19T10:45:42+09:00"
+    },
+    {
+      "id": "770568b0244f30a4",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-19T10:37:58+09:00"
+    }
+  ]
+}
