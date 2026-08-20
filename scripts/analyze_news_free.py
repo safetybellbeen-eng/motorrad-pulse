@@ -2027,6 +2027,238 @@ def attach_editorial_fields(analyzed_articles: list[dict], raw_by_id: dict[str, 
     return result
 
 
+# ==========================================================
+# 12. STEP 12-C — Market Intelligence v2 (SHADOW MODE)
+# ==========================================================
+# 이 섹션 전체도 STEP 11-C2와 동일한 원칙의 "병행 계산"이다. 기존
+# build_market_intelligence()/build_watch_point()/CATEGORY_DEFAULT_WATCH_POINT/
+# category 계산(compute_score/determine_category)은 단 한 줄도 수정하지 않았고,
+# main()도 이 섹션의 함수를 호출하지 않는다(운영 결과인 marketIntelligence는
+# 이번 STEP에서도 그대로다). STEP 12-A/B AUDIT에서 확인된 문제(브랜드명이 있다는
+# 이유만으로 category가 COMPETITOR가 되는 것이 아니라, "가격/딜러/리콜/조직개편 등
+# 전략성 키워드"가 COMPETITOR 점수를 만든다는 것 자체는 문제가 아니지만, 그 전략
+# 신호를 낸 주체가 BMW 자신이어도 여전히 "COMPETITOR" 컬럼에 들어가는 것이 문제)를
+# 해결하기 위해, "무슨 내용인가"(기존 category)와 "누구의 뉴스인가"(신규 brandRole)를
+# 별도 축으로 분리한다.
+
+# brandRole 판정 결과값
+BRAND_ROLE_OWN = "OWN"
+BRAND_ROLE_COMPETITOR = "COMPETITOR"
+BRAND_ROLE_INDUSTRY = "INDUSTRY"
+BRAND_ROLE_MIXED = "MIXED"
+
+
+def determine_brand_role(brand_groups: list[str] | None) -> str:
+    """기존 brandGroups(STEP 9.1에서 이미 존재, analyze_all_articles()가 채워둔 값)만
+    보고 판정한다 — 새로운 브랜드 감지 로직을 추가하지 않는다(요청서 2번).
+
+    - brandGroups가 정확히 {"bmw"} 하나뿐이면 OWN
+    - brandGroups가 비어 있으면(특정 브랜드가 전혀 감지되지 않은 산업/정책 뉴스) INDUSTRY
+    - "bmw"를 포함하면서 다른 브랜드도 함께 있으면 MIXED
+    - 그 외(비어있지 않고 "bmw"가 없음) COMPETITOR
+    """
+    groups = set(brand_groups or [])
+    if not groups:
+        return BRAND_ROLE_INDUSTRY
+    if groups == {"bmw"}:
+        return BRAND_ROLE_OWN
+    if "bmw" in groups:
+        return BRAND_ROLE_MIXED
+    return BRAND_ROLE_COMPETITOR
+
+
+# intelligenceTopic은 새 계산이 아니라 기존 category 값의 별칭이다(요청서 STEP12-A/B
+# 설계안 4번: category 계산 로직 자체는 그대로 두고, "내용 축" 이름만 새로 부여).
+def determine_intelligence_topic(category: str) -> str:
+    return category
+
+
+# ---- Watch Point v2: brandRole × topic 조합형 템플릿 (요청서 9번) ----
+# 기존 WATCH_POINT_TOPIC_TEMPLATES/CATEGORY_DEFAULT_WATCH_POINT는 전혀 수정하지
+# 않는다. brandRole이 COMPETITOR/MIXED/INDUSTRY인 경우(=BMW 관점에서 "관찰 대상"인
+# 뉴스)는 기존 문구가 이미 "관찰자 시점"으로 맞게 쓰여 있으므로 그대로 재사용한다.
+# brandRole이 OWN인 경우에만, "경쟁 브랜드를 관찰"하는 문구가 아니라 "자사 동향을
+# 점검"하는 문구가 필요하므로 OWN 전용 문구를 새로 추가한다.
+WATCH_POINT_TOPIC_TEMPLATES_OWN = {
+    "PRICING": "자사 가격 정책 변경이 고객 인지, 딜러 커뮤니케이션 및 경쟁 포지셔닝에 미치는 영향을 점검할 필요가 있습니다.",
+    "RECALL_SAFETY": "고객 커뮤니케이션, 딜러 대응 및 브랜드 신뢰도 영향을 점검할 필요가 있습니다.",
+    "NEW_MODEL": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+    "PREMIUM_POSITIONING": "자사 가격·제품 구성·포지셔닝 변화가 고객 인지와 딜러 대응에 미치는 영향을 점검할 필요가 있습니다.",
+    "REGULATION": "규제 변화가 자사 제품 구성, 국내 판매 전략 및 고객 커뮤니케이션에 미치는 영향을 점검할 필요가 있습니다.",
+    "ELECTRIFICATION": "자사 전동화 제품 전략과 출시 일정, 고객 반응을 점검할 필요가 있습니다.",
+    "ADAS_TECH": "자사 ADAS·Safety 기술 적용 현황과 고객 커뮤니케이션 방향을 점검할 필요가 있습니다.",
+    "CONNECTIVITY": "자사 Connectivity·Digital Feature 전략이 고객 Experience에 미치는 영향을 점검할 필요가 있습니다.",
+    "ADVENTURE": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
+    "TOURING": "자사 Touring 제품의 편의성·Experience 요소가 고객 선택에 미치는 영향을 점검할 필요가 있습니다.",
+    "CUSTOMIZATION": "자사 Customization·액세서리 전략이 고객 Experience에 미치는 영향을 점검할 필요가 있습니다.",
+    "COMMUNITY_EVENT": "자사 Community·오프라인 Experience 활동이 고객 Engagement에 미치는 영향을 점검할 필요가 있습니다.",
+    "CUSTOMER_EXPERIENCE": "자사 Experience 요소가 고객 유입과 브랜드 충성도에 미치는 영향을 점검할 필요가 있습니다.",
+    "MARKET_SALES": "자사 국내 판매·등록 흐름과 Premium Segment 내 위치를 점검할 필요가 있습니다.",
+}
+
+# topic이 감지되지 않았을 때(카테고리 기본값 폴백)의 OWN 전용 문구.
+# 기존 CATEGORY_DEFAULT_WATCH_POINT는 "경쟁 브랜드"/"고객 트렌드 변화 관찰" 같은
+# 관찰자 시점 문구라 OWN 뉴스에는 부적절하므로 별도로 둔다.
+CATEGORY_DEFAULT_WATCH_POINT_OWN = {
+    "MARKET": "자사 국내 판매·시장 동향을 지속적으로 점검할 필요가 있습니다.",
+    "COMPETITOR": "자사의 가격·딜러·조직 관련 전략 변화가 고객·딜러 커뮤니케이션에 미치는 영향을 점검할 필요가 있습니다.",
+    "PRODUCT_TECH": "자사 제품·기술 전략의 국내 적용과 고객 반응을 지속적으로 점검할 필요가 있습니다.",
+    "CUSTOMER_TREND": "자사 고객 Trend 대응 활동을 지속적으로 점검할 필요가 있습니다.",
+}
+
+
+def build_watch_point_v2(brand_role: str, matched_keywords: list[str], category: str, title: str = "") -> str:
+    """brandRole × topic 조합형 Watch Point. AI API를 쓰지 않고 기존
+    _detect_watch_point_topic()의 규칙 기반 topic 감지 결과만 재사용한다.
+
+    brandRole == OWN: OWN 전용 문구(위 딕셔너리) 사용, 없으면 OWN 전용 카테고리 기본값.
+    brandRole in (COMPETITOR, MIXED, INDUSTRY): 기존 build_watch_point()를 그대로
+    호출한다(기존 문구를 삭제하지 않고 그대로 재사용, 요청서 9번)."""
+    if brand_role == BRAND_ROLE_OWN:
+        topic = _detect_watch_point_topic(matched_keywords, title)
+        if topic and topic in WATCH_POINT_TOPIC_TEMPLATES_OWN:
+            return WATCH_POINT_TOPIC_TEMPLATES_OWN[topic]
+        return CATEGORY_DEFAULT_WATCH_POINT_OWN.get(category, CATEGORY_DEFAULT_WATCH_POINT_OWN["MARKET"])
+    return build_watch_point(matched_keywords, category, title)
+
+
+# ---- insightType 판정 (요청서 10번) ----
+# 단일 기사만으로도 의미가 명확한 신호(가격/리콜/딜러/신모델/프로모션 등)인지,
+# 아니면 통계·추세성 언급이라 확대 해석에 주의가 필요한지를 규칙 기반으로 구분한다.
+SINGLE_SIGNAL_TRIGGER_KEYWORDS = {
+    kw.lower() for kw in [
+        "가격", "가격 인상", "가격 인하", "price cut", "price increase", "pricing",
+        "리콜", "recall", "딜러", "대리점", "dealer", "dealership",
+        "신모델", "신차", "출시", "공개", "launch", "unveil", "new model", "new motorcycle",
+        "프로모션", "캠페인", "promotion", "campaign",
+        "대표이사", "조직개편", "management", "reorganization",
+        "인수", "합병", "acquisition", "merger",
+    ]
+}
+
+
+def determine_insight_type(related_news_count: int, matched_keywords: list[str] | None, category: str) -> str:
+    """요청서 10번 규칙:
+    1) relatedNewsCount >= 2 → GROUPED (여러 기사가 실제로 묶인 경우)
+    2) 단일 기사(relatedNewsCount == 1)라도 가격/리콜/딜러/신모델/프로모션 등
+       그 자체로 의미가 명확한 신호 키워드가 있으면 → SINGLE_SIGNAL
+    3) 단일 기사이면서 위 신호가 없고 MARKET(시장 통계/추세) 카테고리면
+       → NEEDS_CONFIRMATION (확대 해석 주의)
+    4) 그 외 단일 기사는 기본적으로 SINGLE_SIGNAL로 둔다(과도하게 대부분의
+       카드를 NEEDS_CONFIRMATION으로 몰아 정보 가치를 낮추지 않기 위함)."""
+    if related_news_count >= 2:
+        return "GROUPED"
+
+    kw_lower = {kw.lower() for kw in (matched_keywords or [])}
+    if kw_lower & SINGLE_SIGNAL_TRIGGER_KEYWORDS:
+        return "SINGLE_SIGNAL"
+    if category == "MARKET":
+        return "NEEDS_CONFIRMATION"
+    return "SINGLE_SIGNAL"
+
+
+# ---- Market Intelligence v2 컬럼 배치 (요청서 5~8번) ----
+def _v2_column_for(category: str, brand_role: str) -> str:
+    """기존 category(내용 축) × 신규 brandRole(귀속 축)을 함께 봐서 v2 컬럼을 정한다.
+
+    - category == COMPETITOR(전략성 신호)인 경우만 brandRole로 세분화한다:
+        OWN        -> ownWatch   (자사의 가격/딜러/리콜/조직/전략 신호, 요청서 5번)
+        COMPETITOR -> competitor (실제 경쟁사 전략 신호만, 요청서 6번)
+        INDUSTRY/MIXED -> market (브랜드 귀속이 명확하지 않은 전략·정책성 신호는
+                                   competitor에 넣지 않고 market/industry로 보낸다,
+                                   요청서 6, 7, 8번)
+    - category가 MARKET/PRODUCT_TECH/CUSTOMER_TREND인 경우는 brandRole과 무관하게
+      기존 topic 컬럼을 그대로 유지한다(요청서 5, 8번: 단순 신제품/기술 뉴스를
+      brandRole만으로 ownWatch로 옮기지 않는다 — brandRole은 배지 정보로만 별도 제공).
+    """
+    if category == "COMPETITOR":
+        if brand_role == BRAND_ROLE_OWN:
+            return "ownWatch"
+        if brand_role == BRAND_ROLE_COMPETITOR:
+            return "competitor"
+        return "market"  # INDUSTRY 또는 MIXED
+
+    return {
+        "MARKET": "market",
+        "PRODUCT_TECH": "productTech",
+        "CUSTOMER_TREND": "customerTrend",
+    }.get(category, "market")
+
+
+def build_market_intelligence_v2(analyzed_articles: list[dict]) -> dict[str, list[dict]]:
+    """기존 build_market_intelligence()와 동일한 그룹핑 로직(_group_articles/
+    _build_group_title/_build_group_summary/_compute_group_impact)을 그대로
+    재사용하되, 카테고리 대신 "v2 컬럼(_v2_column_for 결과)"으로 먼저 묶는다.
+    기존 build_market_intelligence()는 전혀 수정하지 않았고, 이 함수는 별도
+    병행 계산이다(요청서 4번 SHADOW MODE).
+
+    카드 안에는 기존 4개 필드(title/summary/relatedNewsIds/impact/bmwView)에
+    더해 brandRole/intelligenceTopic/insightType을 추가한다(요청서 11번:
+    기존 필드는 절대 삭제하지 않고 신규 필드만 추가)."""
+    # 기사마다 brandRole/v2 컬럼을 먼저 계산해 둔다(그룹 안의 기사가 모두 같은
+    # category이므로 intelligenceTopic은 항상 동일하지만, brandRole은 그룹 내에서
+    # 섞일 수 있다 — 대표값은 그룹 내 최고 importance 기사의 brandRole을 쓴다).
+    enriched = []
+    for a in analyzed_articles:
+        brand_role = determine_brand_role(a.get("brandGroups"))
+        enriched.append({**a, "_brandRole": brand_role, "_v2Column": _v2_column_for(a["category"], brand_role)})
+
+    by_column: dict[str, list[dict]] = defaultdict(list)
+    for a in enriched:
+        by_column[a["_v2Column"]].append(a)
+
+    result: dict[str, list[dict]] = {"ownWatch": [], "market": [], "competitor": [], "productTech": [], "customerTrend": []}
+
+    for column, column_articles in by_column.items():
+        if column not in result:
+            continue  # 방어적 처리(이론상 _v2_column_for가 5개 컬럼 밖의 값을 낼 수 없음)
+
+        # 그룹핑은 기존 _group_articles()를 그대로 재사용 — 단, 이 함수는 같은
+        # category끼리만 묶는데(_can_group 내부에서 category 비교), v2 컬럼
+        # 안에는 서로 다른 category가 섞이지 않는다(ownWatch/competitor/market
+        # 중 COMPETITOR에서 갈라진 것들은 전부 category=="COMPETITOR"이고,
+        # market에는 원래 category=="MARKET"인 것 + COMPETITOR인데 INDUSTRY/MIXED인
+        # 것이 섞일 수 있다 — 이 경우 category가 달라 그룹핑되지 않는 것이
+        # 오히려 안전하다: 서로 성격이 다른 기사를 억지로 한 카드로 합치지 않음).
+        groups = _group_articles(column_articles)
+
+        cards = []
+        for group in groups:
+            top_article = max(group, key=lambda a: a["importance"])
+            brand_role = top_article["_brandRole"]
+            intelligence_topic = determine_intelligence_topic(top_article["category"])
+            related_count = len(group)
+            insight_type = determine_insight_type(related_count, top_article.get("matchedKeywords"), top_article["category"])
+            watch_point_v2 = build_watch_point_v2(brand_role, top_article.get("matchedKeywords", []), top_article["category"], top_article.get("title", ""))
+            impact_value = _compute_group_impact(group)
+
+            cards.append({
+                # ---- 기존 필드(요청서 11번: 절대 삭제하지 않음) ----
+                "title": _build_group_title(group),
+                "description": _build_group_summary(group),
+                "relatedNewsCount": related_count,
+                "impact": _impact_label(impact_value),
+                "bmwNote": watch_point_v2,
+                # ---- 신규 필드 ----
+                "brandRole": brand_role,
+                "intelligenceTopic": intelligence_topic,
+                "insightType": insight_type,
+                # 정렬 전용 내부 값(기존 build_market_intelligence()와 동일하게 실수 impact로
+                # 정렬한 뒤 최종적으로는 라벨만 남긴다) — 아래에서 정렬 후 제거한다.
+                "_impactValue": impact_value,
+            })
+
+        cards.sort(key=lambda c: c["_impactValue"], reverse=True)
+        for c in cards:
+            del c["_impactValue"]
+        result[column] = cards[:4]
+
+    return result
+
+
+# ==========================================================
+
+
 def main():
     log("=" * 60)
     log("[MOTORRAD PULSE FREE INTELLIGENCE]")
