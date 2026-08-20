@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-20",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-20T08:01:37.074423+09:00",
+    "lastUpdatedISO": "2026-08-20T13:01:36.842033+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,8 +19,8 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "ADVENTURE": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "CONTINUING"
         }
       },
       "ducati": {
@@ -62,8 +62,8 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "CUSTOMER": "CONTINUING",
-          "ELECTRIFICATION": "CONTINUING"
+          "ELECTRIFICATION": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "yamaha": {
@@ -98,15 +98,22 @@
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
       {
-        "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
-        "description": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
+        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
+        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] 코미네, 캐주얼한 디자인+안전성 ‘라이딩진’ 출시",
+        "description": "‘WJ-7325R ENIGMA LIGHT PROTECT JEANS’ 출시바이크 용품 브랜드 코미네의 한국 공식 수입원 제이라인무역이 일상복 감성과 라이딩 보호 기능을 결합한 ‘WJ- 7325R ENIGMA LIGHT PROTECT JEANS’를 출시했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
+        "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다."
       },
       {
         "title": "[뉴아이템] 샤드 ‘TERRA TR46 알루미늄’ 프리미엄 탑케이스 출시",
-        "description": "투어링부터 모토캠핑까지 아우르는 올인원 탑케이스, 46ℓ 대용량·IPX5 방수·레드닷 디자인 어워드 수상글로벌 모터사이클 용품 및 파츠 유통 기업인 신원모터싸이클이 스페인 모터사이클 케이스 전문 브랜드 샤드(SHAD)의 프리미엄 알루미늄 탑케이스 ‘TERRA TR46 ALUMINIUM(모델명 D0TR 46200)’을 국내에 공식 출시했다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -136,6 +143,42 @@
       "rank": 1
     },
     {
+      "id": "a682db0fa135eddc",
+      "title": "[뉴아이템] 코미네, 캐주얼한 디자인+안전성 ‘라이딩진’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173250185&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-20T12:00:48+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "‘WJ-7325R ENIGMA LIGHT PROTECT JEANS’ 출시바이크 용품 브랜드 코미네의 한국 공식 수입원 제이라인무역이 일상복 감성과 라이딩 보호 기능을 결합한 ‘WJ- 7325R ENIGMA LIGHT PROTECT JEANS’를 출시했다.",
+      "importance": 2.0,
+      "whyItMatters": "안전 또는 품질 관리 이슈와 관련된 기사입니다. 브랜드 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
+      "bmwInsight": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "42278e2aad6df188",
+      "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
+      "url": "https://www.kmnews.net/REVIEW/?idx=173249501&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-20T11:37:30+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
+    {
       "id": "1f752ce940d7570d",
       "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
       "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
@@ -145,13 +188,12 @@
       "brandGroups": [],
       "publishedAt": "2026-08-19T23:08:42+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
-      "importance": 2.0,
+      "summary": null,
+      "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "040f1f6d35b7996a",
@@ -163,13 +205,12 @@
       "brandGroups": [],
       "publishedAt": "2026-08-19T10:45:42+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "투어링부터 모토캠핑까지 아우르는 올인원 탑케이스, 46ℓ 대용량·IPX5 방수·레드닷 디자인 어워드 수상글로벌 모터사이클 용품 및 파츠 유통 기업인 신원모터싸이클이 스페인 모터사이클 케이스 전문 브랜드 샤드(SHAD)의 프리미엄 알루미늄 탑케이스 ‘TERRA TR46 ALUMINIUM(모델명 D0TR 46200)’을 국내에 공식 출시했다.",
+      "summary": null,
       "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "770568b0244f30a4",
