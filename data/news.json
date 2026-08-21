@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-21",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "09:56 PM",
+    "lastUpdated": "10:32 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-21T21:56:35.767962+09:00",
+    "lastUpdatedISO": "2026-08-21T22:32:52.531880+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -89,9 +89,9 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
+        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
+        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+        "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
@@ -131,7 +131,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 2
+      "rank": 1
     },
     {
       "id": "1f752ce940d7570d",
@@ -205,44 +205,6 @@
       "bmwInsight": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
-    },
-    {
-      "id": "1f752ce940d7570d",
-      "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
-      "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-20T11:51:28+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "여름철 안전 라이딩의 정석, 미쉐린 타이어와 함께 안전한 라이딩을 즐기면서 더 강력해진 경품의 주인공이 되자!!'1등 상품은 야마하 T MAX 560, 2등은 혼다 포르자 350, 3등은 스즈키 어드레스 125 각 1대이다'미쉐린 코리아는 지난해에 이어 여름철 안전 라이딩 증진을 목적으로 더 강력해진 경품으로 특별 프로모션을 진행한다.",
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "42278e2aad6df188",
-      "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?idx=173249501&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-08-20T11:37:30+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -261,14 +223,14 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
+        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
+        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+        "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "GROUPED"
+        "insightType": "SINGLE_SIGNAL"
       },
       {
         "title": "Vespa, 이탈리아 범선 ‘아메리고 베스푸치’ 헌정 스페셜 모델 공개",
