@@ -1026,6 +1026,100 @@ def merge_news(existing_news: list[dict], newly_collected: dict[str, list[dict]]
     return merged
 
 
+# ==========================================================
+# STEP 12-G.1 — Cross-Source Exact Duplicate 제거
+# ==========================================================
+# STEP 12-G AUDIT 결론: 같은 URL(=같은 id) 기사가 서로 다른 sourceGroup 검색 쿼리를
+# 통해 서로 다른 수집 주기에 각각 "새 기사"로 잡히면, merge_news()가 그룹별로 완전히
+# 독립적으로 병합하기 때문에(위 for group in SOURCE_GROUP_LABELS.keys() 루프 — 그룹을
+# 넘나드는 비교가 전혀 없음) 두 사본이 영구히 따로 저장된다. remove_duplicates()는
+# "이번 실행에서 새로 수집한 것"끼리만 비교해서 범위가 좁고, find_duplicate_clusters()는
+# "URL은 다르지만 같은 이슈"를 묶는 별개의 용도(제목 유사도 기반)라 이 문제의 해결책이
+# 아니다. 그래서 merge_news()가 반환하는 "최종" 리스트에 대해 전역 exact-duplicate
+# 제거를 별도로, 딱 한 번 추가한다.
+#
+# Source of Truth는 id 하나다(id = generate_id(정규화 URL)이므로 id가 같다는 것은
+# 정규화 URL이 같다는 것과 동일하다 — AUDIT 4번). 제목 유사도/fuzzy matching은 여기서
+# 절대 쓰지 않는다 — 그건 find_duplicate_clusters()의 역할이고, 이 단계는 "완전히
+# 같은 URL"만 다룬다.
+
+# 브랜드 전용 수집 채널(공식 소스일 수도, 브랜드명 검색 쿼리일 수도 있음 — AUDIT 5번:
+# "bmw"라고 해서 무조건 공식/고품질이라는 뜻은 아니므로 우선순위 1~3번에는 쓰지 않고
+# 마지막 보조 tie-breaker로만 쓴다).
+GENERIC_SOURCE_GROUPS = {"kmnews", "naver", "google", "global_media"}
+
+
+def _collected_at_seconds(item: dict) -> float:
+    """collectedAt을 비교 가능한 epoch 초로 변환한다. 파싱 실패/누락 시 +inf를 반환해서
+    "가장 나중에 수집된 것"으로 취급한다 — 대표 선정 우선순위 3번(collectedAt이 더
+    이른 레코드 우선)에서 이 레코드가 절대 유리해지지 않도록 하는 안전한 fallback이다."""
+    raw = item.get("collectedAt")
+    if not raw:
+        return float("inf")
+    try:
+        return datetime.fromisoformat(raw).timestamp()
+    except Exception:
+        return float("inf")
+
+
+def _dedupe_rep_priority(item: dict) -> tuple:
+    """동일 id(=동일 정규화 URL)를 가진 여러 레코드 중 대표 1건을 고르는 우선순위.
+    튜플이 클수록(=max() 기준) 더 우선한다.
+
+    1. sourceQualityScore 높은 쪽
+    2. description(실제 콘텐츠)이 더 풍부한(긴) 쪽
+    3. collectedAt이 더 이른(먼저 발견된) 쪽 — epoch 초를 음수로 넣어 "작을수록(이를수록)
+       크게" 되도록 뒤집는다.
+    4. 그래도 전부 같으면, 브랜드 전용 sourceGroup(bmw/ducati/triumph/harley/honda/yamaha
+       등)을 일반 채널(kmnews/naver/google/global_media)보다 마지막 보조 기준으로만
+       우선한다(AUDIT 5번 — sourceGroup 자체를 1순위로 쓰지 않는다. 브랜드 sourceGroup이
+       공식 소스가 아니라 단순 검색 쿼리 결과일 수도 있기 때문이다. 다만 다른 모든 조건이
+       완전히 동일하다면, 화면(SOURCE MONITOR 등)에 더 의미 있는 라벨이자 실제 기사
+       내용과 더 부합하는 브랜드 채널 쪽을 마지막으로 골라주는 것이 합리적이다).
+
+    이 네 기준으로도 완전히 동점이면 Python max()가 "원본 리스트에서 먼저 나온 항목"을
+    그대로 반환하므로(파이썬 max()의 표준 동작), 입력 순서가 곧 마지막 deterministic
+    tie-breaker가 된다 — 별도 코드 없이도 항상 같은 입력에는 항상 같은 결과가 나온다."""
+    is_brand_specific = 1 if item.get("sourceGroup") not in GENERIC_SOURCE_GROUPS else 0
+    return (
+        item.get("sourceQualityScore", 0) or 0,
+        len(item.get("description", "") or ""),
+        -_collected_at_seconds(item),
+        is_brand_specific,
+    )
+
+
+def dedupe_cross_group(items: list[dict]) -> list[dict]:
+    """merge_news()가 그룹별 병합을 모두 마친 "최종" 리스트에 대해, id가 같은
+    레코드(=사실상 동일 URL 기사)가 서로 다른 sourceGroup에 중복으로 남아있으면
+    대표 1건만 남긴다(요청서 2, 3번).
+
+    같은 URL이 여러 수집 경로로 발견된 것은 "여러 매체의 다중 보도"가 아니라 "기사
+    1건"이므로, 이 과정에서 relatedCoverageCount를 인위적으로 올리지 않는다 — 대표로
+    남는 레코드가 원래 갖고 있던 값을 그대로 유지한다(요청서 5번 핵심 원칙). 이 함수는
+    id가 다른 기사는 절대 건드리지 않으므로(요청서 3번: 다른 id는 이번 단계에서
+    서로 다른 기사로 유지), 서로 다른 URL의 유사 기사를 묶는 find_duplicate_clusters()의
+    역할을 침범하지 않는다."""
+    by_id: dict = {}
+    order: list = []
+    for item in items:
+        # id가 없는(비정상) 레코드는 그룹핑 기준이 없으므로 서로 다른 기사로 취급한다
+        # (여러 개를 하나의 None 키로 잘못 묶어 대표 1건으로 줄여버리는 것을 방지).
+        key = item.get("id") or id(item)
+        if key not in by_id:
+            by_id[key] = []
+            order.append(key)
+        by_id[key].append(item)
+
+    result = []
+    for key in order:
+        group = by_id[key]
+        rep = max(group, key=_dedupe_rep_priority) if len(group) > 1 else group[0]
+        result.append(rep)
+
+    return result
+
+
 def save_json(data: dict, path: str):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -1151,6 +1245,19 @@ def main():
         counts[group] = len(items)
 
     merged_news = merge_news(existing_news, collected_by_group, failed_groups)
+
+    # STEP 12-G.1: 그룹별 병합이 끝난 최종 리스트에서, 서로 다른 sourceGroup으로 들어온
+    # 같은 URL(=같은 id) 중복을 한 번에 정리한다(요청서 2번 — merge_news() 반환 직후,
+    # 그룹별 MAX_PER_GROUP 캡이 이미 적용된 뒤. 이 위치를 고른 이유는 merge_news()
+    # 내부의 그룹별 루프 구조를 전혀 건드리지 않는 것이 가장 변경 범위가 작기 때문이다
+    # — AUDIT 8번에서 이미 이 트레이드오프[캡 적용 후 dedup이라 빈 슬롯이 이번 실행에는
+    # 즉시 보충되지 않을 수 있음]를 검토했고, 이번 STEP은 그 구조를 바꾸지 않는다).
+    before_cross_dedup = len(merged_news)
+    merged_news = dedupe_cross_group(merged_news)
+    cross_group_duplicates_removed = before_cross_dedup - len(merged_news)
+    if cross_group_duplicates_removed:
+        log(f"\n[STEP 12-G.1] Cross-Source 중복 제거: {cross_group_duplicates_removed}건 "
+            f"(서로 다른 sourceGroup으로 중복 수집된 동일 URL 기사)")
 
     # STEP 10-KR: KR-Only Monitor — 저장 직전, 해외 Direct Source와 같은 도메인의 기사가
     # (우연히 국내 검색 쿼리를 통해) 섞여 들어왔는지 관찰한다. 자동 DROP하지 않고 로그만 남긴다.
