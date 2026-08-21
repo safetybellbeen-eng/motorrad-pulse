@@ -2,26 +2,23 @@
   "meta": {
     "date": "2026-08-21",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-21T13:01:36.277109+09:00",
+    "lastUpdatedISO": "2026-08-21T18:01:24.797047+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 1,
-        "primaryTheme": "ADVENTURE",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "ADVENTURE": "CONTINUING",
-          "NEW_MODEL": "NORMAL"
-        }
+        "signalDetails": {}
       },
       "ducati": {
         "newsCount": 0,
@@ -62,9 +59,9 @@
         "topArticleTitle": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173281887&bmode=view",
         "signalDetails": {
-          "ELECTRIFICATION": "NORMAL",
+          "NEW_MODEL": "NEW",
           "CUSTOMER": "NORMAL",
-          "NEW_MODEL": "NEW"
+          "ELECTRIFICATION": "NORMAL"
         }
       },
       "yamaha": {
