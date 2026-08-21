@@ -561,8 +561,14 @@ WATCH_POINT_TOPIC_PRIORITY = [
 ]
 
 # 각 주제를 판별하는 키워드 (한/영 병기)
+# STEP 12-H.2: RECALL_SAFETY는 실제 STEP 12-H AUDIT에서 오탐이 확인된 topic이다
+# ("라이딩진, 캐주얼한 디자인+안전성" 같은 단순 제품 홍보 문구의 "안전"이라는
+# 단어 하나만으로 리콜/안전사고 Watch Point가 붙는 문제). "recall"/"safety"/
+# "안전"처럼 문맥 없이 단독으로 매칭되는 짧은 단어는 전부 제거하고, 실제 이슈
+# 문맥이 있는 구체적인 단어/구문만 남긴다 — "안전 장비"/"안전한 라이딩"/
+# "안전성 강화"처럼 제품 홍보 맥락에서 흔히 쓰이는 표현은 여기 걸리지 않는다.
 WATCH_POINT_TOPIC_KEYWORDS = {
-    "RECALL_SAFETY": ["recall", "리콜", "safety", "안전"],
+    "RECALL_SAFETY": ["recall", "리콜", "결함", "사고", "안전 문제", "안전성 논란", "시정조치"],
     "ELECTRIFICATION": ["electric", "ev", "battery", "charging", "hybrid", "전기", "전동", "배터리", "충전", "하이브리드"],
     "ADAS_TECH": ["adas", "radar", "레이더", "자율주행"],
     "CONNECTIVITY": ["connectivity", "software", "navigation", "커넥티비티", "소프트웨어", "내비게이션"],
@@ -718,6 +724,12 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
             "isTopNews": False,
             "score": score,
             "matchedKeywords": matched_keywords,
+            # STEP 12-H.2: TOP NEWS 후보 자격만 별도로 계산해 둔다(저장/분석/
+            # Market Intelligence에는 영향 없음 — select_top_news_split()의
+            # OTHERS 후보 풀에서만 이 값을 사용한다). raw description이 이 시점에만
+            # 원본 그대로 scope에 있으므로 여기서 계산해 둔다(요청서 1번: 최소
+            # 변경 지점).
+            "topNewsEligible": is_top_news_eligible(title, description),
             # ---- STEP 7 신규: Intelligence Group 묶기용 내부 계산 필드 (최종 JSON에는 노출 안 함) ----
             "topicTags": topic_signals["topicTags"],
             "segmentTags": topic_signals["segmentTags"],
@@ -736,6 +748,63 @@ def analyze_all_articles(raw_articles: list[dict]) -> list[dict]:
 # ==========================================================
 # 7. TOP NEWS 선정 (요청서 22, 23번: Diversity + 유사 제목 제거)
 # ==========================================================
+
+# ---- STEP 12-H.2: Accessory / Promotional Content TOP NEWS Gate ----
+# STEP 12-H AUDIT에서 실제로 확인된 문제: 순수 액세서리/용품 브랜드의 경품·단순
+# 출시성 콘텐츠(미쉐린 경품 이벤트)가 TOP NEWS에 그대로 노출된다. "Collect broadly,
+# rank narrowly" 원칙에 따라 수집/저장/Business Relevance Gate/Market Intelligence는
+# 전혀 건드리지 않고, TOP NEWS 후보 자격(eligibility)만 별도로 좁힌다.
+#
+# 대상은 "브랜드명만으로 무조건 제외"가 아니라 "액세서리 브랜드 + 강한 사업 신호
+# 없음" 조합이다(요청서 3번) — 예를 들어 미쉐린의 가격/파트너십 뉴스는 제외하면
+# 안 되므로, 이미 존재하는 COMPETITOR_STRATEGY_KEYWORD_SCORES(가격/딜러/제휴/M&A 등
+# 실제 사업 전략 신호 사전, STEP 7부터 사용 중인 기존 사전 재사용 — 이번 STEP에서
+# 새로운 범용 키워드 사전을 만들지 않는다)에 하나라도 걸리면 액세서리 브랜드
+# 기사라도 TOP NEWS 후보로 유지한다.
+#
+# STEP 12-H AUDIT에서 실제 확인된 3개 브랜드(미쉐린/코미네/SHAD)만 최소로 등록한다.
+# Vespa는 완성차(비추적) 브랜드이지 액세서리가 아니므로 이 사전에 넣지 않는다
+# (요청서 7번 — 브랜드 블랙리스트가 아니라 액세서리 여부로만 판정).
+ACCESSORY_BRAND_KEYWORDS = {
+    "michelin": ["michelin", "미쉐린"],
+    "komine": ["komine", "코미네"],
+    "shad": ["shad", "샤드"],
+}
+
+
+def _is_accessory_brand_mentioned(title: str, description: str) -> bool:
+    """제목/설명에 액세서리 브랜드명이 언급되는지(단어 경계 규칙은 기존
+    _keyword_matches()를 그대로 재사용 — "샤드" 같은 한글 키워드가 다른 단어의
+    일부로 오매칭되지 않도록 한다)."""
+    text = f"{title or ''} {description or ''}".lower()
+    for keywords in ACCESSORY_BRAND_KEYWORDS.values():
+        if any(_keyword_matches(kw.lower(), text) for kw in keywords):
+            return True
+    return False
+
+
+def _has_strong_business_signal(title: str, description: str) -> bool:
+    """가격/딜러/제휴/M&A 등 실제 사업 전략 신호가 있는지. 기존
+    COMPETITOR_STRATEGY_KEYWORD_SCORES(STEP 7부터 존재)를 그대로 재사용한다 —
+    이 STEP에서 새 사전을 만들지 않는다(요청서 3번)."""
+    text = f"{title or ''} {description or ''}".lower()
+    return any(_keyword_matches(kw.lower(), text) for kw in COMPETITOR_STRATEGY_KEYWORD_SCORES)
+
+
+def is_top_news_eligible(title: str, description: str) -> bool:
+    """TOP NEWS 후보 자격 판정(요청서 2, 3번). 저장/분석/Business Relevance Gate/
+    Market Intelligence에는 전혀 영향을 주지 않는다 — 오직 TOP NEWS 후보 풀에
+    포함시킬지만 결정한다.
+
+    액세서리 브랜드가 언급되지 않으면(비추적 완성차 Vespa 포함) 항상 True다 —
+    "brandGroups=[]이면 제외" 같은 단순 필터가 절대 아니다(요청서 2번). 액세서리
+    브랜드가 언급된 경우에만, 강한 사업 신호(가격/딜러/제휴/M&A 등)가 있는지로
+    한 번 더 구분한다 — 신호가 있으면(예: "미쉐린 가격 인상") 여전히 후보로
+    유지하고, 신호가 없는 단순 경품/제품 홍보성 콘텐츠만 제외한다."""
+    if not _is_accessory_brand_mentioned(title, description):
+        return True
+    return _has_strong_business_signal(title, description)
+
 
 def normalize_title_for_similarity(title: str) -> str:
     t = title.lower().strip()
@@ -804,7 +873,15 @@ def select_top_news_split(analyzed_articles: list[dict]) -> tuple[list[str], lis
     bmw_sorted = sorted(bmw_articles, key=lambda x: x["score"], reverse=True)[:TOP_NEWS_MAX]
     bmw_ids = [a["id"] for a in bmw_sorted]
 
-    non_bmw_articles = [a for a in analyzed_articles if not _is_bmw_own_article(a)]
+    # STEP 12-H.2: OTHERS 후보 풀에만 Accessory/Promotional Gate를 적용한다
+    # (요청서 5번: BMW OWN 분기는 이 필터를 절대 거치지 않는다 — bmw_articles/
+    # bmw_sorted/bmw_ids는 위에서 이미 확정됐고 아래 로직과 전혀 무관하다).
+    # topNewsEligible이 없는(예전 캐시 등 legacy) 데이터는 기본값 True로 취급해
+    # 신규 필드가 없다는 이유만으로 기존 기사가 갑자기 사라지지 않게 한다.
+    non_bmw_articles = [
+        a for a in analyzed_articles
+        if not _is_bmw_own_article(a) and a.get("topNewsEligible", True)
+    ]
     others_ids = select_top_news(non_bmw_articles, max_count=TOP_NEWS_MAX)
 
     return bmw_ids, others_ids
