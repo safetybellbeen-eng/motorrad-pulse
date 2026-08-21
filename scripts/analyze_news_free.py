@@ -1959,6 +1959,31 @@ def determine_editorial_priority(business_tier: str, korea_tier: str, product_ti
     return "P3"
 
 
+def _strip_known_source_name(text: str, source: str) -> str:
+    """STEP 12-H.4-B: Editorial Signal 계산 직전에만 쓰는 임시 텍스트 정제 함수.
+    Google News RSS가 description 끝에 자체적으로 붙이는 실제 출처명(예:
+    "...&nbsp;&nbsp;한국이륜차신문")이 KOREA_WEAK_PHRASES의 "한국"과 같은 단어와
+    우연히 겹쳐 오탐을 일으키는 문제(STEP 12-H.4-A AUDIT에서 확인)를 해결한다.
+
+    "한국이륜차신문"만 하드코딩으로 제거하는 것이 아니라, 이 article이 이미
+    갖고 있는 실제 source 필드값을 Source of Truth로 써서 제거한다(요청서 3번)
+    — 그래서 향후 source가 "한국경제" 등으로 바뀌어도 사전 추가 없이 동일하게
+    보호된다. source가 비어있으면 원본 text를 그대로 반환한다. str.replace()는
+    발견되는 모든 occurrence를 제거하므로 source 문자열이 여러 번 등장해도
+    전부 제거된다(요청서 6번).
+
+    이 함수는 article dict를 전혀 건드리지 않는다 — 호출부에서 만든 임시 문자열
+    에만 적용되고, 반환값은 compute_editorial_signals()에만 쓰인다(요청서 4번:
+    title/description/source/summary 등 원본 데이터는 mutate하지 않음).
+
+    _phrase_active_positions()의 경계 규칙, KOREA_WEAK_PHRASES 등 phrase 목록은
+    이 함수와 무관하게 전혀 수정하지 않는다(요청서 2번) — 오탐의 원인이 되는
+    "텍스트 자체"를 판정 전에 제거할 뿐, 판정 로직은 그대로다."""
+    if not source:
+        return text
+    return text.replace(source, "")
+
+
 def compute_editorial_score(article: dict) -> tuple[str, int, dict]:
     """article: title/description(또는 summary)/publishedAt/relatedCoverageCount/
     acquisitionMethod를 가진 dict. raw_news.json의 원본 기사 dict를 그대로
@@ -1967,7 +1992,14 @@ def compute_editorial_score(article: dict) -> tuple[str, int, dict]:
     반환: (editorialPriority, editorialScore, editorialScoreBreakdown)"""
     title = article.get("title", "")
     description = article.get("description") or article.get("summary") or ""
-    signals = compute_editorial_signals(title, description)
+    source = article.get("source", "")
+    # STEP 12-H.4-B: Editorial Signal 계산에 넣기 직전에만 출처명을 제거한 임시
+    # 텍스트를 만든다. article 원본의 title/description 필드 자체는 바뀌지 않는다
+    # (요청서 4번 — 아래 signals 계산에만 쓰이고, 이 함수의 나머지 부분과 반환값
+    # 어디에도 cleaned_title/cleaned_description을 원본 대신 노출하지 않는다).
+    cleaned_title = _strip_known_source_name(title, source)
+    cleaned_description = _strip_known_source_name(description, source)
+    signals = compute_editorial_signals(cleaned_title, cleaned_description)
 
     business_impact = signals["businessImpact"]
     korea_relevance = signals["koreaRelevance"]
@@ -2093,6 +2125,11 @@ def attach_editorial_fields(analyzed_articles: list[dict], raw_by_id: dict[str, 
             "publishedAt": a.get("publishedAt", ""),
             "relatedCoverageCount": raw.get("relatedCoverageCount"),
             "acquisitionMethod": raw.get("acquisitionMethod"),
+            # STEP 12-H.4-B: compute_editorial_score() 내부에서 출처명 boilerplate
+            # 제거(_strip_known_source_name())에 쓰인다. raw_news.json 원본의 실제
+            # source가 Source of Truth이고, 없을 때만 analyzed article의 source로
+            # 대체한다(위 description과 동일한 raw-우선 패턴).
+            "source": raw.get("source") or a.get("source", ""),
         }
         priority, score, breakdown = compute_editorial_score(editorial_input)
         merged = dict(a)
