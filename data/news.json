@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-21",
-    "dayLabel": "FRIDAY",
-    "lastUpdated": "11:02 PM",
+    "date": "2026-08-22",
+    "dayLabel": "SATURDAY",
+    "lastUpdated": "06:50 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-21T23:02:29.938853+09:00",
+    "lastUpdatedISO": "2026-08-22T06:50:35.217422+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -134,23 +134,6 @@
       "rank": 1
     },
     {
-      "id": "1f752ce940d7570d",
-      "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
-      "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "yamaha",
-      "brandGroups": [],
-      "publishedAt": "2026-08-19T23:08:42+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
       "id": "c1a9861dbdec1453",
       "title": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=173281887&bmode=view",
@@ -199,9 +182,26 @@
       "publishedAt": "2026-08-20T12:00:48+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "1f752ce940d7570d",
+      "title": "미쉐린 경품 이벤트, ‘프리미엄 스쿠터의 주인이 되세요!’",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=173181544&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-20T11:51:28+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     }
