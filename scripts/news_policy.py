@@ -268,6 +268,21 @@ BRAND_NAME_KEYWORDS = {
     "kawasaki": ["kawasaki", "카와사키"],
 }
 
+# STEP 12-F.1-C: 고신뢰 모델명 전용 사전(P3 — STEP 12-F.1-A/B AUDIT 8/9번 설계 반영).
+# "브랜드명은 없지만 모델명만 있는" 실제 운영 미탐지 사례만 최소로 등록한다:
+# BMW "F 900 GS", Triumph "스피드 트윈"/"본네빌" — 전부 실제 raw_news.json에서 확인된
+# 기사 제목 그대로다(요청서 3번: 인터넷 지식으로 임의 확장하지 않음).
+#
+# 반드시 공백/숫자를 포함한 "완전한" 모델 표현만 등록한다. "GS"/"Tiger"/"Monster"/
+# "Ninja"/"CB"/"ADV"/"Rebel"/"Street"/"Scout"처럼 단독·일반어 성격이 강한 짧은 토큰은
+# 오탐 위험이 매우 커서(예: "GS 편의점"/"GS리테일"/"GS건설"/"Tiger Woods"/
+# "Monster Energy") 절대 등록하지 않는다. 다른 브랜드 모델명도 이번 STEP에서는
+# 추가하지 않는다 — 실제 운영 데이터에서 유사 사례가 확인될 때마다 점진적으로만 늘린다.
+MODEL_TO_BRAND = {
+    "bmw": ["f 900 gs"],
+    "triumph": ["스피드 트윈", "본네빌"],
+}
+
 
 def detect_brand_groups(title: str, summary: str) -> list[str]:
     """제목/요약에서 실제로 언급된 브랜드를 모두 찾아 배열로 반환한다(brandGroups).
@@ -281,6 +296,12 @@ def detect_brand_groups(title: str, summary: str) -> list[str]:
       것과 동일한 기준)를 반드시 함께 만족해야 한다.
     - BMW/Ducati/Triumph/Harley: 브랜드명 매칭에 더해 has_motorcycle_context() 게이트
       (자동차 전용/사건사고 배제)를 그대로 재사용해서 오탐을 막는다.
+    - STEP 12-F.1-C: 브랜드명이 텍스트에 전혀 없어도 MODEL_TO_BRAND에 등록된 "완전한
+      모델 표현"이 있으면 해당 브랜드를 추가로 인식한다(P3, 위 브랜드명 매칭 이후에
+      실행 — 이미 P1로 잡힌 브랜드는 건너뛰어 중복을 막는다). 이 모델 표현 자체가
+      이미 특정 브랜드를 충분히 특정하도록 신중히 고른 것이므로(오탐 위험이 큰 단독
+      토큰은 사전에 없음) has_motorcycle_context() 같은 별도 문맥 게이트를 추가로
+      요구하지 않는다 — 짧고 일반적인 단어를 아예 등록하지 않는 것 자체가 안전장치다.
 
     STEP 9.3: collect_news.py의 수집 시점 계산과 analyze_news_free.py의 Legacy
     Fallback 계산이 이 함수 하나를 공통으로 사용한다(더 이상 두 파일에 복제하지 않음)."""
@@ -301,5 +322,12 @@ def detect_brand_groups(title: str, summary: str) -> list[str]:
                 continue
 
         detected.append(brand)
+
+    # STEP 12-F.1-C: P3 — 모델명 기반 보강. P1(브랜드명)로 이미 잡힌 브랜드는 건너뛴다.
+    for brand, models in MODEL_TO_BRAND.items():
+        if brand in detected:
+            continue
+        if any(model.lower() in text for model in models):
+            detected.append(brand)
 
     return detected
