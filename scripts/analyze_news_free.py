@@ -2468,6 +2468,88 @@ def build_market_intelligence_v2(analyzed_articles: list[dict]) -> dict[str, lis
 
 
 # ==========================================================
+# 13. STEP 12-H.8 — Limited Editorial Activation (V1-ASSISTED V2)
+# ==========================================================
+# 이번 STEP은 처음으로 Editorial Ranking v2(select_top_news_split_v2())를
+# 실제 production TOP NEWS 선정에 "연결 가능한" 상태로 배선하되, 기본값은 여전히
+# v1(select_top_news_split())이다 — 아래 EDITORIAL_RANKING_ENABLED는 이번 STEP이
+# 끝난 시점에도 False로 유지된다(요청서 17번: 기본값 ON 전환은 이번 STEP 범위가
+# 아니며 별도 STEP으로 분리한다).
+#
+# "V1-ASSISTED V2" 분류(요청서 2번, 반드시 이렇게만 부른다 — "FULL V2" 아님):
+# main()의 실행 순서는 v1 선정(select_top_news_split()) → v1이 선정한 기사만
+# enrichment(요약 보강) → 그 enrichment 결과를 포함해 attach_editorial_fields()가
+# editorial 필드 계산 → select_top_news_split_v2()가 그 결과 위에서 재정렬,
+# 이다. 즉 v2는 "v1이 이미 골라 놓은 후보 + v1이 이미 보강해 둔 요약"이라는,
+# v1의 선택에 의존하는 입력 위에서만 동작한다 — 이것은 완전히 독립적인 v2
+# production ranking이 아니라 "V1-ASSISTED V2"다. 완전히 독립적인 v2(Option A:
+# raw/analyzed → editorial 필드 → v2 선정 → 그 다음에 enrichment)는 추가
+# 네트워크 요청 제로 제약과 양립할 수 없어(v2가 고른 후보 집합이 v1과 다를 수
+# 있는데 그 후보들은 아직 요약이 없다 — F900GS류 커버리지 누락 문제 재발 위험)
+# 이번 STEP에서는 구현하지 않는다(요청서 3번 Option A 금지).
+#
+# Option 비교(요청서 3번):
+#   Option A (Full v2 교체): raw/analyzed → editorial 필드 → v2 선정 → enrichment.
+#     장점: 진짜 독립적인 v2. 단점: v2가 사전 enrichment 없는 정보만으로 순위를
+#     매겨야 해서 커버리지 누락 문제가 재발할 수 있다. 이번 STEP 금지.
+#   Option B (V1-assisted v2, 채택): v1 선정 → 기존 3~10건 enrichment →
+#     editorial 필드 → v2 선정 → production TOP NEWS. 장점: 추가 fetch 0, 기존
+#     enrichment를 그대로 재사용, 이미 검증된 SHADOW 환경과 100% 동일한 입력.
+#     단점: enrichment 커버리지가 v1의 최초 선정 범위에 종속된다.
+#   Option C (Dual-run): production은 v1 유지, v2는 로그로만 관찰. AUDIT 결과
+#     Option B가 안전하다고 판단되어 채택했다(아래 Safety Guard로 보강).
+#
+# Feature Flag — 이 상수 하나만 바꾸면 즉시 v1으로 완전히 복귀한다(요청서 4, 14번).
+# select_top_news_split()/select_top_news_split_v2() 등 v1/v2 selector 함수
+# 자체는 이 STEP에서 단 한 줄도 삭제·수정하지 않았다.
+EDITORIAL_RANKING_ENABLED = False
+
+
+def _is_v2_selection_safe(
+    analyzed_articles: list[dict],
+    v1_own_ids: list[str],
+    v1_others_ids: list[str],
+    v2_own_ids: list[str],
+    v2_others_ids: list[str],
+) -> bool:
+    """요청서 9번 Safety Guard — 최소한의 이상 결과만 걸러낸다(과도한 자동
+    폴백 시스템을 만들지 않는다). 아래 5가지 중 하나라도 해당하면 False(불안전)를
+    반환하고, 호출부는 EDITORIAL_RANKING_ENABLED가 True여도 v1 결과로 폴백한다.
+
+    1) v1은 정상 후보가 있는데 v2 결과가 완전히 비어 있음
+    2) BMW OWN은 v1에 정상 후보가 있는데 v2 OWN이 비어 있음
+    3) v2 결과에 존재하지 않는/유효하지 않은 id가 섞여 있음
+    4) v2 결과(OWN+OTHERS 합산)에 중복 id가 있음
+    5) topNewsEligible=False인 기사가 v2 OTHERS에 들어가 있음
+    """
+    valid_ids = {a["id"] for a in analyzed_articles}
+    eligible_by_id = {a["id"]: a.get("topNewsEligible", True) for a in analyzed_articles}
+
+    v2_combined = list(v2_own_ids) + list(v2_others_ids)
+
+    # 1) v1 정상 후보 존재 + v2 완전 공백
+    if (v1_own_ids or v1_others_ids) and not v2_combined:
+        return False
+
+    # 2) BMW OWN: v1 정상 후보 존재 + v2 OWN 공백
+    if v1_own_ids and not v2_own_ids:
+        return False
+
+    # 3) 존재하지 않는/유효하지 않은 id
+    for tid in v2_combined:
+        if tid not in valid_ids:
+            return False
+
+    # 4) 중복 id
+    if len(v2_combined) != len(set(v2_combined)):
+        return False
+
+    # 5) topNewsEligible=False 기사가 v2 OTHERS에 존재
+    for tid in v2_others_ids:
+        if not eligible_by_id.get(tid, True):
+            return False
+
+    return True
 
 
 def main():
@@ -2546,6 +2628,25 @@ def main():
         f"P2={editorial_priority_counts.get('P2', 0)} "
         f"P3={editorial_priority_counts.get('P3', 0)}")
 
+    # ---- STEP 12-H.8: V1 vs V2 비교 로그(요청서 8번) ----
+    # EDITORIAL_RANKING_ENABLED 값과 무관하게 v2 선정은 항상 계산한다(관찰 목적).
+    # 이 로그는 news.json에는 저장되지 않는다(요청서 12번: UI/저장 스키마 확장 금지).
+    v2_own_ids, v2_others_ids = select_top_news_split_v2(editorial_articles)
+    title_by_id = {a["id"]: a["title"] for a in analyzed_articles}
+    added_by_v2 = (set(v2_own_ids) | set(v2_others_ids)) - top_ids
+    removed_by_v2 = top_ids - (set(v2_own_ids) | set(v2_others_ids))
+    log("\n[V1 vs V2] TOP NEWS 비교 (관찰용, EDITORIAL_RANKING_ENABLED와 무관하게 항상 계산)")
+    log(f"[V1] OWN: {[title_by_id.get(i, i)[:40] for i in bmw_top_ids]}")
+    log(f"[V1] OTHERS: {[title_by_id.get(i, i)[:40] for i in others_top_ids]}")
+    log(f"[V2] OWN: {[title_by_id.get(i, i)[:40] for i in v2_own_ids]}")
+    log(f"[V2] OTHERS: {[title_by_id.get(i, i)[:40] for i in v2_others_ids]}")
+    if added_by_v2:
+        log(f"[V1→V2] added_by_v2: {[(i, title_by_id.get(i, i)[:40]) for i in added_by_v2]}")
+    if removed_by_v2:
+        log(f"[V1→V2] removed_by_v2: {[(i, title_by_id.get(i, i)[:40]) for i in removed_by_v2]}")
+    if not added_by_v2 and not removed_by_v2:
+        log("[V1→V2] 차이 없음 (동일한 TOP NEWS 구성)")
+
     # ---- 카테고리 집계 로그 ----
     cat_counts = Counter(a["category"] for a in analyzed_articles)
     log("\nCategories")
@@ -2613,10 +2714,39 @@ def main():
     for brand, info in brand_summary.items():
         log(f"{brand.upper()}: {info['newsCount']} news, signal={info['signal']}, activity={info['activity']}")
 
+    # ---- STEP 12-H.8: Feature Flag 기반 최종 선정 결정(요청서 4, 9번) ----
+    # EDITORIAL_RANKING_ENABLED가 False면 무조건 v1 결과를 그대로 쓴다(기본값,
+    # 이번 STEP 종료 시점에도 False 유지 — 요청서 17번). True이더라도
+    # _is_v2_selection_safe()가 이상 결과를 감지하면 v1으로 자동 폴백한다.
+    if EDITORIAL_RANKING_ENABLED:
+        if _is_v2_selection_safe(analyzed_articles, bmw_top_ids, others_top_ids, v2_own_ids, v2_others_ids):
+            final_own_ids, final_others_ids = v2_own_ids, v2_others_ids
+            log("\n[EDITORIAL_RANKING_ENABLED=True] V2 선정 결과를 production TOP NEWS로 사용합니다.")
+        else:
+            final_own_ids, final_others_ids = bmw_top_ids, others_top_ids
+            log("\n[Safety Guard 작동] V2 결과가 비정상으로 판단되어 V1 결과로 폴백합니다.")
+    else:
+        final_own_ids, final_others_ids = bmw_top_ids, others_top_ids
+
+    # build_news_json()의 "topNewsGroup"은 analyzed_articles에 이미 설정된 값을
+    # 그대로 읽어 쓴다(위 v1 선정 직후 설정한 값) — final_own_ids/final_others_ids가
+    # v1과 다를 경우(V2 채택 시) 이 필드가 stale해지는 것을 막기 위해 최종 결정된
+    # id 기준으로 다시 맞춘다. ("isTopNews"/"rank"는 build_news_json() 내부에서
+    # 아래에서 넘기는 final_own_ids/final_others_ids로부터 매번 새로 계산되므로
+    # 별도 재설정이 필요 없다.)
+    final_top_ids = set(final_own_ids) | set(final_others_ids)
+    for a in analyzed_articles:
+        if a["id"] in final_own_ids:
+            a["topNewsGroup"] = "own"
+        elif a["id"] in final_others_ids:
+            a["topNewsGroup"] = "others"
+        else:
+            a["topNewsGroup"] = None
+
     # ---- 저장 ----
     existing_news = load_existing_json(NEWS_PATH)
 
-    news_json = build_news_json(analyzed_articles, bmw_top_ids, others_top_ids, existing_news)
+    news_json = build_news_json(analyzed_articles, final_own_ids, final_others_ids, existing_news)
     insights_json = build_insights_json(daily_signal, market_intel, team_brief)
     news_json = apply_insights_to_news_meta(news_json, insights_json)
 
