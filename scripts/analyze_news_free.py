@@ -1991,7 +1991,12 @@ def compute_editorial_score(article: dict) -> tuple[str, int, dict]:
 
     반환: (editorialPriority, editorialScore, editorialScoreBreakdown)"""
     title = article.get("title", "")
-    description = article.get("description") or article.get("summary") or ""
+    # STEP 12-H.5-C: summary(analyzed/enriched) 우선, raw description은 그 다음.
+    # 우선순위 근거는 "길이"가 아니라 생성 경로의 신뢰도다 — enriched summary는
+    # 원문 페이지 og:description(1차 자료), analyzed summary는 제목-재포장 필터를
+    # 통과한 RSS description, raw description은 필터를 거치지 않은 원본 그대로다
+    # (STEP 12-H.5-A/B AUDIT 8번 결론 그대로 적용, 새로 만든 기준이 아님).
+    description = article.get("summary") or article.get("description") or ""
     source = article.get("source", "")
     # STEP 12-H.4-B: Editorial Signal 계산에 넣기 직전에만 출처명을 제거한 임시
     # 텍스트를 만든다. article 원본의 title/description 필드 자체는 바뀌지 않는다
@@ -2121,7 +2126,12 @@ def attach_editorial_fields(analyzed_articles: list[dict], raw_by_id: dict[str, 
         # 원문과 다를 수 있어, 점수 계산에는 raw 원문을 우선 사용한다.
         editorial_input = {
             "title": a.get("title", ""),
-            "description": raw.get("description") or a.get("summary") or "",
+            # STEP 12-H.5-C: analyzed_articles의 summary는 이 시점(main()에서
+            # enrichment loop 이후 호출)이면 TOP NEWS로 선정된 기사에 한해 이미
+            # enrich_summary_from_article_page()로 보강된 값일 수 있다. raw
+            # description보다 우선한다 — 근거는 STEP 12-H.5-A/B AUDIT 8/9번과
+            # 동일(생성 경로 신뢰도: enriched > analyzed > raw, 길이 기준 아님).
+            "description": a.get("summary") or raw.get("description") or "",
             "publishedAt": a.get("publishedAt", ""),
             "relatedCoverageCount": raw.get("relatedCoverageCount"),
             "acquisitionMethod": raw.get("acquisitionMethod"),
@@ -2430,6 +2440,24 @@ def main():
     if not validate_analyzed_articles(analyzed_articles, raw_by_id):
         log("\n[안전장치 작동] 검증 실패로 기존 news.json / insights.json을 유지합니다.")
         sys.exit(1)
+
+    # ---- STEP 12-H.5-C: Editorial Ranking SHADOW 연결 ----
+    # attach_editorial_fields()는 위 enrichment loop가 이미 끝난 뒤에만 호출한다
+    # (요청서 A번 — TOP NEWS로 선정된 기사는 이 시점 a["summary"]가 원문 페이지
+    # og:description으로 보강돼 있을 수 있다). select_top_news_split()(v1)이 만든
+    # bmw_top_ids/others_top_ids/isTopNews/topNewsGroup/rank는 이 호출과 무관하게
+    # 이미 위에서 전부 확정된 값이며, 이 호출은 그 결과를 다시 계산하거나 바꾸지
+    # 않는다 — analyzed_articles가 아니라 별도의 복사본(editorial_articles)만
+    # 만들어 SHADOW로만 관찰한다. news.json에는 저장하지 않는다(요청서 7번:
+    # 임의로 UI/저장 필드를 늘리지 않음 — build_news_json()은 이번 STEP에서도
+    # 전혀 수정하지 않았다). 추가 네트워크 요청 없음 — enrich_summary_from_article_page()를
+    # 새로 호출하지 않고, 위 enrichment loop가 이미 만들어 둔 a["summary"]만 읽는다.
+    editorial_articles = attach_editorial_fields(analyzed_articles, raw_by_id)
+    editorial_priority_counts = Counter(a.get("editorialPriority") for a in editorial_articles)
+    log(f"\n[SHADOW] Editorial Priority (관찰용, TOP NEWS 선정에는 영향 없음): "
+        f"P1={editorial_priority_counts.get('P1', 0)} "
+        f"P2={editorial_priority_counts.get('P2', 0)} "
+        f"P3={editorial_priority_counts.get('P3', 0)}")
 
     # ---- 카테고리 집계 로그 ----
     cat_counts = Counter(a["category"] for a in analyzed_articles)
