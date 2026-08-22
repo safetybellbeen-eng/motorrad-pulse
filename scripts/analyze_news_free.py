@@ -2038,6 +2038,73 @@ def compute_editorial_score(article: dict) -> tuple[str, int, dict]:
     return priority, total, breakdown
 
 
+# ---- STEP 12-H.7.1: BMW OWN 전용 2차 정렬(Option B) ----
+# STEP 12-H.7 AUDIT에서 fixture로 실증된 문제: 리콜(businessTier=major, 25점)이
+# 단순 신모델 소개(businessTier=standard 15점 + productTier=major 15점=30점)보다
+# editorialScore 합산 점수가 낮게 나와, 같은 P2 tier 안에서 리콜이 신모델보다
+# 아래로 밀린다. editorialPriority(P1/P2/P3)나 editorialScore/editorialScoreBreakdown
+# 자체는 전혀 재정의하지 않는다(요청서 2번: P1/P2/P3 체계를 억지로 재정의하지
+# 않음) — 대신 BMW OWN 정렬에서만 참고하는 별도의 작은 2차 정렬 기준을 새로
+# 만든다. OTHERS(select_top_news_v2()/_editorial_sort_key())는 이 함수를
+# 전혀 참조하지 않고 기존 그대로 동작한다(요청서 6번: OTHERS 무회귀).
+def compute_own_priority_score(article: dict) -> int:
+    """BMW OWN 기사의 실무 우선순위 Tier를 0~3 정수로 반환한다. 새 키워드 사전을
+    만들지 않고 compute_editorial_signals()가 이미 계산하는 businessTier/
+    koreaTier/productTier/customerTier를 그대로 재사용한다("합산 점수"가 아니라
+    "Tier 비교"로 판정하는 것이 이번 STEP의 핵심 — 합산은 major 신호 하나가
+    minor 신호 여러 개에 상쇄당하는 문제의 원인이었다).
+
+    3 (즉시 대응성 높은 신호): businessTier=="major"(가격 인상/인하, 사전예약,
+       딜러십, 딜러망 확대/축소, 리콜, 규제 변화, 판매금지/정책/전략 등 —
+       BUSINESS_IMPACT_OTHER_MAJOR_PHRASES 재사용) 또는 koreaTier=="confirmed"
+       (국내 출시/판매/사전예약 확정 — KOREA_CONFIRMED_PHRASES 재사용).
+    2 (주요 사업/제품 신호): productTier=="major"(신모델/신차/완전변경/풀체인지 등
+       — PRODUCT_SIGNIFICANCE_MAJOR_PHRASES 재사용) 또는 businessTier=="standard"
+       (단순 출시/공개/신제품/프로모션/캠페인/발표) 또는 customerTier=="major"
+       (랠리/페스티벌/대형 고객 프로그램).
+    1 (일반 업데이트): productTier=="minor"(연식/컬러/옵션 변경) 또는
+       customerTier=="minor"(시승/이벤트/행사).
+    0 (신호 없음): 위 어디에도 해당하지 않는 단순 안내성 콘텐츠(예: 영업시간 안내).
+
+    STEP 12-H.4-B와 동일하게 _strip_known_source_name()으로 출처명 boilerplate를
+    제거한 임시 텍스트만 계산에 쓰고, article 원본은 건드리지 않는다."""
+    title = article.get("title", "")
+    description = article.get("summary") or article.get("description") or ""
+    source = article.get("source", "")
+    cleaned_title = _strip_known_source_name(title, source)
+    cleaned_description = _strip_known_source_name(description, source)
+    signals = compute_editorial_signals(cleaned_title, cleaned_description)
+
+    business_tier = signals["businessTier"]
+    korea_tier = signals["koreaTier"]
+    product_tier = signals["productTier"]
+    customer_tier = signals["customerTier"]
+
+    if business_tier == "major" or korea_tier == "confirmed":
+        return 3
+    if product_tier == "major" or business_tier == "standard" or customer_tier == "major":
+        return 2
+    if product_tier == "minor" or customer_tier == "minor":
+        return 1
+    return 0
+
+
+def _own_priority_sort_key(article: dict) -> tuple:
+    """select_top_news_split_v2()의 BMW OWN 분기 전용 정렬 키. OTHERS는 여전히
+    기존 _editorial_sort_key()를 그대로 쓴다(요청서 6번, 10번: OTHERS 무회귀,
+    Editorial Score 원본 필드 무변경). 정렬 순서는 요청서 2번 그대로:
+    editorialPriority -> ownPriorityScore -> editorialScore -> freshness ->
+    relatedCoverageCount -> id(결정론적 tie-breaker)."""
+    return (
+        EDITORIAL_PRIORITY_RANK.get(article.get("editorialPriority"), 99),
+        -compute_own_priority_score(article),
+        -article.get("editorialScore", 0),
+        -article.get("editorialScoreBreakdown", {}).get("freshness", 0),
+        -(article.get("relatedCoverageCount") or 1),
+        article.get("id", ""),
+    )
+
+
 # ---- Diversity v2 (SHADOW 전용, 요청서 10번) ----
 # 기존 TOP_NEWS_MAX_PER_GROUP(sourceGroup 기준)은 그대로 둔다. v2는 별도 상수/
 # 함수로 병행 구현하고, brandGroups -> topicTags -> sourceGroup 순으로 fallback한다.
@@ -2113,9 +2180,16 @@ def select_top_news_split_v2(analyzed_articles: list[dict]) -> tuple[list[str], 
     ACCESSORY_BRAND_KEYWORDS는 건드리지 않는다. topNewsEligible이 없는(legacy)
     데이터는 v1과 동일하게 기본값 True로 취급한다. BMW OWN 분기(위 bmw_articles/
     bmw_sorted/bmw_ids)는 이 필터와 무관하게 이미 확정됐다 — v1과 마찬가지로
-    OWN은 이 eligibility 필터의 적용 대상이 아니다."""
+    OWN은 이 eligibility 필터의 적용 대상이 아니다.
+
+    STEP 12-H.7.1: BMW OWN 정렬 기준을 _editorial_sort_key()에서 _own_priority_sort_key()로
+    바꿨다 — editorialPriority(P1/P2/P3) 우선순위는 그대로 존중하되, 그 안에서
+    compute_own_priority_score()(리콜/가격/사전예약/딜러 변화 등 즉시 대응성
+    높은 신호 우선)를 editorialScore 합산보다 먼저 비교한다. OTHERS(바로 아래
+    select_top_news_v2() 호출)는 여전히 기존 _editorial_sort_key()를 그대로
+    쓴다 — 이 변경은 BMW OWN 분기에만 적용된다."""
     bmw_articles = [a for a in analyzed_articles if _is_bmw_own_article(a)]
-    bmw_sorted = sorted(bmw_articles, key=_editorial_sort_key)[:TOP_NEWS_MAX]
+    bmw_sorted = sorted(bmw_articles, key=_own_priority_sort_key)[:TOP_NEWS_MAX]
     bmw_ids = [a["id"] for a in bmw_sorted]
 
     non_bmw_articles = [
