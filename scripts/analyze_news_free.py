@@ -2552,6 +2552,48 @@ def _is_v2_selection_safe(
     return True
 
 
+def _v2_selection_safety_reasons(
+    analyzed_articles: list[dict],
+    v1_own_ids: list[str],
+    v1_others_ids: list[str],
+    v2_own_ids: list[str],
+    v2_others_ids: list[str],
+) -> list[str]:
+    """STEP 12-I: 관찰성(observability) 전용 진단 함수 — 요청서 4번(권장 방식)에
+    따라 기존 _is_v2_selection_safe()의 bool 반환 로직은 단 한 줄도 바꾸지
+    않는다(정책 조건 자체도 동일). 이 함수는 그 함수를 호출하거나 대체하지
+    않고, 완전히 별도로 "같은 5가지 조건"을 사람이 읽을 수 있는 reason 코드
+    리스트로 병행 계산만 한다 — Safety Guard가 FAIL일 때 Actions 로그에서
+    "왜" 실패했는지 바로 확인할 수 있게 하기 위한 것이다(요청서 4번). 정상이면
+    빈 리스트를 반환한다."""
+    reasons = []
+    valid_ids = {a["id"] for a in analyzed_articles}
+    eligible_by_id = {a["id"]: a.get("topNewsEligible", True) for a in analyzed_articles}
+    v2_combined = list(v2_own_ids) + list(v2_others_ids)
+
+    # 1) v1 정상 후보 존재 + v2 완전 공백
+    if (v1_own_ids or v1_others_ids) and not v2_combined:
+        reasons.append("V1_HAS_CANDIDATES_V2_EMPTY")
+
+    # 2) BMW OWN: v1 정상 후보 존재 + v2 OWN 공백
+    if v1_own_ids and not v2_own_ids:
+        reasons.append("V1_OWN_HAS_CANDIDATES_V2_OWN_EMPTY")
+
+    # 3) 존재하지 않는/유효하지 않은 id
+    if any(tid not in valid_ids for tid in v2_combined):
+        reasons.append("V2_CONTAINS_INVALID_ID")
+
+    # 4) 중복 id
+    if len(v2_combined) != len(set(v2_combined)):
+        reasons.append("V2_CONTAINS_DUPLICATE_ID")
+
+    # 5) topNewsEligible=False 기사가 v2 OTHERS에 존재
+    if any(not eligible_by_id.get(tid, True) for tid in v2_others_ids):
+        reasons.append("V2_OTHERS_CONTAINS_INELIGIBLE_ARTICLE")
+
+    return reasons
+
+
 def main():
     log("=" * 60)
     log("[MOTORRAD PULSE FREE INTELLIGENCE]")
@@ -2646,6 +2688,12 @@ def main():
         log(f"[V1→V2] removed_by_v2: {[(i, title_by_id.get(i, i)[:40]) for i in removed_by_v2]}")
     if not added_by_v2 and not removed_by_v2:
         log("[V1→V2] 차이 없음 (동일한 TOP NEWS 구성)")
+    # STEP 12-I(요청서 6, 7번): 기존 [V1 vs V2] 비교 로그는 삭제하지 않고, 여기에
+    # "결과가 같다"와 "그래서 V2가 실제로 채택됐다"를 구분하는 한 줄만 추가한다.
+    # (순서까지 포함한 정확 일치 비교 — added_by_v2/removed_by_v2는 멤버십만 보므로
+    # 순서만 바뀐 경우를 놓칠 수 있어 별도로 확인한다.)
+    v1_v2_rank_identical = (bmw_top_ids == v2_own_ids) and (others_top_ids == v2_others_ids)
+    log(f"V1→V2: {'NO RANK CHANGE' if v1_v2_rank_identical else 'RANK CHANGE'}")
 
     # ---- 카테고리 집계 로그 ----
     cat_counts = Counter(a["category"] for a in analyzed_articles)
@@ -2715,18 +2763,47 @@ def main():
         log(f"{brand.upper()}: {info['newsCount']} news, signal={info['signal']}, activity={info['activity']}")
 
     # ---- STEP 12-H.8: Feature Flag 기반 최종 선정 결정(요청서 4, 9번) ----
-    # EDITORIAL_RANKING_ENABLED가 False면 무조건 v1 결과를 그대로 쓴다(기본값,
-    # 이번 STEP 종료 시점에도 False 유지 — 요청서 17번). True이더라도
+    # EDITORIAL_RANKING_ENABLED가 False면 무조건 v1 결과를 그대로 쓴다. True이더라도
     # _is_v2_selection_safe()가 이상 결과를 감지하면 v1으로 자동 폴백한다.
+    # 이 판정 로직(불리언 반환) 자체는 STEP 12-I에서도 단 한 줄도 바꾸지 않았다.
     if EDITORIAL_RANKING_ENABLED:
-        if _is_v2_selection_safe(analyzed_articles, bmw_top_ids, others_top_ids, v2_own_ids, v2_others_ids):
+        guard_pass = _is_v2_selection_safe(analyzed_articles, bmw_top_ids, others_top_ids, v2_own_ids, v2_others_ids)
+        # STEP 12-I(요청서 4번): _is_v2_selection_safe()와 별개로, 실패 사유를
+        # 사람이 Actions 로그로 바로 확인할 수 있도록 진단 전용 함수를 병행 호출한다
+        # (guard_pass 값 자체에는 전혀 영향을 주지 않는다).
+        guard_reasons = _v2_selection_safety_reasons(
+            analyzed_articles, bmw_top_ids, others_top_ids, v2_own_ids, v2_others_ids
+        )
+        if guard_pass:
             final_own_ids, final_others_ids = v2_own_ids, v2_others_ids
-            log("\n[EDITORIAL_RANKING_ENABLED=True] V2 선정 결과를 production TOP NEWS로 사용합니다.")
+            final_selector = "V2"
+            log("\n[EDITORIAL V2 ENABLED — SAFETY GUARD PASS — USING V2]")
         else:
             final_own_ids, final_others_ids = bmw_top_ids, others_top_ids
-            log("\n[Safety Guard 작동] V2 결과가 비정상으로 판단되어 V1 결과로 폴백합니다.")
+            final_selector = "V1"
+            log("\n[EDITORIAL V2 ENABLED — SAFETY GUARD FAIL — FALLBACK TO V1]")
+            log(f"Fallback Reason: {', '.join(guard_reasons) if guard_reasons else 'UNKNOWN'}")
     else:
         final_own_ids, final_others_ids = bmw_top_ids, others_top_ids
+        final_selector = "V1"
+        guard_pass = None
+        guard_reasons = []
+        log("\n[EDITORIAL V2 DISABLED — USING V1]")
+
+    # ---- STEP 12-I(요청서 2, 3, 5, 7번): 최종 selector 상태 요약 로그 ----
+    # 사람이 Actions 로그의 이 블록 하나만 봐도 (1) Feature Flag가 켜져 있었는지,
+    # (2) Safety Guard가 통과했는지 실패했는지(+실패 이유), (3) 결과적으로 v1/v2 중
+    # 어느 selector가 최종 채택됐는지, (4) v1과 v2 결과가 실제로 같았는지(NO RANK
+    # CHANGE)와 "그럼에도 V2가 채택됐다"는 사실을 구분해서 바로 알 수 있게 한다.
+    log("\n[EDITORIAL PRODUCTION STATUS]")
+    log(f"Feature Flag: {'ENABLED' if EDITORIAL_RANKING_ENABLED else 'DISABLED'}")
+    log(f"Safety Guard: {'N/A (Flag Disabled)' if guard_pass is None else ('PASS' if guard_pass else 'FAIL')}")
+    if guard_pass is False:
+        log(f"Fallback Reason: {', '.join(guard_reasons) if guard_reasons else 'UNKNOWN'}")
+    log(f"V1→V2: {'NO RANK CHANGE' if v1_v2_rank_identical else 'RANK CHANGE'}")
+    log(f"Final Selector: {final_selector}")
+    log(f"Final OWN Count: {len(final_own_ids)}")
+    log(f"Final OTHERS Count: {len(final_others_ids)}")
 
     # build_news_json()의 "topNewsGroup"은 analyzed_articles에 이미 설정된 값을
     # 그대로 읽어 쓴다(위 v1 선정 직후 설정한 값) — final_own_ids/final_others_ids가
