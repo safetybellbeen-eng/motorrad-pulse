@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-22",
-  "lastAnalyzedAt": "2026-08-22T18:01:31.819248+09:00",
+  "date": "2026-08-23",
+  "lastAnalyzedAt": "2026-08-23T06:48:19.687459+09:00",
   "dailySignal": {
     "title": "신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -14,7 +14,7 @@
       "relatedNewsIds": [
         "c71702e522b26f0f"
       ],
-      "impact": 2.5,
+      "impact": 2.0,
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
     },
     {
