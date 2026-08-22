@@ -1820,7 +1820,16 @@ BUSINESS_IMPACT_STANDARD_PHRASES = ["출시", "공개", "신제품", "프로모�
 KOREA_CONFIRMED_PHRASES = KOREA_FLAVORED_MAJOR_PHRASES + ["국내 딜러"]
 KOREA_WEAK_PHRASES = ["국내", "한국", "코리아"]
 
-PRODUCT_SIGNIFICANCE_MAJOR_PHRASES = ["신모델", "신차", "완전변경", "풀체인지", "new model", "세대변경", "신제품"]
+PRODUCT_SIGNIFICANCE_MAJOR_PHRASES = ["신모델", "뉴모델", "신차", "완전변경", "풀체인지", "new model", "세대변경", "신제품"]
+# STEP 12-J.1: "뉴모델"은 "신모델"/"new model"과 의미가 동일한 외래어 표기다.
+# STEP 12-J AUDIT에서 실제 production LIVE 기사("[뉴모델] ... F 900 GS 엔듀로
+# 프로 에디션 출시")가 이 표기 차이 때문에 productTier="none"(0점)으로 계산되는
+# False Negative가 실측으로 확인되어 최소 추가한다. "신제품"처럼 이미 존재하는
+# 문구도 액세서리 기사에 매칭될 수 있는 동일한 리스크 구조를 이미 가지고
+# 있으므로("코미네 신제품 라이딩진 출시" 등), "뉴모델" 추가가 새로운 종류의
+# 리스크를 만들지는 않는다 — 실제 production 데이터에서도 "뉴모델"은 BMW 실차
+# 모델 기사에만 쓰였고, 액세서리 기사는 "뉴아이템"이라는 별도 표기를 쓰고
+# 있음을 확인했다(STEP12_J1_AUDIT_REPORT.md 4번 섹션 참조).
 PRODUCT_SIGNIFICANCE_MINOR_PHRASES = ["연식 변경", "컬러 변경", "색상 변경", "옵션 변경", "트림 추가", "페이스리프트", "소폭 변경"]
 
 CUSTOMER_IMPACT_MAJOR_PHRASES = [
