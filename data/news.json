@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-08-22",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "04:10 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-22T13:01:33.250775+09:00",
+    "lastUpdatedISO": "2026-08-22T16:10:28.731790+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
-        "signal": "RISING",
+        "signal": "NEW",
         "activity": "HIGH",
         "topArticleTitle": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
         "topArticleUrl": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "ADVENTURE": "RISING"
+          "ADVENTURE": "NEW",
+          "NEW_MODEL": "NEW"
         }
       },
       "ducati": {
@@ -57,12 +57,12 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173281887&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "yamaha": {
