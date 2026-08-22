@@ -2502,7 +2502,7 @@ def build_market_intelligence_v2(analyzed_articles: list[dict]) -> dict[str, lis
 # Feature Flag — 이 상수 하나만 바꾸면 즉시 v1으로 완전히 복귀한다(요청서 4, 14번).
 # select_top_news_split()/select_top_news_split_v2() 등 v1/v2 selector 함수
 # 자체는 이 STEP에서 단 한 줄도 삭제·수정하지 않았다.
-EDITORIAL_RANKING_ENABLED = False
+EDITORIAL_RANKING_ENABLED = True
 
 
 def _is_v2_selection_safe(
