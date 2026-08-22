@@ -2103,12 +2103,25 @@ def select_top_news_split_v2(analyzed_articles: list[dict]) -> tuple[list[str], 
     기존과 동일하게 재사용한다 — 이번 STEP은 OWN/OTHERS 판정 자체가 아니라
     "각 그룹 내부 정렬 순서"만 바꾸는 것이 목적이기 때문이다. 기존 select_top_news_split()과
     마찬가지로 OWN 목록에는 diversity/제목중복 로직을 적용하지 않는다(OWN은
-    이미 BMW 하나로 브랜드가 고정돼 있어 diversity 개념 자체가 성립하지 않는다)."""
+    이미 BMW 하나로 브랜드가 고정돼 있어 diversity 개념 자체가 성립하지 않는다).
+
+    STEP 12-H.6-B: select_top_news_split()(v1)의 883행이 이미 적용하는
+    topNewsEligible(STEP 12-H.2 Accessory/Promotional Gate) 필터를 여기에도
+    동일하게 적용한다. STEP 12-H.6-A AUDIT에서 이 필터가 v2에 없어 v1이 이미
+    제외한 미쉐린/코미네가 SHADOW OTHERS에 재진입하는 POLICY PARITY FAILURE가
+    실데이터로 확인됐다 — 그 최소 수정이다. is_top_news_eligible() 자체나
+    ACCESSORY_BRAND_KEYWORDS는 건드리지 않는다. topNewsEligible이 없는(legacy)
+    데이터는 v1과 동일하게 기본값 True로 취급한다. BMW OWN 분기(위 bmw_articles/
+    bmw_sorted/bmw_ids)는 이 필터와 무관하게 이미 확정됐다 — v1과 마찬가지로
+    OWN은 이 eligibility 필터의 적용 대상이 아니다."""
     bmw_articles = [a for a in analyzed_articles if _is_bmw_own_article(a)]
     bmw_sorted = sorted(bmw_articles, key=_editorial_sort_key)[:TOP_NEWS_MAX]
     bmw_ids = [a["id"] for a in bmw_sorted]
 
-    non_bmw_articles = [a for a in analyzed_articles if not _is_bmw_own_article(a)]
+    non_bmw_articles = [
+        a for a in analyzed_articles
+        if not _is_bmw_own_article(a) and a.get("topNewsEligible", True)
+    ]
     others_ids = select_top_news_v2(non_bmw_articles, max_count=TOP_NEWS_MAX)
 
     return bmw_ids, others_ids
