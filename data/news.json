@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-22",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "04:11 PM",
+    "lastUpdated": "04:49 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-22T16:11:26.193896+09:00",
+    "lastUpdatedISO": "2026-08-22T16:49:29.241989+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,8 +19,8 @@
         "topArticleTitle": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
         "topArticleUrl": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "ADVENTURE": "NEW"
+          "ADVENTURE": "NEW",
+          "NEW_MODEL": "NEW"
         }
       },
       "ducati": {
