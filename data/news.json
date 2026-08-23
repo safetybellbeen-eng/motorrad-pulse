@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-08-23",
     "dayLabel": "SUNDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-23T08:01:24.766704+09:00",
+    "lastUpdatedISO": "2026-08-23T13:01:16.381880+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
-        "signal": "RISING",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
         "topArticleUrl": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
         "signalDetails": {
-          "NEW_MODEL": "RISING",
-          "ADVENTURE": "RISING"
+          "ADVENTURE": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -59,8 +59,8 @@
         "secondaryTheme": null,
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173281887&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "CONTINUING"
         }
@@ -87,20 +87,6 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
-        "title": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
-        "description": "혼다 말레이시아 법인 분 시우 혼다(Boon Siew Honda)가 마블의 인기 슈퍼히어로 스파이더맨에서 영감을 받은 한정판 모델 ‘ADV160 스파이더맨 에디션(ADV160 Spider-Man Edition)’을 공개했다.아쉽게도 이번 모델은 말레이시아에서 단 300대 한정으로 생산된다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "Vespa, 이탈리아 범선 ‘아메리고 베스푸치’ 헌정 스페셜 모델 공개",
-        "description": "미국 뉴욕항서 첫 만난 두 이탈리아 아이콘, 범선 디자인 담은 단 한 대의 특별한 베스파베스파가 이탈리아 해군의 상징이자 세계에서 가장 아름다운 범선으로 손꼽히는 훈련함 ‘아메리고 베스푸치(Amerigo Vespucci)’를 기념하는 단 한 대의 특별한 베스파를 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -125,44 +111,6 @@
       "isTopNews": true,
       "topNewsGroup": "own",
       "rank": 1
-    },
-    {
-      "id": "c1a9861dbdec1453",
-      "title": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173281887&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-21T11:52:48+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "혼다 말레이시아 법인 분 시우 혼다(Boon Siew Honda)가 마블의 인기 슈퍼히어로 스파이더맨에서 영감을 받은 한정판 모델 ‘ADV160 스파이더맨 에디션(ADV160 Spider-Man Edition)’을 공개했다.아쉽게도 이번 모델은 말레이시아에서 단 300대 한정으로 생산된다.",
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
-    },
-    {
-      "id": "d7eea97471c6804f",
-      "title": "Vespa, 이탈리아 범선 ‘아메리고 베스푸치’ 헌정 스페셜 모델 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173281499&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-21T11:42:35+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "미국 뉴욕항서 첫 만난 두 이탈리아 아이콘, 범선 디자인 담은 단 한 대의 특별한 베스파베스파가 이탈리아 해군의 상징이자 세계에서 가장 아름다운 범선으로 손꼽히는 훈련함 ‘아메리고 베스푸치(Amerigo Vespucci)’를 기념하는 단 한 대의 특별한 베스파를 공개했다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -177,26 +125,6 @@
         "impact": "Low",
         "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "HONDA, 마블 감성 담은 300대 한정 모델 'ADV160 Spider-Man Edition' 공개",
-        "description": "혼다 말레이시아 법인 분 시우 혼다(Boon Siew Honda)가 마블의 인기 슈퍼히어로 스파이더맨에서 영감을 받은 한정판 모델 ‘ADV160 스파이더맨 에디션(ADV160 Spider-Man Edition)’을 공개했다.아쉽게도 이번 모델은 말레이시아에서 단 300대 한정으로 생산된다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "Vespa, 이탈리아 범선 ‘아메리고 베스푸치’ 헌정 스페셜 모델 공개",
-        "description": "미국 뉴욕항서 첫 만난 두 이탈리아 아이콘, 범선 디자인 담은 단 한 대의 특별한 베스파베스파가 이탈리아 해군의 상징이자 세계에서 가장 아름다운 범선으로 손꼽히는 훈련함 ‘아메리고 베스푸치(Amerigo Vespucci)’를 기념하는 단 한 대의 특별한 베스파를 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
