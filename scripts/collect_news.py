@@ -21,7 +21,7 @@ import re
 import sys
 import time
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode, quote
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode, quote, unquote
 
 import feedparser
 import requests
@@ -63,6 +63,91 @@ USER_AGENT = "MotorradPulseNewsCollector/1.0 (+https://github.com/)"
 
 # 추적 파라미터 (요청서 14번)
 TRACKING_PARAMS = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "fbclid", "gclid", "oc"}
+
+# ==========================================================
+# STEP 12-K.1 — Collection Observability Instrumentation
+# ==========================================================
+# 이 섹션 전체는 "관찰 전용" 진단 도구다. 아래 헬퍼/카운터는 어떤 함수의 리턴값도,
+# 어떤 필터링 결정도 바꾸지 않는다 — 기존 로직이 "이미 내린" 판정 결과를 로그로
+# 남기거나 사후에 세는 용도로만 쓰인다(PRODUCTION LOGIC -> DIAGNOSTICS 단방향,
+# 그 역방향 의존성은 금지). SOURCES/TRUSTED_DOMAINS/BLOCKED_DOMAINS/LOOKBACK_HOURS/
+# has_motorcycle_context()/business relevance/remove_duplicates()/
+# canonical_dedupe_key()/reconcile_canonical_duplicates()/merge_news()/
+# dedupe_cross_group() 등 실제 수집 정책/필터/중복제거 로직은 이 STEP에서 전혀
+# 손대지 않았다.
+
+DIAGNOSTIC_ARTICLE_LOG_LIMIT = 20  # 로그 출력량 제어 전용 — 수집 결과에는 영향 없음
+
+# 이번 실행(main() 1회 호출) 동안의 진단 전용 누적 카운터. 필터링 로직이 아니라
+# 이 모듈의 로깅 헬퍼들만 값을 쓴다(main()이 이 값을 "읽어서" 요약 로그를 출력함).
+_diag_counters = {
+    "url_resolution_success": 0,
+    "url_resolution_failed": 0,
+    "exact_url_duplicate": 0,
+    "exact_title_duplicate": 0,
+    "canonical_duplicate": 0,
+    "untrusted_domain": 0,
+    "blocked_domain": 0,
+}
+
+
+def _reset_diag_counters():
+    """main() 시작 시 1회 호출. 모듈을 재사용하는 테스트 환경에서 이전 실행의
+    카운터가 섞이지 않도록 한다(진단 전용 — production 데이터 흐름과 무관)."""
+    for k in _diag_counters:
+        _diag_counters[k] = 0
+
+
+def _extract_query_label(source_config: dict) -> str:
+    """진단 로그 전용. 검색 쿼리 URL에서 사람이 읽을 수 있는 검색어를 최대한 추출한다.
+    추출에 실패해도 원본 URL을 그대로 보여주는 폴백이 있을 뿐, 수집 로직에는 전혀
+    영향을 주지 않는다(이 함수의 반환값은 오직 로그 문자열 조립에만 쓰인다)."""
+    url = source_config.get("url", "")
+    if source_config.get("method") == "rss":
+        return f"(direct RSS: {source_config.get('source', '')})"
+    try:
+        for k, v in parse_qsl(urlsplit(url).query):
+            if k == "q":
+                return unquote(v)
+    except Exception:
+        pass
+    return url[:100]
+
+
+def _log_query_result(source_config: dict, stats: dict, error: str | None = None):
+    """[QUERY RESULT] 진단 로그. stats는 collect_rss()가 이미 채워둔 카운터를
+    그대로 읽기만 한다 — 이 함수는 아무 것도 계산/판정하지 않는다."""
+    group = source_config.get("sourceGroup") or "(키워드 자동분류)"
+    query_label = _extract_query_label(source_config)
+    if error:
+        log(
+            f"[QUERY RESULT] group={group} query={query_label} "
+            f"raw_entries={stats.get('raw_entries', 0)} recent_entries=0 trusted_pass=0 "
+            f"motorcycle_pass=0 business_pass=0 error=\"{error}\""
+        )
+        return
+    log(
+        f"[QUERY RESULT] group={group} query={query_label} "
+        f"raw_entries={stats.get('raw_entries', 0)} recent_entries={stats.get('fetched', 0)} "
+        f"trusted_pass={stats.get('trusted_domain_pass', 0)} "
+        f"motorcycle_pass={stats.get('motorcycle_context_pass', 0)} "
+        f"business_pass={stats.get('business_relevance_pass', 0)}"
+    )
+
+
+def _log_article(article_log_state: dict, group: str, title: str, domain: str | None,
+                  published_at: str | None, result: str):
+    """[ARTICLE] 진단 로그. query당 DIAGNOSTIC_ARTICLE_LOG_LIMIT건까지만 전체 정보를
+    출력하고, 그 이상은 요약만 남긴다(로그 출력량 제어 전용 — 어떤 기사가 실제로
+    PASS/DROP되는지는 이 제한과 무관하게 호출부의 기존 필터링 로직이 그대로 결정한다)."""
+    if article_log_state["count"] >= DIAGNOSTIC_ARTICLE_LOG_LIMIT:
+        article_log_state["suppressed"] += 1
+        return
+    article_log_state["count"] += 1
+    log(
+        f"[ARTICLE] group={group} title=\"{(title or '')[:70]}\" "
+        f"domain={domain or '-'} publishedAt={published_at or '-'} result={result}"
+    )
 
 # ==========================================================
 # Source Quality Policy — 신뢰도 낮은 출처 차단 (Allowlist/Blocklist)
@@ -672,6 +757,10 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
     acquisition_method = source_config.get("method", "google_news")
 
     stats = new_stage_counters()
+    # STEP 12-K.1: 진단 전용 상태 — query당 [ARTICLE] 로그 출력 개수 제한에만 쓰인다.
+    article_log_state = {"count": 0, "suppressed": 0}
+    log(f"[QUERY START] group={source_group} source={source_name} method={acquisition_method} "
+        f"query={_extract_query_label(source_config)}")
 
     try:
         headers = {"User-Agent": USER_AGENT}
@@ -685,7 +774,9 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
         stats["raw_entries"] = len(feed.entries)
 
         if feed.bozo and not feed.entries:
-            return [], f"피드 파싱 실패 (bozo): {feed.bozo_exception}", stats
+            error_msg = f"피드 파싱 실패 (bozo): {feed.bozo_exception}"
+            _log_query_result(source_config, stats, error=error_msg)
+            return [], error_msg, stats
 
         articles = []
         for entry in feed.entries:
@@ -695,6 +786,7 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
             summary = re.sub(r"<[^>]+>", "", summary).strip()
 
             if not title or not link:
+                _log_article(article_log_state, source_group, title, None, None, "DROP:NO_TITLE_OR_LINK")
                 continue
 
             # Google News RSS의 "제목 - 언론사명" 형태에서 실제 언론사명을 분리해
@@ -705,12 +797,14 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
             if keyword_filter:
                 text = f"{clean_title} {summary}".lower()
                 if not any(kw.lower() in text for kw in keyword_filter):
+                    _log_article(article_log_state, source_group, clean_title, None, None, "DROP:KEYWORD_FILTER")
                     continue
 
             raw_date = getattr(entry, "published_parsed", None) or getattr(entry, "published", None)
             published_at = parse_date(raw_date)
 
             if not is_within_lookback(published_at):
+                _log_article(article_log_state, source_group, clean_title, None, published_at, "DROP:OUTSIDE_LOOKBACK")
                 continue
 
             stats["fetched"] += 1
@@ -728,17 +822,33 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
                 source_href = entry.source.get("href")
             real_link = resolve_real_article_url(link, source_href)
             clean_url = normalize_url(real_link)
+            resolved_domain = urlsplit(clean_url).netloc
+
+            # STEP 12-K.1: Google News 리다이렉트였던 경우에 한해 실제로 원문 URL로
+            # 풀렸는지(resolve_real_article_url이 news.google.com이 아닌 도메인을
+            # 반환했는지) 관찰만 한다. resolve_real_article_url()/normalize_url() 자체는
+            # 호출하지 않고 이미 계산된 real_link/clean_url을 읽기만 하므로, 이 로그
+            # 유무와 무관하게 실제 필터링 결과(is_trusted_domain 등)는 항상 동일하다.
+            if "news.google.com" in link:
+                resolution_status = "FAILED" if "news.google.com" in real_link else "SUCCESS"
+                _diag_counters["url_resolution_failed" if resolution_status == "FAILED" else "url_resolution_success"] += 1
+                log(f"[URL RESOLUTION] original={link[:100]} resolved={real_link[:100]} "
+                    f"domain={resolved_domain or '-'} status={resolution_status}")
 
             # 신뢰 화이트리스트에 있는 도메인만 채택한다 (요청서: 신뢰할 수 있는 국내 언론사만).
             # 목록에 없으면 국내처럼 보여도 확인이 안 된 것이므로 기본적으로 제외한다.
             if not is_trusted_domain(clean_url):
                 stats["blocked_by_domain"] += 1
+                _diag_counters["untrusted_domain"] += 1
+                _log_article(article_log_state, source_group, clean_title, resolved_domain, published_at, "DROP:UNTRUSTED_DOMAIN")
                 continue
 
             # 저품질 도메인(블로그/카페 등) 최종(원문) URL 기준 차단 — 화이트리스트에 실수로
             # 등록될 가능성에 대비한 이중 안전장치
             if is_blocked_domain(clean_url):
                 stats["blocked_by_domain"] += 1
+                _diag_counters["blocked_domain"] += 1
+                _log_article(article_log_state, source_group, clean_title, resolved_domain, published_at, "DROP:BLOCKED_DOMAIN")
                 continue
 
             stats["trusted_domain_pass"] += 1
@@ -751,6 +861,7 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
             # STEP 9: Honda/Yamaha는 브랜드 전용 서브키워드까지 함께 검증한다.
             if not has_motorcycle_context(clean_title, summary, resolved_group):
                 stats["blocked_as_context"] += 1
+                _log_article(article_log_state, resolved_group, clean_title, resolved_domain, published_at, "DROP:NO_MOTORCYCLE_CONTEXT")
                 continue
 
             stats["motorcycle_context_pass"] += 1
@@ -761,9 +872,11 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
             relevance_score = compute_business_relevance_score(clean_title, summary)
             if not passes_business_relevance_gate(clean_title, summary):
                 stats["blocked_as_low_relevance"] += 1
+                _log_article(article_log_state, resolved_group, clean_title, resolved_domain, published_at, "DROP:LOW_BUSINESS_RELEVANCE")
                 continue
 
             stats["business_relevance_pass"] += 1
+            _log_article(article_log_state, resolved_group, clean_title, resolved_domain, published_at, "PASS")
 
             articles.append({
                 "title": clean_title,
@@ -780,18 +893,33 @@ def collect_rss(source_config: dict) -> tuple[list[dict], str | None, dict[str, 
                 "summary_raw": summary[:300],  # 중복판단 참고용, 최종 저장 시 제거
             })
 
+        if article_log_state["suppressed"] > 0:
+            log(f"[ARTICLE] (이 쿼리에서 {article_log_state['suppressed']}건 추가 — "
+                f"DIAGNOSTIC_ARTICLE_LOG_LIMIT={DIAGNOSTIC_ARTICLE_LOG_LIMIT}건 초과로 상세 로그 생략, "
+                f"단계별 집계 수치에는 모두 포함됨)")
+        _log_query_result(source_config, stats)
         return articles, None, stats
 
     except requests.exceptions.RequestException as e:
-        return [], f"네트워크 오류: {e}", stats
+        error_msg = f"네트워크 오류: {e}"
+        _log_query_result(source_config, stats, error=error_msg)
+        return [], error_msg, stats
     except Exception as e:
-        return [], f"알 수 없는 오류: {e}", stats
+        error_msg = f"알 수 없는 오류: {e}"
+        _log_query_result(source_config, stats, error=error_msg)
+        return [], error_msg, stats
 
 
 def remove_duplicates(articles: list[dict]) -> list[dict]:
-    """URL 및 정규화된 제목 기준 중복 제거 (요청서 14, 15번)"""
+    """URL 및 정규화된 제목 기준 중복 제거 (요청서 14, 15번).
+    STEP 12-K.1: [DEDUP EXACT] 진단 로그를 추가했다 — 판정 조건
+    (`url_key in seen_urls or title_key in seen_titles`) 자체는 한 글자도 바꾸지
+    않았고, 그 판정이 이미 내린 결과(어느 것이 유지되고 어느 것이 제거됐는지)를
+    관찰해서 로그로만 남긴다."""
     seen_urls = set()
     seen_titles = set()
+    kept_by_url: dict[str, dict] = {}
+    kept_by_title: dict[str, dict] = {}
     unique = []
 
     for a in articles:
@@ -799,10 +927,20 @@ def remove_duplicates(articles: list[dict]) -> list[dict]:
         title_key = normalize_title(a["title"])
 
         if url_key in seen_urls or title_key in seen_titles:
+            dup_type = "URL" if url_key in seen_urls else "TITLE"
+            kept = kept_by_url.get(url_key) or kept_by_title.get(title_key)
+            if dup_type == "URL":
+                _diag_counters["exact_url_duplicate"] += 1
+            else:
+                _diag_counters["exact_title_duplicate"] += 1
+            log(f"[DEDUP EXACT] type={dup_type} kept=\"{(kept or {}).get('title', '')[:60]}\" "
+                f"dropped=\"{a.get('title', '')[:60]}\" dropped_url={a.get('url', '')[:100]}")
             continue
 
         seen_urls.add(url_key)
         seen_titles.add(title_key)
+        kept_by_url[url_key] = a
+        kept_by_title[title_key] = a
         unique.append(a)
 
     return unique
@@ -1216,6 +1354,18 @@ def reconcile_canonical_duplicates(new_articles: list[dict], existing_news: list
         if existing_id and existing_id != rep.get("id"):
             rep["id"] = existing_id
 
+        # STEP 12-K.1 진단: 대표(rep) 선택과 id 승계 로직은 위에서 이미 끝났다 —
+        # 아래는 그 결과를 관찰해서 [DEDUP CANONICAL] 로그로만 남긴다(같은 실행 내에
+        # 실제로 2건 이상이 병합된 경우에만 발생).
+        if len(group) > 1:
+            for other in group:
+                if other is rep:
+                    continue
+                _diag_counters["canonical_duplicate"] += 1
+                log(f"[DEDUP CANONICAL] canonical_key={key} kept_id={rep.get('id')} "
+                    f"dropped_id={other.get('id')} kept_url={rep.get('url', '')[:100]} "
+                    f"dropped_url={other.get('url', '')[:100]}")
+
         result.append(rep)
 
     return result
@@ -1236,6 +1386,8 @@ def main():
     log("[MOTORRAD PULSE NEWS COLLECTOR]")
     log("=" * 60)
 
+    _reset_diag_counters()  # STEP 12-K.1: 진단 카운터 초기화 (production 데이터와 무관)
+
     existing_data = load_existing_news()
     existing_news = existing_data.get("news", [])
 
@@ -1247,6 +1399,13 @@ def main():
 
     # STEP 9: 수집 품질을 운영자가 로그에서 직접 확인할 수 있도록 단계별 합계를 누적한다 (요청서 34번).
     total_stats = new_stage_counters()
+
+    # STEP 12-K.1: group-level 진단 집계(관찰 전용). SOURCES 루프가 이미 계산해 둔
+    # stage_stats를 그룹별로 합산만 할 뿐, 어떤 필터링 결정에도 관여하지 않는다.
+    group_query_stats: dict[str, dict] = {g: {**new_stage_counters(), "queries": 0} for g in SOURCE_GROUP_LABELS}
+    queries_executed = 0
+    queries_with_raw_results = 0
+    queries_returning_zero = 0
 
     # STEP 10.2: Direct Source(method="rss")에 한해서만 개별 소스 단위 Health를 기록한다.
     # 기존 total_stats(전체 파이프라인 합계, 47개 Google 검색 쿼리 포함)와는 완전히 분리된
@@ -1281,6 +1440,18 @@ def main():
 
         for key in total_stats:
             total_stats[key] += stage_stats.get(key, 0)
+
+        # STEP 12-K.1: group-level 진단 집계 — collect_rss()가 이미 반환한 stage_stats를
+        # 그룹별로 합산해서 관찰만 한다(필터링 로직에는 관여하지 않음).
+        queries_executed += 1
+        if stage_stats.get("raw_entries", 0) > 0:
+            queries_with_raw_results += 1
+        if not articles:
+            queries_returning_zero += 1
+        gqs = group_query_stats.setdefault(src["sourceGroup"], {**new_stage_counters(), "queries": 0})
+        gqs["queries"] += 1
+        for key, val in stage_stats.items():
+            gqs[key] = gqs.get(key, 0) + val
 
         if src.get("method") == "rss":
             raw_entries = stage_stats.get("raw_entries", 0)
@@ -1437,6 +1608,31 @@ def main():
     log(f"Blocked as low/auto-only motorcycle context: {total_stats['blocked_as_context']}")
     log(f"Blocked as low business relevance: {total_stats['blocked_as_low_relevance']}")
 
+    # STEP 12-K.1: [COLLECTION DIAGNOSTICS] — 위 [STEP 9 품질 필터 로그]와 동일한
+    # 최종 숫자를, 어느 query/그룹/함수가 만들어냈는지 진단 가능하도록 세분화해서
+    # 다시 보여준다. 이 블록은 total_stats/_diag_counters/duplicates_removed_total/
+    # duplicates_removed_canonical 등 이미 계산되어 있던 값을 읽기만 한다 — 새로운
+    # 필터링 판정은 전혀 하지 않는다.
+    log("\n" + "-" * 60)
+    log("[COLLECTION DIAGNOSTICS]")
+    log("-" * 60)
+    log(f"Queries executed: {queries_executed}")
+    log(f"Queries with raw results: {queries_with_raw_results}")
+    log(f"Queries with final pass: {queries_executed - queries_returning_zero}")
+    log(f"Queries returning zero: {queries_returning_zero}")
+    log(f"Raw entries: {total_stats['raw_entries']}")
+    log(f"Within lookback: {total_stats['fetched']}")
+    log(f"Blocked domain (BLOCKED_DOMAINS): {_diag_counters['blocked_domain']}")
+    log(f"Untrusted domain (TRUSTED_DOMAINS 화이트리스트 미등재): {_diag_counters['untrusted_domain']}")
+    log(f"URL resolution failed (Google redirect 미해제): {_diag_counters['url_resolution_failed']}")
+    log(f"No motorcycle context: {total_stats['blocked_as_context']}")
+    log(f"Low business relevance: {total_stats['blocked_as_low_relevance']}")
+    log(f"Exact URL duplicate: {_diag_counters['exact_url_duplicate']}")
+    log(f"Exact title duplicate: {_diag_counters['exact_title_duplicate']}")
+    log(f"Canonical duplicate (query parameter 순서 variant, J.4R): {_diag_counters['canonical_duplicate']}")
+    log(f"Final candidates (merge_news() 진입 직전): {len(deduped)}")
+    log(f"Final saved: {len(merged_news)}")
+
     # STEP 10.1: 수집 방법(Direct RSS vs Google News 검색 폴백)별 최종 저장 건수.
     # Official RSS/Global Motorcycle RSS/Google News fallback/Domestic direct RSS를
     # 구분해서 집계한다(요청서 9번 로그 형식).
@@ -1509,6 +1705,28 @@ def main():
     for group, label in SOURCE_GROUP_LABELS.items():
         cnt = sum(1 for item in merged_news if item.get("sourceGroup") == group)
         log(f"{label}: {cnt}")
+
+    # STEP 12-K.1: [GROUP DIAGNOSTICS] — 그룹별로 "왜 0건인지"를 이 블록 하나로 판단할
+    # 수 있게 한다. queries~business는 SOURCES 루프에서 이미 계산된 stage_stats를
+    # 그룹별로 합산한 값이고, deduped는 remove_duplicates()+reconcile_canonical_duplicates()
+    # 직후(merge_news() 진입 직전) 이 그룹에 속한 건수, final은 merge_news()+
+    # dedupe_cross_group()까지 모두 끝난 뒤 최종 raw_news.json에 남은 이 그룹의 건수다.
+    # 전부 이미 만들어진 값을 읽기만 하며, 이 블록 자체는 어떤 필터링도 수행하지 않는다.
+    log("\n" + "-" * 60)
+    log("[GROUP DIAGNOSTICS]")
+    log("-" * 60)
+    for group, label in SOURCE_GROUP_LABELS.items():
+        gqs = group_query_stats.get(group, {})
+        deduped_cnt = sum(1 for item in deduped if item.get("sourceGroup") == group)
+        final_cnt = sum(1 for item in merged_news if item.get("sourceGroup") == group)
+        log(
+            f"{label} "
+            f"queries={gqs.get('queries', 0)} raw={gqs.get('raw_entries', 0)} "
+            f"recent={gqs.get('fetched', 0)} trusted={gqs.get('trusted_domain_pass', 0)} "
+            f"motorcycle={gqs.get('motorcycle_context_pass', 0)} "
+            f"business={gqs.get('business_relevance_pass', 0)} "
+            f"deduped={deduped_cnt} final={final_cnt}"
+        )
 
     if warnings:
         log("\n[WARNING 목록]")
