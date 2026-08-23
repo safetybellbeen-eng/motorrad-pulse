@@ -1,31 +1,4 @@
 {
-  "lastCollectedAt": "2026-08-23T18:00:53.243972+09:00",
-  "news": [
-    {
-      "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "publishedAt": "2026-08-21T23:25:49+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 12,
-      "brandGroups": [
-        "bmw"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시&nbsp;&nbsp;한국이륜차신문",
-      "id": "c71702e522b26f0f",
-      "collectedAt": "2026-08-23T18:00:53.243972+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    }
-  ]
+  "lastCollectedAt": "2026-08-24T06:47:27.544063+09:00",
+  "news": []
 }
