@@ -1120,6 +1120,107 @@ def dedupe_cross_group(items: list[dict]) -> list[dict]:
     return result
 
 
+# ==========================================================
+# STEP 12-J.4 — Canonical Dedup / Persistent ID Preservation
+# ==========================================================
+# STEP 12-J.3 AUDIT 결론: query parameter "순서"만 다른 동일 기사(Type C, 예: F900GS
+# "?idx=X&bmode=view" vs "?bmode=view&idx=X")는 normalize_url()이 순서를 정규화하지
+# 않아 서로 다른 id로 갈라진다. normalize_url()/generate_id() 자체를 바꾸면 기존 URL의
+# 35%, LIVE 데이터의 67%가 즉시 id를 잃어 History/Brand Pulse 연속성이 깨진다(AUDIT
+# 2번 섹션 실측). 그래서 "canonical identity(중복 판정)"와 "persistent id(연속성
+# 식별자)"를 분리한다 — 이 섹션의 함수들은 id 생성 규칙 자체를 바꾸지 않고, 이미
+# generate_id()로 만들어진 id를 "덮어쓸지"만 판단한다.
+
+def canonical_dedupe_key(url: str) -> str:
+    """중복 판정 전용 canonical key. normalize_url()과 동일하게 tracking parameter를
+    제거하되, 남은 query parameter를 key 기준으로 "정렬"만 추가한다(파라미터 삭제 확대
+    금지, 값 변경 금지, network 호출 없음, 항상 결정적). JSON에 저장하지 않고 매 실행마다
+    런타임에 재계산한다(STEP 12-J.3 AUDIT 7번 섹션: 저장 없이 재계산해도 충분함을 확인).
+    normalize_url()/generate_id() 자체는 이 함수가 호출하지 않으며 전혀 수정하지 않는다."""
+    if not url:
+        return url
+    try:
+        parts = urlsplit(url)
+        query_pairs = parse_qsl(parts.query, keep_blank_values=True)
+        cleaned_pairs = [(k, v) for k, v in query_pairs if k.lower() not in TRACKING_PARAMS]
+        sorted_pairs = sorted(cleaned_pairs, key=lambda kv: (kv[0], kv[1]))
+        cleaned_query = urlencode(sorted_pairs)
+        canonical_url = urlunsplit((parts.scheme, parts.netloc, parts.path, cleaned_query, ""))
+        return hashlib.sha256(canonical_url.encode("utf-8")).hexdigest()[:16]
+    except Exception:
+        # 실패해도 전체 수집이 중단되지 않아야 한다(요청서 17번 원칙과 동일) — 이 URL만
+        # canonical 매칭에서 제외되고(자기 자신과도 매칭되지 않을 만큼 원본 URL 기반의
+        # 값을 그대로 반환), 이후 파이프라인은 평소대로 진행된다.
+        return f"_unresolved_{url}"
+
+
+def _existing_canonical_id_map(existing_news: list[dict]) -> dict[str, str]:
+    """existing_news(직전까지 저장돼 있던 raw_news.json)를 canonical key 기준으로
+    인덱싱해서 "이미 추적 중인 id"를 조회할 수 있게 한다. 같은 canonical key를 가진
+    기존 레코드가 여러 개(과거 STEP 12-G.1 이전 데이터 등, 드문 경우) 있으면
+    _dedupe_rep_priority()와 동일한 대표 선정 기준으로 하나만 고른다 — 이 함수는
+    "어느 id를 승계할지" 결정에만 쓰이고 existing_news 자체는 건드리지 않는다."""
+    groups: dict[str, list[dict]] = {}
+    for item in existing_news:
+        key = canonical_dedupe_key(item.get("url", ""))
+        if not key:
+            continue
+        groups.setdefault(key, []).append(item)
+
+    result: dict[str, str] = {}
+    for key, items in groups.items():
+        rep = max(items, key=_dedupe_rep_priority) if len(items) > 1 else items[0]
+        result[key] = rep.get("id")
+    return result
+
+
+def reconcile_canonical_duplicates(new_articles: list[dict], existing_news: list[dict]) -> list[dict]:
+    """STEP 12-J.4 핵심 로직. 이번 실행에서 새로 수집한 기사(new_articles, 이미 id/
+    description/collectedAt까지 채워진 상태) 중 query parameter 순서만 달라 canonical
+    key가 같은 것들을 하나로 합치고, 그 대표에 "이미 existing_news가 추적 중이던 id"가
+    있으면 그 id를 그대로 승계한다.
+
+    반드시 merge_news() 호출 "이전"에 실행해야 한다 — merge_news()는 그룹별로 제목이
+    같은 기존 레코드를 remaining_old에서 걸러내므로(요청서 4번: F900GS 실사례처럼 old
+    variant가 title match로 조용히 사라지고 new id만 남는 문제), 그 시점에는 이미 새
+    레코드의 id가 확정되어 있어야 기존 id를 되살릴 수 없다.
+
+    - 같은 실행 내 canonical 그룹: 콘텐츠 대표는 기존 _dedupe_rep_priority() 철학
+      그대로(sourceQualityScore -> description 풍부함 -> collectedAt -> sourceGroup
+      보조) 선택한다 — identity 대표(id)와 content 대표(제목/URL/description)를
+      분리해도 된다는 요청서 5번 원칙에 따라, id 승계와 콘텐츠 선택은 서로 다른 기준을
+      쓴다.
+    - existing_news에 이미 같은 canonical key를 가진 레코드가 있으면, 그 id를 최우선
+      승계한다(요청서 5번 1순위 원칙). 없으면(완전히 새로운 기사) generate_id()가 만든
+      id를 그대로 쓴다(요청서 8번 — canonical key 때문에 신규 기사 id 생성 규칙 자체가
+      바뀌지는 않는다).
+    - normalize_url()/generate_id()는 이 함수에서 전혀 호출하지 않는다(이미 만들어진
+      a["id"]를 필요할 때만 덮어쓸 뿐, 생성 규칙 자체는 그대로)."""
+    existing_canonical_to_id = _existing_canonical_id_map(existing_news)
+
+    groups: dict[str, list[dict]] = {}
+    order: list[str] = []
+    for a in new_articles:
+        key = canonical_dedupe_key(a.get("url", ""))
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(a)
+
+    result: list[dict] = []
+    for key in order:
+        group = groups[key]
+        rep = max(group, key=_dedupe_rep_priority) if len(group) > 1 else group[0]
+
+        existing_id = existing_canonical_to_id.get(key)
+        if existing_id and existing_id != rep.get("id"):
+            rep["id"] = existing_id
+
+        result.append(rep)
+
+    return result
+
+
 def save_json(data: dict, path: str):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -1231,6 +1332,22 @@ def main():
         a["isTopNews"] = False
         a["aiProcessed"] = False
 
+    # STEP 12-J.4: id/description까지 채운 직후, merge_news() 호출 "이전"에 canonical
+    # dedup + persistent id 승계를 실행한다(요청서 4번 — merge_news()가 그룹별로 제목이
+    # 같은 기존 레코드를 remaining_old에서 걸러내기 전에 새 레코드의 id를 먼저 바로잡아야,
+    # F900GS 실사례처럼 old variant가 조용히 사라지고 new id만 남는 문제를 막을 수 있다).
+    # (1) 같은 실행 내에서 query parameter 순서만 다른 variant가 여러 건 들어왔으면 대표
+    #     1건으로 합치고, (2) 그 대표의 canonical key가 existing_news(직전 raw_news.json)에
+    #     이미 있으면 그 기존 id를 승계한다. normalize_url()/generate_id() 생성 규칙 자체는
+    #     바꾸지 않는다 — 이미 만들어진 id를 필요할 때만 덮어쓸 뿐이다.
+    duplicates_removed_canonical = len(deduped)
+    deduped = reconcile_canonical_duplicates(deduped, existing_news)
+    duplicates_removed_canonical -= len(deduped)
+    if duplicates_removed_canonical:
+        log(f"\n[STEP 12-J.4] Canonical(query parameter 순서) 중복 통합: "
+            f"{duplicates_removed_canonical}건 (같은 실행 내 query 순서 variant를 대표 1건으로 통합)")
+
+    for a in deduped:
         group = a["sourceGroup"]
         if group in collected_by_group:
             collected_by_group[group].append(a)
