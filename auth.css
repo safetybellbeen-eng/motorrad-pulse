@@ -6,6 +6,107 @@
 
 .auth-page{
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+}
+
+/* ---- LEFT: BMW brand hero panel ----
+   BMW 로고 쿼드런트(블루/화이트 대각선)를 초대형으로, 아주 옅게 배경 워터마크로
+   깔아서 "BMW스러움"을 은은하게 준다 — 실제 로고를 확대 남용하지 않고 색과
+   기하학적 모티프만 가져온다. */
+.auth-hero{
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 900px 700px at 12% -10%, rgba(28,105,212,0.16), transparent 60%),
+    var(--black);
+  border-right: 1px solid var(--line);
+  padding: 44px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-hero__quadrant{
+  position: absolute;
+  right: -220px;
+  bottom: -220px;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.05);
+  background:
+    conic-gradient(from 0deg,
+      rgba(28,105,212,0.10) 0deg 90deg,
+      transparent 90deg 180deg,
+      rgba(28,105,212,0.10) 180deg 270deg,
+      transparent 270deg 360deg);
+  pointer-events: none;
+}
+
+.auth-hero__top{ position: relative; z-index: 1; }
+.auth-hero__lockup{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bmw-emblem--lg{ width: 46px; height: 46px; }
+
+.auth-hero__mid{
+  position: relative;
+  z-index: 1;
+  max-width: 460px;
+}
+.auth-hero__eyebrow{
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--bmw-blue-light);
+  margin-bottom: 18px;
+}
+.auth-hero__title{
+  margin: 0 0 20px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 0.92;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.auth-hero__desc{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--grey);
+  max-width: 380px;
+}
+
+.auth-hero__bike{
+  position: absolute;
+  right: 48px;
+  bottom: 90px;
+  width: 220px;
+  height: 220px;
+  color: var(--bmw-blue-light);
+  opacity: 0.16;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.auth-hero__foot{
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  color: var(--grey-dim);
+}
+
+/* ---- RIGHT: form panel ---- */
+.auth-panel{
+  background: var(--panel);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,33 +116,23 @@
 .auth-card{
   width: 100%;
   max-width: 380px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 36px 32px;
 }
 
-.auth-brand{
+.auth-card__head{
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 6px;
-  margin-bottom: 28px;
-  text-align: center;
+  margin-bottom: 26px;
 }
-.auth-brand__eyebrow{
+.auth-card__title{
   font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  color: var(--grey-dim);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--bmw-blue-light);
 }
-.auth-brand__name{
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  color: var(--white);
+.auth-card__sub{
+  font-size: 13px;
+  color: var(--grey);
 }
 
 .auth-tabs{
@@ -89,7 +180,10 @@
   outline: none;
   transition: border-color 0.15s ease;
 }
-.auth-field input:focus{ border-color: var(--bmw-blue-light); }
+.auth-field input:focus{
+  border-color: var(--bmw-blue-light);
+  box-shadow: 0 0 0 3px var(--bmw-blue-dim);
+}
 
 .auth-submit{
   margin-top: 6px;
@@ -104,8 +198,30 @@
   letter-spacing: 0.3px;
   transition: background 0.15s ease, opacity 0.15s ease;
 }
-.auth-submit:hover{ background: var(--bmw-blue-light); }
+.auth-submit{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.auth-submit:hover{
+  background: var(--bmw-blue-light);
+  box-shadow: 0 4px 18px rgba(28,105,212,0.35);
+}
 .auth-submit:disabled{ opacity: 0.5; pointer-events: none; }
+
+/* ---- Responsive: 좁은 화면에서는 hero를 위쪽 컴팩트 배너로 접는다 ---- */
+@media (max-width: 880px){
+  .auth-page{ grid-template-columns: 1fr; }
+  .auth-hero{
+    padding: 32px 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .auth-hero__title{ font-size: 40px; }
+  .auth-hero__desc{ display: none; }
+  .auth-hero__bike{ display: none; }
+  .auth-hero__foot{ display: none; }
+  .auth-panel{ padding: 32px 20px 48px; }
+}
 
 .auth-message{
   margin-top: 14px;

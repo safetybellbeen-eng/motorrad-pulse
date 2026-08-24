@@ -16,53 +16,101 @@
 <body>
 
 <div class="auth-page">
-  <div class="auth-card">
-    <div class="auth-brand">
-      <span class="auth-brand__eyebrow">DAILY MARKET INTELLIGENCE</span>
-      <span class="auth-brand__name">MOTORRAD<br>PULSE</span>
+
+  <!-- ============ LEFT — BRAND HERO ============ -->
+  <div class="auth-hero">
+    <div class="auth-hero__quadrant" aria-hidden="true"></div>
+
+    <div class="auth-hero__top">
+      <div class="auth-hero__lockup">
+        <div class="bmw-emblem bmw-emblem--lg" title="BMW Motorrad">
+          <img src="./assets/bmw-logo.png" alt="" onerror="this.remove()">
+          <svg class="bmw-emblem__fallback" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#16171A" stroke="#E9E9EA" stroke-width="2.5"/>
+            <circle cx="50" cy="50" r="38" fill="none" stroke="#E9E9EA" stroke-width="1.5"/>
+            <path d="M50 12 A38 38 0 0 1 88 50 L50 50 Z" fill="#1C69D4"/>
+            <path d="M88 50 A38 38 0 0 1 50 88 L50 50 Z" fill="#E9E9EA"/>
+            <path d="M50 88 A38 38 0 0 1 12 50 L50 50 Z" fill="#1C69D4"/>
+            <path d="M12 50 A38 38 0 0 1 50 12 L50 50 Z" fill="#E9E9EA"/>
+          </svg>
+        </div>
+        <div class="bmw-wordmark">
+          <span class="bmw-wordmark__line">BMW</span>
+          <span class="bmw-wordmark__line">MOTORRAD</span>
+        </div>
+      </div>
     </div>
 
-    <div class="auth-tabs">
-      <button type="button" class="auth-tab is-active" data-auth-tab="login">로그인</button>
-      <button type="button" class="auth-tab" data-auth-tab="signup">가입 신청</button>
+    <div class="auth-hero__mid">
+      <span class="auth-hero__eyebrow">DAILY MARKET INTELLIGENCE</span>
+      <h1 class="auth-hero__title">MOTORRAD<br>PULSE</h1>
+      <p class="auth-hero__desc">
+        국내 이륜차 시장 뉴스를 자동으로 수집·분석하는 내부 전용 대시보드입니다.<br>
+        승인된 계정만 접속할 수 있습니다.
+      </p>
     </div>
 
-    <!-- 로그인 -->
-    <form id="login-form" class="auth-form is-active">
-      <div class="auth-field">
-        <label for="login-username">아이디</label>
-        <input id="login-username" type="text" autocomplete="username" required>
-      </div>
-      <div class="auth-field">
-        <label for="login-password">비밀번호</label>
-        <input id="login-password" type="password" autocomplete="current-password" required>
-      </div>
-      <button type="submit" class="auth-submit" id="login-submit">로그인</button>
-    </form>
+    <svg class="auth-hero__bike" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+      <path d="M16 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+      <path d="M7.5 14h5l4 -4h-10.5m1.5 4l4 -4"/>
+      <path d="M13 6h2l1.5 3l2 4"/>
+    </svg>
 
-    <!-- 가입 신청 -->
-    <form id="signup-form" class="auth-form">
-      <div class="auth-field">
-        <label for="signup-username">아이디</label>
-        <input id="signup-username" type="text" autocomplete="username" placeholder="영문/숫자, 3~32자" required>
-      </div>
-      <div class="auth-field">
-        <label for="signup-password">비밀번호</label>
-        <input id="signup-password" type="password" autocomplete="new-password" placeholder="6자 이상" required>
-      </div>
-      <div class="auth-field">
-        <label for="signup-password2">비밀번호 확인</label>
-        <input id="signup-password2" type="password" autocomplete="new-password" required>
-      </div>
-      <button type="submit" class="auth-submit" id="signup-submit">가입 신청</button>
-    </form>
+    <div class="auth-hero__foot">MOTORRAD PULSE — Internal Use Only · Automated Collection + Rule-Based Analysis</div>
+  </div>
 
-    <div id="auth-message" class="auth-message"></div>
+  <!-- ============ RIGHT — FORM ============ -->
+  <div class="auth-panel">
+    <div class="auth-card">
+      <div class="auth-card__head">
+        <span class="auth-card__title">ACCESS</span>
+        <span class="auth-card__sub">계정으로 로그인하거나 새로 가입 신청하세요</span>
+      </div>
 
-    <div class="auth-hint">
-      가입 신청 후 관리자 승인이 완료되어야 로그인할 수 있습니다.
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab is-active" data-auth-tab="login">로그인</button>
+        <button type="button" class="auth-tab" data-auth-tab="signup">가입 신청</button>
+      </div>
+
+      <!-- 로그인 -->
+      <form id="login-form" class="auth-form is-active">
+        <div class="auth-field">
+          <label for="login-username">아이디</label>
+          <input id="login-username" type="text" autocomplete="username" required>
+        </div>
+        <div class="auth-field">
+          <label for="login-password">비밀번호</label>
+          <input id="login-password" type="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="auth-submit" id="login-submit">로그인</button>
+      </form>
+
+      <!-- 가입 신청 -->
+      <form id="signup-form" class="auth-form">
+        <div class="auth-field">
+          <label for="signup-username">아이디</label>
+          <input id="signup-username" type="text" autocomplete="username" placeholder="영문/숫자, 3~32자" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-password">비밀번호</label>
+          <input id="signup-password" type="password" autocomplete="new-password" placeholder="6자 이상" required>
+        </div>
+        <div class="auth-field">
+          <label for="signup-password2">비밀번호 확인</label>
+          <input id="signup-password2" type="password" autocomplete="new-password" required>
+        </div>
+        <button type="submit" class="auth-submit" id="signup-submit">가입 신청</button>
+      </form>
+
+      <div id="auth-message" class="auth-message"></div>
+
+      <div class="auth-hint">
+        가입 신청 후 관리자 승인이 완료되어야 로그인할 수 있습니다.
+      </div>
     </div>
   </div>
+
 </div>
 
 <script src="./login.js"></script>
