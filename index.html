@@ -26,6 +26,11 @@
 <script src="./auth-config.js" defer></script>
 <script src="./auth-client.js" defer></script>
 <script src="./auth-guard.js" defer></script>
+
+<!-- TEAM BRIEF "카카오톡 공유" 버튼용 — kakao-config.js에 실제 JavaScript 키를 넣어야 동작한다.
+     키가 비어 있어도(placeholder) 페이지 로드 자체는 깨지지 않고, 버튼 클릭 시에만 안내 메시지가 뜬다. -->
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js" defer></script>
+<script src="./kakao-config.js" defer></script>
 </head>
 <body>
 
@@ -275,10 +280,22 @@
           <span id="brief-date">2026.08.12</span>
         </div>
 
+        <!-- 관리자 전용 — SOURCE MONITOR에서 뉴스를 골라 TEAM BRIEF에 수동으로 추가하는 패널.
+             auth-guard.js가 채워주는 window.__CURRENT_PROFILE__.role === 'admin'일 때만
+             script.js가 이 블록 자체를 보이게 한다(그 외에는 항상 숨김). -->
+        <div id="brief-admin-panel" class="brief-admin-panel" hidden>
+          <button id="brief-add-toggle" type="button" class="brief-admin-panel__toggle">+ SOURCE MONITOR에서 추가</button>
+          <div id="brief-add-picker" class="brief-add-picker" hidden>
+            <input id="brief-add-search" type="text" class="brief-add-picker__search" placeholder="제목/매체로 검색">
+            <div id="brief-add-list" class="brief-add-picker__list"></div>
+          </div>
+        </div>
+
         <div id="brief-body" class="brief-body"></div>
 
         <div class="brief-actions">
           <button id="copy-brief-btn" class="btn btn--primary">COPY TEAM BRIEF</button>
+          <button id="kakao-share-btn" type="button" class="btn btn--kakao">카카오톡 공유</button>
         </div>
       </div>
     </section>

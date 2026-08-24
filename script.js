@@ -87,6 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setupIntelTabbar();
   setupFilterBar();
   setupCopyBriefButton();
+  setupBriefAdminControls();
+  setupKakaoShareButton();
+  initKakaoSdk();
   setupRefreshButton();
   setupPullToRefresh();
 
@@ -710,6 +713,92 @@ async function saveTodayBrief(todayKey, items) {
   }
 }
 
+/* ---------- 관리자 수동 추가/제외 (Supabase team_brief_overrides 테이블) ----------
+   자동 생성된 TEAM BRIEF 목록은 그대로 두고, 관리자가 "이건 빼자/이건 넣자"로 조정한
+   내역만 별도 테이블에 저장한다. 조회는 승인된 사용자 누구나 가능(최종 목록을 보여줘야
+   하므로), 저장은 관리자만 가능하도록 RLS로 막아둔다(supabase_brief_overrides_schema.sql). */
+const BRIEF_OVERRIDES_TABLE = "team_brief_overrides";
+
+// 현재 렌더링된 TEAM BRIEF 상태 — COPY 버튼/카카오톡 공유 버튼이 다시 계산하지 않고
+// 화면에 실제로 보이는 최종 목록을 그대로 참조하도록 여기에 저장해둔다.
+let CURRENT_BRIEF_ITEMS = [];
+let CURRENT_BRIEF_TODAY_KEY = null;
+let CURRENT_BRIEF_OVERRIDES = { excludedIds: [], addedItems: [] };
+
+async function fetchTodayOverrides(todayKey) {
+  const empty = { excludedIds: [], addedItems: [] };
+  if (typeof _supabase === "undefined" || !_supabase || !todayKey) return empty;
+
+  try {
+    const { data, error } = await _supabase
+      .from(BRIEF_OVERRIDES_TABLE)
+      .select("excluded_ids, added_items")
+      .eq("date", todayKey)
+      .maybeSingle();
+
+    if (error || !data) return empty;
+    return {
+      excludedIds: data.excluded_ids || [],
+      addedItems: data.added_items || [],
+    };
+  } catch (e) {
+    console.error("TEAM BRIEF 수동 편집 내역 조회 실패:", e);
+    return empty;
+  }
+}
+
+async function saveTodayOverrides(todayKey, excludedIds, addedItems) {
+  if (typeof _supabase === "undefined" || !_supabase || !todayKey) return;
+
+  try {
+    const { data: userData } = await _supabase.auth.getUser();
+    const { error } = await _supabase.from(BRIEF_OVERRIDES_TABLE).upsert({
+      date: todayKey,
+      excluded_ids: excludedIds,
+      added_items: addedItems,
+      updated_at: new Date().toISOString(),
+      updated_by: userData?.user?.id || null,
+    });
+    if (error) {
+      console.error("TEAM BRIEF 수동 편집 저장 실패:", error);
+      showToast("수동 편집 저장에 실패했습니다. 권한(관리자)을 확인해주세요.");
+    }
+  } catch (e) {
+    console.error("TEAM BRIEF 수동 편집 저장 실패:", e);
+    showToast("수동 편집 저장에 실패했습니다.");
+  }
+}
+
+function isCurrentUserAdmin() {
+  return !!(window.__CURRENT_PROFILE__ && window.__CURRENT_PROFILE__.role === "admin");
+}
+
+// 자동 생성 항목을 "제외" 처리 — excluded_ids에 id를 추가하고 다시 그린다.
+async function excludeAutoItem(id) {
+  const excludedIds = Array.from(new Set([...CURRENT_BRIEF_OVERRIDES.excludedIds, id]));
+  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, excludedIds, CURRENT_BRIEF_OVERRIDES.addedItems);
+  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
+}
+
+// 수동으로 추가했던 항목을 다시 삭제 — added_items에서 해당 id를 뺀다.
+async function removeManualItem(id) {
+  const addedItems = CURRENT_BRIEF_OVERRIDES.addedItems.filter((n) => n.id !== id);
+  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, CURRENT_BRIEF_OVERRIDES.excludedIds, addedItems);
+  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
+}
+
+// SOURCE MONITOR 원문 하나를 TEAM BRIEF에 수동으로 추가.
+async function addManualItem(item) {
+  const already = CURRENT_BRIEF_OVERRIDES.addedItems.some((n) => n.id === item.id);
+  if (already) return;
+  const addedItems = [
+    ...CURRENT_BRIEF_OVERRIDES.addedItems,
+    { id: item.id, title: item.title, url: item.url, source: item.source, publishedAt: item.publishedAt },
+  ];
+  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, CURRENT_BRIEF_OVERRIDES.excludedIds, addedItems);
+  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
+}
+
 function formatBriefDateLabel(dateStr) {
   if (!dateStr) return "-";
   const parts = dateStr.split("-");
@@ -756,11 +845,23 @@ async function renderTeamBrief(data) {
     ? data.meta.date.replaceAll("-", ".")
     : "-";
 
-  const topNews = getTeamBriefItems(data);
-
-  // 오늘 브리핑을 Supabase에 저장하고(같은 날 재저장해도 upsert로 덮어쓸 뿐이라 안전),
-  // 오늘보다 이전인 가장 최근 저장 날짜를 "어제"로 삼아 비교한다.
+  const autoNews = getTeamBriefItems(data);
   const todayKey = data.meta.date || null;
+  CURRENT_BRIEF_TODAY_KEY = todayKey;
+
+  // 관리자가 조정해둔 제외/추가 내역을 가져와서 자동 목록에 반영한다. 최종적으로
+  // "오늘 실제 공유될 목록"은 이 병합 결과이고, 전일 비교/아카이브/복사/카카오톡 공유가
+  // 전부 이 최종 목록을 기준으로 동작한다 — 관리자가 뺀 뉴스가 비교표나 공유 텍스트에
+  // 남아있으면 안 되기 때문이다.
+  const overrides = await fetchTodayOverrides(todayKey);
+  CURRENT_BRIEF_OVERRIDES = overrides;
+  const excludedSet = new Set(overrides.excludedIds);
+  const manualItems = overrides.addedItems.map((n) => ({ ...n, __manual: true }));
+  const topNews = [...autoNews.filter((n) => !excludedSet.has(n.id)), ...manualItems];
+  CURRENT_BRIEF_ITEMS = topNews;
+
+  // 오늘 브리핑(최종 목록)을 Supabase에 저장하고(같은 날 재저장해도 upsert로 덮어쓸 뿐이라 안전),
+  // 오늘보다 이전인 가장 최근 저장 날짜를 "어제"로 삼아 비교한다.
   const { yesterdayKey, yesterdayItems } = await fetchYesterdayBrief(todayKey);
   const yesterdayIds = new Set((yesterdayItems || []).map((n) => n.id));
 
@@ -777,22 +878,120 @@ async function renderTeamBrief(data) {
 
   renderBriefCompare(todayKey, topNews, yesterdayKey, yesterdayItems, yesterdayIds);
 
+  const isAdmin = isCurrentUserAdmin();
+  const adminPanel = document.getElementById("brief-admin-panel");
+  if (adminPanel) adminPanel.hidden = !isAdmin;
+  if (typeof window.__refreshBriefAddPicker === "function") window.__refreshBriefAddPicker();
+
   if (topNews.length === 0) {
     briefBody.innerHTML = `<div class="brief-item"><p>아직 분석된 뉴스가 없습니다.</p></div>`;
   } else {
     briefBody.innerHTML = topNews.map((n, idx) => {
       const isDup = yesterdayIds.has(n.id);
+      const isManual = !!n.__manual;
+      const adminBtn = isAdmin
+        ? isManual
+          ? `<button type="button" class="brief-item__admin-btn" data-remove-manual="${escapeHtml(n.id)}">삭제</button>`
+          : `<button type="button" class="brief-item__admin-btn" data-exclude-auto="${escapeHtml(n.id)}">제외</button>`
+        : "";
       return `
-      <div class="brief-item${isDup ? " brief-item--dup" : ""}">
-        <span class="brief-item__label">(${idx + 1})</span>
-        <p>
-          ${isDup ? `<span class="brief-dup-badge" title="${escapeHtml(formatBriefDateLabel(yesterdayKey))} 브리핑에도 포함됐던 뉴스입니다">🔁 어제도 공유</span> ` : ""}${escapeHtml(n.title)}<br>
-          <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(shortenUrlForShare(n.url))}</a>
-        </p>
+      <div class="brief-item${isDup ? " brief-item--dup" : ""}${isManual ? " brief-item--manual" : ""}">
+        <div class="brief-item__main">
+          <span class="brief-item__label">(${idx + 1})</span>
+          <p>
+            ${isManual ? `<span class="brief-manual-badge">✚ 관리자 추가</span> ` : ""}${isDup ? `<span class="brief-dup-badge" title="${escapeHtml(formatBriefDateLabel(yesterdayKey))} 브리핑에도 포함됐던 뉴스입니다">🔁 어제도 공유</span> ` : ""}${escapeHtml(n.title)}<br>
+            <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(shortenUrlForShare(n.url))}</a>
+          </p>
+        </div>
+        ${adminBtn}
       </div>
     `;
     }).join("");
   }
+}
+
+/* ---------- TEAM BRIEF 관리자 컨트롤 (제외/삭제 버튼 + SOURCE MONITOR에서 추가) ---------- */
+function setupBriefAdminControls() {
+  // 제외/삭제 버튼은 매번 다시 그려지는 #brief-body 안에 있으므로, 그 바깥의 고정된
+  // 부모(.brief-card)에 이벤트 위임으로 한 번만 걸어둔다.
+  const briefCard = document.querySelector(".brief-card");
+  if (briefCard) {
+    briefCard.addEventListener("click", (e) => {
+      const excludeBtn = e.target.closest("[data-exclude-auto]");
+      if (excludeBtn) {
+        excludeAutoItem(excludeBtn.dataset.excludeAuto);
+        return;
+      }
+      const removeBtn = e.target.closest("[data-remove-manual]");
+      if (removeBtn) {
+        removeManualItem(removeBtn.dataset.removeManual);
+      }
+    });
+  }
+
+  const toggleBtn = document.getElementById("brief-add-toggle");
+  const picker = document.getElementById("brief-add-picker");
+  const searchInput = document.getElementById("brief-add-search");
+  const listEl = document.getElementById("brief-add-list");
+  if (!toggleBtn || !picker || !searchInput || !listEl) return;
+
+  function renderPickerList(query) {
+    if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) {
+      listEl.innerHTML = `<div class="brief-add-picker__empty">원본 뉴스를 아직 불러오는 중입니다. 잠시 후 다시 열어주세요.</div>`;
+      return;
+    }
+    const q = (query || "").trim().toLowerCase();
+    const addedIds = new Set(CURRENT_BRIEF_OVERRIDES.addedItems.map((n) => n.id));
+    let items = RAW_NEWS_DATA.news;
+    if (q) {
+      items = items.filter((n) =>
+        (n.title || "").toLowerCase().includes(q) || (n.source || "").toLowerCase().includes(q)
+      );
+    }
+    items = items
+      .slice()
+      .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""))
+      .slice(0, 30); // 너무 많으면 스크롤이 길어지므로 최신 30건까지만 — 검색으로 좁혀서 찾도록 안내
+
+    if (items.length === 0) {
+      listEl.innerHTML = `<div class="brief-add-picker__empty">검색 결과가 없습니다.</div>`;
+      return;
+    }
+
+    listEl.innerHTML = items.map((n) => {
+      const already = addedIds.has(n.id);
+      return `
+        <div class="brief-add-picker__row">
+          <div>
+            <div class="brief-add-picker__row-title">${escapeHtml(n.title)}</div>
+            <div class="brief-add-picker__row-meta">${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</div>
+          </div>
+          <button type="button" class="brief-add-picker__row-btn" data-add-item="${escapeHtml(n.id)}" ${already ? "disabled" : ""}>${already ? "추가됨" : "추가"}</button>
+        </div>`;
+    }).join("");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    picker.hidden = !picker.hidden;
+    if (!picker.hidden) renderPickerList(searchInput.value);
+  });
+
+  // renderTeamBrief()가 추가/제외 후 다시 그려질 때, 패널이 열려 있으면 "추가됨" 상태가
+  // 최신으로 보이도록 이 함수를 밖에서 호출할 수 있게 노출해둔다.
+  window.__refreshBriefAddPicker = () => {
+    if (!picker.hidden) renderPickerList(searchInput.value);
+  };
+
+  searchInput.addEventListener("input", () => renderPickerList(searchInput.value));
+
+  listEl.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-add-item]");
+    if (!btn || btn.disabled) return;
+    const id = btn.dataset.addItem;
+    const item = (RAW_NEWS_DATA && RAW_NEWS_DATA.news || []).find((n) => n.id === id);
+    if (!item) return;
+    addManualItem(item);
+  });
 }
 
 function setupCopyBriefButton() {
@@ -801,7 +1000,7 @@ function setupCopyBriefButton() {
     if (!NEWS_DATA) return;
 
     const meta = NEWS_DATA.meta;
-    const topNews = getTeamBriefItems(NEWS_DATA);
+    const topNews = CURRENT_BRIEF_ITEMS.length ? CURRENT_BRIEF_ITEMS : getTeamBriefItems(NEWS_DATA);
 
     const dateObj = meta.date ? new Date(meta.date) : null;
     const dayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
@@ -839,6 +1038,70 @@ function setupCopyBriefButton() {
         }, 1800);
       })
       .catch(() => showToast("복사에 실패했습니다. 브라우저 권한을 확인해 주세요."));
+  });
+}
+
+/* ---------- 카카오톡 공유하기 ----------
+   완전 자동 발송(팀원에게 클릭 없이 바로 전송)은 카카오 비즈니스 알림톡 API가 필요해서
+   사업자 등록 + 템플릿 심사 + 비용이 드는 반면, 이 "카카오톡 공유하기"는 버튼 클릭 한 번으로
+   카카오톡 공유 창을 띄워서 보낼 대화방을 직접 고르는 방식이다 — 완전 자동은 아니지만
+   복사해서 카톡에 붙여넣는 지금 방식보다는 한 단계 줄어든다.
+   kakao-config.js에 실제 JavaScript 키를 넣어야 동작하며, 키가 비어있으면(placeholder)
+   버튼을 눌렀을 때 설정이 필요하다는 안내만 뜨고 페이지는 정상 동작한다. */
+function initKakaoSdk() {
+  if (typeof window.Kakao === "undefined") return; // SDK 로드 실패(네트워크 차단 등) — 조용히 넘어감
+  if (typeof KAKAO_JS_KEY === "undefined" || !KAKAO_JS_KEY || KAKAO_JS_KEY === "YOUR_KAKAO_JAVASCRIPT_KEY") return;
+  try {
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init(KAKAO_JS_KEY);
+    }
+  } catch (e) {
+    console.error("[Kakao SDK] 초기화 실패:", e);
+  }
+}
+
+function isKakaoReady() {
+  return (
+    typeof window.Kakao !== "undefined" &&
+    window.Kakao.isInitialized &&
+    window.Kakao.isInitialized()
+  );
+}
+
+function setupKakaoShareButton() {
+  const btn = document.getElementById("kakao-share-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    if (!isKakaoReady()) {
+      showToast("카카오톡 공유 설정이 아직 안 되어 있습니다. kakao-config.js에 JavaScript 키를 입력해주세요.");
+      return;
+    }
+    if (!NEWS_DATA) return;
+
+    const topNews = CURRENT_BRIEF_ITEMS.length ? CURRENT_BRIEF_ITEMS : getTeamBriefItems(NEWS_DATA);
+    const dateLabel = NEWS_DATA.meta && NEWS_DATA.meta.date ? NEWS_DATA.meta.date.replaceAll("-", ".") : "";
+
+    // 카카오톡 텍스트 템플릿은 길이 제한이 있어서(약 200자) 전체 목록을 다 담기보다는
+    // 요약 + 대시보드 링크로 구성한다. 상세 목록은 링크를 눌러 대시보드에서 보게 한다.
+    const summaryText =
+      `[${dateLabel} 데일리뉴스]\n` +
+      `오늘 TEAM BRIEF ${topNews.length}건 공유드립니다.\n` +
+      (topNews[0] ? `· ${topNews[0].title}${topNews.length > 1 ? ` 외 ${topNews.length - 1}건` : ""}` : "");
+
+    const pageUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, "") + "index.html#team-brief";
+
+    try {
+      window.Kakao.Share.sendDefault({
+        objectType: "text",
+        text: summaryText,
+        link: { mobileWebUrl: pageUrl, webUrl: pageUrl },
+        buttonTitle: "대시보드에서 전체 보기",
+      });
+    } catch (e) {
+      console.error("[Kakao 공유] 실패:", e);
+      showToast("카카오톡 공유에 실패했습니다.");
+    }
   });
 }
 

@@ -1204,6 +1204,142 @@ button{ font-family: inherit; cursor: pointer; }
   display: flex;
   gap: 10px;
 }
+
+/* ---- TEAM BRIEF 관리자 수동 추가/제외 ---- */
+.brief-admin-panel{
+  margin-bottom: 18px;
+}
+.brief-admin-panel__toggle{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.6px;
+  color: var(--bmw-blue-light);
+  background: var(--bmw-blue-dim);
+  border: 1px solid rgba(28,105,212,0.3);
+  border-radius: 4px;
+  padding: 7px 12px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.brief-admin-panel__toggle:hover{
+  border-color: var(--bmw-blue-light);
+}
+.brief-add-picker{
+  margin-top: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 12px;
+  max-width: 760px;
+}
+.brief-add-picker__search{
+  width: 100%;
+  background: var(--black);
+  border: 1px solid var(--line-strong);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.brief-add-picker__list{
+  max-height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.brief-add-picker__row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 8px 10px;
+}
+.brief-add-picker__row-title{
+  font-size: 12.5px;
+  color: var(--white);
+  line-height: 1.4;
+}
+.brief-add-picker__row-meta{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+  margin-top: 2px;
+}
+.brief-add-picker__row-btn{
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--bmw-blue-light);
+  border: 1px solid rgba(28,105,212,0.3);
+  background: transparent;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.brief-add-picker__row-btn:hover{ border-color: var(--bmw-blue-light); }
+.brief-add-picker__row-btn:disabled{
+  color: var(--grey-dim);
+  border-color: var(--line);
+  pointer-events: none;
+}
+.brief-add-picker__empty{
+  font-size: 12px;
+  color: var(--grey-dim);
+  padding: 8px 2px;
+}
+
+/* 자동 생성 항목 옆 "제외" / 수동 추가 항목 옆 "삭제" 버튼 — 관리자에게만 보인다 */
+.brief-item{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.brief-item__main{ flex: 1; min-width: 0; }
+.brief-item__admin-btn{
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 2px;
+}
+.brief-item__admin-btn:hover{
+  color: var(--signal-red);
+  border-color: var(--signal-red);
+}
+.brief-item--manual{
+  border-left: 2px solid var(--bmw-blue-light);
+  padding-left: 10px;
+  margin-left: -12px;
+}
+.brief-manual-badge{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
+  color: var(--bmw-blue-light);
+  background: var(--bmw-blue-dim);
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-bottom: 4px;
+}
+
+.btn--kakao{
+  background: #FEE500;
+  border-color: #FEE500;
+  color: #191600;
+  font-weight: 700;
+}
+.btn--kakao:hover{ background: #f5dc00; border-color: #f5dc00; }
 .btn{
   font-family: var(--font-mono);
   font-size: 10.5px;
@@ -1502,24 +1638,37 @@ html.auth-checking body{
   letter-spacing: 0.4px;
 }
 .topbar__account-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   background: transparent;
   border: 1px solid var(--line-strong);
   color: var(--grey);
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 10px;
   letter-spacing: 0.6px;
-  padding: 4px 8px;
+  padding: 6px 10px; /* 기존 4px 8px보다 넉넉하게 — 특히 모바일에서 터치 영역 확보 */
+  min-height: 30px;
   border-radius: 3px;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 .topbar__account-link:hover{
   border-color: var(--bmw-blue-light);
   color: var(--bmw-blue-light);
 }
+.topbar__account-link svg{ flex-shrink: 0; }
+
+/* 로그아웃은 다른 두 항목(계정명/승인 관리)과 성격이 다른 "종료" 액션이라,
+   평소에도 옅은 경고색 테두리를 둬서 눈에 먼저 띄게 하고 다른 링크와 구분한다. */
+.topbar__account-logout{
+  border-color: rgba(217,139,42,0.3);
+  color: var(--signal-amber);
+}
 .topbar__account-logout:hover{
   border-color: var(--signal-amber);
+  background: var(--signal-amber-dim);
   color: var(--signal-amber);
 }
 @media (max-width: 720px){
-  .topbar__account{ justify-content: flex-start; }
+  .topbar__account{ justify-content: flex-start; flex-wrap: wrap; }
 }
