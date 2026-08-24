@@ -1090,27 +1090,40 @@ function setupKakaoShareButton() {
     if (!NEWS_DATA) return;
 
     const topNews = CURRENT_BRIEF_ITEMS.length ? CURRENT_BRIEF_ITEMS : getTeamBriefItems(NEWS_DATA);
-    const dateLabel = NEWS_DATA.meta && NEWS_DATA.meta.date ? NEWS_DATA.meta.date.replaceAll("-", ".") : "";
 
-    // 카카오톡 텍스트 템플릿은 길이 제한이 있어서(약 200자) 전체 목록을 다 담기보다는
-    // 요약 + 대시보드 링크로 구성한다. 상세 목록은 링크를 눌러 대시보드에서 보게 한다.
-    const summaryText =
-      `[${dateLabel} 데일리뉴스]\n` +
-      `오늘 TEAM BRIEF ${topNews.length}건 공유드립니다.\n` +
-      (topNews[0] ? `· ${topNews[0].title}${topNews.length > 1 ? ` 외 ${topNews.length - 1}건` : ""}` : "");
+    // COPY TEAM BRIEF 버튼과 동일한 형식(날짜 + 인사말 + 번호별 제목/링크 전체)으로
+    // 카카오톡 메시지 본문을 구성한다 — 요약 한 줄이 아니라 전체 목록을 그대로 보낸다.
+    const meta = NEWS_DATA.meta;
+    const dateObj = meta.date ? new Date(meta.date) : null;
+    const dayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    const dateLine = dateObj
+      ? `${dateObj.getFullYear()}년 ${dateObj.getMonth() + 1}월 ${dateObj.getDate()}일 ${dayNames[dateObj.getDay()]}`
+      : "-";
 
+    const lines = [`[${dateLine} 데일리뉴스]`, `좋은 아침입니다!`, ``, `📍뉴스`];
+
+    if (topNews.length === 0) {
+      lines.push(`아직 분석된 뉴스가 없습니다.`);
+    } else {
+      topNews.forEach((n, idx) => {
+        lines.push(`(${idx + 1}) ${n.title}`);
+        lines.push(shortenUrlForShare(n.url));
+      });
+    }
+
+    const fullText = lines.join("\n");
     const pageUrl = window.location.origin + window.location.pathname.replace(/[^/]*$/, "") + "index.html#team-brief";
 
     try {
       window.Kakao.Share.sendDefault({
         objectType: "text",
-        text: summaryText,
+        text: fullText,
         link: { mobileWebUrl: pageUrl, webUrl: pageUrl },
         buttonTitle: "대시보드에서 전체 보기",
       });
     } catch (e) {
       console.error("[Kakao 공유] 실패:", e);
-      showToast("카카오톡 공유에 실패했습니다.");
+      showToast("카카오톡 공유에 실패했습니다. 뉴스 건수가 많아 메시지가 너무 길 경우 실패할 수 있습니다.");
     }
   });
 }
