@@ -1205,95 +1205,6 @@ button{ font-family: inherit; cursor: pointer; }
   gap: 10px;
 }
 
-/* ---- TEAM BRIEF 관리자 수동 추가/제외 ---- */
-.brief-admin-panel{
-  margin-bottom: 18px;
-}
-.brief-admin-panel__toggle{
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  letter-spacing: 0.6px;
-  color: var(--bmw-blue-light);
-  background: var(--bmw-blue-dim);
-  border: 1px solid rgba(28,105,212,0.3);
-  border-radius: 4px;
-  padding: 7px 12px;
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-.brief-admin-panel__toggle:hover{
-  border-color: var(--bmw-blue-light);
-}
-.brief-add-picker{
-  margin-top: 10px;
-  background: var(--panel-2);
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  padding: 12px;
-  max-width: 760px;
-}
-.brief-add-picker__search{
-  width: 100%;
-  background: var(--black);
-  border: 1px solid var(--line-strong);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-.brief-add-picker__list{
-  max-height: 260px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.brief-add-picker__row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 8px 10px;
-}
-.brief-add-picker__row-title{
-  font-size: 12.5px;
-  color: var(--white);
-  line-height: 1.4;
-}
-.brief-add-picker__row-meta{
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--grey-dim);
-  margin-top: 2px;
-}
-.brief-add-picker__row-btn{
-  flex-shrink: 0;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--bmw-blue-light);
-  border: 1px solid rgba(28,105,212,0.3);
-  background: transparent;
-  border-radius: 4px;
-  padding: 5px 10px;
-}
-.brief-add-picker__row-btn:hover{ border-color: var(--bmw-blue-light); }
-.brief-add-picker__row-btn:disabled{
-  color: var(--grey-dim);
-  border-color: var(--line);
-  pointer-events: none;
-}
-.brief-add-picker__empty{
-  font-size: 12px;
-  color: var(--grey-dim);
-  padding: 8px 2px;
-}
-
-/* 자동 생성 항목 옆 "제외" / 수동 추가 항목 옆 "삭제" 버튼 — 관리자에게만 보인다 */
 .brief-item{
   display: flex;
   align-items: flex-start;
@@ -1301,21 +1212,6 @@ button{ font-family: inherit; cursor: pointer; }
   gap: 10px;
 }
 .brief-item__main{ flex: 1; min-width: 0; }
-.brief-item__admin-btn{
-  flex-shrink: 0;
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  color: var(--grey-dim);
-  background: transparent;
-  border: 1px solid var(--line-strong);
-  border-radius: 4px;
-  padding: 4px 8px;
-  margin-top: 2px;
-}
-.brief-item__admin-btn:hover{
-  color: var(--signal-red);
-  border-color: var(--signal-red);
-}
 .brief-item--manual{
   border-left: 2px solid var(--bmw-blue-light);
   padding-left: 10px;
@@ -1340,6 +1236,184 @@ button{ font-family: inherit; cursor: pointer; }
   font-weight: 700;
 }
 .btn--kakao:hover{ background: #f5dc00; border-color: #f5dc00; }
+
+.btn--curate{
+  color: var(--bmw-blue-light);
+  border-color: rgba(28,105,212,0.35);
+  background: var(--bmw-blue-dim);
+}
+.btn--curate:hover{ border-color: var(--bmw-blue-light); }
+
+/* ---- TEAM BRIEF 뉴스 선택 팝업 ----
+   SOURCE MONITOR 전체 뉴스를 체크박스로 보여주고, 체크한 것만 TEAM BRIEF에 포함시키는
+   방식 — 관리자가 항목 하나하나 옆의 작은 버튼을 찾아 누르는 대신, 한 화면에서 전체를
+   훑어보며 고를 수 있게 한다. */
+.brief-curate-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+/* [hidden] 속성은 브라우저 기본 스타일로 display:none이 되어야 하는데,
+   위의 .brief-curate-modal{ display:flex }가 클래스 선택자라 명시도가 같아서
+   그 기본 동작을 덮어써버린다 — 그대로 두면 팝업이 닫혀 있어도 화면 전체를
+   덮은 채 클릭을 가로채는 문제가 생기므로 명시적으로 다시 꺼준다. */
+.brief-curate-modal[hidden]{
+  display: none;
+}
+.brief-curate-modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.brief-curate-modal__panel{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  max-height: min(720px, 88vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  padding: 22px 24px 18px;
+}
+.brief-curate-modal__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.brief-curate-modal__head h4{
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+.brief-curate-modal__close{
+  background: transparent;
+  border: none;
+  color: var(--grey);
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px;
+}
+.brief-curate-modal__close:hover{ color: var(--white); }
+.brief-curate-modal__desc{
+  margin: 0 0 14px;
+  font-size: 12px;
+  color: var(--grey-dim);
+  line-height: 1.6;
+}
+.brief-curate-modal__search{
+  width: 100%;
+  background: var(--black);
+  border: 1px solid var(--line-strong);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  padding: 9px 12px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.brief-curate-modal__list{
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 -4px;
+  padding: 0 4px;
+}
+.brief-curate-modal__row{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.brief-curate-modal__row:hover{ border-color: var(--line-strong); }
+.brief-curate-modal__row input[type="checkbox"]{
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  accent-color: var(--bmw-blue-light);
+  cursor: pointer;
+}
+.brief-curate-modal__row-body{ flex: 1; min-width: 0; }
+.brief-curate-modal__row-title{
+  font-size: 13px;
+  color: var(--white);
+  line-height: 1.4;
+}
+.brief-curate-modal__row-meta{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--grey-dim);
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.brief-curate-modal__row-auto-tag{
+  color: var(--bmw-blue-light);
+  background: var(--bmw-blue-dim);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+.brief-curate-modal__empty{
+  font-size: 12.5px;
+  color: var(--grey-dim);
+  padding: 16px 4px;
+  text-align: center;
+}
+.brief-curate-modal__foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.brief-curate-modal__count{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--grey);
+}
+.brief-curate-modal__actions{
+  display: flex;
+  gap: 8px;
+}
+.brief-curate-modal__actions .btn{
+  min-height: 38px;
+  padding: 9px 16px;
+}
+@media (max-width: 640px){
+  .brief-curate-modal{ padding: 0; }
+  .brief-curate-modal__panel{
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
 .btn{
   font-family: var(--font-mono);
   font-size: 10.5px;

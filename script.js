@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupIntelTabbar();
   setupFilterBar();
   setupCopyBriefButton();
-  setupBriefAdminControls();
+  setupBriefCurateModal();
   setupKakaoShareButton();
   initKakaoSdk();
   setupRefreshButton();
@@ -773,31 +773,9 @@ function isCurrentUserAdmin() {
   return !!(window.__CURRENT_PROFILE__ && window.__CURRENT_PROFILE__.role === "admin");
 }
 
-// 자동 생성 항목을 "제외" 처리 — excluded_ids에 id를 추가하고 다시 그린다.
-async function excludeAutoItem(id) {
-  const excludedIds = Array.from(new Set([...CURRENT_BRIEF_OVERRIDES.excludedIds, id]));
-  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, excludedIds, CURRENT_BRIEF_OVERRIDES.addedItems);
-  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
-}
-
-// 수동으로 추가했던 항목을 다시 삭제 — added_items에서 해당 id를 뺀다.
-async function removeManualItem(id) {
-  const addedItems = CURRENT_BRIEF_OVERRIDES.addedItems.filter((n) => n.id !== id);
-  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, CURRENT_BRIEF_OVERRIDES.excludedIds, addedItems);
-  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
-}
-
-// SOURCE MONITOR 원문 하나를 TEAM BRIEF에 수동으로 추가.
-async function addManualItem(item) {
-  const already = CURRENT_BRIEF_OVERRIDES.addedItems.some((n) => n.id === item.id);
-  if (already) return;
-  const addedItems = [
-    ...CURRENT_BRIEF_OVERRIDES.addedItems,
-    { id: item.id, title: item.title, url: item.url, source: item.source, publishedAt: item.publishedAt },
-  ];
-  await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, CURRENT_BRIEF_OVERRIDES.excludedIds, addedItems);
-  if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
-}
+// 오늘 자동 생성된 TEAM BRIEF 후보 뉴스의 id 집합 — "뉴스 선택" 팝업에서, 원래 자동으로
+// 뽑혔던 뉴스인지(체크 해제 = 제외) 아닌지(체크 = 수동 추가)를 구분하는 데 쓴다.
+let CURRENT_BRIEF_AUTO_IDS = new Set();
 
 function formatBriefDateLabel(dateStr) {
   if (!dateStr) return "-";
@@ -855,6 +833,7 @@ async function renderTeamBrief(data) {
   // 남아있으면 안 되기 때문이다.
   const overrides = await fetchTodayOverrides(todayKey);
   CURRENT_BRIEF_OVERRIDES = overrides;
+  CURRENT_BRIEF_AUTO_IDS = new Set(autoNews.map((n) => n.id));
   const excludedSet = new Set(overrides.excludedIds);
   const manualItems = overrides.addedItems.map((n) => ({ ...n, __manual: true }));
   const topNews = [...autoNews.filter((n) => !excludedSet.has(n.id)), ...manualItems];
@@ -879,9 +858,8 @@ async function renderTeamBrief(data) {
   renderBriefCompare(todayKey, topNews, yesterdayKey, yesterdayItems, yesterdayIds);
 
   const isAdmin = isCurrentUserAdmin();
-  const adminPanel = document.getElementById("brief-admin-panel");
-  if (adminPanel) adminPanel.hidden = !isAdmin;
-  if (typeof window.__refreshBriefAddPicker === "function") window.__refreshBriefAddPicker();
+  const curateBtn = document.getElementById("brief-curate-btn");
+  if (curateBtn) curateBtn.hidden = !isAdmin;
 
   if (topNews.length === 0) {
     briefBody.innerHTML = `<div class="brief-item"><p>아직 분석된 뉴스가 없습니다.</p></div>`;
@@ -889,11 +867,6 @@ async function renderTeamBrief(data) {
     briefBody.innerHTML = topNews.map((n, idx) => {
       const isDup = yesterdayIds.has(n.id);
       const isManual = !!n.__manual;
-      const adminBtn = isAdmin
-        ? isManual
-          ? `<button type="button" class="brief-item__admin-btn" data-remove-manual="${escapeHtml(n.id)}">삭제</button>`
-          : `<button type="button" class="brief-item__admin-btn" data-exclude-auto="${escapeHtml(n.id)}">제외</button>`
-        : "";
       return `
       <div class="brief-item${isDup ? " brief-item--dup" : ""}${isManual ? " brief-item--manual" : ""}">
         <div class="brief-item__main">
@@ -903,94 +876,131 @@ async function renderTeamBrief(data) {
             <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(shortenUrlForShare(n.url))}</a>
           </p>
         </div>
-        ${adminBtn}
       </div>
     `;
     }).join("");
   }
 }
 
-/* ---------- TEAM BRIEF 관리자 컨트롤 (제외/삭제 버튼 + SOURCE MONITOR에서 추가) ---------- */
-function setupBriefAdminControls() {
-  // 제외/삭제 버튼은 매번 다시 그려지는 #brief-body 안에 있으므로, 그 바깥의 고정된
-  // 부모(.brief-card)에 이벤트 위임으로 한 번만 걸어둔다.
-  const briefCard = document.querySelector(".brief-card");
-  if (briefCard) {
-    briefCard.addEventListener("click", (e) => {
-      const excludeBtn = e.target.closest("[data-exclude-auto]");
-      if (excludeBtn) {
-        excludeAutoItem(excludeBtn.dataset.excludeAuto);
-        return;
-      }
-      const removeBtn = e.target.closest("[data-remove-manual]");
-      if (removeBtn) {
-        removeManualItem(removeBtn.dataset.removeManual);
-      }
-    });
-  }
+/* ---------- TEAM BRIEF "뉴스 선택" 팝업 (관리자 전용) ----------
+   SOURCE MONITOR에 수집된 뉴스 전체를 체크박스로 보여준다. 체크 상태는 팝업을 여는
+   시점의 현재 최종 목록(CURRENT_BRIEF_ITEMS)에서 초기화하고, 사용자가 이것저것 눌러보는
+   동안은 로컬 작업 사본(workingSelectedIds)에만 반영하다가 "저장"을 눌러야만 실제로
+   Supabase에 기록한다 — 실수로 누른 체크박스가 바로바로 반영되지 않게 하기 위함이다. */
+function setupBriefCurateModal() {
+  const openBtn = document.getElementById("brief-curate-btn");
+  const modal = document.getElementById("brief-curate-modal");
+  if (!openBtn || !modal) return;
 
-  const toggleBtn = document.getElementById("brief-add-toggle");
-  const picker = document.getElementById("brief-add-picker");
-  const searchInput = document.getElementById("brief-add-search");
-  const listEl = document.getElementById("brief-add-list");
-  if (!toggleBtn || !picker || !searchInput || !listEl) return;
+  const searchInput = document.getElementById("brief-curate-search");
+  const listEl = document.getElementById("brief-curate-list");
+  const countEl = document.getElementById("brief-curate-count");
+  const saveBtn = document.getElementById("brief-curate-save");
 
-  function renderPickerList(query) {
+  let workingSelectedIds = new Set();
+
+  function renderList(query) {
     if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) {
-      listEl.innerHTML = `<div class="brief-add-picker__empty">원본 뉴스를 아직 불러오는 중입니다. 잠시 후 다시 열어주세요.</div>`;
+      listEl.innerHTML = `<div class="brief-curate-modal__empty">원본 뉴스를 아직 불러오는 중입니다. 잠시 후 다시 열어주세요.</div>`;
       return;
     }
     const q = (query || "").trim().toLowerCase();
-    const addedIds = new Set(CURRENT_BRIEF_OVERRIDES.addedItems.map((n) => n.id));
     let items = RAW_NEWS_DATA.news;
     if (q) {
       items = items.filter((n) =>
         (n.title || "").toLowerCase().includes(q) || (n.source || "").toLowerCase().includes(q)
       );
     }
-    items = items
-      .slice()
-      .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""))
-      .slice(0, 30); // 너무 많으면 스크롤이 길어지므로 최신 30건까지만 — 검색으로 좁혀서 찾도록 안내
+    items = items.slice().sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
 
     if (items.length === 0) {
-      listEl.innerHTML = `<div class="brief-add-picker__empty">검색 결과가 없습니다.</div>`;
+      listEl.innerHTML = `<div class="brief-curate-modal__empty">검색 결과가 없습니다.</div>`;
       return;
     }
 
     listEl.innerHTML = items.map((n) => {
-      const already = addedIds.has(n.id);
+      const checked = workingSelectedIds.has(n.id);
+      const isAuto = CURRENT_BRIEF_AUTO_IDS.has(n.id);
       return `
-        <div class="brief-add-picker__row">
-          <div>
-            <div class="brief-add-picker__row-title">${escapeHtml(n.title)}</div>
-            <div class="brief-add-picker__row-meta">${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</div>
+        <label class="brief-curate-modal__row">
+          <input type="checkbox" data-curate-id="${escapeHtml(n.id)}" ${checked ? "checked" : ""}>
+          <div class="brief-curate-modal__row-body">
+            <div class="brief-curate-modal__row-title">${escapeHtml(n.title)}</div>
+            <div class="brief-curate-modal__row-meta">
+              ${isAuto ? `<span class="brief-curate-modal__row-auto-tag">자동 선정</span>` : ""}
+              <span>${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</span>
+            </div>
           </div>
-          <button type="button" class="brief-add-picker__row-btn" data-add-item="${escapeHtml(n.id)}" ${already ? "disabled" : ""}>${already ? "추가됨" : "추가"}</button>
-        </div>`;
+        </label>`;
     }).join("");
+    updateCount();
   }
 
-  toggleBtn.addEventListener("click", () => {
-    picker.hidden = !picker.hidden;
-    if (!picker.hidden) renderPickerList(searchInput.value);
+  function updateCount() {
+    countEl.textContent = `선택됨 ${workingSelectedIds.size}건`;
+  }
+
+  function openModal() {
+    // 현재 화면에 실제로 보이는 최종 목록(CURRENT_BRIEF_ITEMS)을 그대로 체크 상태의
+    // 시작점으로 삼는다 — 자동 선정이든 이전에 수동 추가된 것이든 구분 없이 전부 반영.
+    workingSelectedIds = new Set(CURRENT_BRIEF_ITEMS.map((n) => n.id));
+    searchInput.value = "";
+    modal.hidden = false;
+    renderList("");
+    searchInput.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+  }
+
+  openBtn.addEventListener("click", openModal);
+
+  modal.querySelectorAll("[data-curate-close]").forEach((el) => {
+    el.addEventListener("click", closeModal);
   });
 
-  // renderTeamBrief()가 추가/제외 후 다시 그려질 때, 패널이 열려 있으면 "추가됨" 상태가
-  // 최신으로 보이도록 이 함수를 밖에서 호출할 수 있게 노출해둔다.
-  window.__refreshBriefAddPicker = () => {
-    if (!picker.hidden) renderPickerList(searchInput.value);
-  };
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hidden) closeModal();
+  });
 
-  searchInput.addEventListener("input", () => renderPickerList(searchInput.value));
+  searchInput.addEventListener("input", () => renderList(searchInput.value));
 
-  listEl.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-add-item]");
-    if (!btn || btn.disabled) return;
-    const id = btn.dataset.addItem;
-    const item = (RAW_NEWS_DATA && RAW_NEWS_DATA.news || []).find((n) => n.id === id);
-    if (!item) return;
-    addManualItem(item);
+  listEl.addEventListener("change", (e) => {
+    const checkbox = e.target.closest("[data-curate-id]");
+    if (!checkbox) return;
+    const id = checkbox.dataset.curateId;
+    if (checkbox.checked) workingSelectedIds.add(id);
+    else workingSelectedIds.delete(id);
+    updateCount();
+  });
+
+  saveBtn.addEventListener("click", async () => {
+    if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) return;
+
+    const rawById = new Map(RAW_NEWS_DATA.news.map((n) => [n.id, n]));
+    const prevAddedById = new Map(CURRENT_BRIEF_OVERRIDES.addedItems.map((n) => [n.id, n]));
+
+    // 자동 선정 목록 중 체크가 풀린 것 = 제외 처리
+    const newExcludedIds = Array.from(CURRENT_BRIEF_AUTO_IDS).filter((id) => !workingSelectedIds.has(id));
+
+    // 자동 선정이 아닌데 체크된 것 = 수동 추가 — 원문은 raw 목록에서, 없으면(드물게)
+    // 기존에 저장돼있던 값으로 대체해서 정보가 유실되지 않게 한다.
+    const newAddedItems = Array.from(workingSelectedIds)
+      .filter((id) => !CURRENT_BRIEF_AUTO_IDS.has(id))
+      .map((id) => rawById.get(id) || prevAddedById.get(id))
+      .filter(Boolean)
+      .map((n) => ({ id: n.id, title: n.title, url: n.url, source: n.source, publishedAt: n.publishedAt }));
+
+    saveBtn.disabled = true;
+    saveBtn.textContent = "저장 중…";
+    await saveTodayOverrides(CURRENT_BRIEF_TODAY_KEY, newExcludedIds, newAddedItems);
+    saveBtn.disabled = false;
+    saveBtn.textContent = "저장";
+
+    closeModal();
+    if (NEWS_DATA) renderTeamBrief(NEWS_DATA);
+    showToast("TEAM BRIEF 뉴스 선택을 저장했습니다.");
   });
 }
 

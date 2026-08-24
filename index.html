@@ -280,20 +280,13 @@
           <span id="brief-date">2026.08.12</span>
         </div>
 
-        <!-- 관리자 전용 — SOURCE MONITOR에서 뉴스를 골라 TEAM BRIEF에 수동으로 추가하는 패널.
-             auth-guard.js가 채워주는 window.__CURRENT_PROFILE__.role === 'admin'일 때만
-             script.js가 이 블록 자체를 보이게 한다(그 외에는 항상 숨김). -->
-        <div id="brief-admin-panel" class="brief-admin-panel" hidden>
-          <button id="brief-add-toggle" type="button" class="brief-admin-panel__toggle">+ SOURCE MONITOR에서 추가</button>
-          <div id="brief-add-picker" class="brief-add-picker" hidden>
-            <input id="brief-add-search" type="text" class="brief-add-picker__search" placeholder="제목/매체로 검색">
-            <div id="brief-add-list" class="brief-add-picker__list"></div>
-          </div>
-        </div>
-
         <div id="brief-body" class="brief-body"></div>
 
         <div class="brief-actions">
+          <!-- 관리자 전용 — auth-guard.js가 채워주는 window.__CURRENT_PROFILE__.role === 'admin'일
+               때만 script.js가 이 버튼을 보이게 한다. 클릭하면 SOURCE MONITOR에 수집된 뉴스
+               전체를 체크박스로 보여주는 팝업이 뜨고, 거기서 TEAM BRIEF에 넣을 뉴스를 직접 고른다. -->
+          <button id="brief-curate-btn" type="button" class="btn btn--curate" hidden>📰 뉴스 선택</button>
           <button id="copy-brief-btn" class="btn btn--primary">COPY TEAM BRIEF</button>
           <button id="kakao-share-btn" type="button" class="btn btn--kakao">카카오톡 공유</button>
         </div>
@@ -325,6 +318,30 @@
     <span class="mobile-tab__label">BRIEF</span>
   </a>
 </nav>
+
+<!-- ============ TEAM BRIEF 뉴스 선택 팝업 (관리자 전용) ============
+     SOURCE MONITOR에 수집된 전체 뉴스를 체크박스로 보여주고, 체크한 것만 TEAM BRIEF에
+     포함시킨다. "저장"을 눌러야 실제로 반영되고(Supabase에 기록), "취소"/바깥 클릭/✕는
+     그냥 닫기만 한다 — 체크박스를 이것저것 눌러보다가 실수로 반영되는 일이 없게 한다. -->
+<div id="brief-curate-modal" class="brief-curate-modal" hidden>
+  <div class="brief-curate-modal__backdrop" data-curate-close></div>
+  <div class="brief-curate-modal__panel" role="dialog" aria-modal="true" aria-labelledby="brief-curate-title">
+    <div class="brief-curate-modal__head">
+      <h4 id="brief-curate-title">TEAM BRIEF 뉴스 선택</h4>
+      <button type="button" class="brief-curate-modal__close" data-curate-close aria-label="닫기">✕</button>
+    </div>
+    <p class="brief-curate-modal__desc">SOURCE MONITOR에 수집된 뉴스 전체입니다. 체크한 뉴스만 TEAM BRIEF에 들어갑니다.</p>
+    <input id="brief-curate-search" type="text" class="brief-curate-modal__search" placeholder="제목/매체로 검색">
+    <div id="brief-curate-list" class="brief-curate-modal__list"></div>
+    <div class="brief-curate-modal__foot">
+      <span id="brief-curate-count" class="brief-curate-modal__count"></span>
+      <div class="brief-curate-modal__actions">
+        <button type="button" class="btn" data-curate-close>취소</button>
+        <button type="button" class="btn btn--primary" id="brief-curate-save">저장</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- 원문 보기 alert 대체용 알림 -->
 <div id="toast" class="toast"></div>
