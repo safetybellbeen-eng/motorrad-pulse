@@ -330,7 +330,7 @@
       <h4 id="brief-curate-title">TEAM BRIEF 뉴스 선택</h4>
       <button type="button" class="brief-curate-modal__close" data-curate-close aria-label="닫기">✕</button>
     </div>
-    <p class="brief-curate-modal__desc">왼쪽은 현재 TEAM BRIEF에 포함된 뉴스, 오른쪽은 SOURCE MONITOR에 수집된 뉴스 전체입니다. 오른쪽에서 추가하거나 왼쪽에서 제외할 수 있습니다.</p>
+    <p class="brief-curate-modal__desc">왼쪽은 현재 TEAM BRIEF에 포함된 뉴스, 오른쪽은 아직 포함되지 않은 SOURCE MONITOR 뉴스입니다. 여러 건을 체크한 뒤 가운데 버튼으로 한 번에 추가·제외할 수 있습니다.</p>
     <div class="brief-curate-modal__columns">
       <div class="brief-curate-modal__col">
         <div class="brief-curate-modal__col-head">
@@ -339,9 +339,19 @@
         </div>
         <div id="brief-curate-list-left" class="brief-curate-modal__list"></div>
       </div>
+      <div class="brief-curate-modal__middle">
+        <button type="button" class="brief-curate-modal__xfer-btn brief-curate-modal__xfer-btn--add" id="brief-curate-add-btn" disabled>
+          <span class="brief-curate-modal__xfer-arrow">←</span>추가
+        </button>
+        <div class="brief-curate-modal__xfer-hint">오른쪽에서 체크 후 추가</div>
+        <button type="button" class="brief-curate-modal__xfer-btn brief-curate-modal__xfer-btn--remove" id="brief-curate-remove-btn" disabled>
+          제외<span class="brief-curate-modal__xfer-arrow">→</span>
+        </button>
+        <div class="brief-curate-modal__xfer-hint">왼쪽에서 체크 후 제외</div>
+      </div>
       <div class="brief-curate-modal__col">
         <div class="brief-curate-modal__col-head">
-          <span>SOURCE MONITOR 전체</span>
+          <span>SOURCE MONITOR (추가 가능)</span>
           <span id="brief-curate-right-count" class="brief-curate-modal__col-count"></span>
         </div>
         <div id="brief-curate-list-right" class="brief-curate-modal__list"></div>
