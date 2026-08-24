@@ -653,29 +653,127 @@ function setupFilterBarScrollHint(bar) {
 }
 
 /* ---------- TEAM BRIEF ---------- */
+// 팀 공유용 요약에는 BMW 자사 뉴스는 포함하지 않는다 (자사 모니터링은 하되 외부 공유는 X)
+function getTeamBriefItems(data) {
+  return (data.news || [])
+    .filter((n) => n.topNewsGroup === "others")
+    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+}
+
+/* ---------- 전일 대비 비교 (요청: "어제 공유한 뉴스와 오늘 공유할 뉴스가 겹치는지 미리 보고 싶다") ----------
+   서버/저장소 변경 없이 이 브라우저의 localStorage에 날짜별 브리핑 목록을 저장해두고,
+   오늘 화면을 그릴 때 가장 최근에 저장된 이전 날짜와 비교한다.
+   한계: 다른 브라우저/기기에서 열거나 브라우저 데이터를 지우면 "어제" 기록이 없어
+   비교가 표시되지 않는다 — 개인이 같은 브라우저로 매일 확인하는 용도에 맞춘 가벼운 구현이다. */
+const BRIEF_HISTORY_KEY = "motorradPulseBriefHistory";
+const BRIEF_HISTORY_MAX_DAYS = 14;
+
+function loadBriefHistory() {
+  try {
+    const raw = localStorage.getItem(BRIEF_HISTORY_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {}; // localStorage 접근 불가(프라이빗 모드 등) — 비교 기능만 조용히 비활성화
+  }
+}
+
+function saveBriefHistory(history) {
+  try {
+    const keys = Object.keys(history).sort(); // "YYYY-MM-DD" 문자열 정렬 = 시간순 정렬
+    if (keys.length > BRIEF_HISTORY_MAX_DAYS) {
+      keys.slice(0, keys.length - BRIEF_HISTORY_MAX_DAYS).forEach((k) => delete history[k]);
+    }
+    localStorage.setItem(BRIEF_HISTORY_KEY, JSON.stringify(history));
+  } catch (e) {
+    /* 저장 실패해도 화면 표시 자체는 계속 동작해야 하므로 조용히 무시한다 */
+  }
+}
+
+function formatBriefDateLabel(dateStr) {
+  if (!dateStr) return "-";
+  const parts = dateStr.split("-");
+  return parts.length === 3 ? `${parts[1]}.${parts[2]}` : dateStr;
+}
+
+function renderBriefCompare(todayKey, todayItems, yesterdayKey, yesterdayItems, yesterdayIds) {
+  const summaryEl = document.getElementById("brief-compare-summary");
+  const gridEl = document.getElementById("brief-compare-grid");
+  if (!summaryEl || !gridEl) return;
+
+  if (!yesterdayKey || !yesterdayItems) {
+    summaryEl.textContent = "비교할 이전 브리핑 기록이 없습니다. 오늘 저장하면 내일부터 비교가 표시됩니다.";
+    gridEl.innerHTML = "";
+    return;
+  }
+
+  const todayIds = new Set(todayItems.map((n) => n.id));
+  const newCount = todayItems.filter((n) => !yesterdayIds.has(n.id)).length;
+  const dupCount = todayItems.length - newCount;
+  const todayLabel = formatBriefDateLabel(todayKey);
+  const yesterdayLabel = formatBriefDateLabel(yesterdayKey);
+
+  summaryEl.innerHTML = `${yesterdayLabel} 대비 신규 <strong>${newCount}건</strong> · 중복 <strong class="${dupCount > 0 ? "is-dup" : ""}">${dupCount}건</strong>`;
+
+  const renderCol = (label, items, highlightIds) => `
+    <div class="brief-compare__col">
+      <div class="brief-compare__col-label">${escapeHtml(label)}</div>
+      ${items.length === 0
+        ? `<div class="brief-compare__empty">공유된 뉴스 없음</div>`
+        : items.map((n) => `
+          <div class="brief-compare__row${highlightIds.has(n.id) ? " is-dup" : ""}">${escapeHtml(n.title)}</div>
+        `).join("")}
+    </div>`;
+
+  gridEl.innerHTML =
+    renderCol(`${yesterdayLabel} 공유함`, yesterdayItems, todayIds) +
+    renderCol(`${todayLabel} 공유 예정`, todayItems, yesterdayIds);
+}
+
 function renderTeamBrief(data) {
   const briefBody = document.getElementById("brief-body");
   document.getElementById("brief-date").textContent = data.meta.date
     ? data.meta.date.replaceAll("-", ".")
     : "-";
 
-  // 팀 공유용 요약에는 BMW 자사 뉴스는 포함하지 않는다 (자사 모니터링은 하되 외부 공유는 X)
-  const topNews = (data.news || [])
-    .filter((n) => n.topNewsGroup === "others")
-    .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+  const topNews = getTeamBriefItems(data);
+
+  // 오늘 브리핑을 localStorage에 저장하고(같은 날 재저장해도 덮어쓸 뿐이라 안전), 저장된
+  // 기록 중 오늘보다 이전인 가장 최근 날짜를 "어제"로 삼아 비교한다.
+  const todayKey = data.meta.date || null;
+  const history = loadBriefHistory();
+  const pastKeys = Object.keys(history).filter((k) => k !== todayKey).sort();
+  const yesterdayKey = pastKeys.length ? pastKeys[pastKeys.length - 1] : null;
+  const yesterdayItems = yesterdayKey ? history[yesterdayKey] : null;
+  const yesterdayIds = new Set((yesterdayItems || []).map((n) => n.id));
+
+  if (todayKey) {
+    history[todayKey] = topNews.map((n) => ({
+      id: n.id,
+      title: n.title,
+      url: n.url,
+      source: n.source,
+      publishedAt: n.publishedAt,
+    }));
+    saveBriefHistory(history);
+  }
+
+  renderBriefCompare(todayKey, topNews, yesterdayKey, yesterdayItems, yesterdayIds);
 
   if (topNews.length === 0) {
     briefBody.innerHTML = `<div class="brief-item"><p>아직 분석된 뉴스가 없습니다.</p></div>`;
   } else {
-    briefBody.innerHTML = topNews.map((n, idx) => `
-      <div class="brief-item">
+    briefBody.innerHTML = topNews.map((n, idx) => {
+      const isDup = yesterdayIds.has(n.id);
+      return `
+      <div class="brief-item${isDup ? " brief-item--dup" : ""}">
         <span class="brief-item__label">(${idx + 1})</span>
         <p>
-          ${escapeHtml(n.title)}<br>
+          ${isDup ? `<span class="brief-dup-badge" title="${escapeHtml(formatBriefDateLabel(yesterdayKey))} 브리핑에도 포함됐던 뉴스입니다">🔁 어제도 공유</span> ` : ""}${escapeHtml(n.title)}<br>
           <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="brief-item__link">${escapeHtml(shortenUrlForShare(n.url))}</a>
         </p>
       </div>
-    `).join("");
+    `;
+    }).join("");
   }
 }
 
@@ -685,10 +783,7 @@ function setupCopyBriefButton() {
     if (!NEWS_DATA) return;
 
     const meta = NEWS_DATA.meta;
-    // 팀 공유용 요약에는 BMW 자사 뉴스는 포함하지 않는다 (자사 모니터링은 하되 외부 공유는 X)
-    const topNews = (NEWS_DATA.news || [])
-      .filter((n) => n.topNewsGroup === "others")
-      .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
+    const topNews = getTeamBriefItems(NEWS_DATA);
 
     const dateObj = meta.date ? new Date(meta.date) : null;
     const dayNames = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];

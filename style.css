@@ -994,6 +994,65 @@ button{ font-family: inherit; cursor: pointer; }
   font-size: 11.5px;
 }
 
+/* ---- Team Brief: 전일 대비 비교 ---- */
+.brief-compare{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 18px 22px;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+.brief-compare__head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 14px;
+}
+.brief-compare__title{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  color: var(--bmw-blue-light);
+}
+.brief-compare__summary{
+  font-size: 12.5px;
+  color: var(--grey);
+}
+.brief-compare__summary .is-dup{ color: var(--signal-amber); }
+.brief-compare__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.brief-compare__col-label{
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.8px;
+  color: var(--grey-dim);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+.brief-compare__row{
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--grey);
+  padding: 6px 8px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+}
+.brief-compare__row.is-dup{
+  background: var(--signal-amber-dim);
+  color: var(--white);
+}
+.brief-compare__empty{
+  font-size: 12px;
+  color: var(--grey-dim);
+  padding: 6px 8px;
+}
+
 /* ---- Team Brief ---- */
 .brief-card{
   background: var(--panel);
@@ -1041,6 +1100,18 @@ button{ font-family: inherit; cursor: pointer; }
   word-break: break-all;
 }
 .brief-item__link:hover{ text-decoration: underline; }
+.brief-item--dup{ opacity: 0.85; }
+.brief-dup-badge{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.4px;
+  color: var(--signal-amber);
+  background: var(--signal-amber-dim);
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-bottom: 4px;
+}
 .brief-insight{
   background: var(--black);
   border: 1px solid var(--line);
@@ -1182,6 +1253,8 @@ button{ font-family: inherit; cursor: pointer; }
   .news-card{ grid-template-columns: 1fr; }
   .news-card__insight{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }
+  .brief-compare{ padding: 14px 16px; }
+  .brief-compare__grid{ grid-template-columns: 1fr; gap: 18px; }
 
   /* TOP NEWS — 모바일에서는 좌우로 쌓지 않고, 하단 탭(TOP 5 = 업계 전체 / OWN = 자사)으로
      완전히 분리해서 한 번에 하나씩만 보여준다(요청: 탭 5개로 분리). */
