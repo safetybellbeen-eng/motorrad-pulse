@@ -678,6 +678,13 @@ button{ font-family: inherit; cursor: pointer; }
   background: var(--panel);
   border: 1px solid var(--line);
 }
+/* [hidden] 속성은 브라우저 기본 스타일로 display:none이 되어야 하는데, 위의
+   .news-card__insight{ display:grid }가 클래스 선택자라 명시도가 같아서 그 기본
+   동작을 덮어써버린다 — 그래서 "기본 접힘"으로 만든 의도와 다르게 펼침 버튼을
+   누르지 않아도 항상 펼쳐진 채로 보이는 문제가 생긴다. 명시적으로 다시 꺼준다. */
+.news-card__insight[hidden]{
+  display: none;
+}
 .news-card__insight-label{
   font-family: var(--font-mono);
   font-size: 9.5px;
