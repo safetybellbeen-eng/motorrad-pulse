@@ -7,4 +7,4 @@
 // 4) [제품 설정 → 카카오톡 공유]가 활성화되어 있는지 확인
 // ==========================================================
 
-const KAKAO_JS_KEY = "YOUR_KAKAO_JAVASCRIPT_KEY";
+const KAKAO_JS_KEY = "edf10073120c24f63bd8c54bd37c0251";
