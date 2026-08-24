@@ -103,6 +103,13 @@
   <!-- ============ MAIN ============ -->
   <main class="main">
 
+    <!-- 지금 보는 중 — 스크롤 중 화면 맨 위에 계속 붙어서 현재 섹션을 알려주는 얇은 바.
+         script.js의 setupNavHighlight()가 좌측 side-nav 하이라이트와 함께 텍스트를 갱신한다. -->
+    <div class="section-tracker" id="section-tracker">
+      <span class="section-tracker__dot" aria-hidden="true"></span>
+      <span id="section-tracker-label">지금 보는 중 · OVERVIEW</span>
+    </div>
+
     <!-- HEADER -->
     <header class="topbar">
       <div class="topbar__title">
@@ -145,7 +152,7 @@
     </section>
 
     <!-- TOP NEWS -->
-    <section id="top-news" class="section">
+    <section id="top-news" class="section" data-index="02">
       <div class="section-head">
         <h3><span class="section-index">02</span> TOP NEWS</h3>
         <span class="section-sub">BMW Motorrad 자사 TOP 5 · 업계 전체 TOP 5</span>
@@ -164,7 +171,7 @@
     </section>
 
     <!-- SOURCE MONITOR -->
-    <section id="source-monitor" class="section">
+    <section id="source-monitor" class="section" data-index="03">
       <div class="section-head">
         <h3><span class="section-index">03</span> SOURCE MONITOR</h3>
         <span class="section-sub">브랜드·매체별 원문 뉴스 흐름 직접 확인</span>
@@ -198,7 +205,7 @@
     </section>
 
     <!-- MARKET INTELLIGENCE -->
-    <section id="market-intelligence" class="section">
+    <section id="market-intelligence" class="section" data-index="04">
       <div class="section-head">
         <h3><span class="section-index">04</span> MARKET INTELLIGENCE</h3>
         <span class="section-sub">규칙 기반으로 분석한 4개 영역별 핵심 Insight</span>
@@ -245,7 +252,7 @@
     </section>
 
     <!-- TEAM BRIEF -->
-    <section id="team-brief" class="section">
+    <section id="team-brief" class="section" data-index="05">
       <div class="section-head">
         <h3><span class="section-index">05</span> TEAM BRIEF</h3>
         <span class="section-sub">팀 공유용 요약 — 이메일/카카오톡 전송 예정 내용 미리보기</span>

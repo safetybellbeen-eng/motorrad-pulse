@@ -942,6 +942,10 @@ function setupNavHighlight() {
     document.getElementById(item.dataset.nav)
   );
 
+  // "지금 보는 중" 트래커 바 텍스트 — side-nav 라벨(OVERVIEW/TOP NEWS/...)을 그대로 재사용해서
+  // 두 표시가 서로 다른 말을 하지 않도록 한다.
+  const trackerLabel = document.getElementById("section-tracker-label");
+
   navItems.forEach((item) => {
     item.addEventListener("click", () => {
       navItems.forEach((el) => el.classList.remove("is-active"));
@@ -954,9 +958,17 @@ function setupNavHighlight() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
+          let activeLabel = "";
           navItems.forEach((el) => {
-            el.classList.toggle("is-active", el.dataset.nav === id);
+            const isMatch = el.dataset.nav === id;
+            el.classList.toggle("is-active", isMatch);
+            if (isMatch) {
+              activeLabel = el.textContent.replace(/\s+/g, " ").trim().replace(/^\d+\s*/, "");
+            }
           });
+          if (trackerLabel && activeLabel) {
+            trackerLabel.textContent = `지금 보는 중 · ${activeLabel}`;
+          }
         }
       });
     },

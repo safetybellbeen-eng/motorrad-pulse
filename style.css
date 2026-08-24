@@ -412,18 +412,80 @@ button{ font-family: inherit; cursor: pointer; }
 .ptr-indicator.is-loading{ color: var(--bmw-blue-light); border-color: var(--bmw-blue-light); }
 @keyframes ptr-spin{ to{ transform: rotate(360deg); } }
 
-/* ---- Section shared ---- */
-.section{
-  margin-bottom: 60px;
-  scroll-margin-top: 24px;
+/* ---- 지금 보는 중 (섹션 트래커) ----
+   스크롤 중 화면 맨 위에 계속 붙어서 지금 어느 섹션을 보고 있는지 알려준다.
+   처음 사이트를 쓰는 사람이 스크롤하다가 방금 지난 섹션 헤더를 놓쳐도
+   위치를 잃지 않도록 돕는 용도 — script.js의 setupNavHighlight()가 텍스트를 갱신한다. */
+.section-tracker{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 8px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--bmw-blue-light);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  color: var(--bmw-blue-light);
+  text-transform: uppercase;
 }
+.section-tracker__dot{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--bmw-blue-light);
+  flex-shrink: 0;
+}
+
+/* ---- Section shared ----
+   섹션마다 "새 섹션이 시작됐다"는 걸 뚜렷하게 느끼도록 세 가지를 함께 적용한다.
+   1) 옅은 배경 숫자 워터마크(section[data-index]) — 은은하게, 헤더 밴드와 안 겹치는 우상단에 배치
+   2) 헤더를 밑줄 대신 배경 있는 "밴드"로(좌측 블루 바 + 번호 배지)
+   3) 섹션 배경 톤을 한 칸씩 교차(짝/홀 섹션이 아주 살짝 다른 톤) — 시각적 경계를 준다 */
+.section{
+  position: relative;
+  margin-bottom: 60px;
+  scroll-margin-top: 64px; /* 위에 떠 있는 section-tracker 높이만큼 여유를 둬서, 앵커 이동 시 헤더가 트래커에 가리지 않게 */
+  overflow: hidden;
+}
+.section[data-index]::before{
+  content: attr(data-index);
+  position: absolute;
+  right: 4px;
+  top: -18px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 1;
+  color: rgba(255,255,255,0.035);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+.section > *{ position: relative; z-index: 1; }
+
+/* 섹션 톤 교차 — TOP NEWS/MARKET INTELLIGENCE는 기본 배경, SOURCE MONITOR/TEAM BRIEF는
+   아주 살짝 밝은 톤을 깔아서 스크롤하다 배경이 바뀌는 것만으로도 섹션 전환을 느끼게 한다. */
+.section:not(.signal-section):nth-of-type(odd){
+  background: #1F2024;
+  padding: 22px 20px 28px;
+  margin: -22px -20px 38px;
+}
+
 .section-head{
   display: flex;
-  align-items: baseline;
-  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
   margin-bottom: 22px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line);
+  padding: 12px 18px;
+  background: var(--panel-2);
+  border-left: 3px solid var(--bmw-blue-light);
 }
 .section-head h3{
   font-family: var(--font-display);
@@ -432,15 +494,19 @@ button{ font-family: inherit; cursor: pointer; }
   letter-spacing: 1.5px;
   margin: 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   color: var(--white);
   text-transform: uppercase;
 }
 .section-index{
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-weight: 700;
+  font-size: 12px;
   color: var(--bmw-blue-light);
+  background: var(--bmw-blue-dim);
+  padding: 2px 8px;
+  border-radius: 3px;
 }
 .section-sub{
   font-size: 11.5px;
@@ -1272,6 +1338,16 @@ button{ font-family: inherit; cursor: pointer; }
      하단 탭에서 선택된 것만 보이도록 script.js가 is-tab-active 클래스를 토글한다. */
   .section:not(.signal-section){ display: none; }
   .section.is-tab-active{ display: block; }
+
+  /* 모바일은 하단 탭바로 이미 "지금 어느 섹션인지"가 명확하므로
+     데스크톱용 "지금 보는 중" 트래커 바는 중복이라 숨긴다 */
+  .section-tracker{ display: none; }
+
+  /* 모바일은 화면이 좁아 섹션 배경 bleed(-20px 마진)가 여백을 너무 많이 잡아먹으므로 줄인다 */
+  .section:not(.signal-section):nth-of-type(odd){
+    padding: 18px 14px 22px;
+    margin: -18px -14px 28px;
+  }
 
   .mobile-tabbar{
     display: flex;
