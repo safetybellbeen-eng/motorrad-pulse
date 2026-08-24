@@ -138,12 +138,12 @@
         <span class="section-sub">BMW Motorrad 자사 TOP 5 · 업계 전체 TOP 5</span>
       </div>
       <div class="top-news-split">
-        <div class="top-news-split__col">
+        <div class="top-news-split__col" data-topnews-col="own">
           <div class="top-news-split__label">BMW MOTORRAD</div>
           <div id="top-news-own" class="top-news-list"></div>
         </div>
         <div class="top-news-split__divider"></div>
-        <div class="top-news-split__col">
+        <div class="top-news-split__col is-topnews-active" data-topnews-col="competitor">
           <div class="top-news-split__label">업계 전체 (자사 제외)</div>
           <div id="top-news-others" class="top-news-list"></div>
         </div>
@@ -257,8 +257,11 @@
 
 <!-- ============ MOBILE BOTTOM TAB BAR ============ -->
 <nav class="mobile-tabbar" id="mobile-tabbar">
-  <a href="#top-news" class="mobile-tab is-active" data-tab="top-news">
+  <a href="#top-news" class="mobile-tab is-active" data-tab="top-news-competitor">
     <span class="mobile-tab__label">TOP 5</span>
+  </a>
+  <a href="#top-news" class="mobile-tab" data-tab="top-news-own">
+    <span class="mobile-tab__label">OWN</span>
   </a>
   <a href="#source-monitor" class="mobile-tab" data-tab="source-monitor">
     <span class="mobile-tab__label">SOURCES</span>

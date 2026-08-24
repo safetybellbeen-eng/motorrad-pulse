@@ -1103,15 +1103,16 @@ button{ font-family: inherit; cursor: pointer; }
   .news-card__insight{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }
 
-  /* TOP NEWS 좌우 2분할 -> 모바일에서는 세로로 쌓기 (BMW 자사 먼저, 그 다음 업계 전체) */
+  /* TOP NEWS — 모바일에서는 좌우로 쌓지 않고, 하단 탭(TOP 5 = 업계 전체 / OWN = 자사)으로
+     완전히 분리해서 한 번에 하나씩만 보여준다(요청: 탭 5개로 분리). */
+  #top-news .section-sub{ display: none; } /* 컬럼 라벨(top-news-split__label)이 이미 어떤 목록인지 알려줌 */
   .top-news-split{
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 0;
   }
-  .top-news-split__divider{
-    width: 100%;
-    height: 1px;
-  }
+  .top-news-split__divider{ display: none; }
+  .top-news-split__col{ display: none; }
+  .top-news-split__col.is-topnews-active{ display: block; }
 
   /* ---- 모바일 탭 기반 네비게이션 (요청서: 축소판이 아닌 탭 방식) ----
      TODAY'S SIGNAL(#overview)은 항상 노출, 나머지 4개 섹션은

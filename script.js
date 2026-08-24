@@ -602,26 +602,47 @@ function formatDisplayDate(isoString) {
    900px 이하에서만 의미가 있다. 탭 클릭 시 해당 섹션에 is-tab-active를 부여하고
    나머지는 CSS(.section:not(.signal-section){display:none})로 숨긴다.
    TODAY'S SIGNAL(#overview)은 signal-section 클래스로 항상 노출된다. */
+/* TOP NEWS 섹션 하나를 "TOP 5"(업계 전체) / "OWN"(자사) 두 개의 모바일 탭이
+   공유한다 — 탭 id는 가상의 id(top-news-competitor / top-news-own)이고 실제
+   섹션 id는 둘 다 top-news이다. 이 매핑을 통해 섹션 표시 여부와 그 안의
+   top-news-split__col 중 어느 쪽을 보여줄지를 함께 결정한다. */
+const TOPNEWS_TAB_TO_COL = {
+  "top-news-competitor": "competitor",
+  "top-news-own": "own",
+};
+
 function setupMobileTabbar() {
   const tabs = document.querySelectorAll(".mobile-tab");
   if (!tabs.length) return;
 
-  function activateTab(targetId) {
-    tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.tab === targetId));
+  function resolveSectionId(tabId) {
+    return TOPNEWS_TAB_TO_COL[tabId] ? "top-news" : tabId;
+  }
+
+  function activateTab(tabId) {
+    const sectionId = resolveSectionId(tabId);
+    tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.tab === tabId));
     document.querySelectorAll(".section:not(.signal-section)").forEach((sec) => {
-      sec.classList.toggle("is-tab-active", sec.id === targetId);
+      sec.classList.toggle("is-tab-active", sec.id === sectionId);
     });
+
+    const col = TOPNEWS_TAB_TO_COL[tabId];
+    if (col) {
+      document.querySelectorAll(".top-news-split__col").forEach((c) => {
+        c.classList.toggle("is-topnews-active", c.dataset.topnewsCol === col);
+      });
+    }
   }
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
       e.preventDefault();
       activateTab(tab.dataset.tab);
-      document.getElementById(tab.dataset.tab)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      document.getElementById(resolveSectionId(tab.dataset.tab))?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
-  // 초기 상태: 첫 번째 탭(TOP NEWS)을 기본으로 노출
+  // 초기 상태: 첫 번째 탭(TOP 5 = 업계 전체 뉴스)을 기본으로 노출
   activateTab(tabs[0].dataset.tab);
 }
 
