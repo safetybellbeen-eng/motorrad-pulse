@@ -1272,6 +1272,13 @@ function setupIntelTabbar() {
   activate(tabs[0].dataset.intelTab);
 }
 
+// 데스크톱(사이드바가 보이는 900px 초과 화면)에서는 좌측 메뉴를 "클릭한 섹션만 보이는
+// 탭"처럼 동작시킨다 — 콘텐츠가 계속 늘어날 예정이라 스크롤로 전체를 한 번에 훑는 대신
+// 필요한 섹션만 골라 보게 하기 위함(요청사항). 900px 이하(모바일)에서는 하단 탭바가
+// 이미 앵커 스크롤 방식으로 동작하고 있으므로 그 동작은 그대로 둔다 — 화면 폭이 이 경계를
+// 넘나들며 바뀔 수 있으므로(창 크기 조절, 접이식 기기 등) resize에 맞춰 모드를 다시 계산한다.
+const DESKTOP_TAB_MODE_QUERY = "(min-width: 901px)";
+
 function setupNavHighlight() {
   const navItems = document.querySelectorAll(".side-nav__item");
   const sections = Array.from(navItems).map((item) =>
@@ -1282,30 +1289,57 @@ function setupNavHighlight() {
   // 두 표시가 서로 다른 말을 하지 않도록 한다.
   const trackerLabel = document.getElementById("section-tracker-label");
 
+  function isDesktopTabMode() {
+    return window.matchMedia(DESKTOP_TAB_MODE_QUERY).matches;
+  }
+
+  function setActiveNav(id) {
+    let activeLabel = "";
+    navItems.forEach((el) => {
+      const isMatch = el.dataset.nav === id;
+      el.classList.toggle("is-active", isMatch);
+      if (isMatch) {
+        activeLabel = el.textContent.replace(/\s+/g, " ").trim().replace(/^\d+\s*/, "");
+      }
+    });
+    if (trackerLabel && activeLabel) {
+      trackerLabel.textContent = `지금 보는 중 · ${activeLabel}`;
+    }
+  }
+
+  // 데스크톱 탭 모드: 클릭한 섹션만 표시(display)하고 나머지는 숨긴다.
+  // 인라인 style을 직접 건드리는 이유는 클래스 선택자로 하면 브라우저 기본
+  // [hidden] 처리와 명시도가 같아서 서로 충돌하는 문제를 이전에 겪었기 때문이다.
+  function showOnlySection(id) {
+    sections.forEach((section) => {
+      if (!section) return;
+      section.style.display = section.id === id ? "" : "none";
+    });
+  }
+
+  function showAllSections() {
+    sections.forEach((section) => {
+      if (section) section.style.display = "";
+    });
+  }
+
   navItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      navItems.forEach((el) => el.classList.remove("is-active"));
-      item.classList.add("is-active");
+    item.addEventListener("click", (e) => {
+      if (!isDesktopTabMode()) return; // 모바일에서는 기존 앵커 스크롤 동작 그대로
+      e.preventDefault();
+      const id = item.dataset.nav;
+      showOnlySection(id);
+      setActiveNav(id);
+      document.querySelector(".main")?.scrollTo({ top: 0, behavior: "auto" });
+      window.scrollTo({ top: 0, behavior: "auto" });
     });
   });
 
   const observer = new IntersectionObserver(
     (entries) => {
+      if (isDesktopTabMode()) return; // 탭 모드에서는 숨겨진 섹션이 관찰 대상이 아니라 의미 없음
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          let activeLabel = "";
-          navItems.forEach((el) => {
-            const isMatch = el.dataset.nav === id;
-            el.classList.toggle("is-active", isMatch);
-            if (isMatch) {
-              activeLabel = el.textContent.replace(/\s+/g, " ").trim().replace(/^\d+\s*/, "");
-            }
-          });
-          if (trackerLabel && activeLabel) {
-            trackerLabel.textContent = `지금 보는 중 · ${activeLabel}`;
-          }
-        }
+        if (entry.isIntersecting) setActiveNav(entry.target.id);
       });
     },
     { rootMargin: "-20% 0px -70% 0px" }
@@ -1314,6 +1348,23 @@ function setupNavHighlight() {
   sections.forEach((section) => {
     if (section) observer.observe(section);
   });
+
+  function applyModeForViewport() {
+    if (isDesktopTabMode()) {
+      // 처음 켜질 때는 현재 활성화된(또는 첫 번째) 메뉴의 섹션만 보이게 시작한다.
+      const activeItem = document.querySelector(".side-nav__item.is-active") || navItems[0];
+      if (activeItem) {
+        showOnlySection(activeItem.dataset.nav);
+        setActiveNav(activeItem.dataset.nav);
+      }
+    } else {
+      // 모바일 폭으로 바뀌면 스크롤 탐색이 가능하도록 숨겨뒀던 섹션을 전부 되돌린다.
+      showAllSections();
+    }
+  }
+
+  applyModeForViewport();
+  window.addEventListener("resize", applyModeForViewport);
 }
 
 /* ---------- Toast ---------- */
