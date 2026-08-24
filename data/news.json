@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-24",
-    "dayLabel": "MONDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-08-25",
+    "dayLabel": "TUESDAY",
+    "lastUpdated": "06:54 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-24T18:01:21.746256+09:00",
+    "lastUpdatedISO": "2026-08-25T06:54:55.422552+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -166,7 +166,7 @@
       "publishedAt": "2026-08-24T11:09:25+09:00",
       "category": "COMPETITOR",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
