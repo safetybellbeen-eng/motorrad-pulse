@@ -5,7 +5,67 @@
 // 다음 순서로 로드되어야 한다.
 // ==========================================================
 
-const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+/* ---------- 자동 로그인 설정 ----------
+   로그인 화면의 "자동 로그인" 체크박스 상태를 저장해두고, Supabase 세션을 어디에
+   저장할지(브라우저를 닫아도 남는 localStorage / 탭을 닫으면 사라지는 sessionStorage)를
+   그 값에 따라 결정한다. 이 값 자체(켜짐/꺼짐 여부)는 민감정보가 아니므로 항상
+   localStorage에 남겨두고, 모든 페이지(login.html/index.html/admin.html)가 이 값을
+   똑같이 참조해서 세션을 어디서 읽을지 판단한다.
+   기본값은 true(자동 로그인 켜짐) — 이 기능이 생기기 전까지는 항상 로그인이 유지되던
+   것과 동일하게 동작하도록 하여, 기존 사용자가 갑자기 로그아웃되지 않게 한다. */
+const AUTO_LOGIN_PREF_KEY = "motorradPulseAutoLogin";
+
+function isAutoLoginOn() {
+  try {
+    const v = localStorage.getItem(AUTO_LOGIN_PREF_KEY);
+    return v === null ? true : v === "1";
+  } catch (e) {
+    return true; // localStorage 접근 불가(프라이빗 모드 등) — 기본 동작 유지
+  }
+}
+
+function setAutoLoginPref(on) {
+  try {
+    localStorage.setItem(AUTO_LOGIN_PREF_KEY, on ? "1" : "0");
+  } catch (e) {
+    /* 저장 실패해도 로그인 자체는 계속 진행되어야 하므로 조용히 무시 */
+  }
+}
+
+/* Supabase가 세션 토큰을 읽고/쓸 때마다 그 순간의 "자동 로그인" 설정을 다시 확인해서
+   localStorage(브라우저 재시작 후에도 유지) 또는 sessionStorage(탭을 닫으면 로그아웃)
+   중 하나로 위임하는 어댑터. 클라이언트 생성 시점에 저장소를 한 번만 고정해버리면
+   "로그인 버튼을 누르는 순간 체크박스 값"이 반영되지 않기 때문에, 매 호출마다
+   isAutoLoginOn()을 다시 읽는 방식으로 만든다. */
+const _authStorageAdapter = {
+  getItem(key) {
+    try {
+      return (isAutoLoginOn() ? window.localStorage : window.sessionStorage).getItem(key);
+    } catch (e) {
+      return null;
+    }
+  },
+  setItem(key, value) {
+    try {
+      (isAutoLoginOn() ? window.localStorage : window.sessionStorage).setItem(key, value);
+    } catch (e) {
+      /* 무시 */
+    }
+  },
+  removeItem(key) {
+    // 로그아웃 시엔 설정과 무관하게 양쪽 다 정리해서 이전에 저장된 세션이 남지 않게 한다.
+    try { window.localStorage.removeItem(key); } catch (e) { /* 무시 */ }
+    try { window.sessionStorage.removeItem(key); } catch (e) { /* 무시 */ }
+  },
+};
+
+const _supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+  auth: {
+    persistSession: true,
+    autoRefreshToken: true,
+    storage: _authStorageAdapter,
+  },
+});
 
 const USERNAME_PATTERN = /^[a-zA-Z0-9_.-]{3,32}$/;
 

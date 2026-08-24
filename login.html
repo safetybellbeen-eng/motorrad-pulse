@@ -86,6 +86,16 @@
           <label for="login-password">비밀번호</label>
           <input id="login-password" type="password" autocomplete="current-password" required>
         </div>
+        <div class="auth-check-row">
+          <label class="auth-checkbox">
+            <input type="checkbox" id="login-remember-username">
+            <span>아이디 저장</span>
+          </label>
+          <label class="auth-checkbox">
+            <input type="checkbox" id="login-auto-login" checked>
+            <span>자동 로그인</span>
+          </label>
+        </div>
         <button type="submit" class="auth-submit" id="login-submit">로그인</button>
       </form>
 
@@ -116,7 +126,11 @@
 
 </div>
 
-<script src="./login.js"></script>
+<!-- defer 필수: auth-config.js/auth-client.js(둘 다 defer)가 먼저 실행 완료된 뒤에
+     이 스크립트가 실행되어야 _supabase/isAutoLoginOn 등을 안전하게 참조할 수 있다.
+     defer 없이 두면 이 스크립트가 그 두 개보다 먼저 실행되어버린다(파서가 만나는
+     즉시 실행되는 일반 <script>는, 문서 앞쪽에 있는 defer 스크립트들보다도 먼저 돈다). -->
+<script src="./login.js" defer></script>
 <script>
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
