@@ -1073,15 +1073,21 @@ button{ font-family: inherit; cursor: pointer; }
     padding: 16px 20px;
   }
   .brand-block{ border-bottom: none; padding-bottom: 0; flex-direction: row; align-items: center; }
+  /* 모바일에서는 topbar가 이미 "MOTORRAD PULSE" 제목을 크게 보여주므로,
+     사이드바의 브랜드 타이틀(중복)은 숨기고 로고 마크만 남겨 첫 화면 스크롤 없이
+     핵심 콘텐츠(TODAY'S SIGNAL)가 최대한 빨리 보이게 한다. */
+  .brand-title{ display: none; }
+  .sidebar-bike{ display: none; }
   .side-nav{ display: none; }
   .sidebar-status{ display: none; }
-  .main{ padding: 24px 20px 88px; } /* 하단 탭바 높이만큼 여백 확보 */
+  .sidebar{ padding: 12px 20px; }
+  .main{ padding: 16px 20px 88px; } /* 하단 탭바 높이만큼 여백 확보 */
   .topbar{
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    padding-bottom: 16px;
-    margin-bottom: 22px;
+    gap: 8px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
   }
   .topbar__meta{ text-align: left; }
   .topbar__title h1{ font-size: 26px; }
@@ -1089,8 +1095,10 @@ button{ font-family: inherit; cursor: pointer; }
   .topbar__bike{ display: none; } /* 장식용 아이콘 — 모바일에서 세로 공간 절약 */
   .topbar__live-clock{ font-size: 9px; margin-bottom: 3px; }
   .topbar__date{ font-size: 12px; }
-  .signal-section{ margin-bottom: 32px; }
-  .signal-card{ padding: 24px 22px; }
+  .signal-section{ margin-bottom: 28px; }
+  .signal-card{ padding: 22px 20px; }
+  .signal-headline{ font-size: 22px; line-height: 1.32; margin: 10px 0 10px; }
+  .signal-description{ font-size: 12.5px; line-height: 1.65; }
   .news-card{ grid-template-columns: 1fr; }
   .news-card__insight{ grid-template-columns: 1fr; }
   .brief-actions{ flex-direction: column; }

@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MOTORRAD PULSE — Daily Motorcycle Market Intelligence</title>
+
+<!-- ============ PWA / 홈 화면에 추가 ============
+     iOS는 web app manifest의 아이콘/이름을 온전히 지원하지 않아서 apple-* 메타 태그를
+     별도로 둔다. 안드로이드/데스크톱 Chrome은 manifest.json만으로 "설치" 배너가 뜬다. -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#1A1B1E">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MOTORRAD PULSE">
+<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+<link rel="icon" href="./assets/icons/icon-192.png" type="image/png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -122,7 +135,7 @@
     <section id="top-news" class="section">
       <div class="section-head">
         <h3><span class="section-index">02</span> TOP NEWS</h3>
-        <span class="section-sub">좌: BMW Motorrad 자사 TOP 5 · 우: 업계 전체 TOP 5</span>
+        <span class="section-sub">BMW Motorrad 자사 TOP 5 · 업계 전체 TOP 5</span>
       </div>
       <div class="top-news-split">
         <div class="top-news-split__col">
@@ -263,5 +276,13 @@
 
 <script src="./script.js"></script>
 <script src="./auth-ui.js"></script>
+<script>
+  // 홈 화면 추가(PWA) — 정적 셸 캐싱용 서비스워커 등록. 실패해도 사이트 동작에는 영향 없음.
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js").catch(() => {});
+    });
+  }
+</script>
 </body>
 </html>
