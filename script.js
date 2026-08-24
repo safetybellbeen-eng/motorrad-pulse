@@ -892,51 +892,70 @@ function setupBriefCurateModal() {
   const modal = document.getElementById("brief-curate-modal");
   if (!openBtn || !modal) return;
 
-  const searchInput = document.getElementById("brief-curate-search");
-  const listEl = document.getElementById("brief-curate-list");
+  const listLeftEl = document.getElementById("brief-curate-list-left");
+  const listRightEl = document.getElementById("brief-curate-list-right");
+  const leftCountEl = document.getElementById("brief-curate-left-count");
+  const rightCountEl = document.getElementById("brief-curate-right-count");
   const countEl = document.getElementById("brief-curate-count");
   const saveBtn = document.getElementById("brief-curate-save");
 
   let workingSelectedIds = new Set();
 
-  function renderList(query) {
-    if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) {
-      listEl.innerHTML = `<div class="brief-curate-modal__empty">원본 뉴스를 아직 불러오는 중입니다. 잠시 후 다시 열어주세요.</div>`;
-      return;
-    }
-    const q = (query || "").trim().toLowerCase();
-    let items = RAW_NEWS_DATA.news;
-    if (q) {
-      items = items.filter((n) =>
-        (n.title || "").toLowerCase().includes(q) || (n.source || "").toLowerCase().includes(q)
-      );
-    }
-    items = items.slice().sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
-
-    if (items.length === 0) {
-      listEl.innerHTML = `<div class="brief-curate-modal__empty">검색 결과가 없습니다.</div>`;
-      return;
-    }
-
-    listEl.innerHTML = items.map((n) => {
-      const checked = workingSelectedIds.has(n.id);
-      const isAuto = CURRENT_BRIEF_AUTO_IDS.has(n.id);
-      return `
-        <label class="brief-curate-modal__row">
-          <input type="checkbox" data-curate-id="${escapeHtml(n.id)}" ${checked ? "checked" : ""}>
-          <div class="brief-curate-modal__row-body">
-            <div class="brief-curate-modal__row-title">${escapeHtml(n.title)}</div>
-            <div class="brief-curate-modal__row-meta">
-              ${isAuto ? `<span class="brief-curate-modal__row-auto-tag">자동 선정</span>` : ""}
-              <span>${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</span>
-            </div>
-          </div>
-        </label>`;
-    }).join("");
-    updateCount();
+  function rawById(id) {
+    if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) return null;
+    return RAW_NEWS_DATA.news.find((n) => n.id === id) || null;
   }
 
-  function updateCount() {
+  function renderRow(n, mode, extraClass) {
+    const isAuto = CURRENT_BRIEF_AUTO_IDS.has(n.id);
+    const btn =
+      mode === "remove"
+        ? `<button type="button" class="brief-curate-modal__row-btn brief-curate-modal__row-btn--remove" data-curate-remove="${escapeHtml(n.id)}" aria-label="TEAM BRIEF에서 제외" title="제외">✕</button>`
+        : `<button type="button" class="brief-curate-modal__row-btn brief-curate-modal__row-btn--add" data-curate-add="${escapeHtml(n.id)}" aria-label="TEAM BRIEF에 추가" title="추가">＋</button>`;
+    return `
+      <div class="brief-curate-modal__row${extraClass ? ` ${extraClass}` : ""}">
+        ${btn}
+        <div class="brief-curate-modal__row-body">
+          <div class="brief-curate-modal__row-title">${escapeHtml(n.title)}</div>
+          <div class="brief-curate-modal__row-meta">
+            ${isAuto ? `<span class="brief-curate-modal__row-auto-tag">자동 선정</span>` : ""}
+            <span>${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</span>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderLists() {
+    if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) {
+      const msg = `<div class="brief-curate-modal__empty">원본 뉴스를 아직 불러오는 중입니다. 잠시 후 다시 열어주세요.</div>`;
+      listLeftEl.innerHTML = msg;
+      listRightEl.innerHTML = msg;
+      return;
+    }
+
+    const allSorted = RAW_NEWS_DATA.news
+      .slice()
+      .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+
+    // 왼쪽: 현재 TEAM BRIEF에 포함된 뉴스 (선택 순서 유지)
+    const leftItems = Array.from(workingSelectedIds)
+      .map((id) => rawById(id))
+      .filter(Boolean);
+
+    if (leftItems.length === 0) {
+      listLeftEl.innerHTML = `<div class="brief-curate-modal__empty">포함된 뉴스가 없습니다. 오른쪽에서 추가해주세요.</div>`;
+    } else {
+      listLeftEl.innerHTML = leftItems.map((n) => renderRow(n, "remove")).join("");
+    }
+    leftCountEl.textContent = `${leftItems.length}건`;
+
+    // 오른쪽: SOURCE MONITOR 전체 뉴스 (이미 포함된 것도 그대로 다 보여주되, 포함 상태를 표시)
+    listRightEl.innerHTML = allSorted.map((n) => {
+      const included = workingSelectedIds.has(n.id);
+      return included ? renderRow(n, "remove", "is-included") : renderRow(n, "add");
+    }).join("");
+    rightCountEl.textContent = `${allSorted.length}건`;
+
     countEl.textContent = `선택됨 ${workingSelectedIds.size}건`;
   }
 
@@ -944,10 +963,8 @@ function setupBriefCurateModal() {
     // 현재 화면에 실제로 보이는 최종 목록(CURRENT_BRIEF_ITEMS)을 그대로 체크 상태의
     // 시작점으로 삼는다 — 자동 선정이든 이전에 수동 추가된 것이든 구분 없이 전부 반영.
     workingSelectedIds = new Set(CURRENT_BRIEF_ITEMS.map((n) => n.id));
-    searchInput.value = "";
     modal.hidden = false;
-    renderList("");
-    searchInput.focus();
+    renderLists();
   }
 
   function closeModal() {
@@ -964,16 +981,20 @@ function setupBriefCurateModal() {
     if (e.key === "Escape" && !modal.hidden) closeModal();
   });
 
-  searchInput.addEventListener("input", () => renderList(searchInput.value));
+  function handleListClick(e) {
+    const addBtn = e.target.closest("[data-curate-add]");
+    const removeBtn = e.target.closest("[data-curate-remove]");
+    if (addBtn) {
+      workingSelectedIds.add(addBtn.dataset.curateAdd);
+      renderLists();
+    } else if (removeBtn) {
+      workingSelectedIds.delete(removeBtn.dataset.curateRemove);
+      renderLists();
+    }
+  }
 
-  listEl.addEventListener("change", (e) => {
-    const checkbox = e.target.closest("[data-curate-id]");
-    if (!checkbox) return;
-    const id = checkbox.dataset.curateId;
-    if (checkbox.checked) workingSelectedIds.add(id);
-    else workingSelectedIds.delete(id);
-    updateCount();
-  });
+  listLeftEl.addEventListener("click", handleListClick);
+  listRightEl.addEventListener("click", handleListClick);
 
   saveBtn.addEventListener("click", async () => {
     if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) return;
