@@ -5,44 +5,38 @@
    ========================================================== */
 
 .auth-page{
+  position: relative;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  overflow: hidden;
+  background: var(--black);
 }
 
-/* ---- LEFT: BMW brand hero panel ----
-   BMW 로고 쿼드런트(블루/화이트 대각선)를 초대형으로, 아주 옅게 배경 워터마크로
-   깔아서 "BMW스러움"을 은은하게 준다 — 실제 로고를 확대 남용하지 않고 색과
-   기하학적 모티프만 가져온다. */
+/* ---- LEFT: BMW brand hero panel — diagonal split ----
+   대각선으로 잘린 패널 + 스피드라인 텍스처로 속도감/역동성을 준다. */
 .auth-hero{
-  position: relative;
-  overflow: hidden;
-  background-image: url("./assets/login-hero.jpg");
-  background-size: cover;
-  background-position: 55% 55%;
-  border-right: 1px solid var(--line);
-  padding: 44px 56px;
+  position: absolute;
+  inset: 0;
+  width: 64%;
+  background:
+    radial-gradient(ellipse 800px 600px at 10% 0%, rgba(28,105,212,0.20), transparent 60%),
+    var(--black);
+  clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
+  padding: 48px 0 48px 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-/* 사진 위에 어두운 그라데이션 + 블루 컬러그레이딩을 입혀서 텍스트 가독성과
-   기존 사이트 톤(--black/--bmw-blue)을 맞춘다 */
-.auth-hero::before{
-  content: "";
+
+.auth-hero__speedlines{
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(100deg, rgba(10,11,13,0.96) 0%, rgba(10,11,13,0.82) 28%, rgba(10,11,13,0.35) 55%, rgba(10,11,13,0.15) 78%, rgba(10,11,13,0.35) 100%),
-    linear-gradient(to top, rgba(10,11,13,0.85) 0%, rgba(10,11,13,0) 30%, rgba(10,11,13,0) 70%, rgba(10,11,13,0.6) 100%);
-  pointer-events: none;
-}
-.auth-hero::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(28,105,212,0.10);
-  mix-blend-mode: overlay;
+  background-image: repeating-linear-gradient(
+    -18deg,
+    rgba(76,155,232,0.06) 0px,
+    rgba(76,155,232,0.06) 1px,
+    transparent 1px,
+    transparent 64px
+  );
   pointer-events: none;
 }
 
@@ -65,17 +59,22 @@
   font-size: 11px;
   letter-spacing: 3px;
   color: var(--bmw-blue-light);
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 .auth-hero__title{
   margin: 0 0 20px;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 64px;
-  line-height: 0.92;
-  letter-spacing: 0.5px;
+  font-size: 96px;
+  line-height: 0.86;
+  letter-spacing: -1px;
   color: var(--white);
   text-transform: uppercase;
+}
+.auth-hero__title em{
+  font-style: normal;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--bmw-blue-light);
 }
 .auth-hero__desc{
   margin: 0;
@@ -83,18 +82,8 @@
   line-height: 1.7;
   color: var(--grey);
   max-width: 380px;
-}
-
-.auth-hero__bike{
-  position: absolute;
-  right: 48px;
-  bottom: 90px;
-  width: 220px;
-  height: 220px;
-  color: var(--bmw-blue-light);
-  opacity: 0.16;
+  position: relative;
   z-index: 1;
-  pointer-events: none;
 }
 
 .auth-hero__foot{
@@ -108,11 +97,13 @@
 
 /* ---- RIGHT: form panel ---- */
 .auth-panel{
-  background: var(--panel);
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 0 64px;
 }
 
 .auth-card{
@@ -212,17 +203,22 @@
 
 /* ---- Responsive: 좁은 화면에서는 hero를 위쪽 컴팩트 배너로 접는다 ---- */
 @media (max-width: 880px){
-  .auth-page{ grid-template-columns: 1fr; }
+  .auth-page{ min-height: auto; }
   .auth-hero{
+    position: relative;
+    width: auto;
+    clip-path: none;
     padding: 32px 24px;
-    border-right: none;
     border-bottom: 1px solid var(--line);
   }
   .auth-hero__title{ font-size: 40px; }
   .auth-hero__desc{ display: none; }
-  .auth-hero__bike{ display: none; }
   .auth-hero__foot{ display: none; }
-  .auth-panel{ padding: 32px 20px 48px; }
+  .auth-panel{
+    position: relative;
+    width: auto;
+    padding: 32px 20px 48px;
+  }
 }
 
 .auth-message{
