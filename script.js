@@ -898,23 +898,26 @@ function setupBriefCurateModal() {
   const rightCountEl = document.getElementById("brief-curate-right-count");
   const countEl = document.getElementById("brief-curate-count");
   const saveBtn = document.getElementById("brief-curate-save");
+  const addBtn = document.getElementById("brief-curate-add-btn");
+  const removeBtn = document.getElementById("brief-curate-remove-btn");
 
   let workingSelectedIds = new Set();
+  // 이동 대상으로 체크해둔 항목들 — 여러 건을 한 번에 추가/제외하기 위한 임시 선택 상태.
+  // 목록이 다시 그려지면(추가/제외가 일어나면) 초기화된다.
+  let leftCheckedIds = new Set();
+  let rightCheckedIds = new Set();
 
   function rawById(id) {
     if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) return null;
     return RAW_NEWS_DATA.news.find((n) => n.id === id) || null;
   }
 
-  function renderRow(n, mode, extraClass) {
+  function renderRow(n, checkedSet) {
     const isAuto = CURRENT_BRIEF_AUTO_IDS.has(n.id);
-    const btn =
-      mode === "remove"
-        ? `<button type="button" class="brief-curate-modal__row-btn brief-curate-modal__row-btn--remove" data-curate-remove="${escapeHtml(n.id)}" aria-label="TEAM BRIEF에서 제외" title="제외">✕</button>`
-        : `<button type="button" class="brief-curate-modal__row-btn brief-curate-modal__row-btn--add" data-curate-add="${escapeHtml(n.id)}" aria-label="TEAM BRIEF에 추가" title="추가">＋</button>`;
+    const checked = checkedSet.has(n.id);
     return `
-      <div class="brief-curate-modal__row${extraClass ? ` ${extraClass}` : ""}">
-        ${btn}
+      <label class="brief-curate-modal__row${checked ? " is-checked" : ""}">
+        <input type="checkbox" data-curate-id="${escapeHtml(n.id)}" ${checked ? "checked" : ""}>
         <div class="brief-curate-modal__row-body">
           <div class="brief-curate-modal__row-title">${escapeHtml(n.title)}</div>
           <div class="brief-curate-modal__row-meta">
@@ -922,7 +925,12 @@ function setupBriefCurateModal() {
             <span>${escapeHtml(n.source || "")} · ${formatDisplayDate(n.publishedAt)}</span>
           </div>
         </div>
-      </div>`;
+      </label>`;
+  }
+
+  function updateTransferButtons() {
+    addBtn.disabled = rightCheckedIds.size === 0;
+    removeBtn.disabled = leftCheckedIds.size === 0;
   }
 
   function renderLists() {
@@ -937,32 +945,34 @@ function setupBriefCurateModal() {
       .slice()
       .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
 
-    // 왼쪽: 현재 TEAM BRIEF에 포함된 뉴스 (선택 순서 유지)
-    const leftItems = Array.from(workingSelectedIds)
-      .map((id) => rawById(id))
-      .filter(Boolean);
-
+    // 왼쪽: 현재 TEAM BRIEF에 포함된 뉴스
+    const leftItems = allSorted.filter((n) => workingSelectedIds.has(n.id));
     if (leftItems.length === 0) {
       listLeftEl.innerHTML = `<div class="brief-curate-modal__empty">포함된 뉴스가 없습니다. 오른쪽에서 추가해주세요.</div>`;
     } else {
-      listLeftEl.innerHTML = leftItems.map((n) => renderRow(n, "remove")).join("");
+      listLeftEl.innerHTML = leftItems.map((n) => renderRow(n, leftCheckedIds)).join("");
     }
     leftCountEl.textContent = `${leftItems.length}건`;
 
-    // 오른쪽: SOURCE MONITOR 전체 뉴스 (이미 포함된 것도 그대로 다 보여주되, 포함 상태를 표시)
-    listRightEl.innerHTML = allSorted.map((n) => {
-      const included = workingSelectedIds.has(n.id);
-      return included ? renderRow(n, "remove", "is-included") : renderRow(n, "add");
-    }).join("");
-    rightCountEl.textContent = `${allSorted.length}건`;
+    // 오른쪽: 아직 TEAM BRIEF에 포함되지 않은 SOURCE MONITOR 뉴스
+    const rightItems = allSorted.filter((n) => !workingSelectedIds.has(n.id));
+    if (rightItems.length === 0) {
+      listRightEl.innerHTML = `<div class="brief-curate-modal__empty">추가할 수 있는 뉴스가 없습니다.</div>`;
+    } else {
+      listRightEl.innerHTML = rightItems.map((n) => renderRow(n, rightCheckedIds)).join("");
+    }
+    rightCountEl.textContent = `${rightItems.length}건`;
 
     countEl.textContent = `선택됨 ${workingSelectedIds.size}건`;
+    updateTransferButtons();
   }
 
   function openModal() {
     // 현재 화면에 실제로 보이는 최종 목록(CURRENT_BRIEF_ITEMS)을 그대로 체크 상태의
     // 시작점으로 삼는다 — 자동 선정이든 이전에 수동 추가된 것이든 구분 없이 전부 반영.
     workingSelectedIds = new Set(CURRENT_BRIEF_ITEMS.map((n) => n.id));
+    leftCheckedIds = new Set();
+    rightCheckedIds = new Set();
     modal.hidden = false;
     renderLists();
   }
@@ -981,20 +991,39 @@ function setupBriefCurateModal() {
     if (e.key === "Escape" && !modal.hidden) closeModal();
   });
 
-  function handleListClick(e) {
-    const addBtn = e.target.closest("[data-curate-add]");
-    const removeBtn = e.target.closest("[data-curate-remove]");
-    if (addBtn) {
-      workingSelectedIds.add(addBtn.dataset.curateAdd);
-      renderLists();
-    } else if (removeBtn) {
-      workingSelectedIds.delete(removeBtn.dataset.curateRemove);
-      renderLists();
-    }
-  }
+  listLeftEl.addEventListener("change", (e) => {
+    const checkbox = e.target.closest("[data-curate-id]");
+    if (!checkbox) return;
+    const id = checkbox.dataset.curateId;
+    if (checkbox.checked) leftCheckedIds.add(id);
+    else leftCheckedIds.delete(id);
+    checkbox.closest(".brief-curate-modal__row").classList.toggle("is-checked", checkbox.checked);
+    updateTransferButtons();
+  });
 
-  listLeftEl.addEventListener("click", handleListClick);
-  listRightEl.addEventListener("click", handleListClick);
+  listRightEl.addEventListener("change", (e) => {
+    const checkbox = e.target.closest("[data-curate-id]");
+    if (!checkbox) return;
+    const id = checkbox.dataset.curateId;
+    if (checkbox.checked) rightCheckedIds.add(id);
+    else rightCheckedIds.delete(id);
+    checkbox.closest(".brief-curate-modal__row").classList.toggle("is-checked", checkbox.checked);
+    updateTransferButtons();
+  });
+
+  addBtn.addEventListener("click", () => {
+    // 오른쪽에서 체크된 항목을 전부 TEAM BRIEF(왼쪽)로 한 번에 이동
+    rightCheckedIds.forEach((id) => workingSelectedIds.add(id));
+    rightCheckedIds = new Set();
+    renderLists();
+  });
+
+  removeBtn.addEventListener("click", () => {
+    // 왼쪽에서 체크된 항목을 전부 TEAM BRIEF에서 한 번에 제외
+    leftCheckedIds.forEach((id) => workingSelectedIds.delete(id));
+    leftCheckedIds = new Set();
+    renderLists();
+  });
 
   saveBtn.addEventListener("click", async () => {
     if (!RAW_NEWS_DATA || !RAW_NEWS_DATA.news) return;
