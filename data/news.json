@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-23",
-    "dayLabel": "SUNDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-08-24",
+    "dayLabel": "MONDAY",
+    "lastUpdated": "12:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-23T18:01:17.154796+09:00",
+    "lastUpdatedISO": "2026-08-24T12:01:47.997495+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -16,11 +16,11 @@
         "secondaryTheme": "ADVENTURE",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-        "topArticleUrl": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "ADVENTURE": "CONTINUING"
+          "ADVENTURE": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -34,13 +34,13 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173367445&bmode=view",
         "signalDetails": {}
       },
       "harley": {
@@ -54,16 +54,14 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "yamaha": {
         "newsCount": 0,
@@ -78,53 +76,162 @@
     }
   },
   "marketIntelligence": {
-    "market": [],
-    "competitor": [],
-    "productTech": [
+    "market": [
       {
-        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+        "title": "[시승] 직렬 4기통 헤리티지의 현대적 완성 'CB1000F'",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+      }
+    ],
+    "competitor": [
+      {
+        "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
+        "description": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      }
+    ],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
+        "description": "혼다의 레트로 미니 바이크 몽키(Monkey)는 감각적인 디자인과 실용성으로 꾸준한 인기를 얻고 있다. 이러한 몽키의 개성을 한층 살려줄 튜닝 아이템으로 요시무라(Yoshimura)의 RS-3 슬립온 머플러가 주목받고 있다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "흥아타이어, 한국 도로에 강하다! '스쿠터 전용 SWALLOW HS564’ 출시",
+        "description": "스왈로 HS564, 젖은 노면 그립력과 코너링 안정성 향상 국내 도로 환경 고려한 신패턴 적용, 국내 이륜차 시장 공략 강화...전국 유통망 확대 및 대리점 지원 강화로 브랜드 경쟁력 제고...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
     {
-      "id": "c71702e522b26f0f",
-      "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173249501",
+      "id": "eeec0921eab6729e",
+      "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
+      "url": "https://www.kmnews.net/NEWS/?idx=173367445&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "bmw",
+      "sourceGroup": "triumph",
       "brandGroups": [
-        "bmw"
+        "triumph"
       ],
-      "publishedAt": "2026-08-21T23:25:49+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+      "publishedAt": "2026-08-24T10:43:59+09:00",
+      "category": "COMPETITOR",
+      "summary": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
       "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "own",
+      "topNewsGroup": "others",
+      "rank": 3
+    },
+    {
+      "id": "8458cd7291d8d962",
+      "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173368331&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-24T11:11:26+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "혼다의 레트로 미니 바이크 몽키(Monkey)는 감각적인 디자인과 실용성으로 꾸준한 인기를 얻고 있다. 이러한 몽키의 개성을 한층 살려줄 튜닝 아이템으로 요시무라(Yoshimura)의 RS-3 슬립온 머플러가 주목받고 있다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "09d4903e15294b86",
+      "title": "흥아타이어, 한국 도로에 강하다! '스쿠터 전용 SWALLOW HS564’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173368162&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-24T11:06:48+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "스왈로 HS564, 젖은 노면 그립력과 코너링 안정성 향상 국내 도로 환경 고려한 신패턴 적용, 국내 이륜차 시장 공략 강화...전국 유통망 확대 및 대리점 지원 강화로 브랜드 경쟁력 제고...",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 1
+    },
+    {
+      "id": "08145d028a04e9e1",
+      "title": "[시승] 직렬 4기통 헤리티지의 현대적 완성 'CB1000F'",
+      "url": "https://www.kmnews.net/REVIEW/?idx=173367892&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-24T10:58:43+09:00",
+      "category": "MARKET",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
-    "competitor": [],
-    "productTech": [
+    "market": [
       {
-        "title": "[뉴모델] 험로 주행 성능을 극대화하다! 'F 900 GS 엔듀로 프로 에디션' 출시",
-        "description": "BMW 모토라드, F 900 GS 엔듀로 프로 에디션, 국내에 단 6대만 온라인 한정 판매 '스타일 GS 트로피(Style GS Trophy)’를 적용해 GS 특유의 역동적인 이미지 강조오프로드 환경에서도 더 자연스러운 자세와 우수한 조작성 제공BMW 모토라드가 오프로드 주행 성능을 한층 강화한 ‘F 900 GS 엔듀로 프로 에디션’을 국내에 단 6대 한정...",
+        "title": "[시승] 직렬 4기통 헤리티지의 현대적 완성 'CB1000F'",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "MARKET",
+        "insightType": "NEEDS_CONFIRMATION"
+      }
+    ],
+    "competitor": [
+      {
+        "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
+        "description": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
+        "description": "혼다의 레트로 미니 바이크 몽키(Monkey)는 감각적인 디자인과 실용성으로 꾸준한 인기를 얻고 있다. 이러한 몽키의 개성을 한층 살려줄 튜닝 아이템으로 요시무라(Yoshimura)의 RS-3 슬립온 머플러가 주목받고 있다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "흥아타이어, 한국 도로에 강하다! '스쿠터 전용 SWALLOW HS564’ 출시",
+        "description": "스왈로 HS564, 젖은 노면 그립력과 코너링 안정성 향상 국내 도로 환경 고려한 신패턴 적용, 국내 이륜차 시장 공략 강화...전국 유통망 확대 및 대리점 지원 강화로 브랜드 경쟁력 제고...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
