@@ -12,8 +12,8 @@
 // 넣지 마세요 — 그 키는 모든 RLS를 무시하는 관리자 전용 키입니다.
 // ==========================================================
 
-const SUPABASE_URL = "https://YOUR-PROJECT-ID.supabase.co";
-const SUPABASE_ANON_KEY = "YOUR-ANON-PUBLIC-KEY";
+const SUPABASE_URL = "https://kuphyemtyamglvyjpvwh.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_eOUPEa1xtZP5FbOoEuiWUw_2M1_Q5c5";
 
 // Supabase Auth는 이메일 기반 로그인만 지원합니다. 이 사이트는 "아이디(ID)" 방식
 // 로그인을 쓰므로, 내부적으로 "{아이디}@motorrad-pulse.local" 형태의 가짜 이메일로
