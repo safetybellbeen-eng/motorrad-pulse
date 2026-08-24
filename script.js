@@ -661,30 +661,51 @@ function getTeamBriefItems(data) {
 }
 
 /* ---------- 전일 대비 비교 (요청: "어제 공유한 뉴스와 오늘 공유할 뉴스가 겹치는지 미리 보고 싶다") ----------
-   서버/저장소 변경 없이 이 브라우저의 localStorage에 날짜별 브리핑 목록을 저장해두고,
-   오늘 화면을 그릴 때 가장 최근에 저장된 이전 날짜와 비교한다.
-   한계: 다른 브라우저/기기에서 열거나 브라우저 데이터를 지우면 "어제" 기록이 없어
-   비교가 표시되지 않는다 — 개인이 같은 브라우저로 매일 확인하는 용도에 맞춘 가벼운 구현이다. */
-const BRIEF_HISTORY_KEY = "motorradPulseBriefHistory";
-const BRIEF_HISTORY_MAX_DAYS = 14;
+   Supabase(team_brief_archive 테이블)에 날짜별 브리핑 목록을 저장해두고, 오늘 화면을
+   그릴 때 가장 최근에 저장된 이전 날짜와 비교한다. 로그인 기능에서 이미 쓰던 것과 같은
+   Supabase 프로젝트를 그대로 사용하므로(_supabase는 auth-client.js가 만든 전역),
+   어느 브라우저/기기에서 열어도 팀 전체가 같은 "어제" 기록을 본다.
+   supabase_brief_archive_schema.sql을 Supabase SQL Editor에서 먼저 실행해야 동작한다. */
+const BRIEF_ARCHIVE_TABLE = "team_brief_archive";
 
-function loadBriefHistory() {
+// 오늘보다 이전 날짜 중 가장 최근 1건을 가져온다. 실패(미설정/네트워크 오류/RLS 거부)해도
+// 화면이 깨지지 않도록 항상 { yesterdayKey: null, yesterdayItems: null } 형태로 조용히 fallback한다.
+async function fetchYesterdayBrief(todayKey) {
+  const empty = { yesterdayKey: null, yesterdayItems: null };
+  if (typeof _supabase === "undefined" || !_supabase || !todayKey) return empty;
+
   try {
-    const raw = localStorage.getItem(BRIEF_HISTORY_KEY);
-    return raw ? JSON.parse(raw) : {};
+    const { data, error } = await _supabase
+      .from(BRIEF_ARCHIVE_TABLE)
+      .select("date, items")
+      .lt("date", todayKey)
+      .order("date", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (error || !data) return empty;
+    return { yesterdayKey: data.date, yesterdayItems: data.items || [] };
   } catch (e) {
-    return {}; // localStorage 접근 불가(프라이빗 모드 등) — 비교 기능만 조용히 비활성화
+    console.error("전일 브리핑 조회 실패:", e);
+    return empty;
   }
 }
 
-function saveBriefHistory(history) {
+// 오늘 브리핑을 upsert한다 — 같은 날짜(primary key)로 여러 번 새로고침해도 한 행만 계속 갱신된다.
+async function saveTodayBrief(todayKey, items) {
+  if (typeof _supabase === "undefined" || !_supabase || !todayKey) return;
+
   try {
-    const keys = Object.keys(history).sort(); // "YYYY-MM-DD" 문자열 정렬 = 시간순 정렬
-    if (keys.length > BRIEF_HISTORY_MAX_DAYS) {
-      keys.slice(0, keys.length - BRIEF_HISTORY_MAX_DAYS).forEach((k) => delete history[k]);
-    }
-    localStorage.setItem(BRIEF_HISTORY_KEY, JSON.stringify(history));
+    const { data: userData } = await _supabase.auth.getUser();
+    const { error } = await _supabase.from(BRIEF_ARCHIVE_TABLE).upsert({
+      date: todayKey,
+      items,
+      updated_at: new Date().toISOString(),
+      updated_by: userData?.user?.id || null,
+    });
+    if (error) console.error("오늘 브리핑 저장 실패:", error);
   } catch (e) {
+    console.error("오늘 브리핑 저장 실패:", e);
     /* 저장 실패해도 화면 표시 자체는 계속 동작해야 하므로 조용히 무시한다 */
   }
 }
@@ -729,7 +750,7 @@ function renderBriefCompare(todayKey, todayItems, yesterdayKey, yesterdayItems, 
     renderCol(`${todayLabel} 공유 예정`, todayItems, yesterdayIds);
 }
 
-function renderTeamBrief(data) {
+async function renderTeamBrief(data) {
   const briefBody = document.getElementById("brief-body");
   document.getElementById("brief-date").textContent = data.meta.date
     ? data.meta.date.replaceAll("-", ".")
@@ -737,24 +758,21 @@ function renderTeamBrief(data) {
 
   const topNews = getTeamBriefItems(data);
 
-  // 오늘 브리핑을 localStorage에 저장하고(같은 날 재저장해도 덮어쓸 뿐이라 안전), 저장된
-  // 기록 중 오늘보다 이전인 가장 최근 날짜를 "어제"로 삼아 비교한다.
+  // 오늘 브리핑을 Supabase에 저장하고(같은 날 재저장해도 upsert로 덮어쓸 뿐이라 안전),
+  // 오늘보다 이전인 가장 최근 저장 날짜를 "어제"로 삼아 비교한다.
   const todayKey = data.meta.date || null;
-  const history = loadBriefHistory();
-  const pastKeys = Object.keys(history).filter((k) => k !== todayKey).sort();
-  const yesterdayKey = pastKeys.length ? pastKeys[pastKeys.length - 1] : null;
-  const yesterdayItems = yesterdayKey ? history[yesterdayKey] : null;
+  const { yesterdayKey, yesterdayItems } = await fetchYesterdayBrief(todayKey);
   const yesterdayIds = new Set((yesterdayItems || []).map((n) => n.id));
 
   if (todayKey) {
-    history[todayKey] = topNews.map((n) => ({
+    const todayItemsForArchive = topNews.map((n) => ({
       id: n.id,
       title: n.title,
       url: n.url,
       source: n.source,
       publishedAt: n.publishedAt,
     }));
-    saveBriefHistory(history);
+    saveTodayBrief(todayKey, todayItemsForArchive); // 화면 렌더링을 막지 않도록 저장은 기다리지 않는다
   }
 
   renderBriefCompare(todayKey, topNews, yesterdayKey, yesterdayItems, yesterdayIds);
