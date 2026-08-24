@@ -34,6 +34,8 @@
   --bmw-blue-dim: rgba(28,105,212,0.14);
   --signal-amber: #D98B2A;
   --signal-amber-dim: rgba(217,139,42,0.12);
+  --signal-red: #D9483F;
+  --signal-red-dim: rgba(217,72,63,0.14);
 
   --font-display: "Big Shoulders Display", "Inter", sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -336,6 +338,26 @@ button{ font-family: inherit; cursor: pointer; }
   letter-spacing: 1px;
   color: var(--grey-dim);
 }
+
+/* ---- 데이터 신선도 표시 ---- */
+.freshness-dot{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--grey-dim);
+  flex-shrink: 0;
+}
+.topbar__updated.is-stale-warn #topbar-time{ color: var(--signal-amber); font-weight: 600; }
+.topbar__updated.is-stale-warn .freshness-dot{
+  background: var(--signal-amber);
+  box-shadow: 0 0 6px rgba(217,139,42,0.55);
+}
+.topbar__updated.is-stale-alert #topbar-time{ color: var(--signal-red); font-weight: 600; }
+.topbar__updated.is-stale-alert .freshness-dot{
+  background: var(--signal-red);
+  box-shadow: 0 0 6px rgba(217,72,63,0.55);
+}
 .refresh-btn{
   display: inline-flex;
   align-items: center;
@@ -357,6 +379,38 @@ button{ font-family: inherit; cursor: pointer; }
 .refresh-btn svg{ transition: transform 0.6s ease; }
 .refresh-btn.is-loading svg{ transform: rotate(360deg); }
 .refresh-btn.is-loading{ opacity: 0.6; pointer-events: none; }
+
+/* ---- Pull-to-refresh 인디케이터 ---- */
+.ptr-indicator{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.4px;
+  color: var(--grey);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, opacity 0.2s ease, color 0.15s ease, border-color 0.15s ease;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.ptr-indicator.is-visible{ opacity: 1; }
+.ptr-indicator.is-ready{ color: var(--bmw-blue-light); border-color: var(--bmw-blue-light); }
+.ptr-indicator svg{ transition: transform 0.2s ease; flex-shrink: 0; }
+.ptr-indicator.is-ready svg{ transform: rotate(180deg); }
+.ptr-indicator.is-loading svg{ animation: ptr-spin 0.7s linear infinite; }
+.ptr-indicator.is-loading{ color: var(--bmw-blue-light); border-color: var(--bmw-blue-light); }
+@keyframes ptr-spin{ to{ transform: rotate(360deg); } }
 
 /* ---- Section shared ---- */
 .section{
@@ -810,13 +864,39 @@ button{ font-family: inherit; cursor: pointer; }
   margin-top: 2px;
 }
 
+.filter-bar-wrap{
+  position: relative;
+  margin-bottom: 24px;
+}
 .filter-bar{
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-  margin-bottom: 24px;
 }
+/* 모바일에서 필터바가 가로 스크롤될 때, 화면 밖에 칩이 더 있다는 걸 알려주는 페이드 힌트.
+   JS(setupFilterBarScrollHint)가 실제로 스크롤 가능한 상태일 때만 opacity를 올린다 —
+   데스크톱처럼 줄바꿈되어 스크롤이 없는 경우엔 계속 숨겨진 채로 있다. */
+.filter-bar-fade{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 2;
+}
+.filter-bar-fade--left{
+  left: 0;
+  background: linear-gradient(to right, var(--black) 0%, transparent 100%);
+}
+.filter-bar-fade--right{
+  right: 0;
+  background: linear-gradient(to left, var(--black) 0%, transparent 100%);
+}
+.filter-bar-wrap.has-scroll-left .filter-bar-fade--left{ opacity: 1; }
+.filter-bar-wrap.has-scroll-right .filter-bar-fade--right{ opacity: 1; }
 .filter-chip{
   border: 1px solid var(--line-strong);
   background: transparent;

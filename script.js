@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFilterBar();
   setupCopyBriefButton();
   setupRefreshButton();
+  setupPullToRefresh();
 
   // "N분/N시간 전 업데이트" 표시를 1분마다 갱신 (페이지를 오래 열어둬도 흘러가도록)
   setInterval(updateRelativeTimeDisplay, 60 * 1000);
@@ -128,12 +129,46 @@ function renderHeader(meta) {
 }
 
 /* 1분마다 "N분 전 / N시간 전" 표시를 최신으로 갱신 (페이지를 오래 열어둬도 시간이 흘러가도록) */
+
+/* ---------- 데이터 신선도 경고 ----------
+   뉴스 수집은 하루 1회(GitHub Actions) 갱신되는 게 정상 흐름이다. LAST UPDATED가
+   너무 오래된 채로 방치되면(수집 파이프라인 실패 등) 화면만 봐서는 알아채기 어려우므로,
+   텍스트 옆에 색상 점 + 텍스트 색상으로 단계적 경고를 준다.
+     - 12시간 미만: 정상 (기본 회색)
+     - 12시간 이상 24시간 미만: 주의 (signal-amber) — 오늘자 수집이 아직 안 들어왔을 수 있음
+     - 24시간 이상: 경고 (signal-red) — 수집 파이프라인 확인 필요 */
+const FRESHNESS_WARN_HOURS = 12;
+const FRESHNESS_ALERT_HOURS = 24;
+
+function applyFreshnessState(diffHours) {
+  const wrap = document.getElementById("topbar-updated");
+  if (!wrap) return;
+
+  wrap.classList.remove("is-stale-warn", "is-stale-alert");
+
+  if (diffHours === null) {
+    wrap.title = "";
+    return;
+  }
+
+  if (diffHours >= FRESHNESS_ALERT_HOURS) {
+    wrap.classList.add("is-stale-alert");
+    wrap.title = "마지막 수집이 24시간 넘게 갱신되지 않았습니다 — 수집 파이프라인을 확인해 주세요.";
+  } else if (diffHours >= FRESHNESS_WARN_HOURS) {
+    wrap.classList.add("is-stale-warn");
+    wrap.title = "마지막 수집이 12시간 넘게 지났습니다 — 오늘자 데이터가 아직 반영되지 않았을 수 있습니다.";
+  } else {
+    wrap.title = "최근 12시간 이내에 수집된 데이터입니다.";
+  }
+}
+
 function updateRelativeTimeDisplay() {
   const timeEl = document.getElementById("topbar-time");
   if (!timeEl) return;
 
   if (!LAST_UPDATED_ISO) {
     timeEl.textContent = "업데이트 정보 없음";
+    applyFreshnessState(null);
     return;
   }
 
@@ -149,6 +184,15 @@ function updateRelativeTimeDisplay() {
     const diffHours = Math.floor(diffMinutes / 60);
     timeEl.textContent = `${diffHours}시간 전 업데이트`;
   }
+
+  applyFreshnessState(diffMinutes / 60);
+}
+
+/* ---------- 데이터 새로고침 (새로고침 버튼 + 아래로 당겨서 새로고침이 공유) ---------- */
+function refreshDashboardData() {
+  return Promise.all([loadNewsData(), loadRawNewsData()])
+    .then(() => showToast("최신 데이터로 업데이트되었습니다."))
+    .catch(() => showToast("업데이트에 실패했습니다. 잠시 후 다시 시도해 주세요."));
 }
 
 /* ---------- 새로고침 버튼: 브라우저 전체 새로고침 없이 news.json/raw_news.json만 다시 불러온다 ---------- */
@@ -158,11 +202,90 @@ function setupRefreshButton() {
 
   btn.addEventListener("click", () => {
     btn.classList.add("is-loading");
-    Promise.all([loadNewsData(), loadRawNewsData()])
-      .then(() => showToast("최신 데이터로 업데이트되었습니다."))
-      .catch(() => showToast("업데이트에 실패했습니다. 잠시 후 다시 시도해 주세요."))
-      .finally(() => btn.classList.remove("is-loading"));
+    refreshDashboardData().finally(() => btn.classList.remove("is-loading"));
   });
+}
+
+/* ---------- 아래로 당겨서 새로고침 (모바일 홈 화면 추가 시 "앱스러움"용) ----------
+   PWA를 standalone으로 실행하면 브라우저 기본 pull-to-refresh가 꺼지는 경우가 많아서
+   같은 동작을 직접 구현한다. 문서 맨 위(scrollY === 0)에서 아래로 당길 때만 개입하고,
+   그 외에는 손을 대지 않아 필터바/브랜드펄스 등 기존 가로 스크롤과 절대 충돌하지 않는다. */
+function setupPullToRefresh() {
+  if (!("ontouchstart" in window)) return; // 터치 디바이스에서만 등록
+
+  const indicator = document.getElementById("ptr-indicator");
+  const label = document.getElementById("ptr-indicator-label");
+  if (!indicator || !label) return;
+
+  const READY_DISTANCE = 32; // 저항 적용 후 이만큼 당겨지면 "놓으면 새로고침"
+  const MAX_PULL = 100;
+
+  let startY = 0;
+  let pulling = false;
+  let ready = false;
+  let refreshing = false;
+
+  function reset() {
+    indicator.classList.remove("is-visible", "is-ready");
+    indicator.style.transform = "";
+    label.textContent = "당겨서 새로고침";
+  }
+
+  function onTouchStart(e) {
+    if (refreshing || window.scrollY > 0) {
+      pulling = false;
+      return;
+    }
+    startY = e.touches[0].clientY;
+    pulling = true;
+    ready = false;
+  }
+
+  function onTouchMove(e) {
+    if (!pulling || refreshing) return;
+    if (window.scrollY > 0) { pulling = false; reset(); return; } // 스크롤이 이미 내려갔으면 개입 중단
+
+    const delta = e.touches[0].clientY - startY;
+    if (delta <= 0) { reset(); return; }
+
+    const pull = Math.min(delta * 0.5, MAX_PULL); // 저항감(1:1로 안 딸려오게)
+    indicator.style.transform = `translate(-50%, ${pull - 36}px)`;
+    indicator.classList.add("is-visible");
+
+    const nowReady = pull >= READY_DISTANCE;
+    if (nowReady !== ready) {
+      ready = nowReady;
+      indicator.classList.toggle("is-ready", ready);
+      label.textContent = ready ? "놓으면 새로고침" : "당겨서 새로고침";
+    }
+
+    if (delta > 10 && e.cancelable) e.preventDefault(); // 당기는 동안 브라우저 바운스 억제
+  }
+
+  function onTouchEnd() {
+    if (!pulling) return;
+    pulling = false;
+
+    if (ready && !refreshing) {
+      refreshing = true;
+      indicator.classList.add("is-loading");
+      label.textContent = "새로고침 중…";
+      indicator.style.transform = "translate(-50%, 16px)";
+
+      refreshDashboardData().finally(() => {
+        refreshing = false;
+        indicator.classList.remove("is-loading");
+        reset();
+      });
+    } else {
+      reset();
+    }
+  }
+
+  document.addEventListener("touchstart", onTouchStart, { passive: true });
+  document.addEventListener("touchmove", onTouchMove, { passive: false });
+  document.addEventListener("touchend", onTouchEnd);
+  document.addEventListener("touchcancel", onTouchEnd);
 }
 
 /* ---------- TODAY'S SIGNAL ---------- */
@@ -497,6 +620,36 @@ function setupFilterBar() {
 
     if (RAW_NEWS_DATA) renderSourceMonitor(RAW_NEWS_DATA.news || []);
   });
+
+  setupFilterBarScrollHint(bar);
+}
+
+/* ---------- 필터바 가로 스크롤 힌트 ----------
+   모바일에서 필터 칩이 화면 밖으로 넘어갈 때, "더 있다"는 걸 좌우 그라데이션 페이드로
+   알려준다. 데스크톱처럼 flex-wrap으로 줄바꿈되어 스크롤이 아예 없는 경우엔
+   scrollWidth와 clientWidth가 같아서 두 클래스 모두 자연히 꺼진 채로 유지된다. */
+function setupFilterBarScrollHint(bar) {
+  const wrap = document.getElementById("filter-bar-wrap");
+  if (!wrap || !bar) return;
+
+  function update() {
+    const maxScroll = bar.scrollWidth - bar.clientWidth;
+    const scrolled = bar.scrollLeft;
+    wrap.classList.toggle("has-scroll-left", scrolled > 4);
+    wrap.classList.toggle("has-scroll-right", scrolled < maxScroll - 4);
+  }
+
+  bar.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+
+  // SOURCE MONITOR는 모바일 탭 전환으로 부모가 display:none <-> block 되는 섹션이라,
+  // 처음 로드 시점엔 filter-bar의 폭이 0이라 스크롤 가능 여부를 제대로 계산할 수 없다.
+  // ResizeObserver로 실제 크기가 잡히는 순간(탭이 열리는 순간)마다 다시 계산한다.
+  if (window.ResizeObserver) {
+    new ResizeObserver(update).observe(bar);
+  }
+
+  update();
 }
 
 /* ---------- TEAM BRIEF ---------- */

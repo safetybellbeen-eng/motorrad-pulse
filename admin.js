@@ -40,9 +40,9 @@ function renderPending(rows) {
   rows.forEach((u) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${escapeHtml(u.username)}</td>
-      <td>${formatDate(u.created_at)}</td>
-      <td class="admin-actions">
+      <td data-label="아이디">${escapeHtml(u.username)}</td>
+      <td data-label="신청일시">${formatDate(u.created_at)}</td>
+      <td class="admin-actions" data-label="처리">
         <button class="admin-btn admin-btn--approve" data-action="approve" data-id="${u.id}">승인</button>
         <button class="admin-btn admin-btn--reject" data-action="reject" data-id="${u.id}">거절</button>
       </td>`;
@@ -60,10 +60,10 @@ function renderApproved(rows) {
     const isSelf = window.__CURRENT_PROFILE__ && window.__CURRENT_PROFILE__.id === u.id;
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${escapeHtml(u.username)}</td>
-      <td>${u.role === "admin" ? '<span class="badge badge--admin">관리자</span>' : '<span class="badge badge--approved">일반</span>'}</td>
-      <td>${formatDate(u.approved_at)}</td>
-      <td class="admin-actions">
+      <td data-label="아이디">${escapeHtml(u.username)}</td>
+      <td data-label="권한">${u.role === "admin" ? '<span class="badge badge--admin">관리자</span>' : '<span class="badge badge--approved">일반</span>'}</td>
+      <td data-label="승인일시">${formatDate(u.approved_at)}</td>
+      <td class="admin-actions" data-label="처리">
         <button class="admin-btn admin-btn--reject" data-action="revoke" data-id="${u.id}" ${isSelf ? "disabled title=\"본인 계정은 여기서 해제할 수 없습니다\"" : ""}>승인 해제</button>
       </td>`;
     body.appendChild(tr);
@@ -79,8 +79,8 @@ function renderRejected(rows) {
   rows.forEach((u) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${escapeHtml(u.username)}</td>
-      <td class="admin-actions">
+      <td data-label="아이디">${escapeHtml(u.username)}</td>
+      <td class="admin-actions" data-label="처리">
         <button class="admin-btn admin-btn--approve" data-action="approve" data-id="${u.id}">재승인</button>
       </td>`;
     body.appendChild(tr);

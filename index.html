@@ -29,6 +29,18 @@
 </head>
 <body>
 
+<!-- ============ PULL-TO-REFRESH 인디케이터 (모바일 전용 제스처) ============
+     PWA로 홈 화면에 추가해서 standalone으로 실행하면 브라우저 기본 당겨서
+     새로고침 제스처가 꺼지기 때문에, 같은 동작을 자체 구현해서 "앱스러움"을 살린다.
+     script.js의 setupPullToRefresh()가 터치 이벤트로 이 엘리먼트를 움직인다. -->
+<div class="ptr-indicator" id="ptr-indicator" aria-hidden="true">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12a9 9 0 1 1-2.64-6.36"/>
+    <path d="M21 3v6h-6"/>
+  </svg>
+  <span class="ptr-indicator__label" id="ptr-indicator-label">당겨서 새로고침</span>
+</div>
+
 <div class="app">
 
   <!-- ============ SIDEBAR ============ -->
@@ -108,7 +120,8 @@
       <div class="topbar__meta">
         <div class="topbar__date" id="topbar-date">2026.08.12 &nbsp;WEDNESDAY</div>
         <div class="topbar__live-clock" id="topbar-live-clock">2026.08.13 (THU) 00:00:00</div>
-        <div class="topbar__updated">
+        <div class="topbar__updated" id="topbar-updated">
+          <span class="freshness-dot" id="freshness-dot" aria-hidden="true"></span>
           <span class="topbar__updated-label">LAST UPDATED</span>
           <span id="topbar-time">07:30 AM</span>
           <button id="refresh-btn" class="refresh-btn" type="button" title="최신 데이터 다시 불러오기">
@@ -162,19 +175,23 @@
         <div class="brand-pulse__grid" id="brand-pulse-grid"></div>
       </div>
 
-      <div class="filter-bar" id="filter-bar">
-        <button class="filter-chip is-active" data-filter="all">ALL</button>
-        <span class="filter-group-label">BRANDS</span>
-        <button class="filter-chip" data-filter="bmw">BMW</button>
-        <button class="filter-chip" data-filter="ducati">DUCATI</button>
-        <button class="filter-chip" data-filter="triumph">TRIUMPH</button>
-        <button class="filter-chip" data-filter="harley">HARLEY-DAVIDSON</button>
-        <button class="filter-chip" data-filter="honda">HONDA</button>
-        <button class="filter-chip" data-filter="yamaha">YAMAHA</button>
-        <span class="filter-group-label">MEDIA</span>
-        <button class="filter-chip" data-filter="kmnews">MOTORCYCLE</button>
-        <button class="filter-chip" data-filter="naver">GENERAL</button>
-        <button class="filter-chip" data-filter="google">MARKET</button>
+      <div class="filter-bar-wrap" id="filter-bar-wrap">
+        <div class="filter-bar" id="filter-bar">
+          <button class="filter-chip is-active" data-filter="all">ALL</button>
+          <span class="filter-group-label">BRANDS</span>
+          <button class="filter-chip" data-filter="bmw">BMW</button>
+          <button class="filter-chip" data-filter="ducati">DUCATI</button>
+          <button class="filter-chip" data-filter="triumph">TRIUMPH</button>
+          <button class="filter-chip" data-filter="harley">HARLEY-DAVIDSON</button>
+          <button class="filter-chip" data-filter="honda">HONDA</button>
+          <button class="filter-chip" data-filter="yamaha">YAMAHA</button>
+          <span class="filter-group-label">MEDIA</span>
+          <button class="filter-chip" data-filter="kmnews">MOTORCYCLE</button>
+          <button class="filter-chip" data-filter="naver">GENERAL</button>
+          <button class="filter-chip" data-filter="google">MARKET</button>
+        </div>
+        <div class="filter-bar-fade filter-bar-fade--left" aria-hidden="true"></div>
+        <div class="filter-bar-fade filter-bar-fade--right" aria-hidden="true"></div>
       </div>
 
       <div id="source-monitor-grid" class="source-grid"></div>
