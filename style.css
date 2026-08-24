@@ -1238,3 +1238,50 @@ button{ font-family: inherit; cursor: pointer; }
   outline: 2px solid var(--bmw-blue-light);
   outline-offset: 2px;
 }
+
+/* ==========================================================
+   AUTH — 로그인 게이트 / topbar 계정 표시
+   ========================================================== */
+/* auth-guard.js가 로그인/승인 여부 확인을 끝낼 때까지 body를 숨겨서,
+   로그인 안 된 화면이 잠깐이라도 노출되지 않게 한다(auth-guard.js가
+   확인 끝나면 <html>에서 이 클래스를 제거한다). */
+html.auth-checking body{
+  visibility: hidden;
+}
+
+.topbar__account{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+}
+.topbar__account-name{
+  color: var(--grey);
+  letter-spacing: 0.4px;
+}
+.topbar__account-link{
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--grey);
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.6px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.topbar__account-link:hover{
+  border-color: var(--bmw-blue-light);
+  color: var(--bmw-blue-light);
+}
+.topbar__account-logout:hover{
+  border-color: var(--signal-amber);
+  color: var(--signal-amber);
+}
+@media (max-width: 720px){
+  .topbar__account{ justify-content: flex-start; }
+}

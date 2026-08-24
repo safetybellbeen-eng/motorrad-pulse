@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>승인 관리 — MOTORRAD PULSE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./auth.css">
+<script>document.documentElement.classList.add('auth-checking');</script>
+<script>window.__REQUIRE_ADMIN__ = true;</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="./auth-config.js" defer></script>
+<script src="./auth-client.js" defer></script>
+<script src="./auth-guard.js" defer></script>
+</head>
+<body>
+
+<div class="admin-page">
+  <div class="admin-head">
+    <h1>사용자 승인 관리</h1>
+    <a href="./index.html">← 대시보드로</a>
+  </div>
+
+  <div class="admin-section">
+    <div class="admin-section__title">승인 대기 (PENDING)</div>
+    <table class="admin-table">
+      <thead><tr><th>아이디</th><th>신청일시</th><th>처리</th></tr></thead>
+      <tbody id="pending-body"></tbody>
+    </table>
+    <div id="pending-empty" class="admin-empty" style="display:none;">승인 대기 중인 신청이 없습니다.</div>
+  </div>
+
+  <div class="admin-section">
+    <div class="admin-section__title">승인됨 (APPROVED)</div>
+    <table class="admin-table">
+      <thead><tr><th>아이디</th><th>권한</th><th>승인일시</th><th>처리</th></tr></thead>
+      <tbody id="approved-body"></tbody>
+    </table>
+    <div id="approved-empty" class="admin-empty" style="display:none;">승인된 사용자가 없습니다.</div>
+  </div>
+
+  <div class="admin-section">
+    <div class="admin-section__title">거절됨 (REJECTED)</div>
+    <table class="admin-table">
+      <thead><tr><th>아이디</th><th>처리</th></tr></thead>
+      <tbody id="rejected-body"></tbody>
+    </table>
+    <div id="rejected-empty" class="admin-empty" style="display:none;">거절된 사용자가 없습니다.</div>
+  </div>
+</div>
+
+<script src="./admin.js"></script>
+</body>
+</html>

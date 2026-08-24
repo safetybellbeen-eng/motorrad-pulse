@@ -1,0 +1,233 @@
+/* ==========================================================
+   MOTORRAD PULSE — Auth pages (login.html / admin.html)
+   style.css의 :root 디자인 토큰을 그대로 재사용한다. login.html/admin.html은
+   반드시 style.css를 먼저 <link>한 뒤 이 파일을 로드해야 한다.
+   ========================================================== */
+
+.auth-page{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card{
+  width: 100%;
+  max-width: 380px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 36px 32px;
+}
+
+.auth-brand{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.auth-brand__eyebrow{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--grey-dim);
+}
+.auth-brand__name{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  color: var(--white);
+}
+
+.auth-tabs{
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+.auth-tab{
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--grey);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.auth-tab.is-active{
+  background: var(--bmw-blue-dim);
+  color: var(--bmw-blue-light);
+}
+.auth-tab:not(:last-child){ border-right: 1px solid var(--line); }
+
+.auth-form{ display: none; flex-direction: column; gap: 14px; }
+.auth-form.is-active{ display: flex; }
+
+.auth-field{ display: flex; flex-direction: column; gap: 6px; }
+.auth-field label{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: var(--grey-dim);
+}
+.auth-field input{
+  background: var(--panel-2);
+  border: 1px solid var(--line-strong);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.auth-field input:focus{ border-color: var(--bmw-blue-light); }
+
+.auth-submit{
+  margin-top: 6px;
+  background: var(--bmw-blue);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 11px 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.3px;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.auth-submit:hover{ background: var(--bmw-blue-light); }
+.auth-submit:disabled{ opacity: 0.5; pointer-events: none; }
+
+.auth-message{
+  margin-top: 14px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-radius: 5px;
+  display: none;
+}
+.auth-message.is-visible{ display: block; }
+.auth-message.is-error{
+  background: rgba(217,139,42,0.12);
+  color: var(--signal-amber);
+  border: 1px solid rgba(217,139,42,0.3);
+}
+.auth-message.is-success{
+  background: var(--bmw-blue-dim);
+  color: var(--bmw-blue-light);
+  border: 1px solid rgba(28,105,212,0.3);
+}
+
+.auth-hint{
+  margin-top: 18px;
+  font-size: 11px;
+  color: var(--grey-dim);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---- Admin dashboard ---- */
+.admin-page{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.admin-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.admin-head h1{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.4px;
+}
+.admin-head a{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--grey);
+  border: 1px solid var(--line-strong);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.admin-head a:hover{ color: var(--bmw-blue-light); border-color: var(--bmw-blue-light); }
+
+.admin-section{ margin-bottom: 36px; }
+.admin-section__title{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  color: var(--grey-dim);
+  margin-bottom: 12px;
+}
+
+.admin-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.admin-table th, .admin-table td{
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.admin-table th{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: var(--grey-dim);
+  background: var(--panel-2);
+}
+.admin-table tr:last-child td{ border-bottom: none; }
+.admin-empty{
+  padding: 24px;
+  text-align: center;
+  color: var(--grey-dim);
+  font-size: 12.5px;
+}
+
+.badge{
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.badge--pending{ background: rgba(217,139,42,0.14); color: var(--signal-amber); }
+.badge--approved{ background: var(--bmw-blue-dim); color: var(--bmw-blue-light); }
+.badge--rejected{ background: rgba(255,255,255,0.06); color: var(--grey-dim); }
+.badge--admin{ background: rgba(28,105,212,0.22); color: var(--bmw-blue-light); }
+
+.admin-actions{ display: flex; gap: 6px; }
+.admin-btn{
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--grey);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.admin-btn--approve:hover{ border-color: var(--bmw-blue-light); color: var(--bmw-blue-light); }
+.admin-btn--reject:hover{ border-color: var(--signal-amber); color: var(--signal-amber); }
+.admin-btn:disabled{ opacity: 0.4; pointer-events: none; }

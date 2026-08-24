@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인 — MOTORRAD PULSE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./auth.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="./auth-config.js" defer></script>
+<script src="./auth-client.js" defer></script>
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <span class="auth-brand__eyebrow">DAILY MARKET INTELLIGENCE</span>
+      <span class="auth-brand__name">MOTORRAD<br>PULSE</span>
+    </div>
+
+    <div class="auth-tabs">
+      <button type="button" class="auth-tab is-active" data-auth-tab="login">로그인</button>
+      <button type="button" class="auth-tab" data-auth-tab="signup">가입 신청</button>
+    </div>
+
+    <!-- 로그인 -->
+    <form id="login-form" class="auth-form is-active">
+      <div class="auth-field">
+        <label for="login-username">아이디</label>
+        <input id="login-username" type="text" autocomplete="username" required>
+      </div>
+      <div class="auth-field">
+        <label for="login-password">비밀번호</label>
+        <input id="login-password" type="password" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="auth-submit" id="login-submit">로그인</button>
+    </form>
+
+    <!-- 가입 신청 -->
+    <form id="signup-form" class="auth-form">
+      <div class="auth-field">
+        <label for="signup-username">아이디</label>
+        <input id="signup-username" type="text" autocomplete="username" placeholder="영문/숫자, 3~32자" required>
+      </div>
+      <div class="auth-field">
+        <label for="signup-password">비밀번호</label>
+        <input id="signup-password" type="password" autocomplete="new-password" placeholder="6자 이상" required>
+      </div>
+      <div class="auth-field">
+        <label for="signup-password2">비밀번호 확인</label>
+        <input id="signup-password2" type="password" autocomplete="new-password" required>
+      </div>
+      <button type="submit" class="auth-submit" id="signup-submit">가입 신청</button>
+    </form>
+
+    <div id="auth-message" class="auth-message"></div>
+
+    <div class="auth-hint">
+      가입 신청 후 관리자 승인이 완료되어야 로그인할 수 있습니다.
+    </div>
+  </div>
+</div>
+
+<script src="./login.js"></script>
+</body>
+</html>
