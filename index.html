@@ -330,9 +330,23 @@
       <h4 id="brief-curate-title">TEAM BRIEF 뉴스 선택</h4>
       <button type="button" class="brief-curate-modal__close" data-curate-close aria-label="닫기">✕</button>
     </div>
-    <p class="brief-curate-modal__desc">SOURCE MONITOR에 수집된 뉴스 전체입니다. 체크한 뉴스만 TEAM BRIEF에 들어갑니다.</p>
-    <input id="brief-curate-search" type="text" class="brief-curate-modal__search" placeholder="제목/매체로 검색">
-    <div id="brief-curate-list" class="brief-curate-modal__list"></div>
+    <p class="brief-curate-modal__desc">왼쪽은 현재 TEAM BRIEF에 포함된 뉴스, 오른쪽은 SOURCE MONITOR에 수집된 뉴스 전체입니다. 오른쪽에서 추가하거나 왼쪽에서 제외할 수 있습니다.</p>
+    <div class="brief-curate-modal__columns">
+      <div class="brief-curate-modal__col">
+        <div class="brief-curate-modal__col-head">
+          <span>TEAM BRIEF 포함됨</span>
+          <span id="brief-curate-left-count" class="brief-curate-modal__col-count"></span>
+        </div>
+        <div id="brief-curate-list-left" class="brief-curate-modal__list"></div>
+      </div>
+      <div class="brief-curate-modal__col">
+        <div class="brief-curate-modal__col-head">
+          <span>SOURCE MONITOR 전체</span>
+          <span id="brief-curate-right-count" class="brief-curate-modal__col-count"></span>
+        </div>
+        <div id="brief-curate-list-right" class="brief-curate-modal__list"></div>
+      </div>
+    </div>
     <div class="brief-curate-modal__foot">
       <span id="brief-curate-count" class="brief-curate-modal__count"></span>
       <div class="brief-curate-modal__actions">
