@@ -26,6 +26,8 @@ const CATEGORY_LABELS = {
 let NEWS_DATA = null;
 let RAW_NEWS_DATA = null;
 let currentFilter = "all";
+let YOUTUBE_DATA = null;
+let currentVideoFilter = "all";
 
 /* ---------- 초기 로드 ----------
    news.json: AI 분석이 완료된 데이터 (TOP NEWS, MARKET INTELLIGENCE, TEAM BRIEF)
@@ -78,14 +80,36 @@ function loadRawNewsData() {
     });
 }
 
+/* youtube_videos.json: scripts/collect_youtube.py가 매일 자동 수집한 브랜드별 최신 영상.
+   다른 데이터(news.json, raw_news.json)와 마찬가지로 독립적으로 로드한다 — 실패해도
+   나머지 섹션에는 영향을 주지 않는다. */
+function loadYoutubeData() {
+  return fetch(`./data/youtube_videos.json?t=${Date.now()}`, { cache: "no-store" })
+    .then((res) => {
+      if (!res.ok) throw new Error("유튜브 영상 데이터를 불러오지 못했습니다.");
+      return res.json();
+    })
+    .then((data) => {
+      YOUTUBE_DATA = data;
+      renderVideoWatch(data.videos || []);
+    })
+    .catch((err) => {
+      console.error(err);
+      showToast("youtube_videos.json을 불러오지 못했습니다. 파일 위치를 확인해 주세요.");
+      throw err;
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadNewsData();
   loadRawNewsData();
+  loadYoutubeData();
 
   setupNavHighlight();
   setupMobileTabbar();
   setupIntelTabbar();
   setupFilterBar();
+  setupVideoFilterBar();
   setupCopyBriefButton();
   setupBriefCurateModal();
   setupKakaoShareButton();
@@ -632,7 +656,9 @@ function setupFilterBar() {
    알려준다. 데스크톱처럼 flex-wrap으로 줄바꿈되어 스크롤이 아예 없는 경우엔
    scrollWidth와 clientWidth가 같아서 두 클래스 모두 자연히 꺼진 채로 유지된다. */
 function setupFilterBarScrollHint(bar) {
-  const wrap = document.getElementById("filter-bar-wrap");
+  // 필터바가 filter-bar-wrap(SOURCE MONITOR)뿐 아니라 video-filter-bar-wrap(VIDEO WATCH)처럼
+  // 여러 곳에서 재사용되므로, 특정 id를 하드코딩하지 않고 bar 자신의 부모 wrap을 찾는다.
+  const wrap = bar.closest(".filter-bar-wrap");
   if (!wrap || !bar) return;
 
   function update() {
@@ -653,6 +679,79 @@ function setupFilterBarScrollHint(bar) {
   }
 
   update();
+}
+
+/* ---------- VIDEO WATCH — 브랜드 공식 유튜브 최신 영상 (썸네일+링크) ----------
+   data/youtube_videos.json은 scripts/collect_youtube.py가 매일 자동으로 채운다.
+   제목/링크/썸네일/채널명/게시일은 유튜브 RSS 원본 그대로이며 이 화면에서는
+   필터링과 표시 형태만 바꿀 뿐 내용을 가공하지 않는다. */
+function renderVideoWatch(videoList) {
+  const container = document.getElementById("video-watch-grid");
+  if (!container) return;
+  container.innerHTML = "";
+
+  let filtered;
+  if (currentVideoFilter === "all") {
+    filtered = [...videoList];
+  } else {
+    filtered = videoList.filter((v) => v.brandGroup === currentVideoFilter);
+  }
+
+  filtered.sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+
+  if (filtered.length === 0) {
+    container.innerHTML = `<div class="empty-state">해당 조건의 영상이 없습니다.</div>`;
+    return;
+  }
+
+  filtered.forEach((v) => {
+    const card = document.createElement("article");
+    card.className = "video-card";
+
+    const brandLabel = SOURCE_GROUP_LABELS[v.brandGroup] || escapeHtml(v.channelTitle || "");
+    const safeUrl = v.url ? escapeHtml(v.url) : "#";
+
+    card.innerHTML = `
+      <a class="video-card__thumb-wrap" href="${safeUrl}" target="_blank" rel="noopener noreferrer">
+        <img class="video-card__thumb" src="${escapeHtml(v.thumbnail || "")}" alt="" loading="lazy">
+        <span class="video-card__play" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </a>
+      <div class="video-card__body">
+        <div class="video-card__meta">
+          <span class="tag">${escapeHtml(brandLabel)}</span>
+        </div>
+        <h6 class="video-card__title">
+          <a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(v.title)}</a>
+        </h6>
+        <div class="video-card__footer">
+          <span class="video-card__channel">${escapeHtml(v.channelTitle || "")}</span>
+          <span class="video-card__date">${formatDisplayDate(v.publishedAt)}</span>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+/* ---------- VIDEO WATCH 필터바 ---------- */
+function setupVideoFilterBar() {
+  const bar = document.getElementById("video-filter-bar");
+  if (!bar) return;
+
+  bar.addEventListener("click", (e) => {
+    const target = e.target.closest("[data-video-filter]");
+    if (!target) return;
+
+    bar.querySelectorAll("[data-video-filter]").forEach((el) => el.classList.remove("is-active"));
+    target.classList.add("is-active");
+    currentVideoFilter = target.dataset.videoFilter;
+
+    if (YOUTUBE_DATA) renderVideoWatch(YOUTUBE_DATA.videos || []);
+  });
+
+  setupFilterBarScrollHint(bar);
 }
 
 /* ---------- TEAM BRIEF ---------- */

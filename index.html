@@ -90,6 +90,9 @@
       <a href="#team-brief" class="side-nav__item" data-nav="team-brief">
         <span class="side-nav__index">05</span> TEAM BRIEF
       </a>
+      <a href="#video-watch" class="side-nav__item" data-nav="video-watch">
+        <span class="side-nav__index">06</span> VIDEO WATCH
+      </a>
     </nav>
 
     <svg class="sidebar-bike" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
@@ -290,6 +293,32 @@
       </div>
     </section>
 
+    <!-- ============ VIDEO WATCH — 브랜드 공식 유튜브 최신 영상 (썸네일+링크) ============
+         data/youtube_videos.json은 scripts/collect_youtube.py가 매일 자동으로 채운다.
+         제목/링크/썸네일/게시일은 유튜브 RSS 원본 그대로이며 이 화면에서 가공하지 않는다. -->
+    <section id="video-watch" class="section" data-index="06">
+      <div class="section-head">
+        <h3><span class="section-index">06</span> VIDEO WATCH</h3>
+        <span class="section-sub">브랜드 공식 유튜브 최신 영상</span>
+      </div>
+
+      <div class="filter-bar-wrap" id="video-filter-bar-wrap">
+        <div class="filter-bar" id="video-filter-bar">
+          <button class="filter-chip is-active" data-video-filter="all">ALL</button>
+          <button class="filter-chip" data-video-filter="bmw">BMW</button>
+          <button class="filter-chip" data-video-filter="ducati">DUCATI</button>
+          <button class="filter-chip" data-video-filter="triumph">TRIUMPH</button>
+          <button class="filter-chip" data-video-filter="harley">HARLEY-DAVIDSON</button>
+          <button class="filter-chip" data-video-filter="honda">HONDA</button>
+          <button class="filter-chip" data-video-filter="yamaha">YAMAHA</button>
+        </div>
+        <div class="filter-bar-fade filter-bar-fade--left" aria-hidden="true"></div>
+        <div class="filter-bar-fade filter-bar-fade--right" aria-hidden="true"></div>
+      </div>
+
+      <div id="video-watch-grid" class="video-grid"></div>
+    </section>
+
     <footer class="app-footer">
       MOTORRAD PULSE — Internal Use Only · Automated Collection + Rule-Based Analysis
     </footer>
@@ -313,6 +342,9 @@
   </a>
   <a href="#team-brief" class="mobile-tab" data-tab="team-brief">
     <span class="mobile-tab__label">BRIEF</span>
+  </a>
+  <a href="#video-watch" class="mobile-tab" data-tab="video-watch">
+    <span class="mobile-tab__label">VIDEO</span>
   </a>
 </nav>
 
