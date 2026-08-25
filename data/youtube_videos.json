@@ -1,9 +1,310 @@
 {
   "meta": {
-    "lastUpdatedISO": null,
+    "lastUpdatedISO": "2026-08-25T22:22:32.035231+00:00",
     "channelCount": 6,
-    "successCount": 0,
+    "successCount": 6,
     "failCount": 0
   },
-  "videos": []
+  "videos": [
+    {
+      "id": "yt_o2iuxSp-pDg",
+      "videoId": "o2iuxSp-pDg",
+      "title": "BMW 모토라드 X 박스까남 입토바이",
+      "url": "https://www.youtube.com/shorts/o2iuxSp-pDg",
+      "thumbnail": "https://i4.ytimg.com/vi/o2iuxSp-pDg/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-08-25T02:00:11+00:00"
+    },
+    {
+      "id": "yt_0gQm8-0tM4E",
+      "videoId": "0gQm8-0tM4E",
+      "title": "GRIP THE TRAIL, NOT THE CLUTCH | Honda NX500 E-Clutchㅣ미들급 어드벤쳐",
+      "url": "https://www.youtube.com/shorts/0gQm8-0tM4E",
+      "thumbnail": "https://i1.ytimg.com/vi/0gQm8-0tM4E/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-25T01:00:09+00:00"
+    },
+    {
+      "id": "yt_QvCj6GtIS0o",
+      "videoId": "QvCj6GtIS0o",
+      "title": "BMW 모토라드 X 박스까남 입토바이",
+      "url": "https://www.youtube.com/shorts/QvCj6GtIS0o",
+      "thumbnail": "https://i2.ytimg.com/vi/QvCj6GtIS0o/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-08-24T09:00:36+00:00"
+    },
+    {
+      "id": "yt_UMTdAAzBkdc",
+      "videoId": "UMTdAAzBkdc",
+      "title": "BMW 모토라드 X 박스까남 입토바이",
+      "url": "https://www.youtube.com/shorts/UMTdAAzBkdc",
+      "thumbnail": "https://i2.ytimg.com/vi/UMTdAAzBkdc/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-08-24T08:39:49+00:00"
+    },
+    {
+      "id": "yt_rxjnMpsa7-c",
+      "videoId": "rxjnMpsa7-c",
+      "title": "날렵한 스타일링으로 완성된 슈퍼스포츠 | Honda CBR500R E-Clutch",
+      "url": "https://www.youtube.com/watch?v=rxjnMpsa7-c",
+      "thumbnail": "https://i3.ytimg.com/vi/rxjnMpsa7-c/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-18T04:00:29+00:00"
+    },
+    {
+      "id": "yt_ttrXc1NMv3g",
+      "videoId": "ttrXc1NMv3g",
+      "title": "2026 Street Bob™과 함께 라이딩의 즐거움을 경험해 보세요.",
+      "url": "https://www.youtube.com/shorts/ttrXc1NMv3g",
+      "thumbnail": "https://i1.ytimg.com/vi/ttrXc1NMv3g/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-08-14T09:21:48+00:00"
+    },
+    {
+      "id": "yt_PqnXK8VBnwc",
+      "videoId": "PqnXK8VBnwc",
+      "title": "[바이크 팁] 모터사이클 수신호, 이것만 알면 됩니다 #HEC #HondaEducationCenter #혼다모터사이클",
+      "url": "https://www.youtube.com/shorts/PqnXK8VBnwc",
+      "thumbnail": "https://i1.ytimg.com/vi/PqnXK8VBnwc/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-14T01:00:09+00:00"
+    },
+    {
+      "id": "yt_xnnYYED_Qgs",
+      "videoId": "xnnYYED_Qgs",
+      "title": "BMW 모토라드 X 박스까남 입토바이",
+      "url": "https://www.youtube.com/shorts/xnnYYED_Qgs",
+      "thumbnail": "https://i1.ytimg.com/vi/xnnYYED_Qgs/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-08-12T09:15:38+00:00"
+    },
+    {
+      "id": "yt_JYdW15iwGWg",
+      "videoId": "JYdW15iwGWg",
+      "title": "BMW 모토라드 X 박스까남 입토바이",
+      "url": "https://www.youtube.com/shorts/JYdW15iwGWg",
+      "thumbnail": "https://i3.ytimg.com/vi/JYdW15iwGWg/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-08-12T08:00:33+00:00"
+    },
+    {
+      "id": "yt_Z3jYF6-vBgU",
+      "videoId": "Z3jYF6-vBgU",
+      "title": "복잡한 도심마저 모험이 되는 크로스오버 | Honda NX500 E-Clutchㅣ미들급 어드벤쳐",
+      "url": "https://www.youtube.com/watch?v=Z3jYF6-vBgU",
+      "thumbnail": "https://i3.ytimg.com/vi/Z3jYF6-vBgU/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-11T02:00:34+00:00"
+    },
+    {
+      "id": "yt_MVV0iMH5Rnc",
+      "videoId": "MVV0iMH5Rnc",
+      "title": "[OFFICIAL VIDEO] 2026 YAMAHA YZF-R7",
+      "url": "https://www.youtube.com/watch?v=MVV0iMH5Rnc",
+      "thumbnail": "https://i2.ytimg.com/vi/MVV0iMH5Rnc/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-08-07T07:32:42+00:00"
+    },
+    {
+      "id": "yt_79L4vsHvZWU",
+      "videoId": "79L4vsHvZWU",
+      "title": "[바이크 팁] 입문자가 빠르게 익혀야 할 필수 스킬 #HEC #HondaEducationCenter #혼다모터사이클",
+      "url": "https://www.youtube.com/shorts/79L4vsHvZWU",
+      "thumbnail": "https://i4.ytimg.com/vi/79L4vsHvZWU/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-07T01:00:13+00:00"
+    },
+    {
+      "id": "yt_pTtoKfjFstw",
+      "videoId": "pTtoKfjFstw",
+      "title": "[OFFICIAL VIDEO] YAMAHA YZF-R9",
+      "url": "https://www.youtube.com/watch?v=pTtoKfjFstw",
+      "thumbnail": "https://i1.ytimg.com/vi/pTtoKfjFstw/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-07-30T05:55:28+00:00"
+    },
+    {
+      "id": "yt_qr8QPDFpniE",
+      "videoId": "qr8QPDFpniE",
+      "title": "[OFFICIAL VIDEO] 2026 TRICITY 125",
+      "url": "https://www.youtube.com/watch?v=qr8QPDFpniE",
+      "thumbnail": "https://i2.ytimg.com/vi/qr8QPDFpniE/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-07-23T07:07:36+00:00"
+    },
+    {
+      "id": "yt_ZMXTrYtCQKE",
+      "videoId": "ZMXTrYtCQKE",
+      "title": "[OFFICIAL VIDEO] YAMAHA R SERIES",
+      "url": "https://www.youtube.com/watch?v=ZMXTrYtCQKE",
+      "thumbnail": "https://i3.ytimg.com/vi/ZMXTrYtCQKE/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-07-16T02:54:14+00:00"
+    },
+    {
+      "id": "yt_XR9siUZBUl8",
+      "videoId": "XR9siUZBUl8",
+      "title": "[OFFICIAL VIDEO] YAMAHA MOTOROiD",
+      "url": "https://www.youtube.com/watch?v=XR9siUZBUl8",
+      "thumbnail": "https://i1.ytimg.com/vi/XR9siUZBUl8/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-07-14T07:48:08+00:00"
+    },
+    {
+      "id": "yt_aV_C9RvZfeE",
+      "videoId": "aV_C9RvZfeE",
+      "title": "2026 Low Rider™ S | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/shorts/aV_C9RvZfeE",
+      "thumbnail": "https://i2.ytimg.com/vi/aV_C9RvZfeE/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-07-10T05:56:16+00:00"
+    },
+    {
+      "id": "yt_Dw5AZakoVJc",
+      "videoId": "Dw5AZakoVJc",
+      "title": "RIDE, AGAIN | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/shorts/Dw5AZakoVJc",
+      "thumbnail": "https://i1.ytimg.com/vi/Dw5AZakoVJc/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-06-15T06:42:31+00:00"
+    },
+    {
+      "id": "yt_ac0UffFrreQ",
+      "videoId": "ac0UffFrreQ",
+      "title": "RIDE, AGAIN | 할리데이비슨 | Harley-Davidson",
+      "url": "https://www.youtube.com/watch?v=ac0UffFrreQ",
+      "thumbnail": "https://i2.ytimg.com/vi/ac0UffFrreQ/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-06-15T06:33:34+00:00"
+    },
+    {
+      "id": "yt_dIg8yjE5znQ",
+      "videoId": "dIg8yjE5znQ",
+      "title": "더 크게, 더 뜨겁게! 2026 K-MOTO FESTAㅣ2026 케모페ㅣ할리데이비슨ㅣharleydavidson",
+      "url": "https://www.youtube.com/watch?v=dIg8yjE5znQ",
+      "thumbnail": "https://i1.ytimg.com/vi/dIg8yjE5znQ/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-06-05T11:00:40+00:00"
+    },
+    {
+      "id": "yt_3wrZxXZ3gBA",
+      "videoId": "3wrZxXZ3gBA",
+      "title": "K-MOTO FESTA 스케치 영상",
+      "url": "https://www.youtube.com/watch?v=3wrZxXZ3gBA",
+      "thumbnail": "https://i4.ytimg.com/vi/3wrZxXZ3gBA/hqdefault.jpg",
+      "channelTitle": "두카티코리아",
+      "brandGroup": "ducati",
+      "publishedAt": "2025-10-01T01:50:20+00:00"
+    },
+    {
+      "id": "yt_yMFZhucsXIk",
+      "videoId": "yMFZhucsXIk",
+      "title": "멀티스트라다 포토 투어 2025",
+      "url": "https://www.youtube.com/watch?v=yMFZhucsXIk",
+      "thumbnail": "https://i2.ytimg.com/vi/yMFZhucsXIk/hqdefault.jpg",
+      "channelTitle": "두카티코리아",
+      "brandGroup": "ducati",
+      "publishedAt": "2025-08-01T06:05:01+00:00"
+    },
+    {
+      "id": "yt_MKedM7zaJ_k",
+      "videoId": "MKedM7zaJ_k",
+      "title": "'두카티 프리미어 나잇' 신 모델 4종 발표!(스케치)",
+      "url": "https://www.youtube.com/watch?v=MKedM7zaJ_k",
+      "thumbnail": "https://i2.ytimg.com/vi/MKedM7zaJ_k/hqdefault.jpg",
+      "channelTitle": "두카티코리아",
+      "brandGroup": "ducati",
+      "publishedAt": "2025-07-07T06:37:54+00:00"
+    },
+    {
+      "id": "yt_qPwcGJkYRoo",
+      "videoId": "qPwcGJkYRoo",
+      "title": "두카티 코리아 We Ride As One 2025 & Track Experience",
+      "url": "https://www.youtube.com/watch?v=qPwcGJkYRoo",
+      "thumbnail": "https://i2.ytimg.com/vi/qPwcGJkYRoo/hqdefault.jpg",
+      "channelTitle": "두카티코리아",
+      "brandGroup": "ducati",
+      "publishedAt": "2025-05-28T05:30:43+00:00"
+    },
+    {
+      "id": "yt_jCg_IZU8vYs",
+      "videoId": "jCg_IZU8vYs",
+      "title": "2025 두카티 코리아 시즌오프닝 투어 스케치 영상 공개!",
+      "url": "https://www.youtube.com/watch?v=jCg_IZU8vYs",
+      "thumbnail": "https://i3.ytimg.com/vi/jCg_IZU8vYs/hqdefault.jpg",
+      "channelTitle": "두카티코리아",
+      "brandGroup": "ducati",
+      "publishedAt": "2025-04-02T05:04:28+00:00"
+    },
+    {
+      "id": "yt_nLKDFwDGOLg",
+      "videoId": "nLKDFwDGOLg",
+      "title": "Triumph Speed 400 & Scrambler 400 X Launch 2023",
+      "url": "https://www.youtube.com/watch?v=nLKDFwDGOLg",
+      "thumbnail": "https://i3.ytimg.com/vi/nLKDFwDGOLg/hqdefault.jpg",
+      "channelTitle": "Triumph Korea",
+      "brandGroup": "triumph",
+      "publishedAt": "2023-07-05T02:51:52+00:00"
+    },
+    {
+      "id": "yt_-l_Lqu7UK48",
+      "videoId": "-l_Lqu7UK48",
+      "title": "Iván Cervantes Reflects on Claiming a GUINNESS WORLD RECORDS™ Title on the Tiger 1200 GT Explorer",
+      "url": "https://www.youtube.com/watch?v=-l_Lqu7UK48",
+      "thumbnail": "https://i2.ytimg.com/vi/-l_Lqu7UK48/hqdefault.jpg",
+      "channelTitle": "Triumph Korea",
+      "brandGroup": "triumph",
+      "publishedAt": "2023-06-30T08:18:28+00:00"
+    },
+    {
+      "id": "yt_U_p7HQwKeWA",
+      "videoId": "U_p7HQwKeWA",
+      "title": "Iván Cervantes Claims GUINNESS WORLD RECORDS™ Title on a Triumph Tiger 1200 GT Explorer",
+      "url": "https://www.youtube.com/watch?v=U_p7HQwKeWA",
+      "thumbnail": "https://i2.ytimg.com/vi/U_p7HQwKeWA/hqdefault.jpg",
+      "channelTitle": "Triumph Korea",
+      "brandGroup": "triumph",
+      "publishedAt": "2023-06-30T08:11:06+00:00"
+    },
+    {
+      "id": "yt_rcmGyALuBso",
+      "videoId": "rcmGyALuBso",
+      "title": "2023 DGR (The Distinguished Gentlemans Ride) -Seoul&Gyeonggi",
+      "url": "https://www.youtube.com/watch?v=rcmGyALuBso",
+      "thumbnail": "https://i3.ytimg.com/vi/rcmGyALuBso/hqdefault.jpg",
+      "channelTitle": "Triumph Korea",
+      "brandGroup": "triumph",
+      "publishedAt": "2023-05-30T08:34:17+00:00"
+    },
+    {
+      "id": "yt_XXKmT41XZbs",
+      "videoId": "XXKmT41XZbs",
+      "title": "Street Triple Moto2TM Edition | First Ride at Valencia",
+      "url": "https://www.youtube.com/watch?v=XXKmT41XZbs",
+      "thumbnail": "https://i1.ytimg.com/vi/XXKmT41XZbs/hqdefault.jpg",
+      "channelTitle": "Triumph Korea",
+      "brandGroup": "triumph",
+      "publishedAt": "2022-12-07T06:21:29+00:00"
+    }
+  ]
 }
