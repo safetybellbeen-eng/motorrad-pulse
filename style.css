@@ -286,13 +286,6 @@ button{ font-family: inherit; cursor: pointer; }
   margin-bottom: 36px;
   gap: 24px;
 }
-.topbar__bike{
-  width: 64px;
-  height: 64px;
-  color: var(--grey);
-  opacity: 0.7;
-  flex-shrink: 0;
-}
 .topbar__title h1{
   font-family: var(--font-display);
   font-weight: 700;
@@ -1071,12 +1064,21 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 /* ---- Team Brief: 전일 대비 비교 ---- */
+/* 전일 비교(brief-compare)와 데일리뉴스(brief-card)를 좌우로 나란히 배치.
+   비교표는 상대적으로 작은 정보량이라 좁게, 실제 발송 내용인 데일리뉴스 카드는
+   넓게 잡는다 — 화면이 좁아지면(태블릿 이하) 미디어쿼리에서 다시 위아래로 쌓는다. */
+.brief-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 20px;
+  align-items: start;
+}
 .brief-compare{
   background: var(--panel);
   border: 1px solid var(--line);
   padding: 18px 22px;
-  max-width: 760px;
-  margin-bottom: 20px;
+  max-width: none;
+  margin-bottom: 0;
 }
 .brief-compare__head{
   display: flex;
@@ -1134,7 +1136,7 @@ button{ font-family: inherit; cursor: pointer; }
   background: var(--panel);
   border: 1px solid var(--line);
   padding: 32px 36px;
-  max-width: 760px;
+  max-width: none;
 }
 .brief-card__header{
   display: flex;
@@ -1570,6 +1572,7 @@ button{ font-family: inherit; cursor: pointer; }
 
 @media (max-width: 900px){
   .app{ flex-direction: column; }
+  .brief-layout{ grid-template-columns: 1fr; gap: 20px; }
   .sidebar{
     width: 100%;
     height: auto;
@@ -1599,7 +1602,6 @@ button{ font-family: inherit; cursor: pointer; }
   .topbar__meta{ text-align: left; }
   .topbar__title h1{ font-size: 26px; }
   .topbar__title p{ margin-top: 4px; }
-  .topbar__bike{ display: none; } /* 장식용 아이콘 — 모바일에서 세로 공간 절약 */
   .topbar__live-clock{ font-size: 9px; margin-bottom: 3px; }
   .topbar__date{ font-size: 12px; }
   .signal-section{ margin-bottom: 28px; }

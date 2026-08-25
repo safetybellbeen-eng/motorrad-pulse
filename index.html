@@ -122,13 +122,6 @@
         <p>Daily Motorcycle Market Intelligence</p>
       </div>
 
-      <svg class="topbar__bike" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M2 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
-        <path d="M16 16a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
-        <path d="M7.5 14h5l4 -4h-10.5m1.5 4l4 -4"/>
-        <path d="M13 6h2l1.5 3l2 4"/>
-      </svg>
-
       <div class="topbar__meta">
         <div class="topbar__date" id="topbar-date">2026.08.12 &nbsp;WEDNESDAY</div>
         <div class="topbar__live-clock" id="topbar-live-clock">2026.08.13 (THU) 00:00:00</div>
@@ -263,32 +256,36 @@
         <span class="section-sub">팀 공유용 요약 — 이메일/카카오톡 전송 예정 내용 미리보기</span>
       </div>
 
-      <!-- 전일 비교 — 어제 공유한 뉴스와 오늘 공유할 뉴스가 겹치는지 미리 확인하기 위한 표.
-           이 브라우저(localStorage)에 저장된 이전 브리핑 기록과 비교한다 — 다른 기기/브라우저
-           에서는 기록이 없어 비교가 표시되지 않을 수 있다(개인 사용 기준 기능). -->
-      <div class="brief-compare" id="brief-compare">
-        <div class="brief-compare__head">
-          <span class="brief-compare__title">전일 대비 비교</span>
-          <span class="brief-compare__summary" id="brief-compare-summary">-</span>
-        </div>
-        <div class="brief-compare__grid" id="brief-compare-grid"></div>
-      </div>
-
-      <div class="brief-card">
-        <div class="brief-card__header">
-          <span>데일리뉴스</span>
-          <span id="brief-date">2026.08.12</span>
+      <!-- 전일 비교와 데일리뉴스를 좌우로 나란히 배치 — 왼쪽은 어제와 겹치는지 확인하는 표,
+           오른쪽은 실제 오늘 공유할 내용. 화면이 좁아지면(태블릿/모바일) 위아래로 다시 쌓인다. -->
+      <div class="brief-layout">
+        <!-- 전일 비교 — 어제 공유한 뉴스와 오늘 공유할 뉴스가 겹치는지 미리 확인하기 위한 표.
+             이 브라우저(localStorage)에 저장된 이전 브리핑 기록과 비교한다 — 다른 기기/브라우저
+             에서는 기록이 없어 비교가 표시되지 않을 수 있다(개인 사용 기준 기능). -->
+        <div class="brief-compare" id="brief-compare">
+          <div class="brief-compare__head">
+            <span class="brief-compare__title">전일 대비 비교</span>
+            <span class="brief-compare__summary" id="brief-compare-summary">-</span>
+          </div>
+          <div class="brief-compare__grid" id="brief-compare-grid"></div>
         </div>
 
-        <div id="brief-body" class="brief-body"></div>
+        <div class="brief-card">
+          <div class="brief-card__header">
+            <span>데일리뉴스</span>
+            <span id="brief-date">2026.08.12</span>
+          </div>
 
-        <div class="brief-actions">
-          <!-- 관리자 전용 — auth-guard.js가 채워주는 window.__CURRENT_PROFILE__.role === 'admin'일
-               때만 script.js가 이 버튼을 보이게 한다. 클릭하면 SOURCE MONITOR에 수집된 뉴스
-               전체를 체크박스로 보여주는 팝업이 뜨고, 거기서 TEAM BRIEF에 넣을 뉴스를 직접 고른다. -->
-          <button id="brief-curate-btn" type="button" class="btn btn--curate" hidden>📰 뉴스 선택</button>
-          <button id="copy-brief-btn" class="btn btn--primary">COPY TEAM BRIEF</button>
-          <button id="kakao-share-btn" type="button" class="btn btn--kakao">카카오톡 공유</button>
+          <div id="brief-body" class="brief-body"></div>
+
+          <div class="brief-actions">
+            <!-- 관리자 전용 — auth-guard.js가 채워주는 window.__CURRENT_PROFILE__.role === 'admin'일
+                 때만 script.js가 이 버튼을 보이게 한다. 클릭하면 SOURCE MONITOR에 수집된 뉴스
+                 전체를 체크박스로 보여주는 팝업이 뜨고, 거기서 TEAM BRIEF에 넣을 뉴스를 직접 고른다. -->
+            <button id="brief-curate-btn" type="button" class="btn btn--curate" hidden>📰 뉴스 선택</button>
+            <button id="copy-brief-btn" class="btn btn--primary">COPY TEAM BRIEF</button>
+            <button id="kakao-share-btn" type="button" class="btn btn--kakao">카카오톡 공유</button>
+          </div>
         </div>
       </div>
     </section>
