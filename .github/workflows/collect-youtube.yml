@@ -1,0 +1,52 @@
+name: Collect YouTube Videos
+
+# 수동 실행: Actions 탭에서 "Run workflow" 버튼으로 직접 실행 가능
+# 자동 실행: 매일 한국시간(KST, UTC+9) 오전 07:00 전후 실행
+#   뉴스 수집(collect-news.yml, KST 06:30)과 겹치지 않도록 30분 뒤로 배치했다.
+#   GitHub Actions cron은 UTC 기준이므로 KST 07:00 = UTC 전날 22:00
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 22 * * *"
+
+# 수집 결과 JSON을 Repository에 다시 Commit해야 하므로 쓰기 권한 필요
+permissions:
+  contents: write
+
+jobs:
+  collect-youtube:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install requirements
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run YouTube collector
+        run: python3 scripts/collect_youtube.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if git diff --quiet -- data/youtube_videos.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No YouTube changes detected."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "motorrad-pulse-bot"
+          git config user.email "actions@github.com"
+          git add data/youtube_videos.json
+          git commit -m "auto: update MOTORRAD PULSE youtube videos"
+          git push
