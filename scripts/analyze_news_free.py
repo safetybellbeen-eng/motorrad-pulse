@@ -49,11 +49,15 @@ RAW_NEWS_PATH = os.path.join(DATA_DIR, "raw_news.json")
 NEWS_PATH = os.path.join(DATA_DIR, "news.json")
 INSIGHTS_PATH = os.path.join(DATA_DIR, "insights.json")
 HISTORY_DIR = os.path.join(DATA_DIR, "history")
+DASHBOARD_TREND_PATH = os.path.join(DATA_DIR, "dashboard_trend.json")
 
 # STEP 8: Yesterday/Today 변화 감지를 위한 History 설정
 HISTORY_RETENTION_DAYS = 30     # 요청서 STEP8-5번, 8-9번: 30일 초과분만 정리
 HISTORY_CURRENT_WINDOW_HOURS = 24   # Current = 최근 24시간 (STEP8-B 승인사항)
 HISTORY_PREVIOUS_WINDOW_HOURS = 48  # Previous = 그 이전 24시간 (24~48시간 전)
+
+# DASHBOARD — 일별 뉴스 발행 추이 집계 기간(요청: "금일 신규뉴스 갯수 등 추이")
+DASHBOARD_TREND_WINDOW_DAYS = 14
 
 TOP_NEWS_MAX = 5
 TOP_NEWS_MAX_PER_GROUP = 2          # 요청서 22번: 동일 sourceGroup 최대 2개
@@ -1564,6 +1568,78 @@ def cleanup_old_history(retention_days: int = HISTORY_RETENTION_DAYS) -> int:
     return deleted
 
 
+def build_dashboard_trend(analyzed_articles: list[dict],
+                           window_days: int = DASHBOARD_TREND_WINDOW_DAYS) -> dict:
+    """DASHBOARD(구 OVERVIEW) 위젯용 — 최근 window_days일간 '일자별 뉴스 발행 건수' 추이를
+    미리 집계해 저장한다 (요청: "금일 신규뉴스 갯수 등 추이"). 정적 사이트라 프런트가
+    data/history/의 파일 목록을 알 수 없으므로, 이 파이썬 실행 시점에 한 번에 계산해서
+    프런트가 파일 하나(data/dashboard_trend.json)만 fetch하면 되게 만든다.
+
+    history 스냅샷은 하루 여러 번(06시/13시/18시 등) 저장되며 서로 크게 겹치므로,
+    반드시 article id 기준으로 중복 제거한 뒤 각 기사의 publishedAt "날짜"로 집계한다
+    (스냅샷을 저장한 시각이 아니라 기사가 실제로 발행된 날짜 기준 — 요청서 STEP8-8과
+    동일한 원칙: 실제 원본 값만 쓰고 가공하지 않는다)."""
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+
+    # window_days 이내에 저장된 모든 snapshot + 이번 실행 결과를 id로 합쳐 중복 제거.
+    snapshots = load_history_snapshots_in_window(0, window_days * 24)
+    by_id: dict[str, dict] = {}
+    for snap in snapshots:
+        for a in snap.get("articles", []):
+            by_id[a["id"]] = a
+    for a in analyzed_articles:
+        by_id[a["id"]] = {
+            "id": a["id"],
+            "sourceGroup": a.get("sourceGroup"),
+            "brandGroups": a.get("brandGroups", []),
+            "category": a.get("category"),
+            "publishedAt": a.get("publishedAt", ""),
+        }
+
+    # 날짜별 버킷을 오늘 포함 window_days일 먼저 만들어둔다 — 기사가 없는 날도 0으로 표시되어야
+    # 그래프에서 "데이터가 없어서 안 그려진 날"과 "정말 0건인 날"이 구분된다.
+    daily_map: dict[str, dict] = {}
+    for i in range(window_days - 1, -1, -1):
+        d = (now_kst - timedelta(days=i)).strftime("%Y-%m-%d")
+        daily_map[d] = {"date": d, "newsCount": 0, "byBrand": {}, "byCategory": {}}
+
+    for a in by_id.values():
+        pub = a.get("publishedAt")
+        if not pub:
+            continue
+        try:
+            pub_dt = datetime.fromisoformat(pub)
+        except (ValueError, TypeError):
+            continue
+        pub_date = pub_dt.astimezone(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+        bucket = daily_map.get(pub_date)
+        if not bucket:
+            continue  # window 밖(더 오래된 기사)은 집계하지 않는다
+
+        bucket["newsCount"] += 1
+        for brand in (a.get("brandGroups") or []):
+            bucket["byBrand"][brand] = bucket["byBrand"].get(brand, 0) + 1
+        cat = a.get("category") or "UNKNOWN"
+        bucket["byCategory"][cat] = bucket["byCategory"].get(cat, 0) + 1
+
+    daily = [daily_map[d] for d in sorted(daily_map.keys())]
+
+    return {
+        "generatedAtISO": now_kst.isoformat(),
+        "windowDays": window_days,
+        "daily": daily,
+    }
+
+
+def save_dashboard_trend(trend: dict) -> None:
+    """저장 실패해도 news.json/insights.json 등 다른 파이프라인 결과에는 영향이
+    없도록 예외를 삼킨다(History Snapshot 저장과 동일한 원칙)."""
+    try:
+        save_json_atomic(trend, DASHBOARD_TREND_PATH)
+    except Exception as e:
+        log(f"[Dashboard Trend 경고] 저장 실패 (다른 데이터에는 영향 없음): {e}")
+
+
 # ---- Theme 단위 상태 판정 (요청서 STEP8-8 4번) ----
 
 SIGNAL_STATE_PRIORITY = {"RISING": 3, "NEW": 2, "CONTINUING": 1, "NORMAL": 0}
@@ -2863,6 +2939,12 @@ def main():
     deleted_count = cleanup_old_history()
     if deleted_count:
         log(f"History cleanup: removed {deleted_count} snapshot(s) older than {HISTORY_RETENTION_DAYS} days")
+
+    # ---- DASHBOARD 위젯용 일별 추이 집계 (History Snapshot 저장 이후에 계산해야
+    # 방금 만든 오늘 Snapshot까지 포함된 최신 상태로 집계된다) ----
+    trend = build_dashboard_trend(analyzed_articles)
+    save_dashboard_trend(trend)
+    log("Dashboard trend saved: data/dashboard_trend.json")
 
     log("\nAI API COST: $0")
     log("External AI API: NOT USED")

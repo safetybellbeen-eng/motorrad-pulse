@@ -546,6 +546,202 @@ button{ font-family: inherit; cursor: pointer; }
   margin: 0;
 }
 
+/* ---- DASHBOARD 위젯 ----
+   data/dashboard_trend.json(뉴스 발생 추이) + data/youtube_videos.json(유튜브 추이)을
+   사용한다. 색상은 새 팔레트를 만들지 않고 기존 OWN(BMW)=블루 / COMPETITOR=앰버
+   2색 체계를 그대로 재사용한다 — 이미 TOP NEWS/MARKET INTELLIGENCE에서 검증된
+   구분이라 대시보드에서도 같은 의미로 읽힌다. */
+
+.dash-stat-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 32px;
+}
+.dash-stat{
+  flex: 1 1 170px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.dash-stat__label{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  color: var(--grey-dim);
+}
+.dash-stat__value{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--white);
+}
+.dash-stat__value--time{
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 600;
+}
+.dash-stat__delta{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--grey-dim);
+  min-height: 14px;
+}
+.dash-stat__delta.is-up{ color: var(--bmw-blue-light); }
+.dash-stat__delta.is-down{ color: var(--grey-dim); }
+
+.dash-panel{ margin-bottom: 28px; }
+.dash-panel:last-child{ margin-bottom: 0; }
+.dash-panel__head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.dash-panel__head h4{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  color: var(--white);
+  margin: 0;
+}
+.dash-panel__sub{
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  color: var(--grey-dim);
+}
+
+/* 브랜드 색상(파랑=자사/앰버=경쟁사)을 쓰는 차트에 다는 범례 —
+   색상만으로 구분하지 않도록 항상 라벨과 함께 표시한다. */
+.dash-legend{
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.dash-legend__item{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--grey-dim);
+}
+.dash-legend__swatch{
+  width: 9px;
+  height: 9px;
+  background: var(--bmw-blue-light);
+  display: inline-block;
+}
+.dash-legend__swatch--amber{ background: var(--signal-amber); }
+
+.dash-grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.dash-grid-2 .dash-panel{ margin-bottom: 0; }
+
+/* 뉴스 발생 추이 — 세로 막대 차트. 단일 지표(일별 건수)라 범례는 두지 않고,
+   오늘 막대만 강조색으로 구분한다(마크 스펙: 얇은 막대 + 서로 다른 두 톤으로
+   "오늘"과 "지난 날들"을 구분 — 새 색을 추가하지 않고 기존 accent/dim 톤 재사용). */
+.dash-trend-chart{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dash-trend-chart__bars{
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 120px;
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+}
+.dash-trend-bar{
+  flex: 1 0 20px;
+  min-width: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+.dash-trend-bar__col{
+  width: 100%;
+  max-width: 22px;
+  min-height: 2px;
+  background: var(--grey-dim);
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+.dash-trend-bar:hover .dash-trend-bar__col{ opacity: 0.8; }
+.dash-trend-bar.is-today .dash-trend-bar__col{
+  background: var(--bmw-blue-light);
+  opacity: 1;
+}
+.dash-trend-chart__dates{
+  display: flex;
+  gap: 6px;
+}
+.dash-trend-chart__dates span{
+  flex: 1 0 20px;
+  min-width: 20px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--grey-dim);
+}
+
+/* 브랜드별 점유율 / 카테고리 분포 / 유튜브 추이 — 가로 막대 리스트 공통 스타일 */
+.dash-bar-list{
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.dash-bar-row{
+  display: grid;
+  grid-template-columns: 108px 1fr 40px;
+  align-items: center;
+  gap: 10px;
+}
+.dash-bar-row__label{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--grey);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dash-bar-row__track{
+  position: relative;
+  height: 8px;
+  background: var(--line);
+}
+.dash-bar-row__fill{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--bmw-blue-light);
+  min-width: 2px;
+}
+.dash-bar-row__fill--amber{ background: var(--signal-amber); }
+.dash-bar-row__value{
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--white);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---- Top News ---- */
 .top-news-split{
   display: grid;
@@ -1729,6 +1925,11 @@ button{ font-family: inherit; cursor: pointer; }
   .signal-card{ padding: 22px 20px; }
   .signal-headline{ font-size: 22px; line-height: 1.32; margin: 10px 0 10px; }
   .signal-description{ font-size: 12.5px; line-height: 1.65; }
+  .dash-stat-row{ gap: 10px; margin: 20px 0 26px; }
+  .dash-stat{ flex: 1 1 130px; padding: 13px 14px; }
+  .dash-stat__value{ font-size: 24px; }
+  .dash-grid-2{ grid-template-columns: 1fr; gap: 26px; }
+  .dash-bar-row{ grid-template-columns: 82px 1fr 34px; gap: 8px; }
   .news-card{ grid-template-columns: 1fr; }
   .news-card__insight{ grid-template-columns: 1fr; }
   .video-grid{ grid-template-columns: 1fr; gap: 16px; }

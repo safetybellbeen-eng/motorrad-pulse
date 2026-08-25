@@ -76,7 +76,7 @@
 
     <nav class="side-nav">
       <a href="#overview" class="side-nav__item is-active" data-nav="overview">
-        <span class="side-nav__index">01</span> OVERVIEW
+        <span class="side-nav__index">01</span> DASHBOARD
       </a>
       <a href="#top-news" class="side-nav__item" data-nav="top-news">
         <span class="side-nav__index">02</span> TOP NEWS
@@ -115,7 +115,7 @@
          script.js의 setupNavHighlight()가 좌측 side-nav 하이라이트와 함께 텍스트를 갱신한다. -->
     <div class="section-tracker" id="section-tracker">
       <span class="section-tracker__dot" aria-hidden="true"></span>
-      <span id="section-tracker-label">지금 보는 중 · OVERVIEW</span>
+      <span id="section-tracker-label">지금 보는 중 · DASHBOARD</span>
     </div>
 
     <!-- HEADER -->
@@ -143,12 +143,83 @@
       </div>
     </header>
 
-    <!-- OVERVIEW / TODAY'S SIGNAL -->
-    <section id="overview" class="section signal-section">
+    <!-- DASHBOARD (구 OVERVIEW) — TODAY'S SIGNAL을 맨 위에 고정으로 두고,
+         그 아래 업무용 통계/추이 위젯을 배치한다. -->
+    <section id="overview" class="section" data-index="01">
+      <div class="section-head">
+        <h3><span class="section-index">01</span> DASHBOARD</h3>
+        <span class="section-sub">오늘의 시그널과 최근 추이 한눈에 보기</span>
+      </div>
+
       <div class="signal-card">
         <span class="signal-label">TODAY'S SIGNAL</span>
         <h2 id="signal-headline" class="signal-headline">Loading signal…</h2>
         <p id="signal-description" class="signal-description"></p>
+      </div>
+
+      <!-- KPI 스탯 로우 -->
+      <div class="dash-stat-row" id="dash-stat-row">
+        <div class="dash-stat">
+          <span class="dash-stat__label">금일 신규뉴스</span>
+          <span class="dash-stat__value" id="dash-stat-today">–</span>
+          <span class="dash-stat__delta" id="dash-stat-today-delta"></span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat__label">최근 7일 누적</span>
+          <span class="dash-stat__value" id="dash-stat-week">–</span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat__label">활성 브랜드</span>
+          <span class="dash-stat__value" id="dash-stat-brands">–</span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-stat__label">마지막 수집</span>
+          <span class="dash-stat__value dash-stat__value--time" id="dash-stat-updated">–</span>
+        </div>
+      </div>
+
+      <!-- 뉴스 발생 추이 -->
+      <div class="dash-panel">
+        <div class="dash-panel__head">
+          <h4>뉴스 발생 추이</h4>
+          <span class="dash-panel__sub">최근 14일 · 일별 신규뉴스 건수</span>
+        </div>
+        <div id="dash-trend-chart" class="dash-trend-chart"></div>
+      </div>
+
+      <!-- 브랜드별 점유율 + 카테고리 분포 2단 -->
+      <div class="dash-grid-2">
+        <div class="dash-panel">
+          <div class="dash-panel__head">
+            <h4>브랜드별 점유율</h4>
+            <span class="dash-panel__sub">최근 7일 · 브랜드 태그 기준</span>
+          </div>
+          <div class="dash-legend">
+            <span class="dash-legend__item"><i class="dash-legend__swatch"></i>자사(BMW)</span>
+            <span class="dash-legend__item"><i class="dash-legend__swatch dash-legend__swatch--amber"></i>경쟁사</span>
+          </div>
+          <div id="dash-brand-chart" class="dash-bar-list"></div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-panel__head">
+            <h4>카테고리 분포</h4>
+            <span class="dash-panel__sub">최근 7일 · 뉴스 성격별 비중</span>
+          </div>
+          <div id="dash-category-chart" class="dash-bar-list"></div>
+        </div>
+      </div>
+
+      <!-- 유튜브 수집 추이 -->
+      <div class="dash-panel">
+        <div class="dash-panel__head">
+          <h4>유튜브 수집 추이</h4>
+          <span class="dash-panel__sub">이번 달 · 브랜드별 신규 영상 건수</span>
+        </div>
+        <div class="dash-legend">
+          <span class="dash-legend__item"><i class="dash-legend__swatch"></i>자사(BMW)</span>
+          <span class="dash-legend__item"><i class="dash-legend__swatch dash-legend__swatch--amber"></i>경쟁사</span>
+        </div>
+        <div id="dash-youtube-chart" class="dash-bar-list"></div>
       </div>
     </section>
 
@@ -341,7 +412,10 @@
 
 <!-- ============ MOBILE BOTTOM TAB BAR ============ -->
 <nav class="mobile-tabbar" id="mobile-tabbar">
-  <a href="#top-news" class="mobile-tab is-active" data-tab="top-news-competitor">
+  <a href="#overview" class="mobile-tab is-active" data-tab="overview">
+    <span class="mobile-tab__label">DASH</span>
+  </a>
+  <a href="#top-news" class="mobile-tab" data-tab="top-news-competitor">
     <span class="mobile-tab__label">TOP 5</span>
   </a>
   <a href="#top-news" class="mobile-tab" data-tab="top-news-own">

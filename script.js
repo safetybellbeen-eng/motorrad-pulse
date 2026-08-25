@@ -28,6 +28,12 @@ let RAW_NEWS_DATA = null;
 let currentFilter = "all";
 let YOUTUBE_DATA = null;
 let currentVideoFilter = "all";
+let DASHBOARD_TREND_DATA = null;
+
+/* DASHBOARD 위젯에서 브랜드를 항상 같은 순서로 보여주기 위한 고정 순서
+   (renderBrandSummary의 brandOrder와 동일 — 화면마다 순서가 뒤바뀌면 비교하기 어렵다). */
+const DASH_BRAND_ORDER = ["bmw", "ducati", "triumph", "harley", "honda", "yamaha"];
+const DASH_CATEGORY_ORDER = ["MARKET", "COMPETITOR", "PRODUCT_TECH", "CUSTOMER_TREND"];
 
 /* VIDEO WATCH 필터 브랜드 -> 한국 공식 유튜브 채널 URL.
    scripts/collect_youtube.py의 CHANNELS 딕셔너리와 동일한 channelId를 사용한다.
@@ -105,6 +111,7 @@ function loadYoutubeData() {
     .then((data) => {
       YOUTUBE_DATA = data;
       renderVideoWatch(data.videos || []);
+      renderDashYoutubeChart(data.videos || []);
     })
     .catch((err) => {
       console.error(err);
@@ -113,10 +120,31 @@ function loadYoutubeData() {
     });
 }
 
+/* dashboard_trend.json: scripts/analyze_news_free.py가 분석을 돌릴 때마다 함께 계산해
+   저장하는 "최근 14일 일별 뉴스 발행 추이" 사전 집계 파일. 정적 사이트라 프런트가
+   data/history/ 폴더 안에 어떤 파일들이 있는지 알 수 없으므로, 파이썬 쪽에서 미리
+   집계해 이 파일 하나만 fetch하면 되도록 만들었다(대시보드 위젯 전용, 실패해도
+   DASHBOARD 위젯만 비게 될 뿐 TODAY'S SIGNAL 등 핵심 화면에는 영향이 없다). */
+function loadDashboardTrend() {
+  return fetch(`./data/dashboard_trend.json?t=${Date.now()}`, { cache: "no-store" })
+    .then((res) => {
+      if (!res.ok) throw new Error("대시보드 추이 데이터를 불러오지 못했습니다.");
+      return res.json();
+    })
+    .then((data) => {
+      DASHBOARD_TREND_DATA = data;
+      renderDashboardWidgets(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadNewsData();
   loadRawNewsData();
   loadYoutubeData();
+  loadDashboardTrend();
 
   setupNavHighlight();
   setupMobileTabbar();
@@ -166,6 +194,7 @@ function renderHeader(meta) {
   }
   LAST_UPDATED_ISO = meta.lastUpdatedISO || null;
   updateRelativeTimeDisplay();
+  renderDashLastUpdatedStat();
 }
 
 /* 1분마다 "N분 전 / N시간 전" 표시를 최신으로 갱신 (페이지를 오래 열어둬도 시간이 흘러가도록) */
@@ -584,6 +613,275 @@ function renderBrandSummary(brandSummary) {
         `}
     `;
     container.appendChild(card);
+  });
+}
+
+/* ---------- DASHBOARD 위젯 ----------
+   dashboard_trend.json(뉴스 발생 추이/브랜드/카테고리)과 youtube_videos.json(유튜브 추이)을
+   가공해 KPI 스탯 로우 + 4개 차트로 그린다. 새 색을 만들지 않고 기존 OWN(BMW)=블루 /
+   COMPETITOR=앰버 2색 체계를 그대로 재사용한다. */
+function renderDashboardWidgets(trend) {
+  const daily = (trend && trend.daily) || [];
+  renderDashStats(daily);
+  renderDashTrendChart(daily);
+  renderDashBrandChart(daily);
+  renderDashCategoryChart(daily);
+}
+
+function renderDashStats(daily) {
+  const todayEl = document.getElementById("dash-stat-today");
+  const deltaEl = document.getElementById("dash-stat-today-delta");
+  const weekEl = document.getElementById("dash-stat-week");
+  const brandsEl = document.getElementById("dash-stat-brands");
+  const updatedEl = document.getElementById("dash-stat-updated");
+  if (!todayEl || !deltaEl || !weekEl || !brandsEl || !updatedEl) return;
+
+  if (daily.length === 0) {
+    todayEl.textContent = "–";
+    weekEl.textContent = "–";
+    brandsEl.textContent = "–";
+    updatedEl.textContent = "–";
+    deltaEl.textContent = "";
+    return;
+  }
+
+  const today = daily[daily.length - 1];
+  const yesterday = daily.length >= 2 ? daily[daily.length - 2] : null;
+
+  todayEl.textContent = `${today.newsCount}건`;
+
+  deltaEl.classList.remove("is-up", "is-down");
+  if (yesterday) {
+    const diff = today.newsCount - yesterday.newsCount;
+    if (diff > 0) {
+      deltaEl.textContent = `▲ 전일 대비 ${diff}건`;
+      deltaEl.classList.add("is-up");
+    } else if (diff < 0) {
+      deltaEl.textContent = `▼ 전일 대비 ${Math.abs(diff)}건`;
+      deltaEl.classList.add("is-down");
+    } else {
+      deltaEl.textContent = "전일과 동일";
+    }
+  } else {
+    deltaEl.textContent = "";
+  }
+
+  const last7 = daily.slice(-7);
+  const weekTotal = last7.reduce((sum, d) => sum + (d.newsCount || 0), 0);
+  weekEl.textContent = `${weekTotal}건`;
+
+  const activeBrands = new Set();
+  last7.forEach((d) => {
+    Object.entries(d.byBrand || {}).forEach(([brand, count]) => {
+      if (count > 0) activeBrands.add(brand);
+    });
+  });
+  brandsEl.textContent = `${activeBrands.size}개`;
+
+  renderDashLastUpdatedStat();
+}
+
+/* "마지막 수집" 스탯은 topbar에 이미 표시 중인 LAST_UPDATED_ISO를 그대로 재사용한다 —
+   같은 값을 다시 따로 계산하지 않고 단일 소스를 유지한다.
+   news.json(loadNewsData)과 dashboard_trend.json(loadDashboardTrend)은 서로 독립적으로
+   fetch되므로 어느 쪽이 먼저 끝날지 알 수 없다 — dashboard_trend.json이 더 빨리 끝나면
+   그 시점엔 아직 LAST_UPDATED_ISO가 비어있을 수 있으므로, renderHeader()에서도 이
+   함수를 다시 호출해 나중에 news.json이 도착했을 때도 값이 채워지게 한다. */
+function renderDashLastUpdatedStat() {
+  const updatedEl = document.getElementById("dash-stat-updated");
+  if (!updatedEl) return;
+
+  if (!LAST_UPDATED_ISO) {
+    updatedEl.textContent = "–";
+    return;
+  }
+  const d = new Date(LAST_UPDATED_ISO);
+  if (Number.isNaN(d.getTime())) {
+    updatedEl.textContent = "–";
+    return;
+  }
+  const pad = (n) => String(n).padStart(2, "0");
+  updatedEl.textContent = `${pad(d.getMonth() + 1)}.${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+/* dashboard_trend.json의 date는 "YYYY-MM-DD" 문자열이다. new Date()로 파싱하면 보는
+   사람의 브라우저 시간대에 따라 하루가 밀릴 수 있으므로(UTC 자정 기준 파싱 후 로컬
+   시간대로 다시 변환되면서 날짜가 바뀔 수 있음), Date 객체를 거치지 않고 문자열을
+   그대로 잘라서 만든다.
+   축 라벨은 막대 폭이 좁아 "MM.DD"를 다 넣으면 14개가 서로 겹쳐 붙어버리므로
+   일(day)만 표시한다 — 정확한 전체 날짜는 막대의 title(hover) 툴팁으로 확인 가능하다. */
+function formatDashDateLabel(dateStr) {
+  if (!dateStr || dateStr.length < 10) return "";
+  return dateStr.slice(8, 10);
+}
+
+function renderDashTrendChart(daily) {
+  const container = document.getElementById("dash-trend-chart");
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (daily.length === 0) {
+    container.innerHTML = `<div class="empty-state">추이 데이터가 아직 없습니다. 분석 파이프라인이 한 번 이상 실행되면 표시됩니다.</div>`;
+    return;
+  }
+
+  const maxCount = Math.max(1, ...daily.map((d) => d.newsCount || 0));
+  const todayDate = daily[daily.length - 1].date;
+
+  const barsWrap = document.createElement("div");
+  barsWrap.className = "dash-trend-chart__bars";
+  const datesWrap = document.createElement("div");
+  datesWrap.className = "dash-trend-chart__dates";
+
+  daily.forEach((d) => {
+    const bar = document.createElement("div");
+    bar.className = "dash-trend-bar" + (d.date === todayDate ? " is-today" : "");
+    bar.title = `${d.date} · ${d.newsCount || 0}건`;
+
+    const col = document.createElement("div");
+    col.className = "dash-trend-bar__col";
+    const pct = Math.max(2, Math.round(((d.newsCount || 0) / maxCount) * 100));
+    col.style.height = `${pct}%`;
+    bar.appendChild(col);
+    barsWrap.appendChild(bar);
+
+    const label = document.createElement("span");
+    label.textContent = formatDashDateLabel(d.date);
+    label.title = d.date;
+    datesWrap.appendChild(label);
+  });
+
+  container.appendChild(barsWrap);
+  container.appendChild(datesWrap);
+}
+
+/* 가로 막대 한 줄(라벨 + 트랙 + 값)을 만드는 공용 헬퍼.
+   브랜드별 점유율 / 카테고리 분포 / 유튜브 추이 3개 위젯이 모두 이 형태를 쓴다. */
+function buildDashBarRow(label, value, maxVal, fillExtraClass) {
+  const row = document.createElement("div");
+  row.className = "dash-bar-row";
+
+  const labelEl = document.createElement("span");
+  labelEl.className = "dash-bar-row__label";
+  labelEl.textContent = label;
+
+  const track = document.createElement("div");
+  track.className = "dash-bar-row__track";
+  const fill = document.createElement("div");
+  fill.className = "dash-bar-row__fill" + (fillExtraClass ? ` ${fillExtraClass}` : "");
+  const pct = maxVal > 0 ? Math.max(value > 0 ? 3 : 0, Math.round((value / maxVal) * 100)) : 0;
+  fill.style.width = `${pct}%`;
+  track.appendChild(fill);
+
+  const valueEl = document.createElement("span");
+  valueEl.className = "dash-bar-row__value";
+  valueEl.textContent = `${value}`;
+
+  row.appendChild(labelEl);
+  row.appendChild(track);
+  row.appendChild(valueEl);
+  return row;
+}
+
+function renderDashBrandChart(daily) {
+  const container = document.getElementById("dash-brand-chart");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const last7 = daily.slice(-7);
+  const totals = {};
+  DASH_BRAND_ORDER.forEach((b) => { totals[b] = 0; });
+  last7.forEach((d) => {
+    Object.entries(d.byBrand || {}).forEach(([brand, count]) => {
+      if (brand in totals) totals[brand] += count;
+    });
+  });
+
+  const hasData = Object.values(totals).some((v) => v > 0);
+  if (!hasData) {
+    container.innerHTML = `<div class="empty-state">최근 7일간 브랜드 태그가 확인된 뉴스가 없습니다.</div>`;
+    return;
+  }
+
+  const maxVal = Math.max(1, ...Object.values(totals));
+  DASH_BRAND_ORDER.forEach((brand) => {
+    container.appendChild(
+      buildDashBarRow(
+        SOURCE_GROUP_LABELS[brand] || brand,
+        totals[brand],
+        maxVal,
+        brand === "bmw" ? "" : "dash-bar-row__fill--amber"
+      )
+    );
+  });
+}
+
+function renderDashCategoryChart(daily) {
+  const container = document.getElementById("dash-category-chart");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const last7 = daily.slice(-7);
+  const totals = {};
+  DASH_CATEGORY_ORDER.forEach((c) => { totals[c] = 0; });
+  last7.forEach((d) => {
+    Object.entries(d.byCategory || {}).forEach(([cat, count]) => {
+      if (cat in totals) totals[cat] += count;
+    });
+  });
+
+  const hasData = Object.values(totals).some((v) => v > 0);
+  if (!hasData) {
+    container.innerHTML = `<div class="empty-state">최근 7일간 집계된 뉴스가 없습니다.</div>`;
+    return;
+  }
+
+  const maxVal = Math.max(1, ...Object.values(totals));
+  DASH_CATEGORY_ORDER.forEach((cat) => {
+    container.appendChild(buildDashBarRow(CATEGORY_LABELS[cat] || cat, totals[cat], maxVal, ""));
+  });
+}
+
+/* 유튜브 추이는 dashboard_trend.json이 아니라 youtube_videos.json에서 직접 계산한다 —
+   영상 개수가 애초에 몇십 건 수준이라 별도 집계 파일 없이 프런트에서 이번 달 것만
+   필터링해도 충분하다(VIDEO WATCH의 loadYoutubeData 완료 시점에 함께 호출된다). */
+function renderDashYoutubeChart(videos) {
+  const container = document.getElementById("dash-youtube-chart");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const now = new Date();
+  const thisMonth = (videos || []).filter((v) => {
+    if (!v.publishedAt) return false;
+    const d = new Date(v.publishedAt);
+    return (
+      !Number.isNaN(d.getTime()) &&
+      d.getFullYear() === now.getFullYear() &&
+      d.getMonth() === now.getMonth()
+    );
+  });
+
+  if (thisMonth.length === 0) {
+    container.innerHTML = `<div class="empty-state">이번 달 수집된 영상이 아직 없습니다.</div>`;
+    return;
+  }
+
+  const totals = {};
+  DASH_BRAND_ORDER.forEach((b) => { totals[b] = 0; });
+  thisMonth.forEach((v) => {
+    if (v.brandGroup in totals) totals[v.brandGroup] += 1;
+  });
+
+  const maxVal = Math.max(1, ...Object.values(totals));
+  DASH_BRAND_ORDER.forEach((brand) => {
+    container.appendChild(
+      buildDashBarRow(
+        SOURCE_GROUP_LABELS[brand] || brand,
+        totals[brand],
+        maxVal,
+        brand === "bmw" ? "" : "dash-bar-row__fill--amber"
+      )
+    );
   });
 }
 
@@ -1336,7 +1634,10 @@ function formatDisplayDate(isoString) {
 /* ---------- Mobile Bottom Tab Bar ----------
    900px 이하에서만 의미가 있다. 탭 클릭 시 해당 섹션에 is-tab-active를 부여하고
    나머지는 CSS(.section:not(.signal-section){display:none})로 숨긴다.
-   TODAY'S SIGNAL(#overview)은 signal-section 클래스로 항상 노출된다. */
+   DASHBOARD(#overview)는 이제 위젯이 많아져서 다른 탭들과 동일하게 취급한다 —
+   더 이상 signal-section 클래스로 모든 탭에서 항상 노출되지 않고, 첫 번째 탭(DASH)을
+   눌러야 보이는 일반 탭 섹션이 됐다(예전에는 TODAY'S SIGNAL 하나뿐이라 항상 띄워도
+   부담이 없었지만, 이제 차트까지 들어가면 다른 탭에서도 항상 보이면 화면이 복잡해진다). */
 /* TOP NEWS 섹션 하나를 "TOP 5"(업계 전체) / "OWN"(자사) 두 개의 모바일 탭이
    공유한다 — 탭 id는 가상의 id(top-news-competitor / top-news-own)이고 실제
    섹션 id는 둘 다 top-news이다. 이 매핑을 통해 섹션 표시 여부와 그 안의
