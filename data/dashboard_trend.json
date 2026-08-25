@@ -1,16 +1,7 @@
 {
-  "generatedAtISO": "2026-08-25T22:06:31.104641+09:00",
+  "generatedAtISO": "2026-08-26T06:54:35.080725+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-12",
-      "newsCount": 2,
-      "byBrand": {},
-      "byCategory": {
-        "CUSTOMER_TREND": 1,
-        "PRODUCT_TECH": 1
-      }
-    },
     {
       "date": "2026-08-13",
       "newsCount": 2,
@@ -52,13 +43,12 @@
     },
     {
       "date": "2026-08-18",
-      "newsCount": 5,
+      "newsCount": 4,
       "byBrand": {
-        "bmw": 3,
-        "honda": 1
+        "bmw": 3
       },
       "byCategory": {
-        "PRODUCT_TECH": 4,
+        "PRODUCT_TECH": 3,
         "MARKET": 1
       }
     },
@@ -73,10 +63,12 @@
     },
     {
       "date": "2026-08-20",
-      "newsCount": 2,
-      "byBrand": {},
+      "newsCount": 3,
+      "byBrand": {
+        "bmw": 1
+      },
       "byCategory": {
-        "PRODUCT_TECH": 2
+        "PRODUCT_TECH": 3
       }
     },
     {
@@ -104,18 +96,27 @@
     },
     {
       "date": "2026-08-24",
-      "newsCount": 4,
+      "newsCount": 5,
       "byBrand": {
         "triumph": 1
       },
       "byCategory": {
-        "COMPETITOR": 1,
+        "COMPETITOR": 2,
         "PRODUCT_TECH": 2,
         "MARKET": 1
       }
     },
     {
       "date": "2026-08-25",
+      "newsCount": 3,
+      "byBrand": {},
+      "byCategory": {
+        "PRODUCT_TECH": 2,
+        "COMPETITOR": 1
+      }
+    },
+    {
+      "date": "2026-08-26",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
