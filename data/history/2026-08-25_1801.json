@@ -1,0 +1,80 @@
+{
+  "savedAtISO": "2026-08-25T18:01:21.373954+09:00",
+  "articles": [
+    {
+      "id": "eeec0921eab6729e",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-08-24T10:43:59+09:00"
+    },
+    {
+      "id": "70a05450543dfc50",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-08-25T11:23:55+09:00"
+    },
+    {
+      "id": "c62fcbf0f3c677ed",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-08-25T11:12:10+09:00"
+    },
+    {
+      "id": "30a1f35603910215",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-25T11:10:12+09:00"
+    },
+    {
+      "id": "8458cd7291d8d962",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-24T11:11:26+09:00"
+    },
+    {
+      "id": "fea369bd4d8e097e",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-24T11:09:25+09:00"
+    }
+  ]
+}

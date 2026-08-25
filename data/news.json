@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-25",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-25T13:01:21.788829+09:00",
+    "lastUpdatedISO": "2026-08-25T18:01:21.371685+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
