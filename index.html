@@ -316,6 +316,19 @@
         <div class="filter-bar-fade filter-bar-fade--right" aria-hidden="true"></div>
       </div>
 
+      <!-- 브랜드 필터를 고를 때마다 script.js가 href/텍스트를 해당 브랜드 공식 유튜브
+           채널로 갱신한다. ALL일 때는 특정 채널이 없으므로 숨긴다. -->
+      <a
+        id="video-channel-link"
+        class="video-channel-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        hidden
+      >
+        <span id="video-channel-link-label"></span> 유튜브 채널 바로가기 →
+      </a>
+
       <div id="video-watch-grid" class="video-grid"></div>
     </section>
 

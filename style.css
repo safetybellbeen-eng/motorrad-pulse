@@ -1048,6 +1048,33 @@ button{ font-family: inherit; cursor: pointer; }
   text-align: right;
 }
 
+/* ---------- VIDEO WATCH — 브랜드 채널 바로가기 링크 ----------
+   필터에서 특정 브랜드를 고르면 나타나고(ALL일 땐 숨김), script.js가
+   href/라벨을 해당 브랜드의 공식 유튜브 채널 URL로 갱신한다. */
+.video-channel-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  color: var(--bmw-blue-light);
+  text-decoration: none;
+  padding: 9px 14px;
+  border: 1px solid var(--bmw-blue-dim);
+  background: var(--bmw-blue-dim);
+  margin-bottom: 18px;
+  transition: all 0.15s ease;
+}
+.video-channel-link:hover{
+  border-color: var(--bmw-blue-light);
+  color: var(--white);
+}
+.video-channel-link[hidden]{
+  display: none;
+}
+
 /* ---------- VIDEO WATCH — 브랜드 공식 유튜브 최신 영상 카드 그리드 ---------- */
 .video-grid{
   display: grid;

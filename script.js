@@ -29,6 +29,19 @@ let currentFilter = "all";
 let YOUTUBE_DATA = null;
 let currentVideoFilter = "all";
 
+/* VIDEO WATCH 필터 브랜드 -> 한국 공식 유튜브 채널 URL.
+   scripts/collect_youtube.py의 CHANNELS 딕셔너리와 동일한 channelId를 사용한다.
+   (채널이 바뀌면 두 파일을 함께 업데이트해야 한다 — collect_youtube.py 상단
+   주석에 채널 ID 재확인 방법이 적혀 있다.) */
+const VIDEO_CHANNEL_URLS = {
+  bmw: "https://www.youtube.com/channel/UCiRbUGYLu0P-q1Kv5kTOR-A",
+  ducati: "https://www.youtube.com/channel/UCJTNF1bn9qQ_g2CLTsikKiQ",
+  triumph: "https://www.youtube.com/channel/UCE3-Y1RG9Uu4Qob85_KQV6A",
+  harley: "https://www.youtube.com/channel/UCJs2Asltby49ZJcGnwFvtGQ",
+  honda: "https://www.youtube.com/channel/UCd_Iw4TQqnmMzwMD-BsYkcA",
+  yamaha: "https://www.youtube.com/channel/UC4GvVeyt0ITmUg174soDYjQ"
+};
+
 /* ---------- 초기 로드 ----------
    news.json: AI 분석이 완료된 데이터 (TOP NEWS, MARKET INTELLIGENCE, TEAM BRIEF)
    raw_news.json: 자동수집된 원본 전체 (SOURCE MONITOR 전용, 요청서 42/43/44번)
@@ -735,6 +748,25 @@ function renderVideoWatch(videoList) {
   });
 }
 
+/* ---------- VIDEO WATCH — 브랜드 채널 바로가기 링크 갱신 ----------
+   ALL일 땐 특정 채널이 없으므로 숨기고, 브랜드를 고르면 해당 브랜드의
+   공식 유튜브 채널 URL로 href/라벨을 갱신해 새 탭으로 바로 이동할 수 있게 한다. */
+function updateVideoChannelLink(filterKey) {
+  const link = document.getElementById("video-channel-link");
+  const label = document.getElementById("video-channel-link-label");
+  if (!link || !label) return;
+
+  const url = VIDEO_CHANNEL_URLS[filterKey];
+  if (!url) {
+    link.hidden = true;
+    return;
+  }
+
+  link.href = url;
+  label.textContent = SOURCE_GROUP_LABELS[filterKey] || filterKey.toUpperCase();
+  link.hidden = false;
+}
+
 /* ---------- VIDEO WATCH 필터바 ---------- */
 function setupVideoFilterBar() {
   const bar = document.getElementById("video-filter-bar");
@@ -747,11 +779,13 @@ function setupVideoFilterBar() {
     bar.querySelectorAll("[data-video-filter]").forEach((el) => el.classList.remove("is-active"));
     target.classList.add("is-active");
     currentVideoFilter = target.dataset.videoFilter;
+    updateVideoChannelLink(currentVideoFilter);
 
     if (YOUTUBE_DATA) renderVideoWatch(YOUTUBE_DATA.videos || []);
   });
 
   setupFilterBarScrollHint(bar);
+  updateVideoChannelLink(currentVideoFilter);
 }
 
 /* ---------- TEAM BRIEF ---------- */
