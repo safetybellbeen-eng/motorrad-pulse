@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-26",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:06 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-26T13:06:57.106670+09:00",
+    "lastUpdatedISO": "2026-08-26T18:01:23.508494+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -36,8 +36,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=173367445",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {}
       },
       "harley": {
@@ -51,14 +51,18 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 0,
-        "primaryTheme": null,
-        "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "newsCount": 4,
+        "primaryTheme": "NEW_MODEL",
+        "secondaryTheme": "ELECTRIFICATION",
+        "signal": "NEW",
+        "activity": "HIGH",
+        "topArticleTitle": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
+        "signalDetails": {
+          "SCOOTER": "NEW",
+          "ELECTRIFICATION": "NEW",
+          "NEW_MODEL": "NEW"
+        }
       },
       "yamaha": {
         "newsCount": 0,
@@ -76,14 +80,14 @@
     "market": [],
     "competitor": [
       {
-        "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
-        "description": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
+        "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
+        "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "‘열정의 한계를 넘어’ CST 브랜드 캠페인 전개",
+        "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -95,9 +99,23 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
+      {
+        "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
+        "description": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
+      },
       {
         "title": "Phelon & Moore, 120년 헤리티지 담은 신형 어드벤처 'Capetown 7X' 공개",
         "description": "120년 역사를 지닌 영국 모터사이클 브랜드 페론&무어(Phelon & Moore)가 브랜드 부활을 알리는 첫 번째 어드벤처 모터사이클 ‘케이프타운 7X(Capetown 7X)’를 공개했다.페론&무어는 지난 6월 케이프타운 7X를 발표하며 본격적인 글로벌 시장 공략에 나섰다.",
@@ -106,15 +124,15 @@
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
       {
-        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
+        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -124,19 +142,19 @@
   },
   "news": [
     {
-      "id": "eeec0921eab6729e",
-      "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173367445",
-      "source": "한국이륜차신문",
+      "id": "08cd65d5fcd30682",
+      "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62350",
+      "source": "dailycar.co.kr",
       "sourceType": "media",
-      "sourceGroup": "triumph",
+      "sourceGroup": "honda",
       "brandGroups": [
-        "triumph"
+        "honda"
       ],
-      "publishedAt": "2026-08-24T10:43:59+09:00",
+      "publishedAt": "2026-08-26T16:56:50+09:00",
       "category": "COMPETITOR",
-      "summary": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
-      "importance": 1.5,
+      "summary": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
@@ -144,12 +162,31 @@
       "rank": 5
     },
     {
+      "id": "bb6684bcbbe4b8a1",
+      "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
+      "url": "https://www.news1.kr/industry/auto-industry/6269804",
+      "source": "뉴스1",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-08-26T10:37:07+09:00",
+      "category": "COMPETITOR",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
       "id": "c62fcbf0f3c677ed",
       "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173405072&bmode=view",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173405072",
       "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "kmnews",
+      "sourceGroup": "google",
       "brandGroups": [],
       "publishedAt": "2026-08-25T11:12:10+09:00",
       "category": "PRODUCT_TECH",
@@ -160,6 +197,81 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
+    },
+    {
+      "id": "fea369bd4d8e097e",
+      "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173368245&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-26T17:12:16+09:00",
+      "category": "COMPETITOR",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
+    {
+      "id": "4a68e0b0685286c7",
+      "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173439781&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-26T11:40:12+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 3
+    },
+    {
+      "id": "106b062ea151b765",
+      "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-08-26T11:38:13+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
+      "importance": 3.5,
+      "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "1c7c647bad0ed5f0",
+      "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
+      "url": "https://www.kmnews.net/NEWS/?idx=173437687&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-08-26T10:43:31+09:00",
+      "category": "COMPETITOR",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "70a05450543dfc50",
@@ -175,77 +287,13 @@
       "importance": 2.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "30a1f35603910215",
-      "title": "‘열정의 한계를 넘어’ CST 브랜드 캠페인 전개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173405025&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-25T11:10:12+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "8458cd7291d8d962",
-      "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173368331&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-24T11:11:26+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
-    },
-    {
-      "id": "fea369bd4d8e097e",
-      "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173368245&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-24T11:09:25+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [
-      {
-        "title": "‘열정의 한계를 넘어’ CST 브랜드 캠페인 전개",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      },
       {
         "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
@@ -259,8 +307,28 @@
     ],
     "competitor": [
       {
-        "title": "트라이엄프, ‘TEST RIDE DAY IN 강동’ 시승회 8월 29일 개최",
-        "description": "시승회, 8월 29일 오전 11시부터 오후 4시까지 강동점에서 진행새로운 400 시리즈부터 스크램블러 900까지… 다양한 트라이엄프 모델 직접 경험 트라이엄프 코리아가 8월 29일 오전 11시부터 오후 4시까지 서울 강동구에 위치한 트라이엄프 강동점에서 ‘TRIUMPH KOREA TEST RIDE DAY IN 강동’을 개최한다.",
+        "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
+        "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -270,6 +338,16 @@
       }
     ],
     "productTech": [
+      {
+        "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
+        "description": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
       {
         "title": "Phelon & Moore, 120년 헤리티지 담은 신형 어드벤처 'Capetown 7X' 공개",
         "description": "120년 역사를 지닌 영국 모터사이클 브랜드 페론&무어(Phelon & Moore)가 브랜드 부활을 알리는 첫 번째 어드벤처 모터사이클 ‘케이프타운 7X(Capetown 7X)’를 공개했다.페론&무어는 지난 6월 케이프타운 7X를 발표하며 본격적인 글로벌 시장 공략에 나섰다.",
@@ -281,8 +359,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
+        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -291,8 +369,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] 요시무라, 몽키용 RS-3 슬립온 머플러 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",

@@ -1,0 +1,112 @@
+{
+  "savedAtISO": "2026-08-26T18:01:23.509602+09:00",
+  "articles": [
+    {
+      "id": "08cd65d5fcd30682",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "dailycar.co.kr",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-08-26T16:56:50+09:00"
+    },
+    {
+      "id": "bb6684bcbbe4b8a1",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "뉴스1",
+      "domain": "www.news1.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-08-26T10:37:07+09:00"
+    },
+    {
+      "id": "c62fcbf0f3c677ed",
+      "sourceGroup": "google",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-25T11:12:10+09:00"
+    },
+    {
+      "id": "fea369bd4d8e097e",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-08-26T17:12:16+09:00"
+    },
+    {
+      "id": "4a68e0b0685286c7",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-08-26T11:40:12+09:00"
+    },
+    {
+      "id": "106b062ea151b765",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ELECTRIFICATION",
+        "SCOOTER"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-08-26T11:38:13+09:00"
+    },
+    {
+      "id": "1c7c647bad0ed5f0",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-08-26T10:43:31+09:00"
+    },
+    {
+      "id": "70a05450543dfc50",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-25T11:23:55+09:00"
+    }
+  ]
+}
