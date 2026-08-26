@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-26",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-08-27",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-26T18:01:23.508494+09:00",
+    "lastUpdatedISO": "2026-08-27T08:01:37.278232+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,7 +51,7 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 4,
+        "newsCount": 5,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ELECTRIFICATION",
         "signal": "NEW",
@@ -60,8 +60,8 @@
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
         "signalDetails": {
           "SCOOTER": "NEW",
-          "ELECTRIFICATION": "NEW",
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "NEW",
+          "ELECTRIFICATION": "NEW"
         }
       },
       "yamaha": {
@@ -87,14 +87,7 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
+        "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -102,6 +95,13 @@
       },
       {
         "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -117,15 +117,8 @@
         "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
       },
       {
-        "title": "Phelon & Moore, 120년 헤리티지 담은 신형 어드벤처 'Capetown 7X' 공개",
-        "description": "120년 역사를 지닌 영국 모터사이클 브랜드 페론&무어(Phelon & Moore)가 브랜드 부활을 알리는 첫 번째 어드벤처 모터사이클 ‘케이프타운 7X(Capetown 7X)’를 공개했다.페론&무어는 지난 6월 케이프타운 7X를 발표하며 본격적인 글로벌 시장 공략에 나섰다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
         "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -138,7 +131,15 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
     {
@@ -162,16 +163,16 @@
       "rank": 5
     },
     {
-      "id": "bb6684bcbbe4b8a1",
-      "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
-      "url": "https://www.news1.kr/industry/auto-industry/6269804",
-      "source": "뉴스1",
+      "id": "4563824de28faea6",
+      "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
+      "url": "https://www.mk.co.kr/news/business/12136556",
+      "source": "매일경제",
       "sourceType": "media",
       "sourceGroup": "honda",
       "brandGroups": [
         "honda"
       ],
-      "publishedAt": "2026-08-26T10:37:07+09:00",
+      "publishedAt": "2026-08-26T11:01:04+09:00",
       "category": "COMPETITOR",
       "summary": null,
       "importance": 2.0,
@@ -196,7 +197,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "fea369bd4d8e097e",
@@ -209,7 +210,7 @@
       "publishedAt": "2026-08-26T17:12:16+09:00",
       "category": "COMPETITOR",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
@@ -226,13 +227,13 @@
       "brandGroups": [],
       "publishedAt": "2026-08-26T11:40:12+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
+      "summary": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
       "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 1
     },
     {
       "id": "106b062ea151b765",
@@ -252,7 +253,24 @@
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
+    },
+    {
+      "id": "893a04a2232d5686",
+      "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173439572&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-26T11:34:33+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "1c7c647bad0ed5f0",
@@ -270,23 +288,6 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "70a05450543dfc50",
-      "title": "Phelon & Moore, 120년 헤리티지 담은 신형 어드벤처 'Capetown 7X' 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173405393&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-25T11:23:55+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "120년 역사를 지닌 영국 모터사이클 브랜드 페론&무어(Phelon & Moore)가 브랜드 부활을 알리는 첫 번째 어드벤처 모터사이클 ‘케이프타운 7X(Capetown 7X)’를 공개했다.페론&무어는 지난 6월 케이프타운 7X를 발표하며 본격적인 글로벌 시장 공략에 나섰다.",
-      "importance": 2.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     }
@@ -317,7 +318,7 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "자동차 접는 혼다코리아, 모터사이클 강화…신규 딜러 4곳 선정",
+        "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -349,18 +350,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "Phelon & Moore, 120년 헤리티지 담은 신형 어드벤처 'Capetown 7X' 공개",
-        "description": "120년 역사를 지닌 영국 모터사이클 브랜드 페론&무어(Phelon & Moore)가 브랜드 부활을 알리는 첫 번째 어드벤처 모터사이클 ‘케이프타운 7X(Capetown 7X)’를 공개했다.페론&무어는 지난 6월 케이프타운 7X를 발표하며 본격적인 글로벌 시장 공략에 나섰다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
         "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -379,6 +370,17 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ]
   }
 }
