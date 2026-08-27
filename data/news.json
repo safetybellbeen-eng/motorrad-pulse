@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-27",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "09:59 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-27T09:59:08.559314+09:00",
+    "lastUpdatedISO": "2026-08-27T13:01:31.532011+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -41,13 +41,13 @@
         "signalDetails": {}
       },
       "harley": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173472432&bmode=view",
         "signalDetails": {}
       },
       "honda": {
@@ -80,6 +80,13 @@
     "market": [],
     "competitor": [
       {
+        "title": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
+        "description": "10월 16~18일 횡성 웰리힐리파크 개최… 싱하 소다 메인 파트너 참여참가 신청은 8월 19일부터 9월 7일까지 진행… 행사 정보는 할리데이비슨 코리아 공식 홈페이지와 온라인 채널에서 확인 가능 할리데이비슨 코리아가 국내 최대 규모의 할리데이비슨 라이더 축제인 ‘제28회 코리아 내셔널 호그 랠리’ 참가 접수를 8월 19일부터 9월 7일까지 진행한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
         "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
         "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
         "relatedNewsCount": 1,
@@ -88,13 +95,6 @@
       },
       {
         "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -117,15 +117,15 @@
         "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
+        "title": "HJC, RPHA 1 V2 CARBON ‘FUNKY DIABLO’ 출시",
+        "description": "HJC가 MotoGP 스타 라이더 파비오 콰타라로의 시그니처 그래픽을 적용한 프리미엄 레이싱 헬멧 ‘RPHA 1 V2 CARBON FUNKY DIABLO’를 8월 초 출시했다.신제품은 MotoGP 무대에서 공개돼 화제를 모았던 그래픽을 그대로 적용한 모델로, HJC의 최상위 레이싱 헬멧인 RPHA 1 V2 CARBON을 기반으로 제작됐다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
+        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -143,6 +143,26 @@
   },
   "news": [
     {
+      "id": "f6c0f7e55a70f233",
+      "title": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
+      "url": "https://www.kmnews.net/NEWS/?idx=173472432&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "publishedAt": "2026-08-27T10:12:13+09:00",
+      "category": "COMPETITOR",
+      "summary": "10월 16~18일 횡성 웰리힐리파크 개최… 싱하 소다 메인 파트너 참여참가 신청은 8월 19일부터 9월 7일까지 진행… 행사 정보는 할리데이비슨 코리아 공식 홈페이지와 온라인 채널에서 확인 가능 할리데이비슨 코리아가 국내 최대 규모의 할리데이비슨 라이더 축제인 ‘제28회 코리아 내셔널 호그 랠리’ 참가 접수를 8월 19일부터 9월 7일까지 진행한다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "08cd65d5fcd30682",
       "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
       "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62350",
@@ -158,9 +178,8 @@
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "4563824de28faea6",
@@ -175,29 +194,29 @@
       "publishedAt": "2026-08-26T11:01:04+09:00",
       "category": "COMPETITOR",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     },
     {
-      "id": "c62fcbf0f3c677ed",
-      "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173405072",
+      "id": "be8d04644cb2f4ec",
+      "title": "HJC, RPHA 1 V2 CARBON ‘FUNKY DIABLO’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173473853&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "google",
+      "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-08-25T11:12:10+09:00",
+      "publishedAt": "2026-08-27T11:06:29+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
-      "importance": 1.5,
+      "summary": "HJC가 MotoGP 스타 라이더 파비오 콰타라로의 시그니처 그래픽을 적용한 프리미엄 레이싱 헬멧 ‘RPHA 1 V2 CARBON FUNKY DIABLO’를 8월 초 출시했다.신제품은 MotoGP 무대에서 공개돼 화제를 모았던 그래픽을 그대로 적용한 모델로, HJC의 최상위 레이싱 헬멧인 RPHA 1 V2 CARBON을 기반으로 제작됐다.",
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 1
     },
     {
       "id": "fea369bd4d8e097e",
@@ -215,7 +234,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     },
     {
       "id": "4a68e0b0685286c7",
@@ -227,13 +246,13 @@
       "brandGroups": [],
       "publishedAt": "2026-08-26T11:40:12+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
-      "importance": 2.0,
+      "summary": null,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 5
     },
     {
       "id": "106b062ea151b765",
@@ -248,12 +267,12 @@
       "publishedAt": "2026-08-26T11:38:13+09:00",
       "category": "PRODUCT_TECH",
       "summary": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
-      "importance": 3.5,
+      "importance": 3.0,
       "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "893a04a2232d5686",
@@ -269,25 +288,6 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "1c7c647bad0ed5f0",
-      "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
-      "url": "https://www.kmnews.net/NEWS/?idx=173437687&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-26T10:43:31+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 2.0,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     }
@@ -308,6 +308,16 @@
     ],
     "competitor": [
       {
+        "title": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
+        "description": "10월 16~18일 횡성 웰리힐리파크 개최… 싱하 소다 메인 파트너 참여참가 신청은 8월 19일부터 9월 7일까지 진행… 행사 정보는 할리데이비슨 코리아 공식 홈페이지와 온라인 채널에서 확인 가능 할리데이비슨 코리아가 국내 최대 규모의 할리데이비슨 라이더 축제인 ‘제28회 코리아 내셔널 호그 랠리’ 참가 접수를 8월 19일부터 9월 7일까지 진행한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
         "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
         "relatedNewsCount": 1,
@@ -319,16 +329,6 @@
       },
       {
         "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -350,8 +350,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "쇼에이가 클래식 감성을 현대적으로 담아낸 제트 헬멧 ‘J.O+’를 국내에 출시했다.J.O+는 기존 J.O의 클래식한 디자인과 쇼에이의 안전성을 유지하면서도 다양한 스타일링이 가능하도록 디테일과 기능성을 강화한 것이 특징이다.",
+        "title": "HJC, RPHA 1 V2 CARBON ‘FUNKY DIABLO’ 출시",
+        "description": "HJC가 MotoGP 스타 라이더 파비오 콰타라로의 시그니처 그래픽을 적용한 프리미엄 레이싱 헬멧 ‘RPHA 1 V2 CARBON FUNKY DIABLO’를 8월 초 출시했다.신제품은 MotoGP 무대에서 공개돼 화제를 모았던 그래픽을 그대로 적용한 모델로, HJC의 최상위 레이싱 헬멧인 RPHA 1 V2 CARBON을 기반으로 제작됐다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -360,8 +360,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "MSR, XMAX 전용 윈드스크린 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 XMAX 전용 ‘윈드스크린 캐노피 그늘막 햇빛 가리개’를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩 시 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 액세서리로, MSR 스크린과 함께 사용할 것을 권장하는 전용 제품이다.",
+        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
