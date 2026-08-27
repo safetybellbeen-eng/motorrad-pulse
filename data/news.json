@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-27",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-27T13:01:31.532011+09:00",
+    "lastUpdatedISO": "2026-08-27T18:01:42.313043+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -31,10 +31,10 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 1,
+        "newsCount": 0,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NORMAL",
+        "signal": "NO_SIGNIFICANT_UPDATE",
         "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
@@ -51,17 +51,17 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 5,
+        "newsCount": 4,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ELECTRIFICATION",
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "HIGH",
         "topArticleTitle": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "SCOOTER": "NEW",
-          "ELECTRIFICATION": "NEW"
+          "NEW_MODEL": "CONTINUING",
+          "SCOOTER": "CONTINUING",
+          "ELECTRIFICATION": "CONTINUING"
         }
       },
       "yamaha": {
@@ -175,7 +175,7 @@
       "publishedAt": "2026-08-26T16:56:50+09:00",
       "category": "COMPETITOR",
       "summary": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
@@ -234,7 +234,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 5
     },
     {
       "id": "4a68e0b0685286c7",
@@ -252,7 +252,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 5
+      "rank": 4
     },
     {
       "id": "106b062ea151b765",
@@ -272,7 +272,7 @@
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     },
     {
       "id": "893a04a2232d5686",
