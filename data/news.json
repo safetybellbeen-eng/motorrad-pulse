@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-27",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "09:59 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-27T08:01:37.278232+09:00",
+    "lastUpdatedISO": "2026-08-27T09:59:08.559314+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -59,8 +59,8 @@
         "topArticleTitle": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
         "signalDetails": {
-          "SCOOTER": "NEW",
           "NEW_MODEL": "NEW",
+          "SCOOTER": "NEW",
           "ELECTRIFICATION": "NEW"
         }
       },
