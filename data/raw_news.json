@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-08-28T18:01:00.838359+09:00",
+  "lastCollectedAt": "2026-08-29T08:01:02.270128+09:00",
   "news": [
     {
       "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
@@ -43,7 +43,33 @@
       "acquisitionMethod": "google_news",
       "description": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작&nbsp;&nbsp;한국이륜차신문",
       "id": "f6c0f7e55a70f233",
-      "collectedAt": "2026-08-28T18:01:00.838359+09:00",
+      "collectedAt": "2026-08-29T08:01:02.270128+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173437687",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-08-28T01:34:43+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정&nbsp;&nbsp;한국이륜차신문",
+      "id": "e9ee268a39e19b7a",
+      "collectedAt": "2026-08-29T08:01:02.270128+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -67,7 +93,7 @@
       "acquisitionMethod": "google_news",
       "description": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개&nbsp;&nbsp;한국이륜차신문",
       "id": "e66b64c73796d1c4",
-      "collectedAt": "2026-08-28T18:01:00.838359+09:00",
+      "collectedAt": "2026-08-29T08:01:02.270128+09:00",
       "category": null,
       "summary": null,
       "importance": null,
