@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-28",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "02:33 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-28T13:01:36.482542+09:00",
+    "lastUpdatedISO": "2026-08-28T14:33:17.089698+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -59,9 +59,9 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
+          "NEW_MODEL": "CONTINUING",
           "SCOOTER": "CONTINUING",
-          "ELECTRIFICATION": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "ELECTRIFICATION": "CONTINUING"
         }
       },
       "yamaha": {
