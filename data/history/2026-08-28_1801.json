@@ -1,0 +1,59 @@
+{
+  "savedAtISO": "2026-08-28T18:01:24.589993+09:00",
+  "articles": [
+    {
+      "id": "16eb76d822c9a104",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-08-28T11:31:03+09:00"
+    },
+    {
+      "id": "f6c0f7e55a70f233",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-08-27T10:12:13+09:00"
+    },
+    {
+      "id": "e66b64c73796d1c4",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-08-28T11:22:58+09:00"
+    },
+    {
+      "id": "be8d04644cb2f4ec",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-08-27T11:06:29+09:00"
+    }
+  ]
+}

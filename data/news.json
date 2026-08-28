@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-28",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "02:33 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-28T14:33:17.089698+09:00",
+    "lastUpdatedISO": "2026-08-28T18:01:24.589071+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -31,14 +31,16 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173505565&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "harley": {
         "newsCount": 1,
@@ -59,9 +61,9 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
+          "ELECTRIFICATION": "CONTINUING",
           "NEW_MODEL": "CONTINUING",
-          "SCOOTER": "CONTINUING",
-          "ELECTRIFICATION": "CONTINUING"
+          "SCOOTER": "CONTINUING"
         }
       },
       "yamaha": {
@@ -85,23 +87,16 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
-        "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
+      {
+        "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
+        "description": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
       {
         "title": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개",
         "description": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",
@@ -121,6 +116,26 @@
   },
   "news": [
     {
+      "id": "16eb76d822c9a104",
+      "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=173505565&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-08-28T11:31:03+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "f6c0f7e55a70f233",
       "title": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
       "url": "https://www.kmnews.net/NEWS/?idx=173472432&bmode=view",
@@ -138,27 +153,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "08cd65d5fcd30682",
-      "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62350",
-      "source": "dailycar.co.kr",
-      "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-26T16:56:50+09:00",
-      "category": "COMPETITOR",
-      "summary": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
+      "rank": 4
     },
     {
       "id": "e66b64c73796d1c4",
@@ -176,7 +171,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "be8d04644cb2f4ec",
@@ -195,40 +190,11 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "fea369bd4d8e097e",
-      "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173368245&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-26T17:12:16+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
-      {
-        "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "market": [],
     "competitor": [
       {
         "title": "할리데이비슨, ‘28회 코리아 내셔널 호그 랠리’ 참가 접수 시작",
@@ -239,19 +205,19 @@
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "혼다, 수도권 모터사이클 신규 딜러 우선협상대상자 4개사 선정..과연 결과는?",
-        "description": "혼다가 수도권 네트워크를 강화한다. 26일 업계에 따르면 혼다코리아(대표 이지홍)는 수도권 및 주요 지역의 모터사이클 신규 딜러 우선협상대상자로 4개사를 선정하고, 딜러 계약을 위한 양해각서(MOU)를 체결했다. 혼다코리아는 지난 3월부터 국내 모터사이클 고객의 접근성과 편의성을 강화하기 위해 신규 딜러 모집을 진행해 왔다. 이후 후보사들의 사업...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
       }
     ],
     "productTech": [
+      {
+        "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
+        "description": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
       {
         "title": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개",
         "description": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",

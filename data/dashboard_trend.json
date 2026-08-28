@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-08-28T14:33:17.091874+09:00",
+  "generatedAtISO": "2026-08-28T18:01:24.594237+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -124,10 +124,12 @@
     },
     {
       "date": "2026-08-28",
-      "newsCount": 1,
-      "byBrand": {},
+      "newsCount": 2,
+      "byBrand": {
+        "triumph": 1
+      },
       "byCategory": {
-        "PRODUCT_TECH": 1
+        "PRODUCT_TECH": 2
       }
     }
   ]
