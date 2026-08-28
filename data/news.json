@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-28",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-28T08:01:43.174256+09:00",
+    "lastUpdatedISO": "2026-08-28T13:01:36.482542+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,17 +51,17 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 4,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ELECTRIFICATION",
         "signal": "CONTINUING",
         "activity": "HIGH",
-        "topArticleTitle": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
+          "SCOOTER": "CONTINUING",
           "ELECTRIFICATION": "CONTINUING",
-          "NEW_MODEL": "CONTINUING",
-          "SCOOTER": "CONTINUING"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "yamaha": {
@@ -94,13 +94,6 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
         "title": "가와사키, ‘쿨 썸머 프로모션’ 실시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
@@ -110,11 +103,11 @@
     ],
     "productTech": [
       {
-        "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
-        "description": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
+        "title": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개",
+        "description": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "HJC, RPHA 1 V2 CARBON ‘FUNKY DIABLO’ 출시",
@@ -122,24 +115,9 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
-    "customerTrend": [
-      {
-        "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
-      }
-    ]
+    "customerTrend": []
   },
   "news": [
     {
@@ -155,12 +133,12 @@
       "publishedAt": "2026-08-27T10:12:13+09:00",
       "category": "COMPETITOR",
       "summary": "10월 16~18일 횡성 웰리힐리파크 개최… 싱하 소다 메인 파트너 참여참가 신청은 8월 19일부터 9월 7일까지 진행… 행사 정보는 할리데이비슨 코리아 공식 홈페이지와 온라인 채널에서 확인 가능 할리데이비슨 코리아가 국내 최대 규모의 할리데이비슨 라이더 축제인 ‘제28회 코리아 내셔널 호그 랠리’ 참가 접수를 8월 19일부터 9월 7일까지 진행한다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "08cd65d5fcd30682",
@@ -178,27 +156,27 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 5
     },
     {
-      "id": "4563824de28faea6",
-      "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
-      "url": "https://www.mk.co.kr/news/business/12136556",
-      "source": "매일경제",
+      "id": "e66b64c73796d1c4",
+      "title": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=173505326&bmode=view",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-26T11:01:04+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-08-28T11:22:58+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
     },
     {
       "id": "be8d04644cb2f4ec",
@@ -211,7 +189,7 @@
       "publishedAt": "2026-08-27T11:06:29+09:00",
       "category": "PRODUCT_TECH",
       "summary": "HJC가 MotoGP 스타 라이더 파비오 콰타라로의 시그니처 그래픽을 적용한 프리미엄 레이싱 헬멧 ‘RPHA 1 V2 CARBON FUNKY DIABLO’를 8월 초 출시했다.신제품은 MotoGP 무대에서 공개돼 화제를 모았던 그래픽을 그대로 적용한 모델로, HJC의 최상위 레이싱 헬멧인 RPHA 1 V2 CARBON을 기반으로 제작됐다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -234,62 +212,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 5
-    },
-    {
-      "id": "4a68e0b0685286c7",
-      "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173439781&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-26T11:40:12+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
       "rank": 4
-    },
-    {
-      "id": "106b062ea151b765",
-      "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173439711&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-26T11:38:13+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
-      "importance": 3.0,
-      "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "893a04a2232d5686",
-      "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173439572&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-08-26T11:34:33+09:00",
-      "category": "CUSTOMER_TREND",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
-      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
     }
   ],
   "marketIntelligenceV2": {
@@ -326,26 +249,16 @@
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "“모터사이클 딜러망 넓힌다”…혼다코리아, 신규 딜러 4곳과 MOU",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
       }
     ],
     "productTech": [
       {
-        "title": "HONDA, 전기 스쿠터 ‘줌머 e:’ 2026년형 중국 출시",
-        "description": "줌머의 개성 그대로 계승, 파이프 프레임·원형 듀얼 헤드램프에 80km 주행거리 구현혼다가 전설적인 스쿠터 ‘줌머(ZOOMER)’의 디자인 DNA를 계승한 전기 스쿠터 ‘줌머 e:(ZOOMER e:)’ 2026년형을 중국 시장에 출시했다.",
+        "title": "로얄엔필드, ‘아트 오브 스피드 2026’에서 글로벌 커스텀 빌드 ‘옵시디언’ 공개",
+        "description": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
@@ -358,29 +271,8 @@
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] 쇼에이, 클래식 제트 헬멧 ‘J.O+’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": [
-      {
-        "title": "미쉐린, ‘2026 미쉐린 패션 익스피리언스(MPE)’ 고객 초청 이벤트 실시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "CUSTOMER_TREND",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ]
+    "customerTrend": []
   }
 }
