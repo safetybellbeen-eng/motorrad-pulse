@@ -1,13 +1,7 @@
 {
-  "generatedAtISO": "2026-08-28T18:01:24.594237+09:00",
+  "generatedAtISO": "2026-08-29T08:01:24.218703+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-15",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-08-16",
       "newsCount": 0,
@@ -124,13 +118,21 @@
     },
     {
       "date": "2026-08-28",
-      "newsCount": 2,
+      "newsCount": 3,
       "byBrand": {
-        "triumph": 1
+        "triumph": 1,
+        "honda": 1
       },
       "byCategory": {
-        "PRODUCT_TECH": 2
+        "PRODUCT_TECH": 2,
+        "COMPETITOR": 1
       }
+    },
+    {
+      "date": "2026-08-29",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
