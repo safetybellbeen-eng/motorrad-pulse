@@ -1,11 +1,31 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-08-29T03:28:17.498897+00:00",
+    "lastUpdatedISO": "2026-08-29T23:52:15.549656+00:00",
     "channelCount": 6,
-    "successCount": 0,
-    "failCount": 6
+    "successCount": 6,
+    "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_Et591MudhQo",
+      "videoId": "Et591MudhQo",
+      "title": "2026 CVO™ Street Glide™ Limited | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/shorts/Et591MudhQo",
+      "thumbnail": "https://i2.ytimg.com/vi/Et591MudhQo/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-08-28T08:56:49+00:00"
+    },
+    {
+      "id": "yt_rBPRZEDnGRc",
+      "videoId": "rBPRZEDnGRc",
+      "title": "[HSRS] 추월상황 위험예측 - 앞차가 답답하다고 함부로 추월하면 안되는 이유! | #왕복2차선 #추월",
+      "url": "https://www.youtube.com/shorts/rBPRZEDnGRc",
+      "thumbnail": "https://i3.ytimg.com/vi/rBPRZEDnGRc/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-08-27T01:00:20+00:00"
+    },
     {
       "id": "yt_o2iuxSp-pDg",
       "videoId": "o2iuxSp-pDg",
@@ -117,16 +137,6 @@
       "publishedAt": "2026-08-07T07:32:42+00:00"
     },
     {
-      "id": "yt_79L4vsHvZWU",
-      "videoId": "79L4vsHvZWU",
-      "title": "[바이크 팁] 입문자가 빠르게 익혀야 할 필수 스킬 #HEC #HondaEducationCenter #혼다모터사이클",
-      "url": "https://www.youtube.com/shorts/79L4vsHvZWU",
-      "thumbnail": "https://i4.ytimg.com/vi/79L4vsHvZWU/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-07T01:00:13+00:00"
-    },
-    {
       "id": "yt_pTtoKfjFstw",
       "videoId": "pTtoKfjFstw",
       "title": "[OFFICIAL VIDEO] YAMAHA YZF-R9",
@@ -195,16 +205,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-06-15T06:33:34+00:00"
-    },
-    {
-      "id": "yt_dIg8yjE5znQ",
-      "videoId": "dIg8yjE5znQ",
-      "title": "더 크게, 더 뜨겁게! 2026 K-MOTO FESTAㅣ2026 케모페ㅣ할리데이비슨ㅣharleydavidson",
-      "url": "https://www.youtube.com/watch?v=dIg8yjE5znQ",
-      "thumbnail": "https://i1.ytimg.com/vi/dIg8yjE5znQ/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-06-05T11:00:40+00:00"
     },
     {
       "id": "yt_3wrZxXZ3gBA",
