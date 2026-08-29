@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-30",
     "dayLabel": "SUNDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:31 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-30T08:01:18.373365+09:00",
+    "lastUpdatedISO": "2026-08-30T08:31:45.734894+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -43,10 +43,10 @@
         }
       },
       "harley": {
-        "newsCount": 1,
+        "newsCount": 0,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NORMAL",
+        "signal": "NO_SIGNIFICANT_UPDATE",
         "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
@@ -60,11 +60,7 @@
         "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "NORMAL",
-          "SCOOTER": "NORMAL",
-          "ELECTRIFICATION": "NORMAL"
-        }
+        "signalDetails": {}
       },
       "yamaha": {
         "newsCount": 0,
