@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-08-29",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-29T13:01:23.243821+09:00",
+    "lastUpdatedISO": "2026-08-29T18:01:16.300565+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -53,17 +53,17 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
         "signal": "NORMAL",
-        "activity": "MEDIUM",
+        "activity": "LOW",
         "topArticleTitle": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=173437687",
         "signalDetails": {
+          "NEW_MODEL": "NORMAL",
           "SCOOTER": "NORMAL",
-          "ELECTRIFICATION": "NORMAL",
-          "NEW_MODEL": "NORMAL"
+          "ELECTRIFICATION": "NORMAL"
         }
       },
       "yamaha": {
