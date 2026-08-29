@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-08-29",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-08-30",
+    "dayLabel": "SUNDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-08-29T18:01:16.300565+09:00",
+    "lastUpdatedISO": "2026-08-30T08:01:18.373365+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -34,12 +34,12 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173505565&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "harley": {
@@ -58,8 +58,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=173437687",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "NORMAL",
           "SCOOTER": "NORMAL",
@@ -80,21 +80,13 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [
-      {
-        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
-        "description": "거북·바이크진·비전오토모티브·SC모터스와 양해각서 체결...2027년 상반기부터 순차적으로 영업 시작 예정...혼다 모터사이클 전시와 시승, 판매는 물론 고객 상담과 서비스, 부품 공급 등 종합적인 고객 서비스 제공 ...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
         "description": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
@@ -121,32 +113,12 @@
       "publishedAt": "2026-08-28T11:31:03+09:00",
       "category": "PRODUCT_TECH",
       "summary": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "e9ee268a39e19b7a",
-      "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173437687",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-08-28T01:34:43+09:00",
-      "category": "COMPETITOR",
-      "summary": "거북·바이크진·비전오토모티브·SC모터스와 양해각서 체결...2027년 상반기부터 순차적으로 영업 시작 예정...혼다 모터사이클 전시와 시승, 판매는 물론 고객 상담과 서비스, 부품 공급 등 종합적인 고객 서비스 제공 ...",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
     },
     {
       "id": "e66b64c73796d1c4",
@@ -159,7 +131,7 @@
       "publishedAt": "2026-08-28T11:22:58+09:00",
       "category": "PRODUCT_TECH",
       "summary": "슈퍼 메테오 650 기반 커스텀 쵸퍼, 말레이시아 빌더 ‘아바 & 선즈’ 파딘 무사 제작로얄엔필드가 8월 2일 말레이시아에서 열린 ‘아트 오브 스피드 2026(Art of Speed 2026)’에서 세계에 단 한 대뿐인 커스텀 모터사이클 ‘옵시디언(Obsidian)’을 세계 최초로 공개했다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -170,24 +142,13 @@
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
-    "competitor": [
-      {
-        "title": "혼다, 수도권 및 주요 지역 신규 모터사이클 딜러 4개 사 선정",
-        "description": "거북·바이크진·비전오토모티브·SC모터스와 양해각서 체결...2027년 상반기부터 순차적으로 영업 시작 예정...혼다 모터사이클 전시와 시승, 판매는 물론 고객 상담과 서비스, 부품 공급 등 종합적인 고객 서비스 제공 ...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "TRIUMPH, 2027년형 신규 색상 라인업 공개",
         "description": "스포츠 감성과 프리미엄 디자인 강화, 6개 모델 새로운 페인트 옵션 적용트라이엄프 모터사이클이 2027년형 모델 라인업에 적용될 새로운 색상과 그래픽 디자인을 공개했다.이번 신규 페인트 옵션은 강렬한 색상 조합과 세련된 투톤 디자인, 스포티한 그래픽 요소를 통해 각 모델의 개성을 강조한 것이 특징이다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
