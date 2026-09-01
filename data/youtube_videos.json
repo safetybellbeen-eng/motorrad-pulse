@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-01T00:58:01.188972+00:00",
+    "lastUpdatedISO": "2026-09-01T23:46:04.543529+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_udQSv-t354s",
+      "videoId": "udQSv-t354s",
+      "title": "SHIFT LIKE A PRO, 프로처럼 매끄러운 변속 | Honda CBR500R E-Clutch",
+      "url": "https://www.youtube.com/shorts/udQSv-t354s",
+      "thumbnail": "https://i2.ytimg.com/vi/udQSv-t354s/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-01T01:12:05+00:00"
+    },
     {
       "id": "yt_Et591MudhQo",
       "videoId": "Et591MudhQo",
@@ -115,16 +125,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-08-12T08:00:33+00:00"
-    },
-    {
-      "id": "yt_Z3jYF6-vBgU",
-      "videoId": "Z3jYF6-vBgU",
-      "title": "복잡한 도심마저 모험이 되는 크로스오버 | Honda NX500 E-Clutchㅣ미들급 어드벤쳐",
-      "url": "https://www.youtube.com/watch?v=Z3jYF6-vBgU",
-      "thumbnail": "https://i3.ytimg.com/vi/Z3jYF6-vBgU/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-11T02:00:34+00:00"
     },
     {
       "id": "yt_MVV0iMH5Rnc",
