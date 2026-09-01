@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-02",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:29 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-02T08:01:38.387431+09:00",
+    "lastUpdatedISO": "2026-09-02T08:29:37.305472+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시",
         "topArticleUrl": "https://www.carguy.kr/news/articleView.html?idxno=62033",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "CUSTOMER": "NEW"
+          "CUSTOMER": "NEW",
+          "NEW_MODEL": "NEW"
         }
       },
       "ducati": {
