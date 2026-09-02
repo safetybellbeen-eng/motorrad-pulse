@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-02",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-02T13:01:24.571769+09:00",
+    "lastUpdatedISO": "2026-09-02T18:01:26.122272+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -87,6 +87,13 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
+        "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
+        "description": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
         "title": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시",
         "description": "온로드부터 오프로드·어드벤처·레이싱까지 라이딩 환경별 맞춤 체인 관리 솔루션글로벌 모터사이클 용품 및 파츠 전문 유통기업인 신원모터싸이클이 스위스 프리미엄 오일 브랜드 모토렉스(MOTOREX)의 체인 케어 케미컬 5종을 국내에 정식 출시했다.",
         "relatedNewsCount": 1,
@@ -101,7 +108,7 @@
       "id": "05c01fe68a743e47",
       "title": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시",
       "url": "https://www.carguy.kr/news/articleView.html?idxno=62033",
-      "source": "carguy.kr",
+      "source": "카가이",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
@@ -115,6 +122,24 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
+      "rank": 1
+    },
+    {
+      "id": "1657afa461d2cbe6",
+      "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
+      "url": "https://www.kmnews.net/REVIEW/?idx=173643297&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-02T13:48:48+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
+      "importance": 3.0,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 1
     },
     {
@@ -133,7 +158,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -148,6 +173,16 @@
         "impact": "Medium",
         "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
+        "description": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
