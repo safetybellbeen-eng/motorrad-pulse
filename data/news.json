@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-03",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:30 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-03T08:01:28.420011+09:00",
+    "lastUpdatedISO": "2026-09-03T08:30:54.065058+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
         "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460437KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%86%B5%ED%95%A9-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC-%ED%94%8C%EB%9E%AB%ED%8F%BC-bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%EB%B0%B4%ED%8B%B0%EC%A7%80%E2%80%99-%EC%95%B1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
         "signalDetails": {
-          "CUSTOMER": "RISING",
-          "NEW_MODEL": "RISING"
+          "NEW_MODEL": "RISING",
+          "CUSTOMER": "RISING"
         }
       },
       "ducati": {
