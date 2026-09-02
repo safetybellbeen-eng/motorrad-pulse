@@ -1,6 +1,6 @@
 {
   "date": "2026-09-02",
-  "lastAnalyzedAt": "2026-09-02T08:29:37.305519+09:00",
+  "lastAnalyzedAt": "2026-09-02T13:01:24.571813+09:00",
   "dailySignal": {
     "title": "신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -14,7 +14,7 @@
       "relatedNewsIds": [
         "05c01fe68a743e47"
       ],
-      "impact": 3.5,
+      "impact": 3.0,
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     },
     {
