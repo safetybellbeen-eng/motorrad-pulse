@@ -1,23 +1,13 @@
 {
-  "generatedAtISO": "2026-09-02T18:01:26.126753+09:00",
+  "generatedAtISO": "2026-09-03T08:01:28.425482+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-20",
-      "newsCount": 3,
-      "byBrand": {
-        "bmw": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 3
-      }
-    },
     {
       "date": "2026-08-21",
       "newsCount": 3,
       "byBrand": {
-        "bmw": 1,
-        "honda": 1
+        "honda": 1,
+        "bmw": 1
       },
       "byCategory": {
         "PRODUCT_TECH": 3
@@ -121,11 +111,19 @@
     },
     {
       "date": "2026-09-02",
-      "newsCount": 1,
-      "byBrand": {},
+      "newsCount": 2,
+      "byBrand": {
+        "bmw": 1
+      },
       "byCategory": {
-        "PRODUCT_TECH": 1
+        "PRODUCT_TECH": 2
       }
+    },
+    {
+      "date": "2026-09-03",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }

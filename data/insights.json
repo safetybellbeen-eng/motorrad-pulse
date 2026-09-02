@@ -1,20 +1,21 @@
 {
-  "date": "2026-09-02",
-  "lastAnalyzedAt": "2026-09-02T18:01:26.122365+09:00",
+  "date": "2026-09-03",
+  "lastAnalyzedAt": "2026-09-03T08:01:28.420068+09:00",
   "dailySignal": {
     "title": "신규 모델 및 Adventure 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
   "market": [],
   "competitor": [],
   "productTech": [
     {
-      "title": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시",
-      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 1일 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vanta",
+      "title": "브랜드 Experience·Community 활동 확대",
+      "summary": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
       "relatedNewsIds": [
+        "7c8bf31138c6e9a2",
         "05c01fe68a743e47"
       ],
-      "impact": 3.0,
+      "impact": 3.6,
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     },
     {
@@ -32,7 +33,7 @@
       "relatedNewsIds": [
         "0b3b1cf1c9a1e90d"
       ],
-      "impact": 2.0,
+      "impact": 1.5,
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     }
   ],
@@ -40,7 +41,7 @@
   "teamBrief": {
     "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
     "competitor": "오늘 수집된 뉴스 중 경쟁 브랜드 관련 주요 기사는 확인되지 않았습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 3건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 4건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
     "todayInsight": "오늘은 신규 모델, Adventure, 시장/판매 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
