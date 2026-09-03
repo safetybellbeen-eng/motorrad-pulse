@@ -2,16 +2,16 @@
   "meta": {
     "date": "2026-09-03",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:30 AM",
+    "lastUpdated": "01:02 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-03T08:30:54.065058+09:00",
+    "lastUpdatedISO": "2026-09-03T13:02:23.764235+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "CUSTOMER",
         "signal": "RISING",
@@ -92,13 +92,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
-        "title": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시",
-        "description": "온로드부터 오프로드·어드벤처·레이싱까지 라이딩 환경별 맞춤 체인 관리 솔루션글로벌 모터사이클 용품 및 파츠 전문 유통기업인 신원모터싸이클이 스위스 프리미엄 오일 브랜드 모토렉스(MOTOREX)의 체인 케어 케미컬 5종을 국내에 정식 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -125,18 +118,18 @@
       "rank": 1
     },
     {
-      "id": "05c01fe68a743e47",
-      "title": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시",
-      "url": "https://www.carguy.kr/news/articleView.html?idxno=62033",
-      "source": "카가이",
+      "id": "89ab3b542b9820f9",
+      "title": "BMW 모토라드, 모터사이클 라이프스타일 플랫폼 '밴티지' 앱 출시",
+      "url": "https://www.etnews.com/20260901000258",
+      "source": "전자신문",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
         "bmw"
       ],
-      "publishedAt": "2026-09-01T11:04:27+09:00",
+      "publishedAt": "2026-09-01T13:52:20+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 1일 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vanta",
+      "summary": "BMW 모터사이클 부문 BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼",
       "importance": 3.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -161,24 +154,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "0b3b1cf1c9a1e90d",
-      "title": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173614420&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-01T12:28:06+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "온로드부터 오프로드·어드벤처·레이싱까지 라이딩 환경별 맞춤 체인 관리 솔루션글로벌 모터사이클 용품 및 파츠 전문 유통기업인 신원모터싸이클이 스위스 프리미엄 오일 브랜드 모토렉스(MOTOREX)의 체인 케어 케미컬 5종을 국내에 정식 출시했다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -202,16 +177,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시",
-        "description": "온로드부터 오프로드·어드벤처·레이싱까지 라이딩 환경별 맞춤 체인 관리 솔루션글로벌 모터사이클 용품 및 파츠 전문 유통기업인 신원모터싸이클이 스위스 프리미엄 오일 브랜드 모토렉스(MOTOREX)의 체인 케어 케미컬 5종을 국내에 정식 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
