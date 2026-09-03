@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-02T23:49:53.993590+00:00",
+    "lastUpdatedISO": "2026-09-03T23:46:08.839586+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_R_iFkl6dDlA",
+      "videoId": "R_iFkl6dDlA",
+      "title": "휴가철 몽키 한 대면 다 됨. [시작은 혼다!]",
+      "url": "https://www.youtube.com/shorts/R_iFkl6dDlA",
+      "thumbnail": "https://i3.ytimg.com/vi/R_iFkl6dDlA/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-03T01:00:34+00:00"
+    },
     {
       "id": "yt_udQSv-t354s",
       "videoId": "udQSv-t354s",
@@ -95,16 +105,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-08-14T09:21:48+00:00"
-    },
-    {
-      "id": "yt_PqnXK8VBnwc",
-      "videoId": "PqnXK8VBnwc",
-      "title": "[바이크 팁] 모터사이클 수신호, 이것만 알면 됩니다 #HEC #HondaEducationCenter #혼다모터사이클",
-      "url": "https://www.youtube.com/shorts/PqnXK8VBnwc",
-      "thumbnail": "https://i1.ytimg.com/vi/PqnXK8VBnwc/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-14T01:00:09+00:00"
     },
     {
       "id": "yt_xnnYYED_Qgs",
