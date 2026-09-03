@@ -1,10 +1,36 @@
 {
-  "lastCollectedAt": "2026-09-03T18:01:00.041573+09:00",
+  "lastCollectedAt": "2026-09-04T08:01:05.252882+09:00",
   "news": [
+    {
+      "title": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'",
+      "url": "https://www.kmnews.net/REVIEW/?idx=173677435&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "publishedAt": "2026-09-03T11:55:29+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 16,
+      "brandGroups": [
+        "bmw"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'&nbsp;&nbsp;한국이륜차신문",
+      "id": "7a722de75e688d5b",
+      "collectedAt": "2026-09-04T08:01:05.252882+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
     {
       "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
       "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460437KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%86%B5%ED%95%A9-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC-%ED%94%8C%EB%9E%AB%ED%8F%BC-bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%EB%B0%B4%ED%8B%B0%EC%A7%80%E2%80%99-%EC%95%B1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
-      "source": "BMW Group",
+      "source": "press.bmwgroup.com",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "publishedAt": "2026-09-02T16:00:05+09:00",
@@ -15,9 +41,9 @@
         "bmw"
       ],
       "acquisitionMethod": "google_news",
-      "description": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시&nbsp;&nbsp;BMW Group",
+      "description": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시&nbsp;&nbsp;press.bmwgroup.com",
       "id": "7c8bf31138c6e9a2",
-      "collectedAt": "2026-09-03T18:01:00.041573+09:00",
+      "collectedAt": "2026-09-04T08:01:05.252882+09:00",
       "category": null,
       "summary": null,
       "importance": null,
