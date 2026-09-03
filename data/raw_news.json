@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-09-03T08:30:30.104238+09:00",
+  "lastCollectedAt": "2026-09-03T13:02:03.534553+09:00",
   "news": [
     {
       "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
@@ -17,7 +17,7 @@
       "acquisitionMethod": "google_news",
       "description": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시&nbsp;&nbsp;BMW Group",
       "id": "7c8bf31138c6e9a2",
-      "collectedAt": "2026-09-03T08:30:30.104238+09:00",
+      "collectedAt": "2026-09-03T13:02:03.534553+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -28,22 +28,22 @@
       "relatedCoverageCount": 1
     },
     {
-      "title": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시",
-      "url": "https://www.carguy.kr/news/articleView.html?idxno=62033",
-      "source": "카가이",
+      "title": "BMW 모토라드, 모터사이클 라이프스타일 플랫폼 '밴티지' 앱 출시",
+      "url": "https://www.etnews.com/20260901000258",
+      "source": "전자신문",
       "sourceType": "media",
       "sourceGroup": "bmw",
-      "publishedAt": "2026-09-01T11:04:27+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
+      "publishedAt": "2026-09-01T13:52:20+09:00",
+      "sourceTier": "business_media",
+      "sourceQualityScore": 75,
       "businessRelevanceScore": 12,
       "brandGroups": [
         "bmw"
       ],
       "acquisitionMethod": "google_news",
-      "description": "통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 출시&nbsp;&nbsp;카가이",
-      "id": "05c01fe68a743e47",
-      "collectedAt": "2026-09-03T08:30:30.104238+09:00",
+      "description": "BMW 모토라드, 모터사이클 라이프스타일 플랫폼 '밴티지' 앱 출시&nbsp;&nbsp;전자신문",
+      "id": "89ab3b542b9820f9",
+      "collectedAt": "2026-09-03T13:02:03.534553+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -51,7 +51,7 @@
       "bmwInsight": null,
       "isTopNews": false,
       "aiProcessed": false,
-      "relatedCoverageCount": 2
+      "relatedCoverageCount": 1
     },
     {
       "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
@@ -67,30 +67,6 @@
       "acquisitionMethod": "google_news",
       "description": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'&nbsp;&nbsp;한국이륜차신문",
       "id": "1657afa461d2cbe6",
-      "collectedAt": "2026-09-02T18:01:04.384140+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    },
-    {
-      "title": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173614420&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "publishedAt": "2026-09-01T12:28:06+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 12,
-      "brandGroups": [],
-      "acquisitionMethod": "google_news",
-      "description": "모토렉스 ‘프리미엄 체인 케어 케미컬’ 5종 출시&nbsp;&nbsp;한국이륜차신문",
-      "id": "0b3b1cf1c9a1e90d",
       "collectedAt": "2026-09-02T18:01:04.384140+09:00",
       "category": null,
       "summary": null,
