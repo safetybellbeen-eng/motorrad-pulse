@@ -1,0 +1,36 @@
+{
+  "savedAtISO": "2026-09-03T18:01:17.763514+09:00",
+  "articles": [
+    {
+      "id": "7c8bf31138c6e9a2",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "BMW Group",
+      "domain": "www.press.bmwgroup.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CUSTOMER"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-02T16:00:05+09:00"
+    },
+    {
+      "id": "1657afa461d2cbe6",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "MARKET",
+        "ADVENTURE",
+        "SCOOTER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-02T13:48:48+09:00"
+    }
+  ]
+}
