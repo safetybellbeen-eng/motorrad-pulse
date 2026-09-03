@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-09-03T13:02:03.534553+09:00",
+  "lastCollectedAt": "2026-09-03T18:01:00.041573+09:00",
   "news": [
     {
       "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
@@ -17,33 +17,7 @@
       "acquisitionMethod": "google_news",
       "description": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시&nbsp;&nbsp;BMW Group",
       "id": "7c8bf31138c6e9a2",
-      "collectedAt": "2026-09-03T13:02:03.534553+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    },
-    {
-      "title": "BMW 모토라드, 모터사이클 라이프스타일 플랫폼 '밴티지' 앱 출시",
-      "url": "https://www.etnews.com/20260901000258",
-      "source": "전자신문",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "publishedAt": "2026-09-01T13:52:20+09:00",
-      "sourceTier": "business_media",
-      "sourceQualityScore": 75,
-      "businessRelevanceScore": 12,
-      "brandGroups": [
-        "bmw"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "BMW 모토라드, 모터사이클 라이프스타일 플랫폼 '밴티지' 앱 출시&nbsp;&nbsp;전자신문",
-      "id": "89ab3b542b9820f9",
-      "collectedAt": "2026-09-03T13:02:03.534553+09:00",
+      "collectedAt": "2026-09-03T18:01:00.041573+09:00",
       "category": null,
       "summary": null,
       "importance": null,
