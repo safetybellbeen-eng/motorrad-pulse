@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-03T23:46:08.839586+00:00",
+    "lastUpdatedISO": "2026-09-04T23:41:08.353838+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_klyTHEnaCpY",
+      "videoId": "klyTHEnaCpY",
+      "title": "[HSRS] 추월상황 위험예측 - \"저 정도면 멀지\" 추월상황에서 방심하면 안되는 이유 | #왕복2차선 #추월",
+      "url": "https://www.youtube.com/shorts/klyTHEnaCpY",
+      "thumbnail": "https://i4.ytimg.com/vi/klyTHEnaCpY/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-04T01:00:28+00:00"
+    },
     {
       "id": "yt_R_iFkl6dDlA",
       "videoId": "R_iFkl6dDlA",
@@ -85,16 +95,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-08-24T08:39:49+00:00"
-    },
-    {
-      "id": "yt_rxjnMpsa7-c",
-      "videoId": "rxjnMpsa7-c",
-      "title": "날렵한 스타일링으로 완성된 슈퍼스포츠 | Honda CBR500R E-Clutch",
-      "url": "https://www.youtube.com/watch?v=rxjnMpsa7-c",
-      "thumbnail": "https://i3.ytimg.com/vi/rxjnMpsa7-c/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-18T04:00:29+00:00"
     },
     {
       "id": "yt_ttrXc1NMv3g",
