@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-09-04T08:26:58.513825+09:00",
+  "lastCollectedAt": "2026-09-04T13:01:03.048878+09:00",
   "news": [
     {
       "title": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'",
@@ -43,7 +43,33 @@
       "acquisitionMethod": "google_news",
       "description": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시&nbsp;&nbsp;BMW Group",
       "id": "7c8bf31138c6e9a2",
-      "collectedAt": "2026-09-04T08:26:58.513825+09:00",
+      "collectedAt": "2026-09-04T13:01:03.048878+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-09-04T10:08:16+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시&nbsp;&nbsp;한국이륜차신문",
+      "id": "3bfb2df97cab965b",
+      "collectedAt": "2026-09-04T13:01:03.048878+09:00",
       "category": null,
       "summary": null,
       "importance": null,
