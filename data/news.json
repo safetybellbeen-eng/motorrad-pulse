@@ -2,27 +2,27 @@
   "meta": {
     "date": "2026-09-04",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-04T13:01:22.542746+09:00",
+    "lastUpdatedISO": "2026-09-04T18:01:19.072837+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 3,
-        "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": "CUSTOMER",
+        "newsCount": 2,
+        "primaryTheme": "ADVENTURE",
+        "secondaryTheme": "TOURING",
         "signal": "NEW",
         "activity": "HIGH",
-        "topArticleTitle": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
-        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460437KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%86%B5%ED%95%A9-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC-%ED%94%8C%EB%9E%AB%ED%8F%BC-bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%EB%B0%B4%ED%8B%B0%EC%A7%80%E2%80%99-%EC%95%B1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "TOURING": "NEW",
           "CUSTOMER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING",
-          "ADVENTURE": "NEW"
+          "ADVENTURE": "NEW",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -90,13 +90,6 @@
     ],
     "productTech": [
       {
-        "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
-        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 1일 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 공식 출시한다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
         "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
         "description": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
         "relatedNewsCount": 1,
@@ -135,24 +128,22 @@
       "rank": 1
     },
     {
-      "id": "7c8bf31138c6e9a2",
-      "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
-      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460437KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%86%B5%ED%95%A9-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC-%ED%94%8C%EB%9E%AB%ED%8F%BC-bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%EB%B0%B4%ED%8B%B0%EC%A7%80%E2%80%99-%EC%95%B1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
-      "source": "BMW Group",
+      "id": "1657afa461d2cbe6",
+      "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
+      "url": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173643297",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-02T16:00:05+09:00",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-04T16:13:18+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 1일 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 공식 출시한다.",
+      "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
       "importance": 3.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 2
+      "topNewsGroup": "others",
+      "rank": 1
     },
     {
       "id": "3bfb2df97cab965b",
@@ -173,24 +164,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
-    },
-    {
-      "id": "1657afa461d2cbe6",
-      "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
-      "url": "https://www.kmnews.net/REVIEW/?idx=173643297&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-02T13:48:48+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
-      "importance": 2.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
@@ -209,16 +182,6 @@
       }
     ],
     "productTech": [
-      {
-        "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
-        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 1일 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 공식 출시한다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
       {
         "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
         "description": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
