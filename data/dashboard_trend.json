@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-09-04T08:27:15.728294+09:00",
+  "generatedAtISO": "2026-09-04T13:01:22.546775+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -120,9 +120,13 @@
     },
     {
       "date": "2026-09-04",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 1,
+      "byBrand": {
+        "honda": 1
+      },
+      "byCategory": {
+        "COMPETITOR": 1
+      }
     }
   ]
 }

@@ -1,0 +1,65 @@
+{
+  "savedAtISO": "2026-09-04T13:01:22.543421+09:00",
+  "articles": [
+    {
+      "id": "7a722de75e688d5b",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE",
+        "TOURING"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-03T11:55:29+09:00"
+    },
+    {
+      "id": "7c8bf31138c6e9a2",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "BMW Group",
+      "domain": "www.press.bmwgroup.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CUSTOMER"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-02T16:00:05+09:00"
+    },
+    {
+      "id": "3bfb2df97cab965b",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-09-04T10:08:16+09:00"
+    },
+    {
+      "id": "1657afa461d2cbe6",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "MARKET",
+        "ADVENTURE",
+        "SCOOTER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-02T13:48:48+09:00"
+    }
+  ]
+}

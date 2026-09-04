@@ -2,16 +2,16 @@
   "meta": {
     "date": "2026-09-04",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:27 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-04T08:27:15.723203+09:00",
+    "lastUpdatedISO": "2026-09-04T13:01:22.542746+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 4,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "CUSTOMER",
         "signal": "NEW",
@@ -19,10 +19,10 @@
         "topArticleTitle": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
         "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460437KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%86%B5%ED%95%A9-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC-%ED%94%8C%EB%9E%AB%ED%8F%BC-bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%EB%B0%B4%ED%8B%B0%EC%A7%80%E2%80%99-%EC%95%B1-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "ADVENTURE": "NEW",
           "TOURING": "NEW",
-          "CUSTOMER": "CONTINUING"
+          "CUSTOMER": "CONTINUING",
+          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "NEW"
         }
       },
       "ducati": {
@@ -56,13 +56,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
         "signalDetails": {}
       },
       "yamaha": {
@@ -79,7 +79,15 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [],
+    "competitor": [
+      {
+        "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+        "description": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      }
+    ],
     "productTech": [
       {
         "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
@@ -147,6 +155,26 @@
       "rank": 2
     },
     {
+      "id": "3bfb2df97cab965b",
+      "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-09-04T10:08:16+09:00",
+      "category": "COMPETITOR",
+      "summary": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "1657afa461d2cbe6",
       "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
       "url": "https://www.kmnews.net/REVIEW/?idx=173643297&bmode=view",
@@ -168,7 +196,18 @@
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
-    "competitor": [],
+    "competitor": [
+      {
+        "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+        "description": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "productTech": [
       {
         "title": "BMW 모토라드, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 앱 서비스 공식 출시",
