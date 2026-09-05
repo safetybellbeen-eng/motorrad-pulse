@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-05",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-06",
+    "dayLabel": "SUNDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-05T18:01:18.373753+09:00",
+    "lastUpdatedISO": "2026-09-06T08:01:18.077635+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,10 +19,10 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "ADVENTURE": "CONTINUING",
           "NEW_MODEL": "NORMAL",
           "CUSTOMER": "NORMAL",
-          "TOURING": "CONTINUING"
+          "TOURING": "CONTINUING",
+          "ADVENTURE": "CONTINUING"
         }
       },
       "ducati": {
@@ -101,6 +101,26 @@
   },
   "news": [
     {
+      "id": "3bfb2df97cab965b",
+      "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-09-06T00:42:13+09:00",
+      "category": "COMPETITOR",
+      "summary": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "1657afa461d2cbe6",
       "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
       "url": "https://www.kmnews.net/REVIEW/?bmode=view&idx=173643297",
@@ -117,26 +137,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "3bfb2df97cab965b",
-      "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-09-04T10:08:16+09:00",
-      "category": "COMPETITOR",
-      "summary": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
