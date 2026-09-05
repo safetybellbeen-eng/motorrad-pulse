@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-05",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:11 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-05T08:11:50.993154+09:00",
+    "lastUpdatedISO": "2026-09-05T13:01:15.144204+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,10 +19,10 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "CUSTOMER": "CONTINUING",
-          "ADVENTURE": "CONTINUING",
           "TOURING": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "ADVENTURE": "CONTINUING",
+          "NEW_MODEL": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "ducati": {
@@ -95,38 +95,11 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'",
-        "description": "420cc 직렬 2기통·178kg 경량 차체·4가지 라이딩 모드, '팔방미인 F 450 GS'BMW의 모터사이클 부문인 BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 오는 9월 8일 국내 공식 출시한다.F 450 GS는 더 많은 라이더가 온로드와 오프로드를 넘나드는 진정한 GS의 세계를 경험할 수 있도록 새롭게 개발된 모델이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "7a722de75e688d5b",
-      "title": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'",
-      "url": "https://www.kmnews.net/REVIEW/?idx=173677435&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-03T11:55:29+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "420cc 직렬 2기통·178kg 경량 차체·4가지 라이딩 모드, '팔방미인 F 450 GS'BMW의 모터사이클 부문인 BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 오는 9월 8일 국내 공식 출시한다.F 450 GS는 더 많은 라이더가 온로드와 오프로드를 넘나드는 진정한 GS의 세계를 경험할 수 있도록 새롭게 개발된 모델이다.",
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
-    },
     {
       "id": "1657afa461d2cbe6",
       "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
@@ -135,7 +108,7 @@
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-09-04T22:20:37+09:00",
+      "publishedAt": "2026-09-05T11:27:44+09:00",
       "category": "PRODUCT_TECH",
       "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
       "importance": 3.0,
@@ -158,7 +131,7 @@
       "publishedAt": "2026-09-04T10:08:16+09:00",
       "category": "COMPETITOR",
       "summary": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
@@ -189,16 +162,6 @@
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴모델_BMW모토라드] 일상부터 투어링, 오프로드까지 다재다능한 성능 'F 450 GS'",
-        "description": "420cc 직렬 2기통·178kg 경량 차체·4가지 라이딩 모드, '팔방미인 F 450 GS'BMW의 모터사이클 부문인 BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 오는 9월 8일 국내 공식 출시한다.F 450 GS는 더 많은 라이더가 온로드와 오프로드를 넘나드는 진정한 GS의 세계를 경험할 수 있도록 새롭게 개발된 모델이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
