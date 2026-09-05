@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-06",
     "dayLabel": "SUNDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:09 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-06T08:01:18.077635+09:00",
+    "lastUpdatedISO": "2026-09-06T08:09:31.889744+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "NORMAL",
           "CUSTOMER": "NORMAL",
+          "NEW_MODEL": "NORMAL",
           "TOURING": "CONTINUING",
           "ADVENTURE": "CONTINUING"
         }
@@ -104,7 +104,7 @@
       "id": "3bfb2df97cab965b",
       "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
       "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [
