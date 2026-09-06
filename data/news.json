@@ -2,28 +2,23 @@
   "meta": {
     "date": "2026-09-06",
     "dayLabel": "SUNDAY",
-    "lastUpdated": "08:09 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-06T08:09:31.889744+09:00",
+    "lastUpdatedISO": "2026-09-06T13:01:13.415509+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 1,
-        "primaryTheme": "ADVENTURE",
-        "secondaryTheme": "TOURING",
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "CUSTOMER": "NORMAL",
-          "NEW_MODEL": "NORMAL",
-          "TOURING": "CONTINUING",
-          "ADVENTURE": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "ducati": {
         "newsCount": 0,
@@ -104,7 +99,7 @@
       "id": "3bfb2df97cab965b",
       "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
       "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [
@@ -131,7 +126,7 @@
       "publishedAt": "2026-09-05T11:27:44+09:00",
       "category": "PRODUCT_TECH",
       "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
