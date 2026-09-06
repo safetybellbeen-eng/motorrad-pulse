@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-06",
-    "dayLabel": "SUNDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-07",
+    "dayLabel": "MONDAY",
+    "lastUpdated": "08:00 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-06T18:01:14.790687+09:00",
+    "lastUpdatedISO": "2026-09-07T08:00:31.871675+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -108,7 +108,7 @@
       "publishedAt": "2026-09-06T00:42:13+09:00",
       "category": "COMPETITOR",
       "summary": "레블1100 MT·CL500 금융 및 구매 지원… Small-Fun 4종에는 20만 원 용품 지원금CT125 등 어드벤처 모델 구매 고객, 혼다 어드벤처 아카데미 50% 할인 혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 9월 한 달간 혼다 모터사이클 구매 고객을 대상으로 금융 및 용품 지원, 라이딩 교육 할인 등을 제공하는 ‘9월 모터사이클 구매 프로모션...",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
