@@ -1,31 +1,4 @@
 {
-  "lastCollectedAt": "2026-09-07T18:00:55.166049+09:00",
-  "news": [
-    {
-      "title": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173717068&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "publishedAt": "2026-09-06T00:42:13+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 10,
-      "brandGroups": [
-        "honda"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "혼다, 가을 라이딩 시즌 맞아 ‘9월 모터사이클매 프로모션’ 실시&nbsp;&nbsp;한국이륜차신문",
-      "id": "3bfb2df97cab965b",
-      "collectedAt": "2026-09-06T18:00:54.181920+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    }
-  ]
+  "lastCollectedAt": "2026-09-08T08:01:02.172419+09:00",
+  "news": []
 }
