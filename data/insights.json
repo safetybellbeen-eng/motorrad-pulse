@@ -1,10 +1,7 @@
 {
   "date": "2026-09-07",
-  "lastAnalyzedAt": "2026-09-07T08:00:31.871729+09:00",
-  "dailySignal": {
-    "title": "Adventure 및 시장/판매 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
-  },
+  "lastAnalyzedAt": "2026-09-07T13:01:16.774396+09:00",
+  "dailySignal": null,
   "market": [],
   "competitor": [
     {
@@ -17,23 +14,13 @@
       "bmwView": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
     }
   ],
-  "productTech": [
-    {
-      "title": "[뉴모델_존테스] 고성능 엔진으로 프리미엄 어드벤처 스쿠터 시장 공략 '368G-ADX ETC 2027'",
-      "summary": "존테스 368G-ADX ETC(2027), 강력한 엔진 성능과 첨단 편의사양으로 도심은 물론 장거리 투어링까지 폭넓게 대응강력한 368cc 엔진과 모터사이클 감성의 차체 구성, 다양한 스마트 기능을 앞세워 프리미엄 어드벤처 스쿠터 시장에서 존재감을 높이고 있는 존테스의 368G-ADX ETC(2027)가 한층 성숙한 모습으로 출시됐다.",
-      "relatedNewsIds": [
-        "1657afa461d2cbe6"
-      ],
-      "impact": 2.5,
-      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-    }
-  ],
+  "productTech": [],
   "customerTrend": [],
   "teamBrief": {
     "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
     "competitor": "혼다 등 경쟁 브랜드 관련 뉴스가 1건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 1건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "productTech": "오늘 수집된 뉴스 중 제품/기술 관련 주요 기사는 확인되지 않았습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
-    "todayInsight": "오늘은 Adventure, 시장/판매 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+    "todayInsight": "오늘 수집된 뉴스에서는 특별히 두드러진 주제 편중은 확인되지 않았습니다."
   }
 }
