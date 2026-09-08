@@ -1,4 +1,57 @@
 {
-  "lastCollectedAt": "2026-09-08T08:40:05.614964+09:00",
-  "news": []
+  "lastCollectedAt": "2026-09-08T13:01:10.443729+09:00",
+  "news": [
+    {
+      "title": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62492",
+      "source": "dailycar.co.kr",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "publishedAt": "2026-09-08T10:59:05+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 24,
+      "brandGroups": [
+        "bmw"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원&nbsp;&nbsp;dailycar.co.kr",
+      "id": "dd750829a53b65b0",
+      "collectedAt": "2026-09-08T13:01:10.443729+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "“178kg 경량 차체”…BMW모토라드, 모터사이클 ‘뉴 F450 GS’ 출시",
+      "url": "https://www.mk.co.kr/news/business/12146736",
+      "source": "mk.co.kr",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "publishedAt": "2026-09-08T09:54:19+09:00",
+      "sourceTier": "business_media",
+      "sourceQualityScore": 75,
+      "businessRelevanceScore": 12,
+      "brandGroups": [
+        "bmw"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "“178kg 경량 차체”…BMW모토라드, 모터사이클 ‘뉴 F450 GS’ 출시&nbsp;&nbsp;mk.co.kr",
+      "id": "1792ee7402fbb33b",
+      "collectedAt": "2026-09-08T13:01:10.443729+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
