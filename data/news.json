@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-09",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:34 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-09T08:01:32.213223+09:00",
+    "lastUpdatedISO": "2026-09-09T08:34:23.867830+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
