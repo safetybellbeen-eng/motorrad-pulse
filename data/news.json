@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-08",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-08T13:01:29.470274+09:00",
+    "lastUpdatedISO": "2026-09-08T18:01:27.371503+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -54,10 +54,10 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
+        "newsCount": 0,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NORMAL",
+        "signal": "NO_SIGNIFICANT_UPDATE",
         "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
@@ -114,7 +114,7 @@
       "id": "1792ee7402fbb33b",
       "title": "“178kg 경량 차체”…BMW모토라드, 모터사이클 ‘뉴 F450 GS’ 출시",
       "url": "https://www.mk.co.kr/news/business/12146736",
-      "source": "mk.co.kr",
+      "source": "매일경제",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
