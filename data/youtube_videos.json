@@ -1,11 +1,31 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-07T23:56:57.865381+00:00",
+    "lastUpdatedISO": "2026-09-08T23:48:17.502151+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_Z9e_2ufsw5c",
+      "videoId": "Z9e_2ufsw5c",
+      "title": "F 450 GS OPEN",
+      "url": "https://www.youtube.com/watch?v=Z9e_2ufsw5c",
+      "thumbnail": "https://i3.ytimg.com/vi/Z9e_2ufsw5c/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-09-08T07:53:39+00:00"
+    },
+    {
+      "id": "yt_caimwkTGW-8",
+      "videoId": "caimwkTGW-8",
+      "title": "GRIP THE TRAIL, NOT THE CLUTCH | Honda NX500 E-Clutch | 미들급 어드벤처",
+      "url": "https://www.youtube.com/watch?v=caimwkTGW-8",
+      "thumbnail": "https://i4.ytimg.com/vi/caimwkTGW-8/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-08T01:00:07+00:00"
+    },
     {
       "id": "yt_klyTHEnaCpY",
       "videoId": "klyTHEnaCpY",
@@ -67,16 +87,6 @@
       "publishedAt": "2026-08-25T02:00:11+00:00"
     },
     {
-      "id": "yt_0gQm8-0tM4E",
-      "videoId": "0gQm8-0tM4E",
-      "title": "GRIP THE TRAIL, NOT THE CLUTCH | Honda NX500 E-Clutchㅣ미들급 어드벤쳐",
-      "url": "https://www.youtube.com/shorts/0gQm8-0tM4E",
-      "thumbnail": "https://i1.ytimg.com/vi/0gQm8-0tM4E/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-25T01:00:09+00:00"
-    },
-    {
       "id": "yt_QvCj6GtIS0o",
       "videoId": "QvCj6GtIS0o",
       "title": "BMW 모토라드 X 박스까남 입토바이",
@@ -115,16 +125,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-08-12T09:15:38+00:00"
-    },
-    {
-      "id": "yt_JYdW15iwGWg",
-      "videoId": "JYdW15iwGWg",
-      "title": "BMW 모토라드 X 박스까남 입토바이",
-      "url": "https://www.youtube.com/shorts/JYdW15iwGWg",
-      "thumbnail": "https://i3.ytimg.com/vi/JYdW15iwGWg/hqdefault.jpg",
-      "channelTitle": "BMWMotorradKorea",
-      "brandGroup": "bmw",
-      "publishedAt": "2026-08-12T08:00:33+00:00"
     },
     {
       "id": "yt_MVV0iMH5Rnc",
