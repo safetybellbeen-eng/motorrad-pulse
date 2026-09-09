@@ -1,26 +1,26 @@
 {
   "meta": {
-    "date": "2026-09-09",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-10",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-09T18:01:31.864016+09:00",
+    "lastUpdatedISO": "2026-09-10T08:01:32.446545+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 3,
+        "newsCount": 4,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
-        "signal": "CONTINUING",
+        "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO?language=ko",
+        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "ADVENTURE": "CONTINUING"
+          "ADVENTURE": "RISING",
+          "NEW_MODEL": "RISING"
         }
       },
       "ducati": {
@@ -113,10 +113,10 @@
   },
   "news": [
     {
-      "id": "0921872430b4657d",
+      "id": "094a5abddbc4a9eb",
       "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO?language=ko",
-      "source": "BMW Motorrad Korea Press",
+      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
+      "source": "BMW Group",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
@@ -145,7 +145,7 @@
       "publishedAt": "2026-09-08T10:59:05+09:00",
       "category": "PRODUCT_TECH",
       "summary": "BMW 모토라드가 미들급 어드벤처 모델 ‘BMW 뉴 F 450 GS’를 8일 출시하고 이날부터 본격 시판에 나섰다. BMW 뉴 F 450 GS는 경량화된 차체와 우수한 조작성을 바탕으로 도심 주행부터 온·오프로드 장거리 투어링까지 폭넓게 대응하도록 개발됐다. 파워트레인은 배기량 420cc 2기통 엔진을 탑재해 최고출력 48마력, 최대토크...",
-      "importance": 3.5,
+      "importance": 3.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,

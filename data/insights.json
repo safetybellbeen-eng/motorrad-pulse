@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-09",
-  "lastAnalyzedAt": "2026-09-09T18:01:31.864078+09:00",
+  "date": "2026-09-10",
+  "lastAnalyzedAt": "2026-09-10T08:01:32.446642+09:00",
   "dailySignal": {
     "title": "신규 모델 및 Adventure 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -22,7 +22,7 @@
       "title": "Adventure Segment 신제품 움직임",
       "summary": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
       "relatedNewsIds": [
-        "0921872430b4657d",
+        "094a5abddbc4a9eb",
         "dd750829a53b65b0",
         "1792ee7402fbb33b"
       ],

@@ -1,18 +1,7 @@
 {
-  "generatedAtISO": "2026-09-09T18:01:31.870403+09:00",
+  "generatedAtISO": "2026-09-10T08:01:32.453884+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-27",
-      "newsCount": 2,
-      "byBrand": {
-        "harley": 1
-      },
-      "byCategory": {
-        "COMPETITOR": 1,
-        "PRODUCT_TECH": 1
-      }
-    },
     {
       "date": "2026-08-28",
       "newsCount": 3,
@@ -103,12 +92,12 @@
     },
     {
       "date": "2026-09-08",
-      "newsCount": 3,
+      "newsCount": 4,
       "byBrand": {
-        "bmw": 3
+        "bmw": 4
       },
       "byCategory": {
-        "PRODUCT_TECH": 3
+        "PRODUCT_TECH": 4
       }
     },
     {
@@ -121,6 +110,12 @@
         "COMPETITOR": 1,
         "PRODUCT_TECH": 2
       }
+    },
+    {
+      "date": "2026-09-10",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
