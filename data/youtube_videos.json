@@ -1,11 +1,41 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-08T23:48:17.502151+00:00",
+    "lastUpdatedISO": "2026-09-09T23:48:03.694072+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_eJ8LA_O9d3k",
+      "videoId": "eJ8LA_O9d3k",
+      "title": "[웰컴클래스] 혼다모터사이클과 함께하는 안전한 라이딩 습관 만들기!ㅣ시작은 혼다! : Honda Welcome Class",
+      "url": "https://www.youtube.com/shorts/eJ8LA_O9d3k",
+      "thumbnail": "https://i2.ytimg.com/vi/eJ8LA_O9d3k/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-09T08:00:14+00:00"
+    },
+    {
+      "id": "yt_r0I9gLjr99E",
+      "videoId": "r0I9gLjr99E",
+      "title": "슈퍼커브와 함께 오랜 꿈을 현실로! \"Dreams Come True\" l 시작은 혼다 : Honda Welcome Class - 슈퍼커브 클래스",
+      "url": "https://www.youtube.com/shorts/r0I9gLjr99E",
+      "thumbnail": "https://i3.ytimg.com/vi/r0I9gLjr99E/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-09T04:32:06+00:00"
+    },
+    {
+      "id": "yt_jmVE9pxcEMA",
+      "videoId": "jmVE9pxcEMA",
+      "title": "[시작은 혼다!] \"오토바이 입문의 꿈\" 혼다와 함께ㅣHonda Welcome Class - 풀영상",
+      "url": "https://www.youtube.com/watch?v=jmVE9pxcEMA",
+      "thumbnail": "https://i3.ytimg.com/vi/jmVE9pxcEMA/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-09T04:08:10+00:00"
+    },
     {
       "id": "yt_Z9e_2ufsw5c",
       "videoId": "Z9e_2ufsw5c",
@@ -37,26 +67,6 @@
       "publishedAt": "2026-09-04T01:00:28+00:00"
     },
     {
-      "id": "yt_R_iFkl6dDlA",
-      "videoId": "R_iFkl6dDlA",
-      "title": "휴가철 몽키 한 대면 다 됨. [시작은 혼다!]",
-      "url": "https://www.youtube.com/shorts/R_iFkl6dDlA",
-      "thumbnail": "https://i3.ytimg.com/vi/R_iFkl6dDlA/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-03T01:00:34+00:00"
-    },
-    {
-      "id": "yt_udQSv-t354s",
-      "videoId": "udQSv-t354s",
-      "title": "SHIFT LIKE A PRO, 프로처럼 매끄러운 변속 | Honda CBR500R E-Clutch",
-      "url": "https://www.youtube.com/shorts/udQSv-t354s",
-      "thumbnail": "https://i2.ytimg.com/vi/udQSv-t354s/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-01T01:12:05+00:00"
-    },
-    {
       "id": "yt_Et591MudhQo",
       "videoId": "Et591MudhQo",
       "title": "2026 CVO™ Street Glide™ Limited | 할리데이비슨 | Harley-Davidson | Harleydavidson",
@@ -65,16 +75,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-08-28T08:56:49+00:00"
-    },
-    {
-      "id": "yt_rBPRZEDnGRc",
-      "videoId": "rBPRZEDnGRc",
-      "title": "[HSRS] 추월상황 위험예측 - 앞차가 답답하다고 함부로 추월하면 안되는 이유! | #왕복2차선 #추월",
-      "url": "https://www.youtube.com/shorts/rBPRZEDnGRc",
-      "thumbnail": "https://i3.ytimg.com/vi/rBPRZEDnGRc/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-08-27T01:00:20+00:00"
     },
     {
       "id": "yt_o2iuxSp-pDg",
