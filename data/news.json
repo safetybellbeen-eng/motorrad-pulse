@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-09-09",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-09T13:01:47.310007+09:00",
+    "lastUpdatedISO": "2026-09-09T18:01:31.864016+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
         "signal": "CONTINUING",
-        "activity": "MEDIUM",
-        "topArticleTitle": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원",
-        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62492",
+        "activity": "HIGH",
+        "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
+        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO?language=ko",
         "signalDetails": {
-          "ADVENTURE": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "CONTINUING"
         }
       },
       "ducati": {
@@ -89,9 +89,9 @@
     "productTech": [
       {
         "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
-        "impact": "Medium",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
+        "relatedNewsCount": 3,
+        "impact": "High",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       },
       {
@@ -113,6 +113,26 @@
   },
   "news": [
     {
+      "id": "0921872430b4657d",
+      "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
+      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO?language=ko",
+      "source": "BMW Motorrad Korea Press",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-09-08T16:18:00+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
+      "importance": 4.0,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
+    {
       "id": "dd750829a53b65b0",
       "title": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원",
       "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62492",
@@ -130,7 +150,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "1792ee7402fbb33b",
@@ -150,7 +170,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "ddcd9d969dc72022",
@@ -227,9 +247,9 @@
     "productTech": [
       {
         "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
-        "impact": "Medium",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
+        "relatedNewsCount": 3,
+        "impact": "High",
         "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",

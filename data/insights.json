@@ -1,9 +1,9 @@
 {
   "date": "2026-09-09",
-  "lastAnalyzedAt": "2026-09-09T13:01:47.310076+09:00",
+  "lastAnalyzedAt": "2026-09-09T18:01:31.864078+09:00",
   "dailySignal": {
-    "title": "신규 모델 및 전동화 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "title": "신규 모델 및 Adventure 관련 뉴스 증가",
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
   "market": [],
   "competitor": [
@@ -20,12 +20,13 @@
   "productTech": [
     {
       "title": "Adventure Segment 신제품 움직임",
-      "summary": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+      "summary": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
       "relatedNewsIds": [
+        "0921872430b4657d",
         "dd750829a53b65b0",
         "1792ee7402fbb33b"
       ],
-      "impact": 3.6,
+      "impact": 4.2,
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
     },
     {
@@ -51,8 +52,8 @@
   "teamBrief": {
     "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
     "competitor": "두카티 등 경쟁 브랜드 관련 뉴스가 1건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 4건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 5건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
-    "todayInsight": "오늘은 신규 모델, 전동화, 리콜/품질 이슈 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+    "todayInsight": "오늘은 신규 모델, Adventure, 전동화 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
 }
