@@ -2,35 +2,35 @@
   "meta": {
     "date": "2026-09-09",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:34 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-09T08:34:23.867830+09:00",
+    "lastUpdatedISO": "2026-09-09T13:01:47.310007+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
-        "signal": "NEW",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62492",
         "signalDetails": {
-          "ADVENTURE": "NEW",
-          "NEW_MODEL": "NEW"
+          "ADVENTURE": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "DUCATI, 1억 2,100만 유로 투자 승인",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173915486&bmode=view",
         "signalDetails": {}
       },
       "triumph": {
@@ -77,7 +77,15 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [],
+    "competitor": [
+      {
+        "title": "DUCATI, 1억 2,100만 유로 투자 승인",
+        "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      }
+    ],
     "productTech": [
       {
         "title": "Adventure Segment 신제품 움직임",
@@ -85,6 +93,20 @@
         "relatedNewsCount": 2,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
+        "description": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -123,18 +145,85 @@
       "publishedAt": "2026-09-08T09:54:19+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
+      "rank": 1
+    },
+    {
+      "id": "ddcd9d969dc72022",
+      "title": "DUCATI, 1억 2,100만 유로 투자 승인",
+      "url": "https://www.kmnews.net/NEWS/?idx=173915486&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "publishedAt": "2026-09-09T11:01:22+09:00",
+      "category": "COMPETITOR",
+      "summary": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 3
+    },
+    {
+      "id": "a0528a2865d40c16",
+      "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
+      "url": "https://www.kmnews.net/E-BIKE/?idx=173915643&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-09T11:06:11+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
+      "importance": 3.0,
+      "whyItMatters": "안전 또는 품질 관리 이슈와 관련된 기사입니다. 브랜드 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
+      "bmwInsight": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "34aeb78365890abb",
+      "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173915247&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-09T10:55:25+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 1
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
-    "competitor": [],
+    "competitor": [
+      {
+        "title": "DUCATI, 1억 2,100만 유로 투자 승인",
+        "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "productTech": [
       {
         "title": "Adventure Segment 신제품 움직임",
@@ -145,6 +234,26 @@
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "GROUPED"
+      },
+      {
+        "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
+        "description": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
       }
     ],
     "customerTrend": []

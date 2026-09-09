@@ -1,0 +1,76 @@
+{
+  "savedAtISO": "2026-09-09T13:01:47.310976+09:00",
+  "articles": [
+    {
+      "id": "dd750829a53b65b0",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "dailycar.co.kr",
+      "domain": "www.dailycar.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-09-08T10:59:05+09:00"
+    },
+    {
+      "id": "1792ee7402fbb33b",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "매일경제",
+      "domain": "www.mk.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-08T09:54:19+09:00"
+    },
+    {
+      "id": "ddcd9d969dc72022",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.5,
+      "publishedAt": "2026-09-09T11:01:22+09:00"
+    },
+    {
+      "id": "a0528a2865d40c16",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ELECTRIFICATION"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-09T11:06:11+09:00"
+    },
+    {
+      "id": "34aeb78365890abb",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-09T10:55:25+09:00"
+    }
+  ]
+}
