@@ -1,19 +1,7 @@
 {
-  "generatedAtISO": "2026-09-10T18:01:23.088703+09:00",
+  "generatedAtISO": "2026-09-11T08:01:33.050080+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-28",
-      "newsCount": 3,
-      "byBrand": {
-        "triumph": 1,
-        "honda": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 2,
-        "COMPETITOR": 1
-      }
-    },
     {
       "date": "2026-08-29",
       "newsCount": 0,
@@ -121,6 +109,12 @@
       "byCategory": {
         "PRODUCT_TECH": 3
       }
+    },
+    {
+      "date": "2026-09-11",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }

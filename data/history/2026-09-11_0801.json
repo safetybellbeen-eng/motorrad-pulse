@@ -1,0 +1,88 @@
+{
+  "savedAtISO": "2026-09-11T08:01:33.046868+09:00",
+  "articles": [
+    {
+      "id": "ddcd9d969dc72022",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-09-09T11:01:22+09:00"
+    },
+    {
+      "id": "ea8bbba9323bf955",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CRUISER"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-10T10:48:39+09:00"
+    },
+    {
+      "id": "36fad56f8006fcf9",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-10T10:44:52+09:00"
+    },
+    {
+      "id": "eb6d7aaf9462eced",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-09-10T10:42:49+09:00"
+    },
+    {
+      "id": "a0528a2865d40c16",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ELECTRIFICATION"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-09T11:06:11+09:00"
+    },
+    {
+      "id": "34aeb78365890abb",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-09-09T10:55:25+09:00"
+    }
+  ]
+}

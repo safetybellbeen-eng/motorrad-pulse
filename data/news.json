@@ -1,26 +1,26 @@
 {
   "meta": {
-    "date": "2026-09-10",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-11",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-10T18:01:23.083066+09:00",
+    "lastUpdatedISO": "2026-09-11T08:01:33.045026+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 4,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
-        "signal": "RISING",
+        "signal": "CONTINUING",
         "activity": "HIGH",
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "RISING",
-          "ADVENTURE": "RISING"
+          "ADVENTURE": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -87,7 +87,7 @@
         "title": "DUCATI, 1억 2,100만 유로 투자 승인",
         "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
@@ -137,7 +137,7 @@
       "publishedAt": "2026-09-09T11:01:22+09:00",
       "category": "COMPETITOR",
       "summary": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
@@ -212,7 +212,7 @@
       "publishedAt": "2026-09-09T11:06:11+09:00",
       "category": "PRODUCT_TECH",
       "summary": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "안전 또는 품질 관리 이슈와 관련된 기사입니다. 브랜드 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
       "bmwInsight": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
@@ -246,7 +246,7 @@
         "title": "DUCATI, 1억 2,100만 유로 투자 승인",
         "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "COMPETITOR",
