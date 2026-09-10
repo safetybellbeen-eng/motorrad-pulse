@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-10",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-10T13:01:57.064032+09:00",
+    "lastUpdatedISO": "2026-09-10T18:01:23.083066+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 4,
@@ -16,11 +16,11 @@
         "secondaryTheme": "ADVENTURE",
         "signal": "RISING",
         "activity": "HIGH",
-        "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-        "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
-          "ADVENTURE": "RISING",
-          "NEW_MODEL": "RISING"
+          "NEW_MODEL": "RISING",
+          "ADVENTURE": "RISING"
         }
       },
       "ducati": {
@@ -93,13 +93,6 @@
     ],
     "productTech": [
       {
-        "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
-        "relatedNewsCount": 1,
-        "impact": "High",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
-      {
         "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
         "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
@@ -119,31 +112,18 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] 쇼에이, 레이싱 풀페이스 ‘X-15 DIGGIA2 TC-3’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "094a5abddbc4a9eb",
-      "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
-      "source": "BMW Group",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-08T16:18:00+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
-      "importance": 4.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
-    },
     {
       "id": "ddcd9d969dc72022",
       "title": "DUCATI, 1억 2,100만 유로 투자 승인",
@@ -275,16 +255,6 @@
     ],
     "productTech": [
       {
-        "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
-        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
-        "relatedNewsCount": 1,
-        "impact": "High",
-        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
         "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
         "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
@@ -310,6 +280,16 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] 쇼에이, 레이싱 풀페이스 ‘X-15 DIGGIA2 TC-3’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
