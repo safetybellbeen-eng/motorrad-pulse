@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-09-10T08:27:44.285568+09:00",
+  "generatedAtISO": "2026-09-10T13:01:57.069867+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -113,9 +113,14 @@
     },
     {
       "date": "2026-09-10",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 3,
+      "byBrand": {
+        "harley": 1,
+        "triumph": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 3
+      }
     }
   ]
 }

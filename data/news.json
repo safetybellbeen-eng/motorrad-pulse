@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-10",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:27 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-10T08:27:44.279253+09:00",
+    "lastUpdatedISO": "2026-09-10T13:01:57.064032+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 4,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
         "topArticleUrl": "https://www.press.bmwgroup.com/korea/article/detail/T0460579KO/bmw-%EB%AA%A8%ED%86%A0%EB%9D%BC%EB%93%9C-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98-%EB%AA%A8%ED%84%B0%EC%82%AC%EC%9D%B4%ED%81%B4-bmw-%EB%89%B4-f-450-gs%E2%80%99-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C",
         "signalDetails": {
-          "NEW_MODEL": "RISING",
-          "ADVENTURE": "RISING"
+          "ADVENTURE": "RISING",
+          "NEW_MODEL": "RISING"
         }
       },
       "ducati": {
@@ -34,24 +34,29 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173950403&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "harley": {
-        "newsCount": 0,
-        "primaryTheme": null,
-        "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
+        "secondaryTheme": "CRUISER",
+        "signal": "NEW",
+        "activity": "HIGH",
+        "topArticleTitle": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173950584&bmode=view",
+        "signalDetails": {
+          "CRUISER": "NEW",
+          "NEW_MODEL": "NEW"
+        }
       },
       "honda": {
         "newsCount": 0,
@@ -88,11 +93,25 @@
     ],
     "productTech": [
       {
-        "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
-        "relatedNewsCount": 3,
+        "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
+        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
+        "relatedNewsCount": 1,
         "impact": "High",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
@@ -100,13 +119,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -133,46 +145,6 @@
       "rank": 1
     },
     {
-      "id": "dd750829a53b65b0",
-      "title": "BMW 모토라드, 모터사이클 ‘뉴 F 450 GS’ 출시..가격은 1250만~1350만원",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62492",
-      "source": "dailycar.co.kr",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-08T10:59:05+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW 모토라드가 미들급 어드벤처 모델 ‘BMW 뉴 F 450 GS’를 8일 출시하고 이날부터 본격 시판에 나섰다. BMW 뉴 F 450 GS는 경량화된 차체와 우수한 조작성을 바탕으로 도심 주행부터 온·오프로드 장거리 투어링까지 폭넓게 대응하도록 개발됐다. 파워트레인은 배기량 420cc 2기통 엔진을 탑재해 최고출력 48마력, 최대토크...",
-      "importance": 3.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 3
-    },
-    {
-      "id": "1792ee7402fbb33b",
-      "title": "“178kg 경량 차체”…BMW모토라드, 모터사이클 ‘뉴 F450 GS’ 출시",
-      "url": "https://www.mk.co.kr/news/business/12146736",
-      "source": "매일경제",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-08T09:54:19+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 2
-    },
-    {
       "id": "ddcd9d969dc72022",
       "title": "DUCATI, 1억 2,100만 유로 투자 승인",
       "url": "https://www.kmnews.net/NEWS/?idx=173915486&bmode=view",
@@ -188,9 +160,66 @@
       "importance": 2.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "ea8bbba9323bf955",
+      "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=173950584&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "publishedAt": "2026-09-10T10:48:39+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
+    {
+      "id": "36fad56f8006fcf9",
+      "title": "[뉴아이템] 쇼에이, 레이싱 풀페이스 ‘X-15 DIGGIA2 TC-3’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=173950467&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-10T10:44:52+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
+    },
+    {
+      "id": "eb6d7aaf9462eced",
+      "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=173950403&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-09-10T10:42:49+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+      "importance": 3.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
     },
     {
       "id": "a0528a2865d40c16",
@@ -220,13 +249,13 @@
       "brandGroups": [],
       "publishedAt": "2026-09-09T10:55:25+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
-      "importance": 2.0,
+      "summary": null,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
@@ -246,14 +275,34 @@
     ],
     "productTech": [
       {
-        "title": "Adventure Segment 신제품 움직임",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 3건이 확인되었습니다.",
-        "relatedNewsCount": 3,
+        "title": "BMW 모토라드, 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’ 공식 출시",
+        "description": "BMW의 모터사이클 부문인 BMW 모토라드가 9월 8일부터 프리미엄 어드벤처 모터사이클 ‘BMW 뉴 F 450 GS’를 국내에 공식 출시한다.",
+        "relatedNewsCount": 1,
         "impact": "High",
         "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "GROUPED"
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
       },
       {
         "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
@@ -261,16 +310,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 포르자350 전용 캐노피를 새롭게 출시했다.이번 신제품은 장거리 주행과 도심 라이딩에서 라이더를 괴롭히는 강한 햇빛과 갑작스러운 날씨 변화에 대응하기 위해 개발된 전용 액세서리다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
