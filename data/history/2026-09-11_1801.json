@@ -1,0 +1,49 @@
+{
+  "savedAtISO": "2026-09-11T18:01:31.666746+09:00",
+  "articles": [
+    {
+      "id": "ea8bbba9323bf955",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CRUISER"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-10T10:48:39+09:00"
+    },
+    {
+      "id": "36fad56f8006fcf9",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-09-10T10:44:52+09:00"
+    },
+    {
+      "id": "eb6d7aaf9462eced",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-10T10:42:49+09:00"
+    }
+  ]
+}

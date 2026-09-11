@@ -2,26 +2,23 @@
   "meta": {
     "date": "2026-09-11",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-11T13:01:29.349319+09:00",
+    "lastUpdatedISO": "2026-09-11T18:01:31.665941+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": "ADVENTURE",
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "ADVENTURE": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "ducati": {
         "newsCount": 1,
@@ -37,25 +34,25 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173950403&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "harley": {
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "CRUISER",
-        "signal": "NEW",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173950584&bmode=view",
         "signalDetails": {
-          "CRUISER": "NEW",
-          "NEW_MODEL": "NEW"
+          "CRUISER": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "honda": {
