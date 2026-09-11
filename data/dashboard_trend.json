@@ -1,13 +1,7 @@
 {
-  "generatedAtISO": "2026-09-11T18:01:31.671306+09:00",
+  "generatedAtISO": "2026-09-12T08:01:32.919114+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-29",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-08-30",
       "newsCount": 0,
@@ -101,17 +95,26 @@
     },
     {
       "date": "2026-09-10",
-      "newsCount": 3,
+      "newsCount": 2,
       "byBrand": {
-        "harley": 1,
         "triumph": 1
       },
       "byCategory": {
-        "PRODUCT_TECH": 3
+        "PRODUCT_TECH": 2
       }
     },
     {
       "date": "2026-09-11",
+      "newsCount": 1,
+      "byBrand": {
+        "harley": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
+    },
+    {
+      "date": "2026-09-12",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}

@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-11",
-    "dayLabel": "FRIDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-12",
+    "dayLabel": "SATURDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-11T18:01:31.665941+09:00",
+    "lastUpdatedISO": "2026-09-12T08:01:32.911790+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -49,10 +49,10 @@
         "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173950584&bmode=view",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=173950584",
         "signalDetails": {
-          "CRUISER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "CRUISER": "CONTINUING"
         }
       },
       "honda": {
@@ -82,15 +82,15 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
-        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
-        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -107,16 +107,36 @@
   },
   "news": [
     {
+      "id": "eb6d7aaf9462eced",
+      "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=173950403&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-09-10T10:42:49+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 3
+    },
+    {
       "id": "ea8bbba9323bf955",
       "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173950584&bmode=view",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173950584",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "harley",
       "brandGroups": [
         "harley"
       ],
-      "publishedAt": "2026-09-10T10:48:39+09:00",
+      "publishedAt": "2026-09-11T16:27:43+09:00",
       "category": "PRODUCT_TECH",
       "summary": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
       "importance": 3.0,
@@ -143,26 +163,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
-    },
-    {
-      "id": "eb6d7aaf9462eced",
-      "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=173950403&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "triumph"
-      ],
-      "publishedAt": "2026-09-10T10:42:49+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
-      "importance": 3.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -171,8 +171,8 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
-        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -181,8 +181,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
-        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
+        "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
+        "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
