@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-10T23:40:34.706118+00:00",
+    "lastUpdatedISO": "2026-09-11T23:51:11.549197+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_RWt2C6iprd8",
+      "videoId": "RWt2C6iprd8",
+      "title": "2026 Heritage Classic | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/shorts/RWt2C6iprd8",
+      "thumbnail": "https://i3.ytimg.com/vi/RWt2C6iprd8/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-09-11T00:33:16+00:00"
+    },
     {
       "id": "yt_eJ8LA_O9d3k",
       "videoId": "eJ8LA_O9d3k",
@@ -195,16 +205,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-06-15T06:42:31+00:00"
-    },
-    {
-      "id": "yt_ac0UffFrreQ",
-      "videoId": "ac0UffFrreQ",
-      "title": "RIDE, AGAIN | 할리데이비슨 | Harley-Davidson",
-      "url": "https://www.youtube.com/watch?v=ac0UffFrreQ",
-      "thumbnail": "https://i2.ytimg.com/vi/ac0UffFrreQ/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-06-15T06:33:34+00:00"
     },
     {
       "id": "yt_3wrZxXZ3gBA",
