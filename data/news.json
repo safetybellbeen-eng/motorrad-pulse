@@ -2,20 +2,20 @@
   "meta": {
     "date": "2026-09-11",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:21 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-11T08:21:20.944377+09:00",
+    "lastUpdatedISO": "2026-09-11T13:01:29.349319+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 3,
+        "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "ADVENTURE",
         "signal": "CONTINUING",
-        "activity": "HIGH",
+        "activity": "MEDIUM",
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
@@ -29,8 +29,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "DUCATI, 1억 2,100만 유로 투자 승인",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=173915486&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {}
       },
       "triumph": {
@@ -82,23 +82,8 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [
-      {
-        "title": "DUCATI, 1억 2,100만 유로 투자 승인",
-        "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
+    "competitor": [],
     "productTech": [
-      {
-        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
-        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
       {
         "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
         "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
@@ -107,15 +92,15 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
-        "description": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "[뉴아이템] 쇼에이, 레이싱 풀페이스 ‘X-15 DIGGIA2 TC-3’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "쇼에이코리아가 MotoGP를 비롯한 최상위 로드 레이스에서 축적한 기술력을 바탕으로 개발된 레이싱 풀페이스 헬멧 ‘X-15 DIGGIA2 TC-3’를 출시했다.쇼에이 X-시리즈의 최상위 모델인 X-15는 높은 안전성과 레이싱 기술을 기반으로 고속 주행에 필요한 공력 성능과 시야, 착용감 등을 종합적으로 강화한 것이 특징이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -124,25 +109,6 @@
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "ddcd9d969dc72022",
-      "title": "DUCATI, 1억 2,100만 유로 투자 승인",
-      "url": "https://www.kmnews.net/NEWS/?idx=173915486&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "ducati",
-      "brandGroups": [
-        "ducati"
-      ],
-      "publishedAt": "2026-09-09T11:01:22+09:00",
-      "category": "COMPETITOR",
-      "summary": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
-      "importance": 2.0,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
     {
       "id": "ea8bbba9323bf955",
       "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
@@ -173,13 +139,13 @@
       "brandGroups": [],
       "publishedAt": "2026-09-10T10:44:52+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 2.0,
+      "summary": "쇼에이코리아가 MotoGP를 비롯한 최상위 로드 레이스에서 축적한 기술력을 바탕으로 개발된 레이싱 풀페이스 헬멧 ‘X-15 DIGGIA2 TC-3’를 출시했다.쇼에이 X-시리즈의 최상위 모델인 X-15는 높은 안전성과 레이싱 기술을 기반으로 고속 주행에 필요한 공력 성능과 시야, 착용감 등을 종합적으로 강화한 것이 특징이다.",
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     },
     {
       "id": "eb6d7aaf9462eced",
@@ -194,76 +160,19 @@
       "publishedAt": "2026-09-10T10:42:49+09:00",
       "category": "PRODUCT_TECH",
       "summary": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
-      "importance": 3.5,
+      "importance": 3.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "a0528a2865d40c16",
-      "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
-      "url": "https://www.kmnews.net/E-BIKE/?idx=173915643&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-09T11:06:11+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
-      "importance": 2.5,
-      "whyItMatters": "안전 또는 품질 관리 이슈와 관련된 기사입니다. 브랜드 신뢰도에 미치는 영향을 확인할 필요가 있습니다.",
-      "bmwInsight": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "34aeb78365890abb",
-      "title": "[뉴아이템] MSR, 포르자350 전용 캐노피 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=173915247&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-09T10:55:25+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
-    "competitor": [
-      {
-        "title": "DUCATI, 1억 2,100만 유로 투자 승인",
-        "description": "‘Ducati Raise the Bar’ 프로젝트, 연구개발·친환경 기술 투자로 글로벌 경쟁력 강화이탈리아 정부가 두카티의 대규모 연구개발(R&D) 투자 계획을 승인하며 미래 모터사이클 산업 경쟁력 강화에 힘을 보탠다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "competitor": [],
     "productTech": [
-      {
-        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
-        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
       {
         "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
         "description": "할리데이비슨이 제2차 세계대전 이후 미국에서 형성된 커스텀 모터사이클 문화와 스터지스 랠리의 정신을 현대적으로 재해석한 신형 크루저 ‘데드우드(Deadwood)’를 공개했다.지난 7월 14일 미국과 캐나다 시장에 발표된 데드우드는 8월 7일 사우스다코타주 스터지스에서 열린 스터지스 모터사이클 랠리의 할리데이비슨 행사장에서 일반에 처음 공개됐다.",
@@ -275,18 +184,18 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "서울시, 전기이륜차 배터리 화재 분석해 6천여 대 리콜 이끌어내…",
-        "description": "최근 5년간 관련 화재 31건·인명피해 25명, 재현실험 통해 위험성 확인서울시가 전기이륜차 배터리 화재 위험성을 분석하고 관계기관과 협력해 6,144대의 리콜을 이끌어냈다. 최근 5년간 서울에서 발생한 전기이륜차 관련 화재는 총 31건으로 집계됐다. 이로 인해 25명(사망 2명·부상 23명)의 인명피해와 약 2억 2,600만 원의 재산피해가 발생했다.",
+        "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+        "description": "최고출력 약 6% 향상, 신형 실린더 헤드·밸브 트레인 적용하고 엔진 중량 2kg 감량트라이엄프와 MotoGP가 2027년 Moto2에 투입될 신형 레이스 엔진을 공개했다. 2019년부터 Moto2 독점 엔진 공급업체로 참여해온 트라이엄프가 지금까지 선보인 파워유닛 가운데 가장 큰 폭의 성능 향상을 목표로 개발한 새로운 엔진이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "안전·Recall 이슈가 브랜드 신뢰도와 고객 커뮤니케이션에 미치는 영향을 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
       {
         "title": "[뉴아이템] 쇼에이, 레이싱 풀페이스 ‘X-15 DIGGIA2 TC-3’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "쇼에이코리아가 MotoGP를 비롯한 최상위 로드 레이스에서 축적한 기술력을 바탕으로 개발된 레이싱 풀페이스 헬멧 ‘X-15 DIGGIA2 TC-3’를 출시했다.쇼에이 X-시리즈의 최상위 모델인 X-15는 높은 안전성과 레이싱 기술을 기반으로 고속 주행에 필요한 공력 성능과 시야, 착용감 등을 종합적으로 강화한 것이 특징이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
