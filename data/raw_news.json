@@ -1,23 +1,23 @@
 {
-  "lastCollectedAt": "2026-09-13T13:00:57.671814+09:00",
+  "lastCollectedAt": "2026-09-14T08:00:58.383013+09:00",
   "news": [
     {
-      "title": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173950584",
+      "title": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=173950403",
       "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "harley",
-      "publishedAt": "2026-09-11T16:27:43+09:00",
+      "sourceGroup": "triumph",
+      "publishedAt": "2026-09-12T21:44:53+09:00",
       "sourceTier": "motorcycle_media",
       "sourceQualityScore": 90,
-      "businessRelevanceScore": 10,
+      "businessRelevanceScore": 4,
       "brandGroups": [
-        "harley"
+        "triumph"
       ],
       "acquisitionMethod": "google_news",
-      "description": "HARLEY DAVIDSON, 빈티지 감성의 신형 크루저 'Deadwood' 북미 공개&nbsp;&nbsp;한국이륜차신문",
-      "id": "ea8bbba9323bf955",
-      "collectedAt": "2026-09-13T08:10:58.128204+09:00",
+      "description": "TRIUMPH, 2027년 Moto2용 신형 레이스 엔진 공개&nbsp;&nbsp;한국이륜차신문",
+      "id": "3dd73907d1f12a99",
+      "collectedAt": "2026-09-14T08:00:58.383013+09:00",
       "category": null,
       "summary": null,
       "importance": null,
