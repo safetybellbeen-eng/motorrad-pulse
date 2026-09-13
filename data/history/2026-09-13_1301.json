@@ -1,0 +1,21 @@
+{
+  "savedAtISO": "2026-09-13T13:01:47.669550+09:00",
+  "articles": [
+    {
+      "id": "ea8bbba9323bf955",
+      "sourceGroup": "harley",
+      "brandGroups": [
+        "harley"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CRUISER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-11T16:27:43+09:00"
+    }
+  ]
+}
