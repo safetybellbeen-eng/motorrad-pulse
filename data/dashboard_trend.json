@@ -1,13 +1,7 @@
 {
-  "generatedAtISO": "2026-09-13T13:01:47.674538+09:00",
+  "generatedAtISO": "2026-09-14T08:01:14.268743+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-08-31",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-09-01",
       "newsCount": 3,
@@ -109,12 +103,22 @@
     },
     {
       "date": "2026-09-12",
+      "newsCount": 1,
+      "byBrand": {
+        "triumph": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
+    },
+    {
+      "date": "2026-09-13",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
     },
     {
-      "date": "2026-09-13",
+      "date": "2026-09-14",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
