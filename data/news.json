@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-15",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:57 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-15T08:01:27.225613+09:00",
+    "lastUpdatedISO": "2026-09-15T08:57:41.092045+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "CUSTOMER": "NEW"
+          "CUSTOMER": "NEW",
+          "NEW_MODEL": "NEW"
         }
       },
       "ducati": {
@@ -74,8 +74,8 @@
         "topArticleTitle": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089598&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "SCOOTER": "NEW"
+          "SCOOTER": "NEW",
+          "NEW_MODEL": "NEW"
         }
       }
     }
