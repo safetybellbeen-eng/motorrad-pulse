@@ -1,0 +1,63 @@
+{
+  "savedAtISO": "2026-09-15T08:01:27.226574+09:00",
+  "articles": [
+    {
+      "id": "6d651f2b48fa1bd0",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CUSTOMER"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-09-14T11:43:47+09:00"
+    },
+    {
+      "id": "97bda5b50982c2f0",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-09-14T11:33:32+09:00"
+    },
+    {
+      "id": "52cec12280889cbd",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "yamaha"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SCOOTER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-14T11:49:06+09:00"
+    },
+    {
+      "id": "c8ae76251b113102",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-14T11:41:16+09:00"
+    }
+  ]
+}
