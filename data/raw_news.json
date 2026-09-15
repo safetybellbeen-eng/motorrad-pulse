@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-09-16T08:01:04.159440+09:00",
+  "lastCollectedAt": "2026-09-16T08:36:11.802937+09:00",
   "news": [
     {
       "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
@@ -30,7 +30,7 @@
     {
       "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
       "url": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "triumph",
       "publishedAt": "2026-09-14T11:33:32+09:00",
@@ -41,9 +41,9 @@
         "triumph"
       ],
       "acquisitionMethod": "google_news",
-      "description": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션&nbsp;&nbsp;한국이륜차신문",
+      "description": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션&nbsp;&nbsp;kmnews.net",
       "id": "97bda5b50982c2f0",
-      "collectedAt": "2026-09-16T08:01:04.159440+09:00",
+      "collectedAt": "2026-09-16T08:36:11.802937+09:00",
       "category": null,
       "summary": null,
       "importance": null,
