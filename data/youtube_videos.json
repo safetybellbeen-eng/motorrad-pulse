@@ -1,11 +1,31 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-13T23:51:48.530693+00:00",
+    "lastUpdatedISO": "2026-09-15T00:14:11.594942+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_WoPx5FmFaDo",
+      "videoId": "WoPx5FmFaDo",
+      "title": "타보령, 해보령, 즐겨보령! 혼다데이 2026 티켓 오픈 D-1ㅣHonda Day 보령",
+      "url": "https://www.youtube.com/watch?v=WoPx5FmFaDo",
+      "thumbnail": "https://i4.ytimg.com/vi/WoPx5FmFaDo/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-14T05:31:34+00:00"
+    },
+    {
+      "id": "yt_XjmNxZlzH_w",
+      "videoId": "XjmNxZlzH_w",
+      "title": "타보령, 해보령, 즐겨보령! 혼다데이 2026 티켓 오픈 D-1ㅣHonda Day 보령",
+      "url": "https://www.youtube.com/shorts/XjmNxZlzH_w",
+      "thumbnail": "https://i1.ytimg.com/vi/XjmNxZlzH_w/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-14T05:23:01+00:00"
+    },
     {
       "id": "yt_RWt2C6iprd8",
       "videoId": "RWt2C6iprd8",
@@ -15,36 +35,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-09-11T00:33:16+00:00"
-    },
-    {
-      "id": "yt_eJ8LA_O9d3k",
-      "videoId": "eJ8LA_O9d3k",
-      "title": "[웰컴클래스] 혼다모터사이클과 함께하는 안전한 라이딩 습관 만들기!ㅣ시작은 혼다! : Honda Welcome Class",
-      "url": "https://www.youtube.com/shorts/eJ8LA_O9d3k",
-      "thumbnail": "https://i2.ytimg.com/vi/eJ8LA_O9d3k/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-09T08:00:14+00:00"
-    },
-    {
-      "id": "yt_r0I9gLjr99E",
-      "videoId": "r0I9gLjr99E",
-      "title": "슈퍼커브와 함께 오랜 꿈을 현실로! \"Dreams Come True\" l 시작은 혼다 : Honda Welcome Class - 슈퍼커브 클래스",
-      "url": "https://www.youtube.com/shorts/r0I9gLjr99E",
-      "thumbnail": "https://i3.ytimg.com/vi/r0I9gLjr99E/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-09T04:32:06+00:00"
-    },
-    {
-      "id": "yt_jmVE9pxcEMA",
-      "videoId": "jmVE9pxcEMA",
-      "title": "[시작은 혼다!] \"오토바이 입문의 꿈\" 혼다와 함께ㅣHonda Welcome Class - 풀영상",
-      "url": "https://www.youtube.com/watch?v=jmVE9pxcEMA",
-      "thumbnail": "https://i3.ytimg.com/vi/jmVE9pxcEMA/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-09T04:08:10+00:00"
     },
     {
       "id": "yt_Z9e_2ufsw5c",
@@ -75,6 +65,16 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-09-04T01:00:28+00:00"
+    },
+    {
+      "id": "yt_R_iFkl6dDlA",
+      "videoId": "R_iFkl6dDlA",
+      "title": "휴가철 몽키 한 대면 다 됨. [시작은 혼다!]",
+      "url": "https://www.youtube.com/shorts/R_iFkl6dDlA",
+      "thumbnail": "https://i3.ytimg.com/vi/R_iFkl6dDlA/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-03T01:00:34+00:00"
     },
     {
       "id": "yt_Et591MudhQo",
