@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-16",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:36 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-16T08:01:22.935342+09:00",
+    "lastUpdatedISO": "2026-09-16T08:36:31.092955+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -74,8 +74,8 @@
         "topArticleTitle": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089598&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "SCOOTER": "CONTINUING"
+          "SCOOTER": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       }
     }
@@ -141,7 +141,7 @@
       "id": "97bda5b50982c2f0",
       "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
       "url": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
-      "source": "한국이륜차신문",
+      "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "triumph",
       "brandGroups": [
