@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-15",
-    "dayLabel": "TUESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-16",
+    "dayLabel": "WEDNESDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-15T18:01:19.728120+09:00",
+    "lastUpdatedISO": "2026-09-16T08:01:22.935342+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "CUSTOMER": "CONTINUING"
+          "CUSTOMER": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -34,15 +34,15 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 2,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 1,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "signal": "NORMAL",
+        "activity": "LOW",
+        "topArticleTitle": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "NORMAL"
         }
       },
       "harley": {
@@ -74,8 +74,8 @@
         "topArticleTitle": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089598&bmode=view",
         "signalDetails": {
-          "SCOOTER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "SCOOTER": "CONTINUING"
         }
       }
     }
@@ -141,7 +141,7 @@
       "id": "97bda5b50982c2f0",
       "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
       "url": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "triumph",
       "brandGroups": [
