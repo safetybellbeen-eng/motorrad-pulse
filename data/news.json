@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-16",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-16T13:01:22.898285+09:00",
+    "lastUpdatedISO": "2026-09-16T18:01:20.305117+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -81,7 +81,15 @@
     }
   },
   "marketIntelligence": {
-    "market": [],
+    "market": [
+      {
+        "title": "로얄엔필드, 쇼핑몰 설문조사 이벤트 진행",
+        "description": "로얄엔필드 코리아가 고객 의견을 반영해 쇼핑몰 서비스를 개선하기 위한 ‘로얄엔필드 쇼핑몰 설문조사 이벤트’를 진행한다.이번 이벤트는 9월 1일부터 27일까지 진행되며, 설문조사에 참여한 고객 중 총 100명을 추첨해 로얄엔필드 정품 힙색 파우치 또는 바라클라바를 랜덤으로 증정한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+      }
+    ],
     "competitor": [
       {
         "title": "노사발전재단, 가을 산재 예방 캠페인…천안서 이륜차 점검",
@@ -114,7 +122,7 @@
       "id": "6d651f2b48fa1bd0",
       "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
@@ -149,10 +157,28 @@
       "rank": 1
     },
     {
+      "id": "82d1e52e3d7104e0",
+      "title": "로얄엔필드, 쇼핑몰 설문조사 이벤트 진행",
+      "url": "https://www.kmnews.net/NEWS/?idx=174217731&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-16T11:42:00+09:00",
+      "category": "MARKET",
+      "summary": "로얄엔필드 코리아가 고객 의견을 반영해 쇼핑몰 서비스를 개선하기 위한 ‘로얄엔필드 쇼핑몰 설문조사 이벤트’를 진행한다.이번 이벤트는 9월 1일부터 27일까지 진행되며, 설문조사에 참여한 고객 중 총 100명을 추첨해 로얄엔필드 정품 힙색 파우치 또는 바라클라바를 랜덤으로 증정한다.",
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "de891f259d3a32eb",
       "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=174217109&bmode=view",
-      "source": "kmnews.net",
+      "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
@@ -178,6 +204,16 @@
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "로얄엔필드, 쇼핑몰 설문조사 이벤트 진행",
+        "description": "로얄엔필드 코리아가 고객 의견을 반영해 쇼핑몰 서비스를 개선하기 위한 ‘로얄엔필드 쇼핑몰 설문조사 이벤트’를 진행한다.이번 이벤트는 9월 1일부터 27일까지 진행되며, 설문조사에 참여한 고객 중 총 100명을 추첨해 로얄엔필드 정품 힙색 파우치 또는 바라클라바를 랜덤으로 증정한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "MARKET",
+        "insightType": "NEEDS_CONFIRMATION"
       }
     ],
     "competitor": [],
