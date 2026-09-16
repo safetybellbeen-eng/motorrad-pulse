@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-17",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:44 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-17T08:01:26.382158+09:00",
+    "lastUpdatedISO": "2026-09-17T08:44:56.217302+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "CUSTOMER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "ducati": {
@@ -34,10 +34,10 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 1,
+        "newsCount": 0,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NORMAL",
+        "signal": "NO_SIGNIFICANT_UPDATE",
         "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
@@ -64,17 +64,14 @@
         "signalDetails": {}
       },
       "yamaha": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": "SCOOTER",
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "SCOOTER": "CONTINUING"
-        }
+        "signalDetails": {}
       }
     }
   },
