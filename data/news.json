@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-16",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:36 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-16T08:36:31.092955+09:00",
+    "lastUpdatedISO": "2026-09-16T13:01:22.898285+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "CUSTOMER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "ducati": {
@@ -39,8 +39,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "NORMAL"
         }
@@ -71,8 +71,8 @@
         "secondaryTheme": "SCOOTER",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089598&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "SCOOTER": "CONTINUING",
           "NEW_MODEL": "CONTINUING"
@@ -84,11 +84,11 @@
     "market": [],
     "competitor": [
       {
-        "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
-        "description": "스크램블러 400 시리즈 ‘평생 엔진오일 무상 교체’부터 프리미엄 바이크 ‘취등록세 전액 지원’까지트라이엄프 코리아가 9월을 맞아 인기 모델의 구매 및 유지 비용 부담을 낮추기 위한 특별 프로모션을 진행한다. 이번 프로모션은 ‘스크램블러 400 시리즈 9월 특별 프로모션’과 ‘프리미엄 바이크 9월 특별 프로모션’으로 나뉘어 운영된다.",
+        "title": "노사발전재단, 가을 산재 예방 캠페인…천안서 이륜차 점검",
+        "description": "(서울=연합뉴스) 한혜원 기자 = 노사발전재단은 가을철 산업재해 위험을 예방하기 위해 현장을 찾아가는 안전 캠페인을 실시한다고 16일 밝혔다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
@@ -100,18 +100,11 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
-        "description": "야마하 인도네시아 법인인 PT. Yamaha Indonesia Motor Manu facturing이 패션 스쿠터 ‘파치오(Fazzio)’의 특별사양 모델 ‘선셋 블루(Sunset Blue)’를 2026년 8월 공개했다. 파치오는 기능성과 패션성을 결합한 라이프스타일 스쿠터로, 심플하고 캐주얼한 디자인과 다양한 편의장비를 갖춘 것이 특징이다.",
+        "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "로얄엔필드, 레트로 게임 감성 담은 ‘아트 오브 모터사이클링’ 시즌 6 공개",
-        "description": "‘게임 모드 온’ 테마로 모터사이클링 재해석로얄엔필드의 글로벌 크리에이티브 프로젝트 ‘아트 오브 모터사이클링(Art of Motorcycling, AOM)’이 시즌 6로 돌아온다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -127,10 +120,10 @@
       "brandGroups": [
         "bmw"
       ],
-      "publishedAt": "2026-09-14T11:43:47+09:00",
+      "publishedAt": "2026-09-16T11:07:44+09:00",
       "category": "PRODUCT_TECH",
       "summary": "모터사이클 고객 전용 멤버십 제공, 정비·쇼핑·시승·이벤트 등 앱 하나로 이용BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 9월 1일 공식 출시했다.",
-      "importance": 3.0,
+      "importance": 3.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -138,79 +131,56 @@
       "rank": 1
     },
     {
-      "id": "97bda5b50982c2f0",
-      "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
-      "url": "https://www.kmnews.net/NEWS/?idx=174089105&bmode=view",
-      "source": "kmnews.net",
+      "id": "2627d9e78de32d05",
+      "title": "노사발전재단, 가을 산재 예방 캠페인…천안서 이륜차 점검",
+      "url": "https://www.yna.co.kr/view/AKR20260915135400530",
+      "source": "연합뉴스",
       "sourceType": "media",
-      "sourceGroup": "triumph",
-      "brandGroups": [
-        "triumph"
-      ],
-      "publishedAt": "2026-09-14T11:33:32+09:00",
+      "sourceGroup": "google",
+      "brandGroups": [],
+      "publishedAt": "2026-09-16T09:00:04+09:00",
       "category": "COMPETITOR",
-      "summary": "스크램블러 400 시리즈 ‘평생 엔진오일 무상 교체’부터 프리미엄 바이크 ‘취등록세 전액 지원’까지트라이엄프 코리아가 9월을 맞아 인기 모델의 구매 및 유지 비용 부담을 낮추기 위한 특별 프로모션을 진행한다. 이번 프로모션은 ‘스크램블러 400 시리즈 9월 특별 프로모션’과 ‘프리미엄 바이크 9월 특별 프로모션’으로 나뉘어 운영된다.",
-      "importance": 2.0,
+      "summary": "(서울=연합뉴스) 한혜원 기자 = 노사발전재단은 가을철 산업재해 위험을 예방하기 위해 현장을 찾아가는 안전 캠페인을 실시한다고 16일 밝혔다.",
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
     },
     {
-      "id": "52cec12280889cbd",
-      "title": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=174089598&bmode=view",
-      "source": "kmnews.net",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "yamaha"
-      ],
-      "publishedAt": "2026-09-14T11:49:06+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "야마하 인도네시아 법인인 PT. Yamaha Indonesia Motor Manu facturing이 패션 스쿠터 ‘파치오(Fazzio)’의 특별사양 모델 ‘선셋 블루(Sunset Blue)’를 2026년 8월 공개했다. 파치오는 기능성과 패션성을 결합한 라이프스타일 스쿠터로, 심플하고 캐주얼한 디자인과 다양한 편의장비를 갖춘 것이 특징이다.",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "c8ae76251b113102",
-      "title": "로얄엔필드, 레트로 게임 감성 담은 ‘아트 오브 모터사이클링’ 시즌 6 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=174089326&bmode=view",
+      "id": "de891f259d3a32eb",
+      "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=174217109&bmode=view",
       "source": "kmnews.net",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-09-14T11:41:16+09:00",
+      "publishedAt": "2026-09-16T11:33:08+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "‘게임 모드 온’ 테마로 모터사이클링 재해석로얄엔필드의 글로벌 크리에이티브 프로젝트 ‘아트 오브 모터사이클링(Art of Motorcycling, AOM)’이 시즌 6로 돌아온다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
+      "summary": null,
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
-    "competitor": [
+    "market": [
       {
-        "title": "트라이엄프, 스크램블러 400 시리즈 & 프리미엄 바이크 9월 프로모션",
-        "description": "스크램블러 400 시리즈 ‘평생 엔진오일 무상 교체’부터 프리미엄 바이크 ‘취등록세 전액 지원’까지트라이엄프 코리아가 9월을 맞아 인기 모델의 구매 및 유지 비용 부담을 낮추기 위한 특별 프로모션을 진행한다. 이번 프로모션은 ‘스크램블러 400 시리즈 9월 특별 프로모션’과 ‘프리미엄 바이크 9월 특별 프로모션’으로 나뉘어 운영된다.",
+        "title": "노사발전재단, 가을 산재 예방 캠페인…천안서 이륜차 점검",
+        "description": "(서울=연합뉴스) 한혜원 기자 = 노사발전재단은 가을철 산업재해 위험을 예방하기 위해 현장을 찾아가는 안전 캠페인을 실시한다고 16일 밝혔다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 가격·제품 구성·브랜드 Positioning 변화가 Premium Segment 경쟁구도에 미치는 영향을 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
       }
     ],
+    "competitor": [],
     "productTech": [
       {
         "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
@@ -223,21 +193,11 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "YAMAHA, 패션 스쿠터 ‘파치오’ 특별사양 'Fazzio Sunset Blue' 8월 공개",
-        "description": "야마하 인도네시아 법인인 PT. Yamaha Indonesia Motor Manu facturing이 패션 스쿠터 ‘파치오(Fazzio)’의 특별사양 모델 ‘선셋 블루(Sunset Blue)’를 2026년 8월 공개했다. 파치오는 기능성과 패션성을 결합한 라이프스타일 스쿠터로, 심플하고 캐주얼한 디자인과 다양한 편의장비를 갖춘 것이 특징이다.",
+        "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "로얄엔필드, 레트로 게임 감성 담은 ‘아트 오브 모터사이클링’ 시즌 6 공개",
-        "description": "‘게임 모드 온’ 테마로 모터사이클링 재해석로얄엔필드의 글로벌 크리에이티브 프로젝트 ‘아트 오브 모터사이클링(Art of Motorcycling, AOM)’이 시즌 6로 돌아온다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"

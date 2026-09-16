@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-09-16T08:36:31.098401+09:00",
+  "generatedAtISO": "2026-09-16T13:01:22.902729+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -99,15 +99,14 @@
     },
     {
       "date": "2026-09-14",
-      "newsCount": 4,
+      "newsCount": 3,
       "byBrand": {
-        "bmw": 1,
         "triumph": 1,
         "yamaha": 1
       },
       "byCategory": {
-        "PRODUCT_TECH": 3,
-        "COMPETITOR": 1
+        "COMPETITOR": 1,
+        "PRODUCT_TECH": 2
       }
     },
     {
@@ -118,9 +117,14 @@
     },
     {
       "date": "2026-09-16",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 3,
+      "byBrand": {
+        "bmw": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 2,
+        "COMPETITOR": 1
+      }
     }
   ]
 }
