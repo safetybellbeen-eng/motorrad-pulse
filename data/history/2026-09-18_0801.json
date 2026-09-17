@@ -1,0 +1,102 @@
+{
+  "savedAtISO": "2026-09-18T08:01:32.548683+09:00",
+  "articles": [
+    {
+      "id": "6d651f2b48fa1bd0",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CUSTOMER"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-16T23:30:48+09:00"
+    },
+    {
+      "id": "ae93530bff2d2c7f",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-17T11:53:04+09:00"
+    },
+    {
+      "id": "2627d9e78de32d05",
+      "sourceGroup": "google",
+      "brandGroups": [],
+      "source": "연합뉴스",
+      "domain": "www.yna.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-09-16T09:00:04+09:00"
+    },
+    {
+      "id": "7f305b7fea66795d",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-17T11:49:07+09:00"
+    },
+    {
+      "id": "ed104c8b707e4b84",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-09-17T11:35:28+09:00"
+    },
+    {
+      "id": "82d1e52e3d7104e0",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-09-16T11:42:00+09:00"
+    },
+    {
+      "id": "de891f259d3a32eb",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-16T11:33:08+09:00"
+    }
+  ]
+}

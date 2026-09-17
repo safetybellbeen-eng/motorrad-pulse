@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-17",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:02 PM",
+    "date": "2026-09-18",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-17T18:02:01.729928+09:00",
+    "lastUpdatedISO": "2026-09-18T08:01:32.547652+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 3,
@@ -19,9 +19,9 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "NEW",
           "CUSTOMER": "CONTINUING",
-          "ADVENTURE": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -143,7 +143,7 @@
       "publishedAt": "2026-09-16T23:30:48+09:00",
       "category": "PRODUCT_TECH",
       "summary": "모터사이클 고객 전용 멤버십 제공, 정비·쇼핑·시승·이벤트 등 앱 하나로 이용BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 9월 1일 공식 출시했다.",
-      "importance": 3.5,
+      "importance": 3.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -257,7 +257,7 @@
       "publishedAt": "2026-09-16T11:33:08+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": false,
