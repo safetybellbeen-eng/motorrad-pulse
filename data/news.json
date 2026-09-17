@@ -2,25 +2,26 @@
   "meta": {
     "date": "2026-09-17",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:44 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-17T08:44:56.217302+09:00",
+    "lastUpdatedISO": "2026-09-17T13:01:28.300866+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": "CUSTOMER",
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "newsCount": 3,
+        "primaryTheme": "ADVENTURE",
+        "secondaryTheme": "NEW_MODEL",
+        "signal": "NEW",
+        "activity": "HIGH",
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
           "NEW_MODEL": "CONTINUING",
-          "CUSTOMER": "CONTINUING"
+          "CUSTOMER": "CONTINUING",
+          "ADVENTURE": "NEW"
         }
       },
       "ducati": {
@@ -34,14 +35,16 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174304533&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "harley": {
         "newsCount": 0,
@@ -103,11 +106,25 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[이기자가 간다] BMW F 450 GS 론칭 및 시승회",
+        "description": "GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처, BMW F 450 GS’178kg 경량 차체에 420cc 2기통 엔진 탑재… 익스클루시브·GS 트로피 2개 트림 출시… ‘시프트 어시스턴트 프로’ 기본, GS 트로피에는 ‘이지 라이드 클러치’ 적용...BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[일타리뷰_BMW F 450 GS] GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처’",
+        "description": "BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다. 9월 8일, 영종 BMW 드라이빙 센터에서 F 450 GS의 론칭과 온·오프로드 시승회를 진행하며 F 450 GS의 상품성과 주행 성능을 소개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -131,13 +148,33 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
+      "rank": 3
+    },
+    {
+      "id": "ae93530bff2d2c7f",
+      "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=174304533&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-09-17T11:53:04+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 1
     },
     {
       "id": "2627d9e78de32d05",
       "title": "노사발전재단, 가을 산재 예방 캠페인…천안서 이륜차 점검",
       "url": "https://www.yna.co.kr/view/AKR20260915135400530",
-      "source": "yna.co.kr",
+      "source": "연합뉴스",
       "sourceType": "media",
       "sourceGroup": "google",
       "brandGroups": [],
@@ -149,7 +186,47 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "7f305b7fea66795d",
+      "title": "[일타리뷰_BMW F 450 GS] GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처’",
+      "url": "https://www.kmnews.net/REVIEW/?idx=174304264&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-09-17T11:49:07+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다. 9월 8일, 영종 BMW 드라이빙 센터에서 F 450 GS의 론칭과 온·오프로드 시승회를 진행하며 F 450 GS의 상품성과 주행 성능을 소개했다.",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
       "rank": 1
+    },
+    {
+      "id": "ed104c8b707e4b84",
+      "title": "[이기자가 간다] BMW F 450 GS 론칭 및 시승회",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=174303306&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-09-17T11:35:28+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처, BMW F 450 GS’178kg 경량 차체에 420cc 2기통 엔진 탑재… 익스클루시브·GS 트로피 2개 트림 출시… ‘시프트 어시스턴트 프로’ 기본, GS 트로피에는 ‘이지 라이드 클러치’ 적용...BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다.",
+      "importance": 3.0,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 2
     },
     {
       "id": "82d1e52e3d7104e0",
@@ -167,7 +244,7 @@
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "de891f259d3a32eb",
@@ -224,12 +301,32 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "코미네, 프리미엄 투어링 재킷 ‘JK-639 ENIGMA G2’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[이기자가 간다] BMW F 450 GS 론칭 및 시승회",
+        "description": "GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처, BMW F 450 GS’178kg 경량 차체에 420cc 2기통 엔진 탑재… 익스클루시브·GS 트로피 2개 트림 출시… ‘시프트 어시스턴트 프로’ 기본, GS 트로피에는 ‘이지 라이드 클러치’ 적용...BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[일타리뷰_BMW F 450 GS] GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처’",
+        "description": "BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다. 9월 8일, 영종 BMW 드라이빙 센터에서 F 450 GS의 론칭과 온·오프로드 시승회를 진행하며 F 450 GS의 상품성과 주행 성능을 소개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }

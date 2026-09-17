@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-09-17T08:44:56.223482+09:00",
+  "generatedAtISO": "2026-09-17T13:01:28.307922+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -119,9 +119,14 @@
     },
     {
       "date": "2026-09-17",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 3,
+      "byBrand": {
+        "triumph": 1,
+        "bmw": 2
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 3
+      }
     }
   ]
 }
