@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-18",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "08:38 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-18T08:01:32.547652+09:00",
+    "lastUpdatedISO": "2026-09-18T08:38:03.153703+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 3,
@@ -19,9 +19,9 @@
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "ADVENTURE": "NEW",
+          "NEW_MODEL": "CONTINUING",
           "CUSTOMER": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "ADVENTURE": "NEW"
         }
       },
       "ducati": {
