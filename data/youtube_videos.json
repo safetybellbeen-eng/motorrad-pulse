@@ -1,11 +1,51 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-17T00:02:56.288174+00:00",
+    "lastUpdatedISO": "2026-09-17T23:53:26.111829+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_JoRl2jI8j28",
+      "videoId": "JoRl2jI8j28",
+      "title": "야마하 모터사이클 공식 회사소개 | 한국모터트레이딩",
+      "url": "https://www.youtube.com/watch?v=JoRl2jI8j28",
+      "thumbnail": "https://i3.ytimg.com/vi/JoRl2jI8j28/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-09-17T08:54:29+00:00"
+    },
+    {
+      "id": "yt_59CmN0lDtDI",
+      "videoId": "59CmN0lDtDI",
+      "title": "슈퍼커브와 함께 오랜 꿈을 현실로! \"Dreams Come True\" l 시작은 혼다 : Honda Welcome Class - 슈퍼커브 클래스",
+      "url": "https://www.youtube.com/shorts/59CmN0lDtDI",
+      "thumbnail": "https://i2.ytimg.com/vi/59CmN0lDtDI/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-17T01:00:24+00:00"
+    },
+    {
+      "id": "yt_aQdaDzPjLnU",
+      "videoId": "aQdaDzPjLnU",
+      "title": "[시작은 혼다!] \"오토바이 입문의 꿈\" 혼다와 함께ㅣHonda Welcome Class - 풀영상",
+      "url": "https://www.youtube.com/watch?v=aQdaDzPjLnU",
+      "thumbnail": "https://i2.ytimg.com/vi/aQdaDzPjLnU/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-17T01:00:08+00:00"
+    },
+    {
+      "id": "yt_a6YJlUPF3Vs",
+      "videoId": "a6YJlUPF3Vs",
+      "title": "[웰컴클래스] 혼다모터사이클과 함께하는 안전한 라이딩 습관 만들기!ㅣ시작은 혼다! : Honda Welcome Class",
+      "url": "https://www.youtube.com/shorts/a6YJlUPF3Vs",
+      "thumbnail": "https://i2.ytimg.com/vi/a6YJlUPF3Vs/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-17T01:00:05+00:00"
+    },
     {
       "id": "yt_QUs6JyOJ_fM",
       "videoId": "QUs6JyOJ_fM",
@@ -27,16 +67,6 @@
       "publishedAt": "2026-09-14T05:31:34+00:00"
     },
     {
-      "id": "yt_XjmNxZlzH_w",
-      "videoId": "XjmNxZlzH_w",
-      "title": "타보령, 해보령, 즐겨보령! 혼다데이 2026 티켓 오픈 D-1ㅣHonda Day 보령",
-      "url": "https://www.youtube.com/shorts/XjmNxZlzH_w",
-      "thumbnail": "https://i1.ytimg.com/vi/XjmNxZlzH_w/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-14T05:23:01+00:00"
-    },
-    {
       "id": "yt_RWt2C6iprd8",
       "videoId": "RWt2C6iprd8",
       "title": "2026 Heritage Classic | 할리데이비슨 | Harley-Davidson | Harleydavidson",
@@ -55,26 +85,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-09-08T07:53:39+00:00"
-    },
-    {
-      "id": "yt_caimwkTGW-8",
-      "videoId": "caimwkTGW-8",
-      "title": "GRIP THE TRAIL, NOT THE CLUTCH | Honda NX500 E-Clutch | 미들급 어드벤처",
-      "url": "https://www.youtube.com/watch?v=caimwkTGW-8",
-      "thumbnail": "https://i4.ytimg.com/vi/caimwkTGW-8/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-08T01:00:07+00:00"
-    },
-    {
-      "id": "yt_klyTHEnaCpY",
-      "videoId": "klyTHEnaCpY",
-      "title": "[HSRS] 추월상황 위험예측 - \"저 정도면 멀지\" 추월상황에서 방심하면 안되는 이유 | #왕복2차선 #추월",
-      "url": "https://www.youtube.com/shorts/klyTHEnaCpY",
-      "thumbnail": "https://i4.ytimg.com/vi/klyTHEnaCpY/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-04T01:00:28+00:00"
     },
     {
       "id": "yt_Et591MudhQo",
@@ -175,16 +185,6 @@
       "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
       "brandGroup": "yamaha",
       "publishedAt": "2026-07-16T02:54:14+00:00"
-    },
-    {
-      "id": "yt_XR9siUZBUl8",
-      "videoId": "XR9siUZBUl8",
-      "title": "[OFFICIAL VIDEO] YAMAHA MOTOROiD",
-      "url": "https://www.youtube.com/watch?v=XR9siUZBUl8",
-      "thumbnail": "https://i1.ytimg.com/vi/XR9siUZBUl8/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-07-14T07:48:08+00:00"
     },
     {
       "id": "yt_aV_C9RvZfeE",
