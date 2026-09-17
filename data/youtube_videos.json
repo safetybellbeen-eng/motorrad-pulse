@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-15T23:56:21.411940+00:00",
+    "lastUpdatedISO": "2026-09-17T00:02:56.288174+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_QUs6JyOJ_fM",
+      "videoId": "QUs6JyOJ_fM",
+      "title": "SHIFT LIKE A PRO, EVERY TIME | Honda CBR500R E-Clutch | 미들급 스포츠",
+      "url": "https://www.youtube.com/watch?v=QUs6JyOJ_fM",
+      "thumbnail": "https://i2.ytimg.com/vi/QUs6JyOJ_fM/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-16T08:00:06+00:00"
+    },
     {
       "id": "yt_WoPx5FmFaDo",
       "videoId": "WoPx5FmFaDo",
@@ -65,16 +75,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-09-04T01:00:28+00:00"
-    },
-    {
-      "id": "yt_R_iFkl6dDlA",
-      "videoId": "R_iFkl6dDlA",
-      "title": "휴가철 몽키 한 대면 다 됨. [시작은 혼다!]",
-      "url": "https://www.youtube.com/shorts/R_iFkl6dDlA",
-      "thumbnail": "https://i3.ytimg.com/vi/R_iFkl6dDlA/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-03T01:00:34+00:00"
     },
     {
       "id": "yt_Et591MudhQo",
