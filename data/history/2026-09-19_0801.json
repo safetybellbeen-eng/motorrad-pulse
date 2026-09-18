@@ -1,0 +1,50 @@
+{
+  "savedAtISO": "2026-09-19T08:01:31.361177+09:00",
+  "articles": [
+    {
+      "id": "7f305b7fea66795d",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-17T11:49:07+09:00"
+    },
+    {
+      "id": "ed104c8b707e4b84",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-09-17T11:35:28+09:00"
+    },
+    {
+      "id": "ae93530bff2d2c7f",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-17T11:53:04+09:00"
+    }
+  ]
+}

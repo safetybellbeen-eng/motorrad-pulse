@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-18",
-    "dayLabel": "FRIDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-19",
+    "dayLabel": "SATURDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-18T18:01:33.359051+09:00",
+    "lastUpdatedISO": "2026-09-19T08:01:31.360620+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 3,
@@ -16,12 +16,12 @@
         "secondaryTheme": "NEW_MODEL",
         "signal": "CONTINUING",
         "activity": "HIGH",
-        "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
           "ADVENTURE": "CONTINUING",
-          "CUSTOMER": "CONTINUING"
+          "CUSTOMER": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
@@ -83,20 +83,6 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
-        "description": "모터사이클 고객 전용 멤버십 제공, 정비·쇼핑·시승·이벤트 등 앱 하나로 이용BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 9월 1일 공식 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
-        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
         "title": "[이기자가 간다] BMW F 450 GS 론칭 및 시승회",
         "description": "GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처, BMW F 450 GS’178kg 경량 차체에 420cc 2기통 엔진 탑재… 익스클루시브·GS 트로피 2개 트림 출시… ‘시프트 어시스턴트 프로’ 기본, GS 트로피에는 ‘이지 라이드 클러치’ 적용...BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다.",
         "relatedNewsCount": 1,
@@ -109,51 +95,18 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "6d651f2b48fa1bd0",
-      "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-16T23:30:48+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "모터사이클 고객 전용 멤버십 제공, 정비·쇼핑·시승·이벤트 등 앱 하나로 이용BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 9월 1일 공식 출시했다.",
-      "importance": 3.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 3
-    },
-    {
-      "id": "ae93530bff2d2c7f",
-      "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174304533&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "triumph",
-      "brandGroups": [
-        "triumph"
-      ],
-      "publishedAt": "2026-09-17T11:53:04+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
-    },
     {
       "id": "7f305b7fea66795d",
       "title": "[일타리뷰_BMW F 450 GS] GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처’",
@@ -193,6 +146,26 @@
       "isTopNews": true,
       "topNewsGroup": "own",
       "rank": 2
+    },
+    {
+      "id": "ae93530bff2d2c7f",
+      "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=174304533&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-09-17T11:53:04+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
@@ -200,26 +173,6 @@
     "market": [],
     "competitor": [],
     "productTech": [
-      {
-        "title": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
-        "description": "모터사이클 고객 전용 멤버십 제공, 정비·쇼핑·시승·이벤트 등 앱 하나로 이용BMW 모토라드가 모터사이클 고객을 위한 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지(BMW Motorrad Vantage)’ 앱 서비스를 9월 1일 공식 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
-        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
       {
         "title": "[이기자가 간다] BMW F 450 GS 론칭 및 시승회",
         "description": "GS의 새로운 시작, 온·오프로드 아우르는 ‘다목적 어드벤처, BMW F 450 GS’178kg 경량 차체에 420cc 2기통 엔진 탑재… 익스클루시브·GS 트로피 2개 트림 출시… ‘시프트 어시스턴트 프로’ 기본, GS 트로피에는 ‘이지 라이드 클러치’ 적용...BMW 모토라드가 프리미엄 어드벤처 모터사이클 ‘F 450 GS’를 국내 공식 출시했다.",
@@ -237,6 +190,16 @@
         "impact": "Low",
         "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
+        "description": "K&N 고성능 순정 교환형 에어필터 ‘TB-4024’, 흡기 효율 향상 및 재사용 가능 글로벌 애프터 파츠 브랜드인 K&N의 공식 수입원 신원모터싸이클이 트라이엄프 400cc 라인업을 위한 고성능 순정 교환형 에어필터 ‘TB-4024’를 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }

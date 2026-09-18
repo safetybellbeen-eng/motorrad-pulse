@@ -1,15 +1,7 @@
 {
-  "generatedAtISO": "2026-09-18T18:01:33.363519+09:00",
+  "generatedAtISO": "2026-09-19T08:01:31.365017+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-09-05",
-      "newsCount": 1,
-      "byBrand": {},
-      "byCategory": {
-        "PRODUCT_TECH": 1
-      }
-    },
     {
       "date": "2026-09-06",
       "newsCount": 1,
@@ -117,8 +109,8 @@
       "date": "2026-09-17",
       "newsCount": 3,
       "byBrand": {
-        "triumph": 1,
-        "bmw": 2
+        "bmw": 2,
+        "triumph": 1
       },
       "byCategory": {
         "PRODUCT_TECH": 3
@@ -126,6 +118,12 @@
     },
     {
       "date": "2026-09-18",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
+    },
+    {
+      "date": "2026-09-19",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
