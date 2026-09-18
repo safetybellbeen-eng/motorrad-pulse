@@ -2,26 +2,26 @@
   "meta": {
     "date": "2026-09-18",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-18T13:01:21.868968+09:00",
+    "lastUpdatedISO": "2026-09-18T18:01:33.359051+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 3,
         "primaryTheme": "ADVENTURE",
         "secondaryTheme": "NEW_MODEL",
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "HIGH",
         "topArticleTitle": "BMW, 통합 라이프스타일 플랫폼 ‘BMW 모토라드 밴티지’ 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174089449&bmode=view",
         "signalDetails": {
-          "CUSTOMER": "CONTINUING",
-          "ADVENTURE": "NEW",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "ADVENTURE": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "ducati": {
@@ -38,12 +38,12 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "[뉴아이템] K&N, 트라이엄프 400 시리즈용 에어필터 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174304533&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "harley": {
