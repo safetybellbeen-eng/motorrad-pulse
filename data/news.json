@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-21",
-    "dayLabel": "MONDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-22",
+    "dayLabel": "TUESDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-21T18:01:18.642631+09:00",
+    "lastUpdatedISO": "2026-09-22T08:01:50.511051+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -21,13 +21,13 @@
         "signalDetails": {}
       },
       "ducati": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "두카티 코리아, 강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트",
+        "topArticleUrl": "https://www.carguy.kr/news/articleView.html?idxno=62130",
         "signalDetails": {}
       },
       "triumph": {
@@ -99,9 +99,37 @@
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "두카티 코리아, 강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트",
+        "description": "두카티 코리아가 지난 9월 18일부터 20일까지 강원도 삼척, 대관령, 정선 일대에서 진행한 고객 대상 투어 이벤트 ‘The RED Voyage’를 성황리에 마쳤",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
+    {
+      "id": "a84f96abaab58e98",
+      "title": "두카티 코리아, 강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트",
+      "url": "https://www.carguy.kr/news/articleView.html?idxno=62130",
+      "source": "카가이",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "publishedAt": "2026-09-21T17:58:31+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": "두카티 코리아가 지난 9월 18일부터 20일까지 강원도 삼척, 대관령, 정선 일대에서 진행한 고객 대상 투어 이벤트 ‘The RED Voyage’를 성황리에 마쳤",
+      "importance": 2.0,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
     {
       "id": "dfa47daa41b29fb2",
       "title": "디앤에이모터스, 추석 맞아 UHR ‘30만원 페이백’ 프로모션",
@@ -194,6 +222,17 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "두카티 코리아, 강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트",
+        "description": "두카티 코리아가 지난 9월 18일부터 20일까지 강원도 삼척, 대관령, 정선 일대에서 진행한 고객 대상 투어 이벤트 ‘The RED Voyage’를 성황리에 마쳤",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ]
   }
 }

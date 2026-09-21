@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-21",
-  "lastAnalyzedAt": "2026-09-21T18:01:18.642703+09:00",
+  "date": "2026-09-22",
+  "lastAnalyzedAt": "2026-09-22T08:01:50.511109+09:00",
   "dailySignal": {
     "title": "신규 모델 및 Adventure 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -37,12 +37,22 @@
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
     }
   ],
-  "customerTrend": [],
+  "customerTrend": [
+    {
+      "title": "두카티 코리아, 강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트",
+      "summary": "두카티 코리아가 지난 9월 18일부터 20일까지 강원도 삼척, 대관령, 정선 일대에서 진행한 고객 대상 투어 이벤트 ‘The RED Voyage’를 성황리에 마쳤",
+      "relatedNewsIds": [
+        "a84f96abaab58e98"
+      ],
+      "impact": 2.0,
+      "bmwView": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+    }
+  ],
   "teamBrief": {
     "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
     "competitor": "경쟁 브랜드 관련 뉴스가 1건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
     "productTech": "제품 및 기술 관련 뉴스 2건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
-    "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
+    "customerTrend": "고객 및 라이딩 트렌드 관련 뉴스 1건이 확인되었습니다. 고객 Experience와 Lifestyle 변화를 지속적으로 확인할 필요가 있습니다.",
     "todayInsight": "오늘은 신규 모델, Adventure 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
 }
