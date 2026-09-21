@@ -1,39 +1,19 @@
 {
-  "savedAtISO": "2026-08-22T13:01:33.251616+09:00",
+  "savedAtISO": "2026-09-21T18:01:18.643687+09:00",
   "articles": [
     {
-      "id": "c71702e522b26f0f",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "source": "한국이륜차신문",
-      "domain": "www.kmnews.net",
-      "category": "PRODUCT_TECH",
-      "signalThemes": [
-        "NEW_MODEL",
-        "ADVENTURE"
-      ],
-      "importance": 2.5,
-      "publishedAt": "2026-08-21T23:25:49+09:00"
-    },
-    {
-      "id": "c1a9861dbdec1453",
+      "id": "dfa47daa41b29fb2",
       "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
+      "brandGroups": [],
       "source": "한국이륜차신문",
       "domain": "www.kmnews.net",
-      "category": "PRODUCT_TECH",
-      "signalThemes": [
-        "NEW_MODEL"
-      ],
-      "importance": 2.0,
-      "publishedAt": "2026-08-21T11:52:48+09:00"
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-09-21T11:53:03+09:00"
     },
     {
-      "id": "d7eea97471c6804f",
+      "id": "87e2e86713c1db91",
       "sourceGroup": "kmnews",
       "brandGroups": [],
       "source": "한국이륜차신문",
@@ -42,8 +22,21 @@
       "signalThemes": [
         "NEW_MODEL"
       ],
+      "importance": 2.0,
+      "publishedAt": "2026-09-21T10:51:57+09:00"
+    },
+    {
+      "id": "d3a74b1b131f8ce5",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "ADVENTURE"
+      ],
       "importance": 1.5,
-      "publishedAt": "2026-08-21T11:42:35+09:00"
+      "publishedAt": "2026-09-21T10:47:36+09:00"
     }
   ]
 }
