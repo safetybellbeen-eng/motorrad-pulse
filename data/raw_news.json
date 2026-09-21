@@ -1,4 +1,53 @@
 {
-  "lastCollectedAt": "2026-09-21T08:22:24.734254+09:00",
-  "news": []
+  "lastCollectedAt": "2026-09-21T13:01:02.153965+09:00",
+  "news": [
+    {
+      "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시’",
+      "url": "https://www.kmnews.net/NEWS/?idx=174570393&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-09-21T10:51:57+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 12,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시’&nbsp;&nbsp;한국이륜차신문",
+      "id": "87e2e86713c1db91",
+      "collectedAt": "2026-09-21T13:01:02.153965+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "[뉴모델_VOGE] 차세대 미들급 어드벤처 ’DS625X' 공식 론칭",
+      "url": "https://www.kmnews.net/REVIEW/?idx=174570207&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-09-21T10:47:36+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 6,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "[뉴모델_VOGE] 차세대 미들급 어드벤처 ’DS625X' 공식 론칭&nbsp;&nbsp;한국이륜차신문",
+      "id": "d3a74b1b131f8ce5",
+      "collectedAt": "2026-09-21T13:01:02.153965+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
