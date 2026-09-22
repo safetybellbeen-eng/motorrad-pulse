@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-22",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-22T13:01:33.844854+09:00",
+    "lastUpdatedISO": "2026-09-22T18:01:33.928763+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -85,6 +85,13 @@
     ],
     "productTech": [
       {
+        "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 존테스 125의 적재 공간을 확장할 수 있는 알루미늄 일체형 리어 캐리어를 새롭게 출시했다.이번 제품은 고강도 알루미늄 합금으로 제작해 가볍고 견고한 것이 특징이다. 내구성이 뛰어난 소재를 적용해 실용적인 적재 공간을 확보하면서도 차체와 자연스럽게 어우러지는 일체형 디자인으로 깔끔한 외관을 완성했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
         "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
         "relatedNewsCount": 1,
@@ -93,7 +100,7 @@
       },
       {
         "title": "[뉴모델_VOGE] 차세대 미들급 어드벤처 ’DS625X' 공식 론칭",
-        "description": "63ps, 581cc 병렬 2기통 엔진 탑재, 500cc급으로 부담은 줄이고 900cc급의 즐거움 선사중국 대형 모터사이클 제조사 중 하나인 론신(Loncin)이 만든 자체 프리미엄 브랜드 보그(VOGE)가 차세대 미들급 어드벤처 모델 DS625X를 선보였다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
@@ -128,7 +135,25 @@
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 5
+    },
+    {
+      "id": "ae840e5354d9db80",
+      "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=174619407&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-09-22T10:57:07+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 존테스 125의 적재 공간을 확장할 수 있는 알루미늄 일체형 리어 캐리어를 새롭게 출시했다.이번 제품은 고강도 알루미늄 합금으로 제작해 가볍고 견고한 것이 특징이다. 내구성이 뛰어난 소재를 적용해 실용적인 적재 공간을 확보하면서도 차체와 자연스럽게 어우러지는 일체형 디자인으로 깔끔한 외관을 완성했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
     },
     {
       "id": "dfa47daa41b29fb2",
@@ -146,7 +171,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "87e2e86713c1db91",
@@ -176,13 +201,13 @@
       "brandGroups": [],
       "publishedAt": "2026-09-21T10:47:36+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "63ps, 581cc 병렬 2기통 엔진 탑재, 500cc급으로 부담은 줄이고 900cc급의 즐거움 선사중국 대형 모터사이클 제조사 중 하나인 론신(Loncin)이 만든 자체 프리미엄 브랜드 보그(VOGE)가 차세대 미들급 어드벤처 모델 DS625X를 선보였다.",
+      "summary": null,
       "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -202,6 +227,16 @@
     "competitor": [],
     "productTech": [
       {
+        "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 존테스 125의 적재 공간을 확장할 수 있는 알루미늄 일체형 리어 캐리어를 새롭게 출시했다.이번 제품은 고강도 알루미늄 합금으로 제작해 가볍고 견고한 것이 특징이다. 내구성이 뛰어난 소재를 적용해 실용적인 적재 공간을 확보하면서도 차체와 자연스럽게 어우러지는 일체형 디자인으로 깔끔한 외관을 완성했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
         "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
         "relatedNewsCount": 1,
@@ -213,7 +248,7 @@
       },
       {
         "title": "[뉴모델_VOGE] 차세대 미들급 어드벤처 ’DS625X' 공식 론칭",
-        "description": "63ps, 581cc 병렬 2기통 엔진 탑재, 500cc급으로 부담은 줄이고 900cc급의 즐거움 선사중국 대형 모터사이클 제조사 중 하나인 론신(Loncin)이 만든 자체 프리미엄 브랜드 보그(VOGE)가 차세대 미들급 어드벤처 모델 DS625X를 선보였다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
