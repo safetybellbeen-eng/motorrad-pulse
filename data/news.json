@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-22",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "09:14 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-22T09:14:37.385336+09:00",
+    "lastUpdatedISO": "2026-09-22T13:01:33.844854+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -159,7 +159,7 @@
       "publishedAt": "2026-09-21T10:51:57+09:00",
       "category": "PRODUCT_TECH",
       "summary": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
