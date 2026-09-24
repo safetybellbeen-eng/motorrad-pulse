@@ -1,17 +1,7 @@
 {
-  "generatedAtISO": "2026-09-24T18:01:21.584514+09:00",
+  "generatedAtISO": "2026-09-25T08:01:14.862300+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-09-11",
-      "newsCount": 1,
-      "byBrand": {
-        "harley": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 1
-      }
-    },
     {
       "date": "2026-09-12",
       "newsCount": 1,
@@ -30,14 +20,15 @@
     },
     {
       "date": "2026-09-14",
-      "newsCount": 3,
+      "newsCount": 4,
       "byBrand": {
+        "bmw": 1,
         "triumph": 1,
         "yamaha": 1
       },
       "byCategory": {
-        "COMPETITOR": 1,
-        "PRODUCT_TECH": 2
+        "PRODUCT_TECH": 3,
+        "COMPETITOR": 1
       }
     },
     {
@@ -48,22 +39,20 @@
     },
     {
       "date": "2026-09-16",
-      "newsCount": 4,
-      "byBrand": {
-        "bmw": 1
-      },
+      "newsCount": 3,
+      "byBrand": {},
       "byCategory": {
-        "PRODUCT_TECH": 2,
         "COMPETITOR": 1,
-        "MARKET": 1
+        "MARKET": 1,
+        "PRODUCT_TECH": 1
       }
     },
     {
       "date": "2026-09-17",
       "newsCount": 3,
       "byBrand": {
-        "bmw": 2,
-        "triumph": 1
+        "triumph": 1,
+        "bmw": 2
       },
       "byCategory": {
         "PRODUCT_TECH": 3
@@ -112,12 +101,18 @@
       "newsCount": 2,
       "byBrand": {},
       "byCategory": {
-        "MARKET": 1,
-        "PRODUCT_TECH": 1
+        "PRODUCT_TECH": 1,
+        "MARKET": 1
       }
     },
     {
       "date": "2026-09-24",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
+    },
+    {
+      "date": "2026-09-25",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}

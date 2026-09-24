@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-24",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-09-25",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-24T18:01:21.578151+09:00",
+    "lastUpdatedISO": "2026-09-25T08:01:14.858978+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -76,7 +76,7 @@
     "market": [
       {
         "title": "[모터스포츠] KSEF 메인 스폰서로 ‘KOVE’ 레이스 경쟁력 알린 ‘CMG’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "KOVE 350RR·450RR 총 5대 투입, 실제 레이스 통해 성능과 내구성 검증CMG(센트럴 모빌리티 그룹)가 한국을 대표하는 모터사이클 내구레이스인 ‘코리아 슈퍼 엔듀어런스 페스티벌(KSEF)’의 메인스폰서로 참여하며 KOVE 브랜드의 스포츠 경쟁력 알렸다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
@@ -87,13 +87,6 @@
       {
         "title": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개",
         "description": "BRP, 온·오프로드 ＆ 수상레저 2027 라인업, 상품성 대폭 강화BRP가 8월 17일 미국 올랜도에서 개최한 ‘2027 클럽 BRP(Club BRP)’를 통해 2027년 주요 신제품과 새로운 색상, 상품성 개선 사항 등을 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
-        "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -130,28 +123,10 @@
       "brandGroups": [],
       "publishedAt": "2026-09-23T10:48:27+09:00",
       "category": "MARKET",
-      "summary": null,
+      "summary": "KOVE 350RR·450RR 총 5대 투입, 실제 레이스 통해 성능과 내구성 검증CMG(센트럴 모빌리티 그룹)가 한국을 대표하는 모터사이클 내구레이스인 ‘코리아 슈퍼 엔듀어런스 페스티벌(KSEF)’의 메인스폰서로 참여하며 KOVE 브랜드의 스포츠 경쟁력 알렸다.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "87e2e86713c1db91",
-      "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174570393&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-22T18:49:02+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
@@ -162,7 +137,7 @@
     "market": [
       {
         "title": "[모터스포츠] KSEF 메인 스폰서로 ‘KOVE’ 레이스 경쟁력 알린 ‘CMG’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "KOVE 350RR·450RR 총 5대 투입, 실제 레이스 통해 성능과 내구성 검증CMG(센트럴 모빌리티 그룹)가 한국을 대표하는 모터사이클 내구레이스인 ‘코리아 슈퍼 엔듀어런스 페스티벌(KSEF)’의 메인스폰서로 참여하며 KOVE 브랜드의 스포츠 경쟁력 알렸다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -176,16 +151,6 @@
       {
         "title": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개",
         "description": "BRP, 온·오프로드 ＆ 수상레저 2027 라인업, 상품성 대폭 강화BRP가 8월 17일 미국 올랜도에서 개최한 ‘2027 클럽 BRP(Club BRP)’를 통해 2027년 주요 신제품과 새로운 색상, 상품성 개선 사항 등을 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
-        "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
