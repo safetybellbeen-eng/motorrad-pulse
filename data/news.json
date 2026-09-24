@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-24",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:53 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-24T08:53:24.212897+09:00",
+    "lastUpdatedISO": "2026-09-24T13:01:13.577668+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -88,19 +88,12 @@
         "title": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개",
         "description": "BRP, 온·오프로드 ＆ 수상레저 2027 라인업, 상품성 대폭 강화BRP가 8월 17일 미국 올랜도에서 개최한 ‘2027 클럽 BRP(Club BRP)’를 통해 2027년 주요 신제품과 새로운 색상, 상품성 개선 사항 등을 공개했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
         "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -120,7 +113,7 @@
       "publishedAt": "2026-09-23T11:06:40+09:00",
       "category": "PRODUCT_TECH",
       "summary": "BRP, 온·오프로드 ＆ 수상레저 2027 라인업, 상품성 대폭 강화BRP가 8월 17일 미국 올랜도에서 개최한 ‘2027 클럽 BRP(Club BRP)’를 통해 2027년 주요 신제품과 새로운 색상, 상품성 개선 사항 등을 공개했다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -162,23 +155,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
-    },
-    {
-      "id": "ae840e5354d9db80",
-      "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174619407&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-22T10:57:07+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
     }
   ],
   "marketIntelligenceV2": {
@@ -201,7 +177,7 @@
         "title": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개",
         "description": "BRP, 온·오프로드 ＆ 수상레저 2027 라인업, 상품성 대폭 강화BRP가 8월 17일 미국 올랜도에서 개최한 ‘2027 클럽 BRP(Club BRP)’를 통해 2027년 주요 신제품과 새로운 색상, 상품성 개선 사항 등을 공개했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
@@ -210,16 +186,6 @@
       {
         "title": "[뉴아이템] GIVI, 확장형 사이드케이스·탑박스 겸용 ‘XSPACE 시리즈’ 출시",
         "description": "이탈리아 프리미엄 모터사이클 액세서리 브랜드 GIVI(지비)의 공식 수입원 해리통상이 사이드케이스와 탑박스로 모두 사용할 수 있는 ‘XSPACE 시리즈’를 국내 공식 출시하고 판매에 나선다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] MSR, 존테스 125 전용 알루미늄 일체형 리어 캐리어 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
