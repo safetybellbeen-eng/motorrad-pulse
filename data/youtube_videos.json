@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-09-24T00:12:30.415112+00:00",
+    "lastUpdatedISO": "2026-09-25T00:14:34.852956+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_RNRRbtmzYWc",
+      "videoId": "RNRRbtmzYWc",
+      "title": "[참가접수 시작!] 2026년 레이스 입문 마지막 기회! 혼다 원메이커 레이스 4라운드 참가접수 중 #shorts",
+      "url": "https://www.youtube.com/shorts/RNRRbtmzYWc",
+      "thumbnail": "https://i3.ytimg.com/vi/RNRRbtmzYWc/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-09-24T01:00:36+00:00"
+    },
     {
       "id": "yt_JoRl2jI8j28",
       "videoId": "JoRl2jI8j28",
@@ -55,16 +65,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-09-16T08:00:06+00:00"
-    },
-    {
-      "id": "yt_WoPx5FmFaDo",
-      "videoId": "WoPx5FmFaDo",
-      "title": "타보령, 해보령, 즐겨보령! 혼다데이 2026 티켓 오픈 D-1ㅣHonda Day 보령",
-      "url": "https://www.youtube.com/watch?v=WoPx5FmFaDo",
-      "thumbnail": "https://i4.ytimg.com/vi/WoPx5FmFaDo/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-14T05:31:34+00:00"
     },
     {
       "id": "yt_RWt2C6iprd8",
