@@ -1,23 +1,7 @@
 {
-  "generatedAtISO": "2026-09-25T08:58:14.770965+09:00",
+  "generatedAtISO": "2026-09-27T08:01:11.716087+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-09-12",
-      "newsCount": 1,
-      "byBrand": {
-        "triumph": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 1
-      }
-    },
-    {
-      "date": "2026-09-13",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-09-14",
       "newsCount": 4,
@@ -98,10 +82,9 @@
     },
     {
       "date": "2026-09-23",
-      "newsCount": 2,
+      "newsCount": 1,
       "byBrand": {},
       "byCategory": {
-        "PRODUCT_TECH": 1,
         "MARKET": 1
       }
     },
@@ -113,6 +96,20 @@
     },
     {
       "date": "2026-09-25",
+      "newsCount": 1,
+      "byBrand": {},
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
+    },
+    {
+      "date": "2026-09-27",
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
