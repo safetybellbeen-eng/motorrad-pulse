@@ -1,4 +1,29 @@
 {
-  "lastCollectedAt": "2026-09-26T18:00:51.511923+09:00",
-  "news": []
+  "lastCollectedAt": "2026-09-27T08:00:54.753567+09:00",
+  "news": [
+    {
+      "title": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=174664198&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-09-25T19:29:51+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "BRP, ‘2027 클럽 BRP’서 신형 라이커·스파크와 RXP-X SENNA 에디션 공개&nbsp;&nbsp;한국이륜차신문",
+      "id": "a8062fbd9410623f",
+      "collectedAt": "2026-09-27T08:00:54.753567+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
