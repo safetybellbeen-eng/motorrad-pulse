@@ -2,23 +2,26 @@
   "meta": {
     "date": "2026-09-29",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "10:10 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "시장/판매 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-29T08:01:18.886401+09:00",
+    "lastUpdatedISO": "2026-09-29T10:10:35.228877+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 0,
-        "primaryTheme": null,
-        "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "newsCount": 2,
+        "primaryTheme": "CUSTOMER",
+        "secondaryTheme": "MARKET",
+        "signal": "NEW",
+        "activity": "HIGH",
+        "topArticleTitle": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
+        "topArticleUrl": "https://www.fnnews.com/news/202609290915379070",
+        "signalDetails": {
+          "CUSTOMER": "NEW",
+          "MARKET": "NEW"
+        }
       },
       "ducati": {
         "newsCount": 0,
@@ -84,9 +87,57 @@
     ],
     "competitor": [],
     "productTech": [],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "고객·Trend 관련 뉴스 확대",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
+        "impact": "High",
+        "bmwNote": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
+    {
+      "id": "3d0bdfa509a724ff",
+      "title": "“트랙부터 오프로드까지”…BMW모토라드, 영종도서 ‘라이더 축제’ 연다",
+      "url": "https://www.mk.co.kr/news/business/12163400",
+      "source": "매일경제",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-09-29T09:28:16+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
+      "bmwInsight": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 2
+    },
+    {
+      "id": "d4f7f7d0c0cb93de",
+      "title": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
+      "url": "https://www.fnnews.com/news/202609290915379070",
+      "source": "파이낸셜뉴스",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-09-29T09:17:12+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": "BMW 모토라드가 인천 영종도 BMW 드라이빙 센터에서 모터사이클 주행 체험과 신차 전시를 결합한 라이더 행사를 연다. 트랙과 비포장도로에서 제품 성능을 직접 경험하고 BMW·MINI 자동차까지 체험할 수 있도록 프로그램을 구성했다. 지난해 1000여명이 참여한 행사를 ..",
+      "importance": 4.0,
+      "whyItMatters": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
+      "bmwInsight": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
     {
       "id": "461fca97a9582f3b",
       "title": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시",
@@ -122,6 +173,17 @@
     ],
     "competitor": [],
     "productTech": [],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "고객·Trend 관련 뉴스 확대",
+        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
+        "impact": "High",
+        "bmwNote": "자사 Community·오프라인 Experience 활동이 고객 Engagement에 미치는 영향을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "GROUPED"
+      }
+    ]
   }
 }
