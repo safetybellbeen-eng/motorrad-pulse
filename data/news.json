@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-29",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-29T13:01:16.611255+09:00",
+    "lastUpdatedISO": "2026-09-29T18:01:26.976578+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
         "topArticleUrl": "https://www.fnnews.com/news/202609290915379070",
         "signalDetails": {
-          "MARKET": "NEW",
-          "CUSTOMER": "NEW"
+          "CUSTOMER": "NEW",
+          "MARKET": "NEW"
         }
       },
       "ducati": {
