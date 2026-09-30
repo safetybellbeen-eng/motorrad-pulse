@@ -1,0 +1,36 @@
+{
+  "savedAtISO": "2026-09-30T18:01:25.989006+09:00",
+  "articles": [
+    {
+      "id": "3d0bdfa509a724ff",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "매일경제",
+      "domain": "www.mk.co.kr",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [
+        "CUSTOMER"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-09-29T09:28:16+09:00"
+    },
+    {
+      "id": "d4f7f7d0c0cb93de",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "파이낸셜뉴스",
+      "domain": "www.fnnews.com",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [
+        "MARKET",
+        "CUSTOMER"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-09-29T09:17:12+09:00"
+    }
+  ]
+}
