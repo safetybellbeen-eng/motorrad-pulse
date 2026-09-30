@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-09-30",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "09:41 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-30T08:01:18.699194+09:00",
+    "lastUpdatedISO": "2026-09-30T09:41:28.171264+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -111,7 +111,7 @@
       "publishedAt": "2026-09-29T09:28:16+09:00",
       "category": "CUSTOMER_TREND",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
       "bmwInsight": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
