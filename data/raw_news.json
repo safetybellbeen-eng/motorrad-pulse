@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-09-30T09:41:11.813347+09:00",
+  "lastCollectedAt": "2026-09-30T13:01:06.814475+09:00",
   "news": [
     {
       "title": "“트랙부터 오프로드까지”…BMW모토라드, 영종도서 ‘라이더 축제’ 연다",
@@ -30,7 +30,7 @@
     {
       "title": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
       "url": "https://www.fnnews.com/news/202609290915379070",
-      "source": "파이낸셜뉴스",
+      "source": "fnnews.com",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "publishedAt": "2026-09-29T09:17:12+09:00",
@@ -41,33 +41,9 @@
         "bmw"
       ],
       "acquisitionMethod": "google_news",
-      "description": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매&nbsp;&nbsp;파이낸셜뉴스",
+      "description": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매&nbsp;&nbsp;fnnews.com",
       "id": "d4f7f7d0c0cb93de",
-      "collectedAt": "2026-09-30T09:41:11.813347+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    },
-    {
-      "title": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174845741&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "publishedAt": "2026-09-28T10:55:39+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 12,
-      "brandGroups": [],
-      "acquisitionMethod": "google_news",
-      "description": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시&nbsp;&nbsp;한국이륜차신문",
-      "id": "461fca97a9582f3b",
-      "collectedAt": "2026-09-29T18:01:07.111773+09:00",
+      "collectedAt": "2026-09-30T13:01:06.814475+09:00",
       "category": null,
       "summary": null,
       "importance": null,
