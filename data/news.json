@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-09-30",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-10-01",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-30T18:01:25.988299+09:00",
+    "lastUpdatedISO": "2026-10-01T08:01:20.558916+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
