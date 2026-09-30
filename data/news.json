@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-09-30",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "09:41 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "시장/판매 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-09-30T09:41:28.171264+09:00",
+    "lastUpdatedISO": "2026-09-30T13:01:25.432292+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
         "primaryTheme": "CUSTOMER",
         "secondaryTheme": "MARKET",
-        "signal": "NEW",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
         "topArticleUrl": "https://www.fnnews.com/news/202609290915379070",
         "signalDetails": {
-          "CUSTOMER": "NEW",
-          "MARKET": "NEW"
+          "MARKET": "CONTINUING",
+          "CUSTOMER": "CONTINUING"
         }
       },
       "ducati": {
@@ -76,15 +76,7 @@
     }
   },
   "marketIntelligence": {
-    "market": [
-      {
-        "title": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시",
-        "description": "요시무라코리아가 스즈키 하야부사(2021~2026년식) 전용 요시무라 ‘R-77 듀얼 슬립온 머플러’의 공급을 재개했다.한때 본사에서 단종 수순을 밟을 예정이었던 R-77은 국내 수요를 근거로 요시무라코리아가 본사에 재생산을 요청하면서 다시 시장에 공급되게 됐다. R-77은 국내에서도 하야부사 오너들에게 꾸준히 선택받아온 제품이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [],
     "customerTrend": [
@@ -122,7 +114,7 @@
       "id": "d4f7f7d0c0cb93de",
       "title": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
       "url": "https://www.fnnews.com/news/202609290915379070",
-      "source": "파이낸셜뉴스",
+      "source": "fnnews.com",
       "sourceType": "media",
       "sourceGroup": "bmw",
       "brandGroups": [
@@ -137,40 +129,11 @@
       "isTopNews": true,
       "topNewsGroup": "own",
       "rank": 1
-    },
-    {
-      "id": "461fca97a9582f3b",
-      "title": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174845741&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-09-28T10:55:39+09:00",
-      "category": "MARKET",
-      "summary": "요시무라코리아가 스즈키 하야부사(2021~2026년식) 전용 요시무라 ‘R-77 듀얼 슬립온 머플러’의 공급을 재개했다.한때 본사에서 단종 수순을 밟을 예정이었던 R-77은 국내 수요를 근거로 요시무라코리아가 본사에 재생산을 요청하면서 다시 시장에 공급되게 됐다. R-77은 국내에서도 하야부사 오너들에게 꾸준히 선택받아온 제품이다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
-      {
-        "title": "[뉴아이템] 요시무라, R-77 듀얼 슬립온 머플러 재출시",
-        "description": "요시무라코리아가 스즈키 하야부사(2021~2026년식) 전용 요시무라 ‘R-77 듀얼 슬립온 머플러’의 공급을 재개했다.한때 본사에서 단종 수순을 밟을 예정이었던 R-77은 국내 수요를 근거로 요시무라코리아가 본사에 재생산을 요청하면서 다시 시장에 공급되게 됐다. R-77은 국내에서도 하야부사 오너들에게 꾸준히 선택받아온 제품이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "MARKET",
-        "insightType": "NEEDS_CONFIRMATION"
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [],
     "customerTrend": [
