@@ -1,0 +1,32 @@
+{
+  "savedAtISO": "2026-10-01T18:01:18.874655+09:00",
+  "articles": [
+    {
+      "id": "243ea6cca9574955",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-01T12:26:22+09:00"
+    },
+    {
+      "id": "71d46fa5b1999f4f",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "TOURING",
+        "SCOOTER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-01T12:19:20+09:00"
+    }
+  ]
+}
