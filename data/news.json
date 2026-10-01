@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-01",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "시장/판매 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-01T08:01:20.558916+09:00",
+    "lastUpdatedISO": "2026-10-01T13:01:20.615949+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 2,
@@ -16,8 +16,8 @@
         "secondaryTheme": "MARKET",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
-        "topArticleUrl": "https://www.fnnews.com/news/202609290915379070",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "MARKET": "CONTINUING",
           "CUSTOMER": "CONTINUING"
@@ -78,75 +78,88 @@
   "marketIntelligence": {
     "market": [],
     "competitor": [],
-    "productTech": [],
-    "customerTrend": [
+    "productTech": [
       {
-        "title": "고객·Trend 관련 뉴스 확대",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
+        "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC'",
+        "description": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
+        "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다."
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
+        "description": "900cc급 대응 QX 링 체인, 판매가격 14만 7천 원EK 체인의 공식 수입원인 신원모터싸이클이 ‘525SRX2-120L 레드·실버’를 출시한다.이번 제품은 EK 체인의 SRX2 시리즈에 속하는 525 규격 체인으로, 120링크로 구성됐다. 붉은색 외측 플레이트와 은색 부품을 조합해 모터사이클의 외관에 개성을 더할 수 있도록 했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
-    ]
+    ],
+    "customerTrend": []
   },
   "news": [
     {
-      "id": "3d0bdfa509a724ff",
-      "title": "“트랙부터 오프로드까지”…BMW모토라드, 영종도서 ‘라이더 축제’ 연다",
-      "url": "https://www.mk.co.kr/news/business/12163400",
-      "source": "매일경제",
+      "id": "243ea6cca9574955",
+      "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=174922293&bmode=view",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-29T09:28:16+09:00",
-      "category": "CUSTOMER_TREND",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
-      "bmwInsight": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-01T12:26:22+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "900cc급 대응 QX 링 체인, 판매가격 14만 7천 원EK 체인의 공식 수입원인 신원모터싸이클이 ‘525SRX2-120L 레드·실버’를 출시한다.이번 제품은 EK 체인의 SRX2 시리즈에 속하는 525 규격 체인으로, 120링크로 구성됐다. 붉은색 외측 플레이트와 은색 부품을 조합해 모터사이클의 외관에 개성을 더할 수 있도록 했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 2
+      "topNewsGroup": "others",
+      "rank": 1
     },
     {
-      "id": "d4f7f7d0c0cb93de",
-      "title": "BMW 모토라드, 내달 영종도서 라이더 축제…29일 티켓 판매",
-      "url": "https://www.fnnews.com/news/202609290915379070",
-      "source": "파이낸셜뉴스",
+      "id": "71d46fa5b1999f4f",
+      "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC'",
+      "url": "https://www.kmnews.net/REVIEW/?idx=174922241&bmode=view",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-09-29T09:17:12+09:00",
-      "category": "CUSTOMER_TREND",
-      "summary": "BMW 모토라드가 인천 영종도 BMW 드라이빙 센터에서 모터사이클 주행 체험과 신차 전시를 결합한 라이더 행사를 연다. 트랙과 비포장도로에서 제품 성능을 직접 경험하고 BMW·MINI 자동차까지 체험할 수 있도록 프로그램을 구성했다. 지난해 1000여명이 참여한 행사를 ..",
-      "importance": 3.5,
-      "whyItMatters": "브랜드 Community 및 오프라인 Experience 활동과 관련된 기사입니다. 고객 Engagement 효과를 확인할 필요가 있습니다.",
-      "bmwInsight": "브랜드 Community 및 오프라인 Experience 활동이 고객 Engagement와 재구매 관계 형성에 미치는 영향을 확인할 필요가 있습니다.",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-01T12:19:20+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
+      "topNewsGroup": "others",
+      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
     "competitor": [],
-    "productTech": [],
-    "customerTrend": [
+    "productTech": [
       {
-        "title": "고객·Trend 관련 뉴스 확대",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
+        "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC'",
+        "description": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
+        "relatedNewsCount": 1,
         "impact": "Medium",
-        "bmwNote": "자사 Community·오프라인 Experience 활동이 고객 Engagement에 미치는 영향을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "CUSTOMER_TREND",
-        "insightType": "GROUPED"
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
+        "description": "900cc급 대응 QX 링 체인, 판매가격 14만 7천 원EK 체인의 공식 수입원인 신원모터싸이클이 ‘525SRX2-120L 레드·실버’를 출시한다.이번 제품은 EK 체인의 SRX2 시리즈에 속하는 525 규격 체인으로, 120링크로 구성됐다. 붉은색 외측 플레이트와 은색 부품을 조합해 모터사이클의 외관에 개성을 더할 수 있도록 했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
       }
-    ]
+    ],
+    "customerTrend": []
   }
 }
