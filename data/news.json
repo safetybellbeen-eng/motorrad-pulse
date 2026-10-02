@@ -2,26 +2,23 @@
   "meta": {
     "date": "2026-10-02",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "10:02 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-02T08:01:13.237797+09:00",
+    "lastUpdatedISO": "2026-10-02T10:02:06.816650+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
-        "primaryTheme": "CUSTOMER",
-        "secondaryTheme": "MARKET",
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "newsCount": 0,
+        "primaryTheme": null,
+        "secondaryTheme": null,
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "MARKET": "CONTINUING",
-          "CUSTOMER": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "ducati": {
         "newsCount": 0,
