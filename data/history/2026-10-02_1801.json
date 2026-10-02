@@ -1,0 +1,83 @@
+{
+  "savedAtISO": "2026-10-02T18:01:16.891354+09:00",
+  "articles": [
+    {
+      "id": "3b6be778980137ac",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "ebn.co.kr",
+      "domain": "www.ebn.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-02T13:43:39+09:00"
+    },
+    {
+      "id": "9f7a22cefb35c3e8",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-02T12:08:33+09:00"
+    },
+    {
+      "id": "8b4a0b7a4b738e27",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-02T10:39:09+09:00"
+    },
+    {
+      "id": "7fb26176354fd44e",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-02T10:33:36+09:00"
+    },
+    {
+      "id": "243ea6cca9574955",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-10-01T12:26:22+09:00"
+    },
+    {
+      "id": "50dec515d6e674f3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-01T12:23:44+09:00"
+    }
+  ]
+}

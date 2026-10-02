@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-02",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-02T13:01:22.224370+09:00",
+    "lastUpdatedISO": "2026-10-02T18:01:16.890424+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,13 +51,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
+        "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
         "signal": "NEW",
-        "activity": "MEDIUM",
-        "topArticleTitle": "혼다, 패션 브랜드 오니츠카 타이거와 협업, 밀라노 패션위크서 ‘미드 스포츠 콘셉트’ 세계 최초 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=174936221&bmode=view",
+        "activity": "HIGH",
+        "topArticleTitle": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
+        "topArticleUrl": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
         "signalDetails": {
           "NEW_MODEL": "NEW"
         }
@@ -87,25 +87,18 @@
     ],
     "productTech": [
       {
-        "title": "혼다, 패션 브랜드 오니츠카 타이거와 협업, 밀라노 패션위크서 ‘미드 스포츠 콘셉트’ 세계 최초 공개",
-        "description": "혼다코리아는 혼다가 일본을 대표하는 패션 브랜드 ‘오니츠카 타이거(Onitsuka Tiger)’와 산업의 경계를 넘어 모터사이클과 패션을 결합하는 협업을 시작한다고 밝혔다.양사는 첨단 기술과 제조의 높은 완성도를 추구하고, 끊임없이 새로운 도전에 나선다는 공통된 가치를 바탕으로 이번 협업을 추진하게 됐다고 전했다.",
-        "relatedNewsCount": 1,
+        "title": "신제품·기술 관련 뉴스 확대",
+        "description": "Honda 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
         "title": "[뉴아이템] MSR, 4단 온도조절 열선그립 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC' 국내론칭",
-        "description": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
       },
       {
         "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
@@ -115,9 +108,37 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트 성료",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
+    {
+      "id": "3b6be778980137ac",
+      "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
+      "source": "ebn.co.kr",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-10-02T13:43:39+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "혼다가 일본 패션 브랜드 오니츠카 타이거와 손잡고 모터사이클과 패션을 결합한 협업에 나선다.혼다는 오니츠카 타이거와 산업의 경계를 넘어 새로운 브랜드 경험을 선보",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
     {
       "id": "9f7a22cefb35c3e8",
       "title": "혼다, 패션 브랜드 오니츠카 타이거와 협업, 밀라노 패션위크서 ‘미드 스포츠 콘셉트’ 세계 최초 공개",
@@ -139,6 +160,23 @@
       "rank": 3
     },
     {
+      "id": "8b4a0b7a4b738e27",
+      "title": "강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트 성료",
+      "url": "https://www.kmnews.net/NEWS/?idx=174934926&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-02T10:39:09+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
       "id": "7fb26176354fd44e",
       "title": "[뉴아이템] MSR, 4단 온도조절 열선그립 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=174934872&bmode=view",
@@ -148,13 +186,13 @@
       "brandGroups": [],
       "publishedAt": "2026-10-02T10:33:36+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
       "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 1
     },
     {
       "id": "243ea6cca9574955",
@@ -191,24 +229,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 5
-    },
-    {
-      "id": "71d46fa5b1999f4f",
-      "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC' 국내론칭",
-      "url": "https://www.kmnews.net/REVIEW/?idx=174922241&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-01T12:19:20+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
@@ -228,31 +248,21 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "혼다, 패션 브랜드 오니츠카 타이거와 협업, 밀라노 패션위크서 ‘미드 스포츠 콘셉트’ 세계 최초 공개",
-        "description": "혼다코리아는 혼다가 일본을 대표하는 패션 브랜드 ‘오니츠카 타이거(Onitsuka Tiger)’와 산업의 경계를 넘어 모터사이클과 패션을 결합하는 협업을 시작한다고 밝혔다.양사는 첨단 기술과 제조의 높은 완성도를 추구하고, 끊임없이 새로운 도전에 나선다는 공통된 가치를 바탕으로 이번 협업을 추진하게 됐다고 전했다.",
-        "relatedNewsCount": 1,
+        "title": "신제품·기술 관련 뉴스 확대",
+        "description": "Honda 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
+        "relatedNewsCount": 2,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
+        "insightType": "GROUPED"
       },
       {
         "title": "[뉴아이템] MSR, 4단 온도조절 열선그립 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴모델_존테스] 도심과 장거리 여행을 아우르는 프리미엄 투어링 스쿠터 '368K ETC' 국내론칭",
-        "description": "'368K ETC' 최고출력 38.8ps·최대토크 40Nm 발휘, 전자식 스로틀과 크루즈 컨트롤로 장거리 주행 편의성 강화존테스가 여유로운 주행 성능과 풍부한 편의사양을 갖춘 프리미엄 투어링 스쿠터 ‘368K ETC’를 선보인다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
@@ -268,6 +278,17 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트 성료",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ]
   }
 }
