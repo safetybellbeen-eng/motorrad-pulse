@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-10-03",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-10-04",
+    "dayLabel": "SUNDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-03T18:01:19.922921+09:00",
+    "lastUpdatedISO": "2026-10-04T08:01:21.276581+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -105,6 +105,24 @@
   },
   "news": [
     {
+      "id": "8b4a0b7a4b738e27",
+      "title": "강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트 성료",
+      "url": "https://www.kmnews.net/NEWS/?idx=174934926&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-02T10:39:09+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
+    {
       "id": "3b6be778980137ac",
       "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
       "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
@@ -143,24 +161,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
-    },
-    {
-      "id": "8b4a0b7a4b738e27",
-      "title": "강원도의 아름다운 자연 속에서 ‘The RED Voyage’ 투어 이벤트 성료",
-      "url": "https://www.kmnews.net/NEWS/?idx=174934926&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-02T10:39:09+09:00",
-      "category": "CUSTOMER_TREND",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
-      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
     },
     {
       "id": "7fb26176354fd44e",
