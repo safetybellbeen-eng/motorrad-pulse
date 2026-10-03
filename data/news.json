@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-03",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "09:39 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-03T09:39:10.444470+09:00",
+    "lastUpdatedISO": "2026-10-03T13:01:27.667520+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -54,12 +54,12 @@
         "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
         "topArticleUrl": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "RISING"
         }
       },
       "yamaha": {
@@ -76,15 +76,7 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [
-      {
-        "title": "디앤에이모터스, UHR 30만 원 페이백 프로모션, 연말까지 이어간다",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "신제품·기술 관련 뉴스 확대",
@@ -96,13 +88,6 @@
       {
         "title": "[뉴아이템] MSR, 4단 온도조절 열선그립 출시",
         "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -152,7 +137,7 @@
       "publishedAt": "2026-10-02T12:08:33+09:00",
       "category": "PRODUCT_TECH",
       "summary": "혼다코리아는 혼다가 일본을 대표하는 패션 브랜드 ‘오니츠카 타이거(Onitsuka Tiger)’와 산업의 경계를 넘어 모터사이클과 패션을 결합하는 협업을 시작한다고 밝혔다.양사는 첨단 기술과 제조의 높은 완성도를 추구하고, 끊임없이 새로운 도전에 나선다는 공통된 가치를 바탕으로 이번 협업을 추진하게 됐다고 전했다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -173,8 +158,9 @@
       "importance": 1.5,
       "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
     },
     {
       "id": "7fb26176354fd44e",
@@ -187,64 +173,17 @@
       "publishedAt": "2026-10-02T10:33:36+09:00",
       "category": "PRODUCT_TECH",
       "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "243ea6cca9574955",
-      "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=174922293&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-01T12:26:22+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "50dec515d6e674f3",
-      "title": "디앤에이모터스, UHR 30만 원 페이백 프로모션, 연말까지 이어간다",
-      "url": "https://www.kmnews.net/NEWS/?idx=174922269&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-01T12:23:44+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
-      {
-        "title": "디앤에이모터스, UHR 30만 원 페이백 프로모션, 연말까지 이어간다",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [
       {
@@ -260,16 +199,6 @@
       {
         "title": "[뉴아이템] MSR, 4단 온도조절 열선그립 출시",
         "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 2026년 신제품 ‘NEW 4단 온도조절 열선그립’을 선보였다.신제품은 계절과 주행 환경에 따라 4단계로 온도를 조절할 수 있어 쌀쌀한 날씨나 장시간 주행 시 라이더의 손을 따뜻하게 유지하는 데 도움을 주는 제품이다.KC 인증을 완료해 안전성을 검증받았으며, 내부에는 케블러 섬유를 적용했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] EK 체인 ‘525SRX2 레드·실버’ 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
