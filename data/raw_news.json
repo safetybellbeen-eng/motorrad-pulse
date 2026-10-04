@@ -1,31 +1,4 @@
 {
-  "lastCollectedAt": "2026-10-04T13:00:53.375075+09:00",
-  "news": [
-    {
-      "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
-      "source": "ebn.co.kr",
-      "sourceType": "media",
-      "sourceGroup": "honda",
-      "publishedAt": "2026-10-02T13:43:39+09:00",
-      "sourceTier": "business_media",
-      "sourceQualityScore": 75,
-      "businessRelevanceScore": 10,
-      "brandGroups": [
-        "honda"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개&nbsp;&nbsp;ebn.co.kr",
-      "id": "3b6be778980137ac",
-      "collectedAt": "2026-10-04T13:00:53.375075+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    }
-  ]
+  "lastCollectedAt": "2026-10-04T18:00:54.756238+09:00",
+  "news": []
 }
