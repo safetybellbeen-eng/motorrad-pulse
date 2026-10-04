@@ -1,11 +1,31 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-10-03T00:54:09.479133+00:00",
+    "lastUpdatedISO": "2026-10-04T00:20:39.235983+00:00",
     "channelCount": 6,
-    "successCount": 3,
-    "failCount": 3
+    "successCount": 6,
+    "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_fCGuTDZIJyE",
+      "videoId": "fCGuTDZIJyE",
+      "title": "[HSRS] 합류·끼어들기 위험예측 | Honda 2026 #혼다모터사이클 #라이딩매뉴얼 #안라무복",
+      "url": "https://www.youtube.com/watch?v=fCGuTDZIJyE",
+      "thumbnail": "https://i3.ytimg.com/vi/fCGuTDZIJyE/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-10-02T01:00:13+00:00"
+    },
+    {
+      "id": "yt_iNL-aiG0dr4",
+      "videoId": "iNL-aiG0dr4",
+      "title": "[바이크 팁] 브레이크액, 마지막으로 확인한 게 언제인가요? | 점검 포인트 3가지 | Honda Class #shorts",
+      "url": "https://www.youtube.com/shorts/iNL-aiG0dr4",
+      "thumbnail": "https://i2.ytimg.com/vi/iNL-aiG0dr4/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-10-02T01:00:04+00:00"
+    },
     {
       "id": "yt_ezmoaBhaV1I",
       "videoId": "ezmoaBhaV1I",
@@ -45,26 +65,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-09-17T01:00:24+00:00"
-    },
-    {
-      "id": "yt_aQdaDzPjLnU",
-      "videoId": "aQdaDzPjLnU",
-      "title": "[시작은 혼다!] \"오토바이 입문의 꿈\" 혼다와 함께ㅣHonda Welcome Class - 풀영상",
-      "url": "https://www.youtube.com/watch?v=aQdaDzPjLnU",
-      "thumbnail": "https://i2.ytimg.com/vi/aQdaDzPjLnU/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-17T01:00:08+00:00"
-    },
-    {
-      "id": "yt_a6YJlUPF3Vs",
-      "videoId": "a6YJlUPF3Vs",
-      "title": "[웰컴클래스] 혼다모터사이클과 함께하는 안전한 라이딩 습관 만들기!ㅣ시작은 혼다! : Honda Welcome Class",
-      "url": "https://www.youtube.com/shorts/a6YJlUPF3Vs",
-      "thumbnail": "https://i2.ytimg.com/vi/a6YJlUPF3Vs/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-17T01:00:05+00:00"
     },
     {
       "id": "yt_RWt2C6iprd8",
