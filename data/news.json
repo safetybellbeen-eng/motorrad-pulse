@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-10-04",
-    "dayLabel": "SUNDAY",
+    "date": "2026-10-06",
+    "dayLabel": "TUESDAY",
     "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-04T13:01:12.732208+09:00",
+    "lastUpdatedISO": "2026-10-06T13:01:29.438698+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,16 +51,14 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
-        "topArticleTitle": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
-        "topArticleUrl": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
+        "signalDetails": {}
       },
       "yamaha": {
         "newsCount": 0,
@@ -77,34 +75,32 @@
   "marketIntelligence": {
     "market": [],
     "competitor": [],
-    "productTech": [
+    "productTech": [],
+    "customerTrend": [
       {
-        "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
-        "description": "혼다가 일본 패션 브랜드 오니츠카 타이거와 손잡고 모터사이클과 패션을 결합한 협업에 나선다.혼다는 오니츠카 타이거와 산업의 경계를 넘어 새로운 브랜드 경험을 선보",
+        "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
+        "description": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
       }
-    ],
-    "customerTrend": []
+    ]
   },
   "news": [
     {
-      "id": "3b6be778980137ac",
-      "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
-      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1726571",
-      "source": "ebn.co.kr",
+      "id": "585a8dc1c40df9c7",
+      "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
+      "url": "https://www.kmnews.net/REVIEW/?idx=174970109&bmode=view",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-10-02T13:43:39+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "혼다가 일본 패션 브랜드 오니츠카 타이거와 손잡고 모터사이클과 패션을 결합한 협업에 나선다.혼다는 오니츠카 타이거와 산업의 경계를 넘어 새로운 브랜드 경험을 선보",
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-06T11:17:54+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
@@ -114,18 +110,18 @@
     "ownWatch": [],
     "market": [],
     "competitor": [],
-    "productTech": [
+    "productTech": [],
+    "customerTrend": [
       {
-        "title": "혼다, 오니츠카 타이거와 협업…모터사이클 콘셉트 세계 최초 공개",
-        "description": "혼다가 일본 패션 브랜드 오니츠카 타이거와 손잡고 모터사이클과 패션을 결합한 협업에 나선다.혼다는 오니츠카 타이거와 산업의 경계를 넘어 새로운 브랜드 경험을 선보",
+        "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
+        "description": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "CUSTOMER_TREND",
         "insightType": "SINGLE_SIGNAL"
       }
-    ],
-    "customerTrend": []
+    ]
   }
 }
