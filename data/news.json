@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-08",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "10:12 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "시장/판매 및 신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-08T10:12:40.494348+09:00",
+    "lastUpdatedISO": "2026-10-08T13:01:17.568397+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -73,34 +73,60 @@
     }
   },
   "marketIntelligence": {
-    "market": [],
-    "competitor": [],
-    "productTech": [],
-    "customerTrend": [
+    "market": [
       {
-        "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
-        "description": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
+        "title": "[숍탐방] QJ모터 판매부터 정비까지 한 곳에…‘291플러스×포만장’",
+        "description": "‘경기 북부는 우리가 책임진다’ QJ모터 포천점, 291플러스×포만장약 900평 부지에 쇼룸·정비실·용품점·카페, 경기 북부 라이더를 위한 복합문화공간 지향투어를 앞두고 동료를 만나 커피를 마시고, 정비를 기다리는 동안 라이딩 용품과 전시 차량을 살펴본다. 경기 북부 라이더들의 쉼터인 ‘포천 만남의 광장’, 일명 ‘포만장’에서 누릴 수 있는 풍경이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+        "bmwNote": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다."
       }
-    ]
+    ],
+    "competitor": [],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 쇼에이, X-15 RAINEY TC-10 출시",
+        "description": "레이스에서 쌓은 기술과 공력 설계를 담은 풀 페이스 헬멧쇼에이(SHOEI) X-15는 MotoGP를 비롯한 최상위 모터사이클 레이스에서 축적한 기술과 노하우를 반영한 풀페이스 헬멧이다. X-시리즈의 레이싱 성능을 계승하면서 공력 성능과 시야, 착용감 등을 개선했다.셸은 쇼에이 자체 풍동 실험과 분석을 바탕으로 설계했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      }
+    ],
+    "customerTrend": []
   },
   "news": [
     {
-      "id": "585a8dc1c40df9c7",
-      "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
-      "url": "https://www.kmnews.net/REVIEW/?idx=174970109&bmode=view",
+      "id": "6a3cef3e058f7c1a",
+      "title": "[숍탐방] QJ모터 판매부터 정비까지 한 곳에…‘291플러스×포만장’",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=175009121&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-10-06T11:17:54+09:00",
-      "category": "CUSTOMER_TREND",
-      "summary": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
-      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "publishedAt": "2026-10-08T11:39:38+09:00",
+      "category": "MARKET",
+      "summary": "‘경기 북부는 우리가 책임진다’ QJ모터 포천점, 291플러스×포만장약 900평 부지에 쇼룸·정비실·용품점·카페, 경기 북부 라이더를 위한 복합문화공간 지향투어를 앞두고 동료를 만나 커피를 마시고, 정비를 기다리는 동안 라이딩 용품과 전시 차량을 살펴본다. 경기 북부 라이더들의 쉼터인 ‘포천 만남의 광장’, 일명 ‘포만장’에서 누릴 수 있는 풍경이다.",
+      "importance": 2.0,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "a42929dd98f06074",
+      "title": "[뉴아이템] 쇼에이, X-15 RAINEY TC-10 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175007827&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-08T11:04:45+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "레이스에서 쌓은 기술과 공력 설계를 담은 풀 페이스 헬멧쇼에이(SHOEI) X-15는 MotoGP를 비롯한 최상위 모터사이클 레이스에서 축적한 기술과 노하우를 반영한 풀페이스 헬멧이다. X-시리즈의 레이싱 성능을 계승하면서 공력 성능과 시야, 착용감 등을 개선했다.셸은 쇼에이 자체 풍동 실험과 분석을 바탕으로 설계했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
@@ -108,20 +134,31 @@
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
-    "competitor": [],
-    "productTech": [],
-    "customerTrend": [
+    "market": [
       {
-        "title": "[뉴모델_스즈키] 하이퍼 스포츠 투어러의 완성형을 계승하다 '하야부사 2027' 국내 론칭",
-        "description": "2027년형 하야부사, 새로운 그래픽으로 특유의 역동성을 강조한 스즈키의 플래그십 모델스즈키의 대표 하이퍼 스포츠 투어러 하야부사(HAYABUSA)가 2027년형으로 10월에 출시된다. 이번 연식 변경 모델은 3세대의 완성도 높은 하드웨어를 계승하고, 새로운 그래픽 데칼을 적용해 플래그십 특유의 존재감을 강조했다.",
+        "title": "[숍탐방] QJ모터 판매부터 정비까지 한 곳에…‘291플러스×포만장’",
+        "description": "‘경기 북부는 우리가 책임진다’ QJ모터 포천점, 291플러스×포만장약 900평 부지에 쇼룸·정비실·용품점·카페, 경기 북부 라이더를 위한 복합문화공간 지향투어를 앞두고 동료를 만나 커피를 마시고, 정비를 기다리는 동안 라이딩 용품과 전시 차량을 살펴본다. 경기 북부 라이더들의 쉼터인 ‘포천 만남의 광장’, 일명 ‘포만장’에서 누릴 수 있는 풍경이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "bmwNote": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
-        "intelligenceTopic": "CUSTOMER_TREND",
+        "intelligenceTopic": "MARKET",
+        "insightType": "NEEDS_CONFIRMATION"
+      }
+    ],
+    "competitor": [],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 쇼에이, X-15 RAINEY TC-10 출시",
+        "description": "레이스에서 쌓은 기술과 공력 설계를 담은 풀 페이스 헬멧쇼에이(SHOEI) X-15는 MotoGP를 비롯한 최상위 모터사이클 레이스에서 축적한 기술과 노하우를 반영한 풀페이스 헬멧이다. X-시리즈의 레이싱 성능을 계승하면서 공력 성능과 시야, 착용감 등을 개선했다.셸은 쇼에이 자체 풍동 실험과 분석을 바탕으로 설계했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
-    ]
+    ],
+    "customerTrend": []
   }
 }
