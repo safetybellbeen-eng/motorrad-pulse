@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-10-08",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-10-09",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "시장/판매 및 신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-08T18:01:13.784091+09:00",
+    "lastUpdatedISO": "2026-10-09T08:01:52.510389+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -106,7 +106,7 @@
       "publishedAt": "2026-10-08T11:39:38+09:00",
       "category": "MARKET",
       "summary": "‘경기 북부는 우리가 책임진다’ QJ모터 포천점, 291플러스×포만장약 900평 부지에 쇼룸·정비실·용품점·카페, 경기 북부 라이더를 위한 복합문화공간 지향투어를 앞두고 동료를 만나 커피를 마시고, 정비를 기다리는 동안 라이딩 용품과 전시 차량을 살펴본다. 경기 북부 라이더들의 쉼터인 ‘포천 만남의 광장’, 일명 ‘포만장’에서 누릴 수 있는 풍경이다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다.",
       "isTopNews": true,

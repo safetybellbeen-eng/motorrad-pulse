@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-08",
-  "lastAnalyzedAt": "2026-10-08T18:01:13.784150+09:00",
+  "date": "2026-10-09",
+  "lastAnalyzedAt": "2026-10-09T08:01:52.510461+09:00",
   "dailySignal": {
     "title": "시장/판매 및 신규 모델 관련 뉴스 증가",
     "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 시장/판매 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
@@ -12,7 +12,7 @@
       "relatedNewsIds": [
         "6a3cef3e058f7c1a"
       ],
-      "impact": 2.0,
+      "impact": 1.5,
       "bmwView": "주요 Motorcycle 시장의 판매·등록 흐름과 Premium Segment 수요 변화를 함께 확인할 필요가 있습니다."
     }
   ],

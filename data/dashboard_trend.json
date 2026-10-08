@@ -1,13 +1,7 @@
 {
-  "generatedAtISO": "2026-10-08T18:01:13.788434+09:00",
+  "generatedAtISO": "2026-10-09T08:01:52.515677+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-09-25",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-09-26",
       "newsCount": 0,
@@ -104,6 +98,12 @@
         "MARKET": 1,
         "PRODUCT_TECH": 1
       }
+    },
+    {
+      "date": "2026-10-09",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
