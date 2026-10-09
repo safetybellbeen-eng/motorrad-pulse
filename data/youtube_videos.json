@@ -1,11 +1,31 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-10-08T01:32:22.858261+00:00",
+    "lastUpdatedISO": "2026-10-09T01:42:53.240225+00:00",
     "channelCount": 6,
-    "successCount": 1,
-    "failCount": 5
+    "successCount": 6,
+    "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_e0KqU3S0NuE",
+      "videoId": "e0KqU3S0NuE",
+      "title": "무릎 빼고 코너링하는 그날까지! HEC 타운라이더 수강생이 말하는 후기ㅣ혼다 에듀케이션센터 #HEC #굿라이더",
+      "url": "https://www.youtube.com/shorts/e0KqU3S0NuE",
+      "thumbnail": "https://i2.ytimg.com/vi/e0KqU3S0NuE/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-10-08T09:30:14+00:00"
+    },
+    {
+      "id": "yt_lkEQZZhrGsQ",
+      "videoId": "lkEQZZhrGsQ",
+      "title": "[ FEATURES ] YZF-R7 (2026)",
+      "url": "https://www.youtube.com/watch?v=lkEQZZhrGsQ",
+      "thumbnail": "https://i1.ytimg.com/vi/lkEQZZhrGsQ/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-10-06T08:51:18+00:00"
+    },
     {
       "id": "yt_fCGuTDZIJyE",
       "videoId": "fCGuTDZIJyE",
@@ -55,16 +75,6 @@
       "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
       "brandGroup": "yamaha",
       "publishedAt": "2026-09-17T08:54:29+00:00"
-    },
-    {
-      "id": "yt_59CmN0lDtDI",
-      "videoId": "59CmN0lDtDI",
-      "title": "슈퍼커브와 함께 오랜 꿈을 현실로! \"Dreams Come True\" l 시작은 혼다 : Honda Welcome Class - 슈퍼커브 클래스",
-      "url": "https://www.youtube.com/shorts/59CmN0lDtDI",
-      "thumbnail": "https://i2.ytimg.com/vi/59CmN0lDtDI/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-17T01:00:24+00:00"
     },
     {
       "id": "yt_RWt2C6iprd8",
@@ -175,16 +185,6 @@
       "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
       "brandGroup": "yamaha",
       "publishedAt": "2026-07-23T07:07:36+00:00"
-    },
-    {
-      "id": "yt_ZMXTrYtCQKE",
-      "videoId": "ZMXTrYtCQKE",
-      "title": "[OFFICIAL VIDEO] YAMAHA R SERIES",
-      "url": "https://www.youtube.com/watch?v=ZMXTrYtCQKE",
-      "thumbnail": "https://i3.ytimg.com/vi/ZMXTrYtCQKE/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-07-16T02:54:14+00:00"
     },
     {
       "id": "yt_aV_C9RvZfeE",
