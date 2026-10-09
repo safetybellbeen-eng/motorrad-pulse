@@ -1,0 +1,31 @@
+{
+  "savedAtISO": "2026-10-09T13:01:13.163883+09:00",
+  "articles": [
+    {
+      "id": "6a3cef3e058f7c1a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [
+        "MARKET"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-10-08T11:39:38+09:00"
+    },
+    {
+      "id": "a42929dd98f06074",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-10-08T11:04:45+09:00"
+    }
+  ]
+}
