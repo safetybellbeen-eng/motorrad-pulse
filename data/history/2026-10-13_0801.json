@@ -1,0 +1,48 @@
+{
+  "savedAtISO": "2026-10-13T08:01:21.466981+09:00",
+  "articles": [
+    {
+      "id": "6b4d2e172130201c",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-12T10:51:05+09:00"
+    },
+    {
+      "id": "98d5e81ca63369e1",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "매일경제",
+      "domain": "www.mk.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-12T11:11:36+09:00"
+    },
+    {
+      "id": "7fa2554a675aa37c",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-12T10:55:10+09:00"
+    }
+  ]
+}

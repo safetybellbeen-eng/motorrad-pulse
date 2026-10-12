@@ -1,17 +1,7 @@
 {
-  "generatedAtISO": "2026-10-12T18:01:31.845499+09:00",
+  "generatedAtISO": "2026-10-13T08:01:21.471804+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-09-29",
-      "newsCount": 2,
-      "byBrand": {
-        "bmw": 2
-      },
-      "byCategory": {
-        "CUSTOMER_TREND": 2
-      }
-    },
     {
       "date": "2026-09-30",
       "newsCount": 0,
@@ -109,6 +99,12 @@
         "PRODUCT_TECH": 2,
         "COMPETITOR": 1
       }
+    },
+    {
+      "date": "2026-10-13",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
