@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-13",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "11:41 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-13T11:41:22.230443+09:00",
+    "lastUpdatedISO": "2026-10-13T13:01:38.264916+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -24,12 +24,12 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "DUCATI, 첫 엔듀로 모델 ‘데스모450 EDS’ 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175060435&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "triumph": {
