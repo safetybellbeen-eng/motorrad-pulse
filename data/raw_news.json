@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-10-13T18:01:10.706466+09:00",
+  "lastCollectedAt": "2026-10-14T08:01:04.118163+09:00",
   "news": [
     {
       "title": "DUCATI, 첫 엔듀로 모델 ‘데스모450 EDS’ 공개",
@@ -28,6 +28,32 @@
       "relatedCoverageCount": 1
     },
     {
+      "title": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=04644486645612592&mediaCodeNo=257",
+      "source": "이데일리",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-10-13T19:16:25+09:00",
+      "sourceTier": "business_media",
+      "sourceQualityScore": 75,
+      "businessRelevanceScore": 8,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어&nbsp;&nbsp;이데일리",
+      "id": "c05000f168c5049b",
+      "collectedAt": "2026-10-14T08:01:04.118163+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
       "title": "혼다코리아, 모터사이클 레이싱 이벤트 마무리…“신규 참가자 40%”",
       "url": "https://www.mk.co.kr/news/business/12173430",
       "source": "매일경제",
@@ -43,7 +69,7 @@
       "acquisitionMethod": "google_news",
       "description": "혼다코리아, 모터사이클 레이싱 이벤트 마무리…“신규 참가자 40%”&nbsp;&nbsp;매일경제",
       "id": "98d5e81ca63369e1",
-      "collectedAt": "2026-10-13T18:01:10.706466+09:00",
+      "collectedAt": "2026-10-14T08:01:04.118163+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -59,7 +85,7 @@
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
-      "publishedAt": "2026-10-12T10:55:10+09:00",
+      "publishedAt": "2026-10-13T18:37:51+09:00",
       "sourceTier": "motorcycle_media",
       "sourceQualityScore": 90,
       "businessRelevanceScore": 12,
@@ -69,7 +95,7 @@
       "acquisitionMethod": "google_news",
       "description": "KAWASAKI, 새로운 색상으로 귀환 ‘Z500’ 일본 출시&nbsp;&nbsp;한국이륜차신문",
       "id": "7fa2554a675aa37c",
-      "collectedAt": "2026-10-13T18:01:10.706466+09:00",
+      "collectedAt": "2026-10-14T08:01:04.118163+09:00",
       "category": null,
       "summary": null,
       "importance": null,
