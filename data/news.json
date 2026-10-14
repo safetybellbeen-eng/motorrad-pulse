@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-10-14",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-10-15",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-14T18:01:42.151554+09:00",
+    "lastUpdatedISO": "2026-10-15T08:01:44.452517+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -56,12 +56,12 @@
         "newsCount": 3,
         "primaryTheme": "CUSTOMER",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "HIGH",
-        "topArticleTitle": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어",
-        "topArticleUrl": "https://www.edaily.co.kr/News/Read?newsId=04644486645612592&mediaCodeNo=257",
+        "topArticleTitle": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
+        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62824",
         "signalDetails": {
-          "CUSTOMER": "NEW"
+          "CUSTOMER": "CONTINUING"
         }
       },
       "yamaha": {
@@ -99,7 +99,7 @@
         "title": "KAWASAKI, 새로운 색상으로 귀환 ‘Z500’ 일본 출시",
         "description": "가와사키모터스재팬이 색상과 그래픽을 변경한 ‘Z500’을 2026년 10월 17일 일본 시장에 출시한다.이번 모델은 ‘에보니×메탈릭 카본 그레이’ 색상을 적용해 새로운 인상을 연출했다. Z500은 451cc 병렬 2기통 엔진과 경량 차체를 결합한 네이키드 모델이다.일상적인 이동부터 주말 투어링까지 폭넓게 즐길 수 있도록 성능과 실용성의 조화를 추구했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
@@ -108,7 +108,7 @@
         "title": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어",
         "description": "혼다코리아 관계자와 고객이 지난 8~12일 일본 구마모토에서 열린 ‘혼다 모터사이클 홈커밍 구마모토 2026’ 행사 중 기념촬영하고 있다. (사진=혼다코리아) 혼다코리아는 지난 8~12일 일본 구마모토에서 고객 초청 행사 ‘혼다 모터사이클 홈커밍 구마모토 2026’을 ...",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
       }
     ]
@@ -132,7 +132,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     },
     {
       "id": "c05000f168c5049b",
@@ -147,12 +147,12 @@
       "publishedAt": "2026-10-13T19:16:25+09:00",
       "category": "CUSTOMER_TREND",
       "summary": "혼다코리아 관계자와 고객이 지난 8~12일 일본 구마모토에서 열린 ‘혼다 모터사이클 홈커밍 구마모토 2026’ 행사 중 기념촬영하고 있다. (사진=혼다코리아) 혼다코리아는 지난 8~12일 일본 구마모토에서 고객 초청 행사 ‘혼다 모터사이클 홈커밍 구마모토 2026’을 ...",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "ee0b743e50ef74a1",
@@ -187,7 +187,7 @@
       "publishedAt": "2026-10-13T18:37:51+09:00",
       "category": "PRODUCT_TECH",
       "summary": "가와사키모터스재팬이 색상과 그래픽을 변경한 ‘Z500’을 2026년 10월 17일 일본 시장에 출시한다.이번 모델은 ‘에보니×메탈릭 카본 그레이’ 색상을 적용해 새로운 인상을 연출했다. Z500은 451cc 병렬 2기통 엔진과 경량 차체를 결합한 네이키드 모델이다.일상적인 이동부터 주말 투어링까지 폭넓게 즐길 수 있도록 성능과 실용성의 조화를 추구했다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -225,7 +225,7 @@
         "title": "KAWASAKI, 새로운 색상으로 귀환 ‘Z500’ 일본 출시",
         "description": "가와사키모터스재팬이 색상과 그래픽을 변경한 ‘Z500’을 2026년 10월 17일 일본 시장에 출시한다.이번 모델은 ‘에보니×메탈릭 카본 그레이’ 색상을 적용해 새로운 인상을 연출했다. Z500은 451cc 병렬 2기통 엔진과 경량 차체를 결합한 네이키드 모델이다.일상적인 이동부터 주말 투어링까지 폭넓게 즐길 수 있도록 성능과 실용성의 조화를 추구했다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
@@ -237,7 +237,7 @@
         "title": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어",
         "description": "혼다코리아 관계자와 고객이 지난 8~12일 일본 구마모토에서 열린 ‘혼다 모터사이클 홈커밍 구마모토 2026’ 행사 중 기념촬영하고 있다. (사진=혼다코리아) 혼다코리아는 지난 8~12일 일본 구마모토에서 고객 초청 행사 ‘혼다 모터사이클 홈커밍 구마모토 2026’을 ...",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "CUSTOMER_TREND",
