@@ -1,0 +1,64 @@
+{
+  "savedAtISO": "2026-10-14T18:01:42.152442+09:00",
+  "articles": [
+    {
+      "id": "2c35e7e57316da77",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-14T16:30:20+09:00"
+    },
+    {
+      "id": "c05000f168c5049b",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "이데일리",
+      "domain": "www.edaily.co.kr",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [
+        "CUSTOMER"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-13T19:16:25+09:00"
+    },
+    {
+      "id": "ee0b743e50ef74a1",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SPORT"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-10-14T11:20:26+09:00"
+    },
+    {
+      "id": "7fa2554a675aa37c",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-13T18:37:51+09:00"
+    }
+  ]
+}
