@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-15",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-15T13:01:36.908007+09:00",
+    "lastUpdatedISO": "2026-10-15T18:01:40.624325+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -56,8 +56,8 @@
         "secondaryTheme": null,
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
-        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62824",
+        "topArticleTitle": "혼다코리아, 고객들과 일본 구마모토 모터사이클 투어",
+        "topArticleUrl": "https://www.edaily.co.kr/News/Read?newsId=04644486645612592&mediaCodeNo=257",
         "signalDetails": {
           "CUSTOMER": "CONTINUING"
         }
@@ -125,12 +125,12 @@
       "publishedAt": "2026-10-14T16:30:20+09:00",
       "category": "COMPETITOR",
       "summary": "혼다코리아가 모터사이클 판매 및 서비스 네트워크를 확충하고 고객 소통 접점을 강화한다. 혼다코리아(대표 이지홍)는 다음 달 30일까지 서울 서초구, 강남구, 동작구 지역을 대상으로 서울 남부권 모터사이클 공식 딜러 1곳을 신규 모집한다고 14일 밝혔다. 혼다 모터사이클 공식 딜러는 110cc 소형 스쿠터부터 1800cc 대형 투어러까지 전 모델...",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "c05000f168c5049b",
@@ -150,7 +150,7 @@
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     },
     {
       "id": "ee0b743e50ef74a1",
