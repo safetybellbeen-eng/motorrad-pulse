@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-16",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-16T13:01:44.346588+09:00",
+    "lastUpdatedISO": "2026-10-16T18:01:31.855824+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -93,20 +93,28 @@
       },
       {
         "title": "가와사키, KLE 500 가격 할인 프로모션 진행",
-        "description": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다."
       },
       {
-        "title": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
-        "description": "혼다코리아가 모터사이클 판매 및 서비스 네트워크를 확충하고 고객 소통 접점을 강화한다. 혼다코리아(대표 이지홍)는 다음 달 30일까지 서울 서초구, 강남구, 동작구 지역을 대상으로 서울 남부권 모터사이클 공식 딜러 1곳을 신규 모집한다고 14일 밝혔다. 혼다 모터사이클 공식 딜러는 110cc 소형 스쿠터부터 1800cc 대형 투어러까지 전 모델...",
+        "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
-    "productTech": [],
+    "productTech": [
+      {
+        "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
+        "description": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+      }
+    ],
     "customerTrend": []
   },
   "news": [
@@ -128,26 +136,25 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     },
     {
-      "id": "2c35e7e57316da77",
-      "title": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62824",
-      "source": "데일리카",
+      "id": "6c7f25e10314f276",
+      "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
+      "url": "https://www.kmnews.net/REVIEW/?idx=175124949&bmode=view",
+      "source": "한국이륜차신문",
       "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-10-14T16:30:20+09:00",
-      "category": "COMPETITOR",
-      "summary": "혼다코리아가 모터사이클 판매 및 서비스 네트워크를 확충하고 고객 소통 접점을 강화한다. 혼다코리아(대표 이지홍)는 다음 달 30일까지 서울 서초구, 강남구, 동작구 지역을 대상으로 서울 남부권 모터사이클 공식 딜러 1곳을 신규 모집한다고 14일 밝혔다. 혼다 모터사이클 공식 딜러는 110cc 소형 스쿠터부터 1800cc 대형 투어러까지 전 모델...",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-16T13:13:17+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
+      "importance": 2.0,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
     },
     {
       "id": "c4b090c26d6d28ac",
@@ -167,7 +174,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "b39e7a7a1213956e",
@@ -183,9 +190,8 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "91b0cda7c0693299",
@@ -197,13 +203,13 @@
       "brandGroups": [],
       "publishedAt": "2026-10-16T12:46:34+09:00",
       "category": "COMPETITOR",
-      "summary": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+      "summary": null,
       "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -211,7 +217,7 @@
     "market": [
       {
         "title": "가와사키, KLE 500 가격 할인 프로모션 진행",
-        "description": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
@@ -250,19 +256,20 @@
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
-      },
+      }
+    ],
+    "productTech": [
       {
-        "title": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
-        "description": "혼다코리아가 모터사이클 판매 및 서비스 네트워크를 확충하고 고객 소통 접점을 강화한다. 혼다코리아(대표 이지홍)는 다음 달 30일까지 서울 서초구, 강남구, 동작구 지역을 대상으로 서울 남부권 모터사이클 공식 딜러 1곳을 신규 모집한다고 14일 밝혔다. 혼다 모터사이클 공식 딜러는 110cc 소형 스쿠터부터 1800cc 대형 투어러까지 전 모델...",
+        "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
+        "description": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "productTech": [],
     "customerTrend": []
   }
 }
