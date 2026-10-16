@@ -1,0 +1,66 @@
+{
+  "savedAtISO": "2026-10-16T13:01:44.347507+09:00",
+  "articles": [
+    {
+      "id": "9176b925785b01be",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-16T12:25:38+09:00"
+    },
+    {
+      "id": "2c35e7e57316da77",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-14T16:30:20+09:00"
+    },
+    {
+      "id": "c4b090c26d6d28ac",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-16T12:53:58+09:00"
+    },
+    {
+      "id": "b39e7a7a1213956e",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-16T12:50:14+09:00"
+    },
+    {
+      "id": "91b0cda7c0693299",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-16T12:46:34+09:00"
+    }
+  ]
+}

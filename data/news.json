@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-16",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:46 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-16T08:46:08.917304+09:00",
+    "lastUpdatedISO": "2026-10-16T13:01:44.346588+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,11 +51,11 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 3,
+        "newsCount": 4,
         "primaryTheme": "CUSTOMER",
         "secondaryTheme": null,
         "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "activity": "HIGH",
         "topArticleTitle": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62838",
         "signalDetails": {
@@ -85,6 +85,20 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
+        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
+        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "가와사키, KLE 500 가격 할인 프로모션 진행",
+        "description": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
         "title": "혼다코리아, 서울 남부권 모터사이클 딜러 모집..네트워크 강화 속도",
         "description": "혼다코리아가 모터사이클 판매 및 서비스 네트워크를 확충하고 고객 소통 접점을 강화한다. 혼다코리아(대표 이지홍)는 다음 달 30일까지 서울 서초구, 강남구, 동작구 지역을 대상으로 서울 남부권 모터사이클 공식 딜러 1곳을 신규 모집한다고 14일 밝혔다. 혼다 모터사이클 공식 딜러는 110cc 소형 스쿠터부터 1800cc 대형 투어러까지 전 모델...",
         "relatedNewsCount": 1,
@@ -92,15 +106,7 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
-    "productTech": [
-      {
-        "title": "KAWASAKI, 저·중회전 토크 강화한 신형 ‘NINJA H2 CABON’ 공개",
-        "description": "가와사키모터스재팬이 저·중회전 영역의 토크를 강화한 신형 ‘닌자 H2 카본’을 공개했다. 일본 시장에는 2027년 봄 도입할 예정이다.2015년 등장한 닌자 H2는 가와사키중공업 그룹의 기술력을 결집해 개발한 슈퍼차저 탑재 플래그십 모델이다. 신형은 기존 모델의 고회전 가속 특성을 유지하면서 엔진과 차체, 전자제어 장비를 개선한 것이 특징이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      }
-    ],
+    "productTech": [],
     "customerTrend": []
   },
   "news": [
@@ -114,7 +120,7 @@
       "brandGroups": [
         "honda"
       ],
-      "publishedAt": "2026-10-16T06:23:20+09:00",
+      "publishedAt": "2026-10-16T12:25:38+09:00",
       "category": "COMPETITOR",
       "summary": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
       "importance": 2.0,
@@ -140,26 +146,61 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "c4b090c26d6d28ac",
+      "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
+      "url": "https://www.kmnews.net/NEWS/?idx=175124658&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-10-16T12:53:58+09:00",
+      "category": "COMPETITOR",
+      "summary": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
     },
     {
-      "id": "ee0b743e50ef74a1",
-      "title": "KAWASAKI, 저·중회전 토크 강화한 신형 ‘NINJA H2 CABON’ 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175090921&bmode=view",
+      "id": "b39e7a7a1213956e",
+      "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
+      "url": "https://www.kmnews.net/NEWS/?idx=175124592&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
-      "brandGroups": [
-        "kawasaki"
-      ],
-      "publishedAt": "2026-10-14T11:20:26+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "가와사키모터스재팬이 저·중회전 영역의 토크를 강화한 신형 ‘닌자 H2 카본’을 공개했다. 일본 시장에는 2027년 봄 도입할 예정이다.2015년 등장한 닌자 H2는 가와사키중공업 그룹의 기술력을 결집해 개발한 슈퍼차저 탑재 플래그십 모델이다. 신형은 기존 모델의 고회전 가속 특성을 유지하면서 엔진과 차체, 전자제어 장비를 개선한 것이 특징이다.",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "brandGroups": [],
+      "publishedAt": "2026-10-16T12:50:14+09:00",
+      "category": "COMPETITOR",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
+    {
+      "id": "91b0cda7c0693299",
+      "title": "가와사키, KLE 500 가격 할인 프로모션 진행",
+      "url": "https://www.kmnews.net/NEWS/?idx=175124539&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-16T12:46:34+09:00",
+      "category": "COMPETITOR",
+      "summary": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
@@ -167,11 +208,42 @@
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
+    "market": [
+      {
+        "title": "가와사키, KLE 500 가격 할인 프로모션 진행",
+        "description": "'KLE 500' 1,089만 원에서 990만 원으로...가와사키 모터사이클 공식 수입원인 대전기계공업이 KLE 500의 가격할인 프로모션을 진행한다. 할인 폭은 기존 소비자가격인 1,0 89만 원에서 99만 원이 할인된 가격인 990만 원이다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "competitor": [
       {
         "title": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
         "description": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
+        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -190,18 +262,7 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "productTech": [
-      {
-        "title": "KAWASAKI, 저·중회전 토크 강화한 신형 ‘NINJA H2 CABON’ 공개",
-        "description": "가와사키모터스재팬이 저·중회전 영역의 토크를 강화한 신형 ‘닌자 H2 카본’을 공개했다. 일본 시장에는 2027년 봄 도입할 예정이다.2015년 등장한 닌자 H2는 가와사키중공업 그룹의 기술력을 결집해 개발한 슈퍼차저 탑재 플래그십 모델이다. 신형은 기존 모델의 고회전 가속 특성을 유지하면서 엔진과 차체, 전자제어 장비를 개선한 것이 특징이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "productTech": [],
     "customerTrend": []
   }
 }
