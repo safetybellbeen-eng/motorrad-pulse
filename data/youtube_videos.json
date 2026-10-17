@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-10-17T00:08:03.330668+00:00",
+    "lastUpdatedISO": "2026-10-17T23:44:02.380349+00:00",
     "channelCount": 6,
-    "successCount": 1,
-    "failCount": 5
+    "successCount": 6,
+    "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_USePxEzMnPA",
+      "videoId": "USePxEzMnPA",
+      "title": "[바이크 팁] 라이딩 중 손끝이 저렸다면 바로 멈추세요! | Honda Class #shorts",
+      "url": "https://www.youtube.com/shorts/USePxEzMnPA",
+      "thumbnail": "https://i2.ytimg.com/vi/USePxEzMnPA/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-10-16T01:00:33+00:00"
+    },
     {
       "id": "yt_e0KqU3S0NuE",
       "videoId": "e0KqU3S0NuE",
@@ -55,16 +65,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-09-25T01:00:01+00:00"
-    },
-    {
-      "id": "yt_RNRRbtmzYWc",
-      "videoId": "RNRRbtmzYWc",
-      "title": "[참가접수 시작!] 2026년 레이스 입문 마지막 기회! 혼다 원메이커 레이스 4라운드 참가접수 중 #shorts",
-      "url": "https://www.youtube.com/shorts/RNRRbtmzYWc",
-      "thumbnail": "https://i3.ytimg.com/vi/RNRRbtmzYWc/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-09-24T01:00:36+00:00"
     },
     {
       "id": "yt_JoRl2jI8j28",
