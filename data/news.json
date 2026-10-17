@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-17",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:46 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-17T08:46:55.940458+09:00",
+    "lastUpdatedISO": "2026-10-17T13:01:22.931396+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -56,8 +56,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "MEDIUM",
-        "topArticleTitle": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175124658&bmode=view",
+        "topArticleTitle": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
+        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62838",
         "signalDetails": {
           "CUSTOMER": "NORMAL"
         }
@@ -78,15 +78,15 @@
     "market": [],
     "competitor": [
       {
-        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
-        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
+        "title": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
+        "description": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
-        "description": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
+        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
+        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
@@ -136,7 +136,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 2
     },
     {
       "id": "6c7f25e10314f276",
@@ -169,12 +169,12 @@
       "publishedAt": "2026-10-16T12:53:58+09:00",
       "category": "COMPETITOR",
       "summary": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "b39e7a7a1213956e",
@@ -209,7 +209,7 @@
       "bmwInsight": "경쟁사의 가격 전략과 금융·프로모션 변화가 고객 선택과 Segment Positioning에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -238,8 +238,8 @@
     ],
     "competitor": [
       {
-        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
-        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
+        "title": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
+        "description": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -248,8 +248,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "혼다코리아, 가을 라이딩 시즌 맞아 모터사이클 구매 프로모션 실시..혜택은?",
-        "description": "혼다코리아(대표 이지홍)가 가을 라이딩 계절을 맞아 10월 한 달간 모터사이클 주요 라인업에 대한 구매 프로모션을 진행한다고 16일 밝혔다. 이번 프로모션은 125cc 초과 대형 모델 대상의 ‘펀 프로모션(Fun Promotion)’과 125cc 이하 입문용 수동 모델 대상의 ‘스몰 펀 프로모션(Small Fun Promotion)’으로 나누어...",
+        "title": "가을 라이딩은 혼다와 함께 ‘10월 한정 프로모션’",
+        "description": "10월 한 달간 무이자 할부·할인·투어 지원금 등 기종별 혜택 제공...대상 모델 구매 고객에게 혼다 어드벤처 아카데미 수강료 50% 할인...혼다코리아가 본격적인 가을 라이딩 시즌을 맞아 10월 1일부터 31일까지 한 달간 주요 모터사이클 구매 고객을 대상으로 특별 프로모션 ‘Perfect Season to Ride’를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
