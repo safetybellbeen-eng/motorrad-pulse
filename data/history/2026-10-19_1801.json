@@ -1,0 +1,44 @@
+{
+  "savedAtISO": "2026-10-19T18:01:16.910696+09:00",
+  "articles": [
+    {
+      "id": "cb98c1272fd1f91d",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-10-19T12:16:55+09:00"
+    },
+    {
+      "id": "99ab3bab665750e3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-10-19T11:11:23+09:00"
+    },
+    {
+      "id": "9dcb6ce1ff742c2a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-19T11:02:51+09:00"
+    }
+  ]
+}
