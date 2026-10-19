@@ -1,24 +1,26 @@
 {
   "meta": {
-    "date": "2026-10-18",
-    "dayLabel": "SUNDAY",
+    "date": "2026-10-19",
+    "dayLabel": "MONDAY",
     "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-18T13:01:12.181332+09:00",
+    "lastUpdatedISO": "2026-10-19T13:01:26.030981+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "[뉴아이템] 이노브, BMW 전용 스마트 디스플레이 ‘N3 BMW’ 출시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175163613&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "ducati": {
         "newsCount": 0,
@@ -51,13 +53,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
         "signal": "NORMAL",
-        "activity": "MEDIUM",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "activity": "LOW",
+        "topArticleTitle": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175164961&bmode=view",
         "signalDetails": {}
       },
       "yamaha": {
@@ -74,33 +76,89 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [],
-    "productTech": [
+    "competitor": [
       {
-        "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
-        "description": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
+        "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
+        "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "productTech": [
+      {
+        "title": "[뉴아이템] 이노브, BMW 전용 스마트 디스플레이 ‘N3 BMW’ 출시",
+        "description": "BMW 순정 거치대 호환·원더휠 연동, 카플레이부터 차량 정보 표시까지...이노브(INNOVV)가 BMW 모터사이클의 차량 정보 확인과 스마트폰 연동 기능을 지원하는 스마트 디스플레이 ‘N3 BMW’를 출시한다.N3 BMW는 5.99인치 디스플레이를 탑재한 라이딩용 제품이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      }
+    ],
+    "customerTrend": [
+      {
+        "title": "로얄엔필드와 함께 달리는 가을 고갯길 '2026 그레이트 힐스 투어'",
+        "description": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
     {
-      "id": "6c7f25e10314f276",
-      "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
-      "url": "https://www.kmnews.net/REVIEW/?idx=175124949&bmode=view",
+      "id": "cb98c1272fd1f91d",
+      "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
+      "url": "https://www.kmnews.net/NEWS/?idx=175164961&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-10-19T12:16:55+09:00",
+      "category": "COMPETITOR",
+      "summary": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "99ab3bab665750e3",
+      "title": "[뉴아이템] 이노브, BMW 전용 스마트 디스플레이 ‘N3 BMW’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175163613&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-10-19T11:11:23+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW 순정 거치대 호환·원더휠 연동, 카플레이부터 차량 정보 표시까지...이노브(INNOVV)가 BMW 모터사이클의 차량 정보 확인과 스마트폰 연동 기능을 지원하는 스마트 디스플레이 ‘N3 BMW’를 출시한다.N3 BMW는 5.99인치 디스플레이를 탑재한 라이딩용 제품이다.",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
+    {
+      "id": "9dcb6ce1ff742c2a",
+      "title": "로얄엔필드와 함께 달리는 가을 고갯길 '2026 그레이트 힐스 투어'",
+      "url": "https://www.kmnews.net/NEWS/?idx=175163371&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-10-16T13:13:17+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
+      "publishedAt": "2026-10-19T11:02:51+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
       "importance": 1.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
@@ -109,19 +167,41 @@
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [],
-    "competitor": [],
-    "productTech": [
+    "competitor": [
       {
-        "title": "[뉴모델] 도심과 투어링, 그리고 길의 경계를 넘다 'VOGE SR450X'",
-        "description": "일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 'SR450X'보그(VOGE)의 공식수입원 CMG가 일상과 장거리 투어링을 아우르는 크로스오버 스쿠터 SR450X를 11월에 선보인다. 398cc 수랭식 병렬 2기통 엔진과 CVT 자동변속기를 기반으로 스쿠터의 편리함에 투어러의 여유, 어드벤처 스타일의 차체 구성을 결합했다.",
+        "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
+        "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 이노브, BMW 전용 스마트 디스플레이 ‘N3 BMW’ 출시",
+        "description": "BMW 순정 거치대 호환·원더휠 연동, 카플레이부터 차량 정보 표시까지...이노브(INNOVV)가 BMW 모터사이클의 차량 정보 확인과 스마트폰 연동 기능을 지원하는 스마트 디스플레이 ‘N3 BMW’를 출시한다.N3 BMW는 5.99인치 디스플레이를 탑재한 라이딩용 제품이다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "로얄엔필드와 함께 달리는 가을 고갯길 '2026 그레이트 힐스 투어'",
+        "description": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ]
   }
 }
