@@ -2,24 +2,24 @@
   "meta": {
     "date": "2026-10-20",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "09:32 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-20T09:32:56.503386+09:00",
+    "lastUpdatedISO": "2026-10-20T13:01:33.986784+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 1,
+        "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
-        "activity": "MEDIUM",
-        "topArticleTitle": "[뉴아이템] 이노브, BMW 전용 스마트 디스플레이 ‘N3 BMW’ 출시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175163613&bmode=view",
+        "signal": "RISING",
+        "activity": "HIGH",
+        "topArticleTitle": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
+        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "RISING"
         }
       },
       "ducati": {
@@ -78,6 +78,13 @@
     "market": [],
     "competitor": [
       {
+        "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
+        "description": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
         "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
         "relatedNewsCount": 1,
@@ -99,12 +106,19 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": [
       {
         "title": "로얄엔필드와 함께 달리는 가을 고갯길 '2026 그레이트 힐스 투어'",
-        "description": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
@@ -112,6 +126,44 @@
     ]
   },
   "news": [
+    {
+      "id": "9c03575422eb2886",
+      "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
+      "source": "데일리카",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-10-20T11:03:45+09:00",
+      "category": "COMPETITOR",
+      "summary": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
+    {
+      "id": "473b11ac47e84bf1",
+      "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175180612&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-20T10:47:47+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
     {
       "id": "cb98c1272fd1f91d",
       "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
@@ -125,12 +177,12 @@
       "publishedAt": "2026-10-19T12:16:55+09:00",
       "category": "COMPETITOR",
       "summary": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "99ab3bab665750e3",
@@ -150,7 +202,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "9dcb6ce1ff742c2a",
@@ -162,13 +214,13 @@
       "brandGroups": [],
       "publishedAt": "2026-10-19T11:02:51+09:00",
       "category": "CUSTOMER_TREND",
-      "summary": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
+      "summary": null,
       "importance": 1.5,
       "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "b39e7a7a1213956e",
@@ -186,11 +238,22 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
-    "ownWatch": [],
+    "ownWatch": [
+      {
+        "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
+        "description": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "market": [
       {
         "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
@@ -225,12 +288,22 @@
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
       }
     ],
     "customerTrend": [
       {
         "title": "로얄엔필드와 함께 달리는 가을 고갯길 '2026 그레이트 힐스 투어'",
-        "description": "속리산부터 문경까지... 10월24일부터 1박2일간 엔필더를 위한 가을 투어 진행로얄엔필드 코리아가 10월 24일부터 25일까지 충북 속리산과 경북 문경 일대에서 ‘2026 그레이트 힐스 투어(Great Hills Tour)’를 진행한다.로얄엔필드 오너 50명을 대상으로 열리는 이번 행사는 가을 풍경 속에서 라이딩의 즐거움을 나누는 1박 2일 투어다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
