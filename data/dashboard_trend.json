@@ -1,13 +1,7 @@
 {
-  "generatedAtISO": "2026-10-20T18:01:35.251367+09:00",
+  "generatedAtISO": "2026-10-21T08:01:39.299681+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-10-07",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
-    },
     {
       "date": "2026-10-08",
       "newsCount": 2,
@@ -78,12 +72,12 @@
     },
     {
       "date": "2026-10-16",
-      "newsCount": 5,
+      "newsCount": 4,
       "byBrand": {
         "honda": 2
       },
       "byCategory": {
-        "COMPETITOR": 4,
+        "COMPETITOR": 3,
         "PRODUCT_TECH": 1
       }
     },
@@ -95,9 +89,11 @@
     },
     {
       "date": "2026-10-18",
-      "newsCount": 0,
+      "newsCount": 1,
       "byBrand": {},
-      "byCategory": {}
+      "byCategory": {
+        "COMPETITOR": 1
+      }
     },
     {
       "date": "2026-10-19",
@@ -122,6 +118,12 @@
         "PRODUCT_TECH": 2,
         "COMPETITOR": 2
       }
+    },
+    {
+      "date": "2026-10-21",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
