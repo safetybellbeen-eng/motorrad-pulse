@@ -2,23 +2,24 @@
   "meta": {
     "date": "2026-10-20",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-20T13:01:33.986784+09:00",
+    "lastUpdatedISO": "2026-10-20T18:01:35.244867+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
-        "secondaryTheme": null,
+        "secondaryTheme": "SPORT",
         "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
         "signalDetails": {
+          "SPORT": "NEW",
           "NEW_MODEL": "RISING"
         }
       },
@@ -85,14 +86,14 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
-        "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
+        "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
+        "description": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       },
       {
-        "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
+        "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -105,6 +106,13 @@
         "description": "BMW 순정 거치대 호환·원더휠 연동, 카플레이부터 차량 정보 표시까지...이노브(INNOVV)가 BMW 모터사이클의 차량 정보 확인과 스마트폰 연동 기능을 지원하는 스마트 디스플레이 ‘N3 BMW’를 출시한다.N3 BMW는 5.99인치 디스플레이를 탑재한 라이딩용 제품이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
+        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
+        "relatedNewsCount": 1,
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
@@ -126,6 +134,26 @@
     ]
   },
   "news": [
+    {
+      "id": "fceaa9e5db62ec99",
+      "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
+      "url": "https://www.ebn.co.kr/news/articleView.html?idxno=1728532",
+      "source": "www.ebn.co.kr",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-10-20T16:33:22+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 2
+    },
     {
       "id": "9c03575422eb2886",
       "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
@@ -165,6 +193,24 @@
       "rank": 1
     },
     {
+      "id": "b7b86f7b825d1478",
+      "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
+      "url": "https://www.kmnews.net/NEWS/?idx=175180563&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-20T10:45:11+09:00",
+      "category": "COMPETITOR",
+      "summary": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "cb98c1272fd1f91d",
       "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
       "url": "https://www.kmnews.net/NEWS/?idx=175164961&bmode=view",
@@ -176,13 +222,13 @@
       ],
       "publishedAt": "2026-10-19T12:16:55+09:00",
       "category": "COMPETITOR",
-      "summary": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
+      "summary": null,
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "99ab3bab665750e3",
@@ -202,7 +248,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "9dcb6ce1ff742c2a",
@@ -220,25 +266,7 @@
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "b39e7a7a1213956e",
-      "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
-      "url": "https://www.kmnews.net/NEWS/?idx=175124592&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-18T15:57:35+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -256,8 +284,8 @@
     ],
     "market": [
       {
-        "title": "CMG, '전국 공식 딜러 모집' 품질 중심의 모터사이클 사업 전개 본격 시동!",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
+        "description": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -269,7 +297,7 @@
     "competitor": [
       {
         "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
-        "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
@@ -284,6 +312,16 @@
         "description": "BMW 순정 거치대 호환·원더휠 연동, 카플레이부터 차량 정보 표시까지...이노브(INNOVV)가 BMW 모터사이클의 차량 정보 확인과 스마트폰 연동 기능을 지원하는 스마트 디스플레이 ‘N3 BMW’를 출시한다.N3 BMW는 5.99인치 디스플레이를 탑재한 라이딩용 제품이다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
+        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
+        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
+        "relatedNewsCount": 1,
+        "impact": "Low",
         "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
