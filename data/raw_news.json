@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-10-21T18:01:14.439407+09:00",
+  "lastCollectedAt": "2026-10-22T08:01:15.674698+09:00",
   "news": [
     {
       "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
@@ -17,7 +17,7 @@
       "acquisitionMethod": "google_news",
       "description": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시&nbsp;&nbsp;www.ebn.co.kr",
       "id": "fceaa9e5db62ec99",
-      "collectedAt": "2026-10-21T18:01:14.439407+09:00",
+      "collectedAt": "2026-10-22T08:01:15.674698+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -43,7 +43,7 @@
       "acquisitionMethod": "google_news",
       "description": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원&nbsp;&nbsp;데일리카",
       "id": "9c03575422eb2886",
-      "collectedAt": "2026-10-21T18:01:14.439407+09:00",
+      "collectedAt": "2026-10-22T08:01:15.674698+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -51,7 +51,7 @@
       "bmwInsight": null,
       "isTopNews": false,
       "aiProcessed": false,
-      "relatedCoverageCount": 1
+      "relatedCoverageCount": 2
     },
     {
       "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
@@ -69,7 +69,7 @@
       "acquisitionMethod": "google_news",
       "description": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집&nbsp;&nbsp;한국이륜차신문",
       "id": "cb98c1272fd1f91d",
-      "collectedAt": "2026-10-21T13:01:07.244697+09:00",
+      "collectedAt": "2026-10-22T08:01:15.674698+09:00",
       "category": null,
       "summary": null,
       "importance": null,
