@@ -2,22 +2,22 @@
   "meta": {
     "date": "2026-10-22",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "09:08 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-22T09:08:29.223973+09:00",
+    "lastUpdatedISO": "2026-10-22T13:01:35.422645+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 2,
+        "newsCount": 3,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
         "signal": "CONTINUING",
-        "activity": "MEDIUM",
-        "topArticleTitle": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
-        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
+        "activity": "HIGH",
+        "topArticleTitle": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
+        "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62909",
         "signalDetails": {
           "NEW_MODEL": "CONTINUING",
           "SPORT": "CONTINUING"
@@ -54,14 +54,16 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
-        "primaryTheme": null,
+        "newsCount": 2,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NORMAL",
-        "activity": "LOW",
-        "topArticleTitle": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175164961&bmode=view",
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175219304&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "yamaha": {
         "newsCount": 0,
@@ -76,25 +78,19 @@
     }
   },
   "marketIntelligence": {
-    "market": [],
-    "competitor": [
+    "market": [
       {
-        "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
-        "description": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
+        "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
+        "impact": "Low",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
+      }
+    ],
+    "competitor": [
       {
         "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
         "description": "서초구·강남구·동작구 대상 신규 딜러 1곳 모집… 11월 30일까지 접수110~1,800cc 전 모델 판매·정비 서비스 담당 거점 확대 혼다코리아가 10월 15일부터 11월 30일까지 서울 남부권 모터사이클 공식 딜러를 모집한다고 10월 14일 밝혔다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
-        "description": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
@@ -102,15 +98,22 @@
     ],
     "productTech": [
       {
-        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
-        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
+        "title": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
+        "description": "BMW 모토라드가 로드 레이스 ‘맨섬 TT’의 유산을 담은 슈퍼스포츠 모터사이클 ‘BMW M 1000 RR 맨섬 TT 한정 에디션’을 국내에 최초로 선보인다. BMW 모토라드는 오는 24일 인천 영종도 BMW 드라이빙 센터에서 개최되는 ‘BMW 모토라드 데이즈 2026’ 현장에서 해당 한정판 모델을 단 하루 동안 특별 전시한다. 이번 한정판은...",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+        "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
+        "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
+        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -119,6 +122,26 @@
     "customerTrend": []
   },
   "news": [
+    {
+      "id": "405150cc79718f32",
+      "title": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62909",
+      "source": "데일리카",
+      "sourceType": "media",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-10-22T10:24:10+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "BMW 모토라드가 로드 레이스 ‘맨섬 TT’의 유산을 담은 슈퍼스포츠 모터사이클 ‘BMW M 1000 RR 맨섬 TT 한정 에디션’을 국내에 최초로 선보인다. BMW 모토라드는 오는 24일 인천 영종도 BMW 드라이빙 센터에서 개최되는 ‘BMW 모토라드 데이즈 2026’ 현장에서 해당 한정판 모델을 단 하루 동안 특별 전시한다. 이번 한정판은...",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
     {
       "id": "fceaa9e5db62ec99",
       "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
@@ -140,26 +163,6 @@
       "rank": 2
     },
     {
-      "id": "9c03575422eb2886",
-      "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
-      "source": "데일리카",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-10-20T11:03:45+09:00",
-      "category": "COMPETITOR",
-      "summary": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
-    },
-    {
       "id": "cb98c1272fd1f91d",
       "title": "혼다, 서울 남부권 모터사이클 공식 딜러 추가 모집",
       "url": "https://www.kmnews.net/NEWS/?idx=175164961&bmode=view",
@@ -177,68 +180,58 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     },
     {
-      "id": "473b11ac47e84bf1",
-      "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175180612&bmode=view",
+      "id": "818f05959b3796f3",
+      "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
+      "url": "https://www.kmnews.net/NEWS/?idx=175219343&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-10-20T10:47:47+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+      "publishedAt": "2026-10-22T11:27:37+09:00",
+      "category": "MARKET",
+      "summary": null,
       "importance": 1.5,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "1da50c3feb1f65e8",
+      "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175219304&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-10-22T11:25:40+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
+      "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "b7b86f7b825d1478",
-      "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
-      "url": "https://www.kmnews.net/NEWS/?idx=175180563&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-20T10:45:11+09:00",
-      "category": "COMPETITOR",
-      "summary": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
-    "ownWatch": [
-      {
-        "title": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
-        "description": "BMW 모토라드가 헤리티지 로드스터 기반의 한정판 모델 ‘BMW R 12 nineT 트래커(Tracker) 에디션’을 20일 오후 2시부터 온라인을 통해 국내 10대 한정으로 판매한다. 이번 한정판은 R 12 nineT 블랙스톰 메탈릭 모델에 미국 ‘플랫트랙 레이싱’에서 영감을 얻은 순정 액세서리 패키지 ‘더 트래커(The Tracker)’를 적용한...",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "ownWatch": [],
     "market": [
       {
-        "title": "애스턴마틴×Brough Superior, 전 세계 300대만 한정 생산 ‘AMB 002 Roadster’",
-        "description": "애스턴마틴과 브로 슈페리어가 2026년 9월 9일 영국 게이든에서 ‘AMB 002 로드스터’를 발표했다.AMB 브랜드 최초로 공도 주행이 가능한 모터사이클로, 전 세계 300대만 한정 생산한다.초기 주문 접수는 이미 시작됐으며, 고객 인도는 2027년 3분기부터 진행할 예정이다.",
+        "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
+        "intelligenceTopic": "MARKET",
+        "insightType": "NEEDS_CONFIRMATION"
       }
     ],
     "competitor": [
@@ -255,22 +248,32 @@
     ],
     "productTech": [
       {
-        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
-        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
+        "title": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
+        "description": "BMW 모토라드가 로드 레이스 ‘맨섬 TT’의 유산을 담은 슈퍼스포츠 모터사이클 ‘BMW M 1000 RR 맨섬 TT 한정 에디션’을 국내에 최초로 선보인다. BMW 모토라드는 오는 24일 인천 영종도 BMW 드라이빙 센터에서 개최되는 ‘BMW 모토라드 데이즈 2026’ 현장에서 해당 한정판 모델을 단 하루 동안 특별 전시한다. 이번 한정판은...",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
         "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] MSR, 겨울 라이딩 위한 ‘토시 네오플랜 프리미엄’ 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘토시 네오플랜 프리미엄’을 선보였다.토시 네오플랜 프리미엄은 따뜻한 안감을 적용해 보온성을 높이고, 방풍 설계를 통해 주행 중 유입되는 찬바람을 효과적으로 차단하도록 제작됐다.",
+        "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
+        "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[Car & Now] 폭스바겐코리아, 100대 한정 '골프 GTI' 사전 계약 개시·BMW모토라드, R12 nineT 트래커 에디션 출시",
+        "description": "◆폭스바겐코리아, 골프 GTI 50주년 한정판 사전계약 실시폭스바겐코리아가 '골프 GTI' 글로벌 출시 50주년을 기념해 국내 100대 한정 모델인 '골프 GTI",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
