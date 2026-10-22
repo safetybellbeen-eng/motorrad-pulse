@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-10-22",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "09:08 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-22T08:01:36.384015+09:00",
+    "lastUpdatedISO": "2026-10-22T09:08:29.223973+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 3,
+        "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
         "signal": "CONTINUING",
-        "activity": "HIGH",
+        "activity": "MEDIUM",
         "topArticleTitle": "BMW 모토라드, ‘R 12 nineT 트래커 에디션’ 출시..가격은 3220만원",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62881",
         "signalDetails": {
-          "SPORT": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "SPORT": "CONTINUING"
         }
       },
       "ducati": {
