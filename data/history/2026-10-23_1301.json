@@ -1,0 +1,90 @@
+{
+  "savedAtISO": "2026-10-23T13:01:31.303489+09:00",
+  "articles": [
+    {
+      "id": "708c88025d6ffb0d",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "동아일보",
+      "domain": "www.donga.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-22T17:04:21+09:00"
+    },
+    {
+      "id": "405150cc79718f32",
+      "sourceGroup": "bmw",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-10-22T10:24:10+09:00"
+    },
+    {
+      "id": "28fcad069d881767",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "CRUISER"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-23T11:44:58+09:00"
+    },
+    {
+      "id": "499ffe9a9d835753",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-10-22T11:36:44+09:00"
+    },
+    {
+      "id": "818f05959b3796f3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-10-22T11:27:37+09:00"
+    },
+    {
+      "id": "1da50c3feb1f65e8",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-22T11:25:40+09:00"
+    }
+  ]
+}

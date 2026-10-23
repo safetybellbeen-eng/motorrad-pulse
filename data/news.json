@@ -2,16 +2,16 @@
   "meta": {
     "date": "2026-10-23",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "09:05 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-23T09:05:32.338018+09:00",
+    "lastUpdatedISO": "2026-10-23T13:01:31.301684+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 5,
+        "newsCount": 4,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
         "signal": "RISING",
@@ -19,8 +19,8 @@
         "topArticleTitle": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62909",
         "signalDetails": {
-          "NEW_MODEL": "RISING",
-          "SPORT": "CONTINUING"
+          "SPORT": "CONTINUING",
+          "NEW_MODEL": "RISING"
         }
       },
       "ducati": {
@@ -104,10 +104,17 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
+        "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
+        "description": "중국 모터사이클 브랜드 벤다(BENDA)가 소형 크루저 ‘나폴레옹 밥 125’를 유럽 시장에 선보였다.단기통이 주류인 125cc급에 V트윈 엔진을 적용한 점이 특징이다.벤다는 2026년 9월 신형 모델을 공개하고 현지 판매점을 통해 판매를 시작했다. 주요 대상은 유럽의 125cc급 면허인 A1 면허 소지자다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
         "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
@@ -152,6 +159,24 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "own",
+      "rank": 2
+    },
+    {
+      "id": "28fcad069d881767",
+      "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175235803&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-23T11:44:58+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "중국 모터사이클 브랜드 벤다(BENDA)가 소형 크루저 ‘나폴레옹 밥 125’를 유럽 시장에 선보였다.단기통이 주류인 125cc급에 V트윈 엔진을 적용한 점이 특징이다.벤다는 2026년 9월 신형 모델을 공개하고 현지 판매점을 통해 판매를 시작했다. 주요 대상은 유럽의 125cc급 면허인 A1 면허 소지자다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 2
     },
     {
@@ -204,7 +229,7 @@
       "publishedAt": "2026-10-22T11:25:40+09:00",
       "category": "PRODUCT_TECH",
       "summary": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -249,10 +274,20 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
+        "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
+        "description": "중국 모터사이클 브랜드 벤다(BENDA)가 소형 크루저 ‘나폴레옹 밥 125’를 유럽 시장에 선보였다.단기통이 주류인 125cc급에 V트윈 엔진을 적용한 점이 특징이다.벤다는 2026년 9월 신형 모델을 공개하고 현지 판매점을 통해 판매를 시작했다. 주요 대상은 유럽의 125cc급 면허인 A1 면허 소지자다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
         "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
