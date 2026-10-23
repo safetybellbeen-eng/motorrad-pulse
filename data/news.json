@@ -2,25 +2,25 @@
   "meta": {
     "date": "2026-10-23",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "09:05 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-23T08:01:27.387175+09:00",
+    "lastUpdatedISO": "2026-10-23T09:05:32.338018+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 5,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
-        "signal": "CONTINUING",
+        "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
         "topArticleUrl": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62909",
         "signalDetails": {
-          "SPORT": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "RISING",
+          "SPORT": "CONTINUING"
         }
       },
       "ducati": {
