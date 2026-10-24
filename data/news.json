@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-24",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:56 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-24T08:56:03.680374+09:00",
+    "lastUpdatedISO": "2026-10-24T13:01:25.222294+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 4,
@@ -16,8 +16,8 @@
         "secondaryTheme": null,
         "signal": "CONTINUING",
         "activity": "HIGH",
-        "topArticleTitle": "BMW, 420cc 고성능 네이키드 'F 450 R' 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175219506&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "CONTINUING",
           "SPORT": "NORMAL"
@@ -59,8 +59,8 @@
         "secondaryTheme": null,
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175219304&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "CONTINUING"
         }
@@ -78,31 +78,9 @@
     }
   },
   "marketIntelligence": {
-    "market": [
-      {
-        "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [
-      {
-        "title": "신제품·기술 관련 뉴스 확대",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "BMW, 420cc 고성능 네이키드 'F 450 R' 공개",
-        "description": "BMW 모토라드가 10월 2일, 420cc 병렬 2기통 엔진과 도로 주행에 맞춘 차체에 다양한 전자제어 장비를 결합해 접근성과 스포츠 주행의 즐거움을 함께 추구한 네이키드 모델 'F 450 R'을 독일에서 공개했다.F 450 R은 F 450 모델 군의 독립적인 네이키드 모델로 개발됐다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
       {
         "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
         "description": "중국 모터사이클 브랜드 벤다(BENDA)가 소형 크루저 ‘나폴레옹 밥 125’를 유럽 시장에 선보였다.단기통이 주류인 125cc급에 V트윈 엔진을 적용한 점이 특징이다.벤다는 2026년 9월 신형 모델을 공개하고 현지 판매점을 통해 판매를 시작했다. 주요 대상은 유럽의 125cc급 면허인 A1 면허 소지자다.",
@@ -111,8 +89,8 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
-        "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
+        "title": "BMW모토라드, ‘M1000 RR 맨섬 TT’ 한정판 첫 공개…국내 2대 도입",
+        "description": "BMW 모토라드가 오는 10월 24일 인천 영종도 소재 BMW 드라이빙 센터에서 열리는 브랜드 고객 행사 ‘BMW 모토라드 데이즈 2026’을 통해 극소량 생산 모델인 ‘BMW M 1000 RR 맨섬 TT 한정 에디션(BMW M 1000 RR Limited Editi…",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -142,46 +120,6 @@
       "rank": 1
     },
     {
-      "id": "499ffe9a9d835753",
-      "title": "BMW, 420cc 고성능 네이키드 'F 450 R' 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175219506&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-10-22T11:36:44+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW 모토라드가 10월 2일, 420cc 병렬 2기통 엔진과 도로 주행에 맞춘 차체에 다양한 전자제어 장비를 결합해 접근성과 스포츠 주행의 즐거움을 함께 추구한 네이키드 모델 'F 450 R'을 독일에서 공개했다.F 450 R은 F 450 모델 군의 독립적인 네이키드 모델로 개발됐다.",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 3
-    },
-    {
-      "id": "405150cc79718f32",
-      "title": "BMW 모토라드, 115대 한정판 ‘M 1000 RR 맨섬 TT 에디션’ 공개..특징은?",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62909",
-      "source": "데일리카",
-      "sourceType": "media",
-      "sourceGroup": "bmw",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-10-22T10:24:10+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "BMW 모토라드가 로드 레이스 ‘맨섬 TT’의 유산을 담은 슈퍼스포츠 모터사이클 ‘BMW M 1000 RR 맨섬 TT 한정 에디션’을 국내에 최초로 선보인다. BMW 모토라드는 오는 24일 인천 영종도 BMW 드라이빙 센터에서 개최되는 ‘BMW 모토라드 데이즈 2026’ 현장에서 해당 한정판 모델을 단 하루 동안 특별 전시한다. 이번 한정판은...",
-      "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 2
-    },
-    {
       "id": "28fcad069d881767",
       "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=175235803&bmode=view",
@@ -197,82 +135,14 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "818f05959b3796f3",
-      "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
-      "url": "https://www.kmnews.net/NEWS/?idx=175219343&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-22T11:27:37+09:00",
-      "category": "MARKET",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "1da50c3feb1f65e8",
-      "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175219304&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-10-22T11:25:40+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
       "rank": 1
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
-      {
-        "title": "미쉐린, 포르쉐 팬 페스티벌 ‘포르쉐 바이브 서울’ 공식 스폰서 참여",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "MARKET",
-        "insightType": "NEEDS_CONFIRMATION"
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [
-      {
-        "title": "신제품·기술 관련 뉴스 확대",
-        "description": "BMW 등 주요 브랜드에서 관련 뉴스 2건이 확인되었습니다.",
-        "relatedNewsCount": 2,
-        "impact": "Medium",
-        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "GROUPED"
-      },
-      {
-        "title": "BMW, 420cc 고성능 네이키드 'F 450 R' 공개",
-        "description": "BMW 모토라드가 10월 2일, 420cc 병렬 2기통 엔진과 도로 주행에 맞춘 차체에 다양한 전자제어 장비를 결합해 접근성과 스포츠 주행의 즐거움을 함께 추구한 네이키드 모델 'F 450 R'을 독일에서 공개했다.F 450 R은 F 450 모델 군의 독립적인 네이키드 모델로 개발됐다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
       {
         "title": "BENDA, V트윈 품은 125cc 크루저 '나폴레옹 밥 125' 유럽 출시",
         "description": "중국 모터사이클 브랜드 벤다(BENDA)가 소형 크루저 ‘나폴레옹 밥 125’를 유럽 시장에 선보였다.단기통이 주류인 125cc급에 V트윈 엔진을 적용한 점이 특징이다.벤다는 2026년 9월 신형 모델을 공개하고 현지 판매점을 통해 판매를 시작했다. 주요 대상은 유럽의 125cc급 면허인 A1 면허 소지자다.",
@@ -284,12 +154,12 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] K&N, 혼다 CT125용 고성능 에어필터 출시",
-        "description": "세계적인 튜닝 필터 브랜드 K&N의 공식 수입원 신원모터싸이클이 혼다 CT125 헌터커브(2020~2026년식) 전용 순정 교환형 고성능 에어필터 ‘HA-0120’을 선보였다. 제품의 국내 판매가격은 10만 9,000원이다.HA-0120은 엔진으로 유입되는 공기 흐름을 높여 출력과 스로틀 반응, 가속 성능 향상을 목표로 설계한 K&N 하이플로 에어필터다.",
+        "title": "BMW모토라드, ‘M1000 RR 맨섬 TT’ 한정판 첫 공개…국내 2대 도입",
+        "description": "BMW 모토라드가 오는 10월 24일 인천 영종도 소재 BMW 드라이빙 센터에서 열리는 브랜드 고객 행사 ‘BMW 모토라드 데이즈 2026’을 통해 극소량 생산 모델인 ‘BMW M 1000 RR 맨섬 TT 한정 에디션(BMW M 1000 RR Limited Editi…",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
+        "bmwNote": "자사 신제품의 국내 출시 일정과 초기 반응, 세그먼트 내 포지셔닝을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
