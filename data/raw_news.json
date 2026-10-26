@@ -1,4 +1,29 @@
 {
-  "lastCollectedAt": "2026-10-26T08:27:57.143707+09:00",
-  "news": []
+  "lastCollectedAt": "2026-10-26T13:00:59.137889+09:00",
+  "news": [
+    {
+      "title": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175271336&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-10-26T11:48:16+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 12,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시&nbsp;&nbsp;한국이륜차신문",
+      "id": "1302ad8bb091f68f",
+      "collectedAt": "2026-10-26T13:00:59.137889+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
