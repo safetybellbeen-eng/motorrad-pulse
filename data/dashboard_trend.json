@@ -1,17 +1,7 @@
 {
-  "generatedAtISO": "2026-10-26T18:01:40.947824+09:00",
+  "generatedAtISO": "2026-10-27T08:01:18.677204+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-10-13",
-      "newsCount": 1,
-      "byBrand": {
-        "honda": 1
-      },
-      "byCategory": {
-        "CUSTOMER_TREND": 1
-      }
-    },
     {
       "date": "2026-10-14",
       "newsCount": 2,
@@ -124,6 +114,12 @@
       "byCategory": {
         "PRODUCT_TECH": 1
       }
+    },
+    {
+      "date": "2026-10-27",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
