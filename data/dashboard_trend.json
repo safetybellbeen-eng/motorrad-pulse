@@ -1,20 +1,7 @@
 {
-  "generatedAtISO": "2026-10-25T08:33:05.123208+09:00",
+  "generatedAtISO": "2026-10-26T13:01:17.223903+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-10-12",
-      "newsCount": 3,
-      "byBrand": {
-        "ducati": 1,
-        "honda": 1,
-        "kawasaki": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 2,
-        "COMPETITOR": 1
-      }
-    },
     {
       "date": "2026-10-13",
       "newsCount": 1,
@@ -129,6 +116,14 @@
       "newsCount": 0,
       "byBrand": {},
       "byCategory": {}
+    },
+    {
+      "date": "2026-10-26",
+      "newsCount": 1,
+      "byBrand": {},
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
     }
   ]
 }
