@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-27",
     "dayLabel": "TUESDAY",
-    "lastUpdated": "09:41 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-27T09:41:54.585701+09:00",
+    "lastUpdatedISO": "2026-10-27T13:01:23.797251+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -98,7 +98,7 @@
       "publishedAt": "2026-10-26T11:48:16+09:00",
       "category": "PRODUCT_TECH",
       "summary": "한국자동차튜닝협회, 브라비오·디에이치인터내셔널 2개 제품 인증 완료, 본격 시장 공급...인증기준에 따라 장착·전산 등록하면 별도 튜닝 승인·검사 면제...한국자동차튜닝협회는 지난 8월부터 시행한 ‘자동차·이륜차용 앞면안개등 튜닝부품인증제도’에 따라 이륜차용 앞면안개등 2개 제품이 튜닝부품인증을 완료하고 본격적으로 시장에 공급된다고 밝혔다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,

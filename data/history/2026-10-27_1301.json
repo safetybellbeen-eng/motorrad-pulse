@@ -1,8 +1,8 @@
 {
-  "savedAtISO": "2026-09-27T13:01:10.445020+09:00",
+  "savedAtISO": "2026-10-27T13:01:23.797916+09:00",
   "articles": [
     {
-      "id": "a8062fbd9410623f",
+      "id": "1302ad8bb091f68f",
       "sourceGroup": "kmnews",
       "brandGroups": [],
       "source": "한국이륜차신문",
@@ -11,8 +11,8 @@
       "signalThemes": [
         "NEW_MODEL"
       ],
-      "importance": 2.0,
-      "publishedAt": "2026-09-25T19:29:51+09:00"
+      "importance": 1.5,
+      "publishedAt": "2026-10-26T11:48:16+09:00"
     }
   ]
 }
