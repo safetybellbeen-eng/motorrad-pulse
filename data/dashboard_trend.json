@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-10-28T09:40:18.872794+09:00",
+  "generatedAtISO": "2026-10-28T13:01:19.668467+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -111,9 +111,13 @@
     },
     {
       "date": "2026-10-28",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 1,
+      "byBrand": {
+        "kawasaki": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
     }
   ]
 }

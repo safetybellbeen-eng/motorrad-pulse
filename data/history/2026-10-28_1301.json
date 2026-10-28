@@ -1,0 +1,20 @@
+{
+  "savedAtISO": "2026-10-28T13:01:19.665015+09:00",
+  "articles": [
+    {
+      "id": "6991b2c035348dbe",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-10-28T12:26:15+09:00"
+    }
+  ]
+}

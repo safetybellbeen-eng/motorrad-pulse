@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-28",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "09:40 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-28T09:40:18.868167+09:00",
+    "lastUpdatedISO": "2026-10-28T13:01:19.664360+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -77,10 +77,10 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시",
-        "description": "한국자동차튜닝협회, 브라비오·디에이치인터내셔널 2개 제품 인증 완료, 본격 시장 공급...인증기준에 따라 장착·전산 등록하면 별도 튜닝 승인·검사 면제...한국자동차튜닝협회는 지난 8월부터 시행한 ‘자동차·이륜차용 앞면안개등 튜닝부품인증제도’에 따라 이륜차용 앞면안개등 2개 제품이 튜닝부품인증을 완료하고 본격적으로 시장에 공급된다고 밝혔다.",
+        "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
+        "description": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
@@ -88,17 +88,19 @@
   },
   "news": [
     {
-      "id": "1302ad8bb091f68f",
-      "title": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175271336&bmode=view",
+      "id": "6991b2c035348dbe",
+      "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175305927&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-10-26T11:48:16+09:00",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "publishedAt": "2026-10-28T12:26:15+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "한국자동차튜닝협회, 브라비오·디에이치인터내셔널 2개 제품 인증 완료, 본격 시장 공급...인증기준에 따라 장착·전산 등록하면 별도 튜닝 승인·검사 면제...한국자동차튜닝협회는 지난 8월부터 시행한 ‘자동차·이륜차용 앞면안개등 튜닝부품인증제도’에 따라 이륜차용 앞면안개등 2개 제품이 튜닝부품인증을 완료하고 본격적으로 시장에 공급된다고 밝혔다.",
-      "importance": 1.5,
+      "summary": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
+      "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -112,12 +114,12 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시",
-        "description": "한국자동차튜닝협회, 브라비오·디에이치인터내셔널 2개 제품 인증 완료, 본격 시장 공급...인증기준에 따라 장착·전산 등록하면 별도 튜닝 승인·검사 면제...한국자동차튜닝협회는 지난 8월부터 시행한 ‘자동차·이륜차용 앞면안개등 튜닝부품인증제도’에 따라 이륜차용 앞면안개등 2개 제품이 튜닝부품인증을 완료하고 본격적으로 시장에 공급된다고 밝혔다.",
+        "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
+        "description": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
