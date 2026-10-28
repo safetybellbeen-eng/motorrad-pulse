@@ -1,21 +1,23 @@
 {
-  "lastCollectedAt": "2026-10-28T09:39:53.531649+09:00",
+  "lastCollectedAt": "2026-10-28T13:01:03.216339+09:00",
   "news": [
     {
-      "title": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175271336&bmode=view",
+      "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175305927&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
-      "publishedAt": "2026-10-26T11:48:16+09:00",
+      "publishedAt": "2026-10-28T12:26:15+09:00",
       "sourceTier": "motorcycle_media",
       "sourceQualityScore": 90,
       "businessRelevanceScore": 12,
-      "brandGroups": [],
+      "brandGroups": [
+        "kawasaki"
+      ],
       "acquisitionMethod": "google_news",
-      "description": "이륜차 앞면 안개등 '튜닝인증제품' 첫 출시&nbsp;&nbsp;한국이륜차신문",
-      "id": "1302ad8bb091f68f",
-      "collectedAt": "2026-10-27T18:01:07.366559+09:00",
+      "description": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시&nbsp;&nbsp;한국이륜차신문",
+      "id": "6991b2c035348dbe",
+      "collectedAt": "2026-10-28T13:01:03.216339+09:00",
       "category": null,
       "summary": null,
       "importance": null,
