@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-10-29",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "10:09 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-29T10:09:59.663046+09:00",
+    "lastUpdatedISO": "2026-10-29T13:01:18.361529+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -77,16 +77,41 @@
     "competitor": [],
     "productTech": [
       {
+        "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
+        "description": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
         "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
         "description": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
+    {
+      "id": "3f075096a1668603",
+      "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
+      "url": "https://www.kmnews.net/REVIEW/?idx=175321583&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-10-29T12:13:12+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+      "importance": 2.0,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
     {
       "id": "6991b2c035348dbe",
       "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
@@ -100,12 +125,12 @@
       "publishedAt": "2026-10-28T12:26:15+09:00",
       "category": "PRODUCT_TECH",
       "summary": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -114,10 +139,20 @@
     "competitor": [],
     "productTech": [
       {
+        "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
+        "description": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "KAWASAKI, 650-W1에서 이어진 클래식 감성의 결정판 'W800(2027)' 일본 출시",
         "description": "가와사키가 ‘W’ 브랜드의 전통을 계승한 2027년형 W800을 일본에서 10월 17일에 출시했다.이번 연식 모델은 기존 모델의 색상과 그래픽, 주요 제원을 그대로 유지한다.W800은 1966년 등장한 650-W1에서 시작된 W 시리즈의 정신을 이어가는 클래식 모터사이클이다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",

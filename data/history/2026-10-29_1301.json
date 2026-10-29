@@ -1,0 +1,33 @@
+{
+  "savedAtISO": "2026-10-29T13:01:18.362794+09:00",
+  "articles": [
+    {
+      "id": "3f075096a1668603",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-29T12:13:12+09:00"
+    },
+    {
+      "id": "6991b2c035348dbe",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "kawasaki"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-10-28T12:26:15+09:00"
+    }
+  ]
+}
