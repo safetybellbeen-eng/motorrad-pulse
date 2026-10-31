@@ -1,29 +1,4 @@
 {
-  "lastCollectedAt": "2026-10-31T09:57:47.428081+09:00",
-  "news": [
-    {
-      "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?idx=175321583&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "publishedAt": "2026-10-29T12:13:12+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 12,
-      "brandGroups": [],
-      "acquisitionMethod": "google_news",
-      "description": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시&nbsp;&nbsp;한국이륜차신문",
-      "id": "3f075096a1668603",
-      "collectedAt": "2026-10-30T18:01:00.065726+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    }
-  ]
+  "lastCollectedAt": "2026-10-31T13:01:11.985934+09:00",
+  "news": []
 }
