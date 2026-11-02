@@ -1,8 +1,32 @@
 {
-  "savedAtISO": "2026-10-02T10:02:06.817513+09:00",
+  "savedAtISO": "2026-11-02T13:01:17.894164+09:00",
   "articles": [
     {
-      "id": "243ea6cca9574955",
+      "id": "450485c286bb7b95",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-02T12:20:59+09:00"
+    },
+    {
+      "id": "3e9865f5c1682e6f",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-02T12:18:12+09:00"
+    },
+    {
+      "id": "b7d21384f7e4961b",
       "sourceGroup": "kmnews",
       "brandGroups": [],
       "source": "한국이륜차신문",
@@ -12,32 +36,7 @@
         "NEW_MODEL"
       ],
       "importance": 2.0,
-      "publishedAt": "2026-10-01T12:26:22+09:00"
-    },
-    {
-      "id": "50dec515d6e674f3",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "source": "한국이륜차신문",
-      "domain": "www.kmnews.net",
-      "category": "COMPETITOR",
-      "signalThemes": [],
-      "importance": 1.5,
-      "publishedAt": "2026-10-01T12:23:44+09:00"
-    },
-    {
-      "id": "71d46fa5b1999f4f",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "source": "한국이륜차신문",
-      "domain": "www.kmnews.net",
-      "category": "PRODUCT_TECH",
-      "signalThemes": [
-        "TOURING",
-        "SCOOTER"
-      ],
-      "importance": 2.5,
-      "publishedAt": "2026-10-01T12:19:20+09:00"
+      "publishedAt": "2026-11-02T12:04:09+09:00"
     }
   ]
 }

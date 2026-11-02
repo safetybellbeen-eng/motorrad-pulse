@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-10-31",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "09:58 AM",
+    "date": "2026-11-02",
+    "dayLabel": "MONDAY",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-10-31T09:58:12.888087+09:00",
+    "lastUpdatedISO": "2026-11-02T13:01:17.893383+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,13 +51,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "BASELINE",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175378528&bmode=view",
         "signalDetails": {}
       },
       "yamaha": {
@@ -74,49 +74,123 @@
   },
   "marketIntelligence": {
     "market": [],
-    "competitor": [],
-    "productTech": [
+    "competitor": [
       {
-        "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
-        "description": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+        "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
+        "description": "11월 30일까지 배기량별 5,000원·1만 원 할인… 엔진오일 교환 고객 대상 차량 무료 점검 및 점검표 제공...혼다코리아가 11월 30일까지 전국 혼다 모터사이클 공식 딜러 및 판매점에서 ‘Pro Honda(프로 혼다) 엔진오일 서비스 프로모션’을 실시한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
+        "description": "11월 1일부터 진행, 삼성카드 24개월 무이자 또는 롯데카드 60개월 연 5% 저금리 할부 선택 가능QJ모터가 인기 모델 SRK421RR과 SRV300AMT를 대상으로 특별 금융 프로모션을 진행한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      }
+    ],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
     {
-      "id": "3f075096a1668603",
-      "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?idx=175321583&bmode=view",
+      "id": "450485c286bb7b95",
+      "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175378528&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-11-02T12:20:59+09:00",
+      "category": "COMPETITOR",
+      "summary": "11월 30일까지 배기량별 5,000원·1만 원 할인… 엔진오일 교환 고객 대상 차량 무료 점검 및 점검표 제공...혼다코리아가 11월 30일까지 전국 혼다 모터사이클 공식 딜러 및 판매점에서 ‘Pro Honda(프로 혼다) 엔진오일 서비스 프로모션’을 실시한다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "3e9865f5c1682e6f",
+      "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
+      "url": "https://www.kmnews.net/NEWS/?idx=175378444&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-10-29T12:13:12+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+      "publishedAt": "2026-11-02T12:18:12+09:00",
+      "category": "COMPETITOR",
+      "summary": "11월 1일부터 진행, 삼성카드 24개월 무이자 또는 롯데카드 60개월 연 5% 저금리 할부 선택 가능QJ모터가 인기 모델 SRK421RR과 SRV300AMT를 대상으로 특별 금융 프로모션을 진행한다.",
       "importance": 1.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
+    },
+    {
+      "id": "b7d21384f7e4961b",
+      "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175378020&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-02T12:04:09+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
-    "competitor": [],
-    "productTech": [
+    "market": [
       {
-        "title": "[뉴모델] 리터급 4기통 플랫폼의 확고한 개성 'GSX-S1000 시리즈 2027' 출시",
-        "description": "152마력 직렬 4기통 엔진을 품은 2027년식 GSX-S1000 시리즈 출시…GSX-S1000·GT·GX·카타나가 하나의 리터급 플랫폼으로 네 가지 개성을 선보여…2027년식 GSX-S1000 시리즈는 기존 엔진과 주요 전자제어 사양을 계승…스포츠 네이키드부터 투어러·크로스오버·헤리티지까지, 스즈키가 다양한 라이딩 취향을 존중…스즈키의 고성능 리터급 세그...",
+        "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
+        "description": "11월 1일부터 진행, 삼성카드 24개월 무이자 또는 롯데카드 60개월 연 5% 저금리 할부 선택 가능QJ모터가 인기 모델 SRK421RR과 SRV300AMT를 대상으로 특별 금융 프로모션을 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
+    "competitor": [
+      {
+        "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
+        "description": "11월 30일까지 배기량별 5,000원·1만 원 할인… 엔진오일 교환 고객 대상 차량 무료 점검 및 점검표 제공...혼다코리아가 11월 30일까지 전국 혼다 모터사이클 공식 딜러 및 판매점에서 ‘Pro Honda(프로 혼다) 엔진오일 서비스 프로모션’을 실시한다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
+    "productTech": [
+      {
+        "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
