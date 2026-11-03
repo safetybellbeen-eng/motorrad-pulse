@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-11-03T08:02:53.983754+09:00",
+  "generatedAtISO": "2026-11-03T12:01:11.966421+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -103,9 +103,13 @@
     },
     {
       "date": "2026-11-03",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 2,
+      "byBrand": {
+        "yamaha": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 2
+      }
     }
   ]
 }
