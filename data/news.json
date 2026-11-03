@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-03",
-    "dayLabel": "TUESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-04",
+    "dayLabel": "WEDNESDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-03T18:01:28.455539+09:00",
+    "lastUpdatedISO": "2026-11-04T08:01:28.709635+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -21,14 +21,16 @@
         "signalDetails": {}
       },
       "ducati": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175405845&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "triumph": {
         "newsCount": 0,
@@ -51,14 +53,16 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
-        "primaryTheme": null,
+        "newsCount": 2,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NORMAL",
-        "activity": "LOW",
-        "topArticleTitle": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175378528&bmode=view",
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "[EICMA 2026] 혼다, 아프리카 트윈·파이어블레이드 풀체인지 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175405294&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "yamaha": {
         "newsCount": 1,
@@ -94,6 +98,20 @@
     ],
     "productTech": [
       {
+        "title": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
+        "description": "두카티가 11월 2일 이탈리아 밀라노에서 EICMA 2026 사전 공개 행사를 열고 신차 5종을 발표했다. 디아벨 V4와 데저트X 랠리, 파니갈레 V4 SP·V2 SP, 스트리트파이터 V4 SP를 공개했으며, 차기 엔듀로 모델 데스모250 EDS도 선보였다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[EICMA 2026] 혼다, 아프리카 트윈·파이어블레이드 풀체인지 공개",
+        "description": "2027년형 CRF1150L 아프리카 트윈·CBR1000RR-R 세계 최초 공개...Honda SENSING RIDE와 전자제어 E-컴프레서 V3 양산 예정 모델도 선보여...혼다가 EICMA 2026에서 2027년형 신모델과 차세대 기술을 공개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "YAMAHA, 그랑프리 감성 담은 레전드 색상 'XSR900 GP(2027)' 유럽에서 공개",
         "description": "야마하 유럽이 2026년 10월 스포츠 헤리티지 모델 ‘XSR900 GP’의 2027년형을 공개했다. 1980~1990년대 그랑프리 경주차를 연상시키는 디자인에 890cc 직렬 3기통 엔진과 최신 전자제어 장비를 결합한 모델이다.색상은 레전드 블루, 레전드 옐로, 레전드 레드, 파워 그레이 등 네 가지다.",
         "relatedNewsCount": 1,
@@ -102,13 +120,6 @@
       },
       {
         "title": "로얄엔필드×헤돈, 한정판 수제 헬멧 컬렉션 공개",
-        "description": "헤도니스트·헤로인 레이서 두 가지 스타일, 전 세계 16개 한정 주문 제작미들급 모터사이클 세그먼트(250~750cc)의 글로벌 리더인 로얄엔필드가 영국 프리미엄 헬멧 제조사 헤돈(Hedon)과 손잡고, 시대를 초월한 모터사이클 문화와 현대적 디자인, 장인정신을 결합한 한정판 수제 헬멧 컬렉션을 선보인다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -119,6 +130,46 @@
   },
   "news": [
     {
+      "id": "4b9f3b287ab1c4f0",
+      "title": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175405845&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "publishedAt": "2026-11-03T18:55:02+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "두카티가 11월 2일 이탈리아 밀라노에서 EICMA 2026 사전 공개 행사를 열고 신차 5종을 발표했다. 디아벨 V4와 데저트X 랠리, 파니갈레 V4 SP·V2 SP, 스트리트파이터 V4 SP를 공개했으며, 차기 엔듀로 모델 데스모250 EDS도 선보였다.",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
+    {
+      "id": "071554177e78f8fa",
+      "title": "[EICMA 2026] 혼다, 아프리카 트윈·파이어블레이드 풀체인지 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175405294&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-11-03T18:06:12+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "2027년형 CRF1150L 아프리카 트윈·CBR1000RR-R 세계 최초 공개...Honda SENSING RIDE와 전자제어 E-컴프레서 V3 양산 예정 모델도 선보여...혼다가 EICMA 2026에서 2027년형 신모델과 차세대 기술을 공개했다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "32a500f146a07448",
       "title": "로얄엔필드×헤돈, 한정판 수제 헬멧 컬렉션 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=175395622&bmode=view",
@@ -128,13 +179,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-03T10:55:45+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "헤도니스트·헤로인 레이서 두 가지 스타일, 전 세계 16개 한정 주문 제작미들급 모터사이클 세그먼트(250~750cc)의 글로벌 리더인 로얄엔필드가 영국 프리미엄 헬멧 제조사 헤돈(Hedon)과 손잡고, 시대를 초월한 모터사이클 문화와 현대적 디자인, 장인정신을 결합한 한정판 수제 헬멧 컬렉션을 선보인다.",
+      "summary": null,
       "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 3
     },
     {
       "id": "c12774665d5bba8a",
@@ -154,7 +205,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 4
     },
     {
       "id": "450485c286bb7b95",
@@ -169,12 +220,11 @@
       "publishedAt": "2026-11-02T12:20:59+09:00",
       "category": "COMPETITOR",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "3e9865f5c1682e6f",
@@ -192,24 +242,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "b7d21384f7e4961b",
-      "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175378020&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-02T12:04:09+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
@@ -240,6 +273,26 @@
     ],
     "productTech": [
       {
+        "title": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
+        "description": "두카티가 11월 2일 이탈리아 밀라노에서 EICMA 2026 사전 공개 행사를 열고 신차 5종을 발표했다. 디아벨 V4와 데저트X 랠리, 파니갈레 V4 SP·V2 SP, 스트리트파이터 V4 SP를 공개했으며, 차기 엔듀로 모델 데스모250 EDS도 선보였다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[EICMA 2026] 혼다, 아프리카 트윈·파이어블레이드 풀체인지 공개",
+        "description": "2027년형 CRF1150L 아프리카 트윈·CBR1000RR-R 세계 최초 공개...Honda SENSING RIDE와 전자제어 E-컴프레서 V3 양산 예정 모델도 선보여...혼다가 EICMA 2026에서 2027년형 신모델과 차세대 기술을 공개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "YAMAHA, 그랑프리 감성 담은 레전드 색상 'XSR900 GP(2027)' 유럽에서 공개",
         "description": "야마하 유럽이 2026년 10월 스포츠 헤리티지 모델 ‘XSR900 GP’의 2027년형을 공개했다. 1980~1990년대 그랑프리 경주차를 연상시키는 디자인에 890cc 직렬 3기통 엔진과 최신 전자제어 장비를 결합한 모델이다.색상은 레전드 블루, 레전드 옐로, 레전드 레드, 파워 그레이 등 네 가지다.",
         "relatedNewsCount": 1,
@@ -251,16 +304,6 @@
       },
       {
         "title": "로얄엔필드×헤돈, 한정판 수제 헬멧 컬렉션 공개",
-        "description": "헤도니스트·헤로인 레이서 두 가지 스타일, 전 세계 16개 한정 주문 제작미들급 모터사이클 세그먼트(250~750cc)의 글로벌 리더인 로얄엔필드가 영국 프리미엄 헬멧 제조사 헤돈(Hedon)과 손잡고, 시대를 초월한 모터사이클 문화와 현대적 디자인, 장인정신을 결합한 한정판 수제 헬멧 컬렉션을 선보인다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴아이템] 코미네, 겨울용 재킷 ‘JK-641 ENIGMA G3’ 출시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",

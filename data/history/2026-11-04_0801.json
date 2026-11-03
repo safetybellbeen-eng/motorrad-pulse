@@ -1,0 +1,87 @@
+{
+  "savedAtISO": "2026-11-04T08:01:28.712005+09:00",
+  "articles": [
+    {
+      "id": "4b9f3b287ab1c4f0",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-11-03T18:55:02+09:00"
+    },
+    {
+      "id": "071554177e78f8fa",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-03T18:06:12+09:00"
+    },
+    {
+      "id": "32a500f146a07448",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-03T10:55:45+09:00"
+    },
+    {
+      "id": "c12774665d5bba8a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "yamaha"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-03T10:48:33+09:00"
+    },
+    {
+      "id": "450485c286bb7b95",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-02T12:20:59+09:00"
+    },
+    {
+      "id": "3e9865f5c1682e6f",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-02T12:18:12+09:00"
+    }
+  ]
+}
