@@ -1,19 +1,7 @@
 {
-  "generatedAtISO": "2026-11-04T18:01:24.154840+09:00",
+  "generatedAtISO": "2026-11-05T08:01:21.136537+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-10-22",
-      "newsCount": 6,
-      "byBrand": {
-        "bmw": 4,
-        "honda": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 5,
-        "MARKET": 1
-      }
-    },
     {
       "date": "2026-10-23",
       "newsCount": 1,
@@ -112,9 +100,15 @@
       "newsCount": 5,
       "byBrand": {},
       "byCategory": {
-        "MARKET": 1,
-        "PRODUCT_TECH": 4
+        "PRODUCT_TECH": 4,
+        "MARKET": 1
       }
+    },
+    {
+      "date": "2026-11-05",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }

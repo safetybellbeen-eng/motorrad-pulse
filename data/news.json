@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-04",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-05",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-04T18:01:24.149890+09:00",
+    "lastUpdatedISO": "2026-11-05T08:01:21.133859+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -98,7 +98,7 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본결 출시, Continental GT 750·Flying Flea S6 공개",
+        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
         "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
@@ -144,7 +144,7 @@
     },
     {
       "id": "c01357fd0632ed85",
-      "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본결 출시, Continental GT 750·Flying Flea S6 공개",
+      "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=175422709&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
@@ -259,7 +259,7 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본결 출시, Continental GT 750·Flying Flea S6 공개",
+        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
         "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
