@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-04",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "10:34 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 5건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 6건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-04T10:34:59.358620+09:00",
+    "lastUpdatedISO": "2026-11-04T13:01:20.797843+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -68,34 +68,27 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "YAMAHA, 그랑프리 감성 담은 레전드 색상 'XSR900 GP(2027)' 유럽에서 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175395476&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       }
     }
   },
   "marketIntelligence": {
-    "market": [],
-    "competitor": [
+    "market": [
       {
-        "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
+        "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
       }
     ],
+    "competitor": [],
     "productTech": [
       {
         "title": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
@@ -119,7 +112,7 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "로얄엔필드×헤돈, 한정판 수제 헬멧 컬렉션 공개",
+        "title": "[뉴모델] 플랫트랙 레이싱의 감성을 담다 'R 12 nineT 트래커 에디션' 출시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -150,6 +143,42 @@
       "rank": 1
     },
     {
+      "id": "12dbad96c538547e",
+      "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
+      "url": "https://www.kmnews.net/SPECIAL/?idx=175417142&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-04T12:11:54+09:00",
+      "category": "MARKET",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
+      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
+    },
+    {
+      "id": "99462b328068e8e3",
+      "title": "[뉴모델] 플랫트랙 레이싱의 감성을 담다 'R 12 nineT 트래커 에디션' 출시",
+      "url": "https://www.kmnews.net/REVIEW/?idx=175417013&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-04T12:02:43+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "071554177e78f8fa",
       "title": "[EICMA 2026] 혼다, 아프리카 트윈·파이어블레이드 풀체인지 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=175405294&bmode=view",
@@ -167,7 +196,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "32a500f146a07448",
@@ -180,12 +209,12 @@
       "publishedAt": "2026-11-03T10:55:45+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 5
     },
     {
       "id": "c12774665d5bba8a",
@@ -203,74 +232,25 @@
       "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "450485c286bb7b95",
-      "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175378528&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-11-02T12:20:59+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
-    },
-    {
-      "id": "3e9865f5c1682e6f",
-      "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
-      "url": "https://www.kmnews.net/NEWS/?idx=175378444&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-02T12:18:12+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
     "market": [
       {
-        "title": "QJ모터, SRK421RR·SRV300AMT 특별 금융 프로모션",
+        "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
+        "intelligenceTopic": "MARKET",
+        "insightType": "NEEDS_CONFIRMATION"
       }
     ],
-    "competitor": [
-      {
-        "title": "‘Pro Honda 엔진오일 서비스 프로모션’ 실시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
@@ -303,7 +283,7 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "로얄엔필드×헤돈, 한정판 수제 헬멧 컬렉션 공개",
+        "title": "[뉴모델] 플랫트랙 레이싱의 감성을 담다 'R 12 nineT 트래커 에디션' 출시",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",

@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-11-04T10:34:59.364434+09:00",
+  "generatedAtISO": "2026-11-04T13:01:20.803745+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -109,9 +109,12 @@
     },
     {
       "date": "2026-11-04",
-      "newsCount": 0,
+      "newsCount": 2,
       "byBrand": {},
-      "byCategory": {}
+      "byCategory": {
+        "MARKET": 1,
+        "PRODUCT_TECH": 1
+      }
     }
   ]
 }
