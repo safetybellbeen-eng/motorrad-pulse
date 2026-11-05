@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-05",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 8건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-05T13:01:27.659172+09:00",
+    "lastUpdatedISO": "2026-11-05T18:01:23.898375+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -103,18 +103,18 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
-        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
+        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "QJ모터, 미래형 EV 스포츠 머신 'OAO MAX' 세계 최초 공개",
-        "description": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
+        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
+        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -189,7 +189,7 @@
       "publishedAt": "2026-11-04T16:45:24+09:00",
       "category": "PRODUCT_TECH",
       "summary": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": false,
@@ -206,7 +206,7 @@
       "publishedAt": "2026-11-04T16:39:26+09:00",
       "category": "PRODUCT_TECH",
       "summary": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": false,
@@ -223,7 +223,7 @@
       "publishedAt": "2026-11-04T16:32:57+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
@@ -286,21 +286,21 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
-        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
+        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "QJ모터, 미래형 EV 스포츠 머신 'OAO MAX' 세계 최초 공개",
-        "description": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
+        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
+        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
