@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-05",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "10:42 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 8건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-05T10:42:23.659183+09:00",
+    "lastUpdatedISO": "2026-11-05T13:01:27.659172+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -33,14 +33,16 @@
         }
       },
       "triumph": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "harley": {
         "newsCount": 0,
@@ -53,28 +55,24 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "yamaha": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signalDetails": {}
       }
     }
   },
@@ -98,6 +96,13 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
+        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
         "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
@@ -110,13 +115,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
-      },
-      {
-        "title": "[EICMA 2026] 스즈키, 완전 새로워진 'GSX-10R' 세계 최초 공개",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -141,6 +139,44 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
+    },
+    {
+      "id": "54fd8bc35b84cc58",
+      "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-11-05T11:43:01+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+      "importance": 3.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "d9f5ae3d188a1a96",
+      "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175434452&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-05T11:52:38+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": null,
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 3
     },
     {
       "id": "c01357fd0632ed85",
@@ -173,9 +209,8 @@
       "importance": 2.5,
       "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
+      "isTopNews": false,
+      "topNewsGroup": null
     },
     {
       "id": "5ea9a6e51fc9cf0b",
@@ -193,7 +228,7 @@
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 5
     },
     {
       "id": "12dbad96c538547e",
@@ -211,25 +246,7 @@
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "99462b328068e8e3",
-      "title": "[뉴모델] 플랫트랙 레이싱의 감성을 담다 'R 12 nineT 트래커 에디션' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?idx=175417013&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-04T12:02:43+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
+      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
@@ -259,6 +276,16 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
+        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
         "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
         "relatedNewsCount": 1,
@@ -274,16 +301,6 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[EICMA 2026] 스즈키, 완전 새로워진 'GSX-10R' 세계 최초 공개",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"

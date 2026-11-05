@@ -1,9 +1,9 @@
 {
   "date": "2026-11-05",
-  "lastAnalyzedAt": "2026-11-05T10:42:23.659247+09:00",
+  "lastAnalyzedAt": "2026-11-05T13:01:27.659225+09:00",
   "dailySignal": {
     "title": "신규 모델 및 전동화 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 8건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
   "market": [
     {
@@ -28,6 +28,15 @@
       "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
     },
     {
+      "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+      "summary": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+      "relatedNewsIds": [
+        "54fd8bc35b84cc58"
+      ],
+      "impact": 3.0,
+      "bmwView": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+    },
+    {
       "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
       "summary": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
       "relatedNewsIds": [
@@ -44,22 +53,13 @@
       ],
       "impact": 2.5,
       "bmwView": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
-    },
-    {
-      "title": "[EICMA 2026] 스즈키, 완전 새로워진 'GSX-10R' 세계 최초 공개",
-      "summary": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-      "relatedNewsIds": [
-        "5ea9a6e51fc9cf0b"
-      ],
-      "impact": 2.0,
-      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
     }
   ],
   "customerTrend": [],
   "teamBrief": {
     "market": "오늘 수집된 시장 관련 뉴스 중 주요 기사 1건이 확인되었습니다. 주요 Motorcycle 시장의 판매 및 수요 흐름을 확인할 필요가 있습니다.",
     "competitor": "오늘 수집된 뉴스 중 경쟁 브랜드 관련 주요 기사는 확인되지 않았습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 5건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 6건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
     "todayInsight": "오늘은 신규 모델, 전동화 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
