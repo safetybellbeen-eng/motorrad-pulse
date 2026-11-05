@@ -1,0 +1,84 @@
+{
+  "savedAtISO": "2026-11-06T08:01:23.752759+09:00",
+  "articles": [
+    {
+      "id": "54fd8bc35b84cc58",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-11-05T11:43:01+09:00"
+    },
+    {
+      "id": "d9f5ae3d188a1a96",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-05T11:52:38+09:00"
+    },
+    {
+      "id": "c01357fd0632ed85",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-04T16:45:24+09:00"
+    },
+    {
+      "id": "a2cb3e26aa687b38",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ELECTRIFICATION"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-04T16:39:26+09:00"
+    },
+    {
+      "id": "5ea9a6e51fc9cf0b",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-04T16:32:57+09:00"
+    },
+    {
+      "id": "12dbad96c538547e",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-04T12:11:54+09:00"
+    }
+  ]
+}
