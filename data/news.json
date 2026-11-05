@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-05",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "10:42 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-05T08:01:21.133859+09:00",
+    "lastUpdatedISO": "2026-11-05T10:42:23.659183+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -24,12 +24,12 @@
         "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "[EICMA 2026] 두카티, 디아벨 V4·데저트X 랠리·SP 시리즈 등 신모델 5종 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175405845&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "triumph": {
@@ -53,15 +53,15 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "yamaha": {
