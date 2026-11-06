@@ -1,0 +1,59 @@
+{
+  "savedAtISO": "2026-11-06T18:01:27.606062+09:00",
+  "articles": [
+    {
+      "id": "3fe6311a2ecf12be",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-06T12:00:13+09:00"
+    },
+    {
+      "id": "54fd8bc35b84cc58",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-11-05T11:43:01+09:00"
+    },
+    {
+      "id": "d2b7b4b302d79f32",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-06T11:52:21+09:00"
+    },
+    {
+      "id": "d9f5ae3d188a1a96",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-05T11:52:38+09:00"
+    }
+  ]
+}

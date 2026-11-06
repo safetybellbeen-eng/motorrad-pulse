@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-06",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-06T13:01:33.008818+09:00",
+    "lastUpdatedISO": "2026-11-06T18:01:27.605331+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -21,16 +21,14 @@
         "signalDetails": {}
       },
       "ducati": {
-        "newsCount": 1,
-        "primaryTheme": "NEW_MODEL",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "NEW_MODEL": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "triumph": {
         "newsCount": 2,
@@ -39,7 +37,7 @@
         "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=175434340",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
         "signalDetails": {
           "NEW_MODEL": "RISING"
         }
@@ -95,24 +93,17 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
-        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
+        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
+        "description": "847cc 3기통 엔진으로 150 hp·90Nm 발휘...ZT703-RR·ZT703-F도 전자장비 강화... 존테스(ZONTES)가 EICMA 2026에서 새로운 상위급 네이키드 모델 ‘ZT853-R’을 공개했다.ZT853-R은 847cc 3기통 엔진을 탑재해 12,500rpm에서 최고출력 150hp, 9,000rpm에서 최대토크 90Nm를 발휘한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "QJ모터, 미래형 EV 스포츠 머신 'OAO MAX' 세계 최초 공개",
-        "description": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": [
       {
         "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "11월 24일부터 12월 3일까지 약 3,000km 주행, 태국 ‘아시아 할리 데이즈’ 참가모터사이클 커스텀 전문업체 오이엠(OEM GARAGE ROUTE1)이 한국 라이더들과 함께 베트남과 라오스, 태국을 달리는 해외 바이크 투어를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
@@ -143,7 +134,7 @@
     {
       "id": "54fd8bc35b84cc58",
       "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175434340",
+      "url": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "triumph",
@@ -170,12 +161,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-06T11:52:21+09:00",
       "category": "CUSTOMER_TREND",
-      "summary": null,
+      "summary": "11월 24일부터 12월 3일까지 약 3,000km 주행, 태국 ‘아시아 할리 데이즈’ 참가모터사이클 커스텀 전문업체 오이엠(OEM GARAGE ROUTE1)이 한국 라이더들과 함께 베트남과 라오스, 태국을 달리는 해외 바이크 투어를 진행한다.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
       "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
     },
     {
       "id": "d9f5ae3d188a1a96",
@@ -187,66 +179,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-05T11:52:38+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
+      "summary": "847cc 3기통 엔진으로 150 hp·90Nm 발휘...ZT703-RR·ZT703-F도 전자장비 강화... 존테스(ZONTES)가 EICMA 2026에서 새로운 상위급 네이키드 모델 ‘ZT853-R’을 공개했다.ZT853-R은 847cc 3기통 엔진을 탑재해 12,500rpm에서 최고출력 150hp, 9,000rpm에서 최대토크 90Nm를 발휘한다.",
       "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 3
-    },
-    {
-      "id": "c01357fd0632ed85",
-      "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175422709&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-04T16:45:24+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "a2cb3e26aa687b38",
-      "title": "QJ모터, 미래형 EV 스포츠 머신 'OAO MAX' 세계 최초 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175422623&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-04T16:39:26+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 전동화 및 관련 기술 변화와 관련된 기사입니다. 향후 제품 전략과 고객 기대수준 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
-    },
-    {
-      "id": "5ea9a6e51fc9cf0b",
-      "title": "[EICMA 2026] 스즈키, 완전 새로워진 'GSX-10R' 세계 최초 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175422447&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-04T16:32:57+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
@@ -275,21 +214,11 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[EICMA 2026] 로얄엔필드, Himalayan 750 본격 출시, Continental GT 750·Flying Flea S6 공개",
-        "description": "로얄엔필드가 EICMA 2026에서 Himalayan 750을 출시하고 Continental GT 750, 전기 스크램블러 Flying Flea S6를 공개했다.한정판 Shotgun 650 ‘Son of a Gun’도 함께 선보이며 750cc급 트윈과 전기 이륜차로 라인업을 넓혔다.",
+        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
+        "description": "847cc 3기통 엔진으로 150 hp·90Nm 발휘...ZT703-RR·ZT703-F도 전자장비 강화... 존테스(ZONTES)가 EICMA 2026에서 새로운 상위급 네이키드 모델 ‘ZT853-R’을 공개했다.ZT853-R은 847cc 3기통 엔진을 탑재해 12,500rpm에서 최고출력 150hp, 9,000rpm에서 최대토크 90Nm를 발휘한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "QJ모터, 미래형 EV 스포츠 머신 'OAO MAX' 세계 최초 공개",
-        "description": "QJ모터가 EICMA 2026에서 전기 모터사이클 OAO MAX와 UTV SFU1000R을 공개했다. 크루저와 카페레이서의 성격을 결합한 SRV600 VH도 함께 선보이며 이륜차부터 전지형차까지 제품군을 넓혔다.QJ모터는 전동화를 세계적인 흐름으로 보고 오래전부터 관련 분야를 주목해왔다고 밝혔다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
@@ -298,7 +227,7 @@
     "customerTrend": [
       {
         "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "11월 24일부터 12월 3일까지 약 3,000km 주행, 태국 ‘아시아 할리 데이즈’ 참가모터사이클 커스텀 전문업체 오이엠(OEM GARAGE ROUTE1)이 한국 라이더들과 함께 베트남과 라오스, 태국을 달리는 해외 바이크 투어를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
