@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-06",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "10:44 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 전동화 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 6건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 7건, 전동화 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-06T10:44:02.703149+09:00",
+    "lastUpdatedISO": "2026-11-06T13:01:33.008818+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -33,15 +33,15 @@
         }
       },
       "triumph": {
-        "newsCount": 1,
+        "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NEW",
-        "activity": "MEDIUM",
+        "signal": "RISING",
+        "activity": "HIGH",
         "topArticleTitle": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=175434340",
         "signalDetails": {
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "RISING"
         }
       },
       "harley": {
@@ -77,15 +77,7 @@
     }
   },
   "marketIntelligence": {
-    "market": [
-      {
-        "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [
       {
@@ -96,10 +88,10 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
@@ -117,13 +109,41 @@
         "bmwNote": "Motorcycle 전동화 기술의 적용 속도와 경쟁 브랜드의 출시 전략, 실제 시장 반응을 지속적으로 확인할 필요가 있습니다."
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다."
+      }
+    ]
   },
   "news": [
     {
+      "id": "3fe6311a2ecf12be",
+      "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175451179&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-11-06T12:00:13+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
       "id": "54fd8bc35b84cc58",
       "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175434340",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "triumph",
@@ -141,6 +161,23 @@
       "rank": 1
     },
     {
+      "id": "d2b7b4b302d79f32",
+      "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+      "url": "https://www.kmnews.net/NEWS/?idx=175451045&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-06T11:52:21+09:00",
+      "category": "CUSTOMER_TREND",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "Motorcycle 고객 및 라이딩 Trend와 관련된 기사입니다. 고객 Experience와 Lifestyle 변화 관점에서 지속적으로 확인할 필요가 있습니다.",
+      "bmwInsight": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
       "id": "d9f5ae3d188a1a96",
       "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
       "url": "https://www.kmnews.net/NEWS/?idx=175434452&bmode=view",
@@ -151,12 +188,12 @@
       "publishedAt": "2026-11-05T11:52:38+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "c01357fd0632ed85",
@@ -210,40 +247,11 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 4
-    },
-    {
-      "id": "12dbad96c538547e",
-      "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
-      "url": "https://www.kmnews.net/SPECIAL/?idx=175417142&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-04T12:11:54+09:00",
-      "category": "MARKET",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
-      "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
-      {
-        "title": "[송 기자가 간다_횡성] 역대급인원으로 성대하게 치러진 ‘제28회 코리아 내셔널 호그 랠리’",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "MARKET",
-        "insightType": "NEEDS_CONFIRMATION"
-      }
-    ],
+    "market": [],
     "competitor": [],
     "productTech": [
       {
@@ -257,12 +265,12 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[EICMA 2026] 존테스, 150마력의 괴물 네이키드 'ZT853-R' 공개",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
+        "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
@@ -287,6 +295,17 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "customerTrend": []
+    "customerTrend": [
+      {
+        "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "고객 트렌드 변화를 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "CUSTOMER_TREND",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ]
   }
 }
