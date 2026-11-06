@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-06",
-    "dayLabel": "FRIDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-07",
+    "dayLabel": "SATURDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-06T18:01:27.605331+09:00",
+    "lastUpdatedISO": "2026-11-07T08:01:23.174477+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -36,8 +36,8 @@
         "secondaryTheme": null,
         "signal": "RISING",
         "activity": "HIGH",
-        "topArticleTitle": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+        "topArticleTitle": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175451179&bmode=view",
         "signalDetails": {
           "NEW_MODEL": "RISING"
         }
@@ -79,15 +79,15 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
-        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
+        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
@@ -102,7 +102,7 @@
     ],
     "customerTrend": [
       {
-        "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+        "title": "오이엠가라지, ‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
         "description": "11월 24일부터 12월 3일까지 약 3,000km 주행, 태국 ‘아시아 할리 데이즈’ 참가모터사이클 커스텀 전문업체 오이엠(OEM GARAGE ROUTE1)이 한국 라이더들과 함께 베트남과 라오스, 태국을 달리는 해외 바이크 투어를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
@@ -134,7 +134,7 @@
     {
       "id": "54fd8bc35b84cc58",
       "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175434340&bmode=view",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175434340",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "triumph",
@@ -144,7 +144,7 @@
       "publishedAt": "2026-11-05T11:43:01+09:00",
       "category": "PRODUCT_TECH",
       "summary": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -153,7 +153,7 @@
     },
     {
       "id": "d2b7b4b302d79f32",
-      "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+      "title": "오이엠가라지, ‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
       "url": "https://www.kmnews.net/NEWS/?idx=175451045&bmode=view",
       "source": "한국이륜차신문",
       "sourceType": "media",
@@ -194,8 +194,8 @@
     "competitor": [],
     "productTech": [
       {
-        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
-        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
+        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
+        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -204,8 +204,8 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
-        "description": "155.8hp 타이거 1200·400cc 본네빌 T40 공개...스트리트 트리플 798 RS·2027년형 오프로드 라인업도 전시... 트라이엄프 모터사이클이 EICMA 2026에서 타이거 1200과 본네빌 T40·T40 Black, 스트리트 트리플 798 RS, 2027년형 오프로드 라인업을 선보였다.",
+        "title": "트라이엄프, 새로운 본네빌 'T40·T40 블랙' 글로벌 공개",
+        "description": "400cc TR 시리즈 엔진으로 확장된 본네빌 라인업...32ps·36Nm, 5가지 라이딩 모드와 4인치 TFT 적용...트라이엄프 코리아는 트라이엄프 모터사이클이 새로운 ‘본네빌 T40’과 ‘본네빌 T40 블랙’을 글로벌 공개했다고 전했다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
@@ -226,7 +226,7 @@
     ],
     "customerTrend": [
       {
-        "title": "‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
+        "title": "오이엠가라지, ‘베트남·라오스·태국’ 잇는 3개국 바이크 투어 진행",
         "description": "11월 24일부터 12월 3일까지 약 3,000km 주행, 태국 ‘아시아 할리 데이즈’ 참가모터사이클 커스텀 전문업체 오이엠(OEM GARAGE ROUTE1)이 한국 라이더들과 함께 베트남과 라오스, 태국을 달리는 해외 바이크 투어를 진행한다.",
         "relatedNewsCount": 1,
         "impact": "Low",
