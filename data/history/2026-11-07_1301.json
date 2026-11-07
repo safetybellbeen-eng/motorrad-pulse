@@ -1,0 +1,31 @@
+{
+  "savedAtISO": "2026-11-07T13:01:25.042616+09:00",
+  "articles": [
+    {
+      "id": "3fe6311a2ecf12be",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-06T12:00:13+09:00"
+    },
+    {
+      "id": "d2b7b4b302d79f32",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "CUSTOMER_TREND",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-06T11:52:21+09:00"
+    }
+  ]
+}
