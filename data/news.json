@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-07",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-07T13:01:25.041845+09:00",
+    "lastUpdatedISO": "2026-11-07T18:01:20.794883+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -34,12 +34,12 @@
         "newsCount": 2,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "RISING",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "[EICMA 2026] 트라이엄프, 400시리즈의 완성 '본네빌 T40' 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175451179&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "RISING"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "harley": {
