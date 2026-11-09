@@ -1,11 +1,51 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-08T01:02:01.913147+00:00",
+    "lastUpdatedISO": "2026-11-09T01:24:48.573397+00:00",
     "channelCount": 6,
-    "successCount": 0,
-    "failCount": 6
+    "successCount": 1,
+    "failCount": 5
   },
   "videos": [
+    {
+      "id": "yt_YyDhrvgLP30",
+      "videoId": "YyDhrvgLP30",
+      "title": "\"자동차 운전이랑 완전히 다르더라고요\" 타운라이더 수강생이 말하는 후기ㅣ혼다 에듀케이션센터 #HEC #굿라이더",
+      "url": "https://www.youtube.com/shorts/YyDhrvgLP30",
+      "thumbnail": "https://i2.ytimg.com/vi/YyDhrvgLP30/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-06T01:00:15+00:00"
+    },
+    {
+      "id": "yt_WJOeeTrT2_w",
+      "videoId": "WJOeeTrT2_w",
+      "title": "[2026 혼다데이 '와보령' 하이라이트] 바다와 라이딩의 완벽한 장소, 보령머드엑스포광장과 10월의 날씨! 완벽해보령~ | Honda",
+      "url": "https://www.youtube.com/watch?v=WJOeeTrT2_w",
+      "thumbnail": "https://i4.ytimg.com/vi/WJOeeTrT2_w/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-02T01:00:24+00:00"
+    },
+    {
+      "id": "yt_y9ZVzvMz9O4",
+      "videoId": "y9ZVzvMz9O4",
+      "title": "바다와 라이딩의 완벽한 장소, 보령머드엑스포광장에서 날씨까지 완벽해보령 ~ [2026 혼다데이 @보령 하이라이트]",
+      "url": "https://www.youtube.com/shorts/y9ZVzvMz9O4",
+      "thumbnail": "https://i2.ytimg.com/vi/y9ZVzvMz9O4/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-02T01:00:08+00:00"
+    },
+    {
+      "id": "yt_BujOFGa_oOs",
+      "videoId": "BujOFGa_oOs",
+      "title": "[HSRS] 합류 위험예측 - 끼어드는 차량을 주의하세요 #혼다모터사이클 #라이딩매뉴얼 #안라무복",
+      "url": "https://www.youtube.com/shorts/BujOFGa_oOs",
+      "thumbnail": "https://i3.ytimg.com/vi/BujOFGa_oOs/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-10-30T01:00:25+00:00"
+    },
     {
       "id": "yt_92ChRcQju_Y",
       "videoId": "92ChRcQju_Y",
@@ -17,26 +57,6 @@
       "publishedAt": "2026-10-23T01:00:02+00:00"
     },
     {
-      "id": "yt_USePxEzMnPA",
-      "videoId": "USePxEzMnPA",
-      "title": "[바이크 팁] 라이딩 중 손끝이 저렸다면 바로 멈추세요! | Honda Class #shorts",
-      "url": "https://www.youtube.com/shorts/USePxEzMnPA",
-      "thumbnail": "https://i2.ytimg.com/vi/USePxEzMnPA/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-16T01:00:33+00:00"
-    },
-    {
-      "id": "yt_e0KqU3S0NuE",
-      "videoId": "e0KqU3S0NuE",
-      "title": "무릎 빼고 코너링하는 그날까지! HEC 타운라이더 수강생이 말하는 후기ㅣ혼다 에듀케이션센터 #HEC #굿라이더",
-      "url": "https://www.youtube.com/shorts/e0KqU3S0NuE",
-      "thumbnail": "https://i2.ytimg.com/vi/e0KqU3S0NuE/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-08T09:30:14+00:00"
-    },
-    {
       "id": "yt_lkEQZZhrGsQ",
       "videoId": "lkEQZZhrGsQ",
       "title": "[ FEATURES ] YZF-R7 (2026)",
@@ -45,26 +65,6 @@
       "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
       "brandGroup": "yamaha",
       "publishedAt": "2026-10-06T08:51:18+00:00"
-    },
-    {
-      "id": "yt_fCGuTDZIJyE",
-      "videoId": "fCGuTDZIJyE",
-      "title": "[HSRS] 합류·끼어들기 위험예측 | Honda 2026 #혼다모터사이클 #라이딩매뉴얼 #안라무복",
-      "url": "https://www.youtube.com/watch?v=fCGuTDZIJyE",
-      "thumbnail": "https://i3.ytimg.com/vi/fCGuTDZIJyE/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-02T01:00:13+00:00"
-    },
-    {
-      "id": "yt_iNL-aiG0dr4",
-      "videoId": "iNL-aiG0dr4",
-      "title": "[바이크 팁] 브레이크액, 마지막으로 확인한 게 언제인가요? | 점검 포인트 3가지 | Honda Class #shorts",
-      "url": "https://www.youtube.com/shorts/iNL-aiG0dr4",
-      "thumbnail": "https://i2.ytimg.com/vi/iNL-aiG0dr4/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-02T01:00:04+00:00"
     },
     {
       "id": "yt_JoRl2jI8j28",
