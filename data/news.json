@@ -2,23 +2,26 @@
   "meta": {
     "date": "2026-11-11",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "10:23 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-11T10:23:48.088858+09:00",
+    "lastUpdatedISO": "2026-11-11T13:01:26.191908+09:00",
     "brandSummary": {
       "bmw": {
-        "newsCount": 0,
-        "primaryTheme": null,
-        "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
+        "secondaryTheme": "TOURING",
+        "signal": "NEW",
+        "activity": "HIGH",
+        "topArticleTitle": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175566721&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW",
+          "TOURING": "NEW"
+        }
       },
       "ducati": {
         "newsCount": 0,
@@ -56,8 +59,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "‘2026 혼다 원 메이커 레이스’ 힘차게 달렸다!",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175520974&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {}
       },
       "yamaha": {
@@ -76,40 +79,45 @@
     "market": [
       {
         "title": "BRP 코리아, 포항에서 이어진 가을 바다의 하루 '2026 씨두 패밀리투어' 성료",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "10월 11일 경북 포항에서 ‘2026 씨두 패밀리투어’가 열렸다. 경주와 포항 지역을 담당하는 씨두 딜러 성우마린이 주관한 이번 행사에는 약 40명이 참가해 포항의 주요 해안 명소를 따라 장거리 투어를 즐겼다.여름의 열기가 잦아들고 선선한 바람이 찾아오는 10월.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
       }
     ],
-    "competitor": [
-      {
-        "title": "‘2026 혼다 원 메이커 레이스’ 힘차게 달렸다!",
-        "description": "4개 라운드에 총 91개 엔트리 등록, 약 40%가 신규 참가...최종전 혼다 MSX 컵 양호림·혼다 커브 컵 김종훈 우승...혼다코리아는 10월 11일 충북 증평 벨포레 모토 아레나에서 열린 ‘2026 혼다 원 메이커 레이스(Honda One Maker Race)’ 4라운드를 끝으로 올해 대회를 성황리에 마무리했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "디엔애이모터스, 신규 대리점 파트너십 확대, 지역 기반·현장 경쟁력 강화",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
-        "title": "쇼에이, 시스템 헬멧 ‘NEOTEC3 VORYX’ 출시",
-        "description": "쇼에이코리아가 편의성과 쾌적한 착용감을 강화한 시스템 헬멧 ‘NEOTEC3 VORYX’를 선보였다. 그래픽은 TC-5, TC-10, TC-11, TC-12 등 4가지 색상으로 구성된다.NEOTEC3는 투어링 라이더에게 필요한 기능을 하나에 담은 올인원 시스템 헬멧이다.",
+        "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
+        "description": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
+    {
+      "id": "662678c177caf256",
+      "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175566721&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "publishedAt": "2026-11-11T11:15:40+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
+      "importance": 3.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "own",
+      "rank": 1
+    },
     {
       "id": "525db344a6df0bdd",
       "title": "BRP 코리아, 포항에서 이어진 가을 바다의 하루 '2026 씨두 패밀리투어' 성료",
@@ -120,69 +128,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-10T11:07:49+09:00",
       "category": "MARKET",
-      "summary": null,
+      "summary": "10월 11일 경북 포항에서 ‘2026 씨두 패밀리투어’가 열렸다. 경주와 포항 지역을 담당하는 씨두 딜러 성우마린이 주관한 이번 행사에는 약 40명이 참가해 포항의 주요 해안 명소를 따라 장거리 투어를 즐겼다.여름의 열기가 잦아들고 선선한 바람이 찾아오는 10월.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "689205025401fdf1",
-      "title": "쇼에이, 시스템 헬멧 ‘NEOTEC3 VORYX’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175521088&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-09T11:58:23+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "쇼에이코리아가 편의성과 쾌적한 착용감을 강화한 시스템 헬멧 ‘NEOTEC3 VORYX’를 선보였다. 그래픽은 TC-5, TC-10, TC-11, TC-12 등 4가지 색상으로 구성된다.NEOTEC3는 투어링 라이더에게 필요한 기능을 하나에 담은 올인원 시스템 헬멧이다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "dcc69d1a197e029a",
-      "title": "‘2026 혼다 원 메이커 레이스’ 힘차게 달렸다!",
-      "url": "https://www.kmnews.net/NEWS/?idx=175520974&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-11-09T11:53:30+09:00",
-      "category": "COMPETITOR",
-      "summary": "4개 라운드에 총 91개 엔트리 등록, 약 40%가 신규 참가...최종전 혼다 MSX 컵 양호림·혼다 커브 컵 김종훈 우승...혼다코리아는 10월 11일 충북 증평 벨포레 모토 아레나에서 열린 ‘2026 혼다 원 메이커 레이스(Honda One Maker Race)’ 4라운드를 끝으로 올해 대회를 성황리에 마무리했다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "6e7e82b80b0290dd",
-      "title": "디엔애이모터스, 신규 대리점 파트너십 확대, 지역 기반·현장 경쟁력 강화",
-      "url": "https://www.kmnews.net/NEWS/?idx=175520766&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-09T11:45:04+09:00",
-      "category": "COMPETITOR",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -190,45 +142,24 @@
     "market": [
       {
         "title": "BRP 코리아, 포항에서 이어진 가을 바다의 하루 '2026 씨두 패밀리투어' 성료",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "10월 11일 경북 포항에서 ‘2026 씨두 패밀리투어’가 열렸다. 경주와 포항 지역을 담당하는 씨두 딜러 성우마린이 주관한 이번 행사에는 약 40명이 참가해 포항의 주요 해안 명소를 따라 장거리 투어를 즐겼다.여름의 열기가 잦아들고 선선한 바람이 찾아오는 10월.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "MARKET",
         "insightType": "NEEDS_CONFIRMATION"
-      },
-      {
-        "title": "디엔애이모터스, 신규 대리점 파트너십 확대, 지역 기반·현장 경쟁력 강화",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "competitor": [
-      {
-        "title": "‘2026 혼다 원 메이커 레이스’ 힘차게 달렸다!",
-        "description": "4개 라운드에 총 91개 엔트리 등록, 약 40%가 신규 참가...최종전 혼다 MSX 컵 양호림·혼다 커브 컵 김종훈 우승...혼다코리아는 10월 11일 충북 증평 벨포레 모토 아레나에서 열린 ‘2026 혼다 원 메이커 레이스(Honda One Maker Race)’ 4라운드를 끝으로 올해 대회를 성황리에 마무리했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
-        "title": "쇼에이, 시스템 헬멧 ‘NEOTEC3 VORYX’ 출시",
-        "description": "쇼에이코리아가 편의성과 쾌적한 착용감을 강화한 시스템 헬멧 ‘NEOTEC3 VORYX’를 선보였다. 그래픽은 TC-5, TC-10, TC-11, TC-12 등 4가지 색상으로 구성된다.NEOTEC3는 투어링 라이더에게 필요한 기능을 하나에 담은 올인원 시스템 헬멧이다.",
+        "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
+        "description": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
         "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "impact": "Medium",
+        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
+        "brandRole": "OWN",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
