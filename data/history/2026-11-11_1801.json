@@ -1,0 +1,32 @@
+{
+  "savedAtISO": "2026-11-11T18:01:20.556375+09:00",
+  "articles": [
+    {
+      "id": "662678c177caf256",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-11-11T11:15:40+09:00"
+    },
+    {
+      "id": "525db344a6df0bdd",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-10T11:07:49+09:00"
+    }
+  ]
+}
