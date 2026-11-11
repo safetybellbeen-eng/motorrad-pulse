@@ -1,11 +1,41 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-10T03:56:49.868364+00:00",
+    "lastUpdatedISO": "2026-11-11T01:41:24.427422+00:00",
     "channelCount": 6,
-    "successCount": 0,
-    "failCount": 6
+    "successCount": 6,
+    "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_agOBHWSpPXs",
+      "videoId": "agOBHWSpPXs",
+      "title": "BMW MOTORRAD DAYS 2026",
+      "url": "https://www.youtube.com/watch?v=agOBHWSpPXs",
+      "thumbnail": "https://i2.ytimg.com/vi/agOBHWSpPXs/hqdefault.jpg",
+      "channelTitle": "BMWMotorradKorea",
+      "brandGroup": "bmw",
+      "publishedAt": "2026-11-10T02:02:12+00:00"
+    },
+    {
+      "id": "yt_enRCoEGpJ_U",
+      "videoId": "enRCoEGpJ_U",
+      "title": "[Honda Motorcycle Homecoming Kumamoto 2026 하이라이트] 오직 혼다 오너만 누릴 수 있는 뜨겁고도 다정한 가을날ㅣ#하이라이트 #혼다모터사이클",
+      "url": "https://www.youtube.com/shorts/enRCoEGpJ_U",
+      "thumbnail": "https://i2.ytimg.com/vi/enRCoEGpJ_U/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-10T01:59:39+00:00"
+    },
+    {
+      "id": "yt_gcM-teYKpJw",
+      "videoId": "gcM-teYKpJw",
+      "title": "[Honda Motorcycle Homecoming Kumamoto 2026] 오직 혼다 오너만 누릴 수 있는 뜨겁고도 다정한 가을날ㅣ#풀버전 #구마모토투어 #혼다오토바이 #홈커밍",
+      "url": "https://www.youtube.com/watch?v=gcM-teYKpJw",
+      "thumbnail": "https://i4.ytimg.com/vi/gcM-teYKpJw/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-09T09:19:24+00:00"
+    },
     {
       "id": "yt_YyDhrvgLP30",
       "videoId": "YyDhrvgLP30",
@@ -15,6 +45,16 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-11-06T01:00:15+00:00"
+    },
+    {
+      "id": "yt_Cmwql9KxKAk",
+      "videoId": "Cmwql9KxKAk",
+      "title": "28회 코리아 내셔널 호그 랠리 | 28th Korea National H.O.G.™ RALLY | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=Cmwql9KxKAk",
+      "thumbnail": "https://i4.ytimg.com/vi/Cmwql9KxKAk/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-05T06:20:43+00:00"
     },
     {
       "id": "yt_WJOeeTrT2_w",
@@ -35,26 +75,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-11-02T01:00:08+00:00"
-    },
-    {
-      "id": "yt_BujOFGa_oOs",
-      "videoId": "BujOFGa_oOs",
-      "title": "[HSRS] 합류 위험예측 - 끼어드는 차량을 주의하세요 #혼다모터사이클 #라이딩매뉴얼 #안라무복",
-      "url": "https://www.youtube.com/shorts/BujOFGa_oOs",
-      "thumbnail": "https://i3.ytimg.com/vi/BujOFGa_oOs/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-30T01:00:25+00:00"
-    },
-    {
-      "id": "yt_92ChRcQju_Y",
-      "videoId": "92ChRcQju_Y",
-      "title": "[HSRS] 합류 위험예측 - 무서워서 천천히 들어가면 더 위험합니다 #혼다모터사이클 #라이딩매뉴얼 #안라무복",
-      "url": "https://www.youtube.com/shorts/92ChRcQju_Y",
-      "thumbnail": "https://i2.ytimg.com/vi/92ChRcQju_Y/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-10-23T01:00:02+00:00"
     },
     {
       "id": "yt_lkEQZZhrGsQ",
@@ -147,16 +167,6 @@
       "publishedAt": "2026-08-14T09:21:48+00:00"
     },
     {
-      "id": "yt_xnnYYED_Qgs",
-      "videoId": "xnnYYED_Qgs",
-      "title": "BMW 모토라드 X 박스까남 입토바이",
-      "url": "https://www.youtube.com/shorts/xnnYYED_Qgs",
-      "thumbnail": "https://i1.ytimg.com/vi/xnnYYED_Qgs/hqdefault.jpg",
-      "channelTitle": "BMWMotorradKorea",
-      "brandGroup": "bmw",
-      "publishedAt": "2026-08-12T09:15:38+00:00"
-    },
-    {
       "id": "yt_MVV0iMH5Rnc",
       "videoId": "MVV0iMH5Rnc",
       "title": "[OFFICIAL VIDEO] 2026 YAMAHA YZF-R7",
@@ -195,16 +205,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-07-10T05:56:16+00:00"
-    },
-    {
-      "id": "yt_Dw5AZakoVJc",
-      "videoId": "Dw5AZakoVJc",
-      "title": "RIDE, AGAIN | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/shorts/Dw5AZakoVJc",
-      "thumbnail": "https://i1.ytimg.com/vi/Dw5AZakoVJc/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-06-15T06:42:31+00:00"
     },
     {
       "id": "yt_3wrZxXZ3gBA",
