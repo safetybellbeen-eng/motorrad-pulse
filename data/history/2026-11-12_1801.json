@@ -1,0 +1,50 @@
+{
+  "savedAtISO": "2026-11-12T18:01:18.928790+09:00",
+  "articles": [
+    {
+      "id": "79d8e36b7285703f",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [
+        "MARKET"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-11-12T11:05:57+09:00"
+    },
+    {
+      "id": "6a5322ec958fb219",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-12T10:54:46+09:00"
+    },
+    {
+      "id": "662678c177caf256",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "bmw"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-11-11T11:15:40+09:00"
+    }
+  ]
+}

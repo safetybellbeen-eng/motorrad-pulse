@@ -1,9 +1,9 @@
 {
   "date": "2026-11-12",
-  "lastAnalyzedAt": "2026-11-12T13:01:25.514520+09:00",
+  "lastAnalyzedAt": "2026-11-12T18:01:18.928166+09:00",
   "dailySignal": {
-    "title": "신규 모델 관련 뉴스 증가",
-    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+    "title": "신규 모델 및 Adventure 관련 뉴스 증가",
+    "summary": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
   },
   "market": [],
   "competitor": [
@@ -26,14 +26,23 @@
       ],
       "impact": 3.5,
       "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+    },
+    {
+      "title": "[뉴모델] 완벽한 균형과 조화, 어드벤처 투어러 '브이스트롬 1050DE·800DE' 국내 출시",
+      "summary": "일상과 여행, 비포장도로를 잇다! 온·오프로드를 넘나드는 즐거움스즈키코리아가 어드벤처 투어러 브이스트롬(V-STROM) 1050DE와 800DE의 2027년형 모델을 선보였다.",
+      "relatedNewsIds": [
+        "6a5322ec958fb219"
+      ],
+      "impact": 2.5,
+      "bmwView": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
     }
   ],
   "customerTrend": [],
   "teamBrief": {
     "market": "오늘 수집된 뉴스 중 시장 관련 주요 기사는 확인되지 않았습니다.",
     "competitor": "트라이엄프 등 경쟁 브랜드 관련 뉴스가 1건 확인되었습니다. 신제품 및 Positioning 변화를 중심으로 확인할 필요가 있습니다.",
-    "productTech": "제품 및 기술 관련 뉴스 1건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
+    "productTech": "제품 및 기술 관련 뉴스 2건이 확인되었습니다. 신모델 및 기술 트렌드 변화를 지속적으로 확인할 필요가 있습니다.",
     "customerTrend": "오늘 수집된 뉴스 중 고객 트렌드 관련 주요 기사는 확인되지 않았습니다.",
-    "todayInsight": "오늘은 신규 모델 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
+    "todayInsight": "오늘은 신규 모델, Adventure 관련 뉴스 비중이 상대적으로 높게 나타났습니다."
   }
 }
