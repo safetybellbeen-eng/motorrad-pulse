@@ -1,0 +1,58 @@
+{
+  "savedAtISO": "2026-11-13T13:01:29.436970+09:00",
+  "articles": [
+    {
+      "id": "79d8e36b7285703f",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [
+        "MARKET"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-12T11:05:57+09:00"
+    },
+    {
+      "id": "febff979b17f54ec",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-13T12:00:17+09:00"
+    },
+    {
+      "id": "74033fa3d369f013",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-13T11:58:29+09:00"
+    },
+    {
+      "id": "6a5322ec958fb219",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-12T10:54:46+09:00"
+    }
+  ]
+}

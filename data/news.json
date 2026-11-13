@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-13",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "11:02 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-13T11:02:29.626504+09:00",
+    "lastUpdatedISO": "2026-11-13T13:01:29.436134+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -16,8 +16,8 @@
         "secondaryTheme": "TOURING",
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175566721&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "TOURING": "CONTINUING",
           "NEW_MODEL": "CONTINUING"
@@ -37,12 +37,12 @@
         "newsCount": 1,
         "primaryTheme": "MARKET",
         "secondaryTheme": null,
-        "signal": "NEW",
+        "signal": "CONTINUING",
         "activity": "MEDIUM",
         "topArticleTitle": "트라이엄프, 전 세계 딜러와 미래 비전과 성장 전략 공유",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175591262&bmode=view",
         "signalDetails": {
-          "MARKET": "NEW"
+          "MARKET": "CONTINUING"
         }
       },
       "harley": {
@@ -86,22 +86,29 @@
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
+      },
+      {
+        "title": "KR, 창원공장 이륜차 생산중단 예정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
-      {
-        "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
-        "description": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
-      },
       {
         "title": "[뉴모델] 완벽한 균형과 조화, 어드벤처 투어러 '브이스트롬 1050DE·800DE' 국내 출시",
         "description": "일상과 여행, 비포장도로를 잇다! 온·오프로드를 넘나드는 즐거움스즈키코리아가 어드벤처 투어러 브이스트롬(V-STROM) 1050DE와 800DE의 2027년형 모델을 선보였다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -120,12 +127,48 @@
       "publishedAt": "2026-11-12T11:05:57+09:00",
       "category": "COMPETITOR",
       "summary": "태국 파타야에서 개최된 ‘2026 글로벌 딜러 콘퍼런스’ 참가트라이엄프 코리아가 지난 10월 5일부터 8일까지 태국 파타야 PEACH (Pattaya Exhibition and Convention Hall) 컨벤션센터에서 열린 ‘2026 트라이엄프 글로벌 딜러 콘퍼런스(Global Dealer Conference, GDC)’에 참가했다.",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
+      "rank": 3
+    },
+    {
+      "id": "febff979b17f54ec",
+      "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175611230&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-13T12:00:17+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
       "rank": 2
+    },
+    {
+      "id": "74033fa3d369f013",
+      "title": "KR, 창원공장 이륜차 생산중단 예정",
+      "url": "https://www.kmnews.net/NEWS/?idx=175611201&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-13T11:58:29+09:00",
+      "category": "COMPETITOR",
+      "summary": null,
+      "importance": 1.5,
+      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 4
     },
     {
       "id": "6a5322ec958fb219",
@@ -144,31 +187,22 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "662678c177caf256",
-      "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175566721&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "bmw"
-      ],
-      "publishedAt": "2026-11-11T11:15:40+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
-      "importance": 3.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "own",
-      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [],
+    "market": [
+      {
+        "title": "KR, 창원공장 이륜차 생산중단 예정",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "COMPETITOR",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "competitor": [
       {
         "title": "트라이엄프, 전 세계 딜러와 미래 비전과 성장 전략 공유",
@@ -183,21 +217,21 @@
     ],
     "productTech": [
       {
-        "title": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
-        "description": "V형 디자인으로 주행풍 분산, 투명 폴리카보네이트에 하드코팅 적용제트테크닉(ZTechnik)의 공식 수입원 신원모터싸이클이 F 900 GS용 ‘브이스트림 투어링 리플레이스먼트 스크린–클리어’를 출시했다.모델명은 Z2506으로, 2024년 이후 출시된 F 900 GS에 장착하는 투어링용 교체 스크린이다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "자사 Adventure 라인업의 국내 포지셔닝과 고객 반응을 점검할 필요가 있습니다.",
-        "brandRole": "OWN",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
         "title": "[뉴모델] 완벽한 균형과 조화, 어드벤처 투어러 '브이스트롬 1050DE·800DE' 국내 출시",
         "description": "일상과 여행, 비포장도로를 잇다! 온·오프로드를 넘나드는 즐거움스즈키코리아가 어드벤처 투어러 브이스트롬(V-STROM) 1050DE와 800DE의 2027년형 모델을 선보였다.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
