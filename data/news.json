@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-13",
     "dayLabel": "FRIDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "11:02 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-13T08:01:23.088076+09:00",
+    "lastUpdatedISO": "2026-11-13T11:02:29.626504+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": "[뉴아이템] 제트테크닉, BMW F 900 GS용 투어링 스크린 출시",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175566721&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "TOURING": "CONTINUING"
+          "TOURING": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "ducati": {
