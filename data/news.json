@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-14",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "10:37 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-14T08:01:24.499044+09:00",
+    "lastUpdatedISO": "2026-11-14T10:37:49.233978+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 1,
@@ -19,8 +19,8 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "TOURING": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "TOURING": "CONTINUING"
         }
       },
       "ducati": {
