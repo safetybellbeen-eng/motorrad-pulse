@@ -1,4 +1,31 @@
 {
-  "lastCollectedAt": "2026-11-16T10:18:01.114631+09:00",
-  "news": []
+  "lastCollectedAt": "2026-11-16T13:01:01.725015+09:00",
+  "news": [
+    {
+      "title": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
+      "url": "https://www.carguy.kr/news/articleView.html?idxno=62385",
+      "source": "카가이",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-11-16T10:39:06+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션&nbsp;&nbsp;카가이",
+      "id": "0434e399ac9c1253",
+      "collectedAt": "2026-11-16T13:01:01.725015+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
