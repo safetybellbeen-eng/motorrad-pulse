@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-15",
-    "dayLabel": "SUNDAY",
-    "lastUpdated": "10:18 AM",
+    "date": "2026-11-16",
+    "dayLabel": "MONDAY",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-15T10:18:30.263798+09:00",
+    "lastUpdatedISO": "2026-11-16T13:01:24.700247+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -31,16 +31,14 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 1,
-        "primaryTheme": "MARKET",
+        "newsCount": 0,
+        "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "CONTINUING",
-        "activity": "MEDIUM",
+        "signal": "NO_SIGNIFICANT_UPDATE",
+        "activity": "LOW",
         "topArticleTitle": null,
         "topArticleUrl": null,
-        "signalDetails": {
-          "MARKET": "CONTINUING"
-        }
+        "signalDetails": {}
       },
       "harley": {
         "newsCount": 0,
@@ -53,13 +51,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 0,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
+        "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
+        "topArticleTitle": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
+        "topArticleUrl": "https://www.carguy.kr/news/articleView.html?idxno=62385",
         "signalDetails": {}
       },
       "yamaha": {
@@ -78,89 +76,54 @@
     "market": [],
     "competitor": [
       {
-        "title": "KR, 창원공장 이륜차 생산중단 예정",
-        "description": "설비 이전 전까지 생산 지속, 이전 사업장 생산 재개 일정은 미정KR모터스가 창원공장 토지와 건물 매각에 따른 생산설비 이전을 위해 이륜차 생산을 중단할 예정이라고 10월 19일 금융감독원 전자공시시스템을 통해 밝혔다.KR모터스가 공개한 생산중단 내용에 따르면 대상은 창원공장 이륜차 부문이며, 생산중단 예정일은 2027년 1월 1일이다.",
+        "title": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
+        "description": "혼다코리아(대표이사 이지홍)가 지난 11월 14일부터 11월 15일까지 양일간 한국교통안전공단 북광주 자동차검사소에서 혼다 모터사이클 고객을 위해 무상점검 서비스",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
-    "productTech": [
-      {
-        "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      }
-    ],
+    "productTech": [],
     "customerTrend": []
   },
   "news": [
     {
-      "id": "febff979b17f54ec",
-      "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175611230&bmode=view",
-      "source": "한국이륜차신문",
+      "id": "0434e399ac9c1253",
+      "title": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
+      "url": "https://www.carguy.kr/news/articleView.html?idxno=62385",
+      "source": "카가이",
       "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-13T12:00:17+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 1
-    },
-    {
-      "id": "74033fa3d369f013",
-      "title": "KR, 창원공장 이륜차 생산중단 예정",
-      "url": "https://www.kmnews.net/NEWS/?idx=175611201&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-13T11:58:29+09:00",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "publishedAt": "2026-11-16T10:39:06+09:00",
       "category": "COMPETITOR",
-      "summary": "설비 이전 전까지 생산 지속, 이전 사업장 생산 재개 일정은 미정KR모터스가 창원공장 토지와 건물 매각에 따른 생산설비 이전을 위해 이륜차 생산을 중단할 예정이라고 10월 19일 금융감독원 전자공시시스템을 통해 밝혔다.KR모터스가 공개한 생산중단 내용에 따르면 대상은 창원공장 이륜차 부문이며, 생산중단 예정일은 2027년 1월 1일이다.",
-      "importance": 1.5,
+      "summary": "혼다코리아(대표이사 이지홍)가 지난 11월 14일부터 11월 15일까지 양일간 한국교통안전공단 북광주 자동차검사소에서 혼다 모터사이클 고객을 위해 무상점검 서비스",
+      "importance": 2.0,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 1
     }
   ],
   "marketIntelligenceV2": {
     "ownWatch": [],
-    "market": [
+    "market": [],
+    "competitor": [
       {
-        "title": "KR, 창원공장 이륜차 생산중단 예정",
-        "description": "설비 이전 전까지 생산 지속, 이전 사업장 생산 재개 일정은 미정KR모터스가 창원공장 토지와 건물 매각에 따른 생산설비 이전을 위해 이륜차 생산을 중단할 예정이라고 10월 19일 금융감독원 전자공시시스템을 통해 밝혔다.KR모터스가 공개한 생산중단 내용에 따르면 대상은 창원공장 이륜차 부문이며, 생산중단 예정일은 2027년 1월 1일이다.",
+        "title": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
+        "description": "혼다코리아(대표이사 이지홍)가 지난 11월 14일부터 11월 15일까지 양일간 한국교통안전공단 북광주 자동차검사소에서 혼다 모터사이클 고객을 위해 무상점검 서비스",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "COMPETITOR",
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "competitor": [],
-    "productTech": [
-      {
-        "title": "[뉴아이템] MSR, 푸마125(2026년형) 전용 윈드 스크린 출시",
-        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 푸마125 2026년형 전용 윈드 스크린을 선보였다.신제품은 주행 중 비와 눈, 먼지와 벌레 등 외부 이물질로부터 라이더를 보호하고, 강한 주행풍을 줄여 보다 쾌적한 라이딩을 돕는다. 특히 겨울철에는 찬바람이 라이더에게 직접 닿는 것을 줄이는 데 효과적이다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "productTech": [],
     "customerTrend": []
   }
 }
