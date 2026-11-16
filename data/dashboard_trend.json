@@ -1,19 +1,7 @@
 {
-  "generatedAtISO": "2026-11-16T18:01:21.259240+09:00",
+  "generatedAtISO": "2026-11-17T08:01:43.720190+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-11-03",
-      "newsCount": 4,
-      "byBrand": {
-        "yamaha": 1,
-        "ducati": 1,
-        "honda": 1
-      },
-      "byCategory": {
-        "PRODUCT_TECH": 4
-      }
-    },
     {
       "date": "2026-11-04",
       "newsCount": 5,
@@ -126,6 +114,12 @@
       "byCategory": {
         "COMPETITOR": 1
       }
+    },
+    {
+      "date": "2026-11-17",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }
