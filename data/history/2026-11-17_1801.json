@@ -1,0 +1,44 @@
+{
+  "savedAtISO": "2026-11-17T18:01:38.109919+09:00",
+  "articles": [
+    {
+      "id": "7dc7d2f6d813e0d5",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-17T12:20:50+09:00"
+    },
+    {
+      "id": "0434e399ac9c1253",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "카가이",
+      "domain": "www.carguy.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-16T10:39:06+09:00"
+    },
+    {
+      "id": "d18b126f185365c2",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-17T12:27:40+09:00"
+    }
+  ]
+}
