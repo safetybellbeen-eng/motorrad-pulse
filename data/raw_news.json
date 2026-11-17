@@ -1,6 +1,32 @@
 {
-  "lastCollectedAt": "2026-11-17T08:01:19.886309+09:00",
+  "lastCollectedAt": "2026-11-17T13:01:08.579361+09:00",
   "news": [
+    {
+      "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
+      "url": "https://www.kmnews.net/NEWS/?idx=175702140&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "triumph",
+      "publishedAt": "2026-11-17T12:20:50+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "triumph"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행&nbsp;&nbsp;한국이륜차신문",
+      "id": "7dc7d2f6d813e0d5",
+      "collectedAt": "2026-11-17T13:01:08.579361+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
     {
       "title": "혼다코리아, 찾아가는 모터사이클 무상점검 및 서비스 프로모션",
       "url": "https://www.carguy.kr/news/articleView.html?idxno=62385",
