@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-11-17T13:05:49.581188+09:00",
+  "lastCollectedAt": "2026-11-17T18:01:15.886223+09:00",
   "news": [
     {
       "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
@@ -17,7 +17,7 @@
       "acquisitionMethod": "google_news",
       "description": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행&nbsp;&nbsp;한국이륜차신문",
       "id": "7dc7d2f6d813e0d5",
-      "collectedAt": "2026-11-17T13:05:49.581188+09:00",
+      "collectedAt": "2026-11-17T18:01:15.886223+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -51,7 +51,33 @@
       "bmwInsight": null,
       "isTopNews": false,
       "aiProcessed": false,
-      "relatedCoverageCount": 1
+      "relatedCoverageCount": 2
+    },
+    {
+      "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
+      "url": "https://www.kmnews.net/NEWS/?idx=175702274&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-11-17T12:27:40+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다, 11월 모터사이클 구매 프로모션 진행&nbsp;&nbsp;한국이륜차신문",
+      "id": "d18b126f185365c2",
+      "collectedAt": "2026-11-17T18:01:15.886223+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 2
     }
   ]
 }
