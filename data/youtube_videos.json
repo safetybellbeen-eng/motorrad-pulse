@@ -1,11 +1,51 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-17T04:18:01.151298+00:00",
+    "lastUpdatedISO": "2026-11-18T03:17:39.227114+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_IgGaCUg-hRY",
+      "videoId": "IgGaCUg-hRY",
+      "title": "[OFFICIAL VIDEO] YAMAHA XSR125",
+      "url": "https://www.youtube.com/watch?v=IgGaCUg-hRY",
+      "thumbnail": "https://i2.ytimg.com/vi/IgGaCUg-hRY/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-11-17T06:08:58+00:00"
+    },
+    {
+      "id": "yt_phyOoiQyD3U",
+      "videoId": "phyOoiQyD3U",
+      "title": "[OFFICIAL VIDEO] YAMAHA Tmax 560",
+      "url": "https://www.youtube.com/watch?v=phyOoiQyD3U",
+      "thumbnail": "https://i1.ytimg.com/vi/phyOoiQyD3U/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-11-17T05:29:43+00:00"
+    },
+    {
+      "id": "yt_yhEyFHI8jyY",
+      "videoId": "yhEyFHI8jyY",
+      "title": "[OFFICIAL VIDEO] YAMAHA Xmax300",
+      "url": "https://www.youtube.com/watch?v=yhEyFHI8jyY",
+      "thumbnail": "https://i2.ytimg.com/vi/yhEyFHI8jyY/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-11-17T05:25:55+00:00"
+    },
+    {
+      "id": "yt_YTvQ0AXNFig",
+      "videoId": "YTvQ0AXNFig",
+      "title": "[OFFICIAL VIDEO] YAMAHA Nmax125",
+      "url": "https://www.youtube.com/watch?v=YTvQ0AXNFig",
+      "thumbnail": "https://i2.ytimg.com/vi/YTvQ0AXNFig/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-11-17T04:46:26+00:00"
+    },
     {
       "id": "yt_Zxo2hD25OXQ",
       "videoId": "Zxo2hD25OXQ",
@@ -17,39 +57,9 @@
       "publishedAt": "2026-11-17T01:44:08+00:00"
     },
     {
-      "id": "yt_gDvJ81ryM-c",
-      "videoId": "gDvJ81ryM-c",
-      "title": "[OFFICIAL VIDEO] YAMAHA MT-07",
-      "url": "https://www.youtube.com/watch?v=gDvJ81ryM-c",
-      "thumbnail": "https://i4.ytimg.com/vi/gDvJ81ryM-c/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-11-17T01:19:52+00:00"
-    },
-    {
-      "id": "yt_4L4xtZTl1ns",
-      "videoId": "4L4xtZTl1ns",
-      "title": "[OFFICIAL VIDEO] YAMAHA MT-03",
-      "url": "https://www.youtube.com/watch?v=4L4xtZTl1ns",
-      "thumbnail": "https://i1.ytimg.com/vi/4L4xtZTl1ns/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-11-17T01:14:39+00:00"
-    },
-    {
-      "id": "yt_mDKQdgd1lfU",
-      "videoId": "mDKQdgd1lfU",
-      "title": "[OFFICIAL VIDEO] YAMAHA YZF-R3",
-      "url": "https://www.youtube.com/watch?v=mDKQdgd1lfU",
-      "thumbnail": "https://i2.ytimg.com/vi/mDKQdgd1lfU/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-11-17T01:11:47+00:00"
-    },
-    {
       "id": "yt_GIQOyO1UAVc",
       "videoId": "GIQOyO1UAVc",
-      "title": "[바이크 팁] 그늘과 다리가 유독 미끄러운 이유 | Honda Class #shorts",
+      "title": "[바이크 팁] 가을철, 이 때는 한 번 더 주의! | Honda Class #shorts",
       "url": "https://www.youtube.com/shorts/GIQOyO1UAVc",
       "thumbnail": "https://i4.ytimg.com/vi/GIQOyO1UAVc/hqdefault.jpg",
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
@@ -115,16 +125,6 @@
       "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
       "brandGroup": "honda",
       "publishedAt": "2026-11-02T01:00:24+00:00"
-    },
-    {
-      "id": "yt_lkEQZZhrGsQ",
-      "videoId": "lkEQZZhrGsQ",
-      "title": "[ FEATURES ] YZF-R7 (2026)",
-      "url": "https://www.youtube.com/watch?v=lkEQZZhrGsQ",
-      "thumbnail": "https://i1.ytimg.com/vi/lkEQZZhrGsQ/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-10-06T08:51:18+00:00"
     },
     {
       "id": "yt_RWt2C6iprd8",
