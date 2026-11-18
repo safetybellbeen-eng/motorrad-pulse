@@ -1,0 +1,53 @@
+{
+  "savedAtISO": "2026-11-18T18:01:36.522692+09:00",
+  "articles": [
+    {
+      "id": "7dc7d2f6d813e0d5",
+      "sourceGroup": "triumph",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-17T12:20:50+09:00"
+    },
+    {
+      "id": "d9c2de54fa52e760",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-18T10:59:44+09:00"
+    },
+    {
+      "id": "315e7bba3bd1563a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-18T10:47:17+09:00"
+    },
+    {
+      "id": "d18b126f185365c2",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-17T12:27:40+09:00"
+    }
+  ]
+}
