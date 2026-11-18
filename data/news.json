@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-18",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-19",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-18T18:01:36.521859+09:00",
+    "lastUpdatedISO": "2026-11-19T08:01:29.904999+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -122,7 +122,7 @@
       "publishedAt": "2026-11-17T12:20:50+09:00",
       "category": "COMPETITOR",
       "summary": "타이거 900, 250만 원 할인에 327만 원 상당 3박스 제공... 스피드 트윈 1200 한정 수량 특별가, 스크램블러 시리즈 금융·유지관리 혜택...트라이엄프 코리아가 11월을 맞아 타이거 900과 스피드 트윈 1200, 스크램블러 시리즈를 대상으로 구매 프로모션을 진행한다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
