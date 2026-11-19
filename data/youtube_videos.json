@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-18T03:17:39.227114+00:00",
+    "lastUpdatedISO": "2026-11-19T02:55:14.300235+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_epN_Gqk_fws",
+      "videoId": "epN_Gqk_fws",
+      "title": "[OFFICIAL VIDEO] YAMAHA XSR900GP",
+      "url": "https://www.youtube.com/watch?v=epN_Gqk_fws",
+      "thumbnail": "https://i2.ytimg.com/vi/epN_Gqk_fws/hqdefault.jpg",
+      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
+      "brandGroup": "yamaha",
+      "publishedAt": "2026-11-19T00:33:01+00:00"
+    },
     {
       "id": "yt_IgGaCUg-hRY",
       "videoId": "IgGaCUg-hRY",
@@ -45,16 +55,6 @@
       "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
       "brandGroup": "yamaha",
       "publishedAt": "2026-11-17T04:46:26+00:00"
-    },
-    {
-      "id": "yt_Zxo2hD25OXQ",
-      "videoId": "Zxo2hD25OXQ",
-      "title": "[OFFICIAL VIDEO] YAMAHA XSR900GP",
-      "url": "https://www.youtube.com/watch?v=Zxo2hD25OXQ",
-      "thumbnail": "https://i3.ytimg.com/vi/Zxo2hD25OXQ/hqdefault.jpg",
-      "channelTitle": "야마하 모터사이클( YAMAHA MOTOR KOREA)",
-      "brandGroup": "yamaha",
-      "publishedAt": "2026-11-17T01:44:08+00:00"
     },
     {
       "id": "yt_GIQOyO1UAVc",
