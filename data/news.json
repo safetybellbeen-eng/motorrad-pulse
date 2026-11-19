@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-19",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "11:44 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-19T11:44:33.455212+09:00",
+    "lastUpdatedISO": "2026-11-19T13:01:22.487692+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -36,8 +36,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175702140&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {}
       },
       "harley": {
@@ -56,8 +56,8 @@
         "secondaryTheme": null,
         "signal": "NORMAL",
         "activity": "LOW",
-        "topArticleTitle": "혼다, 11월 모터사이클 구매 프로모션 진행",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=175702274",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {}
       },
       "yamaha": {
@@ -83,28 +83,13 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
       }
     ],
-    "competitor": [
-      {
-        "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
-        "description": "타이거 900, 250만 원 할인에 327만 원 상당 3박스 제공... 스피드 트윈 1200 한정 수량 특별가, 스크램블러 시리즈 금융·유지관리 혜택...트라이엄프 코리아가 11월을 맞아 타이거 900과 스피드 트윈 1200, 스크램블러 시리즈를 대상으로 구매 프로모션을 진행한다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
-        "description": "CL500 무이자 할부·할인 선택에 투어 지원금 추가 제공...CBR600RR 용품·액세서리 혜택 및 어드벤처 아카데미 수강료 할인도...혼다코리아가 11월 1일부터 30일까지 모터사이클 구매 고객을 위한 한정 프로모션을 진행한다. 2025년형 CL500, CBR600RR, CT125를 대상으로 금융 혜택과 구매 지원금, 용품·액세서리 등을 제공한다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
@@ -117,26 +102,6 @@
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "7dc7d2f6d813e0d5",
-      "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
-      "url": "https://www.kmnews.net/NEWS/?idx=175702140&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "triumph",
-      "brandGroups": [
-        "triumph"
-      ],
-      "publishedAt": "2026-11-17T12:20:50+09:00",
-      "category": "COMPETITOR",
-      "summary": "타이거 900, 250만 원 할인에 327만 원 상당 3박스 제공... 스피드 트윈 1200 한정 수량 특별가, 스크램블러 시리즈 금융·유지관리 혜택...트라이엄프 코리아가 11월을 맞아 타이거 900과 스피드 트윈 1200, 스크램블러 시리즈를 대상으로 구매 프로모션을 진행한다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
-    },
     {
       "id": "425448f329dbd80b",
       "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
@@ -182,33 +147,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-18T10:47:17+09:00",
       "category": "MARKET",
-      "summary": null,
+      "summary": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "d18b126f185365c2",
-      "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175702274",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-11-17T12:27:40+09:00",
-      "category": "COMPETITOR",
-      "summary": "CL500 무이자 할부·할인 선택에 투어 지원금 추가 제공...CBR600RR 용품·액세서리 혜택 및 어드벤처 아카데미 수강료 할인도...혼다코리아가 11월 1일부터 30일까지 모터사이클 구매 고객을 위한 한정 프로모션을 진행한다. 2025년형 CL500, CBR600RR, CT125를 대상으로 금융 혜택과 구매 지원금, 용품·액세서리 등을 제공한다.",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     }
   ],
   "marketIntelligenceV2": {
@@ -226,7 +171,7 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -235,28 +180,7 @@
         "insightType": "NEEDS_CONFIRMATION"
       }
     ],
-    "competitor": [
-      {
-        "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
-        "description": "타이거 900, 250만 원 할인에 327만 원 상당 3박스 제공... 스피드 트윈 1200 한정 수량 특별가, 스크램블러 시리즈 금융·유지관리 혜택...트라이엄프 코리아가 11월을 맞아 타이거 900과 스피드 트윈 1200, 스크램블러 시리즈를 대상으로 구매 프로모션을 진행한다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
-        "description": "CL500 무이자 할부·할인 선택에 투어 지원금 추가 제공...CBR600RR 용품·액세서리 혜택 및 어드벤처 아카데미 수강료 할인도...혼다코리아가 11월 1일부터 30일까지 모터사이클 구매 고객을 위한 한정 프로모션을 진행한다. 2025년형 CL500, CBR600RR, CT125를 대상으로 금융 혜택과 구매 지원금, 용품·액세서리 등을 제공한다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      }
-    ],
+    "competitor": [],
     "productTech": [
       {
         "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
