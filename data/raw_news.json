@@ -1,6 +1,32 @@
 {
-  "lastCollectedAt": "2026-11-19T13:01:04.547146+09:00",
+  "lastCollectedAt": "2026-11-19T18:01:15.005508+09:00",
   "news": [
+    {
+      "title": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=63238",
+      "source": "데일리카",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-11-19T14:56:02+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 10,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최&nbsp;&nbsp;데일리카",
+      "id": "9d779defed661c8e",
+      "collectedAt": "2026-11-19T18:01:15.005508+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
     {
       "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=175751243&bmode=view",
