@@ -1,0 +1,71 @@
+{
+  "savedAtISO": "2026-11-20T08:01:42.422883+09:00",
+  "articles": [
+    {
+      "id": "9d779defed661c8e",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [
+        "SAFETY"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-20T03:02:16+09:00"
+    },
+    {
+      "id": "45de91ccb0320122",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-19T11:13:46+09:00"
+    },
+    {
+      "id": "425448f329dbd80b",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "ADVENTURE"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-19T11:04:26+09:00"
+    },
+    {
+      "id": "d9c2de54fa52e760",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-18T10:59:44+09:00"
+    },
+    {
+      "id": "315e7bba3bd1563a",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "MARKET",
+      "signalThemes": [],
+      "importance": 1.5,
+      "publishedAt": "2026-11-18T10:47:17+09:00"
+    }
+  ]
+}

@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-19",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-20",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 2건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-19T18:01:46.177109+09:00",
+    "lastUpdatedISO": "2026-11-20T08:01:42.421912+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -31,14 +31,16 @@
         "signalDetails": {}
       },
       "triumph": {
-        "newsCount": 1,
-        "primaryTheme": null,
+        "newsCount": 2,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NORMAL",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175751458&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "harley": {
         "newsCount": 0,
@@ -85,7 +87,7 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
@@ -102,10 +104,17 @@
     ],
     "productTech": [
       {
+        "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
+        "description": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
         "description": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
@@ -122,7 +131,7 @@
       "brandGroups": [
         "honda"
       ],
-      "publishedAt": "2026-11-19T14:56:02+09:00",
+      "publishedAt": "2026-11-20T03:02:16+09:00",
       "category": "COMPETITOR",
       "summary": "혼다코리아가 올바른 이륜차 주행 문화 정착과 사고 예방을 위해 마련한 초보 라이더 대상 무상 안전운전 교육 프로그램을 마무리했다. 혼다코리아는 최근 혼다 에듀케이션 센터(Honda Education Center)에서 모터사이클 안전운전 무상 교육 캠페인 ‘세이프런 365(SAFE RUN 365)’를 성황리에 마쳤다고 19일 밝혔다. 이번 캠페인은...",
       "importance": 2.0,
@@ -131,6 +140,26 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 2
+    },
+    {
+      "id": "45de91ccb0320122",
+      "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175751458&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "triumph"
+      ],
+      "publishedAt": "2026-11-19T11:13:46+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
     },
     {
       "id": "425448f329dbd80b",
@@ -143,12 +172,12 @@
       "publishedAt": "2026-11-19T11:04:26+09:00",
       "category": "PRODUCT_TECH",
       "summary": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 3
     },
     {
       "id": "d9c2de54fa52e760",
@@ -177,13 +206,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-18T10:47:17+09:00",
       "category": "MARKET",
-      "summary": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+      "summary": null,
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     }
   ],
   "marketIntelligenceV2": {
@@ -201,7 +230,7 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -224,10 +253,20 @@
     ],
     "productTech": [
       {
+        "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
+        "description": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
         "description": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
+        "impact": "Low",
         "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
