@@ -1,32 +1,6 @@
 {
-  "lastCollectedAt": "2026-11-19T11:44:12.021258+09:00",
+  "lastCollectedAt": "2026-11-19T13:01:04.547146+09:00",
   "news": [
-    {
-      "title": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행",
-      "url": "https://www.kmnews.net/NEWS/?idx=175702140&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "triumph",
-      "publishedAt": "2026-11-17T12:20:50+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 10,
-      "brandGroups": [
-        "triumph"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "트라이엄프, 타이거 900 등 '11월 구매 프로모션' 진행&nbsp;&nbsp;한국이륜차신문",
-      "id": "7dc7d2f6d813e0d5",
-      "collectedAt": "2026-11-19T11:44:12.021258+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 1
-    },
     {
       "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=175751243&bmode=view",
@@ -41,7 +15,7 @@
       "acquisitionMethod": "google_news",
       "description": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시&nbsp;&nbsp;한국이륜차신문",
       "id": "425448f329dbd80b",
-      "collectedAt": "2026-11-19T11:44:12.021258+09:00",
+      "collectedAt": "2026-11-19T13:01:04.547146+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -65,7 +39,7 @@
       "acquisitionMethod": "google_news",
       "description": "[EICMA 2026] SHAD 신제품, 세부 마감 더욱 좋아져 기대&nbsp;&nbsp;한국이륜차신문",
       "id": "d9c2de54fa52e760",
-      "collectedAt": "2026-11-19T11:44:12.021258+09:00",
+      "collectedAt": "2026-11-19T13:01:04.547146+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -89,7 +63,7 @@
       "acquisitionMethod": "google_news",
       "description": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승&nbsp;&nbsp;한국이륜차신문",
       "id": "315e7bba3bd1563a",
-      "collectedAt": "2026-11-19T11:44:12.021258+09:00",
+      "collectedAt": "2026-11-19T13:01:04.547146+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -98,32 +72,6 @@
       "isTopNews": false,
       "aiProcessed": false,
       "relatedCoverageCount": 1
-    },
-    {
-      "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
-      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175702274",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "publishedAt": "2026-11-17T12:27:40+09:00",
-      "sourceTier": "motorcycle_media",
-      "sourceQualityScore": 90,
-      "businessRelevanceScore": 10,
-      "brandGroups": [
-        "honda"
-      ],
-      "acquisitionMethod": "google_news",
-      "description": "혼다, 11월 모터사이클 구매 프로모션 진행&nbsp;&nbsp;한국이륜차신문",
-      "id": "d18b126f185365c2",
-      "collectedAt": "2026-11-19T11:44:12.021258+09:00",
-      "category": null,
-      "summary": null,
-      "importance": null,
-      "whyItMatters": null,
-      "bmwInsight": null,
-      "isTopNews": false,
-      "aiProcessed": false,
-      "relatedCoverageCount": 2
     }
   ]
 }
