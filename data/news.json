@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-19",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "11:44 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "Adventure 및 신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 Adventure 1건, 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-19T08:01:29.904999+09:00",
+    "lastUpdatedISO": "2026-11-19T11:44:33.455212+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -51,13 +51,13 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": null,
         "secondaryTheme": null,
         "signal": "NORMAL",
-        "activity": "MEDIUM",
+        "activity": "LOW",
         "topArticleTitle": "혼다, 11월 모터사이클 구매 프로모션 진행",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175702274&bmode=view",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?bmode=view&idx=175702274",
         "signalDetails": {}
       },
       "yamaha": {
@@ -83,7 +83,7 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다."
@@ -105,7 +105,15 @@
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
-    "productTech": [],
+    "productTech": [
+      {
+        "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
+        "description": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
+      }
+    ],
     "customerTrend": []
   },
   "news": [
@@ -125,6 +133,24 @@
       "importance": 1.5,
       "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
+    {
+      "id": "425448f329dbd80b",
+      "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175751243&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-19T11:04:26+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
@@ -156,18 +182,18 @@
       "brandGroups": [],
       "publishedAt": "2026-11-18T10:47:17+09:00",
       "category": "MARKET",
-      "summary": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+      "summary": null,
       "importance": 1.5,
       "whyItMatters": "Motorcycle 시장의 판매 및 수요 흐름과 관련된 기사입니다. 주요 시장과 Premium Segment의 변화 여부를 확인할 필요가 있습니다.",
       "bmwInsight": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "d18b126f185365c2",
       "title": "혼다, 11월 모터사이클 구매 프로모션 진행",
-      "url": "https://www.kmnews.net/NEWS/?idx=175702274&bmode=view",
+      "url": "https://www.kmnews.net/NEWS/?bmode=view&idx=175702274",
       "source": "한국이륜차신문",
       "sourceType": "media",
       "sourceGroup": "kmnews",
@@ -182,7 +208,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -200,7 +226,7 @@
       },
       {
         "title": "SUZUKI, RM-Z450으로 SMX 플레이오프 레이스 1 우승",
-        "description": "스즈키 켄 로첸, 2026 플레이오프 2차전 종합 3위, 첫 레이스 역전승스즈키의 켄 로첸(Ken Roczen)이 미국 캘리포니아주 카슨의 디그니티 헬스 스포츠 파크에서 열린 2026 SMX 월드 챔피언십 플레이오프 2차전에서 레이스 1 우승과 종합 3위를 기록했다.이번 대회는 슈퍼크로스와 모토크로스를 결합한 고속 혼합 트랙에서 진행됐다.",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "시장 동향을 지속적으로 모니터링할 필요가 있습니다.",
@@ -231,7 +257,18 @@
         "insightType": "SINGLE_SIGNAL"
       }
     ],
-    "productTech": [],
+    "productTech": [
+      {
+        "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
+        "description": "신원모터싸이클이 아크라포빅(Akrapovic)의 CF모토용 ‘어드벤처 풋페그 세트(Adventure Footpeg Set)’를 선보였다.모델명은 F-CF4T1으로, 가볍고 강도와 내식성이 뛰어난 그레이드 5 티타늄을 사용한 것이 특징이다. 아크라포빅 자체 주조공장에서 일체형으로 제작했으며, 팔각형 디자인과 Y자형 보강 구조를 적용해 견고함을 높였다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      }
+    ],
     "customerTrend": []
   }
 }
