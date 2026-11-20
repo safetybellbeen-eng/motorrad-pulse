@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-19T02:55:14.300235+00:00",
+    "lastUpdatedISO": "2026-11-20T02:49:14.197059+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_0nXk-LPUZVY",
+      "videoId": "0nXk-LPUZVY",
+      "title": "\"다시 HEC를 찾은 이유\" 타운라이더 수강생이 말하는 후기ㅣ혼다 에듀케이션센터 #HEC #굿라이더",
+      "url": "https://www.youtube.com/shorts/0nXk-LPUZVY",
+      "thumbnail": "https://i1.ytimg.com/vi/0nXk-LPUZVY/hqdefault.jpg",
+      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
+      "brandGroup": "honda",
+      "publishedAt": "2026-11-20T01:00:14+00:00"
+    },
     {
       "id": "yt_epN_Gqk_fws",
       "videoId": "epN_Gqk_fws",
@@ -115,16 +125,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-11-05T06:20:43+00:00"
-    },
-    {
-      "id": "yt_WJOeeTrT2_w",
-      "videoId": "WJOeeTrT2_w",
-      "title": "[2026 혼다데이 '와보령' 하이라이트] 바다와 라이딩의 완벽한 장소, 보령머드엑스포광장과 10월의 날씨! 완벽해보령~ | Honda",
-      "url": "https://www.youtube.com/watch?v=WJOeeTrT2_w",
-      "thumbnail": "https://i4.ytimg.com/vi/WJOeeTrT2_w/hqdefault.jpg",
-      "channelTitle": "Honda Motorcycle Korea (혼다 모터사이클)",
-      "brandGroup": "honda",
-      "publishedAt": "2026-11-02T01:00:24+00:00"
     },
     {
       "id": "yt_RWt2C6iprd8",
