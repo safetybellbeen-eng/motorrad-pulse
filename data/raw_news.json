@@ -1,5 +1,5 @@
 {
-  "lastCollectedAt": "2026-11-20T13:01:10.816658+09:00",
+  "lastCollectedAt": "2026-11-20T18:01:03.684980+09:00",
   "news": [
     {
       "title": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최",
@@ -28,6 +28,30 @@
       "relatedCoverageCount": 1
     },
     {
+      "title": "[뉴아이템] MSR, 2026년형 5단 전자식 온도조절 열선그립 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175777642&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-11-20T11:33:02+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 12,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "[뉴아이템] MSR, 2026년형 5단 전자식 온도조절 열선그립 출시&nbsp;&nbsp;한국이륜차신문",
+      "id": "8a166c9c978edfd3",
+      "collectedAt": "2026-11-20T18:01:03.684980+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
       "title": "HONDA, 인도 이륜차 생산능력 2028년 800만 대로 확대",
       "url": "https://www.kmnews.net/NEWS/?idx=175777514&bmode=view",
       "source": "한국이륜차신문",
@@ -43,7 +67,7 @@
       "acquisitionMethod": "google_news",
       "description": "HONDA, 인도 이륜차 생산능력 2028년 800만 대로 확대&nbsp;&nbsp;한국이륜차신문",
       "id": "92abdde12c8f47c3",
-      "collectedAt": "2026-11-20T11:30:19.898915+09:00",
+      "collectedAt": "2026-11-20T18:01:03.684980+09:00",
       "category": null,
       "summary": null,
       "importance": null,
@@ -69,7 +93,7 @@
       "acquisitionMethod": "google_news",
       "description": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개&nbsp;&nbsp;한국이륜차신문",
       "id": "45de91ccb0320122",
-      "collectedAt": "2026-11-20T11:30:19.898915+09:00",
+      "collectedAt": "2026-11-20T18:01:03.684980+09:00",
       "category": null,
       "summary": null,
       "importance": null,
