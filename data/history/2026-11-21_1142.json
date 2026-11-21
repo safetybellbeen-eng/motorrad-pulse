@@ -1,0 +1,46 @@
+{
+  "savedAtISO": "2026-11-21T11:42:25.410716+09:00",
+  "articles": [
+    {
+      "id": "9d779defed661c8e",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "COMPETITOR",
+      "signalThemes": [
+        "SAFETY"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-20T03:02:16+09:00"
+    },
+    {
+      "id": "8a166c9c978edfd3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-20T11:33:02+09:00"
+    },
+    {
+      "id": "92abdde12c8f47c3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-20T11:26:52+09:00"
+    }
+  ]
+}

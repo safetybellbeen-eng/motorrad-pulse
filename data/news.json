@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-21",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "11:42 AM",
     "isSampleData": false,
     "todaySignal": {
-      "headline": "신규 모델 및 Adventure 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건, Adventure 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "headline": "신규 모델 관련 뉴스 증가",
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-21T08:01:42.663965+09:00",
+    "lastUpdatedISO": "2026-11-21T11:42:25.410163+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -36,8 +36,8 @@
         "secondaryTheme": null,
         "signal": "CONTINUING",
         "activity": "MEDIUM",
-        "topArticleTitle": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
-        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175751458&bmode=view",
+        "topArticleTitle": null,
+        "topArticleUrl": null,
         "signalDetails": {
           "NEW_MODEL": "CONTINUING"
         }
@@ -97,24 +97,10 @@
     "productTech": [
       {
         "title": "[뉴아이템] MSR, 2026년형 5단 전자식 온도조절 열선그립 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘2026년형 5단 전자식 온도조절 열선그립’을 선보였다.이 제품은 H사에 납품하는 모델로, 주행 환경과 라이더의 취향에 따라 온도를 5단계로 조절할 수 있는 것이 특징이다. 간편한 스위치 조작으로 온도를 빠르게 변경할 수 있어 추운 날씨에도 편리하게 사용할 수 있다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
-        "description": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -138,7 +124,7 @@
       "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     },
     {
       "id": "8a166c9c978edfd3",
@@ -150,13 +136,13 @@
       "brandGroups": [],
       "publishedAt": "2026-11-20T11:33:02+09:00",
       "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 2.0,
+      "summary": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘2026년형 5단 전자식 온도조절 열선그립’을 선보였다.이 제품은 H사에 납품하는 모델로, 주행 환경과 라이더의 취향에 따라 온도를 5단계로 조절할 수 있는 것이 특징이다. 간편한 스위치 조작으로 온도를 빠르게 변경할 수 있어 추운 날씨에도 편리하게 사용할 수 있다.",
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 2
     },
     {
       "id": "92abdde12c8f47c3",
@@ -177,44 +163,6 @@
       "isTopNews": true,
       "topNewsGroup": "others",
       "rank": 1
-    },
-    {
-      "id": "45de91ccb0320122",
-      "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
-      "url": "https://www.kmnews.net/NEWS/?idx=175751458&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [
-        "triumph"
-      ],
-      "publishedAt": "2026-11-19T11:13:46+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
-      "importance": 2.0,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 2
-    },
-    {
-      "id": "425448f329dbd80b",
-      "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175751243&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-19T11:04:26+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
@@ -245,30 +193,10 @@
     "productTech": [
       {
         "title": "[뉴아이템] MSR, 2026년형 5단 전자식 온도조절 열선그립 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "description": "모터사이클 파츠 전문업체 MSR(동보모터스)이 겨울철 라이딩 시 손을 따뜻하게 보호해주는 ‘2026년형 5단 전자식 온도조절 열선그립’을 선보였다.이 제품은 H사에 납품하는 모델로, 주행 환경과 라이더의 취향에 따라 온도를 5단계로 조절할 수 있는 것이 특징이다. 간편한 스위치 조작으로 온도를 빠르게 변경할 수 있어 추운 날씨에도 편리하게 사용할 수 있다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "TRIUMPH, 출력·편의성·전자장비 강화한 ‘타이거 1200’ 공개",
-        "description": "158ps 3기통 엔진에 정차 시 시트고 30mm 낮추는 서스펜션 적용… 7인치 터치스크린과 전·후방 레이더 탑재… GT·Rally, Pro·Explorer 조합으로 네 가지 라인업 구성...트라이엄프가 엔진과 섀시, 전자장비를 개선한 신형 타이거 1200을 공개했다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "아크라포빅, CF모토용 '티타늄 어드벤처 풋페그 세트' 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "Premium Adventure Segment의 라인업 확대와 중형급 제품 경쟁 강도를 지속적으로 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
