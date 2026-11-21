@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-21",
-    "dayLabel": "SATURDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-22",
+    "dayLabel": "SUNDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-21T18:01:29.699134+09:00",
+    "lastUpdatedISO": "2026-11-22T08:01:21.861622+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -85,13 +85,6 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
-      },
-      {
-        "title": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최",
-        "description": "혼다코리아가 올바른 이륜차 주행 문화 정착과 사고 예방을 위해 마련한 초보 라이더 대상 무상 안전운전 교육 프로그램을 마무리했다. 혼다코리아는 최근 혼다 에듀케이션 센터(Honda Education Center)에서 모터사이클 안전운전 무상 교육 캠페인 ‘세이프런 365(SAFE RUN 365)’를 성황리에 마쳤다고 19일 밝혔다. 이번 캠페인은...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다."
       }
     ],
     "productTech": [
@@ -106,26 +99,6 @@
     "customerTrend": []
   },
   "news": [
-    {
-      "id": "9d779defed661c8e",
-      "title": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최",
-      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=63238",
-      "source": "데일리카",
-      "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-11-20T03:02:16+09:00",
-      "category": "COMPETITOR",
-      "summary": "혼다코리아가 올바른 이륜차 주행 문화 정착과 사고 예방을 위해 마련한 초보 라이더 대상 무상 안전운전 교육 프로그램을 마무리했다. 혼다코리아는 최근 혼다 에듀케이션 센터(Honda Education Center)에서 모터사이클 안전운전 무상 교육 캠페인 ‘세이프런 365(SAFE RUN 365)’를 성황리에 마쳤다고 19일 밝혔다. 이번 캠페인은...",
-      "importance": 1.5,
-      "whyItMatters": "주요 경쟁 브랜드의 제품 또는 시장 움직임과 관련된 뉴스입니다. 경쟁사 Positioning과 제품 전략 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
     {
       "id": "8a166c9c978edfd3",
       "title": "[뉴아이템] MSR, 2026년형 5단 전자식 온도조절 열선그립 출시",
@@ -172,16 +145,6 @@
       {
         "title": "HONDA, 인도 이륜차 생산능력 2028년 800만 대로 확대",
         "description": "세계시장 점유율 약 40%, 성장시장 공급 확대·성숙시장 기술 차별화·지역별 전동화 추진혼다가 인도의 연간 이륜차 생산능력을 현재 625만 대에서 2028년 약 800만 대로 확대한다. 성장시장에서는 공급능력과 가격 경쟁력을 강화하고, 성숙시장에서는 독자 기술과 고부가가치 모델을 확대하는 한편 전동화는 지역별 수요에 맞춰 추진한다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "COMPETITOR",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "“수료생 2000명 돌파”..혼다, 모터사이클 안전운전 캠페인 ‘세이프런 365’ 개최",
-        "description": "혼다코리아가 올바른 이륜차 주행 문화 정착과 사고 예방을 위해 마련한 초보 라이더 대상 무상 안전운전 교육 프로그램을 마무리했다. 혼다코리아는 최근 혼다 에듀케이션 센터(Honda Education Center)에서 모터사이클 안전운전 무상 교육 캠페인 ‘세이프런 365(SAFE RUN 365)’를 성황리에 마쳤다고 19일 밝혔다. 이번 캠페인은...",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 움직임을 지속적으로 관찰할 필요가 있습니다.",
