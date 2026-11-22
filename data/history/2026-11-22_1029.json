@@ -1,0 +1,31 @@
+{
+  "savedAtISO": "2026-11-22T10:29:48.863364+09:00",
+  "articles": [
+    {
+      "id": "8a166c9c978edfd3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-20T11:33:02+09:00"
+    },
+    {
+      "id": "92abdde12c8f47c3",
+      "sourceGroup": "kmnews",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "COMPETITOR",
+      "signalThemes": [],
+      "importance": 2.0,
+      "publishedAt": "2026-11-20T11:26:52+09:00"
+    }
+  ]
+}
