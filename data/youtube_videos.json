@@ -1,11 +1,21 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-21T02:57:53.630122+00:00",
+    "lastUpdatedISO": "2026-11-22T01:52:33.425976+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
+    {
+      "id": "yt_ueUn0dx8cw4",
+      "videoId": "ueUn0dx8cw4",
+      "title": "탁 트인 풍경을 따라 떠나는 철원 라이딩ㅣ할리로드 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=ueUn0dx8cw4",
+      "thumbnail": "https://i2.ytimg.com/vi/ueUn0dx8cw4/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-21T06:52:32+00:00"
+    },
     {
       "id": "yt_0nXk-LPUZVY",
       "videoId": "0nXk-LPUZVY",
@@ -195,16 +205,6 @@
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
       "publishedAt": "2026-08-14T09:21:48+00:00"
-    },
-    {
-      "id": "yt_aV_C9RvZfeE",
-      "videoId": "aV_C9RvZfeE",
-      "title": "2026 Low Rider™ S | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/shorts/aV_C9RvZfeE",
-      "thumbnail": "https://i2.ytimg.com/vi/aV_C9RvZfeE/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-07-10T05:56:16+00:00"
     },
     {
       "id": "yt_3wrZxXZ3gBA",
