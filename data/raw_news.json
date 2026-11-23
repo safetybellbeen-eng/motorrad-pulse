@@ -1,4 +1,29 @@
 {
-  "lastCollectedAt": "2026-11-23T10:54:33.985351+09:00",
-  "news": []
+  "lastCollectedAt": "2026-11-23T13:01:01.879967+09:00",
+  "news": [
+    {
+      "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175866749&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "publishedAt": "2026-11-23T11:15:07+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 28,
+      "brandGroups": [],
+      "acquisitionMethod": "google_news",
+      "description": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시&nbsp;&nbsp;한국이륜차신문",
+      "id": "d7257888fe1c7537",
+      "collectedAt": "2026-11-23T13:01:01.879967+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    }
+  ]
 }
