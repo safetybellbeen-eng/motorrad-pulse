@@ -1,8 +1,8 @@
 {
-  "savedAtISO": "2026-10-24T18:01:13.437109+09:00",
+  "savedAtISO": "2026-11-23T18:01:18.743091+09:00",
   "articles": [
     {
-      "id": "28fcad069d881767",
+      "id": "d7257888fe1c7537",
       "sourceGroup": "kmnews",
       "brandGroups": [],
       "source": "한국이륜차신문",
@@ -10,10 +10,10 @@
       "category": "PRODUCT_TECH",
       "signalThemes": [
         "NEW_MODEL",
-        "CRUISER"
+        "TOURING"
       ],
-      "importance": 2.0,
-      "publishedAt": "2026-10-23T11:44:58+09:00"
+      "importance": 2.5,
+      "publishedAt": "2026-11-23T11:15:07+09:00"
     }
   ]
 }
