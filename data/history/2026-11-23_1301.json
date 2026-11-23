@@ -1,0 +1,19 @@
+{
+  "savedAtISO": "2026-11-23T13:01:20.016988+09:00",
+  "articles": [
+    {
+      "id": "d7257888fe1c7537",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-23T11:15:07+09:00"
+    }
+  ]
+}
