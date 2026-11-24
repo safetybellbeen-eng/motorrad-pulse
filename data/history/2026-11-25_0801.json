@@ -1,0 +1,108 @@
+{
+  "savedAtISO": "2026-11-25T08:01:58.618957+09:00",
+  "articles": [
+    {
+      "id": "c49d8d6119e2cd7e",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-24T17:45:07+09:00"
+    },
+    {
+      "id": "561e401f8cb00055",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "데일리카",
+      "domain": "www.dailycar.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SPORT"
+      ],
+      "importance": 3.0,
+      "publishedAt": "2026-11-24T12:51:35+09:00"
+    },
+    {
+      "id": "9074f6da348658d1",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "매일경제",
+      "domain": "www.mk.co.kr",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SPORT"
+      ],
+      "importance": 3.5,
+      "publishedAt": "2026-11-24T11:21:11+09:00"
+    },
+    {
+      "id": "33aae202e504c845",
+      "sourceGroup": "honda",
+      "brandGroups": [
+        "honda"
+      ],
+      "source": "동아일보",
+      "domain": "www.donga.com",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "SPORT"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-24T10:24:02+09:00"
+    },
+    {
+      "id": "c46b92dcb76654e7",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-24T11:24:04+09:00"
+    },
+    {
+      "id": "f78c400ce147fb2b",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-24T11:14:17+09:00"
+    },
+    {
+      "id": "d7257888fe1c7537",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-23T11:15:07+09:00"
+    }
+  ]
+}
