@@ -1,6 +1,58 @@
 {
-  "lastCollectedAt": "2026-11-24T08:01:02.974943+09:00",
+  "lastCollectedAt": "2026-11-24T13:01:14.114701+09:00",
   "news": [
+    {
+      "title": "혼다, 차세대 미들급 4기통 CB·CBR 티저 이미지 공개..연내 출시 계획",
+      "url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=63287",
+      "source": "데일리카",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-11-24T12:51:35+09:00",
+      "sourceTier": "motorcycle_media",
+      "sourceQualityScore": 90,
+      "businessRelevanceScore": 22,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다, 차세대 미들급 4기통 CB·CBR 티저 이미지 공개..연내 출시 계획&nbsp;&nbsp;데일리카",
+      "id": "561e401f8cb00055",
+      "collectedAt": "2026-11-24T13:01:14.114701+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
+    {
+      "title": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진",
+      "url": "https://www.mk.co.kr/news/business/12216969",
+      "source": "매일경제",
+      "sourceType": "media",
+      "sourceGroup": "honda",
+      "publishedAt": "2026-11-24T11:21:11+09:00",
+      "sourceTier": "business_media",
+      "sourceQualityScore": 75,
+      "businessRelevanceScore": 37,
+      "brandGroups": [
+        "honda"
+      ],
+      "acquisitionMethod": "google_news",
+      "description": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진&nbsp;&nbsp;매일경제",
+      "id": "9074f6da348658d1",
+      "collectedAt": "2026-11-24T13:01:14.114701+09:00",
+      "category": null,
+      "summary": null,
+      "importance": null,
+      "whyItMatters": null,
+      "bmwInsight": null,
+      "isTopNews": false,
+      "aiProcessed": false,
+      "relatedCoverageCount": 1
+    },
     {
       "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=175866749&bmode=view",
