@@ -1,18 +1,7 @@
 {
-  "generatedAtISO": "2026-11-25T18:01:37.224757+09:00",
+  "generatedAtISO": "2026-11-26T08:02:07.712134+09:00",
   "windowDays": 14,
   "daily": [
-    {
-      "date": "2026-11-12",
-      "newsCount": 2,
-      "byBrand": {
-        "triumph": 1
-      },
-      "byCategory": {
-        "COMPETITOR": 1,
-        "PRODUCT_TECH": 1
-      }
-    },
     {
       "date": "2026-11-13",
       "newsCount": 2,
@@ -106,23 +95,29 @@
     },
     {
       "date": "2026-11-24",
-      "newsCount": 7,
+      "newsCount": 6,
       "byBrand": {
         "honda": 5
       },
       "byCategory": {
-        "PRODUCT_TECH": 7
+        "PRODUCT_TECH": 6
       }
     },
     {
       "date": "2026-11-25",
-      "newsCount": 2,
+      "newsCount": 3,
       "byBrand": {
         "ducati": 1
       },
       "byCategory": {
-        "PRODUCT_TECH": 2
+        "PRODUCT_TECH": 3
       }
+    },
+    {
+      "date": "2026-11-26",
+      "newsCount": 0,
+      "byBrand": {},
+      "byCategory": {}
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-25",
-    "dayLabel": "WEDNESDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-26",
+    "dayLabel": "THURSDAY",
+    "lastUpdated": "08:02 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 11건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-25T18:01:37.220874+09:00",
+    "lastUpdatedISO": "2026-11-26T08:02:07.708477+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -61,8 +61,8 @@
         "topArticleTitle": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진",
         "topArticleUrl": "https://www.mk.co.kr/news/business/12216969",
         "signalDetails": {
-          "NEW_MODEL": "CONTINUING",
-          "SPORT": "CONTINUING"
+          "SPORT": "CONTINUING",
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "yamaha": {
@@ -96,18 +96,18 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
         "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
         "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
+        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -131,7 +131,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "c49d8d6119e2cd7e",
@@ -146,12 +146,12 @@
       "publishedAt": "2026-11-24T17:45:07+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "561e401f8cb00055",
@@ -166,12 +166,12 @@
       "publishedAt": "2026-11-24T12:51:35+09:00",
       "category": "PRODUCT_TECH",
       "summary": "혼다가 소셜미디어(SNS) 채널을 통해 모터사이클 신모델 2종의 티저 이미지를 전격 공개하는 등 연내 국내 시장 출시를 예고했다. 24일 혼다코리아 모터사이클 공식 인스타그램에 게재된 티저 사진에는 네이키드와 스포츠 장르의 모터사이클 두 대가 마주 보고 서 있는 모습이 담겼다. 이미지를 통해 왼쪽 네이키드 모델은 ‘CB500 SUPER FOUR’,...",
-      "importance": 3.0,
+      "importance": 2.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "9074f6da348658d1",
@@ -186,7 +186,7 @@
       "publishedAt": "2026-11-24T11:21:11+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 3.5,
+      "importance": 3.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": false,
@@ -212,6 +212,24 @@
       "topNewsGroup": null
     },
     {
+      "id": "c46b92dcb76654e7",
+      "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
+      "url": "https://www.kmnews.net/REVIEW/?idx=175908972&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-25T20:49:22+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
+      "importance": 2.0,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 1
+    },
+    {
       "id": "d7257888fe1c7537",
       "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
       "url": "https://www.kmnews.net/NEWS/?idx=175866749&bmode=view",
@@ -225,26 +243,9 @@
       "importance": 2.5,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
-    },
-    {
-      "id": "c46b92dcb76654e7",
-      "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
-      "url": "https://www.kmnews.net/REVIEW/?idx=175908972&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-24T11:24:04+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": null,
-      "importance": 1.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 5
     },
     {
       "id": "f78c400ce147fb2b",
@@ -256,13 +257,12 @@
       "brandGroups": [],
       "publishedAt": "2026-11-24T11:14:17+09:00",
       "category": "PRODUCT_TECH",
-      "summary": "EICMA 2026에서 '히말라얀 750·컨티넨탈 GT 750'와 전기 스크램블러 플라잉 플리 S6·샷건 650 한정판 전시로얄엔필드 코리아는 로얄엔필드가 EICMA 2026에서 히말라얀 750 (Himalayan 750)과 컨티넨탈 GT 750(Continental GT 750)을 공개하며 미드 사이즈를 넘어 상위 배기량 군으로 제품군을 확대했다고 전했다...",
-      "importance": 2.0,
+      "summary": null,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 5
+      "isTopNews": false,
+      "topNewsGroup": null
     }
   ],
   "marketIntelligenceV2": {
@@ -291,22 +291,22 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
         "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
         "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
         "relatedNewsCount": 1,
         "impact": "Medium",
         "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
+        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       }
