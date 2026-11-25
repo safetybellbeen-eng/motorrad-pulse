@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-11-25T13:30:19.543403+09:00",
+  "generatedAtISO": "2026-11-25T18:01:37.224757+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -106,22 +106,22 @@
     },
     {
       "date": "2026-11-24",
-      "newsCount": 8,
+      "newsCount": 7,
       "byBrand": {
         "honda": 5
       },
       "byCategory": {
-        "PRODUCT_TECH": 8
+        "PRODUCT_TECH": 7
       }
     },
     {
       "date": "2026-11-25",
-      "newsCount": 1,
+      "newsCount": 2,
       "byBrand": {
         "ducati": 1
       },
       "byCategory": {
-        "PRODUCT_TECH": 1
+        "PRODUCT_TECH": 2
       }
     }
   ]

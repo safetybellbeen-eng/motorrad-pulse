@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-25",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:30 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 11건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-25T13:30:19.538335+09:00",
+    "lastUpdatedISO": "2026-11-25T18:01:37.220874+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -53,16 +53,16 @@
         "signalDetails": {}
       },
       "honda": {
-        "newsCount": 5,
+        "newsCount": 4,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
-        "signal": "RISING",
+        "signal": "CONTINUING",
         "activity": "HIGH",
         "topArticleTitle": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진",
         "topArticleUrl": "https://www.mk.co.kr/news/business/12216969",
         "signalDetails": {
-          "SPORT": "RISING",
-          "NEW_MODEL": "RISING"
+          "NEW_MODEL": "CONTINUING",
+          "SPORT": "CONTINUING"
         }
       },
       "yamaha": {
@@ -219,7 +219,7 @@
       "sourceType": "media",
       "sourceGroup": "kmnews",
       "brandGroups": [],
-      "publishedAt": "2026-11-24T21:27:14+09:00",
+      "publishedAt": "2026-11-25T13:57:32+09:00",
       "category": "PRODUCT_TECH",
       "summary": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
       "importance": 2.5,
