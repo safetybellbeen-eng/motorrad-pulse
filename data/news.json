@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-25",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "01:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 10건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 11건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-25T08:01:58.618234+09:00",
+    "lastUpdatedISO": "2026-11-25T13:01:29.393201+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -21,14 +21,16 @@
         "signalDetails": {}
       },
       "ducati": {
-        "newsCount": 0,
-        "primaryTheme": null,
+        "newsCount": 1,
+        "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "NO_SIGNIFICANT_UPDATE",
-        "activity": "LOW",
-        "topArticleTitle": null,
-        "topArticleUrl": null,
-        "signalDetails": {}
+        "signal": "NEW",
+        "activity": "MEDIUM",
+        "topArticleTitle": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
+        "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=175944749&bmode=view",
+        "signalDetails": {
+          "NEW_MODEL": "NEW"
+        }
       },
       "triumph": {
         "newsCount": 0,
@@ -59,8 +61,8 @@
         "topArticleTitle": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진",
         "topArticleUrl": "https://www.mk.co.kr/news/business/12216969",
         "signalDetails": {
-          "SPORT": "NEW",
-          "NEW_MODEL": "NEW"
+          "NEW_MODEL": "NEW",
+          "SPORT": "NEW"
         }
       },
       "yamaha": {
@@ -87,6 +89,13 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
+        "title": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
+        "description": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
         "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
@@ -94,23 +103,36 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
         "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "Royal Enfield, 브랜드 최초 743cc 트윈 엔진 장착한 '히말라얀 750·컨티넨탈 GT 750' 전격 공개",
-        "description": "EICMA 2026에서 '히말라얀 750·컨티넨탈 GT 750'와 전기 스크램블러 플라잉 플리 S6·샷건 650 한정판 전시로얄엔필드 코리아는 로얄엔필드가 EICMA 2026에서 히말라얀 750 (Himalayan 750)과 컨티넨탈 GT 750(Continental GT 750)을 공개하며 미드 사이즈를 넘어 상위 배기량 군으로 제품군을 확대했다고 전했다...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+        "impact": "Medium",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
   },
   "news": [
+    {
+      "id": "a42d1d88c846f02e",
+      "title": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
+      "url": "https://www.kmnews.net/NEWS/?idx=175944749&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "publishedAt": "2026-11-25T11:23:16+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
+      "importance": 2.5,
+      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
+      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": true,
+      "topNewsGroup": "others",
+      "rank": 2
+    },
     {
       "id": "c49d8d6119e2cd7e",
       "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
@@ -149,7 +171,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "9074f6da348658d1",
@@ -183,9 +205,26 @@
       "publishedAt": "2026-11-24T10:24:02+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+      "isTopNews": false,
+      "topNewsGroup": null
+    },
+    {
+      "id": "d7257888fe1c7537",
+      "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+      "url": "https://www.kmnews.net/NEWS/?idx=175866749&bmode=view",
+      "source": "한국이륜차신문",
+      "sourceType": "media",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "publishedAt": "2026-11-24T21:27:14+09:00",
+      "category": "PRODUCT_TECH",
+      "summary": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
+      "importance": 2.5,
+      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
+      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": false,
       "topNewsGroup": null
     },
@@ -200,12 +239,12 @@
       "publishedAt": "2026-11-24T11:24:04+09:00",
       "category": "PRODUCT_TECH",
       "summary": null,
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 3
+      "rank": 4
     },
     {
       "id": "f78c400ce147fb2b",
@@ -223,24 +262,7 @@
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
-    },
-    {
-      "id": "d7257888fe1c7537",
-      "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
-      "url": "https://www.kmnews.net/NEWS/?idx=175866749&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "kmnews",
-      "brandGroups": [],
-      "publishedAt": "2026-11-23T11:15:07+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
-      "importance": 2.0,
-      "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
-      "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-      "isTopNews": false,
-      "topNewsGroup": null
+      "rank": 5
     }
   ],
   "marketIntelligenceV2": {
@@ -259,6 +281,16 @@
         "insightType": "GROUPED"
       },
       {
+        "title": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
+        "description": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
+        "relatedNewsCount": 1,
+        "impact": "Medium",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "COMPETITOR",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
         "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
         "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
         "relatedNewsCount": 1,
@@ -269,21 +301,11 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
-        "description": "원문 기사 제목을 기준으로 확인이 필요한 뉴스입니다.",
+        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
         "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "Royal Enfield, 브랜드 최초 743cc 트윈 엔진 장착한 '히말라얀 750·컨티넨탈 GT 750' 전격 공개",
-        "description": "EICMA 2026에서 '히말라얀 750·컨티넨탈 GT 750'와 전기 스크램블러 플라잉 플리 S6·샷건 650 한정판 전시로얄엔필드 코리아는 로얄엔필드가 EICMA 2026에서 히말라얀 750 (Himalayan 750)과 컨티넨탈 GT 750(Continental GT 750)을 공개하며 미드 사이즈를 넘어 상위 배기량 군으로 제품군을 확대했다고 전했다...",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "impact": "Medium",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"

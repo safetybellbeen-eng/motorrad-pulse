@@ -1,5 +1,5 @@
 {
-  "generatedAtISO": "2026-11-25T08:01:58.621624+09:00",
+  "generatedAtISO": "2026-11-25T13:01:29.395910+09:00",
   "windowDays": 14,
   "daily": [
     {
@@ -100,27 +100,29 @@
     },
     {
       "date": "2026-11-23",
-      "newsCount": 1,
+      "newsCount": 0,
       "byBrand": {},
-      "byCategory": {
-        "PRODUCT_TECH": 1
-      }
+      "byCategory": {}
     },
     {
       "date": "2026-11-24",
-      "newsCount": 7,
+      "newsCount": 8,
       "byBrand": {
         "honda": 5
       },
       "byCategory": {
-        "PRODUCT_TECH": 7
+        "PRODUCT_TECH": 8
       }
     },
     {
       "date": "2026-11-25",
-      "newsCount": 0,
-      "byBrand": {},
-      "byCategory": {}
+      "newsCount": 1,
+      "byBrand": {
+        "ducati": 1
+      },
+      "byCategory": {
+        "PRODUCT_TECH": 1
+      }
     }
   ]
 }
