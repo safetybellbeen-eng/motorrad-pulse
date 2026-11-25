@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-25",
     "dayLabel": "WEDNESDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "01:30 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 11건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-25T13:01:29.393201+09:00",
+    "lastUpdatedISO": "2026-11-25T13:30:19.538335+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -56,13 +56,13 @@
         "newsCount": 5,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": "SPORT",
-        "signal": "NEW",
+        "signal": "RISING",
         "activity": "HIGH",
         "topArticleTitle": "혼다코리아, 4기통 CB·CBR 신모델 이미지 공개…연내 출시 추진",
         "topArticleUrl": "https://www.mk.co.kr/news/business/12216969",
         "signalDetails": {
-          "NEW_MODEL": "NEW",
-          "SPORT": "NEW"
+          "SPORT": "RISING",
+          "NEW_MODEL": "RISING"
         }
       },
       "yamaha": {
