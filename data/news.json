@@ -1,14 +1,14 @@
 {
   "meta": {
-    "date": "2026-11-26",
-    "dayLabel": "THURSDAY",
-    "lastUpdated": "06:01 PM",
+    "date": "2026-11-27",
+    "dayLabel": "FRIDAY",
+    "lastUpdated": "08:01 AM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-26T18:01:31.635003+09:00",
+    "lastUpdatedISO": "2026-11-27T08:01:35.413604+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -61,8 +61,8 @@
         "topArticleTitle": null,
         "topArticleUrl": null,
         "signalDetails": {
-          "SPORT": "CONTINUING",
-          "NEW_MODEL": "CONTINUING"
+          "NEW_MODEL": "CONTINUING",
+          "SPORT": "CONTINUING"
         }
       },
       "yamaha": {
@@ -85,13 +85,6 @@
         "title": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
         "description": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
-        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
-        "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
-        "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
@@ -101,6 +94,13 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
+        "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -119,7 +119,7 @@
       "publishedAt": "2026-11-25T11:23:16+09:00",
       "category": "PRODUCT_TECH",
       "summary": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -137,7 +137,7 @@
       "publishedAt": "2026-11-25T20:49:22+09:00",
       "category": "PRODUCT_TECH",
       "summary": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
-      "importance": 2.0,
+      "importance": 1.5,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -172,19 +172,9 @@
         "title": "DUCATI, EICMA 2026에서 뉴 모델 5종 공개",
         "description": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
         "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
-        "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
-        "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
+        "brandRole": "COMPETITOR",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
       },
@@ -194,6 +184,16 @@
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
+        "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
