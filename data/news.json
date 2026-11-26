@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-26",
     "dayLabel": "THURSDAY",
-    "lastUpdated": "01:01 PM",
+    "lastUpdated": "06:01 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
-      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 4건 등 관련 보도가 상대적으로 많이 확인됩니다."
+      "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 3건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-26T13:01:48.272863+09:00",
+    "lastUpdatedISO": "2026-11-26T18:01:31.635003+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -89,25 +89,18 @@
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
       },
       {
-        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
-        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
-      },
-      {
-        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
-        "description": "CB500 SUPER FOUR·CBR500R FOUR 이미지 공개혼다 E-Clutch 적용, 연내 국내 출시 목표혼다코리아가 11월 24일 공식 SNS를 통해 모터사이클 뉴 모델 이미지를 공개하며 국내 출시가 임박했음을 알렸다.이날 혼다코리아 모터사이클 공식 인스타그램에 공개된 사진에는 두 대의 모터사이클이 서로 마주 보는 모습이 담겼다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
-      },
-      {
         "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
         "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다."
+      },
+      {
+        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다."
       }
     ],
     "customerTrend": []
@@ -127,26 +120,6 @@
       "category": "PRODUCT_TECH",
       "summary": "디아벨 V4·데저트X 랠리와 한정판 SP 모델 3종 공개...데스모250 EDS로 오프로드 라인업 확대, 창립 100주년 특별 전시 개최...두카티 코리아는 두카티가 EICMA 2026에서 뉴 모델 5종을 공개하며 더욱 폭넓고 정교해진 라인업을 선보였다고 밝혔다.이번 뉴 모델 공개 행사는 전통적으로 업계 관계자를 대상으로 하는 화요일 개막에 앞서 진행됐다.",
       "importance": 2.5,
-      "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
-      "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-      "isTopNews": true,
-      "topNewsGroup": "others",
-      "rank": 3
-    },
-    {
-      "id": "c49d8d6119e2cd7e",
-      "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
-      "url": "https://www.kmnews.net/NEWS/?idx=175919844&bmode=view",
-      "source": "한국이륜차신문",
-      "sourceType": "media",
-      "sourceGroup": "honda",
-      "brandGroups": [
-        "honda"
-      ],
-      "publishedAt": "2026-11-24T17:45:07+09:00",
-      "category": "PRODUCT_TECH",
-      "summary": "CB500 SUPER FOUR·CBR500R FOUR 이미지 공개혼다 E-Clutch 적용, 연내 국내 출시 목표혼다코리아가 11월 24일 공식 SNS를 통해 모터사이클 뉴 모델 이미지를 공개하며 국내 출시가 임박했음을 알렸다.이날 혼다코리아 모터사이클 공식 인스타그램에 공개된 사진에는 두 대의 모터사이클이 서로 마주 보는 모습이 담겼다.",
-      "importance": 2.0,
       "whyItMatters": "주요 브랜드의 신규 모델 출시와 관련된 기사입니다. Segment 내 제품 경쟁과 Positioning 변화를 확인할 필요가 있습니다.",
       "bmwInsight": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
       "isTopNews": true,
@@ -182,12 +155,12 @@
       "publishedAt": "2026-11-25T13:57:32+09:00",
       "category": "PRODUCT_TECH",
       "summary": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
-      "importance": 2.5,
+      "importance": 2.0,
       "whyItMatters": "Motorcycle 제품 및 기술 변화와 관련된 기사입니다. 향후 Premium Motorcycle 고객의 제품 기대수준에 영향을 줄 수 있는 요소인지 확인할 필요가 있습니다.",
       "bmwInsight": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
       "isTopNews": true,
       "topNewsGroup": "others",
-      "rank": 4
+      "rank": 3
     }
   ],
   "marketIntelligenceV2": {
@@ -206,31 +179,21 @@
         "insightType": "SINGLE_SIGNAL"
       },
       {
-        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
-        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
-        "relatedNewsCount": 1,
-        "impact": "Medium",
-        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
-        "brandRole": "INDUSTRY",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
-        "title": "혼다코리아, 차세대 미들급 'CB500 SUPER FOUR·CBR500R FOUR' 국내 출시 임박",
-        "description": "CB500 SUPER FOUR·CBR500R FOUR 이미지 공개혼다 E-Clutch 적용, 연내 국내 출시 목표혼다코리아가 11월 24일 공식 SNS를 통해 모터사이클 뉴 모델 이미지를 공개하며 국내 출시가 임박했음을 알렸다.이날 혼다코리아 모터사이클 공식 인스타그램에 공개된 사진에는 두 대의 모터사이클이 서로 마주 보는 모습이 담겼다.",
-        "relatedNewsCount": 1,
-        "impact": "Low",
-        "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
-        "brandRole": "COMPETITOR",
-        "intelligenceTopic": "PRODUCT_TECH",
-        "insightType": "SINGLE_SIGNAL"
-      },
-      {
         "title": "[뉴모델] 일상과 여행을 아우르는 미들급 크로스오버 'SV-7GX' 출시",
         "description": "검증된 645cc V트윈 엔진에 스포츠 주행의 민첩성과 투어링의 편안함을 결합…세 가지 주행 모드와 트랙션 컨트롤, 양방향 퀵시프트로 주행 편의성을 높여…795mm 시트고와 조절식 윈드스크린, 리어 캐리어는 출퇴근부터 장거리 투어까지 뒷받침…스즈키코리아가 미들급 크로스오버 모터사이클 ‘SV-7GX’를 11월에 국내 출시했다.",
         "relatedNewsCount": 1,
         "impact": "Low",
         "bmwNote": "경쟁 브랜드의 신제품 출시 시점과 제품 Positioning, 세그먼트 내 차별화 요소를 지속적으로 비교할 필요가 있습니다.",
+        "brandRole": "INDUSTRY",
+        "intelligenceTopic": "PRODUCT_TECH",
+        "insightType": "SINGLE_SIGNAL"
+      },
+      {
+        "title": "[뉴아이템] 쇼에이, 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’ 출시",
+        "description": "쇼에이가 안전성과 편안한 착용감, 향상된 환기 성능을 갖춘 스포츠 투어링 헬멧 ‘GT-AIR3 BOLDARO’를 선보였다. 그래픽 컬러는 TC-5, TC-10, TC-11, TC-12 등 4종으로 구성된다.GT-AIR3는 장거리 라이딩에 필요한 안정성과 쾌적성을 강화한 차세대 스포츠 투어링 헬멧이다. 엄격한 유럽 안전기준인 ECE 22.",
+        "relatedNewsCount": 1,
+        "impact": "Low",
+        "bmwNote": "Touring 편의성과 장거리 Experience 강화 요소가 Premium 고객 선택에 미치는 영향을 확인할 필요가 있습니다.",
         "brandRole": "INDUSTRY",
         "intelligenceTopic": "PRODUCT_TECH",
         "insightType": "SINGLE_SIGNAL"
