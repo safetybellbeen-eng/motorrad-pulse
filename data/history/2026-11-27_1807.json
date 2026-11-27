@@ -1,0 +1,60 @@
+{
+  "savedAtISO": "2026-11-27T18:07:22.198404+09:00",
+  "articles": [
+    {
+      "id": "ca3a1635ff1b866a",
+      "sourceGroup": "ducati",
+      "brandGroups": [
+        "ducati"
+      ],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 2.5,
+      "publishedAt": "2026-11-27T11:21:44+09:00"
+    },
+    {
+      "id": "a4f7ac6758495d52",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "TOURING"
+      ],
+      "importance": 2.0,
+      "publishedAt": "2026-11-27T11:37:27+09:00"
+    },
+    {
+      "id": "c46b92dcb76654e7",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-25T20:49:22+09:00"
+    },
+    {
+      "id": "d7257888fe1c7537",
+      "sourceGroup": "kmnews",
+      "brandGroups": [],
+      "source": "한국이륜차신문",
+      "domain": "www.kmnews.net",
+      "category": "PRODUCT_TECH",
+      "signalThemes": [
+        "NEW_MODEL",
+        "TOURING"
+      ],
+      "importance": 1.5,
+      "publishedAt": "2026-11-25T13:57:32+09:00"
+    }
+  ]
+}
