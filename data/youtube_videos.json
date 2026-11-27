@@ -1,20 +1,60 @@
 {
   "meta": {
-    "lastUpdatedISO": "2026-11-26T03:55:11.296899+00:00",
+    "lastUpdatedISO": "2026-11-27T03:55:24.601522+00:00",
     "channelCount": 6,
     "successCount": 6,
     "failCount": 0
   },
   "videos": [
     {
-      "id": "yt_ueUn0dx8cw4",
-      "videoId": "ueUn0dx8cw4",
-      "title": "탁 트인 풍경을 따라 떠나는 철원 라이딩ㅣ할리로드 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/watch?v=ueUn0dx8cw4",
-      "thumbnail": "https://i2.ytimg.com/vi/ueUn0dx8cw4/hqdefault.jpg",
+      "id": "yt_7tksYh4yL6A",
+      "videoId": "7tksYh4yL6A",
+      "title": "2027 할리데이비슨 순정 부품 및 액세서리 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=7tksYh4yL6A",
+      "thumbnail": "https://i4.ytimg.com/vi/7tksYh4yL6A/hqdefault.jpg",
       "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
       "brandGroup": "harley",
-      "publishedAt": "2026-11-21T06:52:32+00:00"
+      "publishedAt": "2026-11-27T03:22:17+00:00"
+    },
+    {
+      "id": "yt_eFkO_1drbX8",
+      "videoId": "eFkO_1drbX8",
+      "title": "Live to RIDE | 2027 할리데이비슨 모터사이클 라인업 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=eFkO_1drbX8",
+      "thumbnail": "https://i2.ytimg.com/vi/eFkO_1drbX8/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-26T09:15:08+00:00"
+    },
+    {
+      "id": "yt_KTfrIgcJUcU",
+      "videoId": "KTfrIgcJUcU",
+      "title": "2027 할리데이비슨 투어링 ST 라인업 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=KTfrIgcJUcU",
+      "thumbnail": "https://i4.ytimg.com/vi/KTfrIgcJUcU/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-26T09:12:04+00:00"
+    },
+    {
+      "id": "yt_9EdOP3jwxs8",
+      "videoId": "9EdOP3jwxs8",
+      "title": "2027 할리데이비슨 CVO 라인업 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=9EdOP3jwxs8",
+      "thumbnail": "https://i2.ytimg.com/vi/9EdOP3jwxs8/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-26T09:03:26+00:00"
+    },
+    {
+      "id": "yt_zsa9QGkWgi0",
+      "videoId": "zsa9QGkWgi0",
+      "title": "2027 Iron & Ink 인수지애스트 컬렉션 | 할리데이비슨 | Harley-Davidson | Harleydavidson",
+      "url": "https://www.youtube.com/watch?v=zsa9QGkWgi0",
+      "thumbnail": "https://i3.ytimg.com/vi/zsa9QGkWgi0/hqdefault.jpg",
+      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
+      "brandGroup": "harley",
+      "publishedAt": "2026-11-26T08:55:25+00:00"
     },
     {
       "id": "yt_0nXk-LPUZVY",
@@ -127,26 +167,6 @@
       "publishedAt": "2026-11-06T01:00:15+00:00"
     },
     {
-      "id": "yt_Cmwql9KxKAk",
-      "videoId": "Cmwql9KxKAk",
-      "title": "28회 코리아 내셔널 호그 랠리 | 28th Korea National H.O.G.™ RALLY | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/watch?v=Cmwql9KxKAk",
-      "thumbnail": "https://i4.ytimg.com/vi/Cmwql9KxKAk/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-11-05T06:20:43+00:00"
-    },
-    {
-      "id": "yt_RWt2C6iprd8",
-      "videoId": "RWt2C6iprd8",
-      "title": "2026 Heritage Classic | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/shorts/RWt2C6iprd8",
-      "thumbnail": "https://i3.ytimg.com/vi/RWt2C6iprd8/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-09-11T00:33:16+00:00"
-    },
-    {
       "id": "yt_Z9e_2ufsw5c",
       "videoId": "Z9e_2ufsw5c",
       "title": "F 450 GS OPEN",
@@ -155,16 +175,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-09-08T07:53:39+00:00"
-    },
-    {
-      "id": "yt_Et591MudhQo",
-      "videoId": "Et591MudhQo",
-      "title": "2026 CVO™ Street Glide™ Limited | 할리데이비슨 | Harley-Davidson | Harleydavidson",
-      "url": "https://www.youtube.com/shorts/Et591MudhQo",
-      "thumbnail": "https://i2.ytimg.com/vi/Et591MudhQo/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-08-28T08:56:49+00:00"
     },
     {
       "id": "yt_o2iuxSp-pDg",
@@ -195,16 +205,6 @@
       "channelTitle": "BMWMotorradKorea",
       "brandGroup": "bmw",
       "publishedAt": "2026-08-24T08:39:49+00:00"
-    },
-    {
-      "id": "yt_ttrXc1NMv3g",
-      "videoId": "ttrXc1NMv3g",
-      "title": "2026 Street Bob™과 함께 라이딩의 즐거움을 경험해 보세요.",
-      "url": "https://www.youtube.com/shorts/ttrXc1NMv3g",
-      "thumbnail": "https://i1.ytimg.com/vi/ttrXc1NMv3g/hqdefault.jpg",
-      "channelTitle": "할리데이비슨 코리아 (Harley-Davidson of Korea)",
-      "brandGroup": "harley",
-      "publishedAt": "2026-08-14T09:21:48+00:00"
     },
     {
       "id": "yt_3wrZxXZ3gBA",
