@@ -2,13 +2,13 @@
   "meta": {
     "date": "2026-11-28",
     "dayLabel": "SATURDAY",
-    "lastUpdated": "08:01 AM",
+    "lastUpdated": "12:27 PM",
     "isSampleData": false,
     "todaySignal": {
       "headline": "신규 모델 관련 뉴스 증가",
       "description": "오늘 수집된 주요 Motorcycle 뉴스에서는 신규 모델 1건 등 관련 보도가 상대적으로 많이 확인됩니다."
     },
-    "lastUpdatedISO": "2026-11-28T08:01:19.422763+09:00",
+    "lastUpdatedISO": "2026-11-28T12:27:16.518427+09:00",
     "brandSummary": {
       "bmw": {
         "newsCount": 0,
@@ -21,15 +21,15 @@
         "signalDetails": {}
       },
       "ducati": {
-        "newsCount": 2,
+        "newsCount": 1,
         "primaryTheme": "NEW_MODEL",
         "secondaryTheme": null,
-        "signal": "RISING",
-        "activity": "HIGH",
+        "signal": "CONTINUING",
+        "activity": "MEDIUM",
         "topArticleTitle": "두카티, 필요한 모든 것, 그 이상은 없다! ‘몬스터 다크’ 공개",
         "topArticleUrl": "https://www.kmnews.net/NEWS/?idx=176021455&bmode=view",
         "signalDetails": {
-          "NEW_MODEL": "RISING"
+          "NEW_MODEL": "CONTINUING"
         }
       },
       "triumph": {
